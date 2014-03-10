@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4223E63D18CE0994002BB981 /* CarouselBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4223E63C18CE0994002BB981 /* CarouselBG.png */; };
+		4223E63F18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */; };
 		42FF7A1518CDE92A00C72695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1418CDE92A00C72695 /* Foundation.framework */; };
 		42FF7A1718CDE92A00C72695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */; };
 		42FF7A1918CDE92A00C72695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1818CDE92A00C72695 /* UIKit.framework */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4223E63C18CE0994002BB981 /* CarouselBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselBG.png; sourceTree = "<group>"; };
+		4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MillenniumMatCompanyBannerOne.jpg; sourceTree = "<group>"; };
 		42FF7A1118CDE92A00C72695 /* Millenium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millenium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A1418CDE92A00C72695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -167,7 +171,9 @@
 		42FF7A4918CDEBEB00C72695 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */,
 				42FF7A5218CDF67000C72695 /* page.png */,
+				4223E63C18CE0994002BB981 /* CarouselBG.png */,
 				42FF7A4B18CDEC1100C72695 /* MillenniumLogo.jpg */,
 			);
 			name = Images;
@@ -268,6 +274,8 @@
 			files = (
 				42FF7A4C18CDEC1100C72695 /* MillenniumLogo.jpg in Resources */,
 				42FF7A5318CDF67000C72695 /* page.png in Resources */,
+				4223E63D18CE0994002BB981 /* CarouselBG.png in Resources */,
+				4223E63F18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg in Resources */,
 				42FF7A2D18CDE92A00C72695 /* Images.xcassets in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
@@ -505,6 +513,7 @@
 				42FF7A4518CDE92A00C72695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "MilleniumTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				42FF7A4818CDE92A00C72695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

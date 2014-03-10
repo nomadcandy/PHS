@@ -58,7 +58,7 @@
     //normally we'd use a backing array
     //as shown in the basic iOS example
     //but for this example we haven't bothered
-    return 5;
+    return 7;
 }
 //hell0
 
@@ -68,18 +68,72 @@
 	if (button == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"page.png"];
+		UIImage *image = [UIImage imageNamed:@"CarouselBG.png"];
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-		button.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
-		[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
-		button.titleLabel.font = [button.titleLabel.font fontWithSize:50];
+        
+        button.layer.shadowColor = [UIColor blackColor].CGColor;
+        button.layer.shadowOpacity = 0.8;
+        button.layer.shadowRadius = 12;
+        button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+
+        button.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
+        [button setContentVerticalAlignment:UIControlContentVerticalAlignmentBottom];
+        
+        [button.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:22.0]];
+		//button.titleLabel.font = [button.titleLabel.font fontWithSize:22];
+        
 		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 	}
 	
 	//set button label
-	[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
-	
+	//[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
+    
+    if (index ==0){
+        
+        [button setTitle:[NSString stringWithFormat:@"Direct Purchase Mat"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index ==1){
+        
+        [button setTitle:[NSString stringWithFormat:@"Rental Mat"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index ==2){
+        
+        [button setTitle:[NSString stringWithFormat:@"Product Movies"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index == 3){
+        
+        [button setTitle:[NSString stringWithFormat:@"Flyer Views"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index == 4){
+        
+        [button setTitle:[NSString stringWithFormat:@"Sketch Search"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index == 5){
+        
+        [button setTitle:[NSString stringWithFormat:@"Sketch Request"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index == 6){
+        
+        [button setTitle:[NSString stringWithFormat:@"Interactive Mat Tool"] forState:UIControlStateNormal];
+        
+    }
+    
+    
 	return button;
 }
 
