@@ -21,6 +21,11 @@
 		42FF7A3618CDE92A00C72695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1818CDE92A00C72695 /* UIKit.framework */; };
 		42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42FF7A3C18CDE92A00C72695 /* InfoPlist.strings */; };
 		42FF7A4018CDE92A00C72695 /* MilleniumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF7A3F18CDE92A00C72695 /* MilleniumTests.m */; };
+		42FF7A4C18CDEC1100C72695 /* MillenniumLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42FF7A4B18CDEC1100C72695 /* MillenniumLogo.jpg */; };
+		42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF7A4F18CDF09B00C72695 /* iCarousel.m */; };
+		42FF7A5118CDF09B00C72695 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FF7A4F18CDF09B00C72695 /* iCarousel.m */; };
+		42FF7A5318CDF67000C72695 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 42FF7A5218CDF67000C72695 /* page.png */; };
+		42FF7A5418CDF67000C72695 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 42FF7A5218CDF67000C72695 /* page.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,10 @@
 		42FF7A3B18CDE92A00C72695 /* MilleniumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MilleniumTests-Info.plist"; sourceTree = "<group>"; };
 		42FF7A3D18CDE92A00C72695 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42FF7A3F18CDE92A00C72695 /* MilleniumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MilleniumTests.m; sourceTree = "<group>"; };
+		42FF7A4B18CDEC1100C72695 /* MillenniumLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MillenniumLogo.jpg; sourceTree = "<group>"; };
+		42FF7A4E18CDF09B00C72695 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		42FF7A4F18CDF09B00C72695 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		42FF7A5218CDF67000C72695 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,8 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				42FF7A4A18CDEBF500C72695 /* ImagesTest */,
+				42FF7A4918CDEBEB00C72695 /* Images */,
 				42FF7A1A18CDE92A00C72695 /* Millenium */,
 				42FF7A3918CDE92A00C72695 /* MilleniumTests */,
 				42FF7A1318CDE92A00C72695 /* Frameworks */,
@@ -112,6 +123,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				42FF7A4D18CDF05C00C72695 /* iCarousel */,
 				42FF7A2318CDE92A00C72695 /* AppDelegate.h */,
 				42FF7A2418CDE92A00C72695 /* AppDelegate.m */,
 				42FF7A2618CDE92A00C72695 /* Main.storyboard */,
@@ -150,6 +162,32 @@
 				42FF7A3C18CDE92A00C72695 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42FF7A4918CDEBEB00C72695 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				42FF7A5218CDF67000C72695 /* page.png */,
+				42FF7A4B18CDEC1100C72695 /* MillenniumLogo.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		42FF7A4A18CDEBF500C72695 /* ImagesTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ImagesTest;
+			sourceTree = "<group>";
+		};
+		42FF7A4D18CDF05C00C72695 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				42FF7A4E18CDF09B00C72695 /* iCarousel.h */,
+				42FF7A4F18CDF09B00C72695 /* iCarousel.m */,
+			);
+			name = iCarousel;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +266,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42FF7A4C18CDEC1100C72695 /* MillenniumLogo.jpg in Resources */,
+				42FF7A5318CDF67000C72695 /* page.png in Resources */,
 				42FF7A2D18CDE92A00C72695 /* Images.xcassets in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
@@ -238,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42FF7A5418CDF67000C72695 /* page.png in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,
+				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
 			);
@@ -260,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FF7A4018CDE92A00C72695 /* MilleniumTests.m in Sources */,
+				42FF7A5118CDF09B00C72695 /* iCarousel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
