@@ -60,7 +60,7 @@
     //but for this example we haven't bothered
     return 5;
 }
-
+//hell0
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
