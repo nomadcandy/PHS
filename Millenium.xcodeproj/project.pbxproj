@@ -9,6 +9,26 @@
 /* Begin PBXBuildFile section */
 		4223E63D18CE0994002BB981 /* CarouselBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4223E63C18CE0994002BB981 /* CarouselBG.png */; };
 		4223E63F18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */; };
+		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
+		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
+		42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
+		42E7AC0C18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
+		42E7AC1218CE41950036AF00 /* CameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0E18CE41950036AF00 /* CameraIcon.png */; };
+		42E7AC1318CE41950036AF00 /* CameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0E18CE41950036AF00 /* CameraIcon.png */; };
+		42E7AC1618CE41950036AF00 /* InternetIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC1018CE41950036AF00 /* InternetIcon.png */; };
+		42E7AC1718CE41950036AF00 /* InternetIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC1018CE41950036AF00 /* InternetIcon.png */; };
+		42E7AC1818CE41950036AF00 /* SaveIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC1118CE41950036AF00 /* SaveIcon.png */; };
+		42E7AC1918CE41950036AF00 /* SaveIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC1118CE41950036AF00 /* SaveIcon.png */; };
+		42E7AC1E18CE47F20036AF00 /* PicIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC1D18CE47F20036AF00 /* PicIcon.png */; };
+		42E7AC1F18CE47F20036AF00 /* PicIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC1D18CE47F20036AF00 /* PicIcon.png */; };
+		42E7AC2118CE493D0036AF00 /* UsePicIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC2018CE493D0036AF00 /* UsePicIcon.png */; };
+		42E7AC2218CE493D0036AF00 /* UsePicIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC2018CE493D0036AF00 /* UsePicIcon.png */; };
+		42E7AC2418CE4A720036AF00 /* SearchMMIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC2318CE4A720036AF00 /* SearchMMIcon.png */; };
+		42E7AC2518CE4A720036AF00 /* SearchMMIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC2318CE4A720036AF00 /* SearchMMIcon.png */; };
+		42E7AC2718CE4C600036AF00 /* EditLogoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC2618CE4C600036AF00 /* EditLogoIcon.png */; };
+		42E7AC2818CE4C600036AF00 /* EditLogoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC2618CE4C600036AF00 /* EditLogoIcon.png */; };
+		42E7AC2A18CE67C60036AF00 /* HomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC2918CE67C60036AF00 /* HomeIcon.png */; };
+		42E7AC2B18CE67C60036AF00 /* HomeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC2918CE67C60036AF00 /* HomeIcon.png */; };
 		42FF7A1518CDE92A00C72695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1418CDE92A00C72695 /* Foundation.framework */; };
 		42FF7A1718CDE92A00C72695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */; };
 		42FF7A1918CDE92A00C72695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1818CDE92A00C72695 /* UIKit.framework */; };
@@ -43,6 +63,17 @@
 /* Begin PBXFileReference section */
 		4223E63C18CE0994002BB981 /* CarouselBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselBG.png; sourceTree = "<group>"; };
 		4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MillenniumMatCompanyBannerOne.jpg; sourceTree = "<group>"; };
+		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
+		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
+		42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailDemo.png; sourceTree = "<group>"; };
+		42E7AC0E18CE41950036AF00 /* CameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraIcon.png; sourceTree = "<group>"; };
+		42E7AC1018CE41950036AF00 /* InternetIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InternetIcon.png; sourceTree = "<group>"; };
+		42E7AC1118CE41950036AF00 /* SaveIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SaveIcon.png; sourceTree = "<group>"; };
+		42E7AC1D18CE47F20036AF00 /* PicIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PicIcon.png; sourceTree = "<group>"; };
+		42E7AC2018CE493D0036AF00 /* UsePicIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UsePicIcon.png; sourceTree = "<group>"; };
+		42E7AC2318CE4A720036AF00 /* SearchMMIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchMMIcon.png; sourceTree = "<group>"; };
+		42E7AC2618CE4C600036AF00 /* EditLogoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditLogoIcon.png; sourceTree = "<group>"; };
+		42E7AC2918CE67C60036AF00 /* HomeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomeIcon.png; sourceTree = "<group>"; };
 		42FF7A1118CDE92A00C72695 /* Millenium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millenium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A1418CDE92A00C72695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,6 +123,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42E7AC0518CE2C100036AF00 /* Interactive */ = {
+			isa = PBXGroup;
+			children = (
+				42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */,
+				42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */,
+			);
+			name = Interactive;
+			sourceTree = "<group>";
+		};
+		42E7AC0D18CE414A0036AF00 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				42E7AC2918CE67C60036AF00 /* HomeIcon.png */,
+				42E7AC2618CE4C600036AF00 /* EditLogoIcon.png */,
+				42E7AC2318CE4A720036AF00 /* SearchMMIcon.png */,
+				42E7AC2018CE493D0036AF00 /* UsePicIcon.png */,
+				42E7AC1D18CE47F20036AF00 /* PicIcon.png */,
+				42E7AC0E18CE41950036AF00 /* CameraIcon.png */,
+				42E7AC1018CE41950036AF00 /* InternetIcon.png */,
+				42E7AC1118CE41950036AF00 /* SaveIcon.png */,
+				42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +183,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				42E7AC0518CE2C100036AF00 /* Interactive */,
 				42FF7A4D18CDF05C00C72695 /* iCarousel */,
 				42FF7A2318CDE92A00C72695 /* AppDelegate.h */,
 				42FF7A2418CDE92A00C72695 /* AppDelegate.m */,
@@ -171,6 +228,7 @@
 		42FF7A4918CDEBEB00C72695 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				42E7AC0D18CE414A0036AF00 /* Icons */,
 				4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */,
 				42FF7A5218CDF67000C72695 /* page.png */,
 				4223E63C18CE0994002BB981 /* CarouselBG.png */,
@@ -273,12 +331,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FF7A4C18CDEC1100C72695 /* MillenniumLogo.jpg in Resources */,
+				42E7AC2A18CE67C60036AF00 /* HomeIcon.png in Resources */,
+				42E7AC2418CE4A720036AF00 /* SearchMMIcon.png in Resources */,
+				42E7AC1218CE41950036AF00 /* CameraIcon.png in Resources */,
+				42E7AC2718CE4C600036AF00 /* EditLogoIcon.png in Resources */,
+				42E7AC1E18CE47F20036AF00 /* PicIcon.png in Resources */,
+				42E7AC1818CE41950036AF00 /* SaveIcon.png in Resources */,
 				42FF7A5318CDF67000C72695 /* page.png in Resources */,
 				4223E63D18CE0994002BB981 /* CarouselBG.png in Resources */,
 				4223E63F18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg in Resources */,
 				42FF7A2D18CDE92A00C72695 /* Images.xcassets in Resources */,
+				42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
+				42E7AC1618CE41950036AF00 /* InternetIcon.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
+				42E7AC2118CE493D0036AF00 /* UsePicIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +353,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E7AC0C18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
+				42E7AC1718CE41950036AF00 /* InternetIcon.png in Resources */,
 				42FF7A5418CDF67000C72695 /* page.png in Resources */,
+				42E7AC2818CE4C600036AF00 /* EditLogoIcon.png in Resources */,
+				42E7AC1F18CE47F20036AF00 /* PicIcon.png in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
+				42E7AC2518CE4A720036AF00 /* SearchMMIcon.png in Resources */,
+				42E7AC2B18CE67C60036AF00 /* HomeIcon.png in Resources */,
+				42E7AC1918CE41950036AF00 /* SaveIcon.png in Resources */,
+				42E7AC2218CE493D0036AF00 /* UsePicIcon.png in Resources */,
+				42E7AC1318CE41950036AF00 /* CameraIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +377,7 @@
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
+				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42FF7A4018CDE92A00C72695 /* MilleniumTests.m in Sources */,
 				42FF7A5118CDF09B00C72695 /* iCarousel.m in Sources */,
 			);

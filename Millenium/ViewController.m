@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "InteractiveViewController.h"
 
 @interface ViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation ViewController
 
-
+@synthesize InteractiveViewController;
 @synthesize carousel;
 @synthesize label;
 
@@ -85,7 +86,7 @@
         [button.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:22.0]];
 		//button.titleLabel.font = [button.titleLabel.font fontWithSize:22];
         
-		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+		//[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 	}
 	
 	//set button label
@@ -94,7 +95,7 @@
     if (index ==0){
         
         [button setTitle:[NSString stringWithFormat:@"Direct Purchase Mat"] forState:UIControlStateNormal];
-        
+        //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (index ==1){
@@ -130,6 +131,9 @@
     if (index == 6){
         
         [button setTitle:[NSString stringWithFormat:@"Interactive Mat Tool"] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(presentInteractiveViewController:) forControlEvents:UIControlEventTouchUpInside];
+        //[button addTarget:self action:@selector(buttonTappedSix:) forControlEvents:UIControlEventTouchUpInside];
+        
         
     }
     
@@ -138,40 +142,109 @@
 }
 
 
+/*- (IBAction)buttonTappedSix:(UIButton *)sender{
+    
+    
+    
+    
+       [self presentViewController:InteractiveViewController animated:YES completion:nil];
+    
+    
+    
+}*/
+
+
+- (IBAction)presentInteractiveViewController:(UIButton *)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:svc animated:YES completion:nil];
+    
+    
+   }
+
+#pragma mark-
+#pragma mark Segue
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    
+    if ([segue.identifier isEqualToString:@"InteractiveSegue"]) {
+        
+        InteractiveViewController *destViewController = segue.destinationViewController;
+        [self presentViewController:destViewController animated:YES completion:nil];
+        
+
+        
+        //[self presentViewController:InteractiveViewController animated:YES completion:nil];
+
+        
+        
+    }
+    
+}
+
+
 #pragma mark -
 #pragma mark Button tap event
 
-- (void)buttonTapped:(UIButton *)sender
-{
-	//get item index for button
-	NSInteger index = [carousel indexOfItemViewOrSubview:sender];
-	
-    [[[UIAlertView alloc] initWithTitle:@"Button Tapped"
+//- (void)buttonTapped:(UIButton *)sender
+//{
+    
+    //NSInteger index = [carousel indexOfItemViewOrSubview:sender];
+    
+    
+    //if (index==6){
+        
+       //InteractiveViewController*interactiveViewController = [[InteractiveViewController alloc] init];
+      // [self presentViewController:interactiveViewController animated:YES completion:nil];
+        
+        /*InteractiveViewController *destViewController =[[InteractiveViewController alloc] init];
+        [self presentViewController:destViewController animated:YES completion:nil];*/
+
+        
+        
+        
+        
+        
+    //}
+
+    
+   /* [[[UIAlertView alloc] initWithTitle:@"Button Tapped"
                                 message:[NSString stringWithFormat:@"You tapped button number %i", index]
                                delegate:nil
                       cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
-}
+                      otherButtonTitles:nil] show];*/
+  
+//}
 
 
 
 #pragma mark -
 #pragma mark Control events
 
-- (IBAction)pressedButton:(id)sender
-{
-    label.text = [NSString stringWithFormat:@"Button %i pressed", [carousel indexOfItemViewOrSubview:sender]];
-}
+/*- (IBAction)pressedButton:(id)sender
 
-- (IBAction)toggledSwitch:(id)sender
 {
-    label.text = [NSString stringWithFormat:@"Switch %i toggled", [carousel indexOfItemViewOrSubview:sender]];
-}
+    
+    NSInteger index = [carousel indexOfItemViewOrSubview:sender];
+    if (index==6){
+        
+        
+        [self presentViewController:InteractiveViewController animated:YES completion:nil];
+        
+        
+        
+    }
+    
+}*/
 
-- (IBAction)changedSlider:(id)sender
-{
-    label.text = [NSString stringWithFormat:@"Slider %i changed", [carousel indexOfItemViewOrSubview:sender]];
-}
+
+
+
 
 
 - (void)didReceiveMemoryWarning
