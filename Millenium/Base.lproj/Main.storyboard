@@ -108,6 +108,10 @@
                                 <rect key="frame" x="150" y="687" width="829" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EOd-lr-Xtf" id="c92-HT-zsF"/>
+                                    <outlet property="delegate" destination="EOd-lr-Xtf" id="w3B-qs-nXP"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHZ-Fm-nwL" customClass="iCarousel">
                                 <rect key="frame" x="150" y="592" width="829" height="71"/>
@@ -232,6 +236,7 @@
                     <navigationItem key="navigationItem" id="YBb-aE-WUj"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="carouselColor" destination="t5b-lW-ql1" id="tUt-8d-e4m"/>
                         <outlet property="carouselSize" destination="qHZ-Fm-nwL" id="C17-b9-Ucj"/>
                         <outlet property="interactiveView" destination="hlw-qG-BNy" id="vfV-pl-Gpg"/>
                     </connections>
@@ -358,8 +363,10 @@
         <image name="CameraIcon.png" width="88" height="88"/>
         <image name="EditLogoIcon.png" width="88" height="88"/>
         <image name="EmailDemo.png" width="88" height="88"/>
+        <image name="EmailDemo.png" width="88" height="88"/>
         <image name="HomeIcon.png" width="88" height="88"/>
         <image name="InternetIcon.png" width="88" height="88"/>
+        <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="MillenniumMatCompanyBannerOne.jpg" width="960" height="482"/>
         <image name="SaveIcon.png" width="88" height="88"/>
