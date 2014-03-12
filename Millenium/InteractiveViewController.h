@@ -20,7 +20,18 @@
 @property (nonatomic, strong) IBOutlet UIButton *internetLogoButton;
 @property (nonatomic, strong) IBOutlet UIButton *nearLogoButton;
 @property (nonatomic, strong) IBOutlet UIButton *searchLogoButton;
-@property (nonatomic, strong) IBOutlet iCarousel *carousel;
+@property (nonatomic, strong) IBOutlet UIButton *rugSizeButton;
+@property (nonatomic, strong) IBOutlet UIButton *rugColorButton;
+
+@property (nonatomic, strong) NSString *matSizeString;
+@property (nonatomic, strong) NSString *matColorString;
+
+@property (nonatomic, strong) NSString *matColorUseString;
+@property (nonatomic, strong) NSString *matSizeUseString;
+
+
+@property (nonatomic, strong) IBOutlet iCarousel *carouselSize;
+@property (nonatomic, strong) IBOutlet iCarousel *carouselColor;
 
 -(IBAction)backButton:(id)sender;
 

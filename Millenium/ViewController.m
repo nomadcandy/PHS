@@ -84,9 +84,7 @@
         [button setContentVerticalAlignment:UIControlContentVerticalAlignmentBottom];
         
         [button.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:22.0]];
-		//button.titleLabel.font = [button.titleLabel.font fontWithSize:22];
-        
-		//[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 	}
 	
 	//set button label
@@ -153,7 +151,7 @@
     
 }*/
 
-
+//Method Works
 - (IBAction)presentInteractiveViewController:(UIButton *)sender{
     
     UIStoryboard *storyboard = self.storyboard;
@@ -164,7 +162,7 @@
     
     
    }
-
+//Not Using Now
 #pragma mark-
 #pragma mark Segue
 
@@ -179,7 +177,7 @@
         
 
         
-        //[self presentViewController:InteractiveViewController animated:YES completion:nil];
+       
 
         
         
@@ -191,35 +189,46 @@
 #pragma mark -
 #pragma mark Button tap event
 
-//- (void)buttonTapped:(UIButton *)sender
-//{
+- (void)buttonTapped:(UIButton *)sender
+{
     
-    //NSInteger index = [carousel indexOfItemViewOrSubview:sender];
+    NSInteger index = [carousel indexOfItemViewOrSubview:sender];
     
     
-    //if (index==6){
+    if (index==5){
         
-       //InteractiveViewController*interactiveViewController = [[InteractiveViewController alloc] init];
-      // [self presentViewController:interactiveViewController animated:YES completion:nil];
         
-        /*InteractiveViewController *destViewController =[[InteractiveViewController alloc] init];
-        [self presentViewController:destViewController animated:YES completion:nil];*/
+        
+        UIStoryboard *storyboard = self.storyboard;
+        InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:svc animated:YES completion:nil];
+        
+        
+        
+        
+    }
+    
+    if (index==6){
+        
+       
 
+        UIStoryboard *storyboard = self.storyboard;
+        InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:svc animated:YES completion:nil];
         
         
         
         
-        
-    //}
+    }
 
     
-   /* [[[UIAlertView alloc] initWithTitle:@"Button Tapped"
-                                message:[NSString stringWithFormat:@"You tapped button number %i", index]
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];*/
+   
   
-//}
+}
 
 
 
