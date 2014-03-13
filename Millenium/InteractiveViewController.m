@@ -8,6 +8,7 @@
 
 #import "InteractiveViewController.h"
 #import "ViewController.h"
+#import "MyDraggableImage.h"
 
 
 @interface InteractiveViewController ()
@@ -19,17 +20,23 @@
 @synthesize interactiveView;
 @synthesize carouselSize;
 @synthesize carouselColor;
+@synthesize carouselLogo;
+
 @synthesize rugSizeButton;
 @synthesize rugColorButton;
 @synthesize matSizeString;
 @synthesize matColorUseString;
 @synthesize matSizeUseString;
 
+@synthesize logoButton;
+
 
 - (void)dealloc
 {
     carouselSize.delegate = nil;
     carouselSize.dataSource = nil;
+    carouselColor.delegate = nil;
+    carouselColor.dataSource = nil;
     
 }
 
@@ -55,6 +62,8 @@
     
     //configure carousel
     carouselSize.type = iCarouselTypeCoverFlow2;
+    carouselColor.type = iCarouselTypeCoverFlow2;
+    carouselLogo.type = iCarouselTypeCustom;
     
     
 }
@@ -64,11 +73,31 @@
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
+    
+    
+    if (carousel.tag==1)
+    
+{
     //generate 100 item views
     //normally we'd use a backing array
     //as shown in the basic iOS example
     //but for this example we haven't bothered
     return 14;
+    
+}
+    
+    else if  (carousel.tag==2)
+    {
+        return 14;
+    }
+    
+    else  {
+        
+        return 8;
+    }
+    
+    
+    
 }
 //hell0
 
@@ -196,17 +225,17 @@
     
 
 
-else {
+else if (carousel==carouselColor){
     
     UIButton *matColorButton = (UIButton *)view;
 	if (matColorButton == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *imageColor = [UIImage imageNamed:@"RugSample1.png"];
+		UIImage *imageColor = [UIImage imageNamed:@"RugSampleA.png"];
 		matColorButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        matColorButton.frame = CGRectMake(0.0f, 0.0f, imageColor.size.width/4, imageColor.size.height/4);
+        matColorButton.frame = CGRectMake(0.0f, 0.0f, 90, 60);
         //matColorButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
-		[matColorButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+		[matColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[matColorButton setBackgroundImage:imageColor forState:UIControlStateNormal];
         
         matColorButton.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -317,6 +346,95 @@ else {
     return matColorButton;
     
 }
+    
+else
+    
+{
+    
+    UIButton *logoButtons = (UIButton *)view;
+	if (logoButtons == nil)
+	{
+		//no button available to recycle, so create new one
+		UIImage *imageColor = [UIImage imageNamed:@"LogoButtonsBG.png"];
+		logoButtons = [UIButton buttonWithType:UIButtonTypeCustom];
+        logoButtons.frame = CGRectMake(0.0f, 0.0f, 90, 60);
+        //matColorButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
+		[logoButtons setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+		[logoButtons setBackgroundImage:imageColor forState:UIControlStateNormal];
+        
+        logoButtons.layer.shadowColor = [UIColor blackColor].CGColor;
+        logoButtons.layer.shadowOpacity = 0.8;
+        logoButtons.layer.shadowRadius = 12;
+        logoButtons.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+        
+        logoButtons.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
+        [logoButtons setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
+        
+        [logoButtons.titleLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:17.0]];
+		//button.titleLabel.font = [button.titleLabel.font fontWithSize:22];
+        [logoButtons addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+	}
+	
+	//set button label
+	[logoButtons setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
+    [logoButtons setTitle:[NSString stringWithFormat:@"matSizeString", matSizeString] forState:UIControlStateNormal];
+    
+    
+    if (index ==0){
+        
+        [logoButtons setTitle:[NSString stringWithFormat:@"edit"] forState:UIControlStateNormal];
+        //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    if (index ==1){
+        
+        [logoButtons setTitle:[NSString stringWithFormat:@"pics"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index ==2){
+        
+        [logoButtons setTitle:[NSString stringWithFormat:@"camera"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index == 3){
+        
+        [logoButtons setTitle:[NSString stringWithFormat:@"millenium"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index == 4){
+        
+        [logoButtons setTitle:[NSString stringWithFormat:@"web"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index == 5){
+        
+        [logoButtons setTitle:[NSString stringWithFormat:@"website"] forState:UIControlStateNormal];
+        
+    }
+    
+    if (index == 6){
+        
+        [logoButtons setTitle:[NSString stringWithFormat:@"transparent"] forState:UIControlStateNormal];
+        
+        
+    }
+    
+    if (index ==7){
+        
+        [logoButtons setTitle:[NSString stringWithFormat:@"save"] forState:UIControlStateNormal];
+        //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    
+    
+    
+    return logoButtons;
+    
+}
 
     
 }
@@ -331,8 +449,8 @@ else {
     
     NSInteger index = [carouselSize indexOfItemViewOrSubview:sender];
     int i=index;
-    int width;
-    int height;
+    //int width;
+    //int height;
     
     if (index==i){
         
@@ -365,6 +483,26 @@ else {
     
 }
 
+- (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
+{
+    
+    UITouch *t = [[event allTouches] anyObject];
+    UIControl *control = sender;
+    CGPoint center = control.center;
+    
+    CGPoint pPrev = [t previousLocationInView:control];
+    CGPoint p = [t locationInView:control];
+    center.x += p.x - pPrev.x;
+    center.y += p.y - pPrev.y;
+    control.center = center;
+    
+    
+    
+}
+
+    
+    
+    
 
 
 
@@ -386,21 +524,6 @@ else {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

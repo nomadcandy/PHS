@@ -470,9 +470,66 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     //perform transform
     switch (_type)
     {
+        
+        /*case iCarouselTypeCustom:
+        {
+            
+            
+            return [_delegate carousel:self itemTransformForOffset:offset baseTransform:transform];
+            
+        }*/
+            
         case iCarouselTypeCustom:
         {
-            return [_delegate carousel:self itemTransformForOffset:offset baseTransform:transform];
+            
+            CGFloat tilt = [self valueForOption:iCarouselOptionTilt withDefault:0.25f];
+            CGFloat spacing = [self valueForOption:iCarouselOptionSpacing withDefault:.35f];
+            CGFloat clampedOffset = fmaxf(-1.0f, fminf(1.0f, offset));
+            
+            //if (_type == iCarouselTypeCoverFlow2)
+            //{
+                if (_toggle >= 0.0f)
+                {
+                    if (offset <= -0.5f)
+                    {
+                        clampedOffset = -1.0f;
+                    }
+                    else if (offset <= 0.5f)
+                    {
+                        clampedOffset = -_toggle;
+                    }
+                    else if (offset <= 1.5f)
+                    {
+                        clampedOffset = 1.0f - _toggle;
+                    }
+                }
+                else
+                {
+                    if (offset > 0.5f)
+                    {
+                        clampedOffset = 1.0f;
+                    }
+                    else if (offset > -0.5f)
+                    {
+                        clampedOffset = -_toggle;
+                    }
+                    else if (offset > -1.5f)
+                    {
+                        clampedOffset = - 1.0f - _toggle;
+                    }
+                }
+            //}
+            
+            CGFloat x = (clampedOffset * 0.5f * tilt + offset * spacing) * _itemWidth;
+            CGFloat z = fabsf(clampedOffset) * -_itemWidth * 0.5f;
+            
+            
+            transform = CATransform3DTranslate(transform, 0.0f, x, z);
+            return CATransform3DRotate(transform, -clampedOffset * M_PI_2 * tilt, -1.0f, 0.0f, 0.0f);
+            
+            
+        
+
         }
         case iCarouselTypeLinear:
         {

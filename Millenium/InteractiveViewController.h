@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 #import "iCarousel.h"
+#import "MyDraggableImage.h"
 
 @interface InteractiveViewController : UIViewController<iCarouselDataSource,iCarouselDataSource>{
     
     IBOutlet UIView *interactiveView;
+    
+    MyDraggableImage*MyDragRect;
+    IBOutlet UIButton*logoButton;
 }
 
 @property (nonatomic, strong) IBOutlet UIView *interactiveView;
@@ -22,6 +26,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *searchLogoButton;
 @property (nonatomic, strong) IBOutlet UIButton *rugSizeButton;
 @property (nonatomic, strong) IBOutlet UIButton *rugColorButton;
+@property (nonatomic, strong) IBOutlet UIButton *logoButton;
 
 @property (nonatomic, strong) NSString *matSizeString;
 @property (nonatomic, strong) NSString *matColorString;
@@ -32,7 +37,9 @@
 
 @property (nonatomic, strong) IBOutlet iCarousel *carouselSize;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselColor;
+@property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
 
 -(IBAction)backButton:(id)sender;
+- (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
 
 @end

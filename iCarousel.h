@@ -73,6 +73,7 @@ typedef enum
     iCarouselTypeTimeMachine,
     iCarouselTypeInvertedTimeMachine,
     iCarouselTypeCustom
+    
 }
 iCarouselType;
 
