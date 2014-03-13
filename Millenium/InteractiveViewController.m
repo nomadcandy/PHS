@@ -80,9 +80,9 @@
 	if (matSizeButton == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"greySizeImage.png"];
+		UIImage *image = [UIImage imageNamed:@"CarouselPadWhite.png"];
 		matSizeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        matSizeButton.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
+        matSizeButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
 		[matSizeButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 		[matSizeButton setBackgroundImage:image forState:UIControlStateNormal];
         
@@ -94,7 +94,7 @@
         matSizeButton.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
         [matSizeButton setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
         
-        [matSizeButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:22.0]];
+        [matSizeButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:22.0]];
 		//button.titleLabel.font = [button.titleLabel.font fontWithSize:22];
         [matSizeButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 	}
@@ -202,11 +202,12 @@ else {
 	if (matColorButton == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"greySizeImage.png"];
+		UIImage *imageColor = [UIImage imageNamed:@"RugSample1.png"];
 		matColorButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        matColorButton.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
+        matColorButton.frame = CGRectMake(0.0f, 0.0f, imageColor.size.width/4, imageColor.size.height/4);
+        //matColorButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
 		[matColorButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-		[matColorButton setBackgroundImage:image forState:UIControlStateNormal];
+		[matColorButton setBackgroundImage:imageColor forState:UIControlStateNormal];
         
         matColorButton.layer.shadowColor = [UIColor blackColor].CGColor;
         matColorButton.layer.shadowOpacity = 0.8;
@@ -216,7 +217,7 @@ else {
         matColorButton.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
         [matColorButton setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
         
-        [matColorButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:17.0]];
+        [matColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:17.0]];
 		//button.titleLabel.font = [button.titleLabel.font fontWithSize:22];
         [matColorButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 	}
@@ -419,6 +420,7 @@ else {
 {
     [super viewDidUnload];
     self.carouselSize = nil;
+    self.carouselColor = nil;
     self.rugSizeButton = nil;
     self.rugColorButton = nil;
 }

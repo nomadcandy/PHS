@@ -47,6 +47,26 @@
 		42EB3EB318D0AEE800FAD7FD /* Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EB118D0AEE800FAD7FD /* Landscape.png */; };
 		42EB3EB518D0AEF200FAD7FD /* Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EB418D0AEF200FAD7FD /* Portrait.png */; };
 		42EB3EB618D0AEF200FAD7FD /* Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EB418D0AEF200FAD7FD /* Portrait.png */; };
+		42EB3EB818D0D53900FAD7FD /* FloorMatSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EB718D0D53900FAD7FD /* FloorMatSample.png */; };
+		42EB3EB918D0D53900FAD7FD /* FloorMatSample.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EB718D0D53900FAD7FD /* FloorMatSample.png */; };
+		42EB3EBB18D0D6D100FAD7FD /* JadeTeaHouseLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EBA18D0D6D100FAD7FD /* JadeTeaHouseLogo.png */; };
+		42EB3EBC18D0D6D100FAD7FD /* JadeTeaHouseLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EBA18D0D6D100FAD7FD /* JadeTeaHouseLogo.png */; };
+		42EB3EBE18D0D8BF00FAD7FD /* GreenBGPages.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EBD18D0D8BF00FAD7FD /* GreenBGPages.png */; };
+		42EB3EBF18D0D8BF00FAD7FD /* GreenBGPages.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EBD18D0D8BF00FAD7FD /* GreenBGPages.png */; };
+		42EB3EC418D0DB4200FAD7FD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC318D0DB4200FAD7FD /* SWRevealViewController.m */; };
+		42EB3EC518D0DB4200FAD7FD /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC318D0DB4200FAD7FD /* SWRevealViewController.m */; };
+		42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
+		42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
+		42EB3ECB18D1F50700FAD7FD /* ColorSquareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ECA18D1F50700FAD7FD /* ColorSquareButton.png */; };
+		42EB3ECC18D1F50700FAD7FD /* ColorSquareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ECA18D1F50700FAD7FD /* ColorSquareButton.png */; };
+		42EB3ECE18D1F57E00FAD7FD /* GreyPadBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ECD18D1F57E00FAD7FD /* GreyPadBG.png */; };
+		42EB3ECF18D1F57E00FAD7FD /* GreyPadBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ECD18D1F57E00FAD7FD /* GreyPadBG.png */; };
+		42EB3ED118D1F97F00FAD7FD /* SizeTransButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ED018D1F97F00FAD7FD /* SizeTransButton.png */; };
+		42EB3ED218D1F97F00FAD7FD /* SizeTransButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ED018D1F97F00FAD7FD /* SizeTransButton.png */; };
+		42EB3ED418D1FBE600FAD7FD /* LogoButtonsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ED318D1FBE600FAD7FD /* LogoButtonsBG.png */; };
+		42EB3ED518D1FBE600FAD7FD /* LogoButtonsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ED318D1FBE600FAD7FD /* LogoButtonsBG.png */; };
+		42EB3ED718D1FE2E00FAD7FD /* CarouselPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ED618D1FE2E00FAD7FD /* CarouselPadWhite.png */; };
+		42EB3ED818D1FE2E00FAD7FD /* CarouselPadWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3ED618D1FE2E00FAD7FD /* CarouselPadWhite.png */; };
 		42FF7A1518CDE92A00C72695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1418CDE92A00C72695 /* Foundation.framework */; };
 		42FF7A1718CDE92A00C72695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */; };
 		42FF7A1918CDE92A00C72695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1818CDE92A00C72695 /* UIKit.framework */; };
@@ -101,6 +121,18 @@
 		42EB3EAE18D0AD6000FAD7FD /* EmailTestIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailTestIcon.png; sourceTree = "<group>"; };
 		42EB3EB118D0AEE800FAD7FD /* Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Landscape.png; sourceTree = "<group>"; };
 		42EB3EB418D0AEF200FAD7FD /* Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Portrait.png; sourceTree = "<group>"; };
+		42EB3EB718D0D53900FAD7FD /* FloorMatSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FloorMatSample.png; sourceTree = "<group>"; };
+		42EB3EBA18D0D6D100FAD7FD /* JadeTeaHouseLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JadeTeaHouseLogo.png; sourceTree = "<group>"; };
+		42EB3EBD18D0D8BF00FAD7FD /* GreenBGPages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenBGPages.png; sourceTree = "<group>"; };
+		42EB3EC218D0DB4200FAD7FD /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		42EB3EC318D0DB4200FAD7FD /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveSlideViewController.h; sourceTree = "<group>"; };
+		42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveSlideViewController.m; sourceTree = "<group>"; };
+		42EB3ECA18D1F50700FAD7FD /* ColorSquareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ColorSquareButton.png; sourceTree = "<group>"; };
+		42EB3ECD18D1F57E00FAD7FD /* GreyPadBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreyPadBG.png; sourceTree = "<group>"; };
+		42EB3ED018D1F97F00FAD7FD /* SizeTransButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SizeTransButton.png; sourceTree = "<group>"; };
+		42EB3ED318D1FBE600FAD7FD /* LogoButtonsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoButtonsBG.png; sourceTree = "<group>"; };
+		42EB3ED618D1FE2E00FAD7FD /* CarouselPadWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselPadWhite.png; sourceTree = "<group>"; };
 		42FF7A1118CDE92A00C72695 /* Millenium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millenium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A1418CDE92A00C72695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,6 +187,8 @@
 			children = (
 				42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */,
 				42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */,
+				42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */,
+				42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */,
 			);
 			name = Interactive;
 			sourceTree = "<group>";
@@ -178,9 +212,27 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
+		42EB3EC018D0DB1900FAD7FD /* MenuSlider */ = {
+			isa = PBXGroup;
+			children = (
+				42EB3EC118D0DB4200FAD7FD /* SWRevealViewController */,
+			);
+			name = MenuSlider;
+			sourceTree = "<group>";
+		};
+		42EB3EC118D0DB4200FAD7FD /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42EB3EC218D0DB4200FAD7FD /* SWRevealViewController.h */,
+				42EB3EC318D0DB4200FAD7FD /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				42EB3EC018D0DB1900FAD7FD /* MenuSlider */,
 				42FF7A4A18CDEBF500C72695 /* ImagesTest */,
 				42FF7A4918CDEBEB00C72695 /* Images */,
 				42FF7A1A18CDE92A00C72695 /* Millenium */,
@@ -270,6 +322,14 @@
 		42FF7A4A18CDEBF500C72695 /* ImagesTest */ = {
 			isa = PBXGroup;
 			children = (
+				42EB3ED618D1FE2E00FAD7FD /* CarouselPadWhite.png */,
+				42EB3ED318D1FBE600FAD7FD /* LogoButtonsBG.png */,
+				42EB3ECD18D1F57E00FAD7FD /* GreyPadBG.png */,
+				42EB3ECA18D1F50700FAD7FD /* ColorSquareButton.png */,
+				42EB3ED018D1F97F00FAD7FD /* SizeTransButton.png */,
+				42EB3EBD18D0D8BF00FAD7FD /* GreenBGPages.png */,
+				42EB3EBA18D0D6D100FAD7FD /* JadeTeaHouseLogo.png */,
+				42EB3EB718D0D53900FAD7FD /* FloorMatSample.png */,
 				42EB3EAB18D0A77900FAD7FD /* greySizeImage.png */,
 				42EB3EA818D0A4E500FAD7FD /* RugSample1.png */,
 				42EB3E9C18D0A4DA00FAD7FD /* RugSample2.png */,
@@ -368,13 +428,18 @@
 			files = (
 				42FF7A4C18CDEC1100C72695 /* MillenniumLogo.jpg in Resources */,
 				42E7AC2A18CE67C60036AF00 /* HomeIcon.png in Resources */,
+				42EB3EBB18D0D6D100FAD7FD /* JadeTeaHouseLogo.png in Resources */,
 				42E7AC2418CE4A720036AF00 /* SearchMMIcon.png in Resources */,
 				42E7AC1218CE41950036AF00 /* CameraIcon.png in Resources */,
+				42EB3ECE18D1F57E00FAD7FD /* GreyPadBG.png in Resources */,
+				42EB3ED118D1F97F00FAD7FD /* SizeTransButton.png in Resources */,
 				42E7AC2718CE4C600036AF00 /* EditLogoIcon.png in Resources */,
 				42E7AC1E18CE47F20036AF00 /* PicIcon.png in Resources */,
 				42E7AC1818CE41950036AF00 /* SaveIcon.png in Resources */,
 				42FF7A5318CDF67000C72695 /* page.png in Resources */,
+				42EB3EBE18D0D8BF00FAD7FD /* GreenBGPages.png in Resources */,
 				42EB3EAF18D0AD6000FAD7FD /* EmailTestIcon.png in Resources */,
+				42EB3ED418D1FBE600FAD7FD /* LogoButtonsBG.png in Resources */,
 				4223E63D18CE0994002BB981 /* CarouselBG.png in Resources */,
 				4223E63F18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg in Resources */,
 				42EB3EB518D0AEF200FAD7FD /* Portrait.png in Resources */,
@@ -383,6 +448,7 @@
 				42EB3EA018D0A4DA00FAD7FD /* RugSample2.png in Resources */,
 				42EB3EA918D0A4E500FAD7FD /* RugSample1.png in Resources */,
 				42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
+				42EB3EB818D0D53900FAD7FD /* FloorMatSample.png in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42E7AC1618CE41950036AF00 /* InternetIcon.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
@@ -391,6 +457,8 @@
 				42EB3EA418D0A4DA00FAD7FD /* RugSample4.png in Resources */,
 				42EB3EA618D0A4DA00FAD7FD /* RugSample5.png in Resources */,
 				42E7AC2118CE493D0036AF00 /* UsePicIcon.png in Resources */,
+				42EB3ED718D1FE2E00FAD7FD /* CarouselPadWhite.png in Resources */,
+				42EB3ECB18D1F50700FAD7FD /* ColorSquareButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,20 +470,28 @@
 				42EB3EA318D0A4DA00FAD7FD /* RugSample3.png in Resources */,
 				42EB3EAA18D0A4E500FAD7FD /* RugSample1.png in Resources */,
 				42EB3EB018D0AD6000FAD7FD /* EmailTestIcon.png in Resources */,
+				42EB3ED518D1FBE600FAD7FD /* LogoButtonsBG.png in Resources */,
+				42EB3ECC18D1F50700FAD7FD /* ColorSquareButton.png in Resources */,
 				42E7AC1718CE41950036AF00 /* InternetIcon.png in Resources */,
 				42FF7A5418CDF67000C72695 /* page.png in Resources */,
 				42EB3EB318D0AEE800FAD7FD /* Landscape.png in Resources */,
+				42EB3EBF18D0D8BF00FAD7FD /* GreenBGPages.png in Resources */,
 				42E7AC2818CE4C600036AF00 /* EditLogoIcon.png in Resources */,
+				42EB3ECF18D1F57E00FAD7FD /* GreyPadBG.png in Resources */,
 				42E7AC1F18CE47F20036AF00 /* PicIcon.png in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42EB3EA518D0A4DA00FAD7FD /* RugSample4.png in Resources */,
+				42EB3ED818D1FE2E00FAD7FD /* CarouselPadWhite.png in Resources */,
 				42EB3EA718D0A4DA00FAD7FD /* RugSample5.png in Resources */,
 				42E7AC2518CE4A720036AF00 /* SearchMMIcon.png in Resources */,
 				42E7AC2B18CE67C60036AF00 /* HomeIcon.png in Resources */,
 				42EB3EAD18D0A77900FAD7FD /* greySizeImage.png in Resources */,
+				42EB3EB918D0D53900FAD7FD /* FloorMatSample.png in Resources */,
+				42EB3EBC18D0D6D100FAD7FD /* JadeTeaHouseLogo.png in Resources */,
 				42E7AC1918CE41950036AF00 /* SaveIcon.png in Resources */,
 				42EB3EB618D0AEF200FAD7FD /* Portrait.png in Resources */,
 				42E7AC2218CE493D0036AF00 /* UsePicIcon.png in Resources */,
+				42EB3ED218D1F97F00FAD7FD /* SizeTransButton.png in Resources */,
 				42E7AC1318CE41950036AF00 /* CameraIcon.png in Resources */,
 				42EB3EA118D0A4DA00FAD7FD /* RugSample2.png in Resources */,
 			);
@@ -429,10 +505,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,
+				42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
+				42EB3EC418D0DB4200FAD7FD /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +521,8 @@
 				42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42FF7A4018CDE92A00C72695 /* MilleniumTests.m in Sources */,
 				42FF7A5118CDF09B00C72695 /* iCarousel.m in Sources */,
+				42EB3EC518D0DB4200FAD7FD /* SWRevealViewController.m in Sources */,
+				42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
