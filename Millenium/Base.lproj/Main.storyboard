@@ -122,15 +122,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view tag="3" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHX-CH-uLr" customClass="iCarousel">
-                                <rect key="frame" x="631" y="124" width="140" height="132"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="EOd-lr-Xtf" id="NxL-so-HbF"/>
-                                    <outlet property="delegate" destination="EOd-lr-Xtf" id="JPo-1T-wa5"/>
-                                </connections>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbP-PE-jD5" userLabel="Back">
                                 <rect key="frame" x="9" y="0.0" width="230" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -199,7 +190,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-TK-Ydj">
-                                <rect key="frame" x="584" y="25" width="164" height="132"/>
+                                <rect key="frame" x="596" y="25" width="164" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="allLogoButtons.png">
@@ -218,7 +209,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="carouselColor" destination="XK9-Rl-Vbb" id="jWU-ig-2Fg"/>
-                        <outlet property="carouselLogo" destination="aHX-CH-uLr" id="Lrk-6k-BCM"/>
                         <outlet property="carouselSize" destination="qHZ-Fm-nwL" id="C17-b9-Ucj"/>
                         <outlet property="interactiveView" destination="hlw-qG-BNy" id="vfV-pl-Gpg"/>
                         <outlet property="logoButton" destination="DwB-TK-Ydj" id="u6O-xI-1gN"/>
