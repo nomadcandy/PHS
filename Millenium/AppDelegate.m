@@ -25,13 +25,18 @@
     [DIYMenu addMenuItem:@"Settings" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithRed:0.57f green:0.0f blue:0.85f alpha:1.0f] withFont:font];*/
     
     
-    [DIYMenu addMenuItem:@"transparent" withIcon:[UIImage imageNamed:@"portfolioIcon@2x.png"] withColor:[UIColor whiteColor] withFont:font];
-    [DIYMenu addMenuItem:@"pics" withIcon:[UIImage imageNamed:@"skillsIcon@2x.png"] withColor:[UIColor whiteColor] withFont:font];
+    [DIYMenu addMenuItem:@"transparent" withIcon:[UIImage imageNamed:@"portfolioIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:1] withFont:font];
+    
+    [DIYMenu addMenuItem:@"transparent" withIcon:[UIImage imageNamed:@"portfolioIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
+    
+    [DIYMenu addMenuItem:@"pics" withIcon:[UIImage imageNamed:@"skillsIcon@2x.png"] withColor:[UIColor lightGrayColor] withFont:font];
     [DIYMenu addMenuItem:@"camera" withIcon:[UIImage imageNamed:@"exploreIcon@2x.png"] withColor:[UIColor whiteColor] withFont:font];
-    [DIYMenu addMenuItem:@"millenium" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor whiteColor] withFont:font];
+    [DIYMenu addMenuItem:@"millenium" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor lightGrayColor] withFont:font];
     [DIYMenu addMenuItem:@"search" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor whiteColor] withFont:font];
-    [DIYMenu addMenuItem:@"near me" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor whiteColor] withFont:font];
+    [DIYMenu addMenuItem:@"near me" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor lightGrayColor] withFont:font];
     [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor whiteColor] withFont:font];
+    
+    
     // Override point for customization after application launch.
     return YES;
     

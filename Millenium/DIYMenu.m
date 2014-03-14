@@ -154,7 +154,7 @@
         [self.menuItems enumerateObjectsUsingBlock:^(DIYMenuItem *item, NSUInteger idx, BOOL *stop) {
             item.transform = CGAffineTransformMakeTranslation(0, 0);
         }];
-        self.shadingView.alpha = 0.75f;
+        //self.shadingView.alpha = 0.75f;
     } completion:^(BOOL finished) {
         //
     }];

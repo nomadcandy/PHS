@@ -34,7 +34,8 @@
         _shadingView = [[UIView alloc] initWithFrame:self.bounds];
         // _shadingView = [[UIView alloc] initWithFrame: CGRectMake(600,300, 40, 240)];
         self.shadingView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        self.shadingView.backgroundColor = [UIColor lightGrayColor];
+        //self.shadingView.backgroundColor = [UIColor lightGrayColor];
+        //self.shadingView.backgroundColor = [UIColor lightGrayColor];
         self.shadingView.userInteractionEnabled = false;
         self.shadingView.alpha = 0.0f;
         [self addSubview:self.shadingView];
@@ -85,8 +86,9 @@
         CGRect glyphFrame = CGRectMake(ICONPADDING - (ICONSIZE/2), ICONPADDING + GLYPHPADDINGADJUST, 2*ICONSIZE, ICONSIZE + GLYPHPADDINGADJUST);
         _glyph = [[UILabel alloc] initWithFrame:glyphFrame];
         self.glyph.backgroundColor = color;
-        self.glyph.textColor = [UIColor whiteColor];
-        self.glyph.textAlignment = UITextAlignmentCenter;
+        self.glyph.textColor = [UIColor darkGrayColor];
+        self.glyph.textAlignment = UITextAlignmentLeft;
+        
         self.glyph.font = glyphFont;
         self.glyph.text = glyph;
         [self addSubview:self.glyph];
