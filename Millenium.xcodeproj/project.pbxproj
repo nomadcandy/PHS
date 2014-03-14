@@ -10,6 +10,12 @@
 		4223E63D18CE0994002BB981 /* CarouselBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4223E63C18CE0994002BB981 /* CarouselBG.png */; };
 		4223E63F18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */; };
 		424756D518D37B22000AAF7C /* MatIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756D418D37B22000AAF7C /* MatIcon.png */; };
+		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
+		424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
+		424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */; };
+		424756E818D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */; };
+		424756EB18D38B2C000AAF7C /* LogoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756EA18D38B2C000AAF7C /* LogoCell.m */; };
+		424756EC18D38B2C000AAF7C /* LogoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756EA18D38B2C000AAF7C /* LogoCell.m */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
@@ -111,6 +117,12 @@
 		4223E63C18CE0994002BB981 /* CarouselBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselBG.png; sourceTree = "<group>"; };
 		4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MillenniumMatCompanyBannerOne.jpg; sourceTree = "<group>"; };
 		424756D418D37B22000AAF7C /* MatIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatIcon.png; sourceTree = "<group>"; };
+		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoCollectionViewController.h; sourceTree = "<group>"; };
+		424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoCollectionViewController.m; sourceTree = "<group>"; };
+		424756E918D38B2C000AAF7C /* LogoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoCell.h; sourceTree = "<group>"; };
+		424756EA18D38B2C000AAF7C /* LogoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoCell.m; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailDemo.png; sourceTree = "<group>"; };
@@ -201,6 +213,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		424756D618D389DE000AAF7C /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				424756D718D389FA000AAF7C /* SearchViewController.h */,
+				424756D818D389FA000AAF7C /* SearchViewController.m */,
+			);
+			name = SearchViewController;
+			sourceTree = "<group>";
+		};
+		424756DB18D38A47000AAF7C /* LogoCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */,
+				424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */,
+				424756E918D38B2C000AAF7C /* LogoCell.h */,
+				424756EA18D38B2C000AAF7C /* LogoCell.m */,
+			);
+			name = LogoCollectionViewController;
+			sourceTree = "<group>";
+		};
 		42E7AC0518CE2C100036AF00 /* Interactive */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +333,8 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				424756DB18D38A47000AAF7C /* LogoCollectionViewController */,
+				424756D618D389DE000AAF7C /* SearchViewController */,
 				42E7AC0518CE2C100036AF00 /* Interactive */,
 				42FF7A4D18CDF05C00C72695 /* iCarousel */,
 				42FF7A2318CDE92A00C72695 /* AppDelegate.h */,
@@ -546,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424756EB18D38B2C000AAF7C /* LogoCell.m in Sources */,
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,
 				42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
@@ -553,7 +588,9 @@
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */,
+				424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
+				424756D918D389FA000AAF7C /* SearchViewController.m in Sources */,
 				42EB3EC418D0DB4200FAD7FD /* SWRevealViewController.m in Sources */,
 				42EB3EE118D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
 			);
@@ -563,12 +600,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424756E818D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */,
 				42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42FF7A4018CDE92A00C72695 /* MilleniumTests.m in Sources */,
 				42FF7A5118CDF09B00C72695 /* iCarousel.m in Sources */,
 				42EB3EC518D0DB4200FAD7FD /* SWRevealViewController.m in Sources */,
+				424756EC18D38B2C000AAF7C /* LogoCell.m in Sources */,
 				42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42EB3EE218D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
+				424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

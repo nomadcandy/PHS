@@ -29,15 +29,11 @@
 - (void)setup
 {
     //Rotates Menu to come down from top of view
-    
+    //270 degrees
     self.transform = CGAffineTransformMakeRotation(-M_PI_2);
-    
+    //90 degrees
     //inverts menu to go from bottom of view
     //self.transform = CGAffineTransformMakeRotation(M_PI_2);
-    
-   //Sets the location and size of the menu when opened
-   //CGRect frame = CGRectMake (700,300,390,90);
-   // CGRect frame = CGRectMake (430,290,390,90);
     
     //x-up/down,y size of menu height, width
     CGRect frame = CGRectMake (140,312,390,76);
