@@ -9,15 +9,15 @@
 #ifndef DIYMenu_DIYMenuOptions_h
 #define DIYMenu_DIYMenuOptions_h
 
-#define ITEMHEIGHT 47.0f
-#define ITEMPADDING 19.0f
+#define ITEMHEIGHT 34.0f
+#define ITEMPADDING 5.0f
 
-#define ICONPADDING 10.0f
-#define ICONSIZE 27.0f
+#define ICONPADDING 5.0f
+#define ICONSIZE 34.0f
 
 #define GLYPHPADDINGADJUST 2.0f
 
-#define MENUFONT_FAMILY @"Helvetica-Neue"
-#define MENUFONT_SIZE 32
+#define MENUFONT_FAMILY @"Avenir-Light"
+#define MENUFONT_SIZE 22
 
 #endif

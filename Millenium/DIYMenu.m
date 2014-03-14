@@ -28,17 +28,32 @@
 
 - (void)setup
 {
-    self.transform = CGAffineTransformMakeRotation(M_PI_2);
-    CGRect frame = [UIScreen mainScreen].bounds;
+    //Rotates Menu to come down from top of view
+    
+    self.transform = CGAffineTransformMakeRotation(-M_PI_2);
+    
+    //inverts menu to go from bottom of view
+    //self.transform = CGAffineTransformMakeRotation(M_PI_2);
+    
+   //Sets the location and size of the menu when opened
+   //CGRect frame = CGRectMake (700,300,390,90);
+   // CGRect frame = CGRectMake (430,290,390,90);
+    
+    //x,y size of menu height, width
+    CGRect frame = CGRectMake (150,312,390,86);
+   //CGRect frame = [UIScreen mainScreen].bounds;
+
     frame.origin.x -= ITEMHEIGHT;
+    //frame.origin.x = ITEMHEIGHT;
     self.frame = frame;
     _menuItems = [[NSMutableArray alloc] init];
     self.clipsToBounds = true;
     
     // Set up shadingview
     _shadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width)];
-    self.shadingView.backgroundColor = [UIColor blackColor];
-    self.shadingView.alpha = 0.0f;
+    //_shadingView = [[UIView alloc] initWithFrame:CGRectMake(155, 312, frame.size.height, frame.size.width)];
+    self.shadingView.backgroundColor = [UIColor lightGrayColor];
+    self.shadingView.alpha = 0.00f;
     [self addSubview:self.shadingView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedBackground)];
@@ -129,6 +144,11 @@
     [self.menuItems enumerateObjectsUsingBlock:^(DIYMenuItem *item, NSUInteger idx, BOOL *stop) {
         item.transform = CGAffineTransformMakeTranslation(0, -ITEMHEIGHT * (idx + 2));
     }];
+    
+    /*[self.menuItems enumerateObjectsUsingBlock:^(DIYMenuItem *item, NSUInteger idx, BOOL *stop) {
+        item.transform = CGAffineTransformMakeTranslation(0, -ITEMHEIGHT * (idx + 5));
+    }];*/
+
     
     [UIView animateWithDuration:0.2f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
         [self.menuItems enumerateObjectsUsingBlock:^(DIYMenuItem *item, NSUInteger idx, BOOL *stop) {

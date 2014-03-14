@@ -21,18 +21,26 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        
+        
+        
         _delegate = nil;
+        
+        
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         self.autoresizesSubviews = true;
         
         _shadingView = [[UIView alloc] initWithFrame:self.bounds];
+        // _shadingView = [[UIView alloc] initWithFrame: CGRectMake(600,300, 40, 240)];
         self.shadingView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        self.shadingView.backgroundColor = [UIColor blackColor];
+        self.shadingView.backgroundColor = [UIColor lightGrayColor];
         self.shadingView.userInteractionEnabled = false;
         self.shadingView.alpha = 0.0f;
         [self addSubview:self.shadingView];
         
         _menuPosition = CGPointMake(frame.origin.x, frame.origin.y);
+        //_menuPosition = CGPointMake(550, 200);
     }
     return self;
 }
@@ -40,9 +48,10 @@
 - (void)setName:(NSString *)name withColor:(UIColor *)color withFont:(UIFont *)font
 {
     CGRect labelFrame = CGRectMake(ICONPADDING + ICONSIZE + ITEMPADDING, ICONPADDING, self.frame.size.width, ICONSIZE);
+    //CGRect labelFrame = CGRectMake(ICONPADDING + ICONSIZE + ITEMPADDING, ICONPADDING, 50, ICONSIZE);
     _name = [[UILabel alloc] initWithFrame:labelFrame];
     self.name.backgroundColor = color;
-    self.name.textColor = [UIColor whiteColor];
+    self.name.textColor = [UIColor darkGrayColor];
     self.name.font = font;
     self.name.text = name;
     [self addSubview:self.name];
@@ -59,7 +68,8 @@
     
     if (image != nil) {
         _icon = [[UIImageView alloc] initWithImage:image];
-        self.icon.frame = CGRectMake(ICONPADDING, ICONPADDING, ICONSIZE, ICONSIZE);
+       self.icon.frame = CGRectMake(ICONPADDING, ICONPADDING, ICONSIZE, ICONSIZE);
+        //self.icon.frame = CGRectMake(ICONPADDING, ICONPADDING, 50, 50);
         [self addSubview:self.icon];
     }
     else {
