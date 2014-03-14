@@ -72,13 +72,109 @@
 {
     [super viewDidLoad];
     
+    
+    
+    
     //configure carousel
     carouselSize.type = iCarouselTypeCoverFlow2;
     carouselColor.type = iCarouselTypeCoverFlow2;
     carouselLogo.type = iCarouselTypeCustom;
     
     
+    //configure menus
+    UIFont *font = [UIFont systemFontOfSize:14 ];
+    //[font setTextAlignment:NSTextAlignmentLeft];
+    
+    [DIYMenu setDelegate:self];
+    
+    
+    [DIYMenu addMenuItem:@"transparent" withIcon:[UIImage imageNamed:@"skillsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
+    [DIYMenu addMenuItem:@"pics" withIcon:[UIImage imageNamed:@"skillsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
+    [DIYMenu addMenuItem:@"camera" withIcon:[UIImage imageNamed:@"exploreIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
+    [DIYMenu addMenuItem:@"millenium" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
+    [DIYMenu addMenuItem:@"search" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
+    [DIYMenu addMenuItem:@"near me" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
+    [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font ];
+    
+    
+    // Override point for customization after application launch.
+    //return YES;
+
+    
+    
 }
+
+
+#pragma mark - DIYMenuDelegate
+//Item selected on menu
+- (void)menuItemSelected:(NSString *)action
+{
+    NSLog(@"menuItemSelected");
+    
+    //NSString*actionTakeString= menuItemSelected;
+    //NSLog(@"%@",actionTakeString);
+    
+    if ([action isEqualToString:@"transparent"])
+    {
+        
+        
+    }
+    
+    else if ([action isEqualToString:@"pics"])
+    {
+        
+        
+    }
+    
+    else if ([action isEqualToString:@"camera"])
+    {
+        
+    }
+    
+    else if ([action isEqualToString:@"millenium"])
+    {
+        UIStoryboard *storyboardLogo = self.storyboard;
+        LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:LogoCVC animated:YES completion:nil];
+        
+    }
+    
+    else if ([action isEqualToString:@"search"])
+    {
+        
+        
+    }
+    
+    else if ([action isEqualToString:@"near me"])
+    {
+        UIStoryboard *storyboardLogo = self.storyboard;
+        LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:LogoCVC animated:YES completion:nil];
+        
+    }
+    
+    else{
+        //save
+        
+    }
+    
+}
+
+
+- (void)menuActivated
+{
+    NSLog(@"Delegate: menuActivated");
+}
+
+- (void)menuCancelled
+{
+    NSLog(@"Delegate: menuCancelled");
+}
+
 
 #pragma mark -
 #pragma mark iCarousel methods

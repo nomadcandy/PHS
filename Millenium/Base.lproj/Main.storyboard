@@ -190,7 +190,7 @@
         <!--Logo Collection View Controller-->
         <scene sceneID="bwD-ct-b3l">
             <objects>
-                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="l8u-Ww-K06" customClass="LogoCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="LogoViewBoard" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l8u-Ww-K06" customClass="LogoCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mxw-N5-7VW">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -335,9 +335,12 @@
     </scenes>
     <resources>
         <image name="GreenBGPages.png" width="1024" height="768"/>
+        <image name="GreenBGPages.png" width="1024" height="768"/>
         <image name="GreyPadBG.png" width="1024" height="768"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
+        <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="MatIcon.png" width="110" height="102"/>
+        <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="MillenniumMatCompanyBannerOne.jpg" width="960" height="482"/>
         <image name="RugSampleA.png" width="114" height="104"/>

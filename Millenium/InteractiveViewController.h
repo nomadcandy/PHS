@@ -11,8 +11,9 @@
 #import "iCarousel.h"
 #import "MyDraggableImage.h"
 #import "DIYMenu.h"
+#import "LogoCollectionViewController.h"
 
-@interface InteractiveViewController : UIViewController<iCarouselDataSource,iCarouselDataSource>{
+@interface InteractiveViewController : UIViewController<iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate>{
     
     IBOutlet UIView *interactiveView;
     

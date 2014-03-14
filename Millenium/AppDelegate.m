@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    UIFont *font = [UIFont systemFontOfSize:14 ];
+    /*UIFont *font = [UIFont systemFontOfSize:14 ];
     //[font setTextAlignment:NSTextAlignmentLeft];
     
     [DIYMenu setDelegate:self];
@@ -26,7 +26,7 @@
     [DIYMenu addMenuItem:@"millenium" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
     [DIYMenu addMenuItem:@"search" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
     [DIYMenu addMenuItem:@"near me" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
-    [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font ];
+    [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font ];*/
     
     
     // Override point for customization after application launch.
@@ -36,12 +36,11 @@
 
 #pragma mark - DIYMenuDelegate
 //Item selected on menu
-- (void)menuItemSelected:(NSString *)action
+/*- (void)menuItemSelected:(NSString *)action
 {
     NSLog(@"menuItemSelected");
     
-    //NSString*actionTakeString= menuItemSelected;
-     //NSLog(@"%@",actionTakeString);
+    
     
     if ([action isEqualToString:@"transparent"])
     {
@@ -79,11 +78,11 @@
     }
     
     else{
-        //save
+       
         
     }
 
-}
+}*/
     
 
 - (void)menuActivated
