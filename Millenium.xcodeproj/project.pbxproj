@@ -73,6 +73,8 @@
 		42EB3EDE18D22FF900FAD7FD /* allLogoButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 42EB3EDC18D22FF900FAD7FD /* allLogoButtons.png */; };
 		42EB3EE118D232AB00FAD7FD /* MyDraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */; };
 		42EB3EE218D232AB00FAD7FD /* MyDraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */; };
+		42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EF618D3456E00FAD7FD /* DIYMenu.m */; };
+		42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EF718D3456E00FAD7FD /* DIYMenuItem.m */; };
 		42FF7A1518CDE92A00C72695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1418CDE92A00C72695 /* Foundation.framework */; };
 		42FF7A1718CDE92A00C72695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */; };
 		42FF7A1918CDE92A00C72695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1818CDE92A00C72695 /* UIKit.framework */; };
@@ -143,6 +145,11 @@
 		42EB3EDC18D22FF900FAD7FD /* allLogoButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allLogoButtons.png; sourceTree = "<group>"; };
 		42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDraggableImage.m; sourceTree = "<group>"; };
 		42EB3EE018D232AB00FAD7FD /* MyDraggableImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDraggableImage.h; sourceTree = "<group>"; };
+		42EB3EF618D3456E00FAD7FD /* DIYMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYMenu.m; sourceTree = "<group>"; };
+		42EB3EF718D3456E00FAD7FD /* DIYMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIYMenuItem.m; sourceTree = "<group>"; };
+		42EB3EF818D3456E00FAD7FD /* DIYMenuOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYMenuOptions.h; sourceTree = "<group>"; };
+		42EB3EF918D3456E00FAD7FD /* DIYMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYMenu.h; sourceTree = "<group>"; };
+		42EB3EFC18D3458A00FAD7FD /* DIYMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYMenuItem.h; sourceTree = "<group>"; };
 		42FF7A1118CDE92A00C72695 /* Millenium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millenium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A1418CDE92A00C72695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -195,6 +202,7 @@
 		42E7AC0518CE2C100036AF00 /* Interactive */ = {
 			isa = PBXGroup;
 			children = (
+				42EB3EF518D3450F00FAD7FD /* DIYMenu */,
 				42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */,
 				42EB3EE018D232AB00FAD7FD /* MyDraggableImage.h */,
 				42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */,
@@ -240,6 +248,18 @@
 				42EB3EC318D0DB4200FAD7FD /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		42EB3EF518D3450F00FAD7FD /* DIYMenu */ = {
+			isa = PBXGroup;
+			children = (
+				42EB3EF918D3456E00FAD7FD /* DIYMenu.h */,
+				42EB3EF618D3456E00FAD7FD /* DIYMenu.m */,
+				42EB3EFC18D3458A00FAD7FD /* DIYMenuItem.h */,
+				42EB3EF718D3456E00FAD7FD /* DIYMenuItem.m */,
+				42EB3EF818D3456E00FAD7FD /* DIYMenuOptions.h */,
+			);
+			name = DIYMenu;
 			sourceTree = "<group>";
 		};
 		42FF7A0818CDE92A00C72695 = {
@@ -525,8 +545,10 @@
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,
 				42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
+				42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
+				42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
 				42EB3EC418D0DB4200FAD7FD /* SWRevealViewController.m in Sources */,
 				42EB3EE118D232AB00FAD7FD /* MyDraggableImage.m in Sources */,

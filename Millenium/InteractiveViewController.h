@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "iCarousel.h"
 #import "MyDraggableImage.h"
+#import "DIYMenu.h"
 
 @interface InteractiveViewController : UIViewController<iCarouselDataSource,iCarouselDataSource>{
     
@@ -26,7 +27,9 @@
 @property (nonatomic, strong) IBOutlet UIButton *searchLogoButton;
 @property (nonatomic, strong) IBOutlet UIButton *rugSizeButton;
 @property (nonatomic, strong) IBOutlet UIButton *rugColorButton;
+
 @property (nonatomic, strong) IBOutlet UIButton *logoButton;
+@property (nonatomic, strong) IBOutlet UIButton *matButton;
 
 @property (nonatomic, strong) NSString *matSizeString;
 @property (nonatomic, strong) NSString *matColorString;

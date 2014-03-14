@@ -40,11 +40,23 @@
     
 }
 
+
+
+
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     
     
     if (self) {
+        
+        
+        /*self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+        if (self) {
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+            tap.cancelsTouchesInView = false;
+            [self.view addGestureRecognizer:tap];*/
         // Custom initialization
         
         //UIStoryboard*interactive = [UIStoryboard storyboardWithName:@"mystoryboard"
@@ -523,6 +535,19 @@ else
              
     }
     
+}
+
+
+#pragma mark - Drop Down Animated Menus
+
+- (IBAction)showMenu:(id)sender
+{
+    [DIYMenu show];
+}
+
+- (IBAction)tapped:(id)sender
+{
+    NSLog(@"tapped background");
 }
 
 
