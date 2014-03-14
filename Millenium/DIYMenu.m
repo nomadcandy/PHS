@@ -39,8 +39,7 @@
    //CGRect frame = CGRectMake (700,300,390,90);
    // CGRect frame = CGRectMake (430,290,390,90);
     
-    //x,y size of menu height, width
-    //CGRect frame = CGRectMake (150,312,390,76);
+    //x-up/down,y size of menu height, width
     CGRect frame = CGRectMake (140,312,390,76);
    //CGRect frame = [UIScreen mainScreen].bounds;
 

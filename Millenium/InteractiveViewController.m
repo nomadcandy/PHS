@@ -494,7 +494,7 @@ else
     
     
 }
-
+//moves logo around
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
 {
     
@@ -545,9 +545,16 @@ else
     [DIYMenu show];
 }
 
+
+- (IBAction)hideMenu:(id)sender
+{
+    //[DIYMenu hide];
+}
+
 - (IBAction)tapped:(id)sender
 {
-    NSLog(@"tapped background");
+    NSLog(@"sender %@",sender);
+    
 }
 
 

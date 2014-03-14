@@ -19,5 +19,6 @@
 
 #define MENUFONT_FAMILY @"Avenir-Light"
 #define MENUFONT_SIZE 22
+#define TEXT_ALIGNMENT @"Left"
 
 #endif

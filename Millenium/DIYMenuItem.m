@@ -87,7 +87,8 @@
         _glyph = [[UILabel alloc] initWithFrame:glyphFrame];
         self.glyph.backgroundColor = color;
         self.glyph.textColor = [UIColor darkGrayColor];
-        self.glyph.textAlignment = UITextAlignmentLeft;
+        //self.glyph.textAlignment = UITextAlignmentLeft;
+        self.glyph.textAlignment =NSTextAlignmentLeft;
         
         self.glyph.font = glyphFont;
         self.glyph.text = glyph;
@@ -103,7 +104,7 @@
 - (void)depictSelected
 {
     if (!self.isSelected) {
-        self.shadingView.alpha = 0.5f;
+        self.shadingView.alpha = 0.9f;
         [self bringSubviewToFront:self.shadingView];
         self.isSelected = true;
     }

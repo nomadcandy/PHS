@@ -198,7 +198,6 @@
                                 </state>
                                 <connections>
                                     <action selector="showMenu:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="iAR-kB-CKi"/>
-                                    <action selector="tapped:" destination="EOd-lr-Xtf" eventType="touchDownRepeat" id="0Og-Yj-2Cf"/>
                                 </connections>
                             </button>
                         </subviews>

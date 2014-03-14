@@ -14,7 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    UIFont *font = [UIFont systemFontOfSize:14];
+    UIFont *font = [UIFont systemFontOfSize:14 ];
+    //[font setTextAlignment:NSTextAlignmentLeft];
     
     [DIYMenu setDelegate:self];
     
@@ -26,13 +27,13 @@
     
     
     
-    [DIYMenu addMenuItem:@"transparent" withIcon:[UIImage imageNamed:@"portfolioIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
+    [DIYMenu addMenuItem:@"transparent" withIcon:[UIImage imageNamed:@"skillsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
     [DIYMenu addMenuItem:@"pics" withIcon:[UIImage imageNamed:@"skillsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
     [DIYMenu addMenuItem:@"camera" withIcon:[UIImage imageNamed:@"exploreIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
     [DIYMenu addMenuItem:@"millenium" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
     [DIYMenu addMenuItem:@"search" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
     [DIYMenu addMenuItem:@"near me" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
-    [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
+    [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font ];
     
     
     // Override point for customization after application launch.
@@ -41,11 +42,56 @@
 }
 
 #pragma mark - DIYMenuDelegate
-
+//Item selected on menu
 - (void)menuItemSelected:(NSString *)action
 {
-    NSLog(@"Delegate: selected: %@", action);
+    NSLog(@"menuItemSelected");
+    
+    //NSString*actionTakeString= menuItemSelected;
+     //NSLog(@"%@",actionTakeString);
+    
+    if ([action isEqualToString:@"transparent"])
+    {
+       
+        
+    }
+    
+    else if ([action isEqualToString:@"pics"])
+    {
+       
+        
+    }
+    
+    else if ([action isEqualToString:@"camera"])
+    {
+        
+    }
+    
+    else if ([action isEqualToString:@"millenium"])
+    {
+        
+        
+    }
+    
+    else if ([action isEqualToString:@"search"])
+    {
+        
+        
+    }
+    
+    else if ([action isEqualToString:@"near me"])
+    {
+        
+        
+    }
+    
+    else{
+        //save
+        
+    }
+
 }
+    
 
 - (void)menuActivated
 {
