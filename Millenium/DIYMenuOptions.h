@@ -9,9 +9,9 @@
 #ifndef DIYMenu_DIYMenuOptions_h
 #define DIYMenu_DIYMenuOptions_h
 
-#define ITEMHEIGHT 34.0f
+#define ITEMHEIGHT 36.0f
 //moves text left on buttons
-#define ITEMPADDING -26.0f
+#define ITEMPADDING -22.0f
 
 #define ICONPADDING 0.0f
 #define ICONSIZE 34.0f
@@ -19,7 +19,7 @@
 #define GLYPHPADDINGADJUST 0.0f
 
 #define MENUFONT_FAMILY @"Avenir-Light"
-#define MENUFONT_SIZE 18
+#define MENUFONT_SIZE 9
 #define TEXT_ALIGNMENT @"Left"
 
 #endif
