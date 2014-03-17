@@ -49,6 +49,7 @@
     _shadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width)];
     //_shadingView = [[UIView alloc] initWithFrame:CGRectMake(155, 312, frame.size.height, frame.size.width)];
     self.shadingView.backgroundColor = [UIColor lightGrayColor];
+    //self.shadingView.backgroundColor = [UIColor clearColor];
     self.shadingView.alpha = 0.00f;
     [self addSubview:self.shadingView];
     
@@ -217,11 +218,12 @@
     
     return CGRectMake(0, padding + itemCount*ITEMHEIGHT, self.frame.size.height, ITEMHEIGHT);
 }
-
+//Jami made BG color of buttons clearColor
 - (void)addItem:(NSString *)name withIcon:(UIImage *)image withColor:(UIColor *)color withFont:(UIFont *)font
 {
     DIYMenuItem *item = [[DIYMenuItem alloc] initWithFrame:[self newItemFrame]];
     [item setName:name withIcon:image withColor:color withFont:font];
+    //[item setName:name withIcon:image withColor:[UIColor clearColor] withFont:font];
     item.layer.shouldRasterize = true;
     item.layer.rasterizationScale = [[UIScreen mainScreen] scale];
     item.delegate = self;
@@ -229,6 +231,7 @@
     [self.menuItems addObject:item];
     [self addSubview:item];
 }
+
 
 - (void)addItem:(NSString *)name withGlyph:(NSString *)glyph withColor:(UIColor *)color withFont:(UIFont *)font withGlyphFont:(UIFont *)glyphFont
 {

@@ -52,12 +52,15 @@
     //CGRect labelFrame = CGRectMake(ICONPADDING + ICONSIZE + ITEMPADDING, ICONPADDING, 50, ICONSIZE);
     _name = [[UILabel alloc] initWithFrame:labelFrame];
     self.name.backgroundColor = color;
-    self.name.textColor = [UIColor darkGrayColor];
+    //self.name.textColor = [UIColor darkGrayColor];
+    self.name.textColor = [UIColor whiteColor];
     self.name.font = font;
     self.name.text = name;
     [self addSubview:self.name];
     
-    self.backgroundColor = color;
+    
+    //Jami removed to get rid of shadow layer on pull down menu
+    //self.backgroundColor = color;
     
     _icon = nil;
     _glyph = nil;
