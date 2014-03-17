@@ -77,7 +77,7 @@
         _icon = nil;
     }
 }
-
+//Jami changed Glyph color
 - (void)setName:(NSString *)name withGlyph:(NSString *)glyph withColor:(UIColor *)color withFont:(UIFont *)font withGlyphFont:(UIFont *)glyphFont
 {
     [self setName:name withColor:color withFont:font];
