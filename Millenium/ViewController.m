@@ -69,10 +69,10 @@
 	if (button == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"CarouselBG.png"];
+		UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         
         button.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -81,9 +81,9 @@
         button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
 
         button.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
-        [button setContentVerticalAlignment:UIControlContentVerticalAlignmentBottom];
+        [button setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
         
-        [button.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:22.0]];
+        [button.titleLabel setFont:[UIFont fontWithName:@"Avenir" size:18.0]];
 		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 	}
 	

@@ -16,6 +16,20 @@
 		424756E818D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */; };
 		424756EB18D38B2C000AAF7C /* LogoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756EA18D38B2C000AAF7C /* LogoCell.m */; };
 		424756EC18D38B2C000AAF7C /* LogoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756EA18D38B2C000AAF7C /* LogoCell.m */; };
+		424756F018D7379E000AAF7C /* InternetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756EF18D7379E000AAF7C /* InternetViewController.m */; };
+		424756F118D7379E000AAF7C /* InternetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756EF18D7379E000AAF7C /* InternetViewController.m */; };
+		424756F618D74B4F000AAF7C /* CintasLogoHighRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756F518D74B4F000AAF7C /* CintasLogoHighRes.png */; };
+		424756F718D74B4F000AAF7C /* CintasLogoHighRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756F518D74B4F000AAF7C /* CintasLogoHighRes.png */; };
+		424756F918D74DD7000AAF7C /* CarouselRoundBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756F818D74DD7000AAF7C /* CarouselRoundBG.png */; };
+		424756FA18D74DD7000AAF7C /* CarouselRoundBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756F818D74DD7000AAF7C /* CarouselRoundBG.png */; };
+		424756FC18D74F41000AAF7C /* CarouselBGNoPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756FB18D74F41000AAF7C /* CarouselBGNoPic.png */; };
+		424756FD18D74F41000AAF7C /* CarouselBGNoPic.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756FB18D74F41000AAF7C /* CarouselBGNoPic.png */; };
+		424756FF18D75378000AAF7C /* FreshLook.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756FE18D75378000AAF7C /* FreshLook.png */; };
+		4247570018D75378000AAF7C /* FreshLook.png in Resources */ = {isa = PBXBuildFile; fileRef = 424756FE18D75378000AAF7C /* FreshLook.png */; };
+		4247570218D7550D000AAF7C /* CarouselBGNoPic1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247570118D7550D000AAF7C /* CarouselBGNoPic1.png */; };
+		4247570318D7550D000AAF7C /* CarouselBGNoPic1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247570118D7550D000AAF7C /* CarouselBGNoPic1.png */; };
+		4247570518D75556000AAF7C /* CarouselBGWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247570418D75556000AAF7C /* CarouselBGWhite.png */; };
+		4247570618D75556000AAF7C /* CarouselBGWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247570418D75556000AAF7C /* CarouselBGWhite.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
@@ -123,6 +137,14 @@
 		424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoCollectionViewController.m; sourceTree = "<group>"; };
 		424756E918D38B2C000AAF7C /* LogoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoCell.h; sourceTree = "<group>"; };
 		424756EA18D38B2C000AAF7C /* LogoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoCell.m; sourceTree = "<group>"; };
+		424756EE18D7379E000AAF7C /* InternetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternetViewController.h; sourceTree = "<group>"; };
+		424756EF18D7379E000AAF7C /* InternetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternetViewController.m; sourceTree = "<group>"; };
+		424756F518D74B4F000AAF7C /* CintasLogoHighRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CintasLogoHighRes.png; sourceTree = "<group>"; };
+		424756F818D74DD7000AAF7C /* CarouselRoundBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselRoundBG.png; sourceTree = "<group>"; };
+		424756FB18D74F41000AAF7C /* CarouselBGNoPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselBGNoPic.png; sourceTree = "<group>"; };
+		424756FE18D75378000AAF7C /* FreshLook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FreshLook.png; sourceTree = "<group>"; };
+		4247570118D7550D000AAF7C /* CarouselBGNoPic1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselBGNoPic1.png; sourceTree = "<group>"; };
+		4247570418D75556000AAF7C /* CarouselBGWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselBGWhite.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailDemo.png; sourceTree = "<group>"; };
@@ -233,6 +255,15 @@
 			name = LogoCollectionViewController;
 			sourceTree = "<group>";
 		};
+		424756ED18D73776000AAF7C /* InternetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				424756EE18D7379E000AAF7C /* InternetViewController.h */,
+				424756EF18D7379E000AAF7C /* InternetViewController.m */,
+			);
+			name = InternetViewController;
+			sourceTree = "<group>";
+		};
 		42E7AC0518CE2C100036AF00 /* Interactive */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +281,10 @@
 		42E7AC0D18CE414A0036AF00 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				424756FE18D75378000AAF7C /* FreshLook.png */,
+				424756F818D74DD7000AAF7C /* CarouselRoundBG.png */,
 				424756D418D37B22000AAF7C /* MatIcon.png */,
+				424756F518D74B4F000AAF7C /* CintasLogoHighRes.png */,
 				42EB3EDC18D22FF900FAD7FD /* allLogoButtons.png */,
 				42EB3EB418D0AEF200FAD7FD /* Portrait.png */,
 				42EB3EB118D0AEE800FAD7FD /* Landscape.png */,
@@ -263,7 +297,11 @@
 				42E7AC0E18CE41950036AF00 /* CameraIcon.png */,
 				42E7AC1018CE41950036AF00 /* InternetIcon.png */,
 				42E7AC1118CE41950036AF00 /* SaveIcon.png */,
+				4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */,
 				42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */,
+				42FF7A5218CDF67000C72695 /* page.png */,
+				4223E63C18CE0994002BB981 /* CarouselBG.png */,
+				42FF7A4B18CDEC1100C72695 /* MillenniumLogo.jpg */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -333,6 +371,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				424756ED18D73776000AAF7C /* InternetViewController */,
 				424756DB18D38A47000AAF7C /* LogoCollectionViewController */,
 				424756D618D389DE000AAF7C /* SearchViewController */,
 				42E7AC0518CE2C100036AF00 /* Interactive */,
@@ -381,10 +420,6 @@
 			isa = PBXGroup;
 			children = (
 				42E7AC0D18CE414A0036AF00 /* Icons */,
-				4223E63E18CE0D1F002BB981 /* MillenniumMatCompanyBannerOne.jpg */,
-				42FF7A5218CDF67000C72695 /* page.png */,
-				4223E63C18CE0994002BB981 /* CarouselBG.png */,
-				42FF7A4B18CDEC1100C72695 /* MillenniumLogo.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -392,6 +427,9 @@
 		42FF7A4A18CDEBF500C72695 /* ImagesTest */ = {
 			isa = PBXGroup;
 			children = (
+				4247570418D75556000AAF7C /* CarouselBGWhite.png */,
+				4247570118D7550D000AAF7C /* CarouselBGNoPic1.png */,
+				424756FB18D74F41000AAF7C /* CarouselBGNoPic.png */,
 				42EB3ED918D20A9E00FAD7FD /* RugSampleA.png */,
 				42EB3ED618D1FE2E00FAD7FD /* CarouselPadWhite.png */,
 				42EB3ED318D1FBE600FAD7FD /* LogoButtonsBG.png */,
@@ -518,18 +556,24 @@
 				42EB3EAC18D0A77900FAD7FD /* greySizeImage.png in Resources */,
 				42EB3EA018D0A4DA00FAD7FD /* RugSample2.png in Resources */,
 				42EB3EA918D0A4E500FAD7FD /* RugSample1.png in Resources */,
+				424756F918D74DD7000AAF7C /* CarouselRoundBG.png in Resources */,
 				42EB3EDD18D22FF900FAD7FD /* allLogoButtons.png in Resources */,
 				42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
+				424756FC18D74F41000AAF7C /* CarouselBGNoPic.png in Resources */,
 				42EB3EDA18D20A9E00FAD7FD /* RugSampleA.png in Resources */,
 				42EB3EB818D0D53900FAD7FD /* FloorMatSample.png in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42E7AC1618CE41950036AF00 /* InternetIcon.png in Resources */,
+				424756FF18D75378000AAF7C /* FreshLook.png in Resources */,
+				424756F618D74B4F000AAF7C /* CintasLogoHighRes.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
 				42EB3EB218D0AEE800FAD7FD /* Landscape.png in Resources */,
 				42EB3EA218D0A4DA00FAD7FD /* RugSample3.png in Resources */,
 				42EB3EA418D0A4DA00FAD7FD /* RugSample4.png in Resources */,
+				4247570218D7550D000AAF7C /* CarouselBGNoPic1.png in Resources */,
 				42EB3EA618D0A4DA00FAD7FD /* RugSample5.png in Resources */,
 				42E7AC2118CE493D0036AF00 /* UsePicIcon.png in Resources */,
+				4247570518D75556000AAF7C /* CarouselBGWhite.png in Resources */,
 				424756D518D37B22000AAF7C /* MatIcon.png in Resources */,
 				42EB3ED718D1FE2E00FAD7FD /* CarouselPadWhite.png in Resources */,
 				42EB3ECB18D1F50700FAD7FD /* ColorSquareButton.png in Resources */,
@@ -540,6 +584,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424756FD18D74F41000AAF7C /* CarouselBGNoPic.png in Resources */,
 				42EB3EDB18D20A9E00FAD7FD /* RugSampleA.png in Resources */,
 				42E7AC0C18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
 				42EB3EA318D0A4DA00FAD7FD /* RugSample3.png in Resources */,
@@ -553,21 +598,26 @@
 				42EB3EBF18D0D8BF00FAD7FD /* GreenBGPages.png in Resources */,
 				42E7AC2818CE4C600036AF00 /* EditLogoIcon.png in Resources */,
 				42EB3ECF18D1F57E00FAD7FD /* GreyPadBG.png in Resources */,
+				4247570618D75556000AAF7C /* CarouselBGWhite.png in Resources */,
 				42E7AC1F18CE47F20036AF00 /* PicIcon.png in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42EB3EA518D0A4DA00FAD7FD /* RugSample4.png in Resources */,
 				42EB3ED818D1FE2E00FAD7FD /* CarouselPadWhite.png in Resources */,
 				42EB3EA718D0A4DA00FAD7FD /* RugSample5.png in Resources */,
 				42E7AC2518CE4A720036AF00 /* SearchMMIcon.png in Resources */,
+				4247570318D7550D000AAF7C /* CarouselBGNoPic1.png in Resources */,
 				42E7AC2B18CE67C60036AF00 /* HomeIcon.png in Resources */,
 				42EB3EAD18D0A77900FAD7FD /* greySizeImage.png in Resources */,
+				424756FA18D74DD7000AAF7C /* CarouselRoundBG.png in Resources */,
 				42EB3EB918D0D53900FAD7FD /* FloorMatSample.png in Resources */,
 				42EB3EBC18D0D6D100FAD7FD /* JadeTeaHouseLogo.png in Resources */,
 				42E7AC1918CE41950036AF00 /* SaveIcon.png in Resources */,
 				42EB3EB618D0AEF200FAD7FD /* Portrait.png in Resources */,
 				42E7AC2218CE493D0036AF00 /* UsePicIcon.png in Resources */,
+				424756F718D74B4F000AAF7C /* CintasLogoHighRes.png in Resources */,
 				42EB3EDE18D22FF900FAD7FD /* allLogoButtons.png in Resources */,
 				42EB3ED218D1F97F00FAD7FD /* SizeTransButton.png in Resources */,
+				4247570018D75378000AAF7C /* FreshLook.png in Resources */,
 				42E7AC1318CE41950036AF00 /* CameraIcon.png in Resources */,
 				42EB3EA118D0A4DA00FAD7FD /* RugSample2.png in Resources */,
 			);
@@ -593,6 +643,7 @@
 				424756D918D389FA000AAF7C /* SearchViewController.m in Sources */,
 				42EB3EC418D0DB4200FAD7FD /* SWRevealViewController.m in Sources */,
 				42EB3EE118D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
+				424756F018D7379E000AAF7C /* InternetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +660,7 @@
 				42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42EB3EE218D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
 				424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */,
+				424756F118D7379E000AAF7C /* InternetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
