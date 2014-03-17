@@ -217,7 +217,7 @@
 	if (matSizeButton == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"CarouselPadWhite.png"];
+		UIImage *image = [UIImage imageNamed:@"WhiteCircleMatSize1.png"];
 		matSizeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         matSizeButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
 		[matSizeButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
@@ -339,9 +339,9 @@ else if (carousel==carouselColor){
 	if (matColorButton == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *imageColor = [UIImage imageNamed:@"RugSampleA.png"];
+		UIImage *imageColor = [UIImage imageNamed:@"WhiteCircleRugSample2.png"];
 		matColorButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        matColorButton.frame = CGRectMake(0.0f, 0.0f, 90, 60);
+        matColorButton.frame = CGRectMake(0.0f, 0.0f, 110, 110);
         //matColorButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
 		[matColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[matColorButton setBackgroundImage:imageColor forState:UIControlStateNormal];
@@ -367,6 +367,8 @@ else if (carousel==carouselColor){
     if (index ==0){
         
         [matColorButton setTitle:[NSString stringWithFormat:@"red 001"] forState:UIControlStateNormal];
+        UIImage *imageColor = [UIImage imageNamed:@"WhiteCircleRugSample2.png"];
+        [matColorButton setBackgroundImage:imageColor forState:UIControlStateNormal];
         //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
     }
     

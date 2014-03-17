@@ -36,7 +36,9 @@
     //self.transform = CGAffineTransformMakeRotation(M_PI_2);
     
     //x-up/down,y size of menu height, width
-    CGRect frame = CGRectMake (140,312,390,90);
+    //CGRect frame = CGRectMake (140,312,390,90);
+    
+    CGRect frame = CGRectMake (140,148,390,90);
    //CGRect frame = [UIScreen mainScreen].bounds;
 
     frame.origin.x -= ITEMHEIGHT;
