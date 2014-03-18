@@ -88,6 +88,10 @@
 		4247575D18D8B0CB000AAF7C /* SampleLogo15.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247573F18D8B0CB000AAF7C /* SampleLogo15.png */; };
 		4247575F18D8B953000AAF7C /* SampleLogo16.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247575E18D8B953000AAF7C /* SampleLogo16.png */; };
 		4247576018D8B953000AAF7C /* SampleLogo16.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247575E18D8B953000AAF7C /* SampleLogo16.png */; };
+		4247576218D8BBAD000AAF7C /* LogoThumbnailBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576118D8BBAD000AAF7C /* LogoThumbnailBG.png */; };
+		4247576318D8BBAD000AAF7C /* LogoThumbnailBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576118D8BBAD000AAF7C /* LogoThumbnailBG.png */; };
+		4247576518D8BD33000AAF7C /* SampleLogo8A.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576418D8BD33000AAF7C /* SampleLogo8A.png */; };
+		4247576618D8BD33000AAF7C /* SampleLogo8A.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576418D8BD33000AAF7C /* SampleLogo8A.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
@@ -234,6 +238,8 @@
 		4247573E18D8B0CB000AAF7C /* SampleLogo14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo14.png; sourceTree = "<group>"; };
 		4247573F18D8B0CB000AAF7C /* SampleLogo15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo15.png; sourceTree = "<group>"; };
 		4247575E18D8B953000AAF7C /* SampleLogo16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo16.png; sourceTree = "<group>"; };
+		4247576118D8BBAD000AAF7C /* LogoThumbnailBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoThumbnailBG.png; sourceTree = "<group>"; };
+		4247576418D8BD33000AAF7C /* SampleLogo8A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo8A.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailDemo.png; sourceTree = "<group>"; };
@@ -361,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				4247575E18D8B953000AAF7C /* SampleLogo16.png */,
+				4247576418D8BD33000AAF7C /* SampleLogo8A.png */,
 				4247573118D8B0CA000AAF7C /* SampleLogo1.png */,
 				4247573218D8B0CA000AAF7C /* SampleLogo2.png */,
 				4247573318D8B0CA000AAF7C /* SampleLogo3.png */,
@@ -461,7 +468,6 @@
 			isa = PBXGroup;
 			children = (
 				42EB3EC018D0DB1900FAD7FD /* MenuSlider */,
-				42FF7A4A18CDEBF500C72695 /* ImagesTest */,
 				42FF7A4918CDEBEB00C72695 /* Images */,
 				42FF7A1A18CDE92A00C72695 /* Millenium */,
 				42FF7A3918CDE92A00C72695 /* MilleniumTests */,
@@ -541,6 +547,7 @@
 		42FF7A4918CDEBEB00C72695 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				42FF7A4A18CDEBF500C72695 /* ImagesTest */,
 				4247573018D8B098000AAF7C /* SampleLogos */,
 				42E7AC0D18CE414A0036AF00 /* Icons */,
 			);
@@ -550,6 +557,7 @@
 		42FF7A4A18CDEBF500C72695 /* ImagesTest */ = {
 			isa = PBXGroup;
 			children = (
+				4247576118D8BBAD000AAF7C /* LogoThumbnailBG.png */,
 				4247572518D79FA1000AAF7C /* BackArrow.png */,
 				4247571F18D782E6000AAF7C /* WhiteCircleRugSample2.png */,
 				4247571918D78053000AAF7C /* allMatButtons1.png */,
@@ -713,12 +721,14 @@
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				4247571718D77F8D000AAF7C /* allLogoButtons2.png in Resources */,
 				42E7AC1618CE41950036AF00 /* InternetIcon.png in Resources */,
+				4247576218D8BBAD000AAF7C /* LogoThumbnailBG.png in Resources */,
 				424756FF18D75378000AAF7C /* FreshLook.png in Resources */,
 				424756F618D74B4F000AAF7C /* CintasLogoHighRes.png in Resources */,
 				4247575C18D8B0CB000AAF7C /* SampleLogo15.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
 				4247575F18D8B953000AAF7C /* SampleLogo16.png in Resources */,
 				42EB3EB218D0AEE800FAD7FD /* Landscape.png in Resources */,
+				4247576518D8BD33000AAF7C /* SampleLogo8A.png in Resources */,
 				42EB3EA218D0A4DA00FAD7FD /* RugSample3.png in Resources */,
 				4247572618D79FA1000AAF7C /* BackArrow.png in Resources */,
 				4247575618D8B0CB000AAF7C /* SampleLogo12.png in Resources */,
@@ -743,6 +753,7 @@
 				424756FD18D74F41000AAF7C /* CarouselBGNoPic.png in Resources */,
 				42EB3EDB18D20A9E00FAD7FD /* RugSampleA.png in Resources */,
 				4247576018D8B953000AAF7C /* SampleLogo16.png in Resources */,
+				4247576318D8BBAD000AAF7C /* LogoThumbnailBG.png in Resources */,
 				42E7AC0C18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
 				4247571B18D78053000AAF7C /* allMatButtons1.png in Resources */,
 				4247574518D8B0CB000AAF7C /* SampleLogo3.png in Resources */,
@@ -767,6 +778,7 @@
 				42EB3EBF18D0D8BF00FAD7FD /* GreenBGPages.png in Resources */,
 				42E7AC2818CE4C600036AF00 /* EditLogoIcon.png in Resources */,
 				42EB3ECF18D1F57E00FAD7FD /* GreyPadBG.png in Resources */,
+				4247576618D8BD33000AAF7C /* SampleLogo8A.png in Resources */,
 				4247570F18D77D69000AAF7C /* WhiteCircleMatSize.png in Resources */,
 				4247570618D75556000AAF7C /* CarouselBGWhite.png in Resources */,
 				42E7AC1F18CE47F20036AF00 /* PicIcon.png in Resources */,

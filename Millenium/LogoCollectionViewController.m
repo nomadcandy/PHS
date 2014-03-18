@@ -141,14 +141,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     
     
-        nearMeNamesArray= @[@"New", @"New", @"Old",
-                            @"Old", @"Old", @"Old",
-                            @"Old", @"Old", @"Old",
+        nearMeNamesArray= @[@"Helix", @"MindCraft", @"Rainbow Hands",
+                            @"DJ Pop", @"School Anime", @"Spartan Golf Club",
+                            @"Pheonix Designs", @"Old", @"Old",
                             @"Old", @"Old", @"Old",
                             @"Old", @"Old", @"Old"];
     
         nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
-                        @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png,"@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
+                        @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
 
 
     
