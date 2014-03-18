@@ -50,6 +50,8 @@
 		4247572118D782E6000AAF7C /* WhiteCircleRugSample2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247571F18D782E6000AAF7C /* WhiteCircleRugSample2.png */; };
 		4247572318D783C3000AAF7C /* allMatButtons2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247572218D783C3000AAF7C /* allMatButtons2.png */; };
 		4247572418D783C3000AAF7C /* allMatButtons2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247572218D783C3000AAF7C /* allMatButtons2.png */; };
+		4247572618D79FA1000AAF7C /* BackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247572518D79FA1000AAF7C /* BackArrow.png */; };
+		4247572718D79FA1000AAF7C /* BackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247572518D79FA1000AAF7C /* BackArrow.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
@@ -175,6 +177,7 @@
 		4247571C18D781D0000AAF7C /* WhiteCircleRugSample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteCircleRugSample.png; sourceTree = "<group>"; };
 		4247571F18D782E6000AAF7C /* WhiteCircleRugSample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteCircleRugSample2.png; sourceTree = "<group>"; };
 		4247572218D783C3000AAF7C /* allMatButtons2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allMatButtons2.png; sourceTree = "<group>"; };
+		4247572518D79FA1000AAF7C /* BackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackArrow.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailDemo.png; sourceTree = "<group>"; };
@@ -463,6 +466,7 @@
 		42FF7A4A18CDEBF500C72695 /* ImagesTest */ = {
 			isa = PBXGroup;
 			children = (
+				4247572518D79FA1000AAF7C /* BackArrow.png */,
 				4247571F18D782E6000AAF7C /* WhiteCircleRugSample2.png */,
 				4247571918D78053000AAF7C /* allMatButtons1.png */,
 				4247571618D77F8D000AAF7C /* allLogoButtons2.png */,
@@ -618,6 +622,7 @@
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
 				42EB3EB218D0AEE800FAD7FD /* Landscape.png in Resources */,
 				42EB3EA218D0A4DA00FAD7FD /* RugSample3.png in Resources */,
+				4247572618D79FA1000AAF7C /* BackArrow.png in Resources */,
 				42EB3EA418D0A4DA00FAD7FD /* RugSample4.png in Resources */,
 				4247570218D7550D000AAF7C /* CarouselBGNoPic1.png in Resources */,
 				42EB3EA618D0A4DA00FAD7FD /* RugSample5.png in Resources */,
@@ -638,6 +643,7 @@
 				42EB3EDB18D20A9E00FAD7FD /* RugSampleA.png in Resources */,
 				42E7AC0C18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
 				4247571B18D78053000AAF7C /* allMatButtons1.png in Resources */,
+				4247572718D79FA1000AAF7C /* BackArrow.png in Resources */,
 				4247571818D77F8D000AAF7C /* allLogoButtons2.png in Resources */,
 				42EB3EA318D0A4DA00FAD7FD /* RugSample3.png in Resources */,
 				42EB3EAA18D0A4E500FAD7FD /* RugSample1.png in Resources */,
