@@ -29,9 +29,20 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [DIYMenu dismiss];
 	// Do any additional setup after loading the view.
 }
 
+
+-(IBAction)goInteractive:(id)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:svc animated:YES completion:nil];
+
+}
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
     

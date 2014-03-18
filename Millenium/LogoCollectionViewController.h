@@ -9,15 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "LogoCell.h"
 #import "LogoHeaderCell.h"
+#import "InteractiveViewController.h"
+#import "DIYMenu.h"
 
-@interface LogoCollectionViewController : UICollectionViewController
+@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate>
 
+@property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
 
 @property (nonatomic, copy) NSMutableArray *searchImagesArray;
 @property (nonatomic, copy) NSMutableArray *nearMeImagesArray;
 @property (nonatomic, copy) NSMutableArray *searchNamesArray;
 @property (nonatomic, copy) NSMutableArray *nearMeNamesArray;
 @property (nonatomic, assign) int selectedIndex;
+
+-(IBAction)goInteractive:(id)sender;
 
 
 

@@ -155,6 +155,10 @@
         // Configure the new view controller here.
         [self presentViewController:LogoCVC animated:YES completion:nil];
         
+        
+        
+        
+        
     }
     
     else{
@@ -170,7 +174,7 @@
     NSLog(@"Delegate: menuActivated");
 }
 
-- (void)menuCancelled
+- (void)menuItemSelected
 {
     NSLog(@"Delegate: menuCancelled");
 }
@@ -646,7 +650,7 @@ else
 
 - (IBAction)hideMenu:(id)sender
 {
-    //[DIYMenu hide];
+    [DIYMenu dismiss];
 }
 
 - (IBAction)tapped:(id)sender
@@ -656,6 +660,12 @@ else
 }
 
 
+-(IBAction)goHome:(id)sender{
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 -(IBAction)backButton:(id)sender{
     
@@ -672,10 +682,14 @@ else
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    [DIYMenu dismiss];
+   
+   
     self.carouselSize = nil;
     self.carouselColor = nil;
     self.rugSizeButton = nil;
     self.rugColorButton = nil;
+    
 }
 
 

@@ -29,6 +29,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *rugSizeButton;
 @property (nonatomic, strong) IBOutlet UIButton *rugColorButton;
 
+@property (nonatomic, strong) IBOutlet UIButton *homeButton;
 @property (nonatomic, strong) IBOutlet UIButton *logoButton;
 @property (nonatomic, strong) IBOutlet UIButton *matButton;
 
