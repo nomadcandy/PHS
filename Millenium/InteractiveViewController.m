@@ -73,7 +73,7 @@
 {
     [super viewDidLoad];
    
-    [DIYMenu dismiss];
+    [DIYMenu isActivated];
     
     
     //configure carousel
@@ -151,16 +151,17 @@
     else if ([action isEqualToString:@"near me"])
     {
         
-        [DIYMenu dismiss];
+        //[DIYMenu dismiss];
         
-        UIStoryboard *storyboardLogo = self.storyboard;
+        _actionSelectedString=action;
+        
+        /*UIStoryboard *storyboardLogo = self.storyboard;
         LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
         
         // Configure the new view controller here.
-        [self presentViewController:LogoCVC animated:YES completion:nil];
+        [self presentViewController:LogoCVC animated:YES completion:nil];*/
         
-        
-        
+               
         
         
     }
@@ -172,17 +173,44 @@
     
 }
 
-
+- (void)actionSelectedStringSet
+{
+    
+    if ([_actionSelectedString isEqualToString:@"near me"]){
+    UIStoryboard *storyboardLogo = self.storyboard;
+     LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+     
+     // Configure the new view controller here.
+     [self presentViewController:LogoCVC animated:YES completion:nil];
+        
+    }
+}
 
 
 - (void)menuActivated
 {
     NSLog(@"Delegate: menuActivated");
+    if ([_actionSelectedString isEqualToString:@"near me"]){
+        UIStoryboard *storyboardLogo = self.storyboard;
+        LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:LogoCVC animated:YES completion:nil];
+        
+    }
+
 }
 
 - (void)menuItemSelected
 {
     NSLog(@"Delegate: menuCancelled");
+    UIStoryboard *storyboardLogo = self.storyboard;
+     LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+     
+     // Configure the new view controller here.
+     [self presentViewController:LogoCVC animated:YES completion:nil];
+
+    
 }
 
 

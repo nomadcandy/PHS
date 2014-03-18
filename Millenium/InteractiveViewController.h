@@ -33,6 +33,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *logoButton;
 @property (nonatomic, strong) IBOutlet UIButton *matButton;
 
+
+@property (nonatomic, strong) NSString *actionSelectedString;
 @property (nonatomic, strong) NSString *matSizeString;
 @property (nonatomic, strong) NSString *matColorString;
 
