@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *pageTitleLabel;
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
+@property (strong, nonatomic) IBOutlet UIButton *cintasButton;
+@property (strong, nonatomic) IBOutlet UIImageView *blackBarView;
 
 
 @end

@@ -12,7 +12,11 @@
 
 @interface LogoCollectionViewController : UICollectionViewController
 
-@property (nonatomic, copy) NSMutableArray *nearMeArray;
+
+@property (nonatomic, copy) NSMutableArray *searchImagesArray;
+@property (nonatomic, copy) NSMutableArray *nearMeImagesArray;
+@property (nonatomic, copy) NSMutableArray *searchNamesArray;
+@property (nonatomic, copy) NSMutableArray *nearMeNamesArray;
 @property (nonatomic, assign) int selectedIndex;
 
 

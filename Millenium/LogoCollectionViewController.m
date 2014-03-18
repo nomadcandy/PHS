@@ -93,17 +93,21 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     
     
-    //collectionView.allowsMultipleSelection = YES;
     
     
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
-        logoCell.logoLabel.text = [_nearMeArray objectAtIndex:indexPath.item];
-        
-        //nameString=[nearMeArray objectAtIndex:indexPath.item];
+        logoCell.logoLabel.text = [_nearMeNamesArray objectAtIndex:indexPath.item];
+    
+    
+        UIImage* buttonImage = [_nearMeImagesArray objectAtIndex:indexPath.item];
+                //nameString=[nearMeArray objectAtIndex:indexPath.item];
         
         [logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-        
+    
+    
+        [logoCell.logoChooseButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    
         [[logoCell logoChooseButton] addTarget:self action:@selector(goDirections:event:) forControlEvents:UIControlEventTouchUpInside];
         
         

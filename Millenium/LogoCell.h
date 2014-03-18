@@ -11,6 +11,7 @@
 @interface LogoCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *logoLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *logoImage;
 @property (strong, nonatomic) IBOutlet UIButton *logoChooseButton;
 
 @end
