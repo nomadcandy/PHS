@@ -166,25 +166,31 @@
                                     <action selector="showMenu:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Zu5-wi-2CF"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6M-vc-aoK">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem id="zDY-7e-l3p">
-                                        <barButtonItem key="backBarButtonItem" image="BackArrow.png" id="m3Y-0s-s9J"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3Y-xs-nz9">
+                                <rect key="frame" x="-1" y="0.0" width="1024" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CintasLogoHighRes.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dlz-if-y0l">
-                                <rect key="frame" x="473" y="5" width="78" height="33"/>
+                                <rect key="frame" x="476" y="6" width="78" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65S-6k-LJE">
+                                <rect key="frame" x="0.0" y="2" width="49" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="BackArrow.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="kjq-hg-iIR"/>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="RfX-3f-Tr7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" title="back" id="YBb-aE-WUj"/>
+                    <navigationItem key="navigationItem" id="YBb-aE-WUj"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="carouselColor" destination="XK9-Rl-Vbb" id="jWU-ig-2Fg"/>
@@ -204,16 +210,21 @@
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mxw-N5-7VW">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IZK-q1-L9X">
                             <size key="itemSize" width="244" height="231"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="63"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradieteBG.png" id="PPk-fx-CAf">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCellID" id="DvN-Pj-GIB">
-                                <rect key="frame" x="0.0" y="0.0" width="244" height="231"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="logoCollectionViewCellID" id="DvN-Pj-GIB" customClass="LogoCell">
+                                <rect key="frame" x="0.0" y="63" width="244" height="231"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="244" height="231"/>
@@ -238,6 +249,10 @@
                                 </view>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerCellID" id="yqd-il-Cac" customClass="LogoHeaderCell">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="l8u-Ww-K06" id="CjB-uk-76u"/>
                             <outlet property="delegate" destination="l8u-Ww-K06" id="DoM-vS-izd"/>
@@ -247,7 +262,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="-870"/>
+            <point key="canvasLocation" x="982" y="-876"/>
         </scene>
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -342,10 +357,8 @@
     <resources>
         <image name="BackArrow.png" width="38" height="37"/>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="FreshLook.png" width="2048" height="1536"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
-        <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="RugSampleA.png" width="114" height="104"/>
@@ -359,4 +372,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="g0x-cn-24J"/>
+    </inferredMetricsTieBreakers>
 </document>

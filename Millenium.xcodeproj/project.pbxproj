@@ -52,6 +52,8 @@
 		4247572418D783C3000AAF7C /* allMatButtons2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247572218D783C3000AAF7C /* allMatButtons2.png */; };
 		4247572618D79FA1000AAF7C /* BackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247572518D79FA1000AAF7C /* BackArrow.png */; };
 		4247572718D79FA1000AAF7C /* BackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247572518D79FA1000AAF7C /* BackArrow.png */; };
+		4247572A18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572918D7D70F000AAF7C /* LogoHeaderCell.m */; };
+		4247572B18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572918D7D70F000AAF7C /* LogoHeaderCell.m */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
@@ -178,6 +180,8 @@
 		4247571F18D782E6000AAF7C /* WhiteCircleRugSample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteCircleRugSample2.png; sourceTree = "<group>"; };
 		4247572218D783C3000AAF7C /* allMatButtons2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = allMatButtons2.png; sourceTree = "<group>"; };
 		4247572518D79FA1000AAF7C /* BackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackArrow.png; sourceTree = "<group>"; };
+		4247572818D7D70F000AAF7C /* LogoHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoHeaderCell.h; sourceTree = "<group>"; };
+		4247572918D7D70F000AAF7C /* LogoHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoHeaderCell.m; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailDemo.png; sourceTree = "<group>"; };
@@ -284,6 +288,8 @@
 				424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */,
 				424756E918D38B2C000AAF7C /* LogoCell.h */,
 				424756EA18D38B2C000AAF7C /* LogoCell.m */,
+				4247572818D7D70F000AAF7C /* LogoHeaderCell.h */,
+				4247572918D7D70F000AAF7C /* LogoHeaderCell.m */,
 			);
 			name = LogoCollectionViewController;
 			sourceTree = "<group>";
@@ -702,6 +708,7 @@
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
 				42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
+				4247572A18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
 				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */,
 				424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */,
@@ -725,6 +732,7 @@
 				424756EC18D38B2C000AAF7C /* LogoCell.m in Sources */,
 				42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42EB3EE218D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
+				4247572B18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
 				424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */,
 				424756F118D7379E000AAF7C /* InternetViewController.m in Sources */,
 			);

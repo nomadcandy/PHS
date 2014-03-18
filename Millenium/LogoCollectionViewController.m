@@ -14,7 +14,8 @@
 
 @implementation LogoCollectionViewController
 
-NSString *kLogoCollectionViewCellID = @"LogoCollectionViewCellID";
+NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
+NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +31,102 @@ NSString *kLogoCollectionViewCellID = @"LogoCollectionViewCellID";
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+
+
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
+    
+    
+    
+    [self.collectionView reloadData];
+    //cell for header
+    if (section == 0)
+        
+    {
+        
+        
+        
+        return 1;
+    }
+    
+    
+    else
+    {
+        
+        
+        //return logoNearMeArray.count;
+        return 12;
+        
+    }
+}
+
+- (UICollectionReusableView *)collectionView: (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionReusableView *reusableview = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader) {
+        
+        LogoHeaderCell *logoHeaderCell = [collectionView dequeueReusableSupplementaryViewOfKind:
+                                  UICollectionElementKindSectionHeader withReuseIdentifier:@"headerCellID" forIndexPath:indexPath];
+        
+            logoHeaderCell.pageTitleLabel.text = @" ";
+        
+            reusableview = logoHeaderCell;
+            
+        
+    }
+    
+    
+    
+    //NSString *searchTerm = self.searches[indexPath.section]; [headerView setSearchText:searchTerm];
+    return reusableview;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
+    return 1;
+}
+
+
+
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+{
+    
+    
+    //collectionView.allowsMultipleSelection = YES;
+    
+    
+        LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
+        
+        logoCell.logoLabel.text = [_nearMeArray objectAtIndex:indexPath.item];
+        
+        //nameString=[nearMeArray objectAtIndex:indexPath.item];
+        
+        [logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [[logoCell logoChooseButton] addTarget:self action:@selector(goDirections:event:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        if (logoCell.logoChooseButton)
+            
+        {
+          
+            _selectedIndex=[indexPath row];
+            logoCell.logoChooseButton.tag=[indexPath row];
+            UIButton* button = [logoCell logoChooseButton];
+            button.tag = _selectedIndex;
+            
+            
+        }
+        
+        return logoCell;
+    }
+    
+    
+    
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

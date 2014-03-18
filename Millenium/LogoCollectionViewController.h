@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "LogoCell.h"
+#import "LogoHeaderCell.h"
 
 @interface LogoCollectionViewController : UICollectionViewController
+
+@property (nonatomic, copy) NSMutableArray *nearMeArray;
+@property (nonatomic, assign) int selectedIndex;
+
+
 
 @end
