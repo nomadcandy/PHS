@@ -37,6 +37,7 @@
     carouselSize.dataSource = nil;
     carouselColor.delegate = nil;
     carouselColor.dataSource = nil;
+   
     
 }
 
@@ -71,8 +72,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
+   
+    [DIYMenu dismiss];
     
     
     //configure carousel
@@ -149,6 +150,9 @@
     
     else if ([action isEqualToString:@"near me"])
     {
+        
+        [DIYMenu dismiss];
+        
         UIStoryboard *storyboardLogo = self.storyboard;
         LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
         
@@ -167,6 +171,8 @@
     }
     
 }
+
+
 
 
 - (void)menuActivated
@@ -649,14 +655,19 @@ else
 
 
 - (IBAction)hideMenu:(id)sender
+
+
 {
     [DIYMenu dismiss];
+    
+   
+
 }
 
 - (IBAction)tapped:(id)sender
 {
     NSLog(@"sender %@",sender);
-    
+    [DIYMenu dismiss];
 }
 
 
@@ -682,15 +693,17 @@ else
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    [DIYMenu dismiss];
-   
+    //[DIYMenu dismiss];
+    //[self menuCancelled];
    
     self.carouselSize = nil;
     self.carouselColor = nil;
     self.rugSizeButton = nil;
     self.rugColorButton = nil;
-    
+    //[self reloadInputViews];
 }
+
+
 
 
 @end

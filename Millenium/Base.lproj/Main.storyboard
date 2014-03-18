@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Tro-Xl-iMB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hlw-qG-BNy">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradieteBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="baM-Dj-lLb">
-                                <rect key="frame" x="-27" y="0.0" width="1051" height="832"/>
+                                <rect key="frame" x="-27" y="0.0" width="1051" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -260,25 +260,28 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CintasLogoHighRes.png" translatesAutoresizingMaskIntoConstraints="NO" id="wNS-zY-5X5">
-                                    <rect key="frame" x="468" y="30" width="89" height="33"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR0-DG-lFR">
+                                    <rect key="frame" x="431" y="14" width="104" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="CintasLogoHighRes.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-RC-jKe">
-                                    <rect key="frame" x="0.0" y="26" width="46" height="37"/>
+                                    <rect key="frame" x="5" y="7" width="78" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="BackArrow.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
                                         <action selector="goInteractive:" destination="l8u-Ww-K06" eventType="touchUpInside" id="mGa-Oo-jok"/>
-                                        <segue destination="EOd-lr-Xtf" kind="modal" id="f7c-nE-sDY"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <outlet property="backButton" destination="fH0-RC-jKe" id="rl9-h1-Ulo"/>
+                                <outlet property="cintasButton" destination="kR0-DG-lFR" id="eOt-cP-vPT"/>
                             </connections>
                         </collectionReusableView>
                         <connections>
@@ -286,6 +289,8 @@
                             <outlet property="delegate" destination="l8u-Ww-K06" id="DoM-vS-izd"/>
                         </connections>
                     </collectionView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,7 +300,7 @@
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="storyboardLand" title="LandingPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeStoryboard" title="LandingPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nnt-MM-CSn"/>
                         <viewControllerLayoutGuide type="bottom" id="ruq-0y-mnv"/>
@@ -385,17 +390,13 @@
     <resources>
         <image name="BackArrow.png" width="38" height="37"/>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="FreshLook.png" width="2048" height="1536"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
-        <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="RugSampleA.png" width="114" height="104"/>
         <image name="allLogoButtons2.png" width="109" height="99"/>
         <image name="allMatButtons2.png" width="109" height="99"/>
-        <image name="gradieteBG.png" width="2048" height="1536"/>
         <image name="gradieteBG.png" width="2048" height="1536"/>
         <image name="whitePad.png" width="1996" height="1015"/>
     </resources>
@@ -405,7 +406,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="f7c-nE-sDY"/>
         <segue reference="g0x-cn-24J"/>
     </inferredMetricsTieBreakers>
 </document>

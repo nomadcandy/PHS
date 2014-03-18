@@ -140,13 +140,13 @@
     // Animate in items & darken background
     //
     
-    [self.menuItems enumerateObjectsUsingBlock:^(DIYMenuItem *item, NSUInteger idx, BOOL *stop) {
-        item.transform = CGAffineTransformMakeTranslation(0, -ITEMHEIGHT * (idx + 2));
-    }];
-    
     /*[self.menuItems enumerateObjectsUsingBlock:^(DIYMenuItem *item, NSUInteger idx, BOOL *stop) {
-        item.transform = CGAffineTransformMakeTranslation(0, -ITEMHEIGHT * (idx + 5));
+        item.transform = CGAffineTransformMakeTranslation(0, -ITEMHEIGHT * (idx + 2));
     }];*/
+    
+    [self.menuItems enumerateObjectsUsingBlock:^(DIYMenuItem *item, NSUInteger idx, BOOL *stop) {
+        item.transform = CGAffineTransformMakeTranslation(0, -ITEMHEIGHT * (idx + 5));
+    }];
 
     
     [UIView animateWithDuration:0.2f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{

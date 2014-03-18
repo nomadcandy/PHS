@@ -29,19 +29,29 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [DIYMenu dismiss];
+    //[DIYMenu dismiss];
+    
+    
 	// Do any additional setup after loading the view.
 }
 
 
 -(IBAction)goInteractive:(id)sender{
+    [DIYMenu dismiss];
     
+   [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+-(IBAction)goHome:(id)sender{
+    //[DIYMenu dismiss];
+    //[self menuCancelled];
     UIStoryboard *storyboard = self.storyboard;
-    InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+    ViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"HomeBoard"];
     
     // Configure the new view controller here.
     [self presentViewController:svc animated:YES completion:nil];
-
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
