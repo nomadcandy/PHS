@@ -8,11 +8,15 @@
 
 #import "LogoCollectionViewController.h"
 
+
 @interface LogoCollectionViewController ()
 
 @end
 
 @implementation LogoCollectionViewController
+
+@synthesize nearMeImagesArray;
+@synthesize nearMeNamesArray;
 
 NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
 NSString *kLogoHeaderCellID = @"logoHeaderCellID";
@@ -29,11 +33,34 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[DIYMenu dismiss];
+    [DIYMenu dismiss];
     
     
 	// Do any additional setup after loading the view.
 }
+
+
+- (id)initWithLogo:(Logo *)logo
+
+{
+    
+    self = [super init];
+    
+    if (self) {
+        
+        
+        //_firstName = [people.firstName copy];
+        //lastName = [people.lastName copy];
+        //homeEmail = [people.homeEmail copy];
+        //workEmail = [people.workEmail copy];
+        
+        
+    }
+    
+    return self;
+    
+}
+
 
 
 -(IBAction)goInteractive:(id)sender{
@@ -66,7 +93,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         
-        return 1;
+        return 15;
     }
     
     
@@ -75,7 +102,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         //return logoNearMeArray.count;
-        return 12;
+        return 15;
         
     }
 }
@@ -114,14 +141,23 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     
     
+        nearMeNamesArray= @[@"New", @"New", @"Old",
+                            @"Old", @"Old", @"Old",
+                            @"Old", @"Old", @"Old",
+                            @"Old", @"Old", @"Old",
+                            @"Old", @"Old", @"Old"];
     
+       /* nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
+                        @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png,"@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png"];*/
+
+
     
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
-        logoCell.logoLabel.text = [_nearMeNamesArray objectAtIndex:indexPath.item];
+        logoCell.logoLabel.text = [nearMeNamesArray objectAtIndex:indexPath.item];
     
     
-        UIImage* buttonImage = [_nearMeImagesArray objectAtIndex:indexPath.item];
+        UIImage* buttonImage = [nearMeImagesArray objectAtIndex:indexPath.item];
                 //nameString=[nearMeArray objectAtIndex:indexPath.item];
         
         [logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
