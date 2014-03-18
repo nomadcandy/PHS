@@ -161,20 +161,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:indexPath.item];
         NSLog(@"mediaImageString %@",nearMeImageString);
     
+        NSString*selectedImageString= @"SampleLogo8A.png";
     
         [logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
+        //[logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:selectedImageString] forState:UIControlStateSelected];
 
-        //[logoCell.logoChooseButton.imageView=[UIImage imageNamed:nearMeImageString]];
     
-        //UIImage* buttonImage = [nearMeImagesArray objectAtIndex:indexPath.item];
-                //nameString=[nearMeArray objectAtIndex:indexPath.item];
-        
         [logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     
     
-       // [logoCell.logoChooseButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+       //[logoCell.logoChooseButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     
-        [[logoCell logoChooseButton] addTarget:self action:@selector(goLogoSelected:event:) forControlEvents:UIControlEventTouchUpInside];
+    
+        [[logoCell logoChooseButton] addTarget:self action:@selector(logoSelected:) forControlEvents:UIControlEventTouchUpInside];
         
         
         if (logoCell.logoChooseButton)
@@ -197,7 +196,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)logoSelected:(id)sender
 
 {
+    UIStoryboard *storyboard = self.storyboard;
+    InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
     
+    // Configure the new view controller here.
+    [self presentViewController:svc animated:YES completion:nil];
     
 }
 
