@@ -147,8 +147,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                             @"Old", @"Old", @"Old",
                             @"Old", @"Old", @"Old"];
     
-       /* nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
-                        @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png,"@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png"];*/
+        nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
+                        @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png,"@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
 
 
     
@@ -157,15 +157,24 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         logoCell.logoLabel.text = [nearMeNamesArray objectAtIndex:indexPath.item];
     
     
-        UIImage* buttonImage = [nearMeImagesArray objectAtIndex:indexPath.item];
+    
+        NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:indexPath.item];
+        NSLog(@"mediaImageString %@",nearMeImageString);
+    
+    
+        [logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
+
+        //[logoCell.logoChooseButton.imageView=[UIImage imageNamed:nearMeImageString]];
+    
+        //UIImage* buttonImage = [nearMeImagesArray objectAtIndex:indexPath.item];
                 //nameString=[nearMeArray objectAtIndex:indexPath.item];
         
         [logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
     
     
-        [logoCell.logoChooseButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+       // [logoCell.logoChooseButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     
-        [[logoCell logoChooseButton] addTarget:self action:@selector(goDirections:event:) forControlEvents:UIControlEventTouchUpInside];
+        [[logoCell logoChooseButton] addTarget:self action:@selector(goLogoSelected:event:) forControlEvents:UIControlEventTouchUpInside];
         
         
         if (logoCell.logoChooseButton)
@@ -185,7 +194,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
+-(IBAction)logoSelected:(id)sender
 
+{
+    
+    
+}
 
 
 

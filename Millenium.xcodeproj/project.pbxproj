@@ -86,6 +86,8 @@
 		4247575B18D8B0CB000AAF7C /* SampleLogo14.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247573E18D8B0CB000AAF7C /* SampleLogo14.png */; };
 		4247575C18D8B0CB000AAF7C /* SampleLogo15.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247573F18D8B0CB000AAF7C /* SampleLogo15.png */; };
 		4247575D18D8B0CB000AAF7C /* SampleLogo15.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247573F18D8B0CB000AAF7C /* SampleLogo15.png */; };
+		4247575F18D8B953000AAF7C /* SampleLogo16.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247575E18D8B953000AAF7C /* SampleLogo16.png */; };
+		4247576018D8B953000AAF7C /* SampleLogo16.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247575E18D8B953000AAF7C /* SampleLogo16.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
@@ -231,6 +233,7 @@
 		4247573D18D8B0CB000AAF7C /* SampleLogo13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo13.png; sourceTree = "<group>"; };
 		4247573E18D8B0CB000AAF7C /* SampleLogo14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo14.png; sourceTree = "<group>"; };
 		4247573F18D8B0CB000AAF7C /* SampleLogo15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo15.png; sourceTree = "<group>"; };
+		4247575E18D8B953000AAF7C /* SampleLogo16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo16.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailDemo.png; sourceTree = "<group>"; };
@@ -357,6 +360,7 @@
 		4247573018D8B098000AAF7C /* SampleLogos */ = {
 			isa = PBXGroup;
 			children = (
+				4247575E18D8B953000AAF7C /* SampleLogo16.png */,
 				4247573118D8B0CA000AAF7C /* SampleLogo1.png */,
 				4247573218D8B0CA000AAF7C /* SampleLogo2.png */,
 				4247573318D8B0CA000AAF7C /* SampleLogo3.png */,
@@ -393,7 +397,6 @@
 		42E7AC0D18CE414A0036AF00 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				4247573018D8B098000AAF7C /* SampleLogos */,
 				4247572218D783C3000AAF7C /* allMatButtons2.png */,
 				4247571C18D781D0000AAF7C /* WhiteCircleRugSample.png */,
 				4247571318D77F34000AAF7C /* allLogoButtons1.png */,
@@ -538,6 +541,7 @@
 		42FF7A4918CDEBEB00C72695 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4247573018D8B098000AAF7C /* SampleLogos */,
 				42E7AC0D18CE414A0036AF00 /* Icons */,
 			);
 			name = Images;
@@ -713,6 +717,7 @@
 				424756F618D74B4F000AAF7C /* CintasLogoHighRes.png in Resources */,
 				4247575C18D8B0CB000AAF7C /* SampleLogo15.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
+				4247575F18D8B953000AAF7C /* SampleLogo16.png in Resources */,
 				42EB3EB218D0AEE800FAD7FD /* Landscape.png in Resources */,
 				42EB3EA218D0A4DA00FAD7FD /* RugSample3.png in Resources */,
 				4247572618D79FA1000AAF7C /* BackArrow.png in Resources */,
@@ -737,6 +742,7 @@
 				4247574718D8B0CB000AAF7C /* SampleLogo4.png in Resources */,
 				424756FD18D74F41000AAF7C /* CarouselBGNoPic.png in Resources */,
 				42EB3EDB18D20A9E00FAD7FD /* RugSampleA.png in Resources */,
+				4247576018D8B953000AAF7C /* SampleLogo16.png in Resources */,
 				42E7AC0C18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
 				4247571B18D78053000AAF7C /* allMatButtons1.png in Resources */,
 				4247574518D8B0CB000AAF7C /* SampleLogo3.png in Resources */,
