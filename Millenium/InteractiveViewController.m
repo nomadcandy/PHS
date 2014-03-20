@@ -42,32 +42,31 @@
 }
 
 
-
-
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+        tap.cancelsTouchesInView = false;
+        [self.view addGestureRecognizer:tap];
+    }
+    return self;
+}
+
+
+
+
+/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     
     
     if (self) {
         
         
-        /*self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-        if (self) {
-            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-            tap.cancelsTouchesInView = false;
-            [self.view addGestureRecognizer:tap];*/
-        // Custom initialization
         
-        //UIStoryboard*interactive = [UIStoryboard storyboardWithName:@"mystoryboard"
-                                                      //bundle:nil];
-        
-        //[self.storyboard instantiateViewControllerWithIdentifier:@"interactive"];
-        //UIViewController* vc = [interactive instantiateViewControllerWithIdentifier:@"InteractiveViewController"];
    }
     return self;
-}
+}*/
 
 - (void)viewDidLoad
 {
@@ -97,6 +96,8 @@
     [DIYMenu addMenuItem:@"near me" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
     [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font ];
     
+    //[DIYMenu addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     // Override point for customization after application launch.
     //return YES;
@@ -110,6 +111,9 @@
 //Item selected on menu
 - (void)menuItemSelected:(NSString *)action
 {
+    
+    
+    
     NSLog(@"menuItemSelected");
     
     //NSString*actionTakeString= menuItemSelected;
@@ -123,13 +127,21 @@
     
     else if ([action isEqualToString:@"pics"])
     {
+        _actionSelectedString=action;
         
+
         
     }
     
     else if ([action isEqualToString:@"camera"])
     {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         
+        [self presentViewController:picker animated:YES completion:NULL];
+
     }
     
     else if ([action isEqualToString:@"millenium"])
@@ -173,8 +185,12 @@
     
 }
 
+
+//does not hit
+
 - (void)actionSelectedStringSet
 {
+    
     
     if ([_actionSelectedString isEqualToString:@"near me"]){
     UIStoryboard *storyboardLogo = self.storyboard;
@@ -183,14 +199,70 @@
      // Configure the new view controller here.
      [self presentViewController:LogoCVC animated:YES completion:nil];
         
+        
+      if ([_actionSelectedString isEqualToString:@"pics"]){
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        //picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:picker animated:YES completion:NULL];
+        
     }
+  }
+
 }
 
+//does not hit
 
+- (void)dismissMenu
+{
+    NSLog(@"Delegate: menuDismissed");
+    /*if ([_actionSelectedString isEqualToString:@"near me"]){
+        UIStoryboard *storyboardLogo = self.storyboard;
+        LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:LogoCVC animated:YES completion:nil];*/
+        
+    }
+    
+//}
+
+//hits this
 - (void)menuActivated
 {
     NSLog(@"Delegate: menuActivated");
-    if ([_actionSelectedString isEqualToString:@"near me"]){
+    
+    
+    if ([_actionSelectedString isEqualToString:@"pics"]){
+        
+        
+        
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        
+        picker.allowsEditing = YES;
+        
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        
+        
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+    }
+    
+    if ([_actionSelectedString isEqualToString:@"camera"]){
+        
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+    
+    }
+
+    else if ([_actionSelectedString isEqualToString:@"near me"]){
         UIStoryboard *storyboardLogo = self.storyboard;
         LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
         
@@ -200,15 +272,20 @@
     }
 
 }
-
+//does not hit this code
 - (void)menuItemSelected
 {
+   //dismiss menu
+    if ([_actionSelectedString  isEqualToString:@"near me"]) {
+    
     NSLog(@"Delegate: menuCancelled");
     UIStoryboard *storyboardLogo = self.storyboard;
      LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
      
      // Configure the new view controller here.
      [self presentViewController:LogoCVC animated:YES completion:nil];
+        
+    }
 
     
 }
@@ -630,6 +707,32 @@ else
     
     
 }
+
+
+- (IBAction)takePhoto:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
+}
+
+- (IBAction)selectPhoto:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
+    
+}
+
+
 //moves logo around
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
 {
@@ -655,23 +758,6 @@ else
 
 
 
-//Not Used
-#pragma mark-
-#pragma mark Segue
-
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-    
-    if ([segue.identifier isEqualToString:@"InteractiveSegue"]) {
-        
-        InteractiveViewController *destViewController = segue.destinationViewController;
-        [self presentViewController:destViewController animated:YES completion:nil];
-        
-             
-    }
-    
-}
 
 
 #pragma mark - Drop Down Animated Menus
@@ -710,6 +796,60 @@ else
     
      //[self dismissModalViewControllerAnimated:NO];
     
+}
+
+//Not Used
+#pragma mark-
+#pragma mark Segue
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    
+    if ([segue.identifier isEqualToString:@"InteractiveSegue"]) {
+        
+        InteractiveViewController *destViewController = segue.destinationViewController;
+        [self presentViewController:destViewController animated:YES completion:nil];
+        
+        
+    }
+    
+}
+
+#pragma mark-
+#pragma mark Image picking
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    [_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    
+    //self.imageView.image = chosenImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return (UIInterfaceOrientationMaskLandscapeLeft);
+}
+
+#pragma mark - Rotation
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return false;
+}
+
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeLeft;
 }
 
 - (void)didReceiveMemoryWarning

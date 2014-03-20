@@ -13,7 +13,7 @@
 #import "DIYMenu.h"
 #import "LogoCollectionViewController.h"
 
-@interface InteractiveViewController : UIViewController<iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate>{
+@interface InteractiveViewController : UIViewController<UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate>{
     
     IBOutlet UIView *interactiveView;
     
@@ -32,6 +32,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *homeButton;
 @property (nonatomic, strong) IBOutlet UIButton *logoButton;
 @property (nonatomic, strong) IBOutlet UIButton *matButton;
+@property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
 
 
 @property (nonatomic, strong) NSString *actionSelectedString;

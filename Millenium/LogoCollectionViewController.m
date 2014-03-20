@@ -182,8 +182,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
           
             _selectedIndex=[indexPath row];
             logoCell.logoChooseButton.tag=[indexPath row];
+            //NSLog(@"index %d",index);
             UIButton* button = [logoCell logoChooseButton];
             button.tag = _selectedIndex;
+            NSLog(@"selectedIndex %i",_selectedIndex);
             
             
         }
@@ -196,6 +198,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)logoSelected:(id)sender
 
 {
+    
+    NSLog(@"sender %@",sender);
     UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
     

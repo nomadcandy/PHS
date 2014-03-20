@@ -47,7 +47,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    return NO;
 }
 
 #pragma mark -
@@ -69,21 +69,29 @@
 	if (button == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
+		//UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
+        //UIImage *image = [UIImage imageNamed:@"CarouselBGNoPic1.png"];
+         UIImage *image = [UIImage imageNamed:@"CarouselBGNoPicBlue.png"];
+
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
-		[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         
-        button.layer.shadowColor = [UIColor blackColor].CGColor;
-        button.layer.shadowOpacity = 0.8;
-        button.layer.shadowRadius = 12;
-        button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+        //button.layer.shadowColor = [UIColor blackColor].CGColor;
+        button.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+        //button.layer.shadowOpacity = 0.8;
+        button.layer.shadowOpacity = 0.1;
+        //button.layer.shadowRadius = 12;
+        button.layer.shadowRadius = 3;
+        //button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+        button.layer.shadowOffset = CGSizeMake(3.0f, 4.0f);
 
         button.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
         [button setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
         
-        [button.titleLabel setFont:[UIFont fontWithName:@"Avenir" size:18.0]];
+        //[button.titleLabel setFont:[UIFont fontWithName:@"Avenir" size:18.0]];
+        [button.titleLabel setFont:[UIFont fontWithName:@"Helvetica-bold" size:18.0]];
 		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 	}
 	
@@ -150,6 +158,9 @@
     
     
 }*/
+
+
+
 
 //Method Works
 - (IBAction)presentInteractiveViewController:(UIButton *)sender{

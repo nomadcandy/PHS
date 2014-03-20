@@ -92,6 +92,17 @@
 		4247576318D8BBAD000AAF7C /* LogoThumbnailBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576118D8BBAD000AAF7C /* LogoThumbnailBG.png */; };
 		4247576518D8BD33000AAF7C /* SampleLogo8A.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576418D8BD33000AAF7C /* SampleLogo8A.png */; };
 		4247576618D8BD33000AAF7C /* SampleLogo8A.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576418D8BD33000AAF7C /* SampleLogo8A.png */; };
+		4247576818D9E5CA000AAF7C /* #FloorMats.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576718D9E5C7000AAF7C /* #FloorMats.png */; };
+		4247576918D9E5CB000AAF7C /* #FloorMats.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576718D9E5C7000AAF7C /* #FloorMats.png */; };
+		4247576B18DA0127000AAF7C /* MatAloneLogoSocialMedia.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576A18DA0127000AAF7C /* MatAloneLogoSocialMedia.png */; };
+		4247576C18DA0127000AAF7C /* MatAloneLogoSocialMedia.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576A18DA0127000AAF7C /* MatAloneLogoSocialMedia.png */; };
+		4247576E18DA02F2000AAF7C /* MatSocial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576D18DA02F2000AAF7C /* MatSocial1.png */; };
+		4247576F18DA02F2000AAF7C /* MatSocial1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4247576D18DA02F2000AAF7C /* MatSocial1.png */; };
+		42981B4318DA0B84009E2261 /* MatChatter1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42981B4218DA0B84009E2261 /* MatChatter1.png */; };
+		42981B4518DA0CCD009E2261 /* MatChatter3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42981B4418DA0CCD009E2261 /* MatChatter3.png */; };
+		42981B4718DA0FE5009E2261 /* MatChatter5.png in Resources */ = {isa = PBXBuildFile; fileRef = 42981B4618DA0FE5009E2261 /* MatChatter5.png */; };
+		42CEEB1E18DA1F4A000FC675 /* MatSenses.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEEB1D18DA1F4A000FC675 /* MatSenses.png */; };
+		42CEEB2018DA2035000FC675 /* CarouselBGNoPicBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 42CEEB1F18DA2035000FC675 /* CarouselBGNoPicBlue.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */; };
@@ -240,6 +251,14 @@
 		4247575E18D8B953000AAF7C /* SampleLogo16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo16.png; sourceTree = "<group>"; };
 		4247576118D8BBAD000AAF7C /* LogoThumbnailBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoThumbnailBG.png; sourceTree = "<group>"; };
 		4247576418D8BD33000AAF7C /* SampleLogo8A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo8A.png; sourceTree = "<group>"; };
+		4247576718D9E5C7000AAF7C /* #FloorMats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "#FloorMats.png"; sourceTree = "<group>"; };
+		4247576A18DA0127000AAF7C /* MatAloneLogoSocialMedia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatAloneLogoSocialMedia.png; sourceTree = "<group>"; };
+		4247576D18DA02F2000AAF7C /* MatSocial1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatSocial1.png; sourceTree = "<group>"; };
+		42981B4218DA0B84009E2261 /* MatChatter1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatter1.png; sourceTree = "<group>"; };
+		42981B4418DA0CCD009E2261 /* MatChatter3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatter3.png; sourceTree = "<group>"; };
+		42981B4618DA0FE5009E2261 /* MatChatter5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatter5.png; sourceTree = "<group>"; };
+		42CEEB1D18DA1F4A000FC675 /* MatSenses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatSenses.png; sourceTree = "<group>"; };
+		42CEEB1F18DA2035000FC675 /* CarouselBGNoPicBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarouselBGNoPicBlue.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42E7AC0A18CE3F6D0036AF00 /* EmailDemo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EmailDemo.png; sourceTree = "<group>"; };
@@ -557,6 +576,14 @@
 		42FF7A4A18CDEBF500C72695 /* ImagesTest */ = {
 			isa = PBXGroup;
 			children = (
+				42CEEB1F18DA2035000FC675 /* CarouselBGNoPicBlue.png */,
+				42CEEB1D18DA1F4A000FC675 /* MatSenses.png */,
+				42981B4618DA0FE5009E2261 /* MatChatter5.png */,
+				42981B4418DA0CCD009E2261 /* MatChatter3.png */,
+				42981B4218DA0B84009E2261 /* MatChatter1.png */,
+				4247576D18DA02F2000AAF7C /* MatSocial1.png */,
+				4247576A18DA0127000AAF7C /* MatAloneLogoSocialMedia.png */,
+				4247576718D9E5C7000AAF7C /* #FloorMats.png */,
 				4247576118D8BBAD000AAF7C /* LogoThumbnailBG.png */,
 				4247572518D79FA1000AAF7C /* BackArrow.png */,
 				4247571F18D782E6000AAF7C /* WhiteCircleRugSample2.png */,
@@ -671,11 +698,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42981B4318DA0B84009E2261 /* MatChatter1.png in Resources */,
 				4247575A18D8B0CB000AAF7C /* SampleLogo14.png in Resources */,
 				4247574C18D8B0CB000AAF7C /* SampleLogo7.png in Resources */,
 				42FF7A4C18CDEC1100C72695 /* MillenniumLogo.jpg in Resources */,
+				4247576E18DA02F2000AAF7C /* MatSocial1.png in Resources */,
 				42E7AC2A18CE67C60036AF00 /* HomeIcon.png in Resources */,
 				42EB3EBB18D0D6D100FAD7FD /* JadeTeaHouseLogo.png in Resources */,
+				42CEEB1E18DA1F4A000FC675 /* MatSenses.png in Resources */,
 				42E7AC2418CE4A720036AF00 /* SearchMMIcon.png in Resources */,
 				4247571D18D781D0000AAF7C /* WhiteCircleRugSample.png in Resources */,
 				42E7AC1218CE41950036AF00 /* CameraIcon.png in Resources */,
@@ -711,9 +741,13 @@
 				4247570B18D77963000AAF7C /* whitePad.png in Resources */,
 				42EB3EA918D0A4E500FAD7FD /* RugSample1.png in Resources */,
 				424756F918D74DD7000AAF7C /* CarouselRoundBG.png in Resources */,
+				42981B4518DA0CCD009E2261 /* MatChatter3.png in Resources */,
+				4247576B18DA0127000AAF7C /* MatAloneLogoSocialMedia.png in Resources */,
 				42EB3EDD18D22FF900FAD7FD /* allLogoButtons.png in Resources */,
 				42E7AC0B18CE3F6D0036AF00 /* EmailDemo.png in Resources */,
 				4247575218D8B0CB000AAF7C /* SampleLogo10.png in Resources */,
+				4247576818D9E5CA000AAF7C /* #FloorMats.png in Resources */,
+				42CEEB2018DA2035000FC675 /* CarouselBGNoPicBlue.png in Resources */,
 				4247574A18D8B0CB000AAF7C /* SampleLogo6.png in Resources */,
 				424756FC18D74F41000AAF7C /* CarouselBGNoPic.png in Resources */,
 				42EB3EDA18D20A9E00FAD7FD /* RugSampleA.png in Resources */,
@@ -722,6 +756,7 @@
 				4247571718D77F8D000AAF7C /* allLogoButtons2.png in Resources */,
 				42E7AC1618CE41950036AF00 /* InternetIcon.png in Resources */,
 				4247576218D8BBAD000AAF7C /* LogoThumbnailBG.png in Resources */,
+				42981B4718DA0FE5009E2261 /* MatChatter5.png in Resources */,
 				424756FF18D75378000AAF7C /* FreshLook.png in Resources */,
 				424756F618D74B4F000AAF7C /* CintasLogoHighRes.png in Resources */,
 				4247575C18D8B0CB000AAF7C /* SampleLogo15.png in Resources */,
@@ -750,6 +785,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4247574718D8B0CB000AAF7C /* SampleLogo4.png in Resources */,
+				4247576918D9E5CB000AAF7C /* #FloorMats.png in Resources */,
 				424756FD18D74F41000AAF7C /* CarouselBGNoPic.png in Resources */,
 				42EB3EDB18D20A9E00FAD7FD /* RugSampleA.png in Resources */,
 				4247576018D8B953000AAF7C /* SampleLogo16.png in Resources */,
@@ -787,6 +823,7 @@
 				4247571E18D781D0000AAF7C /* WhiteCircleRugSample.png in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42EB3EA518D0A4DA00FAD7FD /* RugSample4.png in Resources */,
+				4247576C18DA0127000AAF7C /* MatAloneLogoSocialMedia.png in Resources */,
 				4247575518D8B0CB000AAF7C /* SampleLogo11.png in Resources */,
 				4247571518D77F34000AAF7C /* allLogoButtons1.png in Resources */,
 				42EB3ED818D1FE2E00FAD7FD /* CarouselPadWhite.png in Resources */,
@@ -794,6 +831,7 @@
 				42E7AC2518CE4A720036AF00 /* SearchMMIcon.png in Resources */,
 				4247570318D7550D000AAF7C /* CarouselBGNoPic1.png in Resources */,
 				4247575318D8B0CB000AAF7C /* SampleLogo10.png in Resources */,
+				4247576F18DA02F2000AAF7C /* MatSocial1.png in Resources */,
 				42E7AC2B18CE67C60036AF00 /* HomeIcon.png in Resources */,
 				42EB3EAD18D0A77900FAD7FD /* greySizeImage.png in Resources */,
 				4247572418D783C3000AAF7C /* allMatButtons2.png in Resources */,

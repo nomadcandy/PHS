@@ -7,7 +7,7 @@
         <!--Interactive View Controller - InteractiveViewController-->
         <scene sceneID="GvM-7i-B4P">
             <objects>
-                <viewController storyboardIdentifier="InteractiveViewBoard" title="InteractiveViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EOd-lr-Xtf" customClass="InteractiveViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InteractiveViewBoard" title="InteractiveViewController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EOd-lr-Xtf" customClass="InteractiveViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qaY-OE-QxH"/>
                         <viewControllerLayoutGuide type="bottom" id="Tro-Xl-iMB"/>
@@ -197,6 +197,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="YBb-aE-WUj"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="1024" height="704"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="carouselColor" destination="XK9-Rl-Vbb" id="jWU-ig-2Fg"/>
@@ -204,6 +205,7 @@
                         <outlet property="homeButton" destination="EYB-Me-8Vk" id="Fp5-Km-pWB"/>
                         <outlet property="interactiveView" destination="hlw-qG-BNy" id="vfV-pl-Gpg"/>
                         <outlet property="logoButton" destination="DwB-TK-Ydj" id="u6O-xI-1gN"/>
+                        <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gk9-Zk-GCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -327,8 +329,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FreshLook.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-QT-lmy" userLabel="PromoImage">
-                                <rect key="frame" x="-56" y="0.0" width="1137" height="768"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MatSenses.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-QT-lmy" userLabel="PromoImage">
+                                <rect key="frame" x="-2" y="17" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B73-GN-pMc" customClass="iCarousel">
@@ -405,10 +407,10 @@
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="FreshLook.png" width="2048" height="1536"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="LogoThumbnailBG.png" width="220" height="220"/>
+        <image name="MatSenses.png" width="2078" height="1536"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="RugSampleA.png" width="114" height="104"/>
         <image name="allLogoButtons2.png" width="109" height="99"/>
