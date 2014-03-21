@@ -41,55 +41,7 @@
 }
 
 
-#pragma mark - DIYMenuDelegate
-//Item selected on menu
-/*- (void)menuItemSelected:(NSString *)action
-{
-    NSLog(@"menuItemSelected");
-    
-    
-    
-    if ([action isEqualToString:@"transparent"])
-    {
-       
-        
-    }
-    
-    else if ([action isEqualToString:@"pics"])
-    {
-       
-        
-    }
-    
-    else if ([action isEqualToString:@"camera"])
-    {
-        
-    }
-    
-    else if ([action isEqualToString:@"millenium"])
-    {
-        
-        
-    }
-    
-    else if ([action isEqualToString:@"search"])
-    {
-        
-        
-    }
-    
-    else if ([action isEqualToString:@"near me"])
-    {
-        
-        
-    }
-    
-    else{
-       
-        
-    }
 
-}*/
     
 
 - (void)menuActivated

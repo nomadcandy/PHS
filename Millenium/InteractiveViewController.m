@@ -92,7 +92,7 @@
         
     }
     
-    //[DIYMenu addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
+
     
     
     // Override point for customization after application launch.
@@ -108,8 +108,9 @@
 - (void)menuItemSelected:(NSString *)action
 {
     
+     //[DIYMenu addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
     
-    
+    _actionSelectedString=action;
     NSLog(@"menuItemSelected");
     
     if ([action isEqualToString:@"transparent"])
@@ -120,20 +121,19 @@
     
     else if ([action isEqualToString:@"pics"])
     {
-        _actionSelectedString=action;
+        //_actionSelectedString=action;
         
         
-        AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
+        /*AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
         appdelegate.model=YES;
         
-        //[DIYMenu dismiss];
         
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
         picker.allowsEditing = YES;
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;*/
         
-        //[DIYMenu dismiss];
+       
 
         
     }
@@ -141,13 +141,22 @@
     else if ([action isEqualToString:@"camera"])
     {
         
-        _actionSelectedString=action;
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.allowsEditing = YES;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         
-        [self presentViewController:picker animated:YES completion:NULL];
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        
+            AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
+            appdelegate.model=YES;
+
+        
+            _actionSelectedString=action;
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.allowsEditing = YES;
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+            [self presentViewController:picker animated:YES completion:NULL];
+            
+        }
 
     }
     
@@ -174,7 +183,7 @@
         
         //[DIYMenu dismiss];
         
-        _actionSelectedString=action;
+        //_actionSelectedString=action;
         
         UIStoryboard *storyboardLogo = self.storyboard;
         LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
@@ -206,19 +215,27 @@
     if ([_actionSelectedString isEqualToString:@"pics"]){
         
         //clears menu off picker screen
-        [DIYMenu dismiss];
+        //[DIYMenu dismiss];
         
         AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
         appdelegate.model=YES;
         
+        
+        //send here where near me sends in other method
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:picker animated:YES completion:NULL];
+        [self dismissViewControllerAnimated:YES completion:NULL];
+        
+        
     }
     
     if ([_actionSelectedString isEqualToString:@"camera"]){
+        
+        AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
+        appdelegate.model=YES;
         
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         
@@ -231,9 +248,9 @@
 
     else if ([_actionSelectedString isEqualToString:@"near me"]){
         
-        UIStoryboard *storyboardLogo = self.storyboard;
+        /*UIStoryboard *storyboardLogo = self.storyboard;
         LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
-        [self presentViewController:LogoCVC animated:YES completion:nil];
+        [self presentViewController:LogoCVC animated:YES completion:nil];*/
         
         
         
@@ -737,8 +754,8 @@ else
     
 }
 
-
-- (IBAction)hideMenu:(id)sender
+//not hit
+/*- (IBAction)hideMenu:(id)sender
 
 
 {
@@ -746,15 +763,15 @@ else
     
    
 
-}
+}*/
 
-- (IBAction)tapped:(id)sender
+/*- (IBAction)tapped:(id)sender
 {
     NSLog(@"sender %@",sender);
     [DIYMenu dismiss];
-}
+}*/
 
-
+//hits this
 -(IBAction)goHome:(id)sender{
     
     
@@ -794,14 +811,12 @@ else
     [_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
     
     //self.imageView.image = chosenImage;
-    
-    
-    
     [picker dismissViewControllerAnimated:YES completion:NULL];
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=NO;
     
-    [DIYMenu show];
+    //[self.viewDidLoad reload];
+    //[DIYMenu show];
     
 }
 

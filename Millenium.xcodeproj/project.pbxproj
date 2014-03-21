@@ -27,6 +27,7 @@
 		42EB3EE218D232AB00FAD7FD /* MyDraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */; };
 		42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EF618D3456E00FAD7FD /* DIYMenu.m */; };
 		42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EF718D3456E00FAD7FD /* DIYMenuItem.m */; };
+		42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EC7E3818DC9609003B49A3 /* ImagePickerViewController.m */; };
 		42FF7A1518CDE92A00C72695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1418CDE92A00C72695 /* Foundation.framework */; };
 		42FF7A1718CDE92A00C72695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */; };
 		42FF7A1918CDE92A00C72695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1818CDE92A00C72695 /* UIKit.framework */; };
@@ -79,6 +80,8 @@
 		42EB3EF818D3456E00FAD7FD /* DIYMenuOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYMenuOptions.h; sourceTree = "<group>"; };
 		42EB3EF918D3456E00FAD7FD /* DIYMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYMenu.h; sourceTree = "<group>"; };
 		42EB3EFC18D3458A00FAD7FD /* DIYMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYMenuItem.h; sourceTree = "<group>"; };
+		42EC7E3718DC9609003B49A3 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		42EC7E3818DC9609003B49A3 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		42FF7A1118CDE92A00C72695 /* Millenium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millenium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A1418CDE92A00C72695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,6 +188,15 @@
 			name = DIYMenu;
 			sourceTree = "<group>";
 		};
+		42EC7E3618DC95E5003B49A3 /* ImagePickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42EC7E3718DC9609003B49A3 /* ImagePickerViewController.h */,
+				42EC7E3818DC9609003B49A3 /* ImagePickerViewController.m */,
+			);
+			name = ImagePickerViewController;
+			sourceTree = "<group>";
+		};
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +230,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				42EC7E3618DC95E5003B49A3 /* ImagePickerViewController */,
 				424756ED18D73776000AAF7C /* InternetViewController */,
 				424756DB18D38A47000AAF7C /* LogoCollectionViewController */,
 				424756D618D389DE000AAF7C /* SearchViewController */,
@@ -376,6 +389,7 @@
 				42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
 				42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */,
+				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				4247572A18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
 				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
