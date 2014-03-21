@@ -122,14 +122,18 @@
     {
         _actionSelectedString=action;
         
+        
         AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
         appdelegate.model=YES;
+        
+        //[DIYMenu dismiss];
         
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         
+        //[DIYMenu dismiss];
 
         
     }
@@ -200,6 +204,9 @@
     NSLog(@"%@",_actionSelectedString);
     
     if ([_actionSelectedString isEqualToString:@"pics"]){
+        
+        //clears menu off picker screen
+        [DIYMenu dismiss];
         
         AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
         appdelegate.model=YES;
@@ -793,6 +800,8 @@ else
     [picker dismissViewControllerAnimated:YES completion:NULL];
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=NO;
+    
+    [DIYMenu show];
     
 }
 
