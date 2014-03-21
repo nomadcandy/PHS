@@ -28,6 +28,8 @@
 @synthesize matColorUseString;
 @synthesize matSizeUseString;
 
+@synthesize chosenImage;
+
 @synthesize logoButton;
 
 
@@ -132,6 +134,13 @@
         picker.delegate = self;
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;*/
+        
+        UIStoryboard *storyboardLogo = self.storyboard;
+        ImagePickerViewController *ImagePickerVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"ImagePickerBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:ImagePickerVC animated:YES completion:nil];
+
         
        
 

@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "InteractiveViewController.h"
 
 @interface ImagePickerViewController : UIViewController{
     
     AppDelegate *appdelegate;
+    UIImage *chosenImage;
 }
+
+
+- (IBAction)selectPhoto:(UIButton *)sender;
 
 @end

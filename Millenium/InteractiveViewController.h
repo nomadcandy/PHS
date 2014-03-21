@@ -12,6 +12,7 @@
 #import "MyDraggableImage.h"
 #import "DIYMenu.h"
 #import "LogoCollectionViewController.h"
+#import "ImagePickerViewController.h"
 #import "AppDelegate.h"
 
 @interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate>{
@@ -21,6 +22,7 @@
     MyDraggableImage*MyDragRect;
     IBOutlet UIButton*logoButton;
     AppDelegate *appdelegate;
+    UIImage *chosenImage;
 }
 
 @property (nonatomic, strong) IBOutlet UIView *interactiveView;
@@ -43,6 +45,8 @@
 
 @property (nonatomic, strong) NSString *matColorUseString;
 @property (nonatomic, strong) NSString *matSizeUseString;
+
+@property (nonatomic, strong) UIImage *chosenImage;
 
 
 @property (nonatomic, strong) IBOutlet iCarousel *carouselSize;

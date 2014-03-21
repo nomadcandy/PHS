@@ -42,6 +42,71 @@
 	// Do any additional setup after loading the view.
 }
 
+
+#pragma mark-
+#pragma mark Image picking
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    
+    //self.imageView.image = chosenImage;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
+    appdelegate.model=NO;
+    
+    
+    
+    //[self.viewDidLoad reload];
+    //[DIYMenu show];
+    
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    
+    if ([segue.identifier isEqualToString:@"interactivePickedSegue"]) {
+        
+        InteractiveViewController *destViewController = segue.destinationViewController;
+        
+        //destViewController.indexPath = sender;
+        
+        
+        destViewController.chosenImage= chosenImage;
+        
+        
+    }
+
+    
+}
+
+- (IBAction)takePhoto:(UIButton *)sender {
+ 
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+ 
+    [self presentViewController:picker animated:YES completion:NULL];
+ 
+ }
+ 
+ - (IBAction)selectPhoto:(UIButton *)sender {
+ 
+     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+     picker.delegate = self;
+     picker.allowsEditing = YES;
+     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+ 
+     [self presentViewController:picker animated:YES completion:NULL];
+ 
+ 
+ }
+
+
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
