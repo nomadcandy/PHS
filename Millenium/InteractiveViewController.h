@@ -12,13 +12,15 @@
 #import "MyDraggableImage.h"
 #import "DIYMenu.h"
 #import "LogoCollectionViewController.h"
+#import "AppDelegate.h"
 
-@interface InteractiveViewController : UIViewController<UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate>{
+@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate>{
     
     IBOutlet UIView *interactiveView;
     
     MyDraggableImage*MyDragRect;
     IBOutlet UIButton*logoButton;
+    AppDelegate *appdelegate;
 }
 
 @property (nonatomic, strong) IBOutlet UIView *interactiveView;

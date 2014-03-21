@@ -12,5 +12,6 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate, DIYMenuDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property BOOL model;
 
 @end
