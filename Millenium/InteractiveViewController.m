@@ -33,6 +33,7 @@
 
 - (void)dealloc
 {
+    
     carouselSize.delegate = nil;
     carouselSize.dataSource = nil;
     carouselColor.delegate = nil;
@@ -72,7 +73,9 @@
 {
     [super viewDidLoad];
    
-    [DIYMenu isActivated];
+    
+    
+    //[DIYMenu isActivated];
     
     
     //configure carousel
@@ -85,7 +88,9 @@
     UIFont *font = [UIFont systemFontOfSize:14 ];
     //[font setTextAlignment:NSTextAlignmentLeft];
     
+    
     [DIYMenu setDelegate:self];
+    
     
     
     [DIYMenu addMenuItem:@"transparent" withIcon:[UIImage imageNamed:@"skillsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
@@ -95,6 +100,8 @@
     [DIYMenu addMenuItem:@"search" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
     [DIYMenu addMenuItem:@"near me" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
     [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font ];
+        
+    }
     
     //[DIYMenu addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -104,7 +111,7 @@
 
     
     
-}
+
 
 
 #pragma mark - DIYMenuDelegate
@@ -127,7 +134,14 @@
     
     else if ([action isEqualToString:@"pics"])
     {
-        _actionSelectedString=action;
+        //_actionSelectedString=action;
+        
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        
+        picker.allowsEditing = YES;
+        
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         
 
         
@@ -186,53 +200,16 @@
 }
 
 
-//does not hit
 
-- (void)actionSelectedStringSet
-{
-    
-    
-    if ([_actionSelectedString isEqualToString:@"near me"]){
-    UIStoryboard *storyboardLogo = self.storyboard;
-     LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
-     
-     // Configure the new view controller here.
-     [self presentViewController:LogoCVC animated:YES completion:nil];
-        
-        
-      if ([_actionSelectedString isEqualToString:@"pics"]){
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        //picker.delegate = self;
-        picker.allowsEditing = YES;
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [self presentViewController:picker animated:YES completion:NULL];
-        
-    }
-  }
-
-}
-
-//does not hit
-
-- (void)dismissMenu
-{
-    NSLog(@"Delegate: menuDismissed");
-    /*if ([_actionSelectedString isEqualToString:@"near me"]){
-        UIStoryboard *storyboardLogo = self.storyboard;
-        LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
-        
-        // Configure the new view controller here.
-        [self presentViewController:LogoCVC animated:YES completion:nil];*/
-        
-    }
-    
-//}
 
 //hits this
 - (void)menuActivated
 {
     NSLog(@"Delegate: menuActivated");
     
+    //if (NSLog"%@",_actionSelectedString)
+    
+    NSLog(@"%@",_actionSelectedString);
     
     if ([_actionSelectedString isEqualToString:@"pics"]){
         
@@ -240,6 +217,8 @@
         
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
+        
+        
         
         picker.allowsEditing = YES;
         
@@ -268,6 +247,8 @@
         
         // Configure the new view controller here.
         [self presentViewController:LogoCVC animated:YES completion:nil];
+        
+        
         
     }
 
@@ -863,7 +844,7 @@ else
     [super viewDidUnload];
     //[DIYMenu dismiss];
     //[self menuCancelled];
-   
+    
     self.carouselSize = nil;
     self.carouselColor = nil;
     self.rugSizeButton = nil;
