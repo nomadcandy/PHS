@@ -129,6 +129,9 @@
  }
  
  - (IBAction)selectPhoto:(UIButton *)sender {
+     
+     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
+     appdelegate.model=YES;
  
      UIImagePickerController *picker = [[UIImagePickerController alloc] init];
      picker.delegate = self;
