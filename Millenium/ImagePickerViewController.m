@@ -35,6 +35,11 @@
      userInfo:nil
      repeats:NO];*/
     
+    UIImage *chosenImage = [UIImage imageNamed:@"SampleLogo2.png"];
+    //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    
+    chosenImageView.image = chosenImage;
+    
     NSString *strURL = @"http://www.google.com";
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
