@@ -27,13 +27,18 @@
 {
     [super viewDidLoad];
     
-    
-    [NSTimer
+    //works to load on timer picker
+    /*[NSTimer
      scheduledTimerWithTimeInterval:1
      target:self
      selector:@selector(onLoadTimer:)
      userInfo:nil
-     repeats:NO];
+     repeats:NO];*/
+    
+    NSString *strURL = @"http://www.google.com";
+    NSURL *url = [NSURL URLWithString:strURL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self->googleWebView loadRequest:urlRequest];
 
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=YES;
@@ -43,8 +48,8 @@
         
     }
 
-
-- (void)onLoadTimer:(id)unused
+//works to autoload imagePicker
+/*- (void)onLoadTimer:(id)unused
 {
     
     //Loads Picker on timer
@@ -55,7 +60,7 @@
     
     [self presentViewController:picker animated:YES completion:NULL];
 
-}
+}*/
 
 
 
@@ -69,17 +74,23 @@
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
     
+    chosenImageView.image = chosenImage;
+    
     //self.imageView.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
-    
+        
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=NO;
     
     
+     [self performSegueWithIdentifier:@"imagePickedSegue" sender:self];
     
-    //[self.viewDidLoad reload];
-    //[DIYMenu show];
+    /*UIStoryboard *storyboard = self.storyboard;
+    InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+    [self presentViewController:svc animated:YES completion:nil];*/
+    
+   
     
 }
 
@@ -87,14 +98,13 @@
 {
     
     
-    if ([segue.identifier isEqualToString:@"interactivePickedSegue"]) {
+    if ([segue.identifier isEqualToString:@"imagePickedSegue"]) {
         
         InteractiveViewController *destViewController = segue.destinationViewController;
-        
         //destViewController.indexPath = sender;
-        
-        
         destViewController.chosenImage= chosenImage;
+        
+       
         
         
     }
@@ -124,6 +134,16 @@
  
  
  }
+
+- (IBAction)goInteractive:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = self.storyboard;
+    InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+    [self presentViewController:svc animated:YES completion:nil];
+    
+    
+}
+
 
 
 

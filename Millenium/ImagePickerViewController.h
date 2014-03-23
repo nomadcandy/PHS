@@ -14,6 +14,9 @@
     
     AppDelegate *appdelegate;
     UIImage *chosenImage;
+    IBOutlet UIImageView*chosenImageView;
+    IBOutlet UILabel*chosenImageLabel;
+    IBOutlet UIWebView*googleWebView;
     UIImagePickerController*picker;
 }
 
