@@ -10,10 +10,11 @@
 #import "AppDelegate.h"
 #import "InteractiveViewController.h"
 
-@interface ImagePickerViewController : UIViewController{
+@interface ImagePickerViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>{
     
     AppDelegate *appdelegate;
     UIImage *chosenImage;
+    UIImagePickerController*picker;
 }
 
 

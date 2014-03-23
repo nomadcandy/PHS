@@ -27,20 +27,39 @@
 {
     [super viewDidLoad];
     
+    
+    [NSTimer
+     scheduledTimerWithTimeInterval:1
+     target:self
+     selector:@selector(onLoadTimer:)
+     userInfo:nil
+     repeats:NO];
+
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=YES;
     
     
-    //send here where near me sends in other method
+    //[self selectPhoto:nil];
+        
+    }
+
+
+- (void)onLoadTimer:(id)unused
+{
+    
+    //Loads Picker on timer
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
     [self presentViewController:picker animated:YES completion:NULL];
-    [self dismissViewControllerAnimated:YES completion:NULL];
 
-	// Do any additional setup after loading the view.
 }
+
+
+
+
 
 
 #pragma mark-
@@ -52,6 +71,8 @@
     
     //self.imageView.image = chosenImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=NO;
     
