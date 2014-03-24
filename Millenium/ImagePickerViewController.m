@@ -35,6 +35,8 @@
      userInfo:nil
      repeats:NO];*/
     
+    editImageView.hidden = YES;
+    
     UIImage *chosenImage = [UIImage imageNamed:@"SampleLogo2.png"];
     //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
     
@@ -116,6 +118,88 @@
 
     
 }
+//mask image
+- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage {
+    
+	CGImageRef maskRef = maskImage.CGImage;
+    
+	CGImageRef mask = CGImageMaskCreate(CGImageGetWidth(maskRef),
+                                        CGImageGetHeight(maskRef),
+                                        CGImageGetBitsPerComponent(maskRef),
+                                        CGImageGetBitsPerPixel(maskRef),
+                                        CGImageGetBytesPerRow(maskRef),
+                                        CGImageGetDataProvider(maskRef), NULL, false);
+    
+	CGImageRef masked = CGImageCreateWithMask([image CGImage], mask);
+	return [UIImage imageWithCGImage:masked];
+    
+}
+
+
+- (IBAction)screenShot:(UIButton *)sender{
+    
+    if (editImageView.hidden == YES) {
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+
+    UIGraphicsBeginImageContext(screenRect.size);
+
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor blackColor] set];
+    CGContextFillRect(ctx, screenRect);
+
+    [googleWebView.layer renderInContext:ctx];
+
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+    
+    //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    
+    chosenImageView.image = newImage;
+    chosenImage = newImage;
+        
+    }
+    
+    else  {
+        
+        
+        //save masked edited image
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        
+        UIGraphicsBeginImageContext(screenRect.size);
+        
+        CGContextRef ctx = UIGraphicsGetCurrentContext();
+        [[UIColor blackColor] set];
+        CGContextFillRect(ctx, screenRect);
+        
+        [googleWebView.layer renderInContext:ctx];
+        
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+        //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+        
+        chosenImageView.image = newImage;
+        chosenImage = newImage;
+        
+    }
+
+    
+    //return newImage;
+    
+}
+
+
+- (IBAction)editLogo:(UIButton *)sender{
+    
+    editImageView.hidden = NO;
+    editImageView.image=chosenImage;
+    
+}
 
 - (IBAction)takePhoto:(UIButton *)sender {
  
@@ -148,6 +232,17 @@
     UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
     [self presentViewController:svc animated:YES completion:nil];
+    
+    
+}
+
+- (IBAction)goWeb:(UIButton *)sender {
+    
+    NSString *strURL = @"http://www.google.com";
+    NSURL *url = [NSURL URLWithString:strURL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self->googleWebView loadRequest:urlRequest];
+
     
     
 }
