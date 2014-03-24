@@ -26,5 +26,7 @@
 - (IBAction)selectPhoto:(UIButton *)sender;
 - (IBAction)goWeb:(UIButton *)sender;
 - (IBAction)editLogo:(UIButton *)sender;
+- (IBAction)drawEllipse:(CGContextRef)context;
+- (IBAction)drawCircle:(UIButton *)sender;
 
 @end

@@ -14,6 +14,21 @@
 
 @implementation ImagePickerViewController
 
+//draw rectangle
+/*- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}*/
+
+
+
+
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -194,6 +209,42 @@
 }
 
 
+- (IBAction)drawCircle:(UIButton*)sender{
+    
+    //elipseImageView.hidden = NO;
+    ///elipseImageView.image=shapeImage;
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSaveGState(context);
+    
+    //Set color of current context
+    [[UIColor blackColor] set];
+    
+    //Set shadow and color of shadow
+    CGContextSetShadowWithColor(context, CGSizeZero, 10.0f, [[UIColor blackColor] CGColor]);
+    
+    //Draw ellipse
+    CGRect ellipseRect = CGRectMake(60.0f, 150.0f, 200.0f, 200.0f);
+    CGContextFillEllipseInRect(context, ellipseRect);
+    
+    CGContextRestoreGState(context);
+
+    
+}
+
+- (void)drawRect:(CGRect)rect
+{
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    //call function to draw Ellipse
+    [self drawEllipse:context];
+    
+    
+}
+
+
 - (IBAction)editLogo:(UIButton *)sender{
     
     editImageView.hidden = NO;
@@ -238,10 +289,30 @@
 
 - (IBAction)goWeb:(UIButton *)sender {
     
-    NSString *strURL = @"http://www.google.com";
-    NSURL *url = [NSURL URLWithString:strURL];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
-    [self->googleWebView loadRequest:urlRequest];
+    
+    if (editImageView.hidden == NO)
+    
+    {
+        
+        editImageView.hidden = YES;
+        NSString *strURL = @"http://www.google.com";
+        NSURL *url = [NSURL URLWithString:strURL];
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+        [self->googleWebView loadRequest:urlRequest];
+        
+        
+    }
+    
+    else {
+        
+        editImageView.hidden = YES;
+        NSString *strURL = @"http://www.google.com";
+        NSURL *url = [NSURL URLWithString:strURL];
+        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+        [self->googleWebView loadRequest:urlRequest];
+        
+        
+    }
 
     
     
