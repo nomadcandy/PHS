@@ -49,6 +49,9 @@
     IBOutlet UIImageView*editImageView;
     IBOutlet UILabel*chosenImageLabel;
     IBOutlet UIWebView*googleWebView;
+    IBOutlet UIView*overlayWebView;
+    IBOutlet UIView*overlay1WebView;
+    
     IBOutlet UIButton*editLogoButton;
     IBOutlet UIButton*googleButton;
     

@@ -502,7 +502,7 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </webView>
-                            <view alpha="0.39999999999999963" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vaf-uC-3Xu" customClass="MaskView">
+                            <view alpha="0.39999999999999963" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vaf-uC-3Xu">
                                 <rect key="frame" x="369" y="207" width="532" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -510,11 +510,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="532" height="383"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-W9-J1e" userLabel="editImageView">
-                                        <rect key="frame" x="0.0" y="-2" width="532" height="387"/>
+                                    <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RL8-fY-L5B" customClass="MaskView">
+                                        <rect key="frame" x="74" y="39" width="384" height="305"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </imageView>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-W9-J1e" userLabel="editImageView">
+                                                <rect key="frame" x="-74" y="-41" width="532" height="387"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -559,9 +566,6 @@
                                 <state key="normal" image="SquareButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="getPoints:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="rUK-rL-p9n"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olx-cr-86c">
                                 <rect key="frame" x="660" y="604" width="42" height="39"/>
@@ -596,13 +600,17 @@
                                     <action selector="editLogo:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="XME-hi-Aet"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-fA-vM2">
-                                <rect key="frame" x="369" y="207" width="532" height="383"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBp-5G-n9D">
+                                <rect key="frame" x="501" y="609" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="googleButton"/>
-                                <state key="normal" title="Button">
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="trim">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="getPoints:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="ffp-87-SbK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -614,10 +622,10 @@
                         <outlet property="chosenImageView" destination="huY-jg-CM5" id="c2O-X4-ws5"/>
                         <outlet property="editImageView" destination="dEz-W9-J1e" id="VKA-QW-qXn"/>
                         <outlet property="editLogoButton" destination="FWL-lA-bdq" id="RC9-WT-W1E"/>
-                        <outlet property="googleButton" destination="Dez-fA-vM2" id="9Zr-mE-DGZ"/>
                         <outlet property="googleWebView" destination="39j-QV-6iW" id="Lz3-2o-CAD"/>
                         <outlet property="mask1ImageView" destination="aGk-c4-dcZ" id="wg2-h0-vm0"/>
-                        <outlet property="maskView" destination="Vaf-uC-3Xu" id="68K-o8-tja"/>
+                        <outlet property="overlay1WebView" destination="Vaf-uC-3Xu" id="rnY-WQ-TGQ"/>
+                        <outlet property="overlayWebView" destination="RL8-fY-L5B" id="EcM-ee-vWf"/>
                         <segue destination="EOd-lr-Xtf" kind="modal" identifier="imagePickedSegue" id="WHu-6x-aPj"/>
                     </connections>
                 </viewController>

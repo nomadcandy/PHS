@@ -34,6 +34,8 @@
 		42B0151118E07BF70068019C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B0151018E07BF70068019C /* QuartzCore.framework */; };
 		42B0151518E0F57E0068019C /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0151418E0F57E0068019C /* MaskView.m */; };
 		42B0151618E0F57E0068019C /* MaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0151418E0F57E0068019C /* MaskView.m */; };
+		42B0151A18E1F0520068019C /* ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0151918E1F0520068019C /* ClipView.m */; };
+		42B0151B18E1F0520068019C /* ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B0151918E1F0520068019C /* ClipView.m */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
@@ -93,6 +95,8 @@
 		42B0151018E07BF70068019C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		42B0151318E0F57E0068019C /* MaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskView.h; sourceTree = "<group>"; };
 		42B0151418E0F57E0068019C /* MaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskView.m; sourceTree = "<group>"; };
+		42B0151818E1F0520068019C /* ClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipView.h; sourceTree = "<group>"; };
+		42B0151918E1F0520068019C /* ClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipView.m; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveSlideViewController.h; sourceTree = "<group>"; };
@@ -205,6 +209,15 @@
 			name = MaskView;
 			sourceTree = "<group>";
 		};
+		42B0151718E1F03C0068019C /* ClipView */ = {
+			isa = PBXGroup;
+			children = (
+				42B0151818E1F0520068019C /* ClipView.h */,
+				42B0151918E1F0520068019C /* ClipView.m */,
+			);
+			name = ClipView;
+			sourceTree = "<group>";
+		};
 		42E7AC0518CE2C100036AF00 /* Interactive */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +291,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				42B0151718E1F03C0068019C /* ClipView */,
 				42B0151218E0F5440068019C /* MaskView */,
 				42B0150F18E063A50068019C /* MyDraggableImage */,
 				42EC7E3618DC95E5003B49A3 /* ImagePickerViewController */,
@@ -451,6 +465,7 @@
 				42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
 				42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */,
+				42B0151A18E1F0520068019C /* ClipView.m in Sources */,
 				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				4247572A18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
@@ -473,6 +488,7 @@
 				42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				4247572F18D8AA55000AAF7C /* Logo.m in Sources */,
 				42FF7A4018CDE92A00C72695 /* MilleniumTests.m in Sources */,
+				42B0151B18E1F0520068019C /* ClipView.m in Sources */,
 				42B0151618E0F57E0068019C /* MaskView.m in Sources */,
 				42FF7A5118CDF09B00C72695 /* iCarousel.m in Sources */,
 				424756EC18D38B2C000AAF7C /* LogoCell.m in Sources */,

@@ -53,7 +53,12 @@
 {
     [super viewDidLoad];
     
+    
     MaskView *view = [[MaskView alloc]initWithFrame:self.view.frame];
+    overlayWebView.hidden = YES;
+    overlay1WebView.hidden = YES;
+    
+    
     //works to load on timer picker
     /*[NSTimer
      scheduledTimerWithTimeInterval:1
@@ -202,6 +207,7 @@
     
     chosenImageView.image = newImage;
     chosenImage = newImage;
+    editImageView.image = newImage;
     //[editLogoButton setBackgroundImage:newImage forState:UIControlStateNormal];
         
    // }
@@ -449,7 +455,8 @@
 
 - (IBAction)getPoints:(UIButton*)sender{
     
-    
+    //overlay1WebView.hidden = NO;
+    overlayWebView.hidden = NO;
     /*CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
     UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
     //[myImage setImage:[UIImage imageNamed:@"playboyz.png"]];
@@ -457,18 +464,19 @@
     [maskView addSubview:myImage];*/
 
     
-    CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
+    CGRect myImageRect = CGRectMake( 300.0f, 200.0f, 700.0f, 600.0f);
     UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
-    [myImage setImage:[UIImage imageNamed:@"SampleLogo3.png"]];
-    //[myImage setImage:chosenImage];
+    //[myImage setImage:[UIImage imageNamed:@"SampleLogo3.png"]];
+    [myImage setImage:chosenImage];
     [self.view addSubview:myImage];
     
-    //MaskView *drawView = [[MaskView alloc]initWithFrame:self.view.frame];
-    MaskView *drawView = [[MaskView alloc]initWithFrame:self.view.frame];
-    self.view = drawView;
-    maskView = drawView;
+    
+    MaskView *maskView = [[MaskView alloc]initWithFrame:self.view.frame];
+    /*self.view = drawView;
+    maskView = drawView;*/
     maskView.hidden = NO;
-   // [maskView setOpaque:NO];
+   [maskView setOpaque:NO];
+    [overlayWebView addSubview:maskView];
     
     
     
