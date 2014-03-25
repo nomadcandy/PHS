@@ -18,6 +18,14 @@
         self.backgroundColor = [UIColor whiteColor];
         touchesArray = [[NSMutableArray alloc]initWithCapacity:4];
         
+        
+        /*CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
+        UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];*/
+        //[myImage setImage:[UIImage imageNamed:@"playboyz.png"]];
+        [editImageView setImage:chosenImage];
+        [self addSubview:editImageView];
+
+        
     }
     return self;
 }

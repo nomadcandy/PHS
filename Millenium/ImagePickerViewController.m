@@ -175,15 +175,15 @@
 
 - (IBAction)screenShot:(UIButton *)sender{
     
-    googleButton.hidden= NO;
+    //googleButton.hidden= NO;
     
-    if (editImageView.hidden == YES) {
+    //if (editImageView.hidden == YES) {
     
         
         
         
     //begin capture entire webview
-    /*CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
 
     UIGraphicsBeginImageContext(screenRect.size);
 
@@ -191,7 +191,7 @@
     [[UIColor blackColor] set];
     CGContextFillRect(ctx, screenRect);
 
-    [googleWebView.layer renderInContext:ctx];*/
+    [googleWebView.layer renderInContext:ctx];
 
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
 
@@ -202,11 +202,11 @@
     
     chosenImageView.image = newImage;
     chosenImage = newImage;
-    [editLogoButton setBackgroundImage:newImage forState:UIControlStateNormal];
+    //[editLogoButton setBackgroundImage:newImage forState:UIControlStateNormal];
         
-    }
+   // }
     
-    else  {
+    /*else  {
         
         
         //save masked edited image
@@ -232,7 +232,7 @@
         
         [editLogoButton setBackgroundImage:newImage forState:UIControlStateNormal];
         
-    }
+    }*/
 
     
     //return newImage;
@@ -415,6 +415,7 @@
 {
     UITouch * touch = [touches anyObject];
     //CGPoint point = [touch locationInView:self];
+    //CGPoint point = [touch locationInView:mask1View];
     CGPoint point = [touch locationInView:maskView];
     
     [touchesArray addObject:[NSValue valueWithCGPoint:point]];
@@ -449,18 +450,31 @@
 - (IBAction)getPoints:(UIButton*)sender{
     
     
-    MaskView *view = [[MaskView alloc]initWithFrame:self.view.frame];
-    self.view = view;
-    maskView = view;
-    maskView.hidden = NO;
-    [view setOpaque:NO];
-    view.backgroundColor = [UIColor clearColor];
-    
-    CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
+    /*CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
     UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
     //[myImage setImage:[UIImage imageNamed:@"playboyz.png"]];
     [myImage setImage:chosenImage];
-    [maskView addSubview:myImage];
+    [maskView addSubview:myImage];*/
+
+    
+    CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
+    UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
+    [myImage setImage:[UIImage imageNamed:@"SampleLogo3.png"]];
+    //[myImage setImage:chosenImage];
+    [self.view addSubview:myImage];
+    
+    //MaskView *drawView = [[MaskView alloc]initWithFrame:self.view.frame];
+    MaskView *drawView = [[MaskView alloc]initWithFrame:self.view.frame];
+    self.view = drawView;
+    maskView = drawView;
+    maskView.hidden = NO;
+   // [maskView setOpaque:NO];
+    
+    
+    
+    
+    //maskView.backgroundColor = [UIColor clearColor];
+    
     
     
 

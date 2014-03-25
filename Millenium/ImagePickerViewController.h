@@ -44,6 +44,7 @@
     CGFloat*rectPoint3;
     CGFloat*rectPoint4;
     
+    IBOutlet UIImageView*mask1ImageView;
     IBOutlet UIImageView*chosenImageView;
     IBOutlet UIImageView*editImageView;
     IBOutlet UILabel*chosenImageLabel;

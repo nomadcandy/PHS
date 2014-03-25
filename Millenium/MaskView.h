@@ -18,6 +18,8 @@
     CGPoint fourthPoint;
     
     NSMutableArray *touchesArray;
+    UIImageView*editImageView;
+    UIImage*chosenImage;
 }
 @end
 
