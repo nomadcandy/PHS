@@ -69,7 +69,7 @@
     googleButton.hidden= YES;
     editImageView.hidden = YES;
     editLogoButton.hidden = YES;
-    maskView.hidden = YES;
+    
     
     touchesArray = [[NSMutableArray alloc]initWithCapacity:4];
     
@@ -188,12 +188,15 @@
         
         
     //begin capture entire webview
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    //CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    //begin capture entire webview
+    CGRect screenRect = self->overlayWebView.frame;
 
     UIGraphicsBeginImageContext(screenRect.size);
 
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [[UIColor blackColor] set];
+    [[UIColor whiteColor] set];
     CGContextFillRect(ctx, screenRect);
 
     [googleWebView.layer renderInContext:ctx];
@@ -207,7 +210,9 @@
     
     chosenImageView.image = newImage;
     chosenImage = newImage;
-    editImageView.image = newImage;
+    
+    //image ontop of Google View
+    //editImageView.image = newImage;
     //[editLogoButton setBackgroundImage:newImage forState:UIControlStateNormal];
         
    // }
@@ -393,7 +398,7 @@
     //[self setNeedsDisplay];
     [googleWebView setNeedsDisplay];
 }*/
-- (void)drawRect:(CGRect)rect
+/*- (void)drawRect:(CGRect)rect
 {
     
     
@@ -414,10 +419,10 @@
 	CGContextAddLines(context, addLines, sizeof(addLines)/sizeof(addLines[0]));
 	CGContextStrokePath(context);
     
-}
+}*/
 
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+/*- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch * touch = [touches anyObject];
     //CGPoint point = [touch locationInView:self];
@@ -449,13 +454,13 @@
     
     
    
-}
+}*/
 
 
 
 - (IBAction)getPoints:(UIButton*)sender{
     
-    //overlay1WebView.hidden = NO;
+    overlay1WebView.hidden = NO;
     overlayWebView.hidden = NO;
     /*CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
     UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
@@ -464,11 +469,14 @@
     [maskView addSubview:myImage];*/
 
     
-    CGRect myImageRect = CGRectMake( 300.0f, 200.0f, 700.0f, 600.0f);
+    /*CGRect myImageRect = CGRectMake( 370.0f, 220.0f, 450.0f, 400.0f);
     UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
     //[myImage setImage:[UIImage imageNamed:@"SampleLogo3.png"]];
     [myImage setImage:chosenImage];
-    [self.view addSubview:myImage];
+    [self.view addSubview:myImage];*/
+    
+    [editImageView setImage:chosenImage];
+    
     
     
     MaskView *maskView = [[MaskView alloc]initWithFrame:self.view.frame];
@@ -476,7 +484,8 @@
     maskView = drawView;*/
     maskView.hidden = NO;
    [maskView setOpaque:NO];
-    [overlayWebView addSubview:maskView];
+    [overlay1WebView addSubview:maskView];
+    //[overlayWebView addSubview:maskView];
     
     
     

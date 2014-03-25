@@ -34,7 +34,7 @@
     UITouch *touch3;
     UITouch *touch4;
     
-    IBOutlet UIView*maskView;
+    //IBOutlet UIView*maskView;
     
     NSMutableArray*touchesArray;
     
