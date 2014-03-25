@@ -462,6 +462,8 @@
     
     overlay1WebView.hidden = NO;
     overlayWebView.hidden = NO;
+    
+    
     /*CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
     UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
     //[myImage setImage:[UIImage imageNamed:@"playboyz.png"]];
@@ -480,23 +482,10 @@
     
     
     MaskView *maskView = [[MaskView alloc]initWithFrame:self.view.frame];
-    /*self.view = drawView;
-    maskView = drawView;*/
     maskView.hidden = NO;
    [maskView setOpaque:NO];
+    
     [overlay1WebView addSubview:maskView];
-    //[overlayWebView addSubview:maskView];
-    
-    
-    
-    
-    //maskView.backgroundColor = [UIColor clearColor];
-    
-    
-    
-
-    
-    
     
     
 }
@@ -517,6 +506,28 @@
     CGContextDrawPath(context, kCGPathFillStroke);
     
 }*/
+
+- (IBAction)cropScreenShot:(UIButton*)sender{
+    
+    CGRect screenRect = self->overlayWebView.frame;
+    
+    UIGraphicsBeginImageContext(screenRect.size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    
+    CGContextFillRect(ctx, screenRect);
+    
+    [googleWebView.layer renderInContext:ctx];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    chosenImageView.image = newImage;
+    chosenImage = newImage;
+
+}
 
 
 - (IBAction)editLogo:(UIButton *)sender{

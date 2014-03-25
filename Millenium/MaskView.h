@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface MaskView : UIView
 
@@ -16,6 +17,8 @@
     CGPoint secondPoint;
     CGPoint thirdPoint;
     CGPoint fourthPoint;
+    
+    //CGContextClip context;
     
     NSMutableArray *touchesArray;
     UIImageView*editImageView;

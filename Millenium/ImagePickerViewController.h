@@ -66,6 +66,7 @@
 - (IBAction)drawCircle:(UIButton *)sender;
 - (IBAction)drawRect:(UIButton*)sender;
 - (IBAction)getPoints:(UIButton*)sender;
+- (IBAction)cropScreenShot:(UIButton*)sender;
 
 - (void)setNeedsDisplay;
 

@@ -15,9 +15,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor lightGrayColor];
         touchesArray = [[NSMutableArray alloc]initWithCapacity:4];
-        
+        self.frame = CGRectMake(0, 0,532 ,386  );
         
         /*CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
         UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];*/
@@ -40,16 +40,48 @@
     CGContextSetRGBStrokeColor(context, 0.5, 0.5, 0.5, 1.0);
 	// Draw them with a 2.0 stroke width so they are a bit more visible.
 	CGContextSetLineWidth(context, 2.0);
+    
+    //CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
+    //CGContextFillPath(context);
+
+    CGContextSaveGState(context);
+    CGContextClip(context);
 	
 	// Draw a connected sequence of line segments
 	CGPoint addLines[] =
 	{
         firstPoint,secondPoint,thirdPoint,fourthPoint,firstPoint,
 	};
+    
+    //trying to add paths to context to save
+    CGPoint addPath[] =
+	{
+        firstPoint,secondPoint,thirdPoint,fourthPoint,
+	};
+    
+    
 	// Bulk call to add lines to the current path.
 	// Equivalent to MoveToPoint(points[0]); for(i=1; i<count; ++i) AddLineToPoint(points[i]);
 	CGContextAddLines(context, addLines, sizeof(addLines)/sizeof(addLines[0]));
 	CGContextStrokePath(context);
+    
+    //CGContextAddPath(<#CGContextRef context#>, <#CGPathRef path#>);
+
+    //CGContextAddPath(context, addLines);
+    
+    
+    
+    CAShapeLayer *mask = [CAShapeLayer layer];
+    
+    //mask.path = addPath[].CGPath;
+    
+    //self.view.layer.mask = mask;
+    
+
+  
+    
+    //CGRect == CGContextStrokePath(context);
+
     
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
