@@ -454,7 +454,14 @@
     maskView = view;
     maskView.hidden = NO;
     [view setOpaque:NO];
-    view.backgroundColor = [UIColor whiteColor];
+    view.backgroundColor = [UIColor clearColor];
+    
+    CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
+    UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
+    //[myImage setImage:[UIImage imageNamed:@"playboyz.png"]];
+    [myImage setImage:chosenImage];
+    [maskView addSubview:myImage];
+    
     
 
     
