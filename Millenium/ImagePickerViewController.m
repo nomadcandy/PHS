@@ -451,7 +451,10 @@
     
     MaskView *view = [[MaskView alloc]initWithFrame:self.view.frame];
     self.view = view;
+    maskView = view;
     maskView.hidden = NO;
+    [view setOpaque:NO];
+    view.backgroundColor = [UIColor whiteColor];
     
 
     
