@@ -595,6 +595,7 @@
     if (editImageView.hidden == NO)
     
     {
+        overlay1WebView.hidden= YES;
         editLogoButton.hidden =YES;
         editImageView.hidden = YES;
         NSString *strURL = @"http://www.google.com";
@@ -607,6 +608,7 @@
     
     else {
         
+        overlay1WebView.hidden= YES;
         editLogoButton.hidden =YES;
         editImageView.hidden = YES;
         NSString *strURL = @"http://www.google.com";
