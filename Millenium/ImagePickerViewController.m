@@ -14,27 +14,6 @@
 
 @implementation ImagePickerViewController
 
-//draw rectangle
-/*- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}*/
-
-/*- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        //self.backgroundColor = [UIColor whiteColor];
-       touchesArray = [[NSMutableArray alloc]initWithCapacity:4];
-            }
-    return self;
-}*/
-
 
 
 
