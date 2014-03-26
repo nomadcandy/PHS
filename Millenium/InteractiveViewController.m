@@ -816,7 +816,7 @@ else
 #pragma mark Image picking
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     [_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
     
     //self.imageView.image = chosenImage;

@@ -66,6 +66,8 @@
      selector:@selector(onLoadTimer:)
      userInfo:nil
      repeats:NO];*/
+    
+    
     googleButton.hidden= YES;
     editImageView.hidden = YES;
     editLogoButton.hidden = YES;
@@ -133,9 +135,6 @@
     
      [self performSegueWithIdentifier:@"imagePickedSegue" sender:self];
     
-    /*UIStoryboard *storyboard = self.storyboard;
-    InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
-    [self presentViewController:svc animated:YES completion:nil];*/
     
    
     
@@ -151,13 +150,13 @@
         //destViewController.indexPath = sender;
         destViewController.chosenImage= chosenImage;
         
-       
-        
-        
+               
     }
 
     
 }
+
+
 //mask image
 /*- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage {
     
@@ -180,15 +179,7 @@
 
 - (IBAction)screenShot:(UIButton *)sender{
     
-    //googleButton.hidden= NO;
     
-    //if (editImageView.hidden == YES) {
-    
-        
-        
-        
-    //begin capture entire webview
-    //CGRect screenRect = [[UIScreen mainScreen] bounds];
     
     //begin capture entire webview
     CGRect screenRect = self->overlayWebView.frame;
@@ -205,100 +196,14 @@
 
     UIGraphicsEndImageContext();
     
-    //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+   
     
     chosenImageView.image = newImage;
     chosenImage = newImage;
     
-    //image ontop of Google View
-    //editImageView.image = newImage;
-    //[editLogoButton setBackgroundImage:newImage forState:UIControlStateNormal];
-        
-   // }
-    
-    /*else  {
-        
-        
-        //save masked edited image
-        CGRect screenRect = [[UIScreen mainScreen] bounds];
-        
-        UIGraphicsBeginImageContext(screenRect.size);
-        
-        CGContextRef ctx = UIGraphicsGetCurrentContext();
-        [[UIColor blackColor] set];
-        CGContextFillRect(ctx, screenRect);
-        
-        [googleWebView.layer renderInContext:ctx];
-        
-        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-        
-        UIGraphicsEndImageContext();
-        
-        //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-        //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
-        
-        chosenImageView.image = newImage;
-        chosenImage = newImage;
-        
-        [editLogoButton setBackgroundImage:newImage forState:UIControlStateNormal];
-        
-    }*/
-
-    
-    //return newImage;
+   
     
 }
-/*- (IBAction)drawRect:(UIButton*)sender{
-    
-    
- 
-    
-    NSLog(@"%@,%@,%@,%@",rectPoint1,rectPoint2, rectPoint3, rectPoint4);
-    
-    
-    //
-    // Drawing code
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetRGBStrokeColor(context, 0.5, 0.5, 0.5, 1.0);
-	// Draw them with a 2.0 stroke width so they are a bit more visible.
-	CGContextSetLineWidth(context, 2.0);
-	
-	// Draw a connected sequence of line segments
-	CGPoint addLines[] =
-	{
-        *(rectPoint1),*(rectPoint2),*(rectPoint3),*(rectPoint4),
-	};
-	// Bulk call to add lines to the current path.
-	// Equivalent to MoveToPoint(points[0]); for(i=1; i<count; ++i) AddLineToPoint(points[i]);
-	CGContextAddLines(context, addLines, sizeof(addLines)/sizeof(addLines[0]));
-	CGContextStrokePath(context);
-
-    
-    //
-    
-    //CGRectMake captureRect = [ *(rectPoint1),*(rectPoint2),*(rectPoint3),*(rectPoint4),];
-    //CGRect captureRect = [rectPoint1, rectPoint2, rectPoint3, rectPoint4];
-    
-    //UIGraphicsBeginImageContext(captureRect.size);
-    
-    CGContextRef ctxDraw = UIGraphicsGetCurrentContext();
-    [[UIColor lightGrayColor] set];
-    //CGContextFillRect(ctxDraw, captureRect);
-    
-    [googleWebView.layer renderInContext:ctxDraw];
-   
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    
-    chosenImageView.image = newImage;
-    chosenImage = newImage;
-    [editLogoButton setBackgroundImage:newImage forState:UIControlStateNormal];
-    
-}*/
 
 - (IBAction)drawCircle:(UIButton*)sender{
     
@@ -324,16 +229,6 @@
     
 }
 
-/*- (void)drawRect:(CGRect)rect
-{
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    //call function to draw Ellipse
-    [self drawEllipse:context];
-    
-    
-}*/
 //move logo around in edit mode
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
 {
@@ -351,14 +246,6 @@
     
     
 }
-//get touch points
-/*- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    
-    CGPoint pointOnScreen = [touch locationInView:nil];
-    NSLog(@"Point - %f, %f", pointOnScreen.x, pointOnScreen.y);
-    NSLog(@"Touch");
-    return NO; // handle the touch
-}*/
 
 
 //for adding points to crop Image
@@ -366,95 +253,13 @@
 {
     
     
-    /*UITouch *touch = [touches anyObject];
-    CGPoint startPoint = [touch locationInView:nil];
-    startPoint = [touch locationInView:googleWebView];
-    rectFrame->origin.x = startPoint.x;
-    rectFrame->origin.y = startPoint.y;*/
+    
     
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    /*UITouch *touch = [touches anyObject];
-    CGPoint endPoint = [touch locationInView:nil];
-    endPoint = [touch locationInView:self];
-    rectFrame->size.width = endPoint.y - startPoint->x;
-    rectFrame->size.height = endPoint.y - startPoint->x;*/
     
-    //[self setNeedsDisplay];
-    //[googleWebView setNeedsDisplay];
 }
-
-/*- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    CGPoint endPoint = [touch locationInView:nil];
-    endPoint = [touch locationInView:googleWebView];
-    rectFrame->size.width = endPoint.y - startPoint->x;
-    rectFrame->size.height = endPoint.y - startPoint->x;
-    
-    NSLog(@"%@ rectFrame",rectFrame);
-    
-    //[self setNeedsDisplay];
-    [googleWebView setNeedsDisplay];
-}*/
-/*- (void)drawRect:(CGRect)rect
-{
-    
-    
-    // Drawing code
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetRGBStrokeColor(context, 0.5, 0.5, 0.5, .50);
-	// Draw them with a 2.0 stroke width so they are a bit more visible.
-	CGContextSetLineWidth(context, 2.0);
-	
-	// Draw a connected sequence of line segments
-	CGPoint addLines[] =
-	{
-        firstPoint,secondPoint,thirdPoint,fourthPoint,firstPoint,
-	};
-	// Bulk call to add lines to the current path.
-	// Equivalent to MoveToPoint(points[0]); for(i=1; i<count; ++i) AddLineToPoint(points[i]);
-	CGContextAddLines(context, addLines, sizeof(addLines)/sizeof(addLines[0]));
-	CGContextStrokePath(context);
-    
-}*/
-
-
-/*- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch * touch = [touches anyObject];
-    //CGPoint point = [touch locationInView:self];
-    //CGPoint point = [touch locationInView:mask1View];
-    CGPoint point = [touch locationInView:maskView];
-    
-    [touchesArray addObject:[NSValue valueWithCGPoint:point]];
-    if (touchesArray.count > 4) {
-        [touchesArray removeObjectAtIndex:0];
-    }
-    if (touchesArray.count == 4) {
-        
-        firstPoint = [[touchesArray objectAtIndex:0]CGPointValue];
-        secondPoint = [[touchesArray objectAtIndex:1]CGPointValue];
-        thirdPoint = [[touchesArray objectAtIndex:2]CGPointValue];
-        fourthPoint = [[touchesArray objectAtIndex:3]CGPointValue];
-
-    }
-    
-    
-    NSLog(@"%@",[NSString stringWithFormat:@"1:%f/%f\n2:%f/%f\n3:%f/%f\n4:%f/%f",firstPoint.x,firstPoint.y,secondPoint.x,secondPoint.y,thirdPoint.x,thirdPoint.y,fourthPoint.x,fourthPoint.y]);
-    
-    //[self setNeedsDisplay];
-    
-    [maskView setNeedsDisplay];
-
-
-    
-    
-    
-   
-}*/
 
 
 
@@ -464,18 +269,7 @@
     overlayWebView.hidden = NO;
     
     
-    /*CGRect myImageRect = CGRectMake( 200.0f, 100.0f, 800.0f, 600.0f);
-    UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
-    //[myImage setImage:[UIImage imageNamed:@"playboyz.png"]];
-    [myImage setImage:chosenImage];
-    [maskView addSubview:myImage];*/
-
     
-    /*CGRect myImageRect = CGRectMake( 370.0f, 220.0f, 450.0f, 400.0f);
-    UIImageView *myImage = [[UIImageView alloc]initWithFrame:myImageRect];
-    //[myImage setImage:[UIImage imageNamed:@"SampleLogo3.png"]];
-    [myImage setImage:chosenImage];
-    [self.view addSubview:myImage];*/
     
     [editImageView setImage:chosenImage];
     
@@ -490,22 +284,6 @@
     
 }
 
-/*- (IBAction)drawRect:(UIButton*)sender{
-//- (void)drawRect:(CGRect)rect
-//{
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 2.0);
-    CGContextSetStrokeColorWithColor(context, [UIColor lightGrayColor].CGColor);
-    
-    
-    //missing something
-    //CGContextAddRect(context, *(rectFrame));
-    NSLog(@"rect1: %@", NSStringFromCGRect(*(rectFrame)));
-    //CGContextAddRect(context, rectFrame);
-    CGContextDrawPath(context, kCGPathFillStroke);
-    
-}*/
 
 - (IBAction)cropScreenShot:(UIButton*)sender{
     
@@ -535,19 +313,10 @@
     googleWebView.hidden = YES;
     editLogoButton.hidden = NO;
     editImageView.hidden = NO;
-    //editImageView.image=chosenImage;
     
-    
-    
-    //get logo boundary
     
     
     [editLogoButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
-    
-    
-    
-    
-    
     [editLogoButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [editLogoButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     
