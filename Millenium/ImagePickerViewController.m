@@ -33,6 +33,7 @@
     [super viewDidLoad];
     
     
+    
     MaskView *view = [[MaskView alloc]initWithFrame:self.view.frame];
     overlayWebView.hidden = YES;
     overlay1WebView.hidden = YES;
@@ -119,7 +120,17 @@
     
 }
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"imagePickedSegue"]) {
+        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        InteractiveViewController *destViewController = segue.destinationViewController;
+        //destViewController.chosenImage = chosenImage;
+        destViewController.chosenImage=chosenImageView.image;
+    }
+}
+
+/*-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
     
@@ -127,13 +138,14 @@
         
         InteractiveViewController *destViewController = segue.destinationViewController;
         //destViewController.indexPath = sender;
-        destViewController.chosenImage= chosenImage;
+        destViewController.chosenImage = chosenImage;
+        
         
                
     }
 
     
-}
+}*/
 
 
 //mask image

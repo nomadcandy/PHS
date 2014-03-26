@@ -75,22 +75,29 @@
 {
     [super viewDidLoad];
    
+    if (chosenImage == Nil){
+        
+        chosenImage = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+        //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    }
     
+    else {
+        
+        _logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    }
     
+   
     //[DIYMenu isActivated];
-    
     
     //configure carousel
     carouselSize.type = iCarouselTypeCoverFlow2;
     carouselColor.type = iCarouselTypeCoverFlow2;
     carouselLogo.type = iCarouselTypeCustom;
     
-    
-    //configure menus
-        //[font setTextAlignment:NSTextAlignmentLeft];
-    
-    
-    
+   
         
     }
     
@@ -814,7 +821,7 @@ else
 
 #pragma mark-
 #pragma mark Image picking
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+/*- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     //UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     [_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
@@ -827,7 +834,7 @@ else
     //[self.viewDidLoad reload];
     //[DIYMenu show];
     
-}
+}*/
 
 
 
