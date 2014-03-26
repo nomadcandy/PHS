@@ -141,6 +141,26 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
+    //UILabel *titleLabel = (UILabel *)view;
+    
+    //UILabel *titleLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(400, 300.0, 150.0, 43.0) ];
+    UILabel *titleLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(100, 100.0, 150.0, 43.0) ];
+    titleLabel.textAlignment =  UITextAlignmentCenter;
+    titleLabel.textColor = [UIColor darkGrayColor];
+    titleLabel.backgroundColor = [UIColor whiteColor];
+    titleLabel.font = [UIFont fontWithName:@"Avenir" size:(36.0)];
+
+    
+    if (titleLabel == nil){
+        
+        
+                //[self addSubview:titleLabel];
+        
+        
+    }
+    
+    
+    
 	UIButton *button = (UIButton *)view;
 	if (button == nil)
         
@@ -161,24 +181,29 @@
     
     if (index ==0)  {
         
-        [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal];
+        
+        
+        titleLabel.text = @"Walk-Off Logo Mat";
+        [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal ];
         UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
         
-		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
-		[button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+		
+        button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+        [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (index ==1){
         
-        
+        titleLabel.text = @"Water Guard Logo Inlay";
         [button setTitle:[NSString stringWithFormat:@"Water Guard Logo Inlay"] forState:UIControlStateNormal];
         UIImage *image = [UIImage imageNamed:@"WaterGuardLogoInlay.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         
@@ -190,7 +215,7 @@
         UIImage *image = [UIImage imageNamed:@"MotifMat.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         
@@ -204,7 +229,7 @@
         UIImage *image = [UIImage imageNamed:@"UltraGuardLogoInlay.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
 
@@ -218,7 +243,7 @@
         UIImage *image = [UIImage imageNamed:@"FirstStepLogoScraper.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
 
