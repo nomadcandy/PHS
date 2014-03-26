@@ -75,7 +75,7 @@
 
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		[button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         
         //button.layer.shadowColor = [UIColor blackColor].CGColor;
