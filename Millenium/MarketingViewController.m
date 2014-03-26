@@ -162,10 +162,10 @@
     if (index ==0)  {
         
         [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.pdf"];
+        UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
 		[button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
@@ -175,10 +175,10 @@
         
         
         [button setTitle:[NSString stringWithFormat:@"Water Guard Logo Inlay"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"WaterGuardLogoInlay.pdf"];
+        UIImage *image = [UIImage imageNamed:@"WaterGuardLogoInlay.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         
@@ -187,10 +187,10 @@
     if (index ==2){
         
         [button setTitle:[NSString stringWithFormat:@"Motif Mat"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"MotifMat.pdf"];
+        UIImage *image = [UIImage imageNamed:@"MotifMat.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         
@@ -201,10 +201,10 @@
     if (index == 3){
         
         [button setTitle:[NSString stringWithFormat:@"Ultra Guard Logo Inlay"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"UltraGuardLogoInlay.pdf"];
+        UIImage *image = [UIImage imageNamed:@"UltraGuardLogoInlay.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
 
@@ -215,10 +215,10 @@
         
         
         [button setTitle:[NSString stringWithFormat:@"First Step Logo Scraper"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"FirstStepLogoScraper.pdf"];
+        UIImage *image = [UIImage imageNamed:@"FirstStepLogoScraper.png"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/3, image.size.height/3);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
 

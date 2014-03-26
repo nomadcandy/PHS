@@ -92,6 +92,16 @@
 		42B0157118E317A50068019C /* AirStep.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42B0156F18E317A50068019C /* AirStep.pdf */; };
 		42B0157318E317B00068019C /* SoftStep.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157218E317B00068019C /* SoftStep.pdf */; };
 		42B0157418E317B00068019C /* SoftStep.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157218E317B00068019C /* SoftStep.pdf */; };
+		42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157A18E3428B0068019C /* FirstStepLogoScraper.png */; };
+		42B0158018E3428B0068019C /* FirstStepLogoScraper.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157A18E3428B0068019C /* FirstStepLogoScraper.png */; };
+		42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157B18E3428B0068019C /* UltraGuardLogoInlay.png */; };
+		42B0158218E3428B0068019C /* UltraGuardLogoInlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157B18E3428B0068019C /* UltraGuardLogoInlay.png */; };
+		42B0158318E3428B0068019C /* MotifMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157C18E3428B0068019C /* MotifMat.png */; };
+		42B0158418E3428B0068019C /* MotifMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157C18E3428B0068019C /* MotifMat.png */; };
+		42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157D18E3428B0068019C /* WaterGuardLogoInlay.png */; };
+		42B0158618E3428B0068019C /* WaterGuardLogoInlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157D18E3428B0068019C /* WaterGuardLogoInlay.png */; };
+		42B0158718E3428B0068019C /* WalkOffLogoMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157E18E3428B0068019C /* WalkOffLogoMat.png */; };
+		42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157E18E3428B0068019C /* WalkOffLogoMat.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
@@ -183,6 +193,11 @@
 		42B0156C18E3177F0068019C /* SafeStep.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SafeStep.pdf; sourceTree = "<group>"; };
 		42B0156F18E317A50068019C /* AirStep.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AirStep.pdf; sourceTree = "<group>"; };
 		42B0157218E317B00068019C /* SoftStep.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SoftStep.pdf; sourceTree = "<group>"; };
+		42B0157A18E3428B0068019C /* FirstStepLogoScraper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FirstStepLogoScraper.png; sourceTree = "<group>"; };
+		42B0157B18E3428B0068019C /* UltraGuardLogoInlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UltraGuardLogoInlay.png; sourceTree = "<group>"; };
+		42B0157C18E3428B0068019C /* MotifMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MotifMat.png; sourceTree = "<group>"; };
+		42B0157D18E3428B0068019C /* WaterGuardLogoInlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardLogoInlay.png; sourceTree = "<group>"; };
+		42B0157E18E3428B0068019C /* WalkOffLogoMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WalkOffLogoMat.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveSlideViewController.h; sourceTree = "<group>"; };
@@ -368,6 +383,18 @@
 			name = ImagesGeneral;
 			sourceTree = "<group>";
 		};
+		42B0157618E342550068019C /* ImagesFliers */ = {
+			isa = PBXGroup;
+			children = (
+				42B0157A18E3428B0068019C /* FirstStepLogoScraper.png */,
+				42B0157B18E3428B0068019C /* UltraGuardLogoInlay.png */,
+				42B0157C18E3428B0068019C /* MotifMat.png */,
+				42B0157D18E3428B0068019C /* WaterGuardLogoInlay.png */,
+				42B0157E18E3428B0068019C /* WalkOffLogoMat.png */,
+			);
+			name = ImagesFliers;
+			sourceTree = "<group>";
+		};
 		42E7AC0518CE2C100036AF00 /* Interactive */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +431,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				42B0157618E342550068019C /* ImagesFliers */,
 				42B0157518E318F80068019C /* ImagesGeneral */,
 				42B0152918E314FF0068019C /* ImagesPDF */,
 				42FF7A1A18CDE92A00C72695 /* Millenium */,
@@ -596,14 +624,19 @@
 				42B0155818E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
 				42B0156118E316580068019C /* TripleFlexFlow.pdf in Resources */,
+				42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
+				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
+				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
+				42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
 				42B0150718DFBD0A0068019C /* SquareButton.png in Resources */,
 				42B0157018E317A50068019C /* AirStep.pdf in Resources */,
+				42B0158718E3428B0068019C /* WalkOffLogoMat.png in Resources */,
 				42B0154318E315BB0068019C /* TreadLock.pdf in Resources */,
 				42B0156D18E3177F0068019C /* SafeStep.pdf in Resources */,
 				42B0150A18DFBD170068019C /* RectangleButton.png in Resources */,
@@ -623,8 +656,10 @@
 				42B0156518E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
 				42B0156818E3175A0068019C /* MarbleTop.pdf in Resources */,
 				42B0155918E3161C0068019C /* FirstStepScraper.pdf in Resources */,
+				42B0158218E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
 				42B0153818E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
 				42B0153218E3153B0068019C /* MotifMat.pdf in Resources */,
+				42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */,
 				42B0150E18DFBD330068019C /* CircleButton.png in Resources */,
 				42B0150818DFBD0A0068019C /* SquareButton.png in Resources */,
 				42B0153B18E315920068019C /* GoldenSeries.pdf in Resources */,
@@ -634,14 +669,17 @@
 				42B0156E18E3177F0068019C /* SafeStep.pdf in Resources */,
 				42B0154718E315C80068019C /* WaterGuard.pdf in Resources */,
 				42B0154A18E315D40068019C /* UltraGuard.pdf in Resources */,
+				42B0158618E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				42B0154D18E315E30068019C /* EcoGuard.pdf in Resources */,
 				42B0157118E317A50068019C /* AirStep.pdf in Resources */,
+				42B0158018E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
 				42B0155F18E3164B0068019C /* SafetyChef.pdf in Resources */,
 				42B0150518DF47110068019C /* WebViewBG2.png in Resources */,
 				42B0152318E303C40068019C /* MatChatter5.png in Resources */,
 				42B0155018E315F20068019C /* ParquetWiperScraper.pdf in Resources */,
 				42B0150B18DFBD170068019C /* RectangleButton.png in Resources */,
 				42B0152C18E315220068019C /* WalkOffLogoMat.pdf in Resources */,
+				42B0158418E3428B0068019C /* MotifMat.png in Resources */,
 				42B0154418E315BB0068019C /* TreadLock.pdf in Resources */,
 				42B0152F18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0155318E316030068019C /* BrushTrip.pdf in Resources */,
