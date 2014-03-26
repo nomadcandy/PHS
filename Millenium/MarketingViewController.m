@@ -268,8 +268,7 @@
  
  
  
- 
- [self presentViewController:InteractiveViewController animated:YES completion:nil];
+            [self presentViewController:InteractiveViewController animated:YES completion:nil];
  
  
  

@@ -104,6 +104,14 @@
 		42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157E18E3428B0068019C /* WalkOffLogoMat.png */; };
 		42B0158D18E356560068019C /* PlayVideosButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0158C18E356560068019C /* PlayVideosButton.png */; };
 		42B0158E18E356560068019C /* PlayVideosButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0158C18E356560068019C /* PlayVideosButton.png */; };
+		42B0159018E35A7D0068019C /* Videos.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0158F18E35A7D0068019C /* Videos.png */; };
+		42B0159118E35A7D0068019C /* Videos.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0158F18E35A7D0068019C /* Videos.png */; };
+		42B0159318E35B990068019C /* VideosWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159218E35B990068019C /* VideosWhite.png */; };
+		42B0159418E35B990068019C /* VideosWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159218E35B990068019C /* VideosWhite.png */; };
+		42B0159618E35C230068019C /* VideosWhite1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159518E35C230068019C /* VideosWhite1.png */; };
+		42B0159718E35C230068019C /* VideosWhite1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159518E35C230068019C /* VideosWhite1.png */; };
+		42B0159918E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
+		42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
@@ -201,6 +209,10 @@
 		42B0157D18E3428B0068019C /* WaterGuardLogoInlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardLogoInlay.png; sourceTree = "<group>"; };
 		42B0157E18E3428B0068019C /* WalkOffLogoMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WalkOffLogoMat.png; sourceTree = "<group>"; };
 		42B0158C18E356560068019C /* PlayVideosButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlayVideosButton.png; sourceTree = "<group>"; };
+		42B0158F18E35A7D0068019C /* Videos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Videos.png; sourceTree = "<group>"; };
+		42B0159218E35B990068019C /* VideosWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite.png; sourceTree = "<group>"; };
+		42B0159518E35C230068019C /* VideosWhite1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite1.png; sourceTree = "<group>"; };
+		42B0159818E35CF20068019C /* VideosWhite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite3.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveSlideViewController.h; sourceTree = "<group>"; };
@@ -375,6 +387,10 @@
 		42B0157518E318F80068019C /* ImagesGeneral */ = {
 			isa = PBXGroup;
 			children = (
+				42B0159818E35CF20068019C /* VideosWhite3.png */,
+				42B0159518E35C230068019C /* VideosWhite1.png */,
+				42B0159218E35B990068019C /* VideosWhite.png */,
+				42B0158F18E35A7D0068019C /* Videos.png */,
 				42B0158C18E356560068019C /* PlayVideosButton.png */,
 				42B0152118E303C40068019C /* MatChatter5.png */,
 				42B0150C18DFBD330068019C /* CircleButton.png */,
@@ -608,6 +624,7 @@
 			files = (
 				42B0155518E316100068019C /* TripleFlexScraper.pdf in Resources */,
 				42B0153718E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
+				42B0159318E35B990068019C /* VideosWhite.png in Resources */,
 				42B0155B18E3163F0068019C /* Dura-Lite.pdf in Resources */,
 				42B0152B18E315220068019C /* WalkOffLogoMat.pdf in Resources */,
 				42B0150D18DFBD330068019C /* CircleButton.png in Resources */,
@@ -640,8 +657,11 @@
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
 				42B0150718DFBD0A0068019C /* SquareButton.png in Resources */,
+				42B0159618E35C230068019C /* VideosWhite1.png in Resources */,
 				42B0157018E317A50068019C /* AirStep.pdf in Resources */,
+				42B0159018E35A7D0068019C /* Videos.png in Resources */,
 				42B0158718E3428B0068019C /* WalkOffLogoMat.png in Resources */,
+				42B0159918E35CF20068019C /* VideosWhite3.png in Resources */,
 				42B0154318E315BB0068019C /* TreadLock.pdf in Resources */,
 				42B0156D18E3177F0068019C /* SafeStep.pdf in Resources */,
 				42B0150A18DFBD170068019C /* RectangleButton.png in Resources */,
@@ -655,12 +675,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				42B0156B18E317710068019C /* SpringStep.pdf in Resources */,
+				42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */,
 				42B0156218E316580068019C /* TripleFlexFlow.pdf in Resources */,
 				42B0155C18E3163F0068019C /* Dura-Lite.pdf in Resources */,
+				42B0159718E35C230068019C /* VideosWhite1.png in Resources */,
 				42B0153E18E3159F0068019C /* SilverSeries.pdf in Resources */,
 				42B0156518E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
 				42B0156818E3175A0068019C /* MarbleTop.pdf in Resources */,
 				42B0155918E3161C0068019C /* FirstStepScraper.pdf in Resources */,
+				42B0159118E35A7D0068019C /* Videos.png in Resources */,
 				42B0158218E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
 				42B0153818E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
 				42B0153218E3153B0068019C /* MotifMat.pdf in Resources */,
@@ -671,6 +694,7 @@
 				42B0157418E317B00068019C /* SoftStep.pdf in Resources */,
 				42B014FF18DF450F0068019C /* WebViewBG.png in Resources */,
 				42B0154118E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
+				42B0159418E35B990068019C /* VideosWhite.png in Resources */,
 				42B0156E18E3177F0068019C /* SafeStep.pdf in Resources */,
 				42B0154718E315C80068019C /* WaterGuard.pdf in Resources */,
 				42B0154A18E315D40068019C /* UltraGuard.pdf in Resources */,

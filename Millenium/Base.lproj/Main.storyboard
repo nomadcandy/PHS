@@ -233,11 +233,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-eS-0tC">
-                                <rect key="frame" x="3" y="631" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-eS-0tC">
+                                <rect key="frame" x="0.0" y="631" width="168" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
-                                <state key="normal" image="PlayVideosButton.png">
+                                <state key="normal" image="VideosWhite3.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -811,10 +811,10 @@
         <image name="LogoThumbnailBG.png" width="220" height="220"/>
         <image name="MatChatter5.png" width="2078" height="1536"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
-        <image name="PlayVideosButton.png" width="100" height="100"/>
         <image name="RectangleButton.png" width="14" height="10"/>
         <image name="RugSampleA.png" width="114" height="104"/>
         <image name="SquareButton.png" width="11" height="10"/>
+        <image name="VideosWhite3.png" width="230" height="91"/>
         <image name="WebViewBG2.png" width="557" height="395"/>
         <image name="allLogoButtons2.png" width="109" height="99"/>
         <image name="allMatButtons2.png" width="109" height="99"/>
