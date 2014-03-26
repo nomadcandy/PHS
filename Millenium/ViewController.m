@@ -69,13 +69,13 @@
 	if (button == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
-        //UIImage *image = [UIImage imageNamed:@"CarouselBGNoPic1.png"];
+		//UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
+        UIImage *image = [UIImage imageNamed:@"CarouselBGNoPic1.png"];
          //UIImage *image = [UIImage imageNamed:@"CarouselBGNoPicBlue.png"];
 
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
-		[button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         
         //button.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -200,6 +200,21 @@
 {
     
     NSInteger index = [carousel indexOfItemViewOrSubview:sender];
+    
+    if (index==2){
+        
+        
+        
+        UIStoryboard *storyboard = self.storyboard;
+        MarketingViewController *mvc = [storyboard instantiateViewControllerWithIdentifier:@"MarketingViewBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:mvc animated:YES completion:nil];
+        
+        
+        
+        
+    }
     
     
     if (index==5){

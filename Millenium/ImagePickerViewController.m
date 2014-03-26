@@ -348,6 +348,16 @@
     
 }
 
+- (IBAction)goHome:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = self.storyboard;
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+    [self presentViewController:vc animated:YES completion:nil];
+    
+    
+}
+
+
 - (IBAction)goWeb:(UIButton *)sender {
     
     googleWebView.hidden = NO;

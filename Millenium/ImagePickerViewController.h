@@ -54,6 +54,7 @@
     
     IBOutlet UIButton*editLogoButton;
     IBOutlet UIButton*googleButton;
+    IBOutlet UIButton*homeButton;
     
     UIImagePickerController*picker;
 }

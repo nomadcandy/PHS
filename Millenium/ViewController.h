@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
 #import "InteractiveViewController.h"
+#import "MarketingViewController.h"
 
 @interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>
 
