@@ -13,14 +13,35 @@
 @end
 
 @implementation MarketingViewController
-@synthesize carousel;
+
+@synthesize carouselLogo;
+@synthesize carouselIndoor;
+@synthesize carouselIndoorOutdoor;
+@synthesize carouselIndoorScraper;
+@synthesize carouselUtilityMats;
+@synthesize carouselAntiFatigue;
+
+
+
 
 - (void)dealloc
 {
-    carousel.delegate = nil;
-    carousel.dataSource = nil;
+    carouselLogo.delegate = nil;
+    carouselLogo.dataSource = nil;
+    carouselIndoor.delegate = nil;
+    carouselIndoor.dataSource = nil;
+    carouselIndoorOutdoor.delegate = nil;
+    carouselIndoorOutdoor.dataSource = nil;
+    carouselIndoorScraper.delegate = nil;
+    carouselIndoorScraper.dataSource = nil;
+    carouselUtilityMats.delegate = nil;
+    carouselUtilityMats.dataSource = nil;
+    carouselAntiFatigue.delegate = nil;
+    carouselAntiFatigue.dataSource = nil;
+    
     
 }
+
 
 
 #pragma mark -
@@ -31,13 +52,32 @@
     [super viewDidLoad];
     
     //configure carousel
-    carousel.type = iCarouselTypeCoverFlow2;
+    carouselLogo.type= iCarouselTypeCoverFlow2;
+    carouselIndoor.type = iCarouselTypeCoverFlow2;
+    carouselIndoorOutdoor.type = iCarouselTypeCoverFlow2;
+    carouselIndoorScraper.type = iCarouselTypeCoverFlow2;
+    carouselUtilityMats.type = iCarouselTypeCoverFlow2;
+    carouselAntiFatigue.type = iCarouselTypeCoverFlow2;
+    
+    carouselIndoor.hidden =YES;
+    carouselIndoorOutdoor.hidden =YES;
+    carouselIndoorScraper.hidden =YES;
+    carouselUtilityMats.hidden =YES;
+    carouselAntiFatigue.hidden =YES;
+
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    self.carousel = nil;
+    self.carouselLogo = nil;
+    self.carouselIndoor = nil;
+    self.carouselIndoorOutdoor = nil;
+    self.carouselIndoorScraper = nil;
+    self.carouselUtilityMats = nil;
+    self.carouselAntiFatigue = nil;
+    
+    
     self.label = nil;
 }
 
@@ -53,17 +93,48 @@
 {
     //if statements to support items per view
     
-    if (carousel == logoMatsView)
+    if (carousel.tag==1)
         
     {
+        //generate 100 item views
+        //normally we'd use a backing array
+        //as shown in the basic iOS example
+        //but for this example we haven't bothered
         return 5;
+        
+    }
+
+        
+    if (carousel.tag==2){
+        
+        
+        return 4;
+    }
+    
+    if (carousel.tag==3){
+        
+        return 3;
+        
+    }
+    
+    if (carousel.tag==4){
+        
+        return 4;
+        
+    }
+    
+    if (carousel.tag==5){
+        
+        return 4;
+        
     }
     
     else {
         
-        return 0;
+        return 5;
         
     }
+
     
 }
 
@@ -72,7 +143,9 @@
 {
 	UIButton *button = (UIButton *)view;
 	if (button == nil)
-	{
+        
+        
+    {
         button.layer.shadowColor = [UIColor darkGrayColor].CGColor;
         button.layer.shadowOpacity = 0.1;
         button.layer.shadowRadius = 3;
@@ -86,14 +159,14 @@
 	//set button label
 	//[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
     
-    if (index ==0){
+    if (index ==0)  {
         
         [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"Walk-OffLogoMat.pdf"];
+        UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.pdf"];
         
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        button.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
+		[button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
         //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -218,7 +291,7 @@
 - (void)buttonTapped:(UIButton *)sender
 {
     
-    NSInteger index = [carousel indexOfItemViewOrSubview:sender];
+    //NSInteger index = [carousel indexOfItemViewOrSubview:sender];
     NSLog(@"%i",index);
     
     if (index==1){

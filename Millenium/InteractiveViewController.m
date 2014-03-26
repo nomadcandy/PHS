@@ -284,14 +284,14 @@
     
     if (carousel.tag==1)
     
-{
+    {
     //generate 100 item views
     //normally we'd use a backing array
     //as shown in the basic iOS example
     //but for this example we haven't bothered
     return 14;
     
-}
+    }
     
     else if  (carousel.tag==2)
     {
