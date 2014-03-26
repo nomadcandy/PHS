@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
 #import "RequestFlierViewController.h"
+#import "ViewController.h"
 
 @interface MarketingViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>{
     
@@ -25,6 +26,8 @@
     IBOutlet UIButton*indoorScraperMatsButton;
     IBOutlet UIButton*utilityMatsButton;
     IBOutlet UIButton*antiFatigueButton;
+    
+    IBOutlet UIViewController*viewController;
 
     
 }
@@ -43,5 +46,6 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carouselAntiFatigue;
 
 - (IBAction)pressedButton:(id)sender;
+- (IBAction)goHome:(UIButton *)sender;
 
 @end

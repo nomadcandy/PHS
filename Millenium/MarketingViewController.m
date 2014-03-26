@@ -274,7 +274,14 @@
  
  }*/
 
-
+- (IBAction)goHome:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = self.storyboard;
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+    [self presentViewController:vc animated:YES completion:nil];
+    
+    
+}
 
 
 //Method Works
