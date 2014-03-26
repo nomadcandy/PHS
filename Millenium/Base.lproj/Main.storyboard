@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Tro-Xl-iMB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hlw-qG-BNy">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradieteBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="baM-Dj-lLb">
-                                <rect key="frame" x="-27" y="0.0" width="1051" height="832"/>
+                                <rect key="frame" x="-27" y="0.0" width="1051" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -225,17 +225,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradieteBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-46-Y87">
-                                <rect key="frame" x="-163" y="74" width="1187" height="694"/>
+                                <rect key="frame" x="-163" y="49" width="1187" height="719"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zT1-9B-Xk1">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="76"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CintasLogoHighRes.png" translatesAutoresizingMaskIntoConstraints="NO" id="Plg-7R-Hpj">
-                                <rect key="frame" x="455" y="11" width="115" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3b-eS-0tC">
                                 <rect key="frame" x="-6" y="90" width="158" height="30"/>
@@ -303,7 +299,18 @@
                                 <rect key="frame" x="98" y="199" width="817" height="384"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uuP-dW-DaH" id="ypU-YF-w6N"/>
+                                    <outlet property="delegate" destination="uuP-dW-DaH" id="24T-Jo-B3S"/>
+                                </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi9-3D-ERd">
+                                <rect key="frame" x="462" y="18" width="89" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="CintasLogoHighRes.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -490,7 +497,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CintasLogoHighRes.png" translatesAutoresizingMaskIntoConstraints="NO" id="zm9-LH-kLe">
-                                <rect key="frame" x="486" y="17" width="67" height="27"/>
+                                <rect key="frame" x="464" y="0.0" width="110" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -819,6 +826,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="g0x-cn-24J"/>
-        <segue reference="WHu-6x-aPj"/>
+        <segue reference="wpq-PH-bdK"/>
     </inferredMetricsTieBreakers>
 </document>
