@@ -59,7 +59,7 @@
     //normally we'd use a backing array
     //as shown in the basic iOS example
     //but for this example we haven't bothered
-    return 7;
+    return 6;
 }
 //hell0
 
@@ -69,9 +69,9 @@
 	if (button == nil)
 	{
 		//no button available to recycle, so create new one
-		//UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
+		UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
         //UIImage *image = [UIImage imageNamed:@"CarouselBGNoPic1.png"];
-         UIImage *image = [UIImage imageNamed:@"CarouselBGNoPicBlue.png"];
+         //UIImage *image = [UIImage imageNamed:@"CarouselBGNoPicBlue.png"];
 
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
@@ -112,29 +112,25 @@
     
     if (index ==2){
         
-        [button setTitle:[NSString stringWithFormat:@"Product Movies"] forState:UIControlStateNormal];
+        [button setTitle:[NSString stringWithFormat:@"Marketing"] forState:UIControlStateNormal];
         
     }
+    
+   
     
     if (index == 3){
-        
-        [button setTitle:[NSString stringWithFormat:@"Flyer Views"] forState:UIControlStateNormal];
-        
-    }
-    
-    if (index == 4){
         
         [button setTitle:[NSString stringWithFormat:@"Sketch Search"] forState:UIControlStateNormal];
         
     }
     
-    if (index == 5){
+    if (index == 4){
         
         [button setTitle:[NSString stringWithFormat:@"Sketch Request"] forState:UIControlStateNormal];
         
     }
     
-    if (index == 6){
+    if (index == 5){
         
         [button setTitle:[NSString stringWithFormat:@"Interactive Mat Tool"] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(presentInteractiveViewController:) forControlEvents:UIControlEventTouchUpInside];
