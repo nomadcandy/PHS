@@ -26,8 +26,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[firstNameField setKeyboardType:UIKeyboardAppearanceLight];
+    
+    firstNameField.keyboardAppearance = UIKeyboardAppearanceDefault;
 	// Do any additional setup after loading the view.
 }
+
+- (IBAction)goHome:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = self.storyboard;
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+    [self presentViewController:vc animated:YES completion:nil];
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

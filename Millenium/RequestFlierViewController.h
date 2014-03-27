@@ -7,7 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface RequestFlierViewController : UIViewController
+@interface RequestFlierViewController : UIViewController{
+    
+    IBOutlet UITextField*firstNameField;
+    IBOutlet UITextField*lastNameField;
+    IBOutlet UITextField*emailField;
+    IBOutlet UITextField*telephoneField;
+    IBOutlet UITextField*addressField;
+    IBOutlet UITextField*cityField;
+    IBOutlet UITextField*stateField;
+    IBOutlet UITextField*countryField;
+    IBOutlet UITextField*zipField;
+    IBOutlet UITextField*notesField;
+    
+    IBOutlet UIButton*submitButton;
+    
+    
+}
+
+- (IBAction)goHome:(UIButton *)sender;
 
 @end
+

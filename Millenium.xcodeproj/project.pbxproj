@@ -19,6 +19,9 @@
 		4247572B18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572918D7D70F000AAF7C /* LogoHeaderCell.m */; };
 		4247572E18D8AA55000AAF7C /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572D18D8AA55000AAF7C /* Logo.m */; };
 		4247572F18D8AA55000AAF7C /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572D18D8AA55000AAF7C /* Logo.m */; };
+		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
+		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
+		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
 		42B014FE18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B014FF18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B0150118DF46970068019C /* WebViewBG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0150018DF46970068019C /* WebViewBG1.png */; };
@@ -154,6 +157,10 @@
 		4247572918D7D70F000AAF7C /* LogoHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoHeaderCell.m; sourceTree = "<group>"; };
 		4247572C18D8AA55000AAF7C /* Logo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logo.h; sourceTree = "<group>"; };
 		4247572D18D8AA55000AAF7C /* Logo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logo.m; sourceTree = "<group>"; };
+		42849B4D18E4484700E5B3FB /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
+		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		42849B5318E46C5700E5B3FB /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		42B014FD18DF450F0068019C /* WebViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG.png; sourceTree = "<group>"; };
 		42B0150018DF46970068019C /* WebViewBG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG1.png; sourceTree = "<group>"; };
 		42B0150318DF47110068019C /* WebViewBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG2.png; sourceTree = "<group>"; };
@@ -295,6 +302,15 @@
 			name = InternetViewController;
 			sourceTree = "<group>";
 		};
+		42849B5118E46C3D00E5B3FB /* VideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42849B5218E46C5700E5B3FB /* VideoViewController.h */,
+				42849B5318E46C5700E5B3FB /* VideoViewController.m */,
+			);
+			name = VideoViewController;
+			sourceTree = "<group>";
+		};
 		42B0150F18E063A50068019C /* MyDraggableImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +391,8 @@
 		42B0157518E318F80068019C /* ImagesGeneral */ = {
 			isa = PBXGroup;
 			children = (
+				42849B4F18E4556700E5B3FB /* envelope.png */,
+				42849B4D18E4484700E5B3FB /* email.png */,
 				42B0159818E35CF20068019C /* VideosWhite3.png */,
 				42B0152118E303C40068019C /* MatChatter5.png */,
 				42B0150C18DFBD330068019C /* CircleButton.png */,
@@ -469,6 +487,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				42849B5118E46C3D00E5B3FB /* VideoViewController */,
 				42B0152418E312090068019C /* RequestFlierViewController */,
 				42B0151C18E2F7620068019C /* MarketingViewController */,
 				42B0151718E1F03C0068019C /* ClipView */,
@@ -609,6 +628,7 @@
 				42B0155518E316100068019C /* TripleFlexScraper.pdf in Resources */,
 				42B0153718E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
 				42B0155B18E3163F0068019C /* Dura-Lite.pdf in Resources */,
+				42849B5018E4556700E5B3FB /* envelope.png in Resources */,
 				42B0152B18E315220068019C /* WalkOffLogoMat.pdf in Resources */,
 				42B0150D18DFBD330068019C /* CircleButton.png in Resources */,
 				42B0156418E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
@@ -626,6 +646,7 @@
 				42B0156A18E317710068019C /* SpringStep.pdf in Resources */,
 				42B0156718E3175A0068019C /* MarbleTop.pdf in Resources */,
 				42B0155818E3161C0068019C /* FirstStepScraper.pdf in Resources */,
+				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
 				42B0156118E316580068019C /* TripleFlexFlow.pdf in Resources */,
 				42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
@@ -714,6 +735,7 @@
 				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42B0151F18E2F79F0068019C /* MarketingViewController.m in Sources */,
+				42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */,
 				4247572A18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
 				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */,
