@@ -101,9 +101,6 @@
         
     }
     
-
-    
-    
     // Override point for customization after application launch.
     //return YES;
 
@@ -130,17 +127,8 @@
     
     else if ([action isEqualToString:@"pics"])
     {
-        //_actionSelectedString=action;
+        _actionSelectedString=action;
         
-        
-        /*AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
-        appdelegate.model=YES;
-        
-        
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.allowsEditing = YES;
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;*/
         
         UIStoryboard *storyboardLogo = self.storyboard;
         ImagePickerViewController *ImagePickerVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"ImagePickerBoard"];
@@ -160,17 +148,19 @@
         
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         
-            AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
-            appdelegate.model=YES;
+            /*AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
+            appdelegate.model=YES;*/
 
         
             _actionSelectedString=action;
-            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-            picker.delegate = self;
-            picker.allowsEditing = YES;
-            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        
-            [self presentViewController:picker animated:YES completion:NULL];
+            
+            UIStoryboard *storyboardLogo = self.storyboard;
+            ImagePickerViewController *ImagePickerVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"ImagePickerBoard"];
+            
+            // Configure the new view controller here.
+            [self presentViewController:ImagePickerVC animated:YES completion:nil];
+
+            
             
         }
 
@@ -237,13 +227,7 @@
         appdelegate.model=YES;
         
         
-        //send here where near me sends in other method
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.allowsEditing = YES;
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [self presentViewController:picker animated:YES completion:NULL];
-        [self dismissViewControllerAnimated:YES completion:NULL];
+        
         
         
     }
@@ -253,20 +237,15 @@
         AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
         appdelegate.model=YES;
         
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         
-        picker.delegate = self;
-        picker.allowsEditing = YES;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        [self presentViewController:picker animated:YES completion:NULL];
     
     }
 
     else if ([_actionSelectedString isEqualToString:@"near me"]){
         
-        /*UIStoryboard *storyboardLogo = self.storyboard;
+        UIStoryboard *storyboardLogo = self.storyboard;
         LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
-        [self presentViewController:LogoCVC animated:YES completion:nil];*/
+        [self presentViewController:LogoCVC animated:YES completion:nil];
         
         
         
@@ -693,28 +672,6 @@ else
 }
 
 
-/*- (IBAction)takePhoto:(UIButton *)sender {
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-    
-}
-
-- (IBAction)selectPhoto:(UIButton *)sender {
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-    
-    
-}*/
 
 
 //moves logo around
