@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Tro-Xl-iMB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hlw-qG-BNy">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradieteBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="baM-Dj-lLb">
-                                <rect key="frame" x="-27" y="0.0" width="1051" height="832"/>
+                                <rect key="frame" x="-27" y="0.0" width="1051" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -697,12 +697,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MatChatter5.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-QT-lmy" userLabel="PromoImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MatChatterZippys.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-QT-lmy" userLabel="PromoImage">
                                 <rect key="frame" x="-2" y="44" width="1024" height="741"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B73-GN-pMc" customClass="iCarousel">
-                                <rect key="frame" x="40" y="534" width="958" height="157"/>
+                                <rect key="frame" x="40" y="587" width="958" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -1035,7 +1035,7 @@
         <image name="GreenBGPages.png" width="1024" height="768"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="LogoThumbnailBG.png" width="220" height="220"/>
-        <image name="MatChatter5.png" width="2078" height="1536"/>
+        <image name="MatChatterZippys.png" width="2078" height="1536"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="RugSampleA.png" width="114" height="104"/>
         <image name="VideosWhite3.png" width="230" height="91"/>
@@ -1052,6 +1052,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
+        <segue reference="wpq-PH-bdK"/>
     </inferredMetricsTieBreakers>
 </document>

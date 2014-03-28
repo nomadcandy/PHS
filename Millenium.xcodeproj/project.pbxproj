@@ -22,6 +22,14 @@
 		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
 		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
 		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
+		42849B5618E4830E00E5B3FB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42849B5518E4830E00E5B3FB /* MediaPlayer.framework */; };
+		42849B5918E483C400E5B3FB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42849B5718E483C400E5B3FB /* CoreMedia.framework */; };
+		42849B5A18E483C400E5B3FB /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42849B5818E483C400E5B3FB /* MediaAccessibility.framework */; };
+		42849B5C18E483DF00E5B3FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */; };
+		42849B5F18E5168500E5B3FB /* MatChatterZippys.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B5E18E5168500E5B3FB /* MatChatterZippys.png */; };
+		42849B6018E5168500E5B3FB /* MatChatterZippys.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B5E18E5168500E5B3FB /* MatChatterZippys.png */; };
+		42849B6218E5193C00E5B3FB /* MatChatterZippys1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6118E5193C00E5B3FB /* MatChatterZippys1.png */; };
+		42849B6318E5193C00E5B3FB /* MatChatterZippys1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6118E5193C00E5B3FB /* MatChatterZippys1.png */; };
 		42B014FE18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B014FF18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B0150118DF46970068019C /* WebViewBG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0150018DF46970068019C /* WebViewBG1.png */; };
@@ -161,6 +169,12 @@
 		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		42849B5318E46C5700E5B3FB /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		42849B5518E4830E00E5B3FB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		42849B5718E483C400E5B3FB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		42849B5818E483C400E5B3FB /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		42849B5E18E5168500E5B3FB /* MatChatterZippys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterZippys.png; sourceTree = "<group>"; };
+		42849B6118E5193C00E5B3FB /* MatChatterZippys1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterZippys1.png; sourceTree = "<group>"; };
 		42B014FD18DF450F0068019C /* WebViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG.png; sourceTree = "<group>"; };
 		42B0150018DF46970068019C /* WebViewBG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG1.png; sourceTree = "<group>"; };
 		42B0150318DF47110068019C /* WebViewBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG2.png; sourceTree = "<group>"; };
@@ -249,6 +263,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42849B5C18E483DF00E5B3FB /* MobileCoreServices.framework in Frameworks */,
+				42849B5918E483C400E5B3FB /* CoreMedia.framework in Frameworks */,
+				42849B5A18E483C400E5B3FB /* MediaAccessibility.framework in Frameworks */,
+				42849B5618E4830E00E5B3FB /* MediaPlayer.framework in Frameworks */,
 				42B0151118E07BF70068019C /* QuartzCore.framework in Frameworks */,
 				42FF7A1718CDE92A00C72695 /* CoreGraphics.framework in Frameworks */,
 				42FF7A1918CDE92A00C72695 /* UIKit.framework in Frameworks */,
@@ -309,6 +327,15 @@
 				42849B5318E46C5700E5B3FB /* VideoViewController.m */,
 			);
 			name = VideoViewController;
+			sourceTree = "<group>";
+		};
+		42849B5D18E5165400E5B3FB /* ImagesLandingPage */ = {
+			isa = PBXGroup;
+			children = (
+				42849B5E18E5168500E5B3FB /* MatChatterZippys.png */,
+				42849B6118E5193C00E5B3FB /* MatChatterZippys1.png */,
+			);
+			name = ImagesLandingPage;
 			sourceTree = "<group>";
 		};
 		42B0150F18E063A50068019C /* MyDraggableImage */ = {
@@ -453,6 +480,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				42849B5D18E5165400E5B3FB /* ImagesLandingPage */,
 				42B0157618E342550068019C /* ImagesFliers */,
 				42B0157518E318F80068019C /* ImagesGeneral */,
 				42B0152918E314FF0068019C /* ImagesPDF */,
@@ -475,6 +503,10 @@
 		42FF7A1318CDE92A00C72695 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */,
+				42849B5718E483C400E5B3FB /* CoreMedia.framework */,
+				42849B5818E483C400E5B3FB /* MediaAccessibility.framework */,
+				42849B5518E4830E00E5B3FB /* MediaPlayer.framework */,
 				42B0151018E07BF70068019C /* QuartzCore.framework */,
 				42FF7A1418CDE92A00C72695 /* Foundation.framework */,
 				42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */,
@@ -636,6 +668,7 @@
 				42B0153418E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
 				42B0150418DF47110068019C /* WebViewBG2.png in Resources */,
 				42B0153D18E3159F0068019C /* SilverSeries.pdf in Resources */,
+				42849B5F18E5168500E5B3FB /* MatChatterZippys.png in Resources */,
 				42B0155E18E3164B0068019C /* SafetyChef.pdf in Resources */,
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
@@ -656,6 +689,7 @@
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
+				42849B6218E5193C00E5B3FB /* MatChatterZippys1.png in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
@@ -684,6 +718,7 @@
 				42B0156818E3175A0068019C /* MarbleTop.pdf in Resources */,
 				42B0155918E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				42B0158218E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
+				42849B6318E5193C00E5B3FB /* MatChatterZippys1.png in Resources */,
 				42B0153818E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
 				42B0153218E3153B0068019C /* MotifMat.pdf in Resources */,
 				42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */,
@@ -710,6 +745,7 @@
 				42B0154418E315BB0068019C /* TreadLock.pdf in Resources */,
 				42B0152F18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0155318E316030068019C /* BrushTrip.pdf in Resources */,
+				42849B6018E5168500E5B3FB /* MatChatterZippys.png in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42B0155618E316100068019C /* TripleFlexScraper.pdf in Resources */,
 				42B0150218DF46970068019C /* WebViewBG1.png in Resources */,
