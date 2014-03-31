@@ -13,6 +13,9 @@
 @end
 
 @implementation ImagePickerViewController
+//@synthesize chosenImage;
+@synthesize selectedImage;
+@synthesize chosenImageView;
 
 
 
@@ -55,16 +58,18 @@
     
     touchesArray = [[NSMutableArray alloc]initWithCapacity:4];
     
-    UIImage *chosenImage = [UIImage imageNamed:@"SampleLogo2.png"];
+    //UIImage *chosenImage = [UIImage imageNamed:@"SampleLogo2.png"];
     //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
     
-    chosenImageView.image = chosenImage;
+    chosenImageView.image = selectedImage;
     
     NSString *strURL = @"http://www.google.com";
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self->googleWebView loadRequest:urlRequest];
 
+    
+    // enables image picker in portrait in window
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=YES;
     
@@ -104,29 +109,34 @@
     //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
     
     chosenImageView.image = chosenImage;
-    
-    //self.imageView.image = chosenImage;
+    NSLog(@"chosenImage %@",chosenImage);
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
         
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=NO;
     
+   // [self performSegueWithIdentifier:@"imagePickedSegue" sender:self];
     
-     [self performSegueWithIdentifier:@"imagePickedSegue" sender:self];
-    
+    selectedImage = chosenImage;
     
    
     
 }
 
 
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"imagePickedSegue"]) {
         //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         InteractiveViewController *destViewController = segue.destinationViewController;
+        // NSLog(@"chosenImage %@",chosenImage);
+        //NSLog(@"chosenImage %@",newImage);
         //destViewController.chosenImage = chosenImage;
-        destViewController.chosenImage=chosenImageView.image;
+        destViewController.selectedImage=chosenImageView.image;
+        NSLog(@"chosenImage %@",chosenImageView.image);
+
     }
 }
 
@@ -190,7 +200,11 @@
    
     
     chosenImageView.image = newImage;
-    chosenImage = newImage;
+    //chosenImage = newImage;
+    
+    
+    
+    NSLog(@"chosenImage %@",selectedImage);
     
    
     
@@ -262,7 +276,7 @@
     
     
     
-    [editImageView setImage:chosenImage];
+    [editImageView setImage:selectedImage];
     
     
     
@@ -294,7 +308,7 @@
     UIGraphicsEndImageContext();
     
     chosenImageView.image = newImage;
-    chosenImage = newImage;
+    selectedImage = newImage;
 
 }
 
@@ -307,7 +321,7 @@
     
     
     
-    [editLogoButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    [editLogoButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
     [editLogoButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [editLogoButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     

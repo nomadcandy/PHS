@@ -71,12 +71,13 @@
 		//no button available to recycle, so create new one
 		//UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
         UIImage *image = [UIImage imageNamed:@"CarouselBGNoPic1.png"];
-         //UIImage *image = [UIImage imageNamed:@"CarouselBGNoPicBlue.png"];
+        
 
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
+        button.alpha = 0.8;
         
         //button.layer.shadowColor = [UIColor blackColor].CGColor;
         button.layer.shadowColor = [UIColor darkGrayColor].CGColor;

@@ -26,10 +26,14 @@
 		42849B5918E483C400E5B3FB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42849B5718E483C400E5B3FB /* CoreMedia.framework */; };
 		42849B5A18E483C400E5B3FB /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42849B5818E483C400E5B3FB /* MediaAccessibility.framework */; };
 		42849B5C18E483DF00E5B3FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */; };
-		42849B5F18E5168500E5B3FB /* MatChatterZippys.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B5E18E5168500E5B3FB /* MatChatterZippys.png */; };
-		42849B6018E5168500E5B3FB /* MatChatterZippys.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B5E18E5168500E5B3FB /* MatChatterZippys.png */; };
-		42849B6218E5193C00E5B3FB /* MatChatterZippys1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6118E5193C00E5B3FB /* MatChatterZippys1.png */; };
-		42849B6318E5193C00E5B3FB /* MatChatterZippys1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6118E5193C00E5B3FB /* MatChatterZippys1.png */; };
+		42849B6B18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6A18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png */; };
+		42849B6C18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6A18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png */; };
+		42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */; };
+		42849B6F18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */; };
+		42849B7318E9C72200E5B3FB /* CleanFresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* CleanFresh.mov */; };
+		42849B7418E9C72200E5B3FB /* CleanFresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* CleanFresh.mov */; };
+		42849B7518E9C72200E5B3FB /* MatSensesAll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7218E9C72100E5B3FB /* MatSensesAll.mp4 */; };
+		42849B7618E9C72200E5B3FB /* MatSensesAll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7218E9C72100E5B3FB /* MatSensesAll.mp4 */; };
 		42B014FE18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B014FF18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B0150118DF46970068019C /* WebViewBG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0150018DF46970068019C /* WebViewBG1.png */; };
@@ -173,8 +177,10 @@
 		42849B5718E483C400E5B3FB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		42849B5818E483C400E5B3FB /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		42849B5E18E5168500E5B3FB /* MatChatterZippys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterZippys.png; sourceTree = "<group>"; };
-		42849B6118E5193C00E5B3FB /* MatChatterZippys1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterZippys1.png; sourceTree = "<group>"; };
+		42849B6A18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterGreyBubbles1.png; sourceTree = "<group>"; };
+		42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterGreyBubbles4.png; sourceTree = "<group>"; };
+		42849B7118E9C72100E5B3FB /* CleanFresh.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = CleanFresh.mov; sourceTree = "<group>"; };
+		42849B7218E9C72100E5B3FB /* MatSensesAll.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatSensesAll.mp4; sourceTree = "<group>"; };
 		42B014FD18DF450F0068019C /* WebViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG.png; sourceTree = "<group>"; };
 		42B0150018DF46970068019C /* WebViewBG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG1.png; sourceTree = "<group>"; };
 		42B0150318DF47110068019C /* WebViewBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG2.png; sourceTree = "<group>"; };
@@ -332,10 +338,19 @@
 		42849B5D18E5165400E5B3FB /* ImagesLandingPage */ = {
 			isa = PBXGroup;
 			children = (
-				42849B5E18E5168500E5B3FB /* MatChatterZippys.png */,
-				42849B6118E5193C00E5B3FB /* MatChatterZippys1.png */,
+				42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */,
+				42849B6A18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png */,
 			);
 			name = ImagesLandingPage;
+			sourceTree = "<group>";
+		};
+		42849B7018E9C6CD00E5B3FB /* ImagesTestVideo */ = {
+			isa = PBXGroup;
+			children = (
+				42849B7118E9C72100E5B3FB /* CleanFresh.mov */,
+				42849B7218E9C72100E5B3FB /* MatSensesAll.mp4 */,
+			);
+			name = ImagesTestVideo;
 			sourceTree = "<group>";
 		};
 		42B0150F18E063A50068019C /* MyDraggableImage */ = {
@@ -480,6 +495,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				42849B7018E9C6CD00E5B3FB /* ImagesTestVideo */,
 				42849B5D18E5165400E5B3FB /* ImagesLandingPage */,
 				42B0157618E342550068019C /* ImagesFliers */,
 				42B0157518E318F80068019C /* ImagesGeneral */,
@@ -668,7 +684,6 @@
 				42B0153418E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
 				42B0150418DF47110068019C /* WebViewBG2.png in Resources */,
 				42B0153D18E3159F0068019C /* SilverSeries.pdf in Resources */,
-				42849B5F18E5168500E5B3FB /* MatChatterZippys.png in Resources */,
 				42B0155E18E3164B0068019C /* SafetyChef.pdf in Resources */,
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
@@ -682,17 +697,20 @@
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
 				42B0156118E316580068019C /* TripleFlexFlow.pdf in Resources */,
+				42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
 				42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
+				42849B7318E9C72200E5B3FB /* CleanFresh.mov in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
-				42849B6218E5193C00E5B3FB /* MatChatterZippys1.png in Resources */,
+				42849B6B18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
+				42849B7518E9C72200E5B3FB /* MatSensesAll.mp4 in Resources */,
 				42B0150718DFBD0A0068019C /* SquareButton.png in Resources */,
 				42B0157018E317A50068019C /* AirStep.pdf in Resources */,
 				42B0158718E3428B0068019C /* WalkOffLogoMat.png in Resources */,
@@ -718,8 +736,8 @@
 				42B0156818E3175A0068019C /* MarbleTop.pdf in Resources */,
 				42B0155918E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				42B0158218E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
-				42849B6318E5193C00E5B3FB /* MatChatterZippys1.png in Resources */,
 				42B0153818E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
+				42849B6C18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42B0153218E3153B0068019C /* MotifMat.pdf in Resources */,
 				42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */,
 				42B0150E18DFBD330068019C /* CircleButton.png in Resources */,
@@ -727,6 +745,7 @@
 				42B0153B18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42B0157418E317B00068019C /* SoftStep.pdf in Resources */,
 				42B014FF18DF450F0068019C /* WebViewBG.png in Resources */,
+				42849B6F18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
 				42B0154118E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42B0156E18E3177F0068019C /* SafeStep.pdf in Resources */,
 				42B0154718E315C80068019C /* WaterGuard.pdf in Resources */,
@@ -745,11 +764,12 @@
 				42B0154418E315BB0068019C /* TreadLock.pdf in Resources */,
 				42B0152F18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0155318E316030068019C /* BrushTrip.pdf in Resources */,
-				42849B6018E5168500E5B3FB /* MatChatterZippys.png in Resources */,
+				42849B7418E9C72200E5B3FB /* CleanFresh.mov in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42B0155618E316100068019C /* TripleFlexScraper.pdf in Resources */,
 				42B0150218DF46970068019C /* WebViewBG1.png in Resources */,
 				42B0153518E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
+				42849B7618E9C72200E5B3FB /* MatSensesAll.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

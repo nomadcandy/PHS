@@ -28,9 +28,10 @@
 @synthesize matColorUseString;
 @synthesize matSizeUseString;
 
-@synthesize chosenImage;
+@synthesize selectedImage;
 
 @synthesize logoButton;
+@synthesize logoPicButton;
 
 
 - (void)dealloc
@@ -74,19 +75,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+    
+    NSLog(@"chosenImage %@",selectedImage);
    
-    if (chosenImage == Nil){
+    if (selectedImage == Nil){
         
-        chosenImage = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+        selectedImage = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
         //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
 		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
     }
     
     else {
         
-        _logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+        logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
     }
     
    

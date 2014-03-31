@@ -22,7 +22,7 @@
     MyDraggableImage*MyDragRect;
     IBOutlet UIButton*logoButton;
     AppDelegate *appdelegate;
-    UIImage *chosenImage;
+    UIImage *selectedImage;
 }
 
 @property (nonatomic, strong) IBOutlet UIView *interactiveView;
@@ -39,6 +39,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
 
 
+
 @property (nonatomic, strong) NSString *actionSelectedString;
 @property (nonatomic, strong) NSString *matSizeString;
 @property (nonatomic, strong) NSString *matColorString;
@@ -46,7 +47,7 @@
 @property (nonatomic, strong) NSString *matColorUseString;
 @property (nonatomic, strong) NSString *matSizeUseString;
 
-@property (nonatomic, strong) UIImage *chosenImage;
+@property (nonatomic, strong) UIImage *selectedImage;
 
 
 @property (nonatomic, strong) IBOutlet iCarousel *carouselSize;

@@ -12,12 +12,14 @@
 #import "MyDraggableImage.h"
 #import "MaskView.h"
 
-@interface ImagePickerViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
     
     AppDelegate *appdelegate;
     MyDraggableImage*MyDragRect;
-    UIImage *chosenImage;
+    //UIImage *chosenImage;
+    //UIImage*newImage;
+    UIImage*selectedImage;
     //CGRect*rectFrame;
     CGRect*rectFrame;
     CGPoint*startPoint;
@@ -69,6 +71,10 @@
 - (IBAction)getPoints:(UIButton*)sender;
 - (IBAction)cropScreenShot:(UIButton*)sender;
 
+
+//@property (nonatomic, strong) UIImage *chosenImage;
+@property (nonatomic, strong) UIImage *selectedImage;
+@property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 - (void)setNeedsDisplay;
 
 @end

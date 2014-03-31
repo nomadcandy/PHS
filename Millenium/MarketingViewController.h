@@ -10,6 +10,7 @@
 #import "iCarousel.h"
 #import "RequestFlierViewController.h"
 #import "ViewController.h"
+#import "VideoViewController.h"
 
 @interface MarketingViewController : UIViewController <iCarouselDataSource, iCarouselDelegate>{
     
@@ -26,6 +27,8 @@
     IBOutlet UIButton*indoorScraperMatsButton;
     IBOutlet UIButton*utilityMatsButton;
     IBOutlet UIButton*antiFatigueButton;
+    
+    IBOutlet UIButton*goVideoButton;
     
     IBOutlet UIViewController*viewController;
 

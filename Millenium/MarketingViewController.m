@@ -274,6 +274,16 @@
  
  }*/
 
+
+- (IBAction)goVideo:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = self.storyboard;
+    ViewController *vvc = [storyboard instantiateViewControllerWithIdentifier:@"VideoStoryboard"];
+    [self presentViewController:vvc animated:YES completion:nil];
+    
+    
+}
+
 - (IBAction)goHome:(UIButton *)sender {
     
     UIStoryboard *storyboard = self.storyboard;
