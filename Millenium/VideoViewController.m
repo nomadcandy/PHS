@@ -196,15 +196,16 @@
         
         
         titleLabel.text = @"Walk-Off Logo Mat";
-        [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal ];
-        UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
         
-		
+        UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
+        [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal ];
+        
+		[button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+
         button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
         [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[button setBackgroundImage:image forState:UIControlStateNormal];
+        [button setBackgroundImage:image forState:UIControlStateNormal];
         [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
     }
     

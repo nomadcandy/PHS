@@ -34,6 +34,8 @@
 		42849B7418E9C72200E5B3FB /* CleanFresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* CleanFresh.mov */; };
 		42849B7518E9C72200E5B3FB /* MatSensesAll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7218E9C72100E5B3FB /* MatSensesAll.mp4 */; };
 		42849B7618E9C72200E5B3FB /* MatSensesAll.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7218E9C72100E5B3FB /* MatSensesAll.mp4 */; };
+		42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */; };
+		42849B7918E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */; };
 		42B014FE18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B014FF18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B0150118DF46970068019C /* WebViewBG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0150018DF46970068019C /* WebViewBG1.png */; };
@@ -181,6 +183,7 @@
 		42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterGreyBubbles4.png; sourceTree = "<group>"; };
 		42849B7118E9C72100E5B3FB /* CleanFresh.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = CleanFresh.mov; sourceTree = "<group>"; };
 		42849B7218E9C72100E5B3FB /* MatSensesAll.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatSensesAll.mp4; sourceTree = "<group>"; };
+		42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carouselbgnopicuse.png; sourceTree = "<group>"; };
 		42B014FD18DF450F0068019C /* WebViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG.png; sourceTree = "<group>"; };
 		42B0150018DF46970068019C /* WebViewBG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG1.png; sourceTree = "<group>"; };
 		42B0150318DF47110068019C /* WebViewBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG2.png; sourceTree = "<group>"; };
@@ -433,6 +436,7 @@
 		42B0157518E318F80068019C /* ImagesGeneral */ = {
 			isa = PBXGroup;
 			children = (
+				42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */,
 				42849B4F18E4556700E5B3FB /* envelope.png */,
 				42849B4D18E4484700E5B3FB /* email.png */,
 				42B0159818E35CF20068019C /* VideosWhite3.png */,
@@ -679,6 +683,7 @@
 				42849B5018E4556700E5B3FB /* envelope.png in Resources */,
 				42B0152B18E315220068019C /* WalkOffLogoMat.pdf in Resources */,
 				42B0150D18DFBD330068019C /* CircleButton.png in Resources */,
+				42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				42B0156418E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
 				42FF7A2D18CDE92A00C72695 /* Images.xcassets in Resources */,
 				42B0153418E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
@@ -745,6 +750,7 @@
 				42B0153B18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42B0157418E317B00068019C /* SoftStep.pdf in Resources */,
 				42B014FF18DF450F0068019C /* WebViewBG.png in Resources */,
+				42849B7918E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				42849B6F18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
 				42B0154118E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42B0156E18E3177F0068019C /* SafeStep.pdf in Resources */,
@@ -947,6 +953,7 @@
 				GCC_PREFIX_HEADER = "Millenium/Millenium-Prefix.pch";
 				INFOPLIST_FILE = "Millenium/Millenium-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -960,6 +967,7 @@
 				GCC_PREFIX_HEADER = "Millenium/Millenium-Prefix.pch";
 				INFOPLIST_FILE = "Millenium/Millenium-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

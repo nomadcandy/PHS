@@ -36,7 +36,18 @@
     
     //configure carousel
     carousel.type = iCarouselTypeCoverFlow2;
+    //[carousel reloadData];
 }
+
+/*- (void)viewWillAppear:(BOOL)animated
+{
+    //[super viewDidLoad];
+    
+    //configure carousel
+    carousel.type = iCarouselTypeCoverFlow2;
+    //[carousel reloadData];
+}*/
+
 
 - (void)viewDidUnload
 {
@@ -63,6 +74,33 @@
 }
 //hell0
 
+
+
+/*- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
+{
+	UIButton *button = (UIButton *)view;
+	if (button == nil)
+	{
+        
+        
+         
+		//no button available to recycle, so create new one
+		UIImage *image = [UIImage imageNamed:@"WhiteCircleRugSample2.png"];
+		button = [UIButton buttonWithType:UIButtonTypeCustom];
+		button.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
+		[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[button setBackgroundImage:image forState:UIControlStateNormal];
+		button.titleLabel.font = [button.titleLabel.font fontWithSize:50];
+		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+	}
+	
+	//set button label
+	[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
+	
+	return button;
+}*/
+
+
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
 	UIButton *button = (UIButton *)view;
@@ -70,16 +108,20 @@
 	{
 		//no button available to recycle, so create new one
 		//UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
-        UIImage *image = [UIImage imageNamed:@"CarouselBGNoPic1.png"];
+        
+        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        UIImage *image = [UIImage imageNamed:@"carouselbgnopicuse.png"];
         
 
 		button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.5, image.size.height/1.5);
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+		
 		[button setBackgroundImage:image forState:UIControlStateNormal];
-        button.alpha = 0.8;
+         button.alpha = 0.8;
         
-        //button.layer.shadowColor = [UIColor blackColor].CGColor;
+        //[button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        
+        
         button.layer.shadowColor = [UIColor darkGrayColor].CGColor;
         //button.layer.shadowOpacity = 0.8;
         button.layer.shadowOpacity = 0.1;
@@ -94,6 +136,8 @@
         //[button.titleLabel setFont:[UIFont fontWithName:@"Avenir" size:18.0]];
         [button.titleLabel setFont:[UIFont fontWithName:@"Helvetica-bold" size:18.0]];
 		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        
+        //return button;
 	}
 	
 	//set button label
@@ -103,6 +147,7 @@
         
         [button setTitle:[NSString stringWithFormat:@"Direct Purchase Mat"] forState:UIControlStateNormal];
         //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
+        //return button;
     }
     
     if (index ==1){
