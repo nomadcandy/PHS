@@ -36,6 +36,7 @@
 
 - (IBAction)pressedButton:(id)sender;
 - (IBAction)goHome:(UIButton *)sender;
+- (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender;
 
 
 

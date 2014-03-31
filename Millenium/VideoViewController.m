@@ -205,7 +205,7 @@
         [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 		[button setBackgroundImage:image forState:UIControlStateNormal];
-        //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (index ==1){
@@ -304,6 +304,38 @@
     
     
 }
+
+- (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender {
+    
+    
+    
+    
+    
+        NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"MatSensesAll" ofType:@"mp4"];
+        NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
+        
+        _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+        _movieController.scalingMode = MPMovieScalingModeFill;
+        _movieController.controlStyle = MPMovieControlStyleNone;
+    
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(moviePlayBackDidFinish:)
+                                                     name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    
+    
+         _movieController.view.frame = CGRectMake(100,200, 640, 480);
+        [_movieController.view setCenter:CGPointMake(240, 160)];
+        [_movieController.view setFrame:CGRectMake(100,200, 640, 480)];
+        [_movieController.view setTransform:CGAffineTransformMakeRotation(-M_PI/2)];
+        [self.view addSubview:_movieController.view];
+        [_movieController play];
+    
+    //self.movieURL = CleanFresh.mov;
+    
+    
+}
+
 
 
 
