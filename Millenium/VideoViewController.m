@@ -324,10 +324,10 @@
                                                      name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
     
     
-         _movieController.view.frame = CGRectMake(100,200, 640, 480);
+         _movieController.view.frame = CGRectMake(200,150, 640, 480);
         [_movieController.view setCenter:CGPointMake(240, 160)];
-        [_movieController.view setFrame:CGRectMake(100,200, 640, 480)];
-        [_movieController.view setTransform:CGAffineTransformMakeRotation(-M_PI/2)];
+        [_movieController.view setFrame:CGRectMake(200,150, 640, 480)];
+        //[_movieController.view setTransform:CGAffineTransformMakeRotation(-M_PI/2)];
         [self.view addSubview:_movieController.view];
         [_movieController play];
     
