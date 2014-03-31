@@ -312,7 +312,7 @@
     
     
     
-        NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"MatSensesAll" ofType:@"mp4"];
+        NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesall" ofType:@"mp4"];
         NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
         
         _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
