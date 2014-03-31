@@ -81,7 +81,7 @@
    
     if (selectedImage == Nil){
         
-        selectedImage = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+        selectedImage = [UIImage imageNamed:@"jadeteahouselogo.png"];
         //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
 		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
 		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
@@ -299,7 +299,7 @@
 	if (matSizeButton == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"WhiteCircleMatSize1.png"];
+		UIImage *image = [UIImage imageNamed:@"whitecirclematsize1.png"];
 		matSizeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         matSizeButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
 		[matSizeButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
@@ -421,7 +421,7 @@ else if (carousel==carouselColor){
 	if (matColorButton == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *imageColor = [UIImage imageNamed:@"WhiteCircleRugSample2.png"];
+		UIImage *imageColor = [UIImage imageNamed:@"whitecirclerugsample2.png"];
 		matColorButton = [UIButton buttonWithType:UIButtonTypeCustom];
         matColorButton.frame = CGRectMake(0.0f, 0.0f, 110, 110);
         //matColorButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
@@ -449,7 +449,7 @@ else if (carousel==carouselColor){
     if (index ==0){
         
         [matColorButton setTitle:[NSString stringWithFormat:@"red 001"] forState:UIControlStateNormal];
-        UIImage *imageColor = [UIImage imageNamed:@"WhiteCircleRugSample2.png"];
+        UIImage *imageColor = [UIImage imageNamed:@"whitecirclerugsample2.png"];
         [matColorButton setBackgroundImage:imageColor forState:UIControlStateNormal];
         //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -547,7 +547,7 @@ else
 	if (logoButtons == nil)
 	{
 		//no button available to recycle, so create new one
-		UIImage *imageColor = [UIImage imageNamed:@"LogoButtonsBG.png"];
+		UIImage *imageColor = [UIImage imageNamed:@"logobuttonsbg.png"];
 		logoButtons = [UIButton buttonWithType:UIButtonTypeCustom];
         logoButtons.frame = CGRectMake(0.0f, 0.0f, 90, 60);
         //matColorButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
