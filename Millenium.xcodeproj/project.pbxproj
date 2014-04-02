@@ -377,8 +377,6 @@
 		42849B7018E9C6CD00E5B3FB /* ImagesTestVideo */ = {
 			isa = PBXGroup;
 			children = (
-				42849B7118E9C72100E5B3FB /* cleanfresh.mov */,
-				42849B7218E9C72100E5B3FB /* matsensesall.mp4 */,
 			);
 			name = ImagesTestVideo;
 			sourceTree = "<group>";
@@ -542,6 +540,8 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				42849B7118E9C72100E5B3FB /* cleanfresh.mov */,
+				42849B7218E9C72100E5B3FB /* matsensesall.mp4 */,
 				42849B7A18E9FE2900E5B3FB /* ImagesTestOnly */,
 				42849B7018E9C6CD00E5B3FB /* ImagesTestVideo */,
 				42849B5D18E5165400E5B3FB /* ImagesLandingPage */,
