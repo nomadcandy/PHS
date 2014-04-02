@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		422FFB8918EC7DEE00732DAF /* MatSensesUseBoth.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */; };
+		422FFB8B18EC857F00732DAF /* matsensesseriousclean.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 422FFB8A18EC857F00732DAF /* matsensesseriousclean.mp4 */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */; };
@@ -179,6 +180,7 @@
 
 /* Begin PBXFileReference section */
 		422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatSensesUseBoth.mp4; sourceTree = "<group>"; };
+		422FFB8A18EC857F00732DAF /* matsensesseriousclean.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = matsensesseriousclean.mp4; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoCollectionViewController.h; sourceTree = "<group>"; };
@@ -542,6 +544,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				422FFB8A18EC857F00732DAF /* matsensesseriousclean.mp4 */,
 				422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */,
 				42849B7118E9C72100E5B3FB /* cleanfresh.mov */,
 				42849B7218E9C72100E5B3FB /* matsensesall.mp4 */,
@@ -741,6 +744,7 @@
 				42B0155E18E3164B0068019C /* SafetyChef.pdf in Resources */,
 				42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
+				422FFB8B18EC857F00732DAF /* matsensesseriousclean.mp4 in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,

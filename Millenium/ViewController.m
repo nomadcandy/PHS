@@ -53,15 +53,19 @@
     
     self.movieController = [[MPMoviePlayerController alloc] init];
     
-    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"MatSensesUseBoth" ofType:@"mp4"];
+    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesseriousclean" ofType:@"mp4"];
     //NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesall" ofType:@"mp4"];
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
     self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
     [self.movieController.view setFrame:CGRectMake (150, 200, 661, 450)];
+    self.movieController.movieSourceType = MPMovieSourceTypeFile;
     [self.view addSubview:self.movieController.view];
     [self.movieController play];
     
-    
+    //hides play button
+     [_movieController setControlStyle:MPMovieControlStyleNone];
+    //[_movieController setBackgroundColor:[UIColor clearColor]];
+    _movieController.view.backgroundColor = [UIColor clearColor];
    
     
 }
