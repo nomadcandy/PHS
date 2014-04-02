@@ -66,22 +66,27 @@
 	CGContextStrokePath(context);
     
     //CGContextAddPath(<#CGContextRef context#>, <#CGPathRef path#>);
+    
+    
+    
+    CGContextSetFillColorWithColor(context,
+                                   [UIColor redColor].CGColor);
+    
+    
 
     //CGContextAddPath(context, addLines);
     
+    //CAShapeLayer *mask = [CAShapeLayer layer];
+    
+    //CAShapeLayer *maskUse = (__bridge CAShapeLayer *)(addPath);
+    //CAShapeLayer *maskUse = (context, addLines);
     
     
-    CAShapeLayer *mask = [CAShapeLayer layer];
     
-    //mask.path = addPath[].CGPath;
     
-    //self.view.layer.mask = mask;
     
-
-  
     
-    //CGRect == CGContextStrokePath(context);
-
+    
     
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

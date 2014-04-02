@@ -30,8 +30,8 @@
 		42849B6C18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6A18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png */; };
 		42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */; };
 		42849B6F18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */; };
-		42849B7318E9C72200E5B3FB /* CleanFresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* CleanFresh.mov */; };
-		42849B7418E9C72200E5B3FB /* CleanFresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* CleanFresh.mov */; };
+		42849B7318E9C72200E5B3FB /* cleanfresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* cleanfresh.mov */; };
+		42849B7418E9C72200E5B3FB /* cleanfresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* cleanfresh.mov */; };
 		42849B7518E9C72200E5B3FB /* matsensesall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7218E9C72100E5B3FB /* matsensesall.mp4 */; };
 		42849B7618E9C72200E5B3FB /* matsensesall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7218E9C72100E5B3FB /* matsensesall.mp4 */; };
 		42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */; };
@@ -199,7 +199,7 @@
 		42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		42849B6A18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterGreyBubbles1.png; sourceTree = "<group>"; };
 		42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterGreyBubbles4.png; sourceTree = "<group>"; };
-		42849B7118E9C72100E5B3FB /* CleanFresh.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = CleanFresh.mov; sourceTree = "<group>"; };
+		42849B7118E9C72100E5B3FB /* cleanfresh.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = cleanfresh.mov; sourceTree = "<group>"; };
 		42849B7218E9C72100E5B3FB /* matsensesall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = matsensesall.mp4; sourceTree = "<group>"; };
 		42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carouselbgnopicuse.png; sourceTree = "<group>"; };
 		42849B7B18E9FE6000E5B3FB /* whitecirclerugsample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitecirclerugsample2.png; sourceTree = "<group>"; };
@@ -377,7 +377,7 @@
 		42849B7018E9C6CD00E5B3FB /* ImagesTestVideo */ = {
 			isa = PBXGroup;
 			children = (
-				42849B7118E9C72100E5B3FB /* CleanFresh.mov */,
+				42849B7118E9C72100E5B3FB /* cleanfresh.mov */,
 				42849B7218E9C72100E5B3FB /* matsensesall.mp4 */,
 			);
 			name = ImagesTestVideo;
@@ -754,7 +754,7 @@
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
-				42849B7318E9C72200E5B3FB /* CleanFresh.mov in Resources */,
+				42849B7318E9C72200E5B3FB /* cleanfresh.mov in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
@@ -831,7 +831,7 @@
 				42849B8318EA004100E5B3FB /* rugsamplea.png in Resources */,
 				42B0152F18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0155318E316030068019C /* BrushTrip.pdf in Resources */,
-				42849B7418E9C72200E5B3FB /* CleanFresh.mov in Resources */,
+				42849B7418E9C72200E5B3FB /* cleanfresh.mov in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42849B8C18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0155618E316100068019C /* TripleFlexScraper.pdf in Resources */,

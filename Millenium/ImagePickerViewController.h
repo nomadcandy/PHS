@@ -12,7 +12,7 @@
 #import "MyDraggableImage.h"
 #import "MaskView.h"
 
-@interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 {
     
     AppDelegate *appdelegate;
@@ -49,6 +49,7 @@
     IBOutlet UIImageView*mask1ImageView;
     IBOutlet UIImageView*chosenImageView;
     IBOutlet UIImageView*editImageView;
+    IBOutlet UIImageView*longHoldImageView;
     IBOutlet UILabel*chosenImageLabel;
     IBOutlet UIWebView*googleWebView;
     IBOutlet UIView*overlayWebView;
@@ -71,10 +72,14 @@
 - (IBAction)getPoints:(UIButton*)sender;
 - (IBAction)cropScreenShot:(UIButton*)sender;
 
-
+@property(nonatomic, strong) NSMutableData *imageData;
+@property(nonatomic, assign) float length;
 //@property (nonatomic, strong) UIImage *chosenImage;
 @property (nonatomic, strong) UIImage *selectedImage;
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 - (void)setNeedsDisplay;
+- (void)saveLocally:(NSData *)imgData;
+
+
 
 @end

@@ -35,7 +35,25 @@
 {
     [super viewDidLoad];
     
+    UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    googleWebView.userInteractionEnabled = YES;
+    gestureRecognizer.minimumPressDuration = 0.3;
+    gestureRecognizer.delegate = self;
+    gestureRecognizer.numberOfTouchesRequired = 1;
+    [googleWebView addGestureRecognizer:gestureRecognizer];
     
+    /*UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected:)];
+    tapRecognizer.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:tapRecognizer];*/
+    
+    
+    /*UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    doubleTap.numberOfTouchesRequired = 2;
+    [self->googleWebView addGestureRecognizer:doubleTap];*/
+    
+   /* UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+    doubleTap.numberOfTouchesRequired = 2;
+    [self->overlayWebView addGestureRecognizer:doubleTap];*/
     
     MaskView *view = [[MaskView alloc]initWithFrame:self.view.frame];
     overlayWebView.hidden = YES;
@@ -82,6 +100,73 @@
         
     }
 
+
+-(void) handleLongPress:(UITapGestureRecognizer*) sender{
+    
+    NSURL*url = [googleWebView.request URL];
+    UITextField*urlField;
+    urlField.text = [url absoluteString];
+    
+    //url = [googleWebView request:URL];
+    NSLog(@"url recieved: %@", url);
+    NSLog(@"Downloading...");
+    // Get an image from the URL below
+    UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
+    //UIImage *image = [[UIImage alloc] init];
+    NSLog(@"%f,%f",image.size.width,image.size.height);
+    // Let's save the file into Document folder.
+    // You can also change this to your desktop for testing. (e.g. /Users/kiichi/Desktop/)
+    NSString *deskTopDir = @"/Users/jamisuebecker/Desktop";
+    //NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    // If you go to the folder below, you will find those pictures
+    NSLog(@"%@",deskTopDir);
+    NSLog(@"saving png");
+    NSString *pngFilePath = [NSString stringWithFormat:@"%@/jpg.png",deskTopDir];
+    NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(image)];
+    [data1 writeToFile:pngFilePath atomically:YES];
+    NSLog(@"saving jpeg");
+    NSString *jpegFilePath = [NSString stringWithFormat:@"%@/jpg.jpeg",deskTopDir];
+    NSData *data2 = [NSData dataWithData:UIImageJPEGRepresentation(image, 1.0f)];
+    [data2 writeToFile:jpegFilePath atomically:YES];
+    NSLog(@"saving image done");
+    //[image release];
+    
+
+    
+}
+
+/*- (void)handleLongPress:(UILongPressGestureRecognizer*)gestureRecognizer{
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan){
+        //get the image view that the user selected and save it as your selectedImageView property
+        UIImageView *pressedImageView = (UIImageView *)gestureRecognizer.view;
+        self->googleWebView = pressedImageView;
+        
+        NSLog(@"TAPPED");
+        //Touch gestures below top bar should not make the page turn.
+        //EDITED Check for only Tap here instead.
+        CGPoint touchPoint = [touch locationInView:self.view];
+        
+        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+        bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
+        NSLog(@"pageFlag tapbtnRight %d", pageFlag);
+        
+        NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
+        NSString *urlToSave = [googleWebView stringByEvaluatingJavaScriptFromString:imgURL];
+        NSLog(@"urlToSave :%@",urlToSave);
+        NSURL * imageURL = [NSURL URLWithString:urlToSave];
+        NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+        UIImage * image = [UIImage imageWithData:imageData];
+        selectedImage = image;//imgView is the reference of UIImageView
+        
+        UIImageWriteToSavedPhotosAlbum(image,
+                                       self,
+                                       @selector(savedPhotoImage:didFinishSavingWithError:contextInfo:),
+                                       NULL);
+        
+        
+    }}*/
+
+
 //works to autoload imagePicker
 /*- (void)onLoadTimer:(id)unused
 {
@@ -96,9 +181,78 @@
 
 }*/
 
+/*- (void)tapDetected:(UITapGestureRecognizer *)tapRecognizer
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        self.view.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+        self.view.transform = CGAffineTransformIdentity;
+    }];
+}*/
 
+- (void)tapDetected:(UITapGestureRecognizer *)sender
+{
+    int scrollPositionY = [[self->googleWebView stringByEvaluatingJavaScriptFromString:@"window.pageYOffset"] intValue];
+    int scrollPositionX = [[self->googleWebView stringByEvaluatingJavaScriptFromString:@"window.pageXOffset"] intValue];
+    
+    int displayWidth = [[self->googleWebView stringByEvaluatingJavaScriptFromString:@"window.outerWidth"] intValue];
+    CGFloat scale = googleWebView.frame.size.width / displayWidth;
+    
+    CGPoint pt = [sender locationInView:self->googleWebView];
+    pt.x *= scale;
+    pt.y *= scale;
+    pt.x += scrollPositionX;
+    pt.y += scrollPositionY;
+    
+    NSString *js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", pt.x, pt.y];
+    NSString * tagName = [self->googleWebView stringByEvaluatingJavaScriptFromString:js];
+    
+    NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", startPoint->x, startPoint->y];
+    NSString *urlToSave = [self->googleWebView stringByEvaluatingJavaScriptFromString:imgURL];
+    
+    NSURL *url = [NSURL URLWithString:urlToSave];
+    
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
+    
+    //UIImageWriteToSavedPhotosAlbum(image, <#id completionTarget#>, <#SEL completionSelector#>, <#void *contextInfo#>)
+    
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+}
 
+-(void) doubleTap :(UITapGestureRecognizer*) sender {
+    
+    
+    int scrollPositionY = [[self->googleWebView stringByEvaluatingJavaScriptFromString:@"window.pageYOffset"] intValue];
+    int scrollPositionX = [[self->googleWebView stringByEvaluatingJavaScriptFromString:@"window.pageXOffset"] intValue];
+    
+    int displayWidth = [[self->googleWebView stringByEvaluatingJavaScriptFromString:@"window.outerWidth"] intValue];
+    CGFloat scale = googleWebView.frame.size.width / displayWidth;
+    
+    CGPoint pt = [sender locationInView:self->googleWebView];
+    pt.x *= scale;
+    pt.y *= scale;
+    pt.x += scrollPositionX;
+    pt.y += scrollPositionY;
+    
+    NSString *js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", pt.x, pt.y];
+    NSString * tagName = [self->googleWebView stringByEvaluatingJavaScriptFromString:js];
+    
+    NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", startPoint->x, startPoint->y];
+    NSString *urlToSave = [self->googleWebView stringByEvaluatingJavaScriptFromString:imgURL];
+    
+    NSURL *url = [NSURL URLWithString:urlToSave];
+    
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
+    
+    //UIImageWriteToSavedPhotosAlbum(image, <#id completionTarget#>, <#SEL completionSelector#>, <#void *contextInfo#>)
+    
+    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    
+}
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
 
 
 #pragma mark-
@@ -273,12 +427,7 @@
     overlay1WebView.hidden = NO;
     overlayWebView.hidden = NO;
     
-    
-    
-    
     [editImageView setImage:selectedImage];
-    
-    
     
     MaskView *maskView = [[MaskView alloc]initWithFrame:self.view.frame];
     maskView.hidden = NO;
@@ -287,19 +436,36 @@
     [overlay1WebView addSubview:maskView];
     
     
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    
+    //CGContextFillRect(context, self.bounds);
+    
+    
 }
 
 
 - (IBAction)cropScreenShot:(UIButton*)sender{
     
-    CGRect screenRect = self->overlayWebView.frame;
+    overlay1WebView.hidden = NO;
+    overlayWebView.hidden = NO;
     
-    UIGraphicsBeginImageContext(screenRect.size);
+    [editImageView setImage:selectedImage];
+    
+    MaskView *maskView = [[MaskView alloc]initWithFrame:self.view.frame];
+    maskView.hidden = NO;
+    [maskView setOpaque:NO];
+    
+    [overlay1WebView addSubview:maskView];
+    
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     [[UIColor whiteColor] set];
     
-    CGContextFillRect(ctx, screenRect);
+    //CGContextFillRect(ctx, maskUse);
+    //CGContextFillRect (__bridge CAShapeLayer *)(addPath[]);
     
     [googleWebView.layer renderInContext:ctx];
     
@@ -307,8 +473,14 @@
     
     UIGraphicsEndImageContext();
     
+    
+    
     chosenImageView.image = newImage;
-    selectedImage = newImage;
+    //chosenImage = newImage;
+    
+    
+    
+    NSLog(@"chosenImage %@",selectedImage);
 
 }
 

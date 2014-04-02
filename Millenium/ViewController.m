@@ -49,6 +49,29 @@
 }*/
 
 
+-(IBAction)playClean:(id)sender{
+    
+    self.movieController = [[MPMoviePlayerController alloc] init];
+    
+    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"cleanfresh" ofType:@"mov"];
+    NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
+    self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+    [self.movieController.view setFrame:CGRectMake (0, 0, 328, 476)];
+    [self.view addSubview:self.movieController.view];
+    [self.movieController play];
+    
+    
+    //[self.movieController setContentURL:self.movieURL];
+    /*[self.movieController.view setFrame:CGRectMake (0, 0, 320, 476)];
+    [self.view addSubview:self.movieController.view];
+
+    [self.movieController play];*/
+    
+}
+
+
+
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
