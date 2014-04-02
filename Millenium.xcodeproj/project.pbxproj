@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422FFB8918EC7DEE00732DAF /* MatSensesUseBoth.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */; };
@@ -177,6 +178,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatSensesUseBoth.mp4; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoCollectionViewController.h; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */,
 				42849B7118E9C72100E5B3FB /* cleanfresh.mov */,
 				42849B7218E9C72100E5B3FB /* matsensesall.mp4 */,
 				42849B7A18E9FE2900E5B3FB /* ImagesTestOnly */,
@@ -777,6 +780,7 @@
 				42B0156D18E3177F0068019C /* SafeStep.pdf in Resources */,
 				42B0150A18DFBD170068019C /* RectangleButton.png in Resources */,
 				42B0154F18E315F20068019C /* ParquetWiperScraper.pdf in Resources */,
+				422FFB8918EC7DEE00732DAF /* MatSensesUseBoth.mp4 in Resources */,
 				42B0153118E3153B0068019C /* MotifMat.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
