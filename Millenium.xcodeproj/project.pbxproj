@@ -21,6 +21,8 @@
 		4247572B18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572918D7D70F000AAF7C /* LogoHeaderCell.m */; };
 		4247572E18D8AA55000AAF7C /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572D18D8AA55000AAF7C /* Logo.m */; };
 		4247572F18D8AA55000AAF7C /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572D18D8AA55000AAF7C /* Logo.m */; };
+		426A69F918ECA1B100255331 /* bubblestest.mov in Resources */ = {isa = PBXBuildFile; fileRef = 426A69F818ECA1B100255331 /* bubblestest.mov */; };
+		426A69FB18ECF25500255331 /* bubbletestgo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A69FA18ECF25400255331 /* bubbletestgo.m4v */; };
 		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
 		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
 		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
@@ -193,6 +195,8 @@
 		4247572918D7D70F000AAF7C /* LogoHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoHeaderCell.m; sourceTree = "<group>"; };
 		4247572C18D8AA55000AAF7C /* Logo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logo.h; sourceTree = "<group>"; };
 		4247572D18D8AA55000AAF7C /* Logo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logo.m; sourceTree = "<group>"; };
+		426A69F818ECA1B100255331 /* bubblestest.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = bubblestest.mov; sourceTree = "<group>"; };
+		426A69FA18ECF25400255331 /* bubbletestgo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = bubbletestgo.m4v; sourceTree = "<group>"; };
 		42849B4D18E4484700E5B3FB /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -544,6 +548,8 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				426A69FA18ECF25400255331 /* bubbletestgo.m4v */,
+				426A69F818ECA1B100255331 /* bubblestest.mov */,
 				422FFB8A18EC857F00732DAF /* matsensesseriousclean.mp4 */,
 				422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */,
 				42849B7118E9C72100E5B3FB /* cleanfresh.mov */,
@@ -756,6 +762,7 @@
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
 				42B0156118E316580068019C /* TripleFlexFlow.pdf in Resources */,
+				426A69FB18ECF25500255331 /* bubbletestgo.m4v in Resources */,
 				42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
 				42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
@@ -765,6 +772,7 @@
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
+				426A69F918ECA1B100255331 /* bubblestest.mov in Resources */,
 				42849B6B18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42849B9118EA02BE00E5B3FB /* whitepad.png in Resources */,
 				42849B8B18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,

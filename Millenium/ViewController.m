@@ -53,7 +53,7 @@
     
     self.movieController = [[MPMoviePlayerController alloc] init];
     
-    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesseriousclean" ofType:@"mp4"];
+    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"bubbletestgo" ofType:@"m4v"];
     //NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesall" ofType:@"mp4"];
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
     self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -63,7 +63,7 @@
     [self.movieController play];
     
     //hides play button
-     [_movieController setControlStyle:MPMovieControlStyleNone];
+     //[_movieController setControlStyle:MPMovieControlStyleNone];
     //[_movieController setBackgroundColor:[UIColor clearColor]];
     _movieController.view.backgroundColor = [UIColor clearColor];
    
