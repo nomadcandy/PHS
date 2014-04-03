@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		422FFB8918EC7DEE00732DAF /* MatSensesUseBoth.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */; };
-		422FFB8B18EC857F00732DAF /* matsensesseriousclean.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 422FFB8A18EC857F00732DAF /* matsensesseriousclean.mp4 */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */; };
@@ -21,8 +19,8 @@
 		4247572B18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572918D7D70F000AAF7C /* LogoHeaderCell.m */; };
 		4247572E18D8AA55000AAF7C /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572D18D8AA55000AAF7C /* Logo.m */; };
 		4247572F18D8AA55000AAF7C /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572D18D8AA55000AAF7C /* Logo.m */; };
-		426A69F918ECA1B100255331 /* bubblestest.mov in Resources */ = {isa = PBXBuildFile; fileRef = 426A69F818ECA1B100255331 /* bubblestest.mov */; };
 		426A69FB18ECF25500255331 /* bubbletestgo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A69FA18ECF25400255331 /* bubbletestgo.m4v */; };
+		426A69FD18ED07FA00255331 /* MatUse.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A69FC18ED07F800255331 /* MatUse.m4v */; };
 		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
 		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
 		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
@@ -34,10 +32,6 @@
 		42849B6C18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6A18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png */; };
 		42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */; };
 		42849B6F18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */; };
-		42849B7318E9C72200E5B3FB /* cleanfresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* cleanfresh.mov */; };
-		42849B7418E9C72200E5B3FB /* cleanfresh.mov in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7118E9C72100E5B3FB /* cleanfresh.mov */; };
-		42849B7518E9C72200E5B3FB /* matsensesall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7218E9C72100E5B3FB /* matsensesall.mp4 */; };
-		42849B7618E9C72200E5B3FB /* matsensesall.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7218E9C72100E5B3FB /* matsensesall.mp4 */; };
 		42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */; };
 		42849B7918E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */; };
 		42849B7C18E9FE6000E5B3FB /* whitecirclerugsample2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B7B18E9FE6000E5B3FB /* whitecirclerugsample2.png */; };
@@ -181,8 +175,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatSensesUseBoth.mp4; sourceTree = "<group>"; };
-		422FFB8A18EC857F00732DAF /* matsensesseriousclean.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = matsensesseriousclean.mp4; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoCollectionViewController.h; sourceTree = "<group>"; };
@@ -195,8 +187,8 @@
 		4247572918D7D70F000AAF7C /* LogoHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoHeaderCell.m; sourceTree = "<group>"; };
 		4247572C18D8AA55000AAF7C /* Logo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logo.h; sourceTree = "<group>"; };
 		4247572D18D8AA55000AAF7C /* Logo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logo.m; sourceTree = "<group>"; };
-		426A69F818ECA1B100255331 /* bubblestest.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = bubblestest.mov; sourceTree = "<group>"; };
 		426A69FA18ECF25400255331 /* bubbletestgo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = bubbletestgo.m4v; sourceTree = "<group>"; };
+		426A69FC18ED07F800255331 /* MatUse.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatUse.m4v; sourceTree = "<group>"; };
 		42849B4D18E4484700E5B3FB /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -207,8 +199,6 @@
 		42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		42849B6A18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterGreyBubbles1.png; sourceTree = "<group>"; };
 		42849B6D18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterGreyBubbles4.png; sourceTree = "<group>"; };
-		42849B7118E9C72100E5B3FB /* cleanfresh.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = cleanfresh.mov; sourceTree = "<group>"; };
-		42849B7218E9C72100E5B3FB /* matsensesall.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = matsensesall.mp4; sourceTree = "<group>"; };
 		42849B7718E9F4A200E5B3FB /* carouselbgnopicuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carouselbgnopicuse.png; sourceTree = "<group>"; };
 		42849B7B18E9FE6000E5B3FB /* whitecirclerugsample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitecirclerugsample2.png; sourceTree = "<group>"; };
 		42849B7E18E9FF7F00E5B3FB /* whitecirclematsize1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitecirclematsize1.png; sourceTree = "<group>"; };
@@ -548,12 +538,8 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				426A69FC18ED07F800255331 /* MatUse.m4v */,
 				426A69FA18ECF25400255331 /* bubbletestgo.m4v */,
-				426A69F818ECA1B100255331 /* bubblestest.mov */,
-				422FFB8A18EC857F00732DAF /* matsensesseriousclean.mp4 */,
-				422FFB8818EC7DEE00732DAF /* MatSensesUseBoth.mp4 */,
-				42849B7118E9C72100E5B3FB /* cleanfresh.mov */,
-				42849B7218E9C72100E5B3FB /* matsensesall.mp4 */,
 				42849B7A18E9FE2900E5B3FB /* ImagesTestOnly */,
 				42849B7018E9C6CD00E5B3FB /* ImagesTestVideo */,
 				42849B5D18E5165400E5B3FB /* ImagesLandingPage */,
@@ -743,6 +729,7 @@
 				42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				42B0156418E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
 				42FF7A2D18CDE92A00C72695 /* Images.xcassets in Resources */,
+				426A69FD18ED07FA00255331 /* MatUse.m4v in Resources */,
 				42B0153418E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
 				42B0150418DF47110068019C /* WebViewBG2.png in Resources */,
 				42849B8818EA016200E5B3FB /* allmatbuttons2.png in Resources */,
@@ -750,7 +737,6 @@
 				42B0155E18E3164B0068019C /* SafetyChef.pdf in Resources */,
 				42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
-				422FFB8B18EC857F00732DAF /* matsensesseriousclean.mp4 in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
@@ -768,18 +754,15 @@
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
-				42849B7318E9C72200E5B3FB /* cleanfresh.mov in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
-				426A69F918ECA1B100255331 /* bubblestest.mov in Resources */,
 				42849B6B18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42849B9118EA02BE00E5B3FB /* whitepad.png in Resources */,
 				42849B8B18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
-				42849B7518E9C72200E5B3FB /* matsensesall.mp4 in Resources */,
 				42B0150718DFBD0A0068019C /* SquareButton.png in Resources */,
 				42B0157018E317A50068019C /* AirStep.pdf in Resources */,
 				42849B7C18E9FE6000E5B3FB /* whitecirclerugsample2.png in Resources */,
@@ -792,7 +775,6 @@
 				42B0156D18E3177F0068019C /* SafeStep.pdf in Resources */,
 				42B0150A18DFBD170068019C /* RectangleButton.png in Resources */,
 				42B0154F18E315F20068019C /* ParquetWiperScraper.pdf in Resources */,
-				422FFB8918EC7DEE00732DAF /* MatSensesUseBoth.mp4 in Resources */,
 				42B0153118E3153B0068019C /* MotifMat.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -847,13 +829,11 @@
 				42849B8318EA004100E5B3FB /* rugsamplea.png in Resources */,
 				42B0152F18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0155318E316030068019C /* BrushTrip.pdf in Resources */,
-				42849B7418E9C72200E5B3FB /* cleanfresh.mov in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42849B8C18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0155618E316100068019C /* TripleFlexScraper.pdf in Resources */,
 				42B0150218DF46970068019C /* WebViewBG1.png in Resources */,
 				42B0153518E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
-				42849B7618E9C72200E5B3FB /* matsensesall.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
