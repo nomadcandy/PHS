@@ -53,12 +53,13 @@
     
     self.movieController = [[MPMoviePlayerController alloc] init];
     
-    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"MatUse" ofType:@"m4v"];
+    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"MatAnimationUseSmall" ofType:@"m4v"];
     //NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesall" ofType:@"mp4"];
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
     self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+    //[self.movieController.view setFrame:CGRectMake (392, 200, 240, 136)];
+    [self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
     //[self.movieController.view setFrame:CGRectMake (272, 200, 480, 272)];
-    [self.movieController.view setFrame:CGRectMake (272, 200, 480, 272)];
     self.movieController.movieSourceType = MPMovieSourceTypeFile;
     [self.view addSubview:self.movieController.view];
     [self.movieController play];
