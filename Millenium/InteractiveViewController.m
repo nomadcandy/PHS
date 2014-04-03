@@ -752,9 +752,16 @@ else
 -(IBAction)goHome:(id)sender{
     
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIStoryboard *storyboard = self.storyboard;
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+    [self presentViewController:vc animated:YES completion:nil];
+    
     
 }
+
+
+
 
 -(IBAction)backButton:(id)sender{
     

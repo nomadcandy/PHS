@@ -70,16 +70,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 }
 
--(IBAction)goHome:(id)sender{
-    //[DIYMenu dismiss];
-    //[self menuCancelled];
-    UIStoryboard *storyboard = self.storyboard;
-    ViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"HomeBoard"];
+
+- (IBAction)goHome:(UIButton *)sender {
     
-    // Configure the new view controller here.
-    [self presentViewController:svc animated:YES completion:nil];
+    /*UIStoryboard *storyboard = self.storyboard;
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+    [self presentViewController:vc animated:YES completion:nil];*/
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+
+
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
     

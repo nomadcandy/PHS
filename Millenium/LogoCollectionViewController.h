@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 #import "LogoCell.h"
 #import "LogoHeaderCell.h"
 #import "InteractiveViewController.h"
@@ -24,6 +25,7 @@
 @property (nonatomic, assign) int selectedIndex;
 
 -(IBAction)goInteractive:(id)sender;
+- (IBAction)goHome:(UIButton *)sender ;
 
 
 

@@ -189,6 +189,7 @@
 		42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157E18E3428B0068019C /* WalkOffLogoMat.png */; };
 		42B0159918E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
 		42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
+		42DBC73B18EE03AA005BF791 /* CintasLogoHighRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
@@ -360,6 +361,7 @@
 		42B0157D18E3428B0068019C /* WaterGuardLogoInlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardLogoInlay.png; sourceTree = "<group>"; };
 		42B0157E18E3428B0068019C /* WalkOffLogoMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WalkOffLogoMat.png; sourceTree = "<group>"; };
 		42B0159818E35CF20068019C /* VideosWhite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite3.png; sourceTree = "<group>"; };
+		42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CintasLogoHighRes.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
 		42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveSlideViewController.h; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		426A6A2518EDACAC00255331 /* ImagesHome */ = {
 			isa = PBXGroup;
 			children = (
+				42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */,
 				426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */,
 				426A6A2818EDADBA00255331 /* LookingSerious.png */,
 				426A6A2918EDADBA00255331 /* WeGotThis.png */,
@@ -977,6 +980,7 @@
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				426A6A1818ED0CC300255331 /* SampleLogo9.png in Resources */,
 				426A6A2F18EDADBA00255331 /* LookingSerious.png in Resources */,
+				42DBC73B18EE03AA005BF791 /* CintasLogoHighRes.png in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
 				426A6A6618EDDC8700255331 /* C17a_SoftStep_MASTER.mp4 in Resources */,

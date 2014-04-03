@@ -640,13 +640,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR0-DG-lFR">
-                                    <rect key="frame" x="431" y="14" width="104" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="CintasLogoHighRes.png">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-RC-jKe">
                                     <rect key="frame" x="5" y="7" width="78" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -658,12 +651,22 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGOS NEAR ME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcs-vW-CVy">
-                                    <rect key="frame" x="64" y="-350" width="1024" height="768"/>
+                                    <rect key="frame" x="69" y="-352" width="1024" height="768"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR0-DG-lFR">
+                                    <rect key="frame" x="538" y="14" width="97" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="CintasLogoHighRes.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="goHome:" destination="l8u-Ww-K06" eventType="touchUpInside" id="YwD-Yt-eNJ"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -1259,6 +1262,11 @@
     </scenes>
     <resources>
         <image name="BackArrow.png" width="38" height="37"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CleanButton.png" width="236" height="136"/>
         <image name="FreshButton.png" width="322" height="128"/>
