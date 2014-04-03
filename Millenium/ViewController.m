@@ -49,6 +49,35 @@
 }*/
 
 
+-(IBAction)playPro:(id)sender{
+    
+    self.movieController = [[MPMoviePlayerController alloc] init];
+    
+    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"Professional_video" ofType:@"mp4"];
+    //NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesall" ofType:@"mp4"];
+    NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
+    self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+    //[self.movieController.view setFrame:CGRectMake (392, 200, 240, 136)];
+    [self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
+    //[self.movieController.view setFrame:CGRectMake (272, 200, 480, 272)];
+    self.movieController.movieSourceType = MPMovieSourceTypeFile;
+    [self.view addSubview:self.movieController.view];
+    [self.movieController play];
+    
+    //hides play button
+    [_movieController setControlStyle:MPMovieControlStyleNone];
+    _movieController.view.backgroundColor = [UIColor clearColor];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:_movieController];
+    
+    
+}
+
+
 -(IBAction)playClean:(id)sender{
     
     self.movieController = [[MPMoviePlayerController alloc] init];
@@ -93,6 +122,9 @@
         player.fullscreen = NO;
     }
 }
+
+
+
 
 
 

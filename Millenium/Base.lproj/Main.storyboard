@@ -773,7 +773,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playClean:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZzU-4i-Jex"/>
+                                    <action selector="playPro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uim-aa-rFh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY9-Xr-SHu">
@@ -1245,12 +1245,18 @@
         <image name="OrganizedButton.png" width="400" height="131"/>
         <image name="ProffessionalButton.png" width="400" height="132"/>
         <image name="VideosWhite3.png" width="230" height="91"/>
+        <image name="VideosWhite3.png" width="230" height="91"/>
         <image name="WeGotThis.png" width="400" height="129"/>
         <image name="WebViewBG2.png" width="557" height="395"/>
         <image name="alllogobuttons2.png" width="109" height="99"/>
         <image name="allmatbuttons2.png" width="109" height="99"/>
+        <image name="allmatbuttons2.png" width="109" height="99"/>
         <image name="cintaslogohighres.png" width="448" height="170"/>
         <image name="envelope.png" width="795" height="462"/>
+        <image name="envelope.png" width="795" height="462"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="logothumbnailbg.png" width="220" height="220"/>
         <image name="rugsamplea.png" width="114" height="104"/>

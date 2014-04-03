@@ -29,6 +29,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *label;
 
 - (IBAction)playClean:(id)sender;
+-(IBAction)playPro:(id)sender;
 
 - (IBAction)pressedButton:(id)sender;
 - (IBAction)toggledSwitch:(id)sender;
