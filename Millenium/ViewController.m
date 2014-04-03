@@ -67,8 +67,31 @@
     //hides play button
      [_movieController setControlStyle:MPMovieControlStyleNone];
     _movieController.view.backgroundColor = [UIColor clearColor];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:_movieController];
    
     
+}
+
+
+- (void) moviePlayBackDidFinish:(NSNotification*)notification {
+    
+    MPMoviePlayerController *player = [notification object];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:player];
+    
+    if ([player
+         respondsToSelector:@selector(setFullscreen:animated:)])
+    {
+        [player.view removeFromSuperview];
+        player.fullscreen = NO;
+    }
 }
 
 
