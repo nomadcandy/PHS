@@ -19,6 +19,8 @@
 
 
     IBOutlet UIViewController*viewController;
+    IBOutlet UIImageView*hideCarouselView;
+    IBOutlet UIImageView*hideGradCarouselView;
     
 }
 

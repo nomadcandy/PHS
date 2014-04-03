@@ -77,6 +77,9 @@
     carouselUtilityMats.hidden =YES;
     carouselAntiFatigue.hidden =YES;
     
+    hideCarouselView.hidden =YES;
+    hideGradCarouselView.hidden=YES;
+    
 }
 
 - (void)viewDidUnload
@@ -173,6 +176,7 @@
     
     
     
+    
 	UIButton *button = (UIButton *)view;
 	if (button == nil)
         
@@ -186,6 +190,8 @@
         [button setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
         [button.titleLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:18.0]];
 		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
 	}
 	
 	//set button label
@@ -309,10 +315,11 @@
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender {
     
     
+       hideCarouselView.hidden=NO;
+        hideGradCarouselView.hidden=NO;
     
     
-    
-        NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesall" ofType:@"mp4"];
+        NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"WalkOffLogoMatMedium" ofType:@"m4v"];
         NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
         
         _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -325,17 +332,16 @@
                                                      name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
     
     
-         _movieController.view.frame = CGRectMake(200,150, 640, 480);
-        [_movieController.view setCenter:CGPointMake(240, 160)];
-        [_movieController.view setFrame:CGRectMake(200,150, 640, 480)];
-        //[_movieController.view setTransform:CGAffineTransformMakeRotation(-M_PI/2)];
+        [_movieController.view setFrame:CGRectMake(150,130, 920, 520)];
+    
         [self.view addSubview:_movieController.view];
         [_movieController play];
     
-    //self.movieURL = CleanFresh.mov;
+    
     
     
 }
+
 
 
 
@@ -355,23 +361,6 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    
-    self.movieController = [[MPMoviePlayerController alloc] init];
-    
-    [self.movieController setContentURL:self.movieURL];
-    [self.movieController.view setFrame:CGRectMake (0, 0, 320, 476)];
-    [self.view addSubview:self.movieController.view];
-    
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(moviePlayBackDidFinish:)
-                                                 name:MPMoviePlayerPlaybackDidFinishNotification
-                                               object:self.movieController];
-    
-    [self.movieController play];
-    
-}
 
 - (void)moviePlayBackDidFinish:(NSNotification *)notification {
     
@@ -380,6 +369,9 @@
     [self.movieController stop];
     [self.movieController.view removeFromSuperview];
     self.movieController = nil;
+    
+    hideGradCarouselView.hidden=YES;
+    hideCarouselView.hidden=YES;
     
 }
 

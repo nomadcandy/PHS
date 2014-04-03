@@ -19,6 +19,10 @@
 {
     IBOutlet UIButton*cleanButton;
     IBOutlet UIViewController*InteractiveViewController;
+    IBOutlet UIImageView*charlesView;
+    IBOutlet UIImageView*charlesBGView;
+    
+    
 }
 
 @property (copy,   nonatomic) NSURL *movieURL;
@@ -28,8 +32,9 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carousel;
 @property (nonatomic, strong) IBOutlet UILabel *label;
 
-- (IBAction)playClean:(id)sender;
+-(IBAction)playClean:(id)sender;
 -(IBAction)playPro:(id)sender;
+-(IBAction)playFriendly:(id)sender;
 
 - (IBAction)pressedButton:(id)sender;
 - (IBAction)toggledSwitch:(id)sender;
