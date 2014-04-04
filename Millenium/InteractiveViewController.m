@@ -77,6 +77,10 @@
     [super viewDidLoad];
     [logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
     
+    
+  
+
+    
     NSLog(@"chosenImage %@",selectedImage);
    
     if (selectedImage == Nil){
@@ -293,34 +297,36 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
-    if (carousel==carouselSize){
+    //if (carousel==carouselSize){
     
-	UIButton *matSizeButton = (UIButton *)view;
-	if (matSizeButton == nil)
-	{
+        /*UIButton *matSizeButton = (UIButton *)view;
+        if (matSizeButton == nil)
+            
+        {
+            
 		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"whitecirclematsize1.png"];
-		matSizeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        matSizeButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
-		[matSizeButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-		[matSizeButton setBackgroundImage:image forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"whitecirclematsize1.png"];
+            matSizeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            matSizeButton.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
+            [matSizeButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+            [matSizeButton setBackgroundImage:image forState:UIControlStateNormal];
         
-        matSizeButton.layer.shadowColor = [UIColor blackColor].CGColor;
-        matSizeButton.layer.shadowOpacity = 0.8;
-        matSizeButton.layer.shadowRadius = 12;
-        matSizeButton.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+            matSizeButton.layer.shadowColor = [UIColor blackColor].CGColor;
+            matSizeButton.layer.shadowOpacity = 0.8;
+            matSizeButton.layer.shadowRadius = 12;
+            matSizeButton.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
         
-        matSizeButton.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
-        [matSizeButton setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
+            matSizeButton.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
+            [matSizeButton setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
         
-        [matSizeButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:22.0]];
-		//button.titleLabel.font = [button.titleLabel.font fontWithSize:22];
-        [matSizeButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-	}
+            [matSizeButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:22.0]];
+            //button.titleLabel.font = [button.titleLabel.font fontWithSize:22];
+            [matSizeButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        }
 	
 	//set button label
-	[matSizeButton setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
-    [matSizeButton setTitle:[NSString stringWithFormat:@"matSizeString", matSizeString] forState:UIControlStateNormal];
+            [matSizeButton setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
+            [matSizeButton setTitle:[NSString stringWithFormat:@"matSizeString", matSizeString] forState:UIControlStateNormal];
     
     
     if (index ==0){
@@ -411,11 +417,11 @@
 
 
     return matSizeButton;
-}
+}*/
     
 
 
-else if (carousel==carouselColor){
+ if (carousel==carouselColor){
     
     UIButton *matColorButton = (UIButton *)view;
 	if (matColorButton == nil)
@@ -538,6 +544,10 @@ else if (carousel==carouselColor){
     return matColorButton;
     
 }
+
+
+
+
     
 else
     

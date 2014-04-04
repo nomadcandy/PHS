@@ -17,7 +17,14 @@
 
 @synthesize nearMeImagesArray;
 @synthesize nearMeNamesArray;
-@synthesize button;
+//@synthesize button;
+//@synthesize logoChooseButton;
+@synthesize selectedIndex;
+@synthesize delegate=_delegate;
+
+@synthesize rowSelectedHere;
+@synthesize rowSelectedSend;
+@synthesize indexPathSend;
 
 NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
 NSString *kLogoHeaderCellID = @"logoHeaderCellID";
@@ -76,6 +83,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 
 -(IBAction)goInteractive:(id)sender{
+    
+  
+    
     [DIYMenu dismiss];
     
    [self dismissViewControllerAnimated:YES completion:nil];
@@ -187,25 +197,24 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
        //[logoCell.logoChooseButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
     
     
-        [[logoCell logoChooseButton] addTarget:self action:@selector(logoSelected:) forControlEvents:UIControlEventTouchUpInside];
-        
+        //[[logoCell logoChooseButton] addTarget:self action:@selector(logoSelected:) forControlEvents:UIControlEventTouchUpInside];
+    
+     [[logoCell logoChooseButton] addTarget:self action:@selector(logoSelected:event:) forControlEvents:UIControlEventTouchUpInside];
         
         if (logoCell.logoChooseButton)
             
         {
-          
-            _selectedIndex=[indexPath row];
-            logoCell.logoChooseButton.tag=[indexPath row];
-            //NSLog(@"index %d",index);
-            button = [logoCell logoChooseButton];
-            button.tag = _selectedIndex;
-            NSLog(@"selectedIndex %i",_selectedIndex);
             
+            selectedIndex=[indexPath row];
+            _logoChooseButton.tag=[indexPath row];
+            NSLog(@"addButton.tag:%ld",(long)_logoChooseButton.tag);
+            NSLog(@"indexPathSender1:%@",indexPath);
+            NSLog(@"rowSelectedHere %i",rowSelectedHere);
             
+            NSLog(@"indexPathSender:%ld",(long)logoCell.tag);
             
-
-            
-            
+            UIButton*button = [logoCell logoChooseButton];
+            button.tag = selectedIndex;
 
             
             
@@ -214,17 +223,41 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         return logoCell;
     }
     
+-(IBAction)logoSelected:(UIButton*)sender event:(id)event {
+    
+    NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
     
--(IBAction)logoSelected:(id)sender
+    NSLog(@"sender %@",sender);
+    NSLog(@"selectedIndex %d",selectedIndex);
+    NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
+    
+   
+    
+    UIStoryboard *storyboard = self.storyboard;
+    InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:svc animated:YES completion:nil];
+
+    
+    
+    
+}
+
+
+/*-(IBAction)logoSelected:(id)sender
 
 {
    
     NSLog(@"sender %@",sender);
-    NSLog(@"selectedIndex %d",_selectedIndex);
-    NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:_selectedIndex];
+    NSLog(@"selectedIndex %d",selectedIndex);
+    NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     //NSLog(@"nearMe %@",nearMeImageString);
-    NSLog(@"nearMe %i",button.tag);
+    //NSLog(@"buttonTag %i",button.tag);
+    
+    //NSLog(@"addButton.tag:%ld",(long)sender.tag);
+     //NSLog(@"addButton.tag:%ld",button.tag);
     
     UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
@@ -232,7 +265,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     // Configure the new view controller here.
     [self presentViewController:svc animated:YES completion:nil];
     
-}
+}*/
 
 
 

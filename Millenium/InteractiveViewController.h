@@ -21,9 +21,13 @@
     
     MyDraggableImage*MyDragRect;
     IBOutlet UIButton*logoButton;
+    
     AppDelegate *appdelegate;
     UIImage *selectedImage;
 }
+
+@property (nonatomic, strong) IBOutlet UITextField *widthField;
+@property (nonatomic, strong) IBOutlet UITextField *heightField;
 
 @property (nonatomic, strong) IBOutlet UIView *interactiveView;
 @property (nonatomic, strong) IBOutlet UIButton *uploadLogoButton;
@@ -37,6 +41,11 @@
 @property (nonatomic, strong) IBOutlet UIButton *logoButton;
 @property (nonatomic, strong) IBOutlet UIButton *matButton;
 @property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
+
+@property (nonatomic, strong) IBOutlet UIButton *size2by3;
+@property (nonatomic, strong) IBOutlet UIButton *size3by5;
+@property (nonatomic, strong) IBOutlet UIButton *size4by6;
+@property (nonatomic, strong) IBOutlet UIButton *size3by10;
 
 
 

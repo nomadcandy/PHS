@@ -14,21 +14,44 @@
 #import "DIYMenu.h"
 #import "Logo.h"
 
-@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate>
+
+@protocol ButtonPickerDelegate <NSObject>
+
+@end
+
+@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate>
 
 {
     //UIButton* button;
     
+    int selectedIndex;
+    int indexPathSend;
+    int rowSelectedHere;
+    int rowSelectedSend;
+    
+    __unsafe_unretained id <ButtonPickerDelegate> _delegate;
+    
 }
 
+
+
+
+
 @property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
+
+@property (nonatomic, assign) int selectedIndex;
+@property (nonatomic, assign) int indexPathSend;
+@property (nonatomic, assign) int rowSelectedHere;
+@property (nonatomic, assign) int rowSelectedSend;
 
 @property (nonatomic, copy) NSArray *searchImagesArray;
 @property (nonatomic, copy) NSArray *nearMeImagesArray;
 @property (nonatomic, copy) NSArray *searchNamesArray;
 @property (nonatomic, copy) NSArray *nearMeNamesArray;
-@property (nonatomic, assign) int selectedIndex;
-@property (nonatomic, strong) UIButton*button;
+//@property (nonatomic, strong) UIButton*button;
+
+@property (nonatomic,strong) IBOutlet UIButton *logoChooseButton;
+@property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
 
 -(IBAction)goInteractive:(id)sender;
 - (IBAction)goHome:(UIButton *)sender ;
