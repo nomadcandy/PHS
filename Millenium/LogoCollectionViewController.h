@@ -16,6 +16,11 @@
 
 @interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate>
 
+{
+    //UIButton* button;
+    
+}
+
 @property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
 
 @property (nonatomic, copy) NSArray *searchImagesArray;
@@ -23,6 +28,7 @@
 @property (nonatomic, copy) NSArray *searchNamesArray;
 @property (nonatomic, copy) NSArray *nearMeNamesArray;
 @property (nonatomic, assign) int selectedIndex;
+@property (nonatomic, strong) UIButton*button;
 
 -(IBAction)goInteractive:(id)sender;
 - (IBAction)goHome:(UIButton *)sender ;

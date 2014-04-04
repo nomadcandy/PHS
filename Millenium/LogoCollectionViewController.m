@@ -17,6 +17,7 @@
 
 @synthesize nearMeImagesArray;
 @synthesize nearMeNamesArray;
+@synthesize button;
 
 NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
 NSString *kLogoHeaderCellID = @"logoHeaderCellID";
@@ -33,7 +34,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [DIYMenu dismiss];
+    
+    
+    nearMeNamesArray= @[@"Helix", @"MindCraft", @"Rainbow Hands",
+                        @"DJ Pop", @"School Anime", @"Spartan Golf Club",
+                        @"Pheonix Designs", @"Old", @"Old",
+                        @"Old", @"Old", @"Old",
+                        @"Old", @"Old", @"Old"];
+    
+    nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
+                         @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
     
     
 	// Do any additional setup after loading the view.
@@ -185,9 +197,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             _selectedIndex=[indexPath row];
             logoCell.logoChooseButton.tag=[indexPath row];
             //NSLog(@"index %d",index);
-            UIButton* button = [logoCell logoChooseButton];
+            button = [logoCell logoChooseButton];
             button.tag = _selectedIndex;
             NSLog(@"selectedIndex %i",_selectedIndex);
+            
+            
+            
+
+            
+            
+
             
             
         }
@@ -200,8 +219,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)logoSelected:(id)sender
 
 {
-    
+   
     NSLog(@"sender %@",sender);
+    NSLog(@"selectedIndex %d",_selectedIndex);
+    NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:_selectedIndex];
+    //NSLog(@"nearMe %@",nearMeImageString);
+    NSLog(@"nearMe %i",button.tag);
+    
     UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
     
