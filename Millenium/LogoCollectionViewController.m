@@ -92,7 +92,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [DIYMenu dismiss];
     
-   [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIStoryboard *storyboard = self.storyboard;
+     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+     [self presentViewController:svc animated:YES completion:nil];
+   //[self dismissViewControllerAnimated:YES completion:nil];
 
 }
 
@@ -232,17 +236,17 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //int indexSend = addButton.tag;
     
     NSLog(@"sender %@",sender);
-    NSLog(@"selectedIndex %d",selectedIndex);
+    NSLog(@"indexPathSend %d",indexPathSend);
     //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     
     
     
-    logoUseString=[nearMeImagesArray objectAtIndex:myInt];
+    logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
     NSLog(@"logoUseString %@",logoUseString);
 
-   
     
-   /* UIStoryboard *storyboard = self.storyboard;
+    
+    /*UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
     [self presentViewController:svc animated:YES completion:nil];*/
 

@@ -65,6 +65,7 @@
 -(void)ViewDidAppear
 {
     NSLog(@"logoUseStringSend %@",logoUseString);
+     NSLog(@"logoUseStringSendDidAppear %@",logoUseString);
     
     if (logoUseString == Nil){
         
@@ -77,8 +78,15 @@
     else {
         
         logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        selectedImage = [UIImage imageNamed:logoUseString];
-		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+        UIImage*freshImage = [UIImage imageNamed:logoUseString];
+        NSLog(@"logoUseStringImageName %@",logoUseString);
+		//[logoPicButton setBackgroundImage:freshImage forState:UIControlStateNormal];
+        [logoPicButton setImage:freshImage forState:UIControlStateNormal];
+        
+        
+        UIImageView * imgView = [[UIImageView alloc] initWithImage:freshImage];
+        [logoPicButton addSubview:imgView];
+        //[logoPicButton addSubview:freshImage];
     }
 
     
@@ -103,10 +111,11 @@
     else {
         
         logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        selectedImage = [UIImage imageNamed:logoUseString];
-		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+        UIImage*newFreshImage = [UIImage imageNamed:logoUseString];
+		[logoPicButton setBackgroundImage:newFreshImage forState:UIControlStateNormal];
         
-         //[logoPicButton reloadInputViews];
+        UIImageView * imgView = [[UIImageView alloc] initWithImage:newFreshImage];
+        [logoPicButton addSubview:imgView];
    }
     
    
