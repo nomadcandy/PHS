@@ -71,7 +71,7 @@
     
     NSLog(@"%@",lastNameString);
     
-     NSString*messageString = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
+     NSString*messageString = [NSString stringWithFormat:@"%@  %@, %@, %@, %@, %@, %@, %@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
     
     NSString *messageBody = messageString;
     
