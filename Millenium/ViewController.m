@@ -329,6 +329,28 @@
     
     
    }
+
+- (IBAction)presentDirectViewController:(UIButton *)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    DirectViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"DirectStoryBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:dvc animated:YES completion:nil];
+    
+    
+}
+
+- (IBAction)presentRentalViewController:(UIButton *)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    RentalViewController *rvc = [storyboard instantiateViewControllerWithIdentifier:@"RentalStoryBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:rvc animated:YES completion:nil];
+    
+    
+}
 //Not Using Now
 #pragma mark-
 #pragma mark Segue

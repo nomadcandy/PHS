@@ -94,6 +94,9 @@
 
 
 
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -739,6 +742,38 @@ else
     
     
     
+
+- (IBAction)screenShot:(UIButton *)sender{
+    
+    
+    
+    //begin capture entire webview
+    CGRect screenRect = self.view.frame;
+    
+    UIGraphicsBeginImageContext(screenRect.size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx, screenRect);
+    
+    [self.view.layer renderInContext:ctx];
+    
+    UIImage *orderImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    //TODO pass save  orderImage to device and pass to SignOffScreen
+    
+    //chosenImageView.image = orderImage;
+    //chosenImage = newImage;
+    
+    
+    
+    NSLog(@"chosenImage %@",selectedImage);
+    
+    
+    
+}
 
 
 

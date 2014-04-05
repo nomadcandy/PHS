@@ -51,6 +51,12 @@
 		426A6A6E18EDE32200255331 /* WalkOffLogoMatMedium.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */; };
 		427CE62C18F0670700865291 /* FliersWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CE62B18F0670700865291 /* FliersWhite.png */; };
 		427CE62E18F069DF00865291 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427CE62D18F069DF00865291 /* MessageUI.framework */; };
+		427CE63218F072F400865291 /* SignOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63118F072F400865291 /* SignOffViewController.m */; };
+		427CE63318F072F400865291 /* SignOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63118F072F400865291 /* SignOffViewController.m */; };
+		427CE63818F07D7A00865291 /* RentalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63718F07D7A00865291 /* RentalViewController.m */; };
+		427CE63918F07D7A00865291 /* RentalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63718F07D7A00865291 /* RentalViewController.m */; };
+		427CE63C18F07D8B00865291 /* DirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63B18F07D8B00865291 /* DirectViewController.m */; };
+		427CE63D18F07D8B00865291 /* DirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63B18F07D8B00865291 /* DirectViewController.m */; };
 		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
 		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
 		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
@@ -253,6 +259,12 @@
 		426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMedium.m4v; sourceTree = "<group>"; };
 		427CE62B18F0670700865291 /* FliersWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FliersWhite.png; sourceTree = "<group>"; };
 		427CE62D18F069DF00865291 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		427CE63018F072F400865291 /* SignOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignOffViewController.h; sourceTree = "<group>"; };
+		427CE63118F072F400865291 /* SignOffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignOffViewController.m; sourceTree = "<group>"; };
+		427CE63618F07D7A00865291 /* RentalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentalViewController.h; sourceTree = "<group>"; };
+		427CE63718F07D7A00865291 /* RentalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalViewController.m; sourceTree = "<group>"; };
+		427CE63A18F07D8B00865291 /* DirectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectViewController.h; sourceTree = "<group>"; };
+		427CE63B18F07D8B00865291 /* DirectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectViewController.m; sourceTree = "<group>"; };
 		42849B4D18E4484700E5B3FB /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -470,6 +482,33 @@
 			children = (
 			);
 			name = MatVideos;
+			sourceTree = "<group>";
+		};
+		427CE62F18F072CC00865291 /* SignOffViewController */ = {
+			isa = PBXGroup;
+			children = (
+				427CE63018F072F400865291 /* SignOffViewController.h */,
+				427CE63118F072F400865291 /* SignOffViewController.m */,
+			);
+			name = SignOffViewController;
+			sourceTree = "<group>";
+		};
+		427CE63418F07D5100865291 /* DirectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				427CE63A18F07D8B00865291 /* DirectViewController.h */,
+				427CE63B18F07D8B00865291 /* DirectViewController.m */,
+			);
+			name = DirectViewController;
+			sourceTree = "<group>";
+		};
+		427CE63518F07D6200865291 /* RentalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				427CE63618F07D7A00865291 /* RentalViewController.h */,
+				427CE63718F07D7A00865291 /* RentalViewController.m */,
+			);
+			name = RentalViewController;
 			sourceTree = "<group>";
 		};
 		42849B5118E46C3D00E5B3FB /* VideoViewController */ = {
@@ -716,6 +755,9 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				427CE63518F07D6200865291 /* RentalViewController */,
+				427CE63418F07D5100865291 /* DirectViewController */,
+				427CE62F18F072CC00865291 /* SignOffViewController */,
 				42849B5118E46C3D00E5B3FB /* VideoViewController */,
 				42B0152418E312090068019C /* RequestFlierViewController */,
 				42B0151C18E2F7620068019C /* MarketingViewController */,
@@ -1014,14 +1056,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				424756EB18D38B2C000AAF7C /* LogoCell.m in Sources */,
+				427CE63818F07D7A00865291 /* RentalViewController.m in Sources */,
 				42B0152718E312250068019C /* RequestFlierViewController.m in Sources */,
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,
 				4247572E18D8AA55000AAF7C /* Logo.m in Sources */,
 				42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
 				42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */,
+				427CE63218F072F400865291 /* SignOffViewController.m in Sources */,
 				42B0151A18E1F0520068019C /* ClipView.m in Sources */,
 				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,
+				427CE63C18F07D8B00865291 /* DirectViewController.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42B0151F18E2F79F0068019C /* MarketingViewController.m in Sources */,
 				42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */,
@@ -1052,9 +1097,12 @@
 				424756EC18D38B2C000AAF7C /* LogoCell.m in Sources */,
 				42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42B0152018E2F79F0068019C /* MarketingViewController.m in Sources */,
+				427CE63D18F07D8B00865291 /* DirectViewController.m in Sources */,
 				42EB3EE218D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
 				4247572B18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
+				427CE63318F072F400865291 /* SignOffViewController.m in Sources */,
 				424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */,
+				427CE63918F07D7A00865291 /* RentalViewController.m in Sources */,
 				424756F118D7379E000AAF7C /* InternetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

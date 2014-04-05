@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
+#import "DirectViewController.h"
+#import "RentalViewController.h"
 #import "InteractiveViewController.h"
 #import "MarketingViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
