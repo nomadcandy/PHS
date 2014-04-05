@@ -49,6 +49,8 @@
 		426A6A3718EDD3B100255331 /* Professional_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A3618EDD3B100255331 /* Professional_video.mp4 */; };
 		426A6A3918EDD99200255331 /* FriendlyCharlesUse.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */; };
 		426A6A6E18EDE32200255331 /* WalkOffLogoMatMedium.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */; };
+		427CE62C18F0670700865291 /* FliersWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CE62B18F0670700865291 /* FliersWhite.png */; };
+		427CE62E18F069DF00865291 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427CE62D18F069DF00865291 /* MessageUI.framework */; };
 		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
 		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
 		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
@@ -249,6 +251,8 @@
 		426A6A3618EDD3B100255331 /* Professional_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Professional_video.mp4; sourceTree = "<group>"; };
 		426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FriendlyCharlesUse.png; sourceTree = "<group>"; };
 		426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMedium.m4v; sourceTree = "<group>"; };
+		427CE62B18F0670700865291 /* FliersWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FliersWhite.png; sourceTree = "<group>"; };
+		427CE62D18F069DF00865291 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		42849B4D18E4484700E5B3FB /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -361,6 +365,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				427CE62E18F069DF00865291 /* MessageUI.framework in Frameworks */,
 				42849B5C18E483DF00E5B3FB /* MobileCoreServices.framework in Frameworks */,
 				42849B5918E483C400E5B3FB /* CoreMedia.framework in Frameworks */,
 				42849B5A18E483C400E5B3FB /* MediaAccessibility.framework in Frameworks */,
@@ -694,6 +699,7 @@
 		42FF7A1318CDE92A00C72695 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				427CE62D18F069DF00865291 /* MessageUI.framework */,
 				42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */,
 				42849B5718E483C400E5B3FB /* CoreMedia.framework */,
 				42849B5818E483C400E5B3FB /* MediaAccessibility.framework */,
@@ -725,6 +731,7 @@
 				42FF7A2318CDE92A00C72695 /* AppDelegate.h */,
 				42FF7A2418CDE92A00C72695 /* AppDelegate.m */,
 				42FF7A2618CDE92A00C72695 /* Main.storyboard */,
+				427CE62B18F0670700865291 /* FliersWhite.png */,
 				42FF7A2918CDE92A00C72695 /* ViewController.h */,
 				42FF7A2A18CDE92A00C72695 /* ViewController.m */,
 				42FF7A2C18CDE92A00C72695 /* Images.xcassets */,
@@ -890,6 +897,7 @@
 				42B0156718E3175A0068019C /* MarbleTop.pdf in Resources */,
 				42B0155818E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */,
+				427CE62C18F0670700865291 /* FliersWhite.png in Resources */,
 				426A6A2418EDA3C800255331 /* MatAnimationUseSmall.m4v in Resources */,
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */,

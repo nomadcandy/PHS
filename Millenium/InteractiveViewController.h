@@ -44,14 +44,14 @@
     AppDelegate *appdelegate;
     UIImage *selectedImage;
     
-    NSString *logoUseString;
+    //NSString *logoUseStringHere;
     
      //__unsafe_unretained id <StringPickerProtocol> _delegate;
 }
 
 @property (nonatomic, weak) id <StringPickerProtocol> delegate;
 
-@property (nonatomic, copy) NSString *logoUseString;
+@property (nonatomic, weak) NSString *logoUseStringHere;
 
 @property (nonatomic, strong) IBOutlet UITextField *widthField;
 @property (nonatomic, strong) IBOutlet UITextField *heightField;

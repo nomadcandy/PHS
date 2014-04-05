@@ -35,7 +35,7 @@
 
 @synthesize logoButton;
 @synthesize logoPicButton;
-@synthesize logoUseString;
+//@synthesize logoUseStringHere;
 
 
 - (void)dealloc
@@ -64,10 +64,10 @@
 
 -(void)ViewDidAppear
 {
-    NSLog(@"logoUseStringSend %@",logoUseString);
-     NSLog(@"logoUseStringSendDidAppear %@",logoUseString);
+    NSLog(@"logoUseStringSend %@",_logoUseStringHere);
+     NSLog(@"logoUseStringSendDidAppear %@",_logoUseStringHere);
     
-    if (logoUseString == Nil){
+    if (_logoUseStringHere == Nil){
         
         selectedImage = [UIImage imageNamed:@"jadeteahouselogo.png"];
         //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
@@ -78,8 +78,8 @@
     else {
         
         logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage*freshImage = [UIImage imageNamed:logoUseString];
-        NSLog(@"logoUseStringImageName %@",logoUseString);
+        UIImage*freshImage = [UIImage imageNamed:_logoUseStringHere];
+        NSLog(@"logoUseStringImageName %@",_logoUseStringHere);
 		//[logoPicButton setBackgroundImage:freshImage forState:UIControlStateNormal];
         [logoPicButton setImage:freshImage forState:UIControlStateNormal];
         
@@ -98,9 +98,9 @@
 {
     [super viewDidLoad];
     //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
-    NSLog(@"logoUseStringSendInteractive %@",logoUseString);
+    NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
    
-    if (logoUseString == Nil){
+    if (_logoUseStringHere == Nil){
         
         selectedImage = [UIImage imageNamed:@"jadeteahouselogo.png"];
         //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
@@ -111,7 +111,7 @@
     else {
         
         logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage*newFreshImage = [UIImage imageNamed:logoUseString];
+        UIImage*newFreshImage = [UIImage imageNamed:_logoUseStringHere];
 		[logoPicButton setBackgroundImage:newFreshImage forState:UIControlStateNormal];
         
         UIImageView * imgView = [[UIImageView alloc] initWithImage:newFreshImage];
@@ -140,7 +140,7 @@
     
     //[self.delegate setString:string];
     
-    [self.delegate setString:logoUseString];
+    [self.delegate setString:_logoUseStringHere];
 }
 
     

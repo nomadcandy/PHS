@@ -93,7 +93,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [DIYMenu dismiss];
     
     
-    UIStoryboard *storyboard = self.storyboard;
+   UIStoryboard *storyboard = self.storyboard;
      InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
      [self presentViewController:svc animated:YES completion:nil];
    //[self dismissViewControllerAnimated:YES completion:nil];
@@ -149,6 +149,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                                   UICollectionElementKindSectionHeader withReuseIdentifier:@"headerCellID" forIndexPath:indexPath];
         
             logoHeaderCell.pageTitleLabel.text = @" ";
+        
+        
+        [[logoHeaderCell backButton] addTarget:self action:@selector(goInteractive1:event:) forControlEvents:UIControlEventTouchUpInside];
         
             reusableview = logoHeaderCell;
             
@@ -226,7 +229,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         return logoCell;
     }
+
+
+-(IBAction)goInteractive1:(UIButton*)sender event:(id)event {
     
+    UIStoryboard *storyboard = self.storyboard;
+     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+     [self presentViewController:svc animated:YES completion:nil];
+    
+}
+
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
     
     NSLog(@"addButton.tag:%ld",(long)sender.tag);
@@ -265,13 +277,26 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         //NSLog(@"chosenImage %@",newImage);
         //destViewController.chosenImage = chosenImage;
         
+        
+        
+        //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
+        
+        
+        
+        logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
+        NSLog(@"logoUseString %@",logoUseString);
+        
         logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
         NSLog(@"logoUseStringSend %@",logoUseString);
 
-        destViewController.logoUseString=logoUseString;
+        destViewController.logoUseStringHere=logoUseString;
         //NSLog(@"chosenImage %@",logoUseString);
         
-        destViewController.delegate = self;
+        //destViewController.delegate = self;
+        
+        /*UIStoryboard *storyboard = self.storyboard;
+         InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+         [self presentViewController:svc animated:YES completion:nil];*/
         
     }
 }
@@ -281,7 +306,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 - (void)didSetLogoUseString:(InteractiveViewController *)controller{
     
     
-     [self dismissViewControllerAnimated:YES completion:nil];
+     //[self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

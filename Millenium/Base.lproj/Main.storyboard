@@ -400,7 +400,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="presentRequestFlierViewController:" destination="uuP-dW-DaH" eventType="touchUpInside" id="peR-5d-x2c"/>
+                                    <action selector="presentRequestFlierViewController:" destination="uuP-dW-DaH" eventType="touchUpInside" id="J2c-WX-ghF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -429,7 +429,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="allmatbuttons2.png" translatesAutoresizingMaskIntoConstraints="NO" id="sho-RN-bhS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradietebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="sho-RN-bhS">
                                 <rect key="frame" x="-1" y="67" width="1025" height="701"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -656,6 +656,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goMail:event:" destination="OUj-xe-17v" eventType="touchUpInside" id="5c9-y0-7jG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -663,7 +666,16 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="addressField" destination="82N-Dk-ZTP" id="n05-KP-hro"/>
+                        <outlet property="cityField" destination="ciW-39-XQw" id="YKA-Me-wmj"/>
+                        <outlet property="countryField" destination="bRV-sI-Uai" id="lkY-H6-YOh"/>
+                        <outlet property="emailField" destination="caF-UJ-YjE" id="yk2-N4-All"/>
                         <outlet property="firstNameField" destination="t7D-IT-bGP" id="BhT-1R-kjW"/>
+                        <outlet property="lastNameField" destination="XMM-Yh-A9d" id="oOr-em-WUe"/>
+                        <outlet property="notesField" destination="tPz-iL-b4h" id="fXc-JD-P9P"/>
+                        <outlet property="stateField" destination="zoM-MB-nOP" id="51Z-aq-e7T"/>
+                        <outlet property="telephoneField" destination="vQW-Kz-UYO" id="cfZ-XZ-XD6"/>
+                        <outlet property="zipField" destination="zaC-ir-xll" id="EJm-ID-tPX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4L-Wd-veB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -712,13 +724,24 @@
                                             </state>
                                             <connections>
                                                 <action selector="logoSelected:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="IBI-Rf-H8X"/>
-                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="fbg-oI-2Fw"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-HA-1kT">
+                                            <rect key="frame" x="148" y="170" width="76" height="55"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="goBack">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="goInteractive1:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="AIK-Op-gxg"/>
+                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="Xsv-p4-h1x"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
+                                    <outlet property="goBack" destination="AlH-HA-1kT" id="NRP-DW-o4x"/>
                                     <outlet property="logoChooseButton" destination="NGC-wB-rpF" id="mSh-u1-RvP"/>
                                     <outlet property="logoImage" destination="Qbn-dm-xxC" id="sg6-Mu-y8B"/>
                                     <outlet property="logoLabel" destination="ytT-DL-OMq" id="ZQx-PS-9o4"/>
@@ -729,14 +752,14 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-RC-jKe">
+                                <button clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-RC-jKe">
                                     <rect key="frame" x="5" y="7" width="78" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="CintasLogoHighRes.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="goInteractive:" destination="l8u-Ww-K06" eventType="touchUpInside" id="mGa-Oo-jok"/>
+                                        <action selector="goInteractive:" destination="l8u-Ww-K06" eventType="touchUpInside" id="ONv-Fv-YKo"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGOS NEAR ME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcs-vW-CVy">
@@ -759,7 +782,7 @@
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <outlet property="backButton" destination="fH0-RC-jKe" id="rl9-h1-Ulo"/>
+                                <outlet property="backButton" destination="fH0-RC-jKe" id="wZn-mP-77j"/>
                                 <outlet property="cintasButton" destination="kR0-DG-lFR" id="eOt-cP-vPT"/>
                             </connections>
                         </collectionReusableView>
@@ -1213,6 +1236,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W13-dR-Wvi">
+                                <rect key="frame" x="-8" y="683" width="156" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentRequestFlierViewController:" destination="x2s-mf-Toe" eventType="touchUpInside" id="Gs2-9R-8zX"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nxf-xn-iRd">
                                 <rect key="frame" x="0.0" y="47" width="1024" height="593"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1313,20 +1346,10 @@
                                 <rect key="frame" x="0.0" y="631" width="168" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
-                                <state key="normal" image="VideosWhite3.png">
+                                <state key="normal" image="FliersWhite.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W13-dR-Wvi">
-                                <rect key="frame" x="-8" y="683" width="156" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="envelope.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="presentRequestFlierViewController:" destination="x2s-mf-Toe" eventType="touchUpInside" id="Gs2-9R-8zX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1346,7 +1369,14 @@
     </scenes>
     <resources>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CleanButton.png" width="236" height="136"/>
+        <image name="FliersWhite.png" width="230" height="91"/>
         <image name="FreshButton.png" width="322" height="128"/>
         <image name="FriendlyButton.png" width="341" height="128"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
@@ -1366,8 +1396,16 @@
         <image name="cintaslogohighres.png" width="448" height="170"/>
         <image name="envelope.png" width="795" height="462"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="rugsamplea.png" width="114" height="104"/>
         <image name="whitePad.png" width="1996" height="1015"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitepad.png" width="1996" height="1015"/>
     </resources>
@@ -1377,6 +1415,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="fbg-oI-2Fw"/>
+        <segue reference="Xsv-p4-h1x"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -57,7 +57,7 @@
 @property (nonatomic, copy) NSString*logoUseString;
 
 //@property (nonatomic, strong) UIButton*button;
-
+@property (nonatomic,strong) IBOutlet UIButton *goBackButton;
 @property (nonatomic,strong) IBOutlet UIButton *logoChooseButton;
 @property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
 

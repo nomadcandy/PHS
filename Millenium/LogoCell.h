@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *logoLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
 @property (strong, nonatomic) IBOutlet UIButton *logoChooseButton;
+@property (strong, nonatomic) IBOutlet UIButton *goBack;
 
 @end

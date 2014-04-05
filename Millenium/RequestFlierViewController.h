@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
 @interface RequestFlierViewController : UIViewController{
     
