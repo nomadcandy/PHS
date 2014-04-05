@@ -15,7 +15,26 @@
 #import "ImagePickerViewController.h"
 #import "AppDelegate.h"
 
-@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate>{
+@class InteractiveViewController;
+
+/*@protocol logoStringDelegate <NSObject>
+
+- (void)didSetString:(NSString *)logoUseString;*/
+
+
+@protocol StringPickerProtocol <NSObject>
+
+- (void)setString:(NSString *)string;
+
+
+@end
+
+
+
+
+
+
+@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,StringPickerProtocol>{
     
     IBOutlet UIView *interactiveView;
     
@@ -24,7 +43,15 @@
     
     AppDelegate *appdelegate;
     UIImage *selectedImage;
+    
+    NSString *logoUseString;
+    
+     //__unsafe_unretained id <StringPickerProtocol> _delegate;
 }
+
+@property (nonatomic, weak) id <StringPickerProtocol> delegate;
+
+@property (nonatomic, copy) NSString *logoUseString;
 
 @property (nonatomic, strong) IBOutlet UITextField *widthField;
 @property (nonatomic, strong) IBOutlet UITextField *heightField;

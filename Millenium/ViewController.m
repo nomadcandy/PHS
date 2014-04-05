@@ -57,7 +57,7 @@
     
     self.movieController = [[MPMoviePlayerController alloc] init];
     
-    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"Professional_video" ofType:@"mp4"];
+    NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"Charles3Animation" ofType:@"m4v"];
     //NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesall" ofType:@"mp4"];
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
     self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];

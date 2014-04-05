@@ -104,6 +104,9 @@
 		42849B9218EA02BE00E5B3FB /* whitepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9018EA02BE00E5B3FB /* whitepad.png */; };
 		42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */; };
 		42849B9518EA04AB00E5B3FB /* logothumbnailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */; };
+		42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */; };
+		42AB550D18EF44C50051AF9F /* Charles3Animation.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */; };
+		42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550F18EF51310051AF9F /* LogoSelectedBG.png */; };
 		42B014FE18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B014FF18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B0150118DF46970068019C /* WebViewBG1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0150018DF46970068019C /* WebViewBG1.png */; };
@@ -314,6 +317,9 @@
 		42849B8D18EA027800E5B3FB /* gradietebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradietebg.png; sourceTree = "<group>"; };
 		42849B9018EA02BE00E5B3FB /* whitepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitepad.png; sourceTree = "<group>"; };
 		42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logothumbnailbg.png; sourceTree = "<group>"; };
+		42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesAnimationUse.m4v; sourceTree = "<group>"; };
+		42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Charles3Animation.m4v; sourceTree = "<group>"; };
+		42AB550F18EF51310051AF9F /* LogoSelectedBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoSelectedBG.png; sourceTree = "<group>"; };
 		42B014FD18DF450F0068019C /* WebViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG.png; sourceTree = "<group>"; };
 		42B0150018DF46970068019C /* WebViewBG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG1.png; sourceTree = "<group>"; };
 		42B0150318DF47110068019C /* WebViewBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG2.png; sourceTree = "<group>"; };
@@ -567,6 +573,14 @@
 			name = ImagesTestOnly;
 			sourceTree = "<group>";
 		};
+		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
+			isa = PBXGroup;
+			children = (
+				42AB550F18EF51310051AF9F /* LogoSelectedBG.png */,
+			);
+			name = ImagesInteractivePage;
+			sourceTree = "<group>";
+		};
 		42B0150F18E063A50068019C /* MyDraggableImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -717,10 +731,13 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */,
+				42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */,
 				426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */,
 				426A6A3618EDD3B100255331 /* Professional_video.mp4 */,
 				426A6A2318EDA3C800255331 /* MatAnimationUseSmall.m4v */,
 				426A6A2118EDA29E00255331 /* MatAnimationCleanMedium.m4v */,
+				42AB550E18EF51190051AF9F /* ImagesInteractivePage */,
 				426A6A3A18EDDC2400255331 /* MatVideos */,
 				426A6A2518EDACAC00255331 /* ImagesHome */,
 				426A69FE18ED0BA000255331 /* ImagesSampleLogos */,
@@ -942,11 +959,13 @@
 				426A6A6918EDDC8700255331 /* C12_GoldenSeries_MASTER.mp4 in Resources */,
 				426A6A5A18EDDC8700255331 /* C16_SpringStep_MASTER.mp4 in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
+				42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */,
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42B0157318E317B00068019C /* SoftStep.pdf in Resources */,
 				42B0152218E303C40068019C /* MatChatter5.png in Resources */,
 				426A6A3218EDADBA00255331 /* ProffessionalButton.png in Resources */,
+				42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
 				426A6A1718ED0CC300255331 /* SampleLogo10.png in Resources */,
 				426A6A5918EDDC8700255331 /* C18_SafeStep_MASTER.mp4 in Resources */,
@@ -981,6 +1000,7 @@
 				426A6A1818ED0CC300255331 /* SampleLogo9.png in Resources */,
 				426A6A2F18EDADBA00255331 /* LookingSerious.png in Resources */,
 				42DBC73B18EE03AA005BF791 /* CintasLogoHighRes.png in Resources */,
+				42AB550D18EF44C50051AF9F /* Charles3Animation.m4v in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
 				426A6A6618EDDC8700255331 /* C17a_SoftStep_MASTER.mp4 in Resources */,

@@ -15,11 +15,11 @@
 #import "Logo.h"
 
 
-@protocol ButtonPickerDelegate <NSObject>
 
-@end
 
-@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate>
+
+
+@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate>
 
 {
     //UIButton* button;
@@ -29,13 +29,12 @@
     int rowSelectedHere;
     int rowSelectedSend;
     
-    __unsafe_unretained id <ButtonPickerDelegate> _delegate;
+   // __unsafe_unretained id <StringPickerProtocol> _delegate;
     
 }
 
 
-
-
+//@property (nonatomic, weak) id <StringPickerProtocol> delegate;
 
 @property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
 
@@ -48,10 +47,13 @@
 @property (nonatomic, copy) NSArray *nearMeImagesArray;
 @property (nonatomic, copy) NSArray *searchNamesArray;
 @property (nonatomic, copy) NSArray *nearMeNamesArray;
+
+@property (nonatomic, copy) NSString*logoUseString;
+
 //@property (nonatomic, strong) UIButton*button;
 
 @property (nonatomic,strong) IBOutlet UIButton *logoChooseButton;
-@property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
+//@property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
 
 -(IBAction)goInteractive:(id)sender;
 - (IBAction)goHome:(UIButton *)sender ;

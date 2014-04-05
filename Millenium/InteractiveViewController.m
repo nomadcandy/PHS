@@ -17,6 +17,9 @@
 
 @implementation InteractiveViewController
 
+
+@synthesize delegate=_delegate;
+
 @synthesize interactiveView;
 @synthesize carouselSize;
 @synthesize carouselColor;
@@ -32,6 +35,7 @@
 
 @synthesize logoButton;
 @synthesize logoPicButton;
+@synthesize logoUseString;
 
 
 - (void)dealloc
@@ -58,32 +62,11 @@
 }
 
 
-
-
-/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(void)ViewDidAppear
 {
+    NSLog(@"logoUseStringSend %@",logoUseString);
     
-    
-    if (self) {
-        
-        
-        
-   }
-    return self;
-}*/
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
-    
-    
-  
-
-    
-    NSLog(@"chosenImage %@",selectedImage);
-   
-    if (selectedImage == Nil){
+    if (logoUseString == Nil){
         
         selectedImage = [UIImage imageNamed:@"jadeteahouselogo.png"];
         //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
@@ -94,8 +77,35 @@
     else {
         
         logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        selectedImage = [UIImage imageNamed:logoUseString];
 		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
     }
+
+    
+}
+
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+    NSLog(@"logoUseStringSend %@",logoUseString);
+   
+    if (logoUseString == Nil){
+        
+        selectedImage = [UIImage imageNamed:@"jadeteahouselogo.png"];
+        //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+    }
+    
+    else {
+        
+        logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        selectedImage = [UIImage imageNamed:logoUseString];
+		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+   }
     
    
     //[DIYMenu isActivated];
@@ -112,7 +122,16 @@
     // Override point for customization after application launch.
     //return YES;
 
+- (void)setString:(NSString *)string
+{
+    [self.delegate setString:string];
     
+    
+    //[self.delegate setString:string];
+    
+    [self.delegate setString:logoUseString];
+}
+
     
 
 

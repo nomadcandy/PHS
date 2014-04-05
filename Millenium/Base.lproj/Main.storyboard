@@ -710,6 +710,9 @@
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="fbg-oI-2Fw"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -721,7 +724,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="headerCellID" reuseIdentifier="headerCellID" id="yqd-il-Cac" customClass="LogoHeaderCell">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="headerCellID" reuseIdentifier="" id="yqd-il-Cac" customClass="LogoHeaderCell">
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -743,7 +746,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kR0-DG-lFR">
-                                    <rect key="frame" x="538" y="14" width="97" height="35"/>
+                                    <rect key="frame" x="424" y="14" width="97" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="CintasLogoHighRes.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -770,7 +773,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="1148"/>
+            <point key="canvasLocation" x="-1224" y="378"/>
         </scene>
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -881,17 +884,13 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playClean:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTO-pm-Lc2"/>
+                                    <action selector="playFriendly:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OIh-rc-nCW"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xke-HV-RhF">
                                 <rect key="frame" x="369" y="253" width="341" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FriendlyCharlesUse.png" translatesAutoresizingMaskIntoConstraints="NO" id="ABL-SL-DwS">
-                                <rect key="frame" x="469" y="243" width="124" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -905,13 +904,12 @@
                     <connections>
                         <outlet property="carousel" destination="B73-GN-pMc" id="elp-vg-Y1N"/>
                         <outlet property="charlesBGView" destination="Xke-HV-RhF" id="iy7-TN-Chk"/>
-                        <outlet property="charlesView" destination="ABL-SL-DwS" id="T9l-Kg-7QW"/>
                         <segue destination="EOd-lr-Xtf" kind="push" identifier="InteractiveSegue" id="wpq-PH-bdK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-980" y="245"/>
+            <point key="canvasLocation" x="272" y="1217"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="ugm-Pt-D7d">
@@ -996,8 +994,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logothumbnailbg.png" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-aA-fbB" userLabel="logoSelectedBG">
-                                <rect key="frame" x="20" y="172" width="318" height="259"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoSelectedBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-aA-fbB" userLabel="logoSelectedBG">
+                                <rect key="frame" x="20" y="160" width="318" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="huY-jg-CM5" userLabel="logoSelected">
@@ -1012,7 +1010,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Image Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-ef-5CF">
-                                <rect key="frame" x="53" y="140" width="186" height="21"/>
+                                <rect key="frame" x="35" y="137" width="186" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1356,9 +1354,9 @@
         <image name="CleanButton.png" width="236" height="136"/>
         <image name="FreshButton.png" width="322" height="128"/>
         <image name="FriendlyButton.png" width="341" height="128"/>
-        <image name="FriendlyCharlesUse.png" width="400" height="675"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
+        <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="LogoThumbnailBG.png" width="220" height="220"/>
         <image name="LookingSerious.png" width="400" height="145"/>
         <image name="MatChatterBg.png" width="2078" height="1536"/>
@@ -1380,7 +1378,6 @@
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="logothumbnailbg.png" width="220" height="220"/>
         <image name="rugsamplea.png" width="114" height="104"/>
         <image name="whitePad.png" width="1996" height="1015"/>
         <image name="whitecirclematsize1.png" width="94" height="91"/>
@@ -1395,6 +1392,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
+        <segue reference="fbg-oI-2Fw"/>
     </inferredMetricsTieBreakers>
 </document>
