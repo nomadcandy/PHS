@@ -227,7 +227,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
-    
+    int myInt = (int)sender.tag;
+    indexPathSend = (int)sender.tag;
+    //int indexSend = addButton.tag;
     
     NSLog(@"sender %@",sender);
     NSLog(@"selectedIndex %d",selectedIndex);
@@ -235,18 +237,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-    logoUseString=[nearMeImagesArray objectAtIndex:selectedIndex];
+    logoUseString=[nearMeImagesArray objectAtIndex:myInt];
     NSLog(@"logoUseString %@",logoUseString);
 
    
     
-    UIStoryboard *storyboard = self.storyboard;
+   /* UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
-    
-    
-    
-    // Configure the new view controller here.
-    //[self presentViewController:svc animated:YES completion:nil];
+    [self presentViewController:svc animated:YES completion:nil];*/
 
     
     
@@ -262,10 +260,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         // NSLog(@"chosenImage %@",chosenImage);
         //NSLog(@"chosenImage %@",newImage);
         //destViewController.chosenImage = chosenImage;
-        destViewController.logoUseString=logoUseString;
-        NSLog(@"chosenImage %@",logoUseString);
         
-        //destViewController.delegate = self;
+        logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
+        NSLog(@"logoUseStringSend %@",logoUseString);
+
+        destViewController.logoUseString=logoUseString;
+        //NSLog(@"chosenImage %@",logoUseString);
+        
+        destViewController.delegate = self;
         
     }
 }

@@ -711,6 +711,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
+                                                <action selector="logoSelected:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="4Bz-vI-Am6"/>
                                                 <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="fbg-oI-2Fw"/>
                                             </connections>
                                         </button>
@@ -724,14 +725,14 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="headerCellID" reuseIdentifier="" id="yqd-il-Cac" customClass="LogoHeaderCell">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="headerCellID" reuseIdentifier="headerCellID" id="yqd-il-Cac" customClass="LogoHeaderCell">
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-RC-jKe">
                                     <rect key="frame" x="5" y="7" width="78" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="BackArrow.png">
+                                    <state key="normal" image="CintasLogoHighRes.png">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
@@ -739,7 +740,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGOS NEAR ME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcs-vW-CVy">
-                                    <rect key="frame" x="69" y="-352" width="1024" height="768"/>
+                                    <rect key="frame" x="91" y="-352" width="1024" height="768"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1344,12 +1345,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BackArrow.png" width="38" height="37"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CleanButton.png" width="236" height="136"/>
         <image name="FreshButton.png" width="322" height="128"/>
@@ -1364,25 +1359,15 @@
         <image name="OrganizedButton.png" width="400" height="131"/>
         <image name="ProffessionalButton.png" width="400" height="132"/>
         <image name="VideosWhite3.png" width="230" height="91"/>
-        <image name="VideosWhite3.png" width="230" height="91"/>
         <image name="WeGotThis.png" width="400" height="129"/>
         <image name="WebViewBG2.png" width="557" height="395"/>
         <image name="alllogobuttons2.png" width="109" height="99"/>
         <image name="allmatbuttons2.png" width="109" height="99"/>
-        <image name="allmatbuttons2.png" width="109" height="99"/>
         <image name="cintaslogohighres.png" width="448" height="170"/>
         <image name="envelope.png" width="795" height="462"/>
-        <image name="envelope.png" width="795" height="462"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="rugsamplea.png" width="114" height="104"/>
         <image name="whitePad.png" width="1996" height="1015"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitepad.png" width="1996" height="1015"/>
     </resources>

@@ -90,7 +90,7 @@
 {
     [super viewDidLoad];
     //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
-    NSLog(@"logoUseStringSend %@",logoUseString);
+    NSLog(@"logoUseStringSendInteractive %@",logoUseString);
    
     if (logoUseString == Nil){
         
@@ -105,6 +105,8 @@
         logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
         selectedImage = [UIImage imageNamed:logoUseString];
 		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+        
+         //[logoPicButton reloadInputViews];
    }
     
    
