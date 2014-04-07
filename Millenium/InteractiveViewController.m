@@ -796,9 +796,11 @@ else
 {
     
     //begin capture entire webview
-    CGRect screenRect = self.view.frame;
+    //CGRect screenRect = self.view.frame;
+    CGRect screenRect = interactiveMatView.frame;
     
     UIGraphicsBeginImageContext(screenRect.size);
+    //UIGraphicsBeginImageContext(interactiveMatView.size);
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     [[UIColor whiteColor] set];
@@ -809,10 +811,10 @@ else
     UIImage *orderImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
+    
+    
     //save image to documents
     
-    
-    //UIImage *image = [info valueForKey:orderImage];
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/orderImage.jpg"]];
     [UIImageJPEGRepresentation(orderImage, 1.0) writeToFile:imagePath atomically:YES];
     
