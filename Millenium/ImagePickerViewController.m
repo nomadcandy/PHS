@@ -360,6 +360,9 @@
     
     NSLog(@"chosenImage %@",selectedImage);
     
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/orderImage.jpg"]];
+    [UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    
    
     
 }

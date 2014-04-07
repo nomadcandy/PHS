@@ -100,25 +100,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *imagePath =  [directoryPath objectAtIndex:0];
+    imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.jpg"];
+    
+    NSData *data = [NSData dataWithContentsOfFile:imagePath];
+    UIImage *logoImage = [UIImage imageWithData:data];
+    
     //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
     NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
    
-    if (_logoUseStringHere == Nil){
+    if (imagePath == Nil){
         
-        selectedImage = [UIImage imageNamed:@"jadeteahouselogo.png"];
+        //selectedImage = [UIImage imageNamed:@"jadeteahouselogo1.png"];
         //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
 		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+		//[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
     }
     
     else {
         
-        logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage*newFreshImage = [UIImage imageNamed:_logoUseStringHere];
-		[logoPicButton setBackgroundImage:newFreshImage forState:UIControlStateNormal];
+        //logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        //UIImage*newFreshImage = [UIImage imageNamed:_logoUseStringHere];
+		[logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+        //[logoPicButton setImage:logoImage forState:UIControlStateNormal];
         
-        UIImageView * imgView = [[UIImageView alloc] initWithImage:newFreshImage];
-        [logoPicButton addSubview:imgView];
+        //UIImageView * imgView = [[UIImageView alloc] initWithImage:newFreshImage];
+        //[logoPicButton addSubview:imgView];
    }
     
    

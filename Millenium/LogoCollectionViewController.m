@@ -255,6 +255,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
     NSLog(@"logoUseString %@",logoUseString);
+    
+    UIImage*newImage=[UIImage imageNamed:logoUseString];
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.jpg"]];
+    [UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
 
     
     
