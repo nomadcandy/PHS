@@ -91,6 +91,10 @@
     
     [mailComposer setToRecipients:recipients];
     
+    
+    
+    
+    
     [self presentViewController:mc animated:YES completion:NULL];
     
     /*UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your invites have been sent" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];

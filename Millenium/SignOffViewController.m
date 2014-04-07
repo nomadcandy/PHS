@@ -165,6 +165,44 @@
     
     NSMutableArray*recipients=[[NSMutableArray alloc]init];
     
+    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *imagePath =  [directoryPath objectAtIndex:0];
+    imagePath= [imagePath stringByAppendingPathComponent:@"orderImage.jpg"];
+    
+    NSData *data = [NSData dataWithContentsOfFile:imagePath];
+    UIImage *image = [UIImage imageWithData:data];
+
+    
+    
+    // Determine the file name and extension
+   /* NSArray *filepart = [file componentsSeparatedByString:@"."];
+    NSString *filename = [filepart objectAtIndex:0];
+    NSString *extension = [filepart objectAtIndex:1];
+    
+    // Get the resource path and read the file using NSData
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:orderImage ofType:extension];
+    NSData *fileData = [NSData dataWithContentsOfFile:filePath];*/
+    
+    // Determine the MIME type
+   /* NSString *mimeType;
+    if ([extension isEqualToString:@"jpg"]) {
+        mimeType = @"image/jpeg";
+    } else if ([extension isEqualToString:@"png"]) {
+        mimeType = @"image/png";
+    } else if ([extension isEqualToString:@"doc"]) {
+        mimeType = @"application/msword";
+    } else if ([extension isEqualToString:@"ppt"]) {
+        mimeType = @"application/vnd.ms-powerpoint";
+    } else if ([extension isEqualToString:@"html"]) {
+        mimeType = @"text/html";
+    } else if ([extension isEqualToString:@"pdf"]) {
+        mimeType = @"application/pdf";
+    }*/
+    
+    // Add attachment
+    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"orderImage.jpg"];
+    
+    
     [mailComposer setToRecipients:recipients];
     
     [self presentViewController:mc animated:YES completion:NULL];
