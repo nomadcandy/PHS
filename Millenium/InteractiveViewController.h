@@ -72,10 +72,15 @@
 @property (nonatomic, strong) IBOutlet UIButton *matButton;
 @property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
 
+@property (nonatomic, strong) IBOutlet UIImageView *titleBar;
+@property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+
 @property (nonatomic, strong) IBOutlet UIButton *size2by3;
 @property (nonatomic, strong) IBOutlet UIButton *size3by5;
 @property (nonatomic, strong) IBOutlet UIButton *size4by6;
 @property (nonatomic, strong) IBOutlet UIButton *size3by10;
+
+
 
 
 

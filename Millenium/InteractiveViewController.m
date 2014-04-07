@@ -32,9 +32,16 @@
 @synthesize matSizeUseString;
 
 @synthesize selectedImage;
-
+@synthesize matButton;
 @synthesize logoButton;
 @synthesize logoPicButton;
+@synthesize homeButton;
+
+@synthesize titleBar;
+
+@synthesize titleLabel;
+
+
 //@synthesize logoUseStringHere;
 
 
@@ -100,6 +107,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    matButton.hidden =NO;
+    logoButton.hidden= NO;
+    titleLabel.hidden =NO;
+    homeButton.hidden =NO;
+    titleBar.hidden =NO;
     
     NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
     NSString *imagePath =  [directoryPath objectAtIndex:0];
@@ -799,13 +812,20 @@ else
 
 - (IBAction)goSignMat:(id)sender
 {
+    matButton.hidden =YES;
+    logoButton.hidden= YES;
+    titleLabel.hidden =YES;
+    
+    homeButton.hidden =YES;
+    titleBar.hidden =YES;
+    
     
     //begin capture entire webview
     //CGRect screenRect = self.view.frame;
     //CGRect screenRect = interactiveMatView.frame;
-    //CGRect screenRect1 = CGRectMake(637.0,357.0,726.0,460.0);
-    //CGRect screenRect1 = CGRectMake(637.0,357.0,943.0,575.0);
-    CGRect screenRect1 = CGRectMake(637.0,357.0,988,603);
+    
+     //CGRect screenRect1 = CGRectMake(637.0,357.0,988,580);
+    CGRect screenRect1 = CGRectMake(637.0,357.0,998,580);
    
     
     UIGraphicsBeginImageContext(screenRect1.size);
