@@ -14,6 +14,8 @@
 
 @implementation SignOffViewController
 
+@synthesize matImageView,logoImageView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,7 +28,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *imagePath =  [directoryPath objectAtIndex:0];
+    imagePath= [imagePath stringByAppendingPathComponent:@"orderImage.jpg"];
+    
+    NSData *data = [NSData dataWithContentsOfFile:imagePath];
+    UIImage *image = [UIImage imageWithData:data];
+    
+        matImageView.image=image;
 	// Do any additional setup after loading the view.
+    
+    
 }
 
 

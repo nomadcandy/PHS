@@ -757,7 +757,7 @@ else
     
     
 
-- (IBAction)screenShot:(UIButton *)sender{
+/*- (IBAction)screenShot:(UIButton *)sender{
     
     
     
@@ -787,13 +787,43 @@ else
     
     
     
-}
+}*/
 
 
 #pragma mark - Drop Down Animated Menus
 
-- (IBAction)showMenuMat:(id)sender
+- (IBAction)goSignMat:(id)sender
 {
+    
+    //begin capture entire webview
+    CGRect screenRect = self.view.frame;
+    
+    UIGraphicsBeginImageContext(screenRect.size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx, screenRect);
+    
+    [self.view.layer renderInContext:ctx];
+    
+    UIImage *orderImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    //save image to documents
+    
+    
+    //UIImage *image = [info valueForKey:orderImage];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/orderImage.jpg"]];
+    [UIImageJPEGRepresentation(orderImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    //TODO pass save  orderImage to device and pass to SignOffScreen
+    
+    //chosenImageView.image = orderImage;
+    //chosenImage = newImage;
+    
+    
+    
+    NSLog(@"chosenImage %@",selectedImage);
     
     
     //_actionSelectedString=action;
@@ -886,10 +916,25 @@ else
     if ([segue.identifier isEqualToString:@"InteractiveSegue"]) {
         
         InteractiveViewController *destViewController = segue.destinationViewController;
-        [self presentViewController:destViewController animated:YES completion:nil];
+        //[self presentViewController:destViewController animated:YES completion:nil];
         
         
     }
+    
+    if ([segue.identifier isEqualToString:@"MatPickedSegue"]) {
+        
+        SignOffViewController *destViewController = segue.destinationViewController;
+        //[self presentViewController:destViewController animated:YES completion:nil];
+        
+        destViewController.matImage=interactiveMatView.image;
+        destViewController.logoImage=logoPicButton.imageView.image;
+
+        
+        
+        
+        
+    }
+
     
 }
 

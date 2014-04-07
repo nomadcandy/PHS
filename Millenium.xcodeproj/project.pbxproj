@@ -59,6 +59,7 @@
 		427CE63D18F07D8B00865291 /* DirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63B18F07D8B00865291 /* DirectViewController.m */; };
 		427CE64018F2E47C00865291 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63F18F2E47C00865291 /* SignView.m */; };
 		427CE64118F2E47C00865291 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63F18F2E47C00865291 /* SignView.m */; };
+		427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CE64A18F3316900865291 /* jadeteahouselogo1.png */; };
 		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
 		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
 		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
@@ -269,6 +270,7 @@
 		427CE63B18F07D8B00865291 /* DirectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectViewController.m; sourceTree = "<group>"; };
 		427CE63E18F2E47C00865291 /* SignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
 		427CE63F18F2E47C00865291 /* SignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
+		427CE64A18F3316900865291 /* jadeteahouselogo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jadeteahouselogo1.png; sourceTree = "<group>"; };
 		42849B4D18E4484700E5B3FB /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				427CE64A18F3316900865291 /* jadeteahouselogo1.png */,
 				42AB550F18EF51310051AF9F /* LogoSelectedBG.png */,
 			);
 			name = ImagesInteractivePage;
@@ -673,7 +676,7 @@
 			name = ImagesFliers;
 			sourceTree = "<group>";
 		};
-		42E7AC0518CE2C100036AF00 /* Interactive */ = {
+		42E7AC0518CE2C100036AF00 /* InteractiveViewController */ = {
 			isa = PBXGroup;
 			children = (
 				42EB3EF518D3450F00FAD7FD /* DIYMenu */,
@@ -682,7 +685,7 @@
 				42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */,
 				42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */,
 			);
-			name = Interactive;
+			name = InteractiveViewController;
 			sourceTree = "<group>";
 		};
 		42EB3EF518D3450F00FAD7FD /* DIYMenu */ = {
@@ -774,7 +777,7 @@
 				424756ED18D73776000AAF7C /* InternetViewController */,
 				424756DB18D38A47000AAF7C /* LogoCollectionViewController */,
 				424756D618D389DE000AAF7C /* SearchViewController */,
-				42E7AC0518CE2C100036AF00 /* Interactive */,
+				42E7AC0518CE2C100036AF00 /* InteractiveViewController */,
 				42FF7A4D18CDF05C00C72695 /* iCarousel */,
 				42FF7A2318CDE92A00C72695 /* AppDelegate.h */,
 				42FF7A2418CDE92A00C72695 /* AppDelegate.m */,
@@ -930,6 +933,7 @@
 				42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
+				427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */,
 				42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */,
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,

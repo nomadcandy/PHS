@@ -62,7 +62,7 @@
 @property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
 
 -(IBAction)goInteractive:(id)sender;
-- (IBAction)goHome:(UIButton *)sender ;
+-(IBAction)goHome:(UIButton *)sender;
 
 
 
