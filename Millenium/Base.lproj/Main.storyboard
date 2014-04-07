@@ -147,7 +147,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showMenu:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Zu5-wi-2CF"/>
+                                    <action selector="showMenuMat:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="bHl-OX-0tm"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b3Y-xs-nz9">
@@ -1577,15 +1577,6 @@
     </scenes>
     <resources>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CleanButton.png" width="236" height="136"/>
         <image name="FliersWhite.png" width="230" height="91"/>
         <image name="FreshButton.png" width="322" height="128"/>
@@ -1607,19 +1598,8 @@
         <image name="cintaslogohighres.png" width="448" height="170"/>
         <image name="envelope.png" width="795" height="462"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="rugsamplea.png" width="114" height="104"/>
         <image name="whitePad.png" width="1996" height="1015"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitepad.png" width="1996" height="1015"/>
     </resources>

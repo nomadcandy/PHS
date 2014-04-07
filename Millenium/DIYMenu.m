@@ -28,35 +28,32 @@
 
 - (void)setup
 {
-    //Rotates Menu to come down from top of view
-    //270 degrees
-    self.transform = CGAffineTransformMakeRotation(-M_PI_2);
-    //90 degrees
-    //inverts menu to go from bottom of view
-    //self.transform = CGAffineTransformMakeRotation(M_PI_2);
     
-    //x-up/down,y size of menu height, width
-    //CGRect frame = CGRectMake (140,312,390,90);
-    
-    CGRect frame = CGRectMake (155,148,270,90);
-   //CGRect frame = [UIScreen mainScreen].bounds;
-
-    frame.origin.x -= ITEMHEIGHT;
-    //frame.origin.x = ITEMHEIGHT;
-    self.frame = frame;
-    _menuItems = [[NSMutableArray alloc] init];
-    self.clipsToBounds = true;
-    
-    // Set up shadingview
-    _shadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width)];
-    //_shadingView = [[UIView alloc] initWithFrame:CGRectMake(155, 312, frame.size.height, frame.size.width)];
-    self.shadingView.backgroundColor = [UIColor lightGrayColor];
-    //self.shadingView.backgroundColor = [UIColor clearColor];
-    self.shadingView.alpha = 0.00f;
-    [self addSubview:self.shadingView];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedBackground)];
-    [self.shadingView addGestureRecognizer:tap];
+            //Rotates Menu to come down from top of view
+            self.transform = CGAffineTransformMakeRotation(-M_PI_2);
+            //90 degrees
+            //inverts menu to go from bottom of view
+            //self.transform = CGAffineTransformMakeRotation(M_PI_2);
+            
+            //x-up/down,y size of menu height, width
+            CGRect frame = CGRectMake (155,148,270,90);
+            //CGRect frame = [UIScreen mainScreen].bounds;
+            
+            frame.origin.x -= ITEMHEIGHT;
+            self.frame = frame;
+            _menuItems = [[NSMutableArray alloc] init];
+            self.clipsToBounds = true;
+            
+            // Set up shadingview
+            _shadingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.height, frame.size.width)];
+            self.shadingView.backgroundColor = [UIColor lightGrayColor];
+            self.shadingView.alpha = 0.00f;
+            [self addSubview:self.shadingView];
+            
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedBackground)];
+            [self.shadingView addGestureRecognizer:tap];
+        
+   
 }
 
 - (id)initWithFrame:(CGRect)frame

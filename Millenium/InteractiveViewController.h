@@ -92,6 +92,7 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carouselColor;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
 
+- (IBAction)showMenuMat:(id)sender;
 -(IBAction)backButton:(id)sender;
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
 

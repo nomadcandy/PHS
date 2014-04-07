@@ -16,10 +16,16 @@
 @protocol DIYMenuDelegate <NSObject>
 @required
 - (void)menuItemSelected:(NSString *)action;
+- (void)menuMatItemSelected:(NSString *)action;
+
 @optional
 - (void)menuActivated;
 - (void)menuCancelled;
+- (void)menuMatActivated;
+- (void)menuMatCancelled;
 @end
+
+
 
 @protocol DIYMenuItemDelegate <NSObject>
 - (void)diyMenuAction:(NSString *)action;

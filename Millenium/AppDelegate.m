@@ -40,7 +40,15 @@
     
 }
 
+- (void)menuMatActivated
+{
+    NSLog(@"Delegate: menuMatActivated");
+}
 
+- (void)menuMatCancelled
+{
+    NSLog(@"Delegate: menuMatCancelled");
+}
 
     
 

@@ -90,7 +90,6 @@
         _glyph = [[UILabel alloc] initWithFrame:glyphFrame];
         self.glyph.backgroundColor = color;
         self.glyph.textColor = [UIColor darkGrayColor];
-        //self.glyph.textAlignment = UITextAlignmentLeft;
         //self.glyph.textAlignment =NSTextAlignmentLeft;
         self.glyph.textAlignment =NSTextAlignmentCenter;
 
