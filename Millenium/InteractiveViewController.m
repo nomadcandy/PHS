@@ -802,16 +802,20 @@ else
     
     //begin capture entire webview
     //CGRect screenRect = self.view.frame;
-    CGRect screenRect = interactiveMatView.frame;
+    //CGRect screenRect = interactiveMatView.frame;
+    //CGRect screenRect1 = CGRectMake(637.0,357.0,726.0,460.0);
+    //CGRect screenRect1 = CGRectMake(637.0,357.0,943.0,575.0);
+    CGRect screenRect1 = CGRectMake(637.0,357.0,988,603);
+   
     
-    UIGraphicsBeginImageContext(screenRect.size);
+    UIGraphicsBeginImageContext(screenRect1.size);
     //UIGraphicsBeginImageContext(interactiveMatView.size);
     
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
     [[UIColor whiteColor] set];
-    CGContextFillRect(ctx, screenRect);
+    CGContextFillRect(ctx1, screenRect1);
     
-    [self.view.layer renderInContext:ctx];
+    [self.view.layer renderInContext:ctx1];
     
     UIImage *orderImage = UIGraphicsGetImageFromCurrentImageContext();
     

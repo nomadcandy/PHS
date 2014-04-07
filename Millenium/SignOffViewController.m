@@ -37,8 +37,12 @@
     NSData *data = [NSData dataWithContentsOfFile:imagePath];
     UIImage *image = [UIImage imageWithData:data];
     
-        matImageView.image=image;
-	// Do any additional setup after loading the view.
+    matImageView.image=image;
+    matImageView.contentMode = UIViewContentModeScaleAspectFit;
+    //matImageView.contentMode = UIViewContentModeRedraw;
+    //matImageView.contentMode = UIViewContentModeScaleAspectFill;
+
+	
     
     
 }
