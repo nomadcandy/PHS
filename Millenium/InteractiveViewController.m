@@ -200,6 +200,12 @@
             
             // Configure the new view controller here.
             [self presentViewController:ImagePickerVC animated:YES completion:nil];
+            
+            
+            
+            
+            
+            
 
             
             
@@ -210,12 +216,21 @@
     else if ([action isEqualToString:@"millenium"])
     {
         
-        _actionSelectedString=action;
+       /* _actionSelectedString=action;
         UIStoryboard *storyboardLogo = self.storyboard;
         LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
         
         // Configure the new view controller here.
-        [self presentViewController:LogoCVC animated:YES completion:nil];
+        [self presentViewController:LogoCVC animated:YES completion:nil];*/
+        
+        
+        
+         _actionSelectedString=action;
+        UIStoryboard *signStoryBoard = self.storyboard;
+        SignOffViewController *signOffVC = [signStoryBoard instantiateViewControllerWithIdentifier:@"SignStoryBoard"];
+        
+        // Configure the new view controller here.
+        [self presentViewController:signOffVC animated:YES completion:nil];
         
     }
     

@@ -57,6 +57,8 @@
 		427CE63918F07D7A00865291 /* RentalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63718F07D7A00865291 /* RentalViewController.m */; };
 		427CE63C18F07D8B00865291 /* DirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63B18F07D8B00865291 /* DirectViewController.m */; };
 		427CE63D18F07D8B00865291 /* DirectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63B18F07D8B00865291 /* DirectViewController.m */; };
+		427CE64018F2E47C00865291 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63F18F2E47C00865291 /* SignView.m */; };
+		427CE64118F2E47C00865291 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63F18F2E47C00865291 /* SignView.m */; };
 		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
 		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
 		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
@@ -265,6 +267,8 @@
 		427CE63718F07D7A00865291 /* RentalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentalViewController.m; sourceTree = "<group>"; };
 		427CE63A18F07D8B00865291 /* DirectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectViewController.h; sourceTree = "<group>"; };
 		427CE63B18F07D8B00865291 /* DirectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectViewController.m; sourceTree = "<group>"; };
+		427CE63E18F2E47C00865291 /* SignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
+		427CE63F18F2E47C00865291 /* SignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
 		42849B4D18E4484700E5B3FB /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -489,6 +493,8 @@
 			children = (
 				427CE63018F072F400865291 /* SignOffViewController.h */,
 				427CE63118F072F400865291 /* SignOffViewController.m */,
+				427CE63E18F2E47C00865291 /* SignView.h */,
+				427CE63F18F2E47C00865291 /* SignView.m */,
 			);
 			name = SignOffViewController;
 			sourceTree = "<group>";
@@ -1067,6 +1073,7 @@
 				42B0151A18E1F0520068019C /* ClipView.m in Sources */,
 				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,
 				427CE63C18F07D8B00865291 /* DirectViewController.m in Sources */,
+				427CE64018F2E47C00865291 /* SignView.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42B0151F18E2F79F0068019C /* MarketingViewController.m in Sources */,
 				42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */,
@@ -1101,6 +1108,7 @@
 				42EB3EE218D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
 				4247572B18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
 				427CE63318F072F400865291 /* SignOffViewController.m in Sources */,
+				427CE64118F2E47C00865291 /* SignView.m in Sources */,
 				424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */,
 				427CE63918F07D7A00865291 /* RentalViewController.m in Sources */,
 				424756F118D7379E000AAF7C /* InternetViewController.m in Sources */,

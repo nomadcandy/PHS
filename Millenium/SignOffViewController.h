@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "SignView.h"
 
 @interface SignOffViewController : UIViewController
 
+
+@property (nonatomic, strong) IBOutlet UIView *signOffView;
 - (IBAction)goHome:(UIButton *)sender;
 -(IBAction)goMail:(UIButton*)sender event:(id)event;
+- (IBAction)signOff:(UIButton*)sender;
 
 @end
