@@ -121,18 +121,14 @@
     
     else {
         
-        //logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        //UIImage*newFreshImage = [UIImage imageNamed:_logoUseStringHere];
-		[logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
-        //[logoPicButton setImage:logoImage forState:UIControlStateNormal];
         
-        //UIImageView * imgView = [[UIImageView alloc] initWithImage:newFreshImage];
-        //[logoPicButton addSubview:imgView];
-   }
+		[logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+        
+    
+    }
     
    
-    //[DIYMenu isActivated];
-    
+        
     //configure carousel
     carouselSize.type = iCarouselTypeCoverFlow2;
     carouselColor.type = iCarouselTypeCoverFlow2;

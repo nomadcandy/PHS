@@ -274,6 +274,12 @@
     
     selectedImage = chosenImage;
     
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.jpg"]];
+    [UIImageJPEGRepresentation(chosenImage, 1.0) writeToFile:imagePath atomically:YES];
+
+    
+    
+    
    
     
 }
@@ -356,11 +362,9 @@
     chosenImageView.image = newImage;
     //chosenImage = newImage;
     
-    
-    
     NSLog(@"chosenImage %@",selectedImage);
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/orderImage.jpg"]];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.jpg"]];
     [UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
     
    
