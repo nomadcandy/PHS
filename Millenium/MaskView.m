@@ -53,11 +53,18 @@
         firstPoint,secondPoint,thirdPoint,fourthPoint,firstPoint,
 	};
     
+    //make Snapshot Rectangle
+    //CGRect screenRectSnapshot = CGRectMake(637.0,357.0,998,580);
+    
+    //CGRect screenRectSnapshot
+    
     //trying to add paths to context to save
     CGPoint addPath[] =
 	{
         firstPoint,secondPoint,thirdPoint,fourthPoint,
 	};
+    
+    
     
     
 	// Bulk call to add lines to the current path.

@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 
-@interface RentalViewController : UIViewController
+@interface RentalViewController : UIViewController{
+    
+    IBOutlet UIWebView*rentalWebView;
+}
 
 -(IBAction)goHome:(id)sender;
 

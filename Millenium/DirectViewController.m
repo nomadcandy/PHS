@@ -26,6 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *strURL = @"http://www.google.com";
+    NSURL *url = [NSURL URLWithString:strURL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self->directWebView loadRequest:urlRequest];
 	// Do any additional setup after loading the view.
 }
 

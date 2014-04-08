@@ -262,12 +262,14 @@
         [button setTitle:[NSString stringWithFormat:@"Direct Purchase Mat"] forState:UIControlStateNormal];
         //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];
         //return button;
+        
+        [button addTarget:self action:@selector(presentDirectViewController:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (index ==1){
         
         [button setTitle:[NSString stringWithFormat:@"Rental Mat"] forState:UIControlStateNormal];
-        
+        [button addTarget:self action:@selector(presentRentalViewController:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (index ==2){

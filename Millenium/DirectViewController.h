@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 
-@interface DirectViewController : UIViewController
+@interface DirectViewController : UIViewController{
+    
+    IBOutlet UIWebView*directWebView;
+}
 
 -(IBAction)goHome:(id)sender;
 
