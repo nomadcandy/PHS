@@ -121,8 +121,9 @@
 
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
     
-    CGRect screenRect2 = self.view.frame;
+    //CGRect screenRect2 = self.view.frame;
     //CGRect screenRect1 = CGRectMake(637.0,357.0,998,580);
+     CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
     
     
     UIGraphicsBeginImageContext(screenRect2.size);

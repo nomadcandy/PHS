@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
+		422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */; };
@@ -220,6 +222,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		422BA5FD18F442B900E53B33 /* CharlesHead.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesHead.m4v; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoCollectionViewController.h; sourceTree = "<group>"; };
@@ -725,6 +728,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				422BA5FD18F442B900E53B33 /* CharlesHead.m4v */,
 				42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */,
 				42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */,
 				426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */,
@@ -924,6 +928,7 @@
 				42B0155518E316100068019C /* TripleFlexScraper.pdf in Resources */,
 				426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */,
 				42B0153718E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
+				422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */,
 				42B0155B18E3163F0068019C /* Dura-Lite.pdf in Resources */,
 				426A6A1D18ED0CC300255331 /* SampleLogo4.png in Resources */,
 				426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */,
@@ -1018,6 +1023,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */,
 				42B0156B18E317710068019C /* SpringStep.pdf in Resources */,
 				42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */,
 				42B0156218E316580068019C /* TripleFlexFlow.pdf in Resources */,
