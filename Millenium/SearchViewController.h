@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UIViewController
+@interface SearchViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
+
+
+@property (strong, nonatomic) NSArray *locationArray;
+@property (strong, nonatomic) NSArray *matTypeArray;
+@property (strong, nonatomic) NSArray *sizeArray;
+@property (strong, nonatomic) NSArray *styleArray;
 
 @end

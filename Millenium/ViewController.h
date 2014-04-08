@@ -12,6 +12,8 @@
 #import "RentalViewController.h"
 #import "InteractiveViewController.h"
 #import "MarketingViewController.h"
+#import "SearchViewController.h"
+#import "SketchRequestViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 

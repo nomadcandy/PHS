@@ -1763,19 +1763,25 @@
                                 <rect key="frame" x="411" y="470" width="86" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Best Match"/>
+                                <state key="normal" title="Best Match">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjK-9T-erv">
                                 <rect key="frame" x="521" y="470" width="133" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Date Descending"/>
+                                <state key="normal" title="Date Descending">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eds-NM-YrM">
                                 <rect key="frame" x="678" y="470" width="78" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Popularity"/>
+                                <state key="normal" title="Popularity">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzl-0x-0bu">
                                 <rect key="frame" x="141" y="531" width="739" height="68"/>
@@ -1808,16 +1814,6 @@
     </scenes>
     <resources>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="CleanButton.png" width="236" height="136"/>
         <image name="FliersWhite.png" width="230" height="91"/>
         <image name="FreshButton.png" width="322" height="128"/>
@@ -1839,20 +1835,8 @@
         <image name="cintaslogohighres.png" width="448" height="170"/>
         <image name="envelope.png" width="795" height="462"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
-        <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="rugsamplea.png" width="114" height="104"/>
         <image name="whitePad.png" width="1996" height="1015"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
-        <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitepad.png" width="1996" height="1015"/>
     </resources>

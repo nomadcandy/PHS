@@ -179,6 +179,8 @@
 		42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157E18E3428B0068019C /* WalkOffLogoMat.png */; };
 		42B0159918E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
 		42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
+		42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
+		42B70D2118F3D45900CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
 		42DBC73B18EE03AA005BF791 /* CintasLogoHighRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
@@ -341,6 +343,8 @@
 		42B0157D18E3428B0068019C /* WaterGuardLogoInlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardLogoInlay.png; sourceTree = "<group>"; };
 		42B0157E18E3428B0068019C /* WalkOffLogoMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WalkOffLogoMat.png; sourceTree = "<group>"; };
 		42B0159818E35CF20068019C /* VideosWhite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite3.png; sourceTree = "<group>"; };
+		42B70D1E18F3D45800CF0C97 /* SketchRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchRequestViewController.h; sourceTree = "<group>"; };
+		42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchRequestViewController.m; sourceTree = "<group>"; };
 		42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CintasLogoHighRes.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
@@ -676,6 +680,15 @@
 			name = ImagesFliers;
 			sourceTree = "<group>";
 		};
+		42B70D1D18F3D43700CF0C97 /* SketchRequestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42B70D1E18F3D45800CF0C97 /* SketchRequestViewController.h */,
+				42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */,
+			);
+			name = SketchRequestViewController;
+			sourceTree = "<group>";
+		};
 		42E7AC0518CE2C100036AF00 /* InteractiveViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -764,6 +777,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				42B70D1D18F3D43700CF0C97 /* SketchRequestViewController */,
 				427CE63518F07D6200865291 /* RentalViewController */,
 				427CE63418F07D5100865291 /* DirectViewController */,
 				427CE62F18F072CC00865291 /* SignOffViewController */,
@@ -1085,6 +1099,7 @@
 				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */,
 				424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */,
+				42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
 				42B0151518E0F57E0068019C /* MaskView.m in Sources */,
 				424756D918D389FA000AAF7C /* SearchViewController.m in Sources */,
@@ -1107,6 +1122,7 @@
 				42FF7A5118CDF09B00C72695 /* iCarousel.m in Sources */,
 				424756EC18D38B2C000AAF7C /* LogoCell.m in Sources */,
 				42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
+				42B70D2118F3D45900CF0C97 /* SketchRequestViewController.m in Sources */,
 				42B0152018E2F79F0068019C /* MarketingViewController.m in Sources */,
 				427CE63D18F07D8B00865291 /* DirectViewController.m in Sources */,
 				42EB3EE218D232AB00FAD7FD /* MyDraggableImage.m in Sources */,

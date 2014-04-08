@@ -283,13 +283,14 @@
     if (index == 3){
         
         [button setTitle:[NSString stringWithFormat:@"Sketch Search"] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(presentSearchViewController:) forControlEvents:UIControlEventTouchUpInside];
         
     }
     
     if (index == 4){
         
         [button setTitle:[NSString stringWithFormat:@"Sketch Request"] forState:UIControlStateNormal];
-        
+        [button addTarget:self action:@selector(presentSketchRequestViewController:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     if (index == 5){
@@ -353,6 +354,30 @@
     
     
 }
+
+
+- (IBAction)presentSearchViewController:(UIButton *)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    SearchViewController *searchvc = [storyboard instantiateViewControllerWithIdentifier:@"SearchStoryBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:searchvc animated:YES completion:nil];
+    
+    
+}
+
+
+- (IBAction)presentSketchRequestViewController:(UIButton *)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    SketchRequestViewController *srvc = [storyboard instantiateViewControllerWithIdentifier:@"SketchRequestStoryBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:srvc animated:YES completion:nil];
+    
+    
+}
 //Not Using Now
 #pragma mark-
 #pragma mark Segue
@@ -366,10 +391,6 @@
         InteractiveViewController *destViewController = segue.destinationViewController;
         [self presentViewController:destViewController animated:YES completion:nil];
         
-
-        
-       
-
         
         
     }
