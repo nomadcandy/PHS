@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 @interface SearchViewController : UIViewController<UIPickerViewDelegate, UIPickerViewDataSource>
 
+
+-(IBAction)goHome:(id)sender;
 
 @property (strong, nonatomic) NSArray *locationArray;
 @property (strong, nonatomic) NSArray *matTypeArray;
