@@ -141,7 +141,7 @@
     }
     
    
-        
+    
     //configure carousel
     carouselSize.type = iCarouselTypeCoverFlow2;
     carouselColor.type = iCarouselTypeCoverFlow2;

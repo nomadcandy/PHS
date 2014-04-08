@@ -121,6 +121,30 @@
 
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
     
+    CGRect screenRect2 = self.view.frame;
+    //CGRect screenRect1 = CGRectMake(637.0,357.0,998,580);
+    
+    
+    UIGraphicsBeginImageContext(screenRect2.size);
+    //UIGraphicsBeginImageContext(interactiveMatView.size);
+    
+    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx1, screenRect2);
+    
+    [self.view.layer renderInContext:ctx1];
+    
+    UIImage *matImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    
+    //save image to documents
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.jpg"]];
+    [UIImageJPEGRepresentation(matImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    
     
     MFMailComposeViewController*mailComposer;
     
@@ -139,10 +163,7 @@
     //NSLog(@"%@",lastNameString);
     
     
-   // TODO add images to email to send
-    //UIImage*matImage=[UIImage imageNamed:@"jadeteahouselogo.png"];
-    //UIImage*matImage=[UIImage imageNamed:@"signature.png"];
-    
+       
     //NSString*messageString = [NSString stringWithFormat:@"%@  %@, %@, %@, %@, %@, %@, %@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
     
     NSString*messageString = @"This mat requires your approval";
@@ -166,10 +187,10 @@
     NSMutableArray*recipients=[[NSMutableArray alloc]init];
     
     NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    NSString *imagePath =  [directoryPath objectAtIndex:0];
-    imagePath= [imagePath stringByAppendingPathComponent:@"orderImage.jpg"];
+    NSString *imagePath1 =  [directoryPath objectAtIndex:0];
+    imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImage.jpg"];
     
-    NSData *data = [NSData dataWithContentsOfFile:imagePath];
+    NSData *data = [NSData dataWithContentsOfFile:imagePath1];
     UIImage *image = [UIImage imageWithData:data];
 
     
@@ -200,7 +221,7 @@
     }*/
     
     // Add attachment
-    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"orderImage.jpg"];
+    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
     
     
     [mailComposer setToRecipients:recipients];
