@@ -127,9 +127,9 @@
     if (imagePath == Nil){
         
         //selectedImage = [UIImage imageNamed:@"jadeteahouselogo1.png"];
-        //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+        UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
 		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		//[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+		[logoPicButton setBackgroundImage:image forState:UIControlStateNormal];
     }
     
     else {

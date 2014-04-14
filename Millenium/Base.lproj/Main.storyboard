@@ -817,9 +817,10 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-HA-1kT">
-                                            <rect key="frame" x="148" y="170" width="76" height="55"/>
+                                            <rect key="frame" x="143" y="174" width="76" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="goBack">
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -842,20 +843,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <button clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH0-RC-jKe">
-                                    <rect key="frame" x="5" y="7" width="78" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="CintasLogoHighRes.png">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="goInteractive:" destination="l8u-Ww-K06" eventType="touchUpInside" id="ONv-Fv-YKo"/>
-                                    </connections>
-                                </button>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGOS NEAR ME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcs-vW-CVy">
-                                    <rect key="frame" x="91" y="-352" width="1024" height="768"/>
+                                    <rect key="frame" x="14" y="-352" width="1024" height="768"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="23"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -872,7 +863,6 @@
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <outlet property="backButton" destination="fH0-RC-jKe" id="wZn-mP-77j"/>
                                 <outlet property="cintasButton" destination="kR0-DG-lFR" id="eOt-cP-vPT"/>
                             </connections>
                         </collectionReusableView>
@@ -892,38 +882,27 @@
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeStoryboard" title="LandingPage" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeStoryboard" title="LandingPage" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nnt-MM-CSn"/>
                         <viewControllerLayoutGuide type="bottom" id="ruq-0y-mnv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oYY-Yn-WfC" userLabel="backgroundImage">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="709"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="773"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MatChatterBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-QT-lmy" userLabel="PromoImage">
-                                <rect key="frame" x="0.0" y="36" width="1033" height="765"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43Z-zS-A6N">
-                                <rect key="frame" x="-10" y="0.0" width="1041" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="GGZ-Yn-rih"/>
-                                </items>
-                            </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CintasLogoHighRes.png" translatesAutoresizingMaskIntoConstraints="NO" id="zm9-LH-kLe">
-                                <rect key="frame" x="469" y="12" width="82" height="32"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MatClientFocusJade.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-QT-lmy" userLabel="PromoImage">
+                                <rect key="frame" x="-2" y="20" width="1033" height="759"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B73-GN-pMc" customClass="iCarousel">
-                                <rect key="frame" x="40" y="491" width="958" height="170"/>
+                                <rect key="frame" x="40" y="533" width="958" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -934,7 +913,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STH-gs-EuE">
                                 <rect key="frame" x="740" y="356" width="140" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="CleanButton.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -944,7 +923,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK5-0m-lbJ">
                                 <rect key="frame" x="751" y="266" width="207" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="LookingSerious.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -954,7 +933,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSM-Oi-EyX">
                                 <rect key="frame" x="676" y="172" width="189" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="WeGotThis.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -964,7 +943,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXh-OR-FEU">
                                 <rect key="frame" x="406" y="172" width="197" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="OrganizedButton.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -974,7 +953,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sn-7u-V0g">
                                 <rect key="frame" x="128" y="281" width="208" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ProffessionalButton.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -984,7 +963,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY9-Xr-SHu">
                                 <rect key="frame" x="179" y="367" width="157" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="FreshButton.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -994,7 +973,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Y0-yk-tuR">
                                 <rect key="frame" x="184" y="180" width="177" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="FriendlyButton.png">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1011,8 +990,7 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="FRW-30-iEZ"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -1131,7 +1109,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkM-NE-0Sn">
-                                <rect key="frame" x="265" y="434" width="49" height="30"/>
+                                <rect key="frame" x="265" y="416" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Trans">
@@ -1232,7 +1210,7 @@
                                 <rect key="frame" x="485" y="609" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Edit">
+                                <state key="normal">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1586,7 +1564,9 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GNI-E4-d44" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="q9S-09-FGS"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xac-tu-EaP">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Xac-tu-EaP">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1923,29 +1903,47 @@
     </scenes>
     <resources>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
-        <image name="CleanButton.png" width="236" height="136"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="FliersWhite.png" width="230" height="91"/>
-        <image name="FreshButton.png" width="322" height="128"/>
-        <image name="FriendlyButton.png" width="341" height="128"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
+        <image name="LogoSelectedBG.png" width="253" height="213"/>
+        <image name="LogoSelectedBG.png" width="253" height="213"/>
+        <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="LogoThumbnailBG.png" width="220" height="220"/>
-        <image name="LookingSerious.png" width="400" height="145"/>
-        <image name="MatChatterBg.png" width="2078" height="1536"/>
+        <image name="MatClientFocusJade.png" width="2078" height="1536"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
-        <image name="OrganizedButton.png" width="400" height="131"/>
-        <image name="ProffessionalButton.png" width="400" height="132"/>
         <image name="VideosWhite3.png" width="230" height="91"/>
-        <image name="WeGotThis.png" width="400" height="129"/>
         <image name="WebViewBG2.png" width="557" height="395"/>
         <image name="alllogobuttons2.png" width="109" height="99"/>
         <image name="allmatbuttons2.png" width="109" height="99"/>
         <image name="cintaslogohighres.png" width="448" height="170"/>
         <image name="envelope.png" width="795" height="462"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="rugsamplea.png" width="114" height="104"/>
         <image name="whitePad.png" width="1996" height="1015"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitepad.png" width="1996" height="1015"/>
     </resources>
@@ -1955,6 +1953,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
+        <segue reference="wpq-PH-bdK"/>
     </inferredMetricsTieBreakers>
 </document>

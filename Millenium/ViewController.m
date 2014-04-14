@@ -52,6 +52,11 @@
     //[carousel reloadData];
 }*/
 
+/*-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+}*/
+
 
 -(IBAction)playFriendly:(id)sender{
     

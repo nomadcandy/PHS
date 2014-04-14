@@ -21,6 +21,9 @@
 		4247572B18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572918D7D70F000AAF7C /* LogoHeaderCell.m */; };
 		4247572E18D8AA55000AAF7C /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572D18D8AA55000AAF7C /* Logo.m */; };
 		4247572F18D8AA55000AAF7C /* Logo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4247572D18D8AA55000AAF7C /* Logo.m */; };
+		4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */; };
+		4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
+		4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
 		426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A69FF18ED0CC300255331 /* SampleLogo8A.png */; };
 		426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0018ED0CC300255331 /* SampleLogo16.png */; };
 		426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0118ED0CC300255331 /* SampleLogo15.png */; };
@@ -193,6 +196,7 @@
 		42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EF618D3456E00FAD7FD /* DIYMenu.m */; };
 		42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EF718D3456E00FAD7FD /* DIYMenuItem.m */; };
 		42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EC7E3818DC9609003B49A3 /* ImagePickerViewController.m */; };
+		42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */ = {isa = PBXBuildFile; fileRef = 42FF0EED18FC32C10060B036 /* MatClientFocusJade.png */; };
 		42FF7A1518CDE92A00C72695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1418CDE92A00C72695 /* Foundation.framework */; };
 		42FF7A1718CDE92A00C72695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */; };
 		42FF7A1918CDE92A00C72695 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1818CDE92A00C72695 /* UIKit.framework */; };
@@ -235,6 +239,8 @@
 		4247572918D7D70F000AAF7C /* LogoHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoHeaderCell.m; sourceTree = "<group>"; };
 		4247572C18D8AA55000AAF7C /* Logo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logo.h; sourceTree = "<group>"; };
 		4247572D18D8AA55000AAF7C /* Logo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logo.m; sourceTree = "<group>"; };
+		4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgSay.png; sourceTree = "<group>"; };
+		4259BC4418F6F90100861033 /* MatChatterBgCool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgCool.png; sourceTree = "<group>"; };
 		426A69FF18ED0CC300255331 /* SampleLogo8A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo8A.png; sourceTree = "<group>"; };
 		426A6A0018ED0CC300255331 /* SampleLogo16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo16.png; sourceTree = "<group>"; };
 		426A6A0118ED0CC300255331 /* SampleLogo15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo15.png; sourceTree = "<group>"; };
@@ -362,6 +368,7 @@
 		42EB3EFC18D3458A00FAD7FD /* DIYMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYMenuItem.h; sourceTree = "<group>"; };
 		42EC7E3718DC9609003B49A3 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
 		42EC7E3818DC9609003B49A3 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		42FF0EED18FC32C10060B036 /* MatClientFocusJade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatClientFocusJade.png; sourceTree = "<group>"; };
 		42FF7A1118CDE92A00C72695 /* Millenium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millenium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A1418CDE92A00C72695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -475,6 +482,9 @@
 		426A6A2518EDACAC00255331 /* ImagesHome */ = {
 			isa = PBXGroup;
 			children = (
+				42FF0EED18FC32C10060B036 /* MatClientFocusJade.png */,
+				4259BC4418F6F90100861033 /* MatChatterBgCool.png */,
+				4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */,
 				42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */,
 				426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */,
 				426A6A2818EDADBA00255331 /* LookingSerious.png */,
@@ -958,6 +968,7 @@
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42B0157318E317B00068019C /* SoftStep.pdf in Resources */,
 				42B0152218E303C40068019C /* MatChatter5.png in Resources */,
+				4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */,
 				426A6A3218EDADBA00255331 /* ProffessionalButton.png in Resources */,
 				42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
@@ -994,6 +1005,7 @@
 				42849B9118EA02BE00E5B3FB /* whitepad.png in Resources */,
 				42849B8B18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
+				42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */,
 				426A6A2218EDA29E00255331 /* MatAnimationCleanMedium.m4v in Resources */,
 				426A6A3418EDADBA00255331 /* CleanButton.png in Resources */,
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
@@ -1011,6 +1023,7 @@
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
 				42849B8E18EA027800E5B3FB /* gradietebg.png in Resources */,
 				42B0154318E315BB0068019C /* TreadLock.pdf in Resources */,
+				4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */,
 				42B0156D18E3177F0068019C /* SafeStep.pdf in Resources */,
 				426A6A2018ED0CC300255331 /* SampleLogo1.png in Resources */,
 				42B0150A18DFBD170068019C /* RectangleButton.png in Resources */,
@@ -1029,6 +1042,7 @@
 				42B0156218E316580068019C /* TripleFlexFlow.pdf in Resources */,
 				42B0155C18E3163F0068019C /* Dura-Lite.pdf in Resources */,
 				42B0153E18E3159F0068019C /* SilverSeries.pdf in Resources */,
+				4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */,
 				42849B7D18E9FE6000E5B3FB /* whitecirclerugsample2.png in Resources */,
 				42B0156518E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
 				42B0156818E3175A0068019C /* MarbleTop.pdf in Resources */,
