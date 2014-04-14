@@ -65,6 +65,8 @@
 		427CE64018F2E47C00865291 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63F18F2E47C00865291 /* SignView.m */; };
 		427CE64118F2E47C00865291 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63F18F2E47C00865291 /* SignView.m */; };
 		427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CE64A18F3316900865291 /* jadeteahouselogo1.png */; };
+		428085C618FC3F9100389C9C /* loginIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 428085C518FC3F9100389C9C /* loginIcon2.png */; };
+		428085C818FC412100389C9C /* loginBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 428085C718FC412100389C9C /* loginBlackIcon.png */; };
 		42849B4E18E4484700E5B3FB /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4D18E4484700E5B3FB /* email.png */; };
 		42849B5018E4556700E5B3FB /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B4F18E4556700E5B3FB /* envelope.png */; };
 		42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42849B5318E46C5700E5B3FB /* VideoViewController.m */; };
@@ -282,6 +284,8 @@
 		427CE63E18F2E47C00865291 /* SignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
 		427CE63F18F2E47C00865291 /* SignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
 		427CE64A18F3316900865291 /* jadeteahouselogo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jadeteahouselogo1.png; sourceTree = "<group>"; };
+		428085C518FC3F9100389C9C /* loginIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginIcon2.png; sourceTree = "<group>"; };
+		428085C718FC412100389C9C /* loginBlackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBlackIcon.png; sourceTree = "<group>"; };
 		42849B4D18E4484700E5B3FB /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		42849B4F18E4556700E5B3FB /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
 		42849B5218E46C5700E5B3FB /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
@@ -735,6 +739,15 @@
 			name = ImagePickerViewController;
 			sourceTree = "<group>";
 		};
+		42FF0EEF18FC3C7B0060B036 /* ImagesNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				428085C518FC3F9100389C9C /* loginIcon2.png */,
+				428085C718FC412100389C9C /* loginBlackIcon.png */,
+			);
+			name = ImagesNavBar;
+			sourceTree = "<group>";
+		};
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
@@ -745,6 +758,7 @@
 				426A6A3618EDD3B100255331 /* Professional_video.mp4 */,
 				426A6A2318EDA3C800255331 /* MatAnimationUseSmall.m4v */,
 				426A6A2118EDA29E00255331 /* MatAnimationCleanMedium.m4v */,
+				42FF0EEF18FC3C7B0060B036 /* ImagesNavBar */,
 				42AB550E18EF51190051AF9F /* ImagesInteractivePage */,
 				426A6A3A18EDDC2400255331 /* MatVideos */,
 				426A6A2518EDACAC00255331 /* ImagesHome */,
@@ -991,6 +1005,7 @@
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				426A6A1418ED0CC300255331 /* SampleLogo13.png in Resources */,
 				426A6A1C18ED0CC300255331 /* SampleLogo5.png in Resources */,
+				428085C818FC412100389C9C /* loginBlackIcon.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
 				426A6A3718EDD3B100255331 /* Professional_video.mp4 in Resources */,
@@ -1019,6 +1034,7 @@
 				426A6A3118EDADBA00255331 /* OrganizedButton.png in Resources */,
 				42849B8518EA00CD00E5B3FB /* alllogobuttons2.png in Resources */,
 				426A6A3518EDADBA00255331 /* FreshButton.png in Resources */,
+				428085C618FC3F9100389C9C /* loginIcon2.png in Resources */,
 				42B0159918E35CF20068019C /* VideosWhite3.png in Resources */,
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
 				42849B8E18EA027800E5B3FB /* gradietebg.png in Resources */,

@@ -985,11 +985,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKx-bc-woS">
+                                <rect key="frame" x="0.0" y="60" width="55" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="loginBlackIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FRW-30-iEZ"/>
+                    <navigationItem key="navigationItem" id="FRW-30-iEZ">
+                        <barButtonItem key="leftBarButtonItem" image="loginIcon2.png" style="plain" id="DX4-12-1ug">
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -1939,6 +1951,8 @@
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="loginBlackIcon.png" width="97" height="93"/>
+        <image name="loginIcon2.png" width="50" height="50"/>
         <image name="rugsamplea.png" width="114" height="104"/>
         <image name="whitePad.png" width="1996" height="1015"/>
         <image name="whitecirclematsize1.png" width="94" height="91"/>
