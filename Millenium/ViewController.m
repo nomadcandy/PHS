@@ -18,6 +18,9 @@
 @synthesize InteractiveViewController;
 @synthesize carousel;
 @synthesize label;
+@synthesize loginField;
+@synthesize passwordField;
+@synthesize goButton;
 
 - (void)dealloc
 {
@@ -38,6 +41,13 @@
     charlesBGView.hidden =YES;
     charlesView.hidden=YES;
     
+    loginView.hidden =YES;
+    loginField.hidden=YES;
+    passwordField.hidden =YES;
+    goButton.hidden =YES;
+
+    
+    
     //configure carousel
     carousel.type = iCarouselTypeCoverFlow2;
     //[carousel reloadData];
@@ -56,6 +66,152 @@
 {
     return UIStatusBarStyleDefault;
 }*/
+
+
+-(IBAction)showLogin:(id)sender{
+
+    
+    loginView.hidden =NO;
+    loginField.hidden=NO;
+    passwordField.hidden =NO;
+    goButton.hidden =NO;
+    
+}
+
+-(IBAction)goLogin:(id)sender{
+    
+    NSString*loginString= loginField.text;
+    NSString*passwordString= passwordField.text;
+    
+    
+
+        
+        
+        
+    
+        
+        /*BOOL error = NO;
+        
+        if(loginField.text == nil || [loginField.text length] == 0)
+        {
+            error = YES;
+            //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
+        }
+        
+        if(passwordField.text == nil || [passwordField.text length] == 0)
+        {
+            error = YES;
+            //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
+        }*/
+        
+    
+        
+        /*if(error)
+        {
+            [self showError];
+            return;
+        }*/
+        
+        
+        
+    
+    
+    NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"]];
+    
+    
+    NSURL *urlLogin = [[NSURL alloc] initWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"];
+
+    
+    
+   
+    
+    //[theRequest setHTTPMethod:@"POST"];
+    //[theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    
+    //NSLog(@"REQUEST: %@",theRequest);
+    
+    
+    NSLog(@"REQUEST: %@",theRequest);
+    
+    //NSString *postData = [NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@",loginField.text,passwordField.text];
+    
+   NSError *error = nil;
+    //NSData *data = [NSData dataWithContentsOfFile:theRequest];
+ 
+    
+   NSData *data = [NSData dataWithContentsOfURL:urlLogin];
+    
+    
+    
+    //parse Dictionary from web
+    NSDictionary *loginDictionary = [NSJSONSerialization
+                                     JSONObjectWithData:data
+                                     options:NSJSONReadingAllowFragments
+                                     error: &error];
+    
+    NSLog(@"%@LoginDICTIONARY",loginDictionary);
+    
+    
+    //crashes here
+    //creates array of all Dictionary objects nested as well
+    //NSArray* loginArray = [loginDictionary allKeys];
+    
+    
+    
+   /* [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        NSLog(@"%@", object);
+        
+        NSLog(@"keysPhotosArray %@",loginArray);
+        
+        NSDictionary *resultDictionary = [loginDictionary objectForKey:object];*/
+    
+    
+        /*NSString *artistString = [resultDictionary objectForKey:@"artist"];
+        NSLog(@"artistString %@",artistString);
+        NSString *titleString = [resultDictionary objectForKey:@"title"];
+        NSLog(@"titleString %@",titleString);
+        
+        NSString *albumArtistSpaceString = [artistString stringByAppendingString:@"   "];
+        
+        NSString *albumArtistString = [albumArtistSpaceString stringByAppendingString:titleString];
+        
+        NSString *copyrightString = [resultDictionary objectForKey:@"copyright"];
+        NSLog(@"copyrightString %@",copyrightString);
+        
+        NSString *copyLabelSpaceString = [copyrightString stringByAppendingString:@"   "];
+        
+        
+        NSString *labelNameString = [resultDictionary objectForKey:@"label_name"];
+        NSLog(@"labelName %@",labelNameString);
+        
+        
+        NSString *copyLabelString = [copyLabelSpaceString stringByAppendingString:labelNameString];
+        
+        NSArray *photosArray = [resultDictionary objectForKey:@"photos"];
+        NSLog(@"photosArray %@",photosArray);
+        
+        NSDictionary *photosDictonary1 = [resultDictionary objectForKey:@"photos"];
+        NSLog(@"photosDictionary1 %@",photosDictonary1);*/
+        
+
+        
+        
+    
+    
+}
+
+
+
+
+-(IBAction)hideLogin:(id)sender{
+    
+    
+    loginView.hidden =YES;
+    loginField.hidden=YES;
+    passwordField.hidden = YES;
+    goButton.hidden =YES;
+    
+}
 
 
 -(IBAction)playFriendly:(id)sender{

@@ -22,10 +22,13 @@
 
 {
     IBOutlet UIButton*cleanButton;
+    IBOutlet UIButton*goButton;
     IBOutlet UIViewController*InteractiveViewController;
     IBOutlet UIImageView*charlesView;
     IBOutlet UIImageView*charlesBGView;
-    
+    IBOutlet UIImageView*loginView;
+    IBOutlet UITextField*loginField;
+    IBOutlet UITextField*passwordField;
     
 }
 
@@ -36,14 +39,27 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carousel;
 @property (nonatomic, strong) IBOutlet UILabel *label;
 
+@property (nonatomic, strong) IBOutlet UIImageView *loginView;
+@property (nonatomic, strong) IBOutlet UITextField *loginField;
+@property (nonatomic, strong) IBOutlet UITextField *passwordField;
+@property (nonatomic, strong) IBOutlet UIButton *goButton;
+
+
+
+
+-(IBAction)showLogin:(id)sender;
+-(IBAction)goLogin:(id)sender;
+-(IBAction)hideLogin:(id)sender;
+
+
 -(IBAction)playClean:(id)sender;
 -(IBAction)playPro:(id)sender;
 -(IBAction)playFriendly:(id)sender;
 
-- (IBAction)pressedButton:(id)sender;
-- (IBAction)toggledSwitch:(id)sender;
-- (IBAction)changedSlider:(id)sender;
-- (IBAction)presentInteractiveViewController:(UIButton *)sender;
+-(IBAction)pressedButton:(id)sender;
+-(IBAction)toggledSwitch:(id)sender;
+-(IBAction)changedSlider:(id)sender;
+-(IBAction)presentInteractiveViewController:(UIButton *)sender;
 
 
 @end

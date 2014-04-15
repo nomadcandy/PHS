@@ -897,12 +897,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MatClientFocusJade.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-QT-lmy" userLabel="PromoImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MatSay.png" translatesAutoresizingMaskIntoConstraints="NO" id="dRZ-QT-lmy" userLabel="PromoImage">
                                 <rect key="frame" x="-2" y="20" width="1033" height="759"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B73-GN-pMc" customClass="iCarousel">
-                                <rect key="frame" x="40" y="533" width="958" height="170"/>
+                                <rect key="frame" x="40" y="556" width="958" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -992,6 +992,35 @@
                                 <state key="normal" image="loginBlackIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FfM-XY-7Ki"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginPopOver.png" translatesAutoresizingMaskIntoConstraints="NO" id="zn7-ar-PeR">
+                                <rect key="frame" x="20" y="145" width="273" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nla-ge-luS" userLabel="login">
+                                <rect key="frame" x="45" y="169" width="223" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mja-8f-iWU" userLabel="password">
+                                <rect key="frame" x="45" y="207" width="223" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WY-BY-3fF">
+                                <rect key="frame" x="250" y="232" width="33" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="goButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0O2-WF-j4w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1008,6 +1037,8 @@
                     <connections>
                         <outlet property="carousel" destination="B73-GN-pMc" id="elp-vg-Y1N"/>
                         <outlet property="charlesBGView" destination="Xke-HV-RhF" id="iy7-TN-Chk"/>
+                        <outlet property="loginField" destination="nla-ge-luS" id="myJ-jX-XxQ"/>
+                        <outlet property="passwordField" destination="Mja-8f-iWU" id="qkM-9g-Vhc"/>
                         <segue destination="EOd-lr-Xtf" kind="push" identifier="InteractiveSegue" id="wpq-PH-bdK"/>
                     </connections>
                 </viewController>
@@ -1927,12 +1958,13 @@
         <image name="FliersWhite.png" width="230" height="91"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
+        <image name="LoginPopOver.png" width="535" height="300"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="LogoThumbnailBG.png" width="220" height="220"/>
-        <image name="MatClientFocusJade.png" width="2078" height="1536"/>
+        <image name="MatSay.png" width="2078" height="1536"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="VideosWhite3.png" width="230" height="91"/>
         <image name="WebViewBG2.png" width="557" height="395"/>
@@ -1940,6 +1972,7 @@
         <image name="allmatbuttons2.png" width="109" height="99"/>
         <image name="cintaslogohighres.png" width="448" height="170"/>
         <image name="envelope.png" width="795" height="462"/>
+        <image name="goButton.png" width="74" height="71"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
