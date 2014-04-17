@@ -42,9 +42,9 @@
     charlesView.hidden=YES;
     
     loginView.hidden =YES;
-    loginField.hidden=YES;
-    passwordField.hidden =YES;
-    goButton.hidden =YES;
+    //loginField.hidden=YES;
+    //passwordField.hidden =YES;
+    //goButton.hidden =YES;
 
     
     
@@ -83,7 +83,10 @@
     NSString*loginString= loginField.text;
     NSString*passwordString= passwordField.text;
     
-    
+    loginView.hidden =YES;
+    //loginField.hidden=YES;
+    //passwordField.hidden =YES;
+    //goButton.hidden =YES;
 
         
         
@@ -217,12 +220,13 @@
     self.movieController = [[MPMoviePlayerController alloc] init];
     
     NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"CharlesHead" ofType:@"m4v"];
-    //NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"matsensesall" ofType:@"mp4"];
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
     self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
     //[self.movieController.view setFrame:CGRectMake (392, 200, 240, 136)];
-    [self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
-    //[self.movieController.view setFrame:CGRectMake (272, 200, 480, 272)];
+    //[self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
+    
+    [self.movieController.view setFrame:CGRectMake (285, 213, 482, 274)];
+   //[self.movieController.view setFrame:CGRectMake (272, 200, 480, 272)];
     self.movieController.movieSourceType = MPMovieSourceTypeFile;
     [self.view addSubview:self.movieController.view];
     [self.movieController play];
@@ -251,7 +255,8 @@
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
     self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
     //[self.movieController.view setFrame:CGRectMake (392, 200, 240, 136)];
-    [self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
+    //[self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
+     [self.movieController.view setFrame:CGRectMake (285, 213, 482, 274)];
     //[self.movieController.view setFrame:CGRectMake (272, 200, 480, 272)];
     self.movieController.movieSourceType = MPMovieSourceTypeFile;
     [self.view addSubview:self.movieController.view];
@@ -280,7 +285,8 @@
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
     self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
     //[self.movieController.view setFrame:CGRectMake (392, 200, 240, 136)];
-    [self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
+    //[self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
+    [self.movieController.view setFrame:CGRectMake (285, 213, 482, 274)];
     //[self.movieController.view setFrame:CGRectMake (272, 200, 480, 272)];
     self.movieController.movieSourceType = MPMovieSourceTypeFile;
     [self.view addSubview:self.movieController.view];

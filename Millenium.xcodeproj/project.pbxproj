@@ -216,6 +216,8 @@
 		42E9AC2518FF5A6C000E226D /* Fresh3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1E18FF5A6C000E226D /* Fresh3Button.png */; };
 		42E9AC2618FF5A6C000E226D /* Clean3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1F18FF5A6C000E226D /* Clean3Button.png */; };
 		42E9AC2718FF5A6C000E226D /* Clean3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1F18FF5A6C000E226D /* Clean3Button.png */; };
+		42E9AC2918FF5FB9000E226D /* go1Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC2818FF5FB9000E226D /* go1Button.png */; };
+		42E9AC2A18FF5FB9000E226D /* go1Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC2818FF5FB9000E226D /* go1Button.png */; };
 		42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
 		42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
 		42EB3EE118D232AB00FAD7FD /* MyDraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */; };
@@ -403,6 +405,7 @@
 		42E9AC1D18FF5A6C000E226D /* Friendly3Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friendly3Button.png; sourceTree = "<group>"; };
 		42E9AC1E18FF5A6C000E226D /* Fresh3Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fresh3Button.png; sourceTree = "<group>"; };
 		42E9AC1F18FF5A6C000E226D /* Clean3Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clean3Button.png; sourceTree = "<group>"; };
+		42E9AC2818FF5FB9000E226D /* go1Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go1Button.png; sourceTree = "<group>"; };
 		42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveSlideViewController.h; sourceTree = "<group>"; };
 		42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveSlideViewController.m; sourceTree = "<group>"; };
 		42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDraggableImage.m; sourceTree = "<group>"; };
@@ -528,6 +531,7 @@
 		426A6A2518EDACAC00255331 /* ImagesHome */ = {
 			isa = PBXGroup;
 			children = (
+				42E9AC2818FF5FB9000E226D /* go1Button.png */,
 				42E9AC1C18FF5A6C000E226D /* pro3button.png */,
 				42E9AC1D18FF5A6C000E226D /* Friendly3Button.png */,
 				42E9AC1E18FF5A6C000E226D /* Fresh3Button.png */,
@@ -1020,6 +1024,7 @@
 				426A6A1A18ED0CC300255331 /* SampleLogo7.png in Resources */,
 				42849B5018E4556700E5B3FB /* envelope.png in Resources */,
 				42849B8218EA004100E5B3FB /* rugsamplea.png in Resources */,
+				42E9AC2918FF5FB9000E226D /* go1Button.png in Resources */,
 				42B0152B18E315220068019C /* WalkOffLogoMat.pdf in Resources */,
 				42B0150D18DFBD330068019C /* CircleButton.png in Resources */,
 				42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
@@ -1151,6 +1156,7 @@
 				42B0153218E3153B0068019C /* MotifMat.pdf in Resources */,
 				42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */,
 				42B0150E18DFBD330068019C /* CircleButton.png in Resources */,
+				42E9AC2A18FF5FB9000E226D /* go1Button.png in Resources */,
 				42849B9518EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0150818DFBD0A0068019C /* SquareButton.png in Resources */,
 				42B0153B18E315920068019C /* GoldenSeries.pdf in Resources */,
