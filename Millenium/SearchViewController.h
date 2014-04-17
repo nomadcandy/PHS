@@ -19,4 +19,17 @@
 @property (strong, nonatomic) NSArray *sizeArray;
 @property (strong, nonatomic) NSArray *styleArray;
 
+@property (nonatomic, strong) IBOutlet UITextField *sketchReferenceField;
+@property (nonatomic, strong) IBOutlet UITextField *containingField;
+@property (nonatomic, strong) IBOutlet UITextField *locationField;
+@property (nonatomic, strong) IBOutlet UITextField *typeField;
+@property (nonatomic, strong) IBOutlet UITextField *firstDateField;
+@property (nonatomic, strong) IBOutlet UITextField *secondDateField;
+@property (nonatomic, strong) IBOutlet UITextField *sizeField;
+@property (nonatomic, strong) IBOutlet UIButton *bestMatchButton;
+@property (nonatomic, strong) IBOutlet UIButton *dateButton;
+@property (nonatomic, strong) IBOutlet UIButton *popularityButton;
+
+
+
 @end

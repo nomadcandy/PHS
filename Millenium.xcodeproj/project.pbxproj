@@ -195,6 +195,27 @@
 		42DBC73B18EE03AA005BF791 /* CintasLogoHighRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
+		42E9AC0718FF5187000E226D /* MatClientFocusJade4.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC0618FF5187000E226D /* MatClientFocusJade4.png */; };
+		42E9AC0B18FF58D3000E226D /* Friendly1Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC0818FF58D3000E226D /* Friendly1Button.png */; };
+		42E9AC0C18FF58D3000E226D /* Fresh1Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC0918FF58D3000E226D /* Fresh1Button.png */; };
+		42E9AC0D18FF58D3000E226D /* Clean1Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC0A18FF58D3000E226D /* Clean1Button.png */; };
+		42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC0E18FF58E4000E226D /* ProButton1.png */; };
+		42E9AC1418FF59E2000E226D /* Clean2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1018FF59E2000E226D /* Clean2Button.png */; };
+		42E9AC1518FF59E2000E226D /* Clean2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1018FF59E2000E226D /* Clean2Button.png */; };
+		42E9AC1618FF59E2000E226D /* Fresh2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1118FF59E2000E226D /* Fresh2Button.png */; };
+		42E9AC1718FF59E2000E226D /* Fresh2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1118FF59E2000E226D /* Fresh2Button.png */; };
+		42E9AC1818FF59E2000E226D /* Friendly2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1218FF59E2000E226D /* Friendly2Button.png */; };
+		42E9AC1918FF59E2000E226D /* Friendly2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1218FF59E2000E226D /* Friendly2Button.png */; };
+		42E9AC1A18FF59E2000E226D /* Pro2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1318FF59E2000E226D /* Pro2Button.png */; };
+		42E9AC1B18FF59E2000E226D /* Pro2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1318FF59E2000E226D /* Pro2Button.png */; };
+		42E9AC2018FF5A6C000E226D /* pro3button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1C18FF5A6C000E226D /* pro3button.png */; };
+		42E9AC2118FF5A6C000E226D /* pro3button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1C18FF5A6C000E226D /* pro3button.png */; };
+		42E9AC2218FF5A6C000E226D /* Friendly3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1D18FF5A6C000E226D /* Friendly3Button.png */; };
+		42E9AC2318FF5A6C000E226D /* Friendly3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1D18FF5A6C000E226D /* Friendly3Button.png */; };
+		42E9AC2418FF5A6C000E226D /* Fresh3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1E18FF5A6C000E226D /* Fresh3Button.png */; };
+		42E9AC2518FF5A6C000E226D /* Fresh3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1E18FF5A6C000E226D /* Fresh3Button.png */; };
+		42E9AC2618FF5A6C000E226D /* Clean3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1F18FF5A6C000E226D /* Clean3Button.png */; };
+		42E9AC2718FF5A6C000E226D /* Clean3Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9AC1F18FF5A6C000E226D /* Clean3Button.png */; };
 		42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
 		42EB3EC918D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */; };
 		42EB3EE118D232AB00FAD7FD /* MyDraggableImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */; };
@@ -369,6 +390,19 @@
 		42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CintasLogoHighRes.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
+		42E9AC0618FF5187000E226D /* MatClientFocusJade4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatClientFocusJade4.png; sourceTree = "<group>"; };
+		42E9AC0818FF58D3000E226D /* Friendly1Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friendly1Button.png; sourceTree = "<group>"; };
+		42E9AC0918FF58D3000E226D /* Fresh1Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fresh1Button.png; sourceTree = "<group>"; };
+		42E9AC0A18FF58D3000E226D /* Clean1Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clean1Button.png; sourceTree = "<group>"; };
+		42E9AC0E18FF58E4000E226D /* ProButton1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProButton1.png; sourceTree = "<group>"; };
+		42E9AC1018FF59E2000E226D /* Clean2Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clean2Button.png; sourceTree = "<group>"; };
+		42E9AC1118FF59E2000E226D /* Fresh2Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fresh2Button.png; sourceTree = "<group>"; };
+		42E9AC1218FF59E2000E226D /* Friendly2Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friendly2Button.png; sourceTree = "<group>"; };
+		42E9AC1318FF59E2000E226D /* Pro2Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pro2Button.png; sourceTree = "<group>"; };
+		42E9AC1C18FF5A6C000E226D /* pro3button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pro3button.png; sourceTree = "<group>"; };
+		42E9AC1D18FF5A6C000E226D /* Friendly3Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friendly3Button.png; sourceTree = "<group>"; };
+		42E9AC1E18FF5A6C000E226D /* Fresh3Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fresh3Button.png; sourceTree = "<group>"; };
+		42E9AC1F18FF5A6C000E226D /* Clean3Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clean3Button.png; sourceTree = "<group>"; };
 		42EB3EC618D0EAA400FAD7FD /* InteractiveSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveSlideViewController.h; sourceTree = "<group>"; };
 		42EB3EC718D0EAA400FAD7FD /* InteractiveSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveSlideViewController.m; sourceTree = "<group>"; };
 		42EB3EDF18D232AB00FAD7FD /* MyDraggableImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDraggableImage.m; sourceTree = "<group>"; };
@@ -494,6 +528,19 @@
 		426A6A2518EDACAC00255331 /* ImagesHome */ = {
 			isa = PBXGroup;
 			children = (
+				42E9AC1C18FF5A6C000E226D /* pro3button.png */,
+				42E9AC1D18FF5A6C000E226D /* Friendly3Button.png */,
+				42E9AC1E18FF5A6C000E226D /* Fresh3Button.png */,
+				42E9AC1F18FF5A6C000E226D /* Clean3Button.png */,
+				42E9AC1018FF59E2000E226D /* Clean2Button.png */,
+				42E9AC1118FF59E2000E226D /* Fresh2Button.png */,
+				42E9AC1218FF59E2000E226D /* Friendly2Button.png */,
+				42E9AC1318FF59E2000E226D /* Pro2Button.png */,
+				42E9AC0E18FF58E4000E226D /* ProButton1.png */,
+				42E9AC0818FF58D3000E226D /* Friendly1Button.png */,
+				42E9AC0918FF58D3000E226D /* Fresh1Button.png */,
+				42E9AC0A18FF58D3000E226D /* Clean1Button.png */,
+				42E9AC0618FF5187000E226D /* MatClientFocusJade4.png */,
 				428085CF18FD792D00389C9C /* goButton.png */,
 				428085CD18FD756200389C9C /* LoginPopOver.png */,
 				428085CB18FC585100389C9C /* MatSay.png */,
@@ -969,6 +1016,7 @@
 				42B0155B18E3163F0068019C /* Dura-Lite.pdf in Resources */,
 				426A6A1D18ED0CC300255331 /* SampleLogo4.png in Resources */,
 				426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */,
+				42E9AC2618FF5A6C000E226D /* Clean3Button.png in Resources */,
 				426A6A1A18ED0CC300255331 /* SampleLogo7.png in Resources */,
 				42849B5018E4556700E5B3FB /* envelope.png in Resources */,
 				42849B8218EA004100E5B3FB /* rugsamplea.png in Resources */,
@@ -991,37 +1039,46 @@
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
 				427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */,
+				42E9AC0B18FF58D3000E226D /* Friendly1Button.png in Resources */,
 				42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */,
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42B0157318E317B00068019C /* SoftStep.pdf in Resources */,
 				42B0152218E303C40068019C /* MatChatter5.png in Resources */,
 				4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */,
+				42E9AC0718FF5187000E226D /* MatClientFocusJade4.png in Resources */,
 				426A6A3218EDADBA00255331 /* ProffessionalButton.png in Resources */,
 				42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */,
+				42E9AC1418FF59E2000E226D /* Clean2Button.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
 				428085CE18FD756200389C9C /* LoginPopOver.png in Resources */,
 				426A6A1718ED0CC300255331 /* SampleLogo10.png in Resources */,
+				42E9AC1618FF59E2000E226D /* Fresh2Button.png in Resources */,
 				426A6A1618ED0CC300255331 /* SampleLogo11.png in Resources */,
 				426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */,
 				42B0156A18E317710068019C /* SpringStep.pdf in Resources */,
+				42E9AC2418FF5A6C000E226D /* Fresh3Button.png in Resources */,
 				42B0156718E3175A0068019C /* MarbleTop.pdf in Resources */,
 				42B0155818E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */,
 				427CE62C18F0670700865291 /* FliersWhite.png in Resources */,
 				426A6A2418EDA3C800255331 /* MatAnimationUseSmall.m4v in Resources */,
+				42E9AC2018FF5A6C000E226D /* pro3button.png in Resources */,
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
+				42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */,
 				42B0156118E316580068019C /* TripleFlexFlow.pdf in Resources */,
 				42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
 				426A6A3918EDD99200255331 /* FriendlyCharlesUse.png in Resources */,
 				42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
+				42E9AC1818FF59E2000E226D /* Friendly2Button.png in Resources */,
 				426A6A1418ED0CC300255331 /* SampleLogo13.png in Resources */,
 				426A6A1C18ED0CC300255331 /* SampleLogo5.png in Resources */,
 				428085C818FC412100389C9C /* loginBlackIcon.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
+				42E9AC0C18FF58D3000E226D /* Fresh1Button.png in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
 				426A6A3718EDD3B100255331 /* Professional_video.mp4 in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
@@ -1033,6 +1090,7 @@
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
 				42849B6B18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42849B9118EA02BE00E5B3FB /* whitepad.png in Resources */,
+				42E9AC0D18FF58D3000E226D /* Clean1Button.png in Resources */,
 				42849B8B18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */,
@@ -1042,12 +1100,14 @@
 				42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
 				426A6A1518ED0CC300255331 /* SampleLogo12.png in Resources */,
 				42B0150718DFBD0A0068019C /* SquareButton.png in Resources */,
+				42E9AC1A18FF59E2000E226D /* Pro2Button.png in Resources */,
 				42B0157018E317A50068019C /* AirStep.pdf in Resources */,
 				42849B7C18E9FE6000E5B3FB /* whitecirclerugsample2.png in Resources */,
 				42B0158718E3428B0068019C /* WalkOffLogoMat.png in Resources */,
 				42849B7F18E9FF7F00E5B3FB /* whitecirclematsize1.png in Resources */,
 				426A6A3118EDADBA00255331 /* OrganizedButton.png in Resources */,
 				42849B8518EA00CD00E5B3FB /* alllogobuttons2.png in Resources */,
+				42E9AC2218FF5A6C000E226D /* Friendly3Button.png in Resources */,
 				426A6A3518EDADBA00255331 /* FreshButton.png in Resources */,
 				428085C618FC3F9100389C9C /* loginIcon2.png in Resources */,
 				42B0159918E35CF20068019C /* VideosWhite3.png in Resources */,
@@ -1071,6 +1131,7 @@
 				422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */,
 				42B0156B18E317710068019C /* SpringStep.pdf in Resources */,
 				42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */,
+				42E9AC2318FF5A6C000E226D /* Friendly3Button.png in Resources */,
 				42B0156218E316580068019C /* TripleFlexFlow.pdf in Resources */,
 				42B0155C18E3163F0068019C /* Dura-Lite.pdf in Resources */,
 				42B0153E18E3159F0068019C /* SilverSeries.pdf in Resources */,
@@ -1081,8 +1142,11 @@
 				42B0155918E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				42849B9218EA02BE00E5B3FB /* whitepad.png in Resources */,
 				42B0158218E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
+				42E9AC1B18FF59E2000E226D /* Pro2Button.png in Resources */,
 				42849B8918EA016200E5B3FB /* allmatbuttons2.png in Resources */,
+				42E9AC1518FF59E2000E226D /* Clean2Button.png in Resources */,
 				42B0153818E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
+				42E9AC1718FF59E2000E226D /* Fresh2Button.png in Resources */,
 				42849B6C18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42B0153218E3153B0068019C /* MotifMat.pdf in Resources */,
 				42B0158818E3428B0068019C /* WalkOffLogoMat.png in Resources */,
@@ -1091,6 +1155,8 @@
 				42B0150818DFBD0A0068019C /* SquareButton.png in Resources */,
 				42B0153B18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42B0157418E317B00068019C /* SoftStep.pdf in Resources */,
+				42E9AC1918FF59E2000E226D /* Friendly2Button.png in Resources */,
+				42E9AC2718FF5A6C000E226D /* Clean3Button.png in Resources */,
 				42B014FF18DF450F0068019C /* WebViewBG.png in Resources */,
 				42849B7918E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				42849B6F18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
@@ -1099,6 +1165,7 @@
 				42B0154718E315C80068019C /* WaterGuard.pdf in Resources */,
 				42B0154A18E315D40068019C /* UltraGuard.pdf in Resources */,
 				42B0158618E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
+				42E9AC2118FF5A6C000E226D /* pro3button.png in Resources */,
 				42B0154D18E315E30068019C /* EcoGuard.pdf in Resources */,
 				42B0157118E317A50068019C /* AirStep.pdf in Resources */,
 				42B0158018E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
@@ -1120,6 +1187,7 @@
 				42849B8C18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0155618E316100068019C /* TripleFlexScraper.pdf in Resources */,
 				42B0150218DF46970068019C /* WebViewBG1.png in Resources */,
+				42E9AC2518FF5A6C000E226D /* Fresh3Button.png in Resources */,
 				42B0153518E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

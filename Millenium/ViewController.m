@@ -122,27 +122,16 @@
     NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", loginString,passwordString];
     
     
-    //NSURL *urlLogin = [[NSURL alloc] initWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"];
-    
     NSURL *urlLogin = [[NSURL alloc] initWithString:urlLoginString];
     
-    
-    
-    //NSURL *urlLogin = [[NSURL alloc] initWithString:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@,"loginStringt passwordField];
-
-    
-    
-   
     
     //[theRequest setHTTPMethod:@"POST"];
     //[theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     
-    //NSLog(@"REQUEST: %@",theRequest);
-    
     
     NSLog(@"URLLOGIN: %@",urlLogin);
     
-    //NSString *postData = [NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@",loginField.text,passwordField.text];
+   
     
    NSError *error = nil;
     
