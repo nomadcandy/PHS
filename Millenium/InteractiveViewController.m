@@ -915,7 +915,7 @@ else
     [DIYMenu dismiss];
 }*/
 
-//hits this
+
 -(IBAction)goHome:(id)sender{
     
     

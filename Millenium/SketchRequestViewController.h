@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Jami Sue Becker. All rights reserved.
 //
 
+#import "ViewController.h"
 #import <UIKit/UIKit.h>
 
 @interface SketchRequestViewController : UIViewController
