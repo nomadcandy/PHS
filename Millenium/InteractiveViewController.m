@@ -771,7 +771,15 @@ else
     
 }
 
+- (IBAction)cropSquare:(id)sender  {
     
+    //not work
+    
+    UIImage *OrigImage = [UIImage imageNamed:selectedImage];
+    UIImage *mask = [UIImage imageNamed:@"mask.png"];
+    //UIImage *maskedImage = [self maskImage:OrigImage withMask:mask];
+    //myUIImage.image = maskedImage;
+}
     
     
 

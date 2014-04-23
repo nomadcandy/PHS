@@ -99,7 +99,8 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
 
 - (IBAction)goSignMat:(id)sender;
--(IBAction)backButton:(id)sender;
+- (IBAction)backButton:(id)sender;
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
+- (IBAction)cropSquare:(id)sender;
 
 @end
