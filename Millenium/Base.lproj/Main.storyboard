@@ -1324,6 +1324,18 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDA-Yo-pUW">
+                                <rect key="frame" x="26" y="414" width="279" height="228"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="imageMoved:withEvent:" destination="SIb-h3-Hq1" eventType="touchDragOutside" id="T6Z-Zr-S8X"/>
+                                    <action selector="imageMoved:withEvent:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="YJv-9J-Npr"/>
+                                    <action selector="imageMoved:withEvent:" destination="SIb-h3-Hq1" eventType="touchDragInside" id="jWN-bx-mCS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1335,6 +1347,7 @@
                         <outlet property="editImageView" destination="dEz-W9-J1e" id="VKA-QW-qXn"/>
                         <outlet property="editLogoButton" destination="FWL-lA-bdq" id="RC9-WT-W1E"/>
                         <outlet property="googleWebView" destination="39j-QV-6iW" id="Lz3-2o-CAD"/>
+                        <outlet property="logoPicButton" destination="gDA-Yo-pUW" id="FNC-N6-0BB"/>
                         <outlet property="mask1ImageView" destination="aGk-c4-dcZ" id="wg2-h0-vm0"/>
                         <outlet property="overlay1WebView" destination="Vaf-uC-3Xu" id="rnY-WQ-TGQ"/>
                         <outlet property="overlayWebView" destination="RL8-fY-L5B" id="EcM-ee-vWf"/>
@@ -1956,12 +1969,24 @@
     </scenes>
     <resources>
         <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
+        <image name="CintasLogoHighRes.png" width="448" height="170"/>
         <image name="Clean3Button.png" width="167" height="63"/>
         <image name="FliersWhite.png" width="230" height="91"/>
         <image name="Fresh3Button.png" width="167" height="63"/>
         <image name="Friendly3Button.png" width="167" height="63"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
+        <image name="LogoSelectedBG.png" width="253" height="213"/>
+        <image name="LogoSelectedBG.png" width="253" height="213"/>
+        <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="LogoThumbnailBG.png" width="220" height="220"/>
         <image name="MatClientFocusJade4.png" width="2078" height="1536"/>
@@ -1974,10 +1999,23 @@
         <image name="envelope.png" width="795" height="462"/>
         <image name="go1Button.png" width="74" height="71"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
+        <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="loginIcon2.png" width="50" height="50"/>
         <image name="pro3button.png" width="259" height="63"/>
         <image name="rugsamplea.png" width="114" height="104"/>
         <image name="whitePad.png" width="1996" height="1015"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
+        <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitecirclematsize1.png" width="94" height="91"/>
         <image name="whitepad.png" width="1996" height="1015"/>
     </resources>

@@ -16,6 +16,7 @@
 //@synthesize chosenImage;
 @synthesize selectedImage;
 @synthesize chosenImageView;
+@synthesize logoPicButton;
 
 
 
@@ -358,9 +359,16 @@
     CGImageRef masked = CGImageCreateWithMask(imgRef, actualMask);
     return [UIImage imageWithCGImage:masked];
     
+    
+    UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
+    
     //NSLog(@"chosenImage %@",selectedImage);
     
     
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(croppedLogoImage) writeToFile:imagePath atomically:YES];
     
     
    
@@ -389,7 +397,36 @@
 - (IBAction)maskButtonClicked:(id)sender
 {
     chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare1"]];
+    //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
+    
+    //NSLog(@"chosenImage %@",selectedImage);
+    
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(chosenImageView.image) writeToFile:imagePath atomically:YES];
 }
+
+
+//moves logo around
+- (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
+{
+    
+    UITouch *t = [[event allTouches] anyObject];
+    UIControl *control = sender;
+    CGPoint center = control.center;
+    
+    CGPoint pPrev = [t previousLocationInView:control];
+    CGPoint p = [t locationInView:control];
+    center.x += p.x - pPrev.x;
+    center.y += p.y - pPrev.y;
+    control.center = center;
+    
+    
+    
+}
+
 
 /*- (IBAction)maskImage:(id)sender {
 
@@ -509,6 +546,8 @@
     [UIImagePNGRepresentation(newImage) writeToFile:imagePath atomically:YES];
     
     
+    
+    [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
    // [profilePictureHandle writeData:UIImagePNGRepresentation(croppedImage)];
     
     
@@ -540,23 +579,6 @@
     
 }
 
-//move logo around in edit mode
-- (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
-{
-    
-    UITouch *t = [[event allTouches] anyObject];
-    UIControl *control = sender;
-    CGPoint center = control.center;
-    
-    CGPoint pPrev = [t previousLocationInView:control];
-    CGPoint p = [t locationInView:control];
-    center.x += p.x - pPrev.x;
-    center.y += p.y - pPrev.y;
-    control.center = center;
-    
-    
-    
-}
 
 
 //for adding points to crop Image
@@ -756,11 +778,11 @@
     
     UIImage*croppedImage=chosenImageView.image;
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    /*NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];*/
     //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
     
     
-    [UIImageJPEGRepresentation(croppedImage, 1.0) writeToFile:imagePath atomically:YES];
+   //[UIImagePNGRepresentation(croppedImage) writeToFile:imagePath atomically:YES];
     
     UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];

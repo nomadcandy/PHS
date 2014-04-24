@@ -76,6 +76,8 @@
 - (IBAction)maskImage:(id)sender ;
 
 
+@property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
+
 @property(nonatomic, strong) NSMutableData *imageData;
 @property(nonatomic, assign) float length;
 //@property (nonatomic, strong) UIImage *chosenImage;
@@ -85,7 +87,7 @@
 - (void)saveLocally:(NSData *)imgData;
 //- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage;
 - (IBAction)maskButtonClicked:(id)sender;
-
+- (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
 
 
 @end
