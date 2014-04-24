@@ -67,6 +67,8 @@
 	CGFloat _lastRotation;
 	CGFloat _firstX;
 	CGFloat _firstY;
+    
+    UIView *canvas;
 }
 
 
@@ -80,7 +82,7 @@
 - (IBAction)cropScreenShot:(UIButton*)sender;
 - (IBAction)maskImage:(id)sender ;
 
-
+@property (nonatomic, retain) IBOutlet UIView *canvas;
 @property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
 
 @property(nonatomic, strong) NSMutableData *imageData;

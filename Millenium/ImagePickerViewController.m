@@ -47,6 +47,12 @@
     UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
 	[pinchRecognizer setDelegate:self];
 	[self.view addGestureRecognizer:pinchRecognizer];
+    
+    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)] ;
+	[panRecognizer setMinimumNumberOfTouches:1];
+	[panRecognizer setMaximumNumberOfTouches:1];
+	[panRecognizer setDelegate:self];
+	[canvas addGestureRecognizer:panRecognizer];
 
     
     /*UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected:)];
@@ -107,6 +113,26 @@
         
     }
 
+
+-(void)move:(id)sender {
+    
+    CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:canvas];
+    
+    if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _firstX = [chosenImageView center].x;
+        _firstY = [chosenImageView center].y;
+        
+        
+       // _firstX = [logoPicButton center].x;
+       // _firstY = [logoPicButton center].y;
+    }
+    
+    translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY+translatedPoint.y);
+    
+    [chosenImageView setCenter:translatedPoint];
+   // [self showOverlayWithFrame:chosenImageView.frame];
+}
+
 -(void)scale:(id)sender {
     
     if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
@@ -119,6 +145,17 @@
     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
     
     [chosenImageView setTransform:newTransform];
+    
+    
+    
+    
+    
+    
+    
+    CGAffineTransform currentTransformLogo = logoPicButton.transform;
+    CGAffineTransform newTransformLogo = CGAffineTransformScale(currentTransform, scale, scale);
+    
+    [logoPicButton setTransform:newTransform];
     
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];

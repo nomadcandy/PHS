@@ -135,7 +135,12 @@
     else {
         
         
-		[logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+		//[logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+        
+        [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
+        
+        //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+        [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
         
     
     }
