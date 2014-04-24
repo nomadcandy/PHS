@@ -318,23 +318,153 @@
 }*/
 
 
-//mask image
-/*- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage {
+
+/*- (UIImage *)imageWithAlpha  {
     
-	CGImageRef maskRef = maskImage.CGImage;
+    CGImageRef imageRef = self.CGImage;
+    CGFloat width = CGImageGetWidth(imageRef);
+    CGFloat height = CGImageGetHeight(imageRef);
     
-	CGImageRef mask = CGImageMaskCreate(CGImageGetWidth(maskRef),
-                                        CGImageGetHeight(maskRef),
-                                        CGImageGetBitsPerComponent(maskRef),
-                                        CGImageGetBitsPerPixel(maskRef),
-                                        CGImageGetBytesPerRow(maskRef),
-                                        CGImageGetDataProvider(maskRef), NULL, false);
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context =  CGBitmapContextCreate(nil, width, height, 8, 4 * width, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
     
-	CGImageRef masked = CGImageCreateWithMask([image CGImage], mask);
-	return [UIImage imageWithCGImage:masked];
+    CGImageRef resultImageRef = CGBitmapContextCreateImage(context);
+    UIImage *resultImage = [UIImage imageWithCGImage:resultImageRef scale:self.scale orientation:self.imageOrientation];
+    
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    CGImageRelease(resultImageRef);
+    
+    return resultImage;
+}*/
+
+
+
+#pragma mark
+#pragma mark Util
+- (UIImage*) maskImage:(UIImage *)selectedImage withMask:(UIImage *)maskImage {
+    
+	CGImageRef imgRef = [selectedImage CGImage];
+    CGImageRef maskRef = [maskImage CGImage];
+    CGImageRef actualMask = CGImageMaskCreate(CGImageGetWidth(maskRef),
+                                              CGImageGetHeight(maskRef),
+                                              CGImageGetBitsPerComponent(maskRef),
+                                              CGImageGetBitsPerPixel(maskRef),
+                                              CGImageGetBytesPerRow(maskRef),
+                                              CGImageGetDataProvider(maskRef), NULL, false);
+    CGImageRef masked = CGImageCreateWithMask(imgRef, actualMask);
+    return [UIImage imageWithCGImage:masked];
+    
+}
+
+
+/*#pragma mark
+#pragma mark Util
+- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage {
+    
+	CGImageRef imgRef = [image CGImage];
+    CGImageRef maskRef = [maskImage CGImage];
+    CGImageRef actualMask = CGImageMaskCreate(CGImageGetWidth(maskRef),
+                                              CGImageGetHeight(maskRef),
+                                              CGImageGetBitsPerComponent(maskRef),
+                                              CGImageGetBitsPerPixel(maskRef),
+                                              CGImageGetBytesPerRow(maskRef),
+                                              CGImageGetDataProvider(maskRef), NULL, false);
+    CGImageRef masked = CGImageCreateWithMask(imgRef, actualMask);
+    return [UIImage imageWithCGImage:masked];
     
 }*/
 
+
+- (IBAction)maskButtonClicked:(id)sender
+{
+    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare"]];
+}
+
+- (IBAction)maskImage:(id)sender {
+
+    
+    
+    //CGContextAddPath(context, (__bridge CGPathRef)(aPath));
+    //CGContextClip(context);
+    
+    //CGContextAddPath(aRef, (__bridge CGPathRef)(aPath));
+    //CGContextClip(aRef);
+    
+    UIGraphicsBeginImageContext(editImageView.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextRotateCTM(context,2*M_PI);
+    
+    [editImageView.layer renderInContext:context];
+    UIImage*imageSaveMask = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    //return imageSaveMask;
+    
+    NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/myMaskImage.jpg"]];
+    [UIImageJPEGRepresentation(imageSaveMask, 1.0) writeToFile:imagePath1 atomically:YES];
+    
+    
+
+
+    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *imagePath =  [directoryPath objectAtIndex:0];
+    imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.jpg"];
+
+    NSData *data = [NSData dataWithContentsOfFile:imagePath];
+    UIImage *logoImage = [UIImage imageWithData:data];
+    
+    
+   // NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *imagePath5 =  [directoryPath objectAtIndex:0];
+    imagePath5= [imagePath5 stringByAppendingPathComponent:@"Documents/myMaskImage.jpg"];
+    
+    NSData *dataMask = [NSData dataWithContentsOfFile:imagePath5];
+    UIImage *imageMask1 = [UIImage imageWithData:dataMask];
+
+
+
+
+    //add here masking
+    CGImageRef imageReference = (__bridge CGImageRef)(logoImage);
+
+    //CGImageRef imageReference = logoImage;
+    //CGImageRef maskReference = (__bridge CGImageRef)(imageMask1);
+    
+    //CGImageRef maskReference = (__bridge CGImageRef)(myClippingImage);
+    
+    CGImageRef maskReference = (__bridge CGImageRef)(imageMask1);
+
+
+    CGImageRef imageMask = CGImageMaskCreate(CGImageGetWidth(maskReference),
+                                         CGImageGetHeight(maskReference),
+                                         CGImageGetBitsPerComponent(maskReference),
+                                         CGImageGetBitsPerPixel(maskReference),
+                                         CGImageGetBytesPerRow(maskReference),
+                                         CGImageGetDataProvider(maskReference),
+                                         NULL, // Decode is null
+                                         YES // Should interpolate
+                                         );
+
+    CGImageRef maskedReference = CGImageCreateWithMask(imageReference, imageMask);
+    
+    CGImageRelease(imageMask);
+
+    UIImage *maskedImage = [UIImage imageWithCGImage:maskedReference];
+    CGImageRelease(maskedReference);
+    
+    NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/croppedImage.jpg"]];
+    [UIImageJPEGRepresentation(maskedImage, 1.0) writeToFile:imagePath2 atomically:YES];
+    
+    
+    
+    
+    chosenImageView.image = maskedImage;
+
+//return maskedImage;
+    
+
+}
 
 
 
@@ -446,8 +576,79 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     
+    CGContextStrokePath(context);
+    
+    
+    
+    myClippingImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    CGImageRef image = CGBitmapContextCreateImage(context);
+    
+    //UIImage*myMaskOriginalImage;
+    
+    CGImageCreateWithImageInRect(myClippingImage.CGImage, CGRectMake(0,0, 800,600));
+    
+    //CGContextSaveGState((__bridge CGContextRef)(aPath));
+    
+    
+    
+    
+    
+    
+    //CGContextAddPath(context, (__bridge CGPathRef)(aPath));
+    //CGContextClip(context);
+    
+    
+    
+    //UIImage*myMaskOriginalImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    
+    /*UIImage*myMaskOriginalImage = CGContextDrawImage(aRef, image, CGRectMake(0, 0, imageWidth,
+     imageHeight));*/
+    
+    //UIImage*myMaskOriginalImage = CGContextDrawImage(aRef, image, CGRectMake(0, 0, 800, 600));
+    
+    
+    
+    
+    //NSString *imagePath1 =  [directoryPath objectAtIndex:0];
+    //imagePath1= [imagePath1 stringByAppendingPathComponent:@"myMaskImage.jpg"];
+    
+    //writes masked image to documents
+    NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/myMaskImage.jpg"]];
+    [UIImageJPEGRepresentation(myClippingImage, 1.0) writeToFile:imagePath1 atomically:YES];
+    
+    
+    CGContextRestoreGState(context);
+
+    
+    UIGraphicsEndImageContext();
+    
+   // CGContextAddPath(context, (__bridge CGPathRef)(aRef));
+   // CGContextClip(context);
+    
+    
+    
+    
     //CGContextFillRect(context, self.bounds);
     
+    
+}
+
+-(UIImage*)imageFromImageView:(UIImageView*)imageView{
+    
+    
+    UIGraphicsBeginImageContext(editImageView.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextRotateCTM(context,2*M_PI);
+    
+    [editImageView.layer renderInContext:context];
+    UIImage*imageSaveMask = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imageSaveMask;
+    
+    NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/myMaskImage.jpg"]];
+    [UIImageJPEGRepresentation(imageSaveMask, 1.0) writeToFile:imagePath1 atomically:YES];
     
 }
 

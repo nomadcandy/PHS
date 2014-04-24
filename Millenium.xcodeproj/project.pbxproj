@@ -25,6 +25,7 @@
 		4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
 		4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
 		426206621907004900FE7066 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 426206611907004900FE7066 /* mask.png */; };
+		4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 4262066319094E3500FE7066 /* MaskWhiteSquare.png */; };
 		426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A69FF18ED0CC300255331 /* SampleLogo8A.png */; };
 		426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0018ED0CC300255331 /* SampleLogo16.png */; };
 		426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0118ED0CC300255331 /* SampleLogo15.png */; };
@@ -272,6 +273,7 @@
 		4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgSay.png; sourceTree = "<group>"; };
 		4259BC4418F6F90100861033 /* MatChatterBgCool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgCool.png; sourceTree = "<group>"; };
 		426206611907004900FE7066 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
+		4262066319094E3500FE7066 /* MaskWhiteSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare.png; sourceTree = "<group>"; };
 		426A69FF18ED0CC300255331 /* SampleLogo8A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo8A.png; sourceTree = "<group>"; };
 		426A6A0018ED0CC300255331 /* SampleLogo16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo16.png; sourceTree = "<group>"; };
 		426A6A0118ED0CC300255331 /* SampleLogo15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo15.png; sourceTree = "<group>"; };
@@ -643,6 +645,7 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				4262066319094E3500FE7066 /* MaskWhiteSquare.png */,
 				427CE64A18F3316900865291 /* jadeteahouselogo1.png */,
 				42AB550F18EF51310051AF9F /* LogoSelectedBG.png */,
 			);
@@ -1121,6 +1124,7 @@
 				428085C618FC3F9100389C9C /* loginIcon2.png in Resources */,
 				42B0159918E35CF20068019C /* VideosWhite3.png in Resources */,
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
+				4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */,
 				428085CA18FC4B4200389C9C /* MatCintasCenter.png in Resources */,
 				42849B8E18EA027800E5B3FB /* gradietebg.png in Resources */,
 				42B0154318E315BB0068019C /* TreadLock.pdf in Resources */,

@@ -10,6 +10,8 @@
 
 @implementation MaskView
 
+@synthesize clipItImage;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -88,13 +90,13 @@
     
     //Set the render colors.
     [[UIColor blackColor] setStroke];
-    [[UIColor redColor] setFill];
+    [[UIColor blackColor] setFill];
     
     CGContextRef aRef = UIGraphicsGetCurrentContext();
     
     // If you have content to draw after the shape,
     // save the current state before changing the transform.
-    //CGContextSaveGState(aRef);
+    CGContextSaveGState(aRef);
     
     // Adjust the view's origin temporarily. The oval is
     // now drawn relative to the new origin point.
@@ -104,76 +106,61 @@
     aPath.lineWidth = 5;
     
     // Fill the path before stroking it so that the fill
-    // color does not obscure the stroked line.
+    // color does not obscure the stroked line. 
     [aPath fill];
     [aPath stroke];
     
-    // Restore the graphics state before drawing any other content.
-    //CGContextRestoreGState(aRef);
+    CGContextStrokePath(aRef);
+    
+    CGImageRef image = CGBitmapContextCreateImage(aRef);
+    
+    /*UIImage*myMaskOriginalImage;
+    
+    CGImageCreateWithImageInRect(myMaskOriginalImage.CGImage, CGRectMake(0,0, 800,600));*/
+    
+    
+    
+    
+    
+    //writes masked image to documents
+   /* NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/myMaskImage.jpg"]];
+    [UIImageJPEGRepresentation(myMaskOriginalImage, 1.0) writeToFile:imagePath1 atomically:YES];*/
+    
+    
+    CGContextRestoreGState(aRef);
+    UIGraphicsEndImageContext();
+
+    
+    
+    
+    //
+    
+    
+    //save clipping image created
+    //NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"myClippingImage" ofType:@"png"];
+    //UIImage *myImageClipObj = [[UIImage alloc] initWithContentsOfFile:imagePath];
+    
+    // Store the image into a property of type UIImage *
+    // for use later in the class's drawRect: method.
+    //self->anImage = myImageClipObj;
     
     
     
     //CGPoint startPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMinY(rect));
     //CGPoint endPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMaxY(rect));
     
-    CGPoint startPoint = firstPoint;
+    /*CGPoint startPoint = firstPoint;
     CGPoint endPoint = thirdPoint;
     
     CGContextSaveGState(context);
     CGContextAddRect(context, rect);
     CGContextClip(context);
     
-    CGContextRestoreGState(context);
+    CGContextRestoreGState(context);*/
     
 
     
-    
-	// Bulk call to add lines to the current path.
-	// Equivalent to MoveToPoint(points[0]); for(i=1; i<count; ++i) AddLineToPoint(points[i]);
-	CGContextAddLines(context, addLines, sizeof(addLines)/sizeof(addLines[0]));
-	CGContextStrokePath(context);
-    
-    //CGContextAddPath(<#CGContextRef context#>, <#CGPathRef path#>);
-    
-    
-    
-    CGContextSetFillColorWithColor(context,
-                                   [UIColor redColor].CGColor);
-    
-    
-
-    //CGContextAddPath(context, addLines);
-    
-    //CAShapeLayer *mask = [CAShapeLayer layer];
-    
-    //CAShapeLayer *maskUse = (__bridge CAShapeLayer *)(addPath);
-    //CAShapeLayer *maskUse = (context, addLines);
-    
-
-    
-    CGContextSaveGState(context);
-    
-    //Set color of current context
-    [[UIColor blackColor] set];
-    
-    //Set shadow and color of shadow
-    CGContextSetShadowWithColor(context, CGSizeZero, 10.0f, [[UIColor clearColor] CGColor]);
-    
-    //CGContextSetShadowWithColor(context, CGSizeZero, 10.0f, context);
-    
-    //Draw ellipse
-    //CGRect Rect = CGRectMake(60.0f, 150.0f, 200.0f, 200.0f);
-    //CGContextFillEllipseInRect(context, Rect);
-    
-    //CGContextDrawImage(context, Rect, (__bridge CGImageRef)(chosenImage));
-    
-    CGContextRestoreGState(context);
-    
-    
-    
-    //add more
-    
-    CGSize imageSize = chosenImage.size;
+        //CGSize imageSize = chosenImage.size;
     
     
     //mask code
@@ -199,8 +186,16 @@
     }
 
     
+- (IBAction)maskImageHere:(id)sender {
+    
+    
+    
+    //CGContextAddPath(context, (__bridge CGPathRef)(aPath));
+    //CGContextClip(context);
+    
+    
 
-
+}
 
 -(void)drawEllipse:(CGContextRef)context{
     

@@ -11,6 +11,7 @@
 #import "InteractiveViewController.h"
 #import "MyDraggableImage.h"
 #import "MaskView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,NSURLConnectionDelegate,NSURLConnectionDataDelegate>
 {
@@ -20,6 +21,7 @@
     //UIImage *chosenImage;
     //UIImage*newImage;
     UIImage*selectedImage;
+    UIImage*myClippingImage;
     //CGRect*rectFrame;
     CGRect*rectFrame;
     CGPoint*startPoint;
@@ -71,6 +73,8 @@
 - (IBAction)drawRect:(UIButton*)sender;
 - (IBAction)getPoints:(UIButton*)sender;
 - (IBAction)cropScreenShot:(UIButton*)sender;
+- (IBAction)maskImage:(id)sender ;
+
 
 @property(nonatomic, strong) NSMutableData *imageData;
 @property(nonatomic, assign) float length;
@@ -79,6 +83,8 @@
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 - (void)setNeedsDisplay;
 - (void)saveLocally:(NSData *)imgData;
+//- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage;
+- (IBAction)maskButtonClicked:(id)sender;
 
 
 

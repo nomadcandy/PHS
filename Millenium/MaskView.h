@@ -18,12 +18,20 @@
     CGPoint thirdPoint;
     CGPoint fourthPoint;
     
+    //CGContextRef aRef;
+    
     //CGContextClip context;
     
     NSMutableArray *touchesArray;
     UIImageView*editImageView;
     UIImage*chosenImage;
+    UIImage*anImage;
+    UIImage*clipItImage;
 }
+
+@property (strong, nonatomic) UIImage*clipItImage;
+
+
 @end
 
 
