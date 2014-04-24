@@ -43,6 +43,12 @@
     gestureRecognizer.numberOfTouchesRequired = 1;
     [googleWebView addGestureRecognizer:gestureRecognizer];
     
+    
+    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
+	[pinchRecognizer setDelegate:self];
+	[self.view addGestureRecognizer:pinchRecognizer];
+
+    
     /*UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected:)];
     tapRecognizer.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:tapRecognizer];*/
@@ -101,7 +107,22 @@
         
     }
 
-
+-(void)scale:(id)sender {
+    
+    if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _lastScale = 1.0;
+    }
+    
+    CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
+    
+    CGAffineTransform currentTransform = chosenImageView.transform;
+    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
+    
+    [chosenImageView setTransform:newTransform];
+    
+    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
+    //[self showOverlayWithFrame:chosenImageView.frame];
+}
 -(void) handleLongPress:(UITapGestureRecognizer*) sender{
     
     NSURL*url = [googleWebView.request URL];

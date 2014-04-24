@@ -13,7 +13,7 @@
 #import "MaskView.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,NSURLConnectionDelegate,NSURLConnectionDataDelegate>
+@interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,NSURLConnectionDelegate,NSURLConnectionDataDelegate, UIGestureRecognizerDelegate>
 {
     
     AppDelegate *appdelegate;
@@ -62,6 +62,11 @@
     IBOutlet UIButton*homeButton;
     
     UIImagePickerController*picker;
+    
+    CGFloat _lastScale;
+	CGFloat _lastRotation;
+	CGFloat _firstX;
+	CGFloat _firstY;
 }
 
 
