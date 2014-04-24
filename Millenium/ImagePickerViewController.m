@@ -274,8 +274,10 @@
     
     selectedImage = chosenImage;
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.jpg"]];
-    [UIImageJPEGRepresentation(chosenImage, 1.0) writeToFile:imagePath atomically:YES];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(chosenImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(chosenImage) writeToFile:imagePath atomically:YES];
 
     
     
@@ -356,6 +358,13 @@
     CGImageRef masked = CGImageCreateWithMask(imgRef, actualMask);
     return [UIImage imageWithCGImage:masked];
     
+    //NSLog(@"chosenImage %@",selectedImage);
+    
+    
+    
+    
+   
+    
 }
 
 
@@ -379,10 +388,10 @@
 
 - (IBAction)maskButtonClicked:(id)sender
 {
-    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare"]];
+    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare1"]];
 }
 
-- (IBAction)maskImage:(id)sender {
+/*- (IBAction)maskImage:(id)sender {
 
     
     
@@ -464,7 +473,7 @@
 //return maskedImage;
     
 
-}
+}*/
 
 
 
@@ -494,8 +503,14 @@
     
     NSLog(@"chosenImage %@",selectedImage);
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.jpg"]];
-    [UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(newImage) writeToFile:imagePath atomically:YES];
+    
+    
+   // [profilePictureHandle writeData:UIImagePNGRepresentation(croppedImage)];
+    
     
    
     
@@ -616,7 +631,9 @@
     
     //writes masked image to documents
     NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/myMaskImage.jpg"]];
-    [UIImageJPEGRepresentation(myClippingImage, 1.0) writeToFile:imagePath1 atomically:YES];
+    //[UIImageJPEGRepresentation(myClippingImage, 1.0) writeToFile:imagePath1 atomically:YES];
+    
+    [UIImagePNGRepresentation(myClippingImage) writeToFile:imagePath1 atomically:YES];
     
     
     CGContextRestoreGState(context);
@@ -648,8 +665,8 @@
     return imageSaveMask;
     
     NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/myMaskImage.jpg"]];
-    [UIImageJPEGRepresentation(imageSaveMask, 1.0) writeToFile:imagePath1 atomically:YES];
-    
+    //[UIImageJPEGRepresentation(imageSaveMask, 1.0) writeToFile:imagePath1 atomically:YES];
+    [UIImagePNGRepresentation(imageSaveMask) writeToFile:imagePath1 atomically:YES];
 }
 
 
@@ -734,6 +751,16 @@
  }
 
 - (IBAction)goInteractive:(UIButton *)sender {
+    
+    //NSLog(@"chosenImage %@",masked);
+    
+    UIImage*croppedImage=chosenImageView.image;
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
+    
+    
+    [UIImageJPEGRepresentation(croppedImage, 1.0) writeToFile:imagePath atomically:YES];
     
     UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];

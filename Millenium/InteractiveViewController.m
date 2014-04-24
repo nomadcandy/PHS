@@ -116,7 +116,7 @@
     
     NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
     NSString *imagePath =  [directoryPath objectAtIndex:0];
-    imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.jpg"];
+    imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
     
     NSData *data = [NSData dataWithContentsOfFile:imagePath];
     UIImage *logoImage = [UIImage imageWithData:data];

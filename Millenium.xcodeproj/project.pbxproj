@@ -26,6 +26,7 @@
 		4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
 		426206621907004900FE7066 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 426206611907004900FE7066 /* mask.png */; };
 		4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 4262066319094E3500FE7066 /* MaskWhiteSquare.png */; };
+		426206661909634500FE7066 /* MaskWhiteSquare1.png in Resources */ = {isa = PBXBuildFile; fileRef = 426206651909634500FE7066 /* MaskWhiteSquare1.png */; };
 		426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A69FF18ED0CC300255331 /* SampleLogo8A.png */; };
 		426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0018ED0CC300255331 /* SampleLogo16.png */; };
 		426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0118ED0CC300255331 /* SampleLogo15.png */; };
@@ -274,6 +275,7 @@
 		4259BC4418F6F90100861033 /* MatChatterBgCool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgCool.png; sourceTree = "<group>"; };
 		426206611907004900FE7066 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		4262066319094E3500FE7066 /* MaskWhiteSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare.png; sourceTree = "<group>"; };
+		426206651909634500FE7066 /* MaskWhiteSquare1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare1.png; sourceTree = "<group>"; };
 		426A69FF18ED0CC300255331 /* SampleLogo8A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo8A.png; sourceTree = "<group>"; };
 		426A6A0018ED0CC300255331 /* SampleLogo16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo16.png; sourceTree = "<group>"; };
 		426A6A0118ED0CC300255331 /* SampleLogo15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo15.png; sourceTree = "<group>"; };
@@ -635,6 +637,7 @@
 		42849B7A18E9FE2900E5B3FB /* ImagesTestOnly */ = {
 			isa = PBXGroup;
 			children = (
+				426206651909634500FE7066 /* MaskWhiteSquare1.png */,
 				426206611907004900FE7066 /* mask.png */,
 				42849B7B18E9FE6000E5B3FB /* whitecirclerugsample2.png */,
 				42849B7E18E9FF7F00E5B3FB /* whitecirclematsize1.png */,
@@ -1103,6 +1106,7 @@
 				42849B6B18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42849B9118EA02BE00E5B3FB /* whitepad.png in Resources */,
 				42E9AC0D18FF58D3000E226D /* Clean1Button.png in Resources */,
+				426206661909634500FE7066 /* MaskWhiteSquare1.png in Resources */,
 				42849B8B18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */,
