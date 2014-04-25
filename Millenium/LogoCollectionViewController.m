@@ -207,8 +207,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     if (indexPath.section == 0){
         
         
-
-    
+        
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
         logoCell.logoLabel.text = [nearMeNamesArray objectAtIndex:indexPath.item];
@@ -250,6 +249,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         }
         
         return logoCell;
+            
+            
         
     } else {
         
