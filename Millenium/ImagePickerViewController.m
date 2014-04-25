@@ -791,11 +791,51 @@
     
     
     chosenImageView.image = newImage;
+    
+    
+    
     //chosenImage = newImage;
     
     
     
     NSLog(@"chosenImage %@",selectedImage);
+    
+    
+    
+    [[UIColor clearColor] set];
+    
+    CGRect screenRect = CGRectMake(180.0f, 290.0f, 228.0f, 228.0f);
+    
+     //CGSize screenRect = editImageView.frame.size;
+   
+    CGContextFillRect(ctx, screenRect);
+    
+    //[chosenImageView renderInContext:ctx];
+    
+    [chosenImageView setOpaque:NO];
+    [chosenImageView setOpaque:NO];
+    [chosenImageView setBackgroundColor:[UIColor clearColor]];
+    [chosenImageView setBackgroundColor:[UIColor clearColor].CGColor];
+    
+   //[chosenImageView renderInContext:ctx];
+
+    
+    /*[[[[globalSingleton paintingView] drawingView] layer] renderInContext:ctx];
+    
+    [[[globalSingleton paintingView] drawingView] setOpaque:NO];
+    [[[[globalSingleton paintingView] drawingView] layer] setOpaque:NO];
+    [[[globalSingleton paintingView] drawingView] setBackgroundColor:[UIColor clearColor]];
+    [[[[globalSingleton paintingView] drawingView] layer] setBackgroundColor:[UIColor clearColor].CGColor];
+    
+    [[[[globalSingleton paintingView] drawingView] layer] renderInContext:ctx];*/
+    
+    UIImage *image1 = UIGraphicsGetImageFromCurrentImageContext();
+    
+    NSString  *imagePath3 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImageClear.png"]];
+    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(image1) writeToFile:imagePath3 atomically:YES];
+
 
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 #import "LogoCell.h"
+#import "MatCell.h"
 #import "LogoHeaderCell.h"
 #import "InteractiveViewController.h"
 #import "DIYMenu.h"

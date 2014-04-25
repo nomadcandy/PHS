@@ -118,6 +118,13 @@
     NSString *imagePath =  [directoryPath objectAtIndex:0];
     imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
     
+    /*NSString *imagePath3 =  [directoryPath objectAtIndex:0];
+     imagePath3= [imagePath3 stringByAppendingPathComponent:@"logoImageClear.png"];*/
+    
+    
+    
+    
+    
     NSData *data = [NSData dataWithContentsOfFile:imagePath];
     UIImage *logoImage = [UIImage imageWithData:data];
     

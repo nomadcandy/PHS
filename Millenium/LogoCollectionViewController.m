@@ -28,6 +28,7 @@
 
 @synthesize logoUseString;
 
+NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
 NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
 NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
@@ -112,7 +113,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 
 
-
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
     
     
@@ -165,10 +165,29 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
 
+
+- (UIEdgeInsets)collectionView:
+(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    
+    if (section==0)
+    {
+        //inset of sections to account for the nav bar
+        //top,left,right bottom
+        return UIEdgeInsetsMake(5, 5, 5, 5);
+        
+    }
+    
+    else  {
+        
+        
+        return UIEdgeInsetsMake(10, 540, 140, 50);
+    }
+    
+}
 
 
 
@@ -185,6 +204,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
                         @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
 
+    if (indexPath.section == 0){
+        
+        
 
     
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
@@ -228,7 +250,55 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         }
         
         return logoCell;
+        
+    } else {
+        
+        MatCell *matCell = [collectionView dequeueReusableCellWithReuseIdentifier:kMatCollectionViewCellID forIndexPath:indexPath];
+        
+        matCell.logoLabel.text = [nearMeNamesArray objectAtIndex:indexPath.item];
+        
+        
+        
+        NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:indexPath.item];
+        NSLog(@"mediaImageString %@",nearMeImageString);
+        
+        NSString*selectedImageString= @"SampleLogo8A.png";
+        
+        
+        
+        [matCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
+        
+        [matCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        
+        
+        [[matCell logoChooseButton] addTarget:self action:@selector(logoSelected:event:) forControlEvents:UIControlEventTouchUpInside];
+        
+        if (matCell.logoChooseButton)
+            
+        {
+            
+            selectedIndex=[indexPath row];
+            _logoChooseButton.tag=[indexPath row];
+            NSLog(@"addButton.tag:%ld",(long)_logoChooseButton.tag);
+            NSLog(@"indexPathSender1:%@",indexPath);
+            NSLog(@"rowSelectedHere %i",rowSelectedHere);
+            
+            NSLog(@"indexPathSender:%ld",(long)matCell.tag);
+            
+            UIButton*button = [matCell logoChooseButton];
+            button.tag = selectedIndex;
+            
+            
+            
+        }
+        
+        return matCell;
+        
+    
     }
+    
+}
 
 
 -(IBAction)goInteractive1:(UIButton*)sender event:(id)event {
@@ -258,8 +328,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     UIImage*newImage=[UIImage imageNamed:logoUseString];
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.jpg"]];
-    [UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(newImage) writeToFile:imagePath atomically:YES];
 
     
     

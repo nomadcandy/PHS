@@ -195,6 +195,7 @@
 		42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
 		42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
 		42B70D2118F3D45900CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
+		42D95173190ADF5600FD69B3 /* MatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D95172190ADF5600FD69B3 /* MatCell.m */; };
 		42DBC73B18EE03AA005BF791 /* CintasLogoHighRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
 		42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
@@ -395,6 +396,8 @@
 		42B0159818E35CF20068019C /* VideosWhite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite3.png; sourceTree = "<group>"; };
 		42B70D1E18F3D45800CF0C97 /* SketchRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchRequestViewController.h; sourceTree = "<group>"; };
 		42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchRequestViewController.m; sourceTree = "<group>"; };
+		42D95171190ADF5600FD69B3 /* MatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatCell.h; sourceTree = "<group>"; };
+		42D95172190ADF5600FD69B3 /* MatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatCell.m; sourceTree = "<group>"; };
 		42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CintasLogoHighRes.png; sourceTree = "<group>"; };
 		42E7AC0618CE2CDD0036AF00 /* InteractiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractiveViewController.h; sourceTree = "<group>"; };
 		42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractiveViewController.m; sourceTree = "<group>"; };
@@ -497,6 +500,8 @@
 				4247572918D7D70F000AAF7C /* LogoHeaderCell.m */,
 				4247572C18D8AA55000AAF7C /* Logo.h */,
 				4247572D18D8AA55000AAF7C /* Logo.m */,
+				42D95171190ADF5600FD69B3 /* MatCell.h */,
+				42D95172190ADF5600FD69B3 /* MatCell.m */,
 			);
 			name = LogoCollectionViewController;
 			sourceTree = "<group>";
@@ -1233,6 +1238,7 @@
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42B0151F18E2F79F0068019C /* MarketingViewController.m in Sources */,
 				42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */,
+				42D95173190ADF5600FD69B3 /* MatCell.m in Sources */,
 				4247572A18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
 				42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */,
