@@ -337,6 +337,16 @@
     //[UIImageJPEGRepresentation(chosenImage, 1.0) writeToFile:imagePath atomically:YES];
     
     [UIImagePNGRepresentation(chosenImage) writeToFile:imagePath atomically:YES];
+    
+    
+    NSLog(@"chosenImage %@",selectedImage);
+    
+   
+    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(chosenImage) writeToFile:imagePath atomically:YES];
+    
+    [logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
 
     
     
@@ -577,7 +587,9 @@
     
     
     //begin capture entire webview
-    CGRect screenRect = self->overlayWebView.frame;
+    //CGRect screenRect = self->overlayWebView.frame;
+    
+    CGRect screenRect = CGRectMake(680.0f, 413.0f, 504.0f, 504.0f);
 
     UIGraphicsBeginImageContext(screenRect.size);
 
@@ -602,8 +614,6 @@
     //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
     
     [UIImagePNGRepresentation(newImage) writeToFile:imagePath atomically:YES];
-    
-    
     
     [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
    // [profilePictureHandle writeData:UIImagePNGRepresentation(croppedImage)];
