@@ -443,18 +443,18 @@
         
     //declare variable and return count of images returned
     int jsonLogoCount;
-    jsonLogoCount = artworkIDArray.count;
+    jsonLogoCount = artworkNameArray.count;
     
     NSLog(@"jsonLogoCount %d",jsonLogoCount);
-    for (int i = 0;i<jsonLogoCount;i++){
+    /*for (int i = 0;i<jsonLogoCount;i++){
         
         
         
-        //NSDictionary*logosDictionary  = [searchLogosArray objectAtIndex:i];
+        NSDictionary*logosDictionary  = [searchLogoArray objectAtIndex:i];
         
-        //NSLog(@"imagesDictionary %@",logosDictionary);
+        NSLog(@"logosDictionary %@",logosDictionary);
         
-    }
+    }*/
     
 
     
