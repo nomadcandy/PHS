@@ -15,6 +15,8 @@
 
 @implementation LogoCollectionViewController
 
+
+@synthesize jsonLogoCount;
 @synthesize nearMeImagesArray;
 @synthesize nearMeNamesArray;
 //@synthesize button;
@@ -27,6 +29,16 @@
 @synthesize indexPathSend;
 
 @synthesize logoUseString;
+
+
+@synthesize artworkNameArray;
+@synthesize artworkSizeArray;
+@synthesize artworkFormatArray;
+@synthesize artworkFullImageArray;
+@synthesize artworkIconArray;
+@synthesize artworkIDArray;
+@synthesize artworkInfoArray;
+
 
 NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
 NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
@@ -43,16 +55,20 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
     
     [DIYMenu dismiss];
     
     
-    nearMeNamesArray= @[@"Helix", @"MindCraft", @"Rainbow Hands",
+    NSLog(@"artworkNameArray %@",artworkNameArray);
+    NSLog(@"artworkIconArray %@",artworkIconArray);
+    
+    /*nearMeNamesArray= @[@"Helix", @"MindCraft", @"Rainbow Hands",
                         @"DJ Pop", @"School Anime", @"Spartan Golf Club",
                         @"Pheonix Designs", @"Old", @"Old",
                         @"Old", @"Old", @"Old",
-                        @"Old", @"Old", @"Old"];
+                        @"Old", @"Old", @"Old"];*/
     
     nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
                          @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
@@ -119,24 +135,26 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [self.collectionView reloadData];
     //cell for header
-    if (section == 0)
+    //if (section == 0)
         
-    {
+    //{
+    NSLog(@"jsonLogoCount %i",jsonLogoCount);
+     NSLog(@"artworkNameArray %@",artworkNameArray);
+
+        //return jsonLogoCount;
         
-        
-        
-        return 15;
-    }
+        return 22;
+    //}
     
     
-    else
+    /*else
     {
         
         
         //return logoNearMeArray.count;
-        return 15;
+        return jsonLogoCount;
         
-    }
+    }*/
 }
 
 - (UICollectionReusableView *)collectionView: (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -165,7 +183,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 
@@ -173,7 +191,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 - (UIEdgeInsets)collectionView:
 (UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     
-    if (section==0)
+   // if (section==0)
     {
         //inset of sections to account for the nav bar
         //top,left,right bottom
@@ -181,11 +199,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
     
-    else  {
+    /*else  {
         
         
         return UIEdgeInsetsMake(10, 540, 140, 50);
-    }
+    }*/
     
 }
 
@@ -195,39 +213,67 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     
     
-        nearMeNamesArray= @[@"Helix", @"MindCraft", @"Rainbow Hands",
+        /*nearMeNamesArray= @[@"Helix", @"MindCraft", @"Rainbow Hands",
                             @"DJ Pop", @"School Anime", @"Spartan Golf Club",
                             @"Pheonix Designs", @"Old", @"Old",
                             @"Old", @"Old", @"Old",
-                            @"Old", @"Old", @"Old"];
+                            @"Old", @"Old", @"Old"];*/
     
         nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
                         @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
 
-    if (indexPath.section == 0){
+   /* if (indexPath.section == 0){*/
         
         
         
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
-        logoCell.logoLabel.text = [nearMeNamesArray objectAtIndex:indexPath.item];
+        NSLog(@"artworkNameArray %@",artworkNameArray);
+
+        
+        
+        logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
     
     
     
-        NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:indexPath.item];
-        NSLog(@"mediaImageString %@",nearMeImageString);
-    
-        NSString*selectedImageString= @"SampleLogo8A.png";
+        NSString*logoImageString=[artworkIconArray objectAtIndex:indexPath.item];
+        NSLog(@"logoImageString %@",logoImageString);
     
     
+    NSString*urlString =[artworkIconArray objectAtIndex:indexPath.item];
     
-        [logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
+    NSString*httpString= @"http://";
+    
+     NSLog(@"urlString %@",urlString);
+    
+   // NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+    //crasheshere
+    
+    //NSLog(@"urlStringAppend %@",urlStringAppend);
+
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+    
+    UIImage * iconImage;
+    
+    iconImage = [UIImage imageWithData:data];
+    
+    NSLog(@"%@iconImage",iconImage);
+    
+    
+    //collectionViewCell.picImage.image = mediumImage;
+    
+       // NSString*selectedImageString= @"SampleLogo8A.png";
+    
+    
+    
+       // [logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:iconImage]forState:UIControlStateNormal];
+        [logoCell.logoChooseButton setBackgroundImage:iconImage forState:UIControlStateNormal];
     
         [logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
         
-        [logoCell.logoChoose1Button setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
+        /*[logoCell.logoChoose1Button setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
         
-        [logoCell.logoChoose1Button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        [logoCell.logoChoose1Button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];*/
 
     
     
@@ -276,9 +322,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
         
-    } else {
+   // } else {
         
-        MatCell *matCell = [collectionView dequeueReusableCellWithReuseIdentifier:kMatCollectionViewCellID forIndexPath:indexPath];
+        /*MatCell *matCell = [collectionView dequeueReusableCellWithReuseIdentifier:kMatCollectionViewCellID forIndexPath:indexPath];
         
         matCell.logoLabel.text = [nearMeNamesArray objectAtIndex:indexPath.item];
         
@@ -321,7 +367,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         return matCell;
         
     
-    }
+    }*/
     
 }
 

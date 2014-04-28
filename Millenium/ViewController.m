@@ -33,6 +33,8 @@
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
 
+@synthesize jsonLogoCount;
+
 
 - (void)dealloc
 {
@@ -780,10 +782,10 @@
 }
 
 
-- (IBAction)presentSearchViewController:(UIButton *)sender{
+- (IBAction)presentLogoCollectionViewController:(UIButton *)sender{
     
     UIStoryboard *storyboard = self.storyboard;
-    SearchViewController *searchvc = [storyboard instantiateViewControllerWithIdentifier:@"SearchStoryBoard"];
+    LogoCollectionViewController *searchvc = [storyboard instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
     
     // Configure the new view controller here.
     [self presentViewController:searchvc animated:YES completion:nil];
@@ -816,6 +818,34 @@
         [self presentViewController:destViewController animated:YES completion:nil];
         
         
+        
+    }
+    
+    if ([segue.identifier isEqualToString:@"SearchSegue"]) {
+        
+        LogoCollectionViewController *goingController = segue.destinationViewController;
+        //[self presentViewController:goingController animated:YES completion:nil];
+        
+        NSLog(@"artworkNameArray %@",artworkNameArray);
+        goingController.artworkNameArray = artworkNameArray;
+        
+        NSLog(@"jsonLogoCount %i",jsonLogoCount);
+        goingController.jsonLogoCount = jsonLogoCount;
+        
+        NSLog(@"artworkSizeArray %@",artworkSizeArray);
+        goingController.artworkSizeArray = artworkSizeArray;
+        
+        NSLog(@"artworkFormatArray %@",artworkFormatArray);
+        goingController.artworkFormatArray = artworkFormatArray;
+        
+        NSLog(@"artworkIconArray %@",artworkIconArray);
+        goingController.artworkIconArray = artworkIconArray;
+        
+        NSLog(@"artworkFullImageArray %@",artworkFullImageArray);
+        goingController.artworkFullImageArray = artworkFullImageArray;
+        
+        NSLog(@"artworkIDArray %@",artworkIDArray);
+        goingController.artworkIDArray = artworkIDArray;
         
     }
     

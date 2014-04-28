@@ -18,7 +18,11 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 
 
-@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@protocol ArrayDelegate <NSObject>
+
+@end
+
+@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,ArrayDelegate>
 
 {
     IBOutlet UIButton*cleanButton;
@@ -29,6 +33,19 @@
     IBOutlet UIImageView*loginView;
     IBOutlet UITextField*loginField;
     IBOutlet UITextField*passwordField;
+    
+    NSMutableArray *artworkNameArray;
+    NSMutableArray *artworkSizeArray;
+    NSMutableArray *artworkFormatArray;
+    NSMutableArray *artworkFullImageArray;
+    NSMutableArray *artworkIconArray;
+    NSMutableArray *artworkIDArray;
+    NSMutableArray *artworkInfoArray;
+    
+    int jsonLogoCount;
+
+    __unsafe_unretained id <ArrayDelegate> _delegate;
+    
     
 }
 
@@ -56,10 +73,10 @@
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
+@property (nonatomic, assign) int jsonLogoCount;
 
-@property (nonatomic, copy) NSMutableArray *copyrightRecordLabelArray;
-@property (nonatomic, copy) NSMutableArray *mediumImageArray;
-@property (nonatomic, copy) NSMutableArray *largeImageArray;
+
+
 
 
 
@@ -79,6 +96,8 @@
 -(IBAction)toggledSwitch:(id)sender;
 -(IBAction)changedSlider:(id)sender;
 -(IBAction)presentInteractiveViewController:(UIButton *)sender;
+//-(IBAction)presentSearchViewController:(UIButton *)sender;
+- (IBAction)presentLogoCollectionViewController:(UIButton *)sender;
 
 
 @end

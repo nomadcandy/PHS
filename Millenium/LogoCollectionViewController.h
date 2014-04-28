@@ -33,6 +33,17 @@
     int rowSelectedHere;
     int rowSelectedSend;
     
+    //int jsonLogoCount;
+    
+    /*NSMutableArray *artworkNameArray;
+    NSMutableArray *artworkSizeArray;
+    NSMutableArray *artworkFormatArray;
+    NSMutableArray *artworkFullImageArray;
+    NSMutableArray *artworkIconArray;
+    NSMutableArray *artworkIDArray;
+    NSMutableArray *artworkInfoArray;*/
+    
+    
     //__unsafe_unretained id <StringPickerProtocol> _delegate;
     //__unsafe_unretained id <ButtonPickerDelegate> _delegate;
     __unsafe_unretained id <ButtonPickerDelegate> _delegate;
@@ -50,17 +61,33 @@
 @property (nonatomic, assign) int rowSelectedHere;
 @property (nonatomic, assign) int rowSelectedSend;
 
+@property (nonatomic, assign) int jsonLogoCount;
+
 @property (nonatomic, copy) NSArray *searchImagesArray;
 @property (nonatomic, copy) NSArray *nearMeImagesArray;
 @property (nonatomic, copy) NSArray *searchNamesArray;
 @property (nonatomic, copy) NSArray *nearMeNamesArray;
 
+
+@property (nonatomic, copy) NSMutableArray *artworkNameArray;
+@property (nonatomic, copy) NSMutableArray *artworkSizeArray;
+@property (nonatomic, copy) NSMutableArray *artworkFormatArray;
+@property (nonatomic, copy) NSMutableArray *artworkFullImageArray;
+@property (nonatomic, copy) NSMutableArray *artworkIconArray;
+@property (nonatomic, copy) NSMutableArray *artworkIDArray;
+@property (nonatomic, copy) NSMutableArray *artworkInfoArray;
+
 @property (nonatomic, copy) NSString*logoUseString;
 
 //@property (nonatomic, strong) UIButton*button;
+
+
+
 @property (nonatomic,strong) IBOutlet UIButton *goBackButton;
 @property (nonatomic,strong) IBOutlet UIButton *logoChooseButton;
 @property (nonatomic,strong) IBOutlet UIButton *logoChoose1Button;
+
+
 @property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
 
 -(IBAction)goInteractive:(id)sender;

@@ -374,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imr-PJ-T22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1112" y="254"/>
+            <point key="canvasLocation" x="-864" y="302"/>
         </scene>
         <!--Marketing View Controller-->
         <scene sceneID="P8u-Ub-xgm">
@@ -781,33 +781,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IZK-q1-L9X">
-                            <size key="itemSize" width="970" height="257"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="IZK-q1-L9X">
+                            <size key="itemSize" width="970" height="427"/>
                             <size key="headerReferenceSize" width="50" height="63"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" restorationIdentifier="logoCollectionViewCellID" reuseIdentifier="logoCollectionViewCellID" id="DvN-Pj-GIB" customClass="LogoCell">
-                                <rect key="frame" x="27" y="63" width="970" height="257"/>
+                                <rect key="frame" x="27" y="63" width="970" height="427"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="970" height="257"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="970" height="427"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="223" placeholderIntrinsicHeight="21" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytT-DL-OMq">
-                                            <rect key="frame" x="15" y="233" width="216" height="21"/>
+                                            <rect key="frame" x="36" y="386" width="403" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoThumbnailBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qbn-dm-xxC">
-                                            <rect key="frame" x="12" y="8" width="220" height="220"/>
+                                            <rect key="frame" x="36" y="8" width="403" height="369"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGC-wB-rpF" userLabel="button1">
-                                            <rect key="frame" x="21" y="17" width="200" height="200"/>
+                                            <rect key="frame" x="21" y="0.0" width="418" height="377"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -816,19 +816,8 @@
                                                 <action selector="logoSelected:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="IBI-Rf-H8X"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-Yr-DK8" userLabel="button2">
-                                            <rect key="frame" x="247" y="18" width="200" height="200"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <accessibility key="accessibilityConfiguration" label="button2"/>
-                                            <state key="normal">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="logoSelected:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="lnv-2w-uja"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlC-yZ-TXc" userLabel="button3">
-                                            <rect key="frame" x="471" y="17" width="200" height="200"/>
+                                            <rect key="frame" x="538" y="17" width="375" height="360"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -837,18 +826,8 @@
                                                 <action selector="logoSelected:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="IQ2-Gz-EpG"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KF4-i5-8Q8" userLabel="button4">
-                                            <rect key="frame" x="709" y="17" width="200" height="200"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="logoSelected:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="0xN-0m-8es"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-HA-1kT">
-                                            <rect key="frame" x="143" y="174" width="76" height="55"/>
+                                            <rect key="frame" x="320" y="310" width="76" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="goBack">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -859,19 +838,30 @@
                                                 <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="Xsv-p4-h1x"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIK-Ra-EuQ">
-                                            <rect key="frame" x="371" y="174" width="76" height="55"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i9-I0-xbo">
+                                            <rect key="frame" x="132" y="305" width="76" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="goBack">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="goInteractive1:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="3pC-c3-6Xb"/>
+                                                <action selector="goInteractive1:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="nSG-lo-tLJ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr5-i0-7W6">
+                                            <rect key="frame" x="216" y="305" width="76" height="55"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="goBack">
+                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="goInteractive1:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="D1Q-O4-Qrt"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4z6-r8-y2N">
-                                            <rect key="frame" x="595" y="173" width="76" height="55"/>
+                                            <rect key="frame" x="752" y="182" width="76" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="goBack">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -881,26 +871,13 @@
                                                 <action selector="goInteractive1:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="Pie-Yt-UAN"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-y4-Vs0">
-                                            <rect key="frame" x="833" y="174" width="76" height="55"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="goBack">
-                                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="goInteractive1:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="fUE-dv-r11"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
                                     <outlet property="goBack" destination="AlH-HA-1kT" id="NRP-DW-o4x"/>
-                                    <outlet property="logoChoose1Button" destination="GoV-Yr-DK8" id="17Z-vT-RSu"/>
                                     <outlet property="logoChooseButton" destination="NGC-wB-rpF" id="MmV-f8-uAv"/>
                                     <outlet property="logoLabel" destination="ytT-DL-OMq" id="ZQx-PS-9o4"/>
-                                    <outlet property="matChooseButton" destination="KF4-i5-8Q8" id="BZ1-46-djo"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -944,12 +921,13 @@
                         </connections>
                     </collectionView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Gsj-bs-zSP"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2092" y="-655"/>
+            <point key="canvasLocation" x="-2406" y="-797"/>
         </scene>
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -1106,6 +1084,8 @@
                                 </state>
                                 <connections>
                                     <action selector="goSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ot-U6-C9b"/>
+                                    <action selector="presentLogoCollectionViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQw-9j-VDb"/>
+                                    <segue destination="l8u-Ww-K06" kind="modal" identifier="SearchSegue" id="7dd-eb-PgX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1132,7 +1112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="1217"/>
+            <point key="canvasLocation" x="-2278" y="335"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="ugm-Pt-D7d">
@@ -1162,7 +1142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIY-AQ-gFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="287"/>
+            <point key="canvasLocation" x="1490" y="1183"/>
         </scene>
         <!--Image Picker View Controller-->
         <scene sceneID="gLM-9p-gub">
@@ -1651,7 +1631,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfr-P2-kVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2329" y="450"/>
+            <point key="canvasLocation" x="-2985" y="2034"/>
         </scene>
         <!--Rental View Controller-->
         <scene sceneID="GlI-34-c4W">
@@ -1734,7 +1714,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5c-y4-Inl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="1217"/>
+            <point key="canvasLocation" x="248" y="329"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Fqh-7D-eHN">
@@ -2091,6 +2071,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wpq-PH-bdK"/>
+        <segue reference="Xsv-p4-h1x"/>
     </inferredMetricsTieBreakers>
 </document>

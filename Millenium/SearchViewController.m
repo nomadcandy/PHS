@@ -26,6 +26,15 @@
 @synthesize dateButton;
 @synthesize popularityButton;
 
+
+@synthesize artworkNameArray;
+@synthesize artworkSizeArray;
+@synthesize artworkFormatArray;
+@synthesize artworkFullImageArray;
+@synthesize artworkIconArray;
+@synthesize artworkIDArray;
+@synthesize artworkInfoArray;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
