@@ -24,6 +24,16 @@
 @synthesize searchField;
 @synthesize goSearchButton;
 
+
+@synthesize artworkNameArray;
+@synthesize artworkSizeArray;
+@synthesize artworkFormatArray;
+@synthesize artworkFullImageArray;
+@synthesize artworkIconArray;
+@synthesize artworkIDArray;
+@synthesize artworkInfoArray;
+
+
 - (void)dealloc
 {
     carousel.delegate = nil;
@@ -287,62 +297,188 @@
     
     
     //parse Dictionary from web
-    NSDictionary *searchDictionary = [NSJSONSerialization
+    NSDictionary *searchLogoDictionary = [NSJSONSerialization
                                      JSONObjectWithData:data
                                      options:NSJSONReadingAllowFragments
                                      error: &error];
     
-    NSLog(@"%@SearchDICTIONARY",searchDictionary);
     
+    //parse Array from web
+    NSArray *searchLogoArray = [NSJSONSerialization
+                                          JSONObjectWithData:data
+                                          options:NSJSONReadingAllowFragments
+                                          error: &error];
+    
+    
+    
+    
+    
+    
+    NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
+     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
     //crashes here
-    //creates array of all Dictionary objects nested as well
-    //NSArray* loginArray = [loginDictionary allKeys];
+    //NSArray* keysAllLogosArray = [searchLogoDictionary allKeys];
+    
+    //NSLog(@"%@KEYSALLLOGOSARRAY",keysAllLogosArray);
     
     
-    
-    /* [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-     NSLog(@"%@", object);
-     
-     NSLog(@"keysPhotosArray %@",loginArray);
-     
-     NSDictionary *resultDictionary = [loginDictionary objectForKey:object];*/
-    
-    
-    /*NSString *artistString = [resultDictionary objectForKey:@"artist"];
-     NSLog(@"artistString %@",artistString);
-     NSString *titleString = [resultDictionary objectForKey:@"title"];
-     NSLog(@"titleString %@",titleString);
-     
-     NSString *albumArtistSpaceString = [artistString stringByAppendingString:@"   "];
-     
-     NSString *albumArtistString = [albumArtistSpaceString stringByAppendingString:titleString];
-     
-     NSString *copyrightString = [resultDictionary objectForKey:@"copyright"];
-     NSLog(@"copyrightString %@",copyrightString);
-     
-     NSString *copyLabelSpaceString = [copyrightString stringByAppendingString:@"   "];
-     
-     
-     NSString *labelNameString = [resultDictionary objectForKey:@"label_name"];
-     NSLog(@"labelName %@",labelNameString);
-     
-     
-     NSString *copyLabelString = [copyLabelSpaceString stringByAppendingString:labelNameString];
-     
-     NSArray *photosArray = [resultDictionary objectForKey:@"photos"];
-     NSLog(@"photosArray %@",photosArray);
-     
-     NSDictionary *photosDictonary1 = [resultDictionary objectForKey:@"photos"];
-     NSLog(@"photosDictionary1 %@",photosDictonary1);*/
-    
-    
-    
-    
-    
-    
-}
+    [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        NSLog(@"%@", object);
+        NSLog(@"searchLogoArray %@",searchLogoArray);
+       
+        
+        
+        
+        //NSArray *resultArray = [searchLogoArray valueForKey:object];
+        NSString *artworkNameString = [searchLogoArray valueForKey:@"ArtworkName"];
+        
+        //NSLog(@"resultArray %@",resultArray);
 
+        
+        //NSDictionary *resultDictionary = [searchLogoDictionary objectForKey:object];
+        //NSString *artworkNameString = [searchLogoDictionary objectForKey:@"ArtworkName"];
+        NSLog(@"artworkNameString %@",artworkNameString);
+        
+        if (artworkNameArray == nil)
+        {
+            artworkNameArray = [[NSMutableArray alloc] init];
+            [artworkNameArray addObject:artworkNameString];
+            NSLog(@"MediumImageArray: %@", artworkNameArray);
+        }
+        
+        else{
+            
+            [artworkNameArray addObject:artworkNameString];
+            NSLog(@"MediumImageArray: %@", artworkNameArray);
+        }
+
+        
+        NSString *artworkSizeString = [searchLogoDictionary objectForKey:@"ArtworkSize"];
+        NSLog(@"artworkSizeString %@",artworkSizeString);
+        
+        
+        if (artworkSizeArray == nil)
+        {
+            artworkSizeArray = [[NSMutableArray alloc] init];
+            [artworkSizeArray addObject:artworkNameString];
+            NSLog(@"ArtworkSizeArray: %@", artworkSizeArray);
+        }
+        
+        else{
+            
+            [artworkSizeArray addObject:artworkSizeString];
+            NSLog(@"ArtWorkSizeArray: %@", artworkSizeArray);
+        }
+
+        
+        NSString *artworkFormatString = [searchLogoDictionary objectForKey:@"Format"];
+        NSLog(@"artworkFormatString %@",artworkFormatString);
+        
+        if (artworkFormatArray == nil)
+        {
+            artworkFormatArray = [[NSMutableArray alloc] init];
+            [artworkFormatArray addObject:artworkFormatString];
+            NSLog(@"ArtworkFormatArray: %@", artworkFormatArray);
+        }
+        
+        else{
+            
+            [artworkFormatArray addObject:artworkFormatString];
+            NSLog(@"ArtWorkFormatArray: %@", artworkFormatArray);
+        }
+
+        
+        
+        
+        NSString *fullImageURLString = [searchLogoDictionary objectForKey:@"FullImageURL"];
+        NSLog(@"fullImageURLString %@",fullImageURLString);
+        
+        
+        if (artworkFullImageArray == nil)
+        {
+            artworkFullImageArray  = [[NSMutableArray alloc] init];
+            [artworkFullImageArray  addObject:artworkFormatString];
+            NSLog(@"ArtworkFormatArray: %@", artworkFullImageArray );
+        }
+        
+        else{
+            
+            [artworkFullImageArray  addObject:artworkFormatString];
+            NSLog(@"ArtWorkFormatArray: %@", artworkFullImageArray );
+        }
+
+        
+        
+        NSString *iconURLString = [searchLogoDictionary objectForKey:@"IconURL"];
+        NSLog(@"iconURLString %@",iconURLString);
+        
+        
+        if (artworkIconArray == nil)
+        {
+            artworkIconArray  = [[NSMutableArray alloc] init];
+            [artworkIconArray  addObject:iconURLString];
+            NSLog(@"ArtworkIconArray: %@", artworkIconArray );
+        }
+        
+        else{
+            
+            [artworkIconArray  addObject:iconURLString];
+            NSLog(@"ArtWorkIconArray: %@", artworkIconArray );
+        }
+        
+        
+        NSString *idString = [searchLogoDictionary objectForKey:@"ProductID"];
+        NSLog(@"idString %@",idString);
+        
+        
+        if (artworkIDArray == nil)
+        {
+            artworkIDArray  = [[NSMutableArray alloc] init];
+            [artworkIDArray  addObject:idString];
+            NSLog(@"ArtworkIDArray: %@", artworkIDArray );
+        }
+        
+        else{
+            
+            [artworkIDArray  addObject:idString];
+            NSLog(@"ArtWorkIDArray: %@", artworkIDArray );
+        }
+
+  }];
+        
+    //declare variable and return count of images returned
+    int jsonLogoCount;
+    jsonLogoCount = artworkIDArray.count;
+    
+    NSLog(@"jsonLogoCount %d",jsonLogoCount);
+    for (int i = 0;i<jsonLogoCount;i++){
+        
+        
+        
+        //NSDictionary*logosDictionary  = [searchLogosArray objectAtIndex:i];
+        
+        //NSLog(@"imagesDictionary %@",logosDictionary);
+        
+    }
+    
+
+    
+    
+        
+    
+    }
+     
+     
+     
+    
+    
+    
+    
+    
+
+     
 
 
 -(IBAction)playFriendly:(id)sender{

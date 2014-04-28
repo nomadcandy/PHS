@@ -48,6 +48,21 @@
 @property (nonatomic, strong) IBOutlet UIButton *goSearchButton;
 
 
+@property (nonatomic, copy) NSMutableArray *artworkNameArray;
+@property (nonatomic, copy) NSMutableArray *artworkSizeArray;
+@property (nonatomic, copy) NSMutableArray *artworkFormatArray;
+@property (nonatomic, copy) NSMutableArray *artworkFullImageArray;
+@property (nonatomic, copy) NSMutableArray *artworkIconArray;
+@property (nonatomic, copy) NSMutableArray *artworkIDArray;
+@property (nonatomic, copy) NSMutableArray *artworkInfoArray;
+
+
+@property (nonatomic, copy) NSMutableArray *copyrightRecordLabelArray;
+@property (nonatomic, copy) NSMutableArray *mediumImageArray;
+@property (nonatomic, copy) NSMutableArray *largeImageArray;
+
+
+
 -(IBAction)goSearch:(id)sender;
 
 
