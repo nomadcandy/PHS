@@ -21,6 +21,8 @@
 @synthesize loginField;
 @synthesize passwordField;
 @synthesize goButton;
+@synthesize searchField;
+@synthesize goSearchButton;
 
 - (void)dealloc
 {
@@ -213,6 +215,134 @@
     goButton.hidden =YES;
     
 }
+
+
+
+-(IBAction)goSearch:(id)sender{
+    
+    NSString*searchString= searchField.text;
+    //NSString*passwordString= passwordField.text;
+    
+    //loginView.hidden =YES;
+    //loginField.hidden=YES;
+    //passwordField.hidden =YES;
+    //goButton.hidden =YES;
+    
+    
+    
+    
+    
+    
+    /*BOOL error = NO;
+     
+     if(loginField.text == nil || [loginField.text length] == 0)
+     {
+     error = YES;
+     //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
+     }
+     
+     if(passwordField.text == nil || [passwordField.text length] == 0)
+     {
+     error = YES;
+     //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
+     }*/
+    
+    
+    
+    /*if(error)
+     {
+     [self showError];
+     return;
+     }*/
+    
+    
+    
+    
+    
+    //NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"]];
+    
+    
+   // NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", searchString,passwordString];
+    
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match", searchString];
+    
+    
+    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+    
+    
+    //[theRequest setHTTPMethod:@"POST"];
+    //[theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    
+    
+    NSLog(@"URLLOGIN: %@",urlSearch);
+    
+    
+    
+    NSError *error = nil;
+    
+    
+    
+    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
+    
+    
+    
+    //parse Dictionary from web
+    NSDictionary *searchDictionary = [NSJSONSerialization
+                                     JSONObjectWithData:data
+                                     options:NSJSONReadingAllowFragments
+                                     error: &error];
+    
+    NSLog(@"%@SearchDICTIONARY",searchDictionary);
+    
+    
+    //crashes here
+    //creates array of all Dictionary objects nested as well
+    //NSArray* loginArray = [loginDictionary allKeys];
+    
+    
+    
+    /* [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+     NSLog(@"%@", object);
+     
+     NSLog(@"keysPhotosArray %@",loginArray);
+     
+     NSDictionary *resultDictionary = [loginDictionary objectForKey:object];*/
+    
+    
+    /*NSString *artistString = [resultDictionary objectForKey:@"artist"];
+     NSLog(@"artistString %@",artistString);
+     NSString *titleString = [resultDictionary objectForKey:@"title"];
+     NSLog(@"titleString %@",titleString);
+     
+     NSString *albumArtistSpaceString = [artistString stringByAppendingString:@"   "];
+     
+     NSString *albumArtistString = [albumArtistSpaceString stringByAppendingString:titleString];
+     
+     NSString *copyrightString = [resultDictionary objectForKey:@"copyright"];
+     NSLog(@"copyrightString %@",copyrightString);
+     
+     NSString *copyLabelSpaceString = [copyrightString stringByAppendingString:@"   "];
+     
+     
+     NSString *labelNameString = [resultDictionary objectForKey:@"label_name"];
+     NSLog(@"labelName %@",labelNameString);
+     
+     
+     NSString *copyLabelString = [copyLabelSpaceString stringByAppendingString:labelNameString];
+     
+     NSArray *photosArray = [resultDictionary objectForKey:@"photos"];
+     NSLog(@"photosArray %@",photosArray);
+     
+     NSDictionary *photosDictonary1 = [resultDictionary objectForKey:@"photos"];
+     NSLog(@"photosDictionary1 %@",photosDictonary1);*/
+    
+    
+    
+    
+    
+    
+}
+
 
 
 -(IBAction)playFriendly:(id)sender{

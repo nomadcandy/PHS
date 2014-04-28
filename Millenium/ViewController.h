@@ -44,7 +44,11 @@
 @property (nonatomic, strong) IBOutlet UITextField *passwordField;
 @property (nonatomic, strong) IBOutlet UIButton *goButton;
 
+@property (nonatomic, strong) IBOutlet UITextField *searchField;
+@property (nonatomic, strong) IBOutlet UIButton *goSearchButton;
 
+
+-(IBAction)goSearch:(id)sender;
 
 
 -(IBAction)showLogin:(id)sender;

@@ -224,6 +224,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         [logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
     
         [logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        
+        [logoCell.logoChoose1Button setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
+        
+        [logoCell.logoChoose1Button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+
     
     
     
@@ -244,6 +249,25 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             UIButton*button = [logoCell logoChooseButton];
             button.tag = selectedIndex;
 
+            
+            
+        }
+        
+        if (logoCell.logoChoose1Button)
+            
+        {
+            
+            selectedIndex=[indexPath row];
+            _logoChoose1Button.tag=[indexPath row];
+            NSLog(@"addButton.tag:%ld",(long)_logoChoose1Button.tag);
+            NSLog(@"indexPathSender1:%@",indexPath);
+            NSLog(@"rowSelectedHere %i",rowSelectedHere);
+            
+            NSLog(@"indexPathSender:%ld",(long)logoCell.tag);
+            
+            UIButton*button = [logoCell logoChoose1Button];
+            button.tag = selectedIndex;
+            
             
             
         }
