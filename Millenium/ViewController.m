@@ -328,17 +328,10 @@
         NSLog(@"%@", object);
         NSLog(@"searchLogoArray %@",searchLogoArray);
        
-        
-        
-        
-        //NSArray *resultArray = [searchLogoArray valueForKey:object];
+       
         NSString *artworkNameString = [searchLogoArray valueForKey:@"ArtworkName"];
         
-        //NSLog(@"resultArray %@",resultArray);
-
-        
-        //NSDictionary *resultDictionary = [searchLogoDictionary objectForKey:object];
-        //NSString *artworkNameString = [searchLogoDictionary objectForKey:@"ArtworkName"];
+      
         NSLog(@"artworkNameString %@",artworkNameString);
         
         if (artworkNameArray == nil)
@@ -355,7 +348,7 @@
         }
 
         
-        NSString *artworkSizeString = [searchLogoDictionary objectForKey:@"ArtworkSize"];
+        NSString *artworkSizeString = [searchLogoArray valueForKey:@"ArtworkSize"];
         NSLog(@"artworkSizeString %@",artworkSizeString);
         
         
@@ -373,7 +366,7 @@
         }
 
         
-        NSString *artworkFormatString = [searchLogoDictionary objectForKey:@"Format"];
+        NSString *artworkFormatString = [searchLogoArray valueForKey:@"Format"];
         NSLog(@"artworkFormatString %@",artworkFormatString);
         
         if (artworkFormatArray == nil)
@@ -392,7 +385,7 @@
         
         
         
-        NSString *fullImageURLString = [searchLogoDictionary objectForKey:@"FullImageURL"];
+        NSString *fullImageURLString = [searchLogoArray valueForKey:@"FullImageURL"];
         NSLog(@"fullImageURLString %@",fullImageURLString);
         
         
@@ -411,7 +404,7 @@
 
         
         
-        NSString *iconURLString = [searchLogoDictionary objectForKey:@"IconURL"];
+        NSString *iconURLString = [searchLogoArray valueForKey:@"IconURL"];
         NSLog(@"iconURLString %@",iconURLString);
         
         
@@ -429,7 +422,7 @@
         }
         
         
-        NSString *idString = [searchLogoDictionary objectForKey:@"ProductID"];
+        NSString *idString = [searchLogoArray valueForKey:@"ProductID"];
         NSLog(@"idString %@",idString);
         
         
