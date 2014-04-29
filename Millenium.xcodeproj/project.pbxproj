@@ -10,6 +10,8 @@
 		422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691C19100951001CAB8D /* AssetsPadTrans.png */; };
 		422A691F19100B4E001CAB8D /* LogoPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691E19100B4E001CAB8D /* LogoPad.png */; };
 		422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A692019100C23001CAB8D /* LogoPadGrey.png */; };
+		422A692519101E76001CAB8D /* Logos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 422A692319101E76001CAB8D /* Logos.xcdatamodeld */; };
+		422A6927191022DE001CAB8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422A6926191022DE001CAB8D /* CoreData.framework */; };
 		422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
@@ -265,6 +267,8 @@
 		422A691C19100951001CAB8D /* AssetsPadTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsPadTrans.png; sourceTree = "<group>"; };
 		422A691E19100B4E001CAB8D /* LogoPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPad.png; sourceTree = "<group>"; };
 		422A692019100C23001CAB8D /* LogoPadGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPadGrey.png; sourceTree = "<group>"; };
+		422A692419101E76001CAB8D /* Logos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Logos.xcdatamodel; sourceTree = "<group>"; };
+		422A6926191022DE001CAB8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		422BA5FD18F442B900E53B33 /* CharlesHead.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesHead.m4v; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -461,6 +465,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422A6927191022DE001CAB8D /* CoreData.framework in Frameworks */,
 				427CE62E18F069DF00865291 /* MessageUI.framework in Frameworks */,
 				42849B5C18E483DF00E5B3FB /* MobileCoreServices.framework in Frameworks */,
 				42849B5918E483C400E5B3FB /* CoreMedia.framework in Frameworks */,
@@ -494,6 +499,14 @@
 				422A691C19100951001CAB8D /* AssetsPadTrans.png */,
 			);
 			name = ImagesAssets;
+			sourceTree = "<group>";
+		};
+		422A692219101E5E001CAB8D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				422A692319101E76001CAB8D /* Logos.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		424756D618D389DE000AAF7C /* SearchViewController */ = {
@@ -851,6 +864,7 @@
 				426A6A3618EDD3B100255331 /* Professional_video.mp4 */,
 				426A6A2318EDA3C800255331 /* MatAnimationUseSmall.m4v */,
 				426A6A2118EDA29E00255331 /* MatAnimationCleanMedium.m4v */,
+				422A692219101E5E001CAB8D /* CoreData */,
 				422A691B19100939001CAB8D /* ImagesAssets */,
 				42FF0EEF18FC3C7B0060B036 /* ImagesNavBar */,
 				42AB550E18EF51190051AF9F /* ImagesInteractivePage */,
@@ -882,6 +896,7 @@
 		42FF7A1318CDE92A00C72695 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				422A6926191022DE001CAB8D /* CoreData.framework */,
 				427CE62D18F069DF00865291 /* MessageUI.framework */,
 				42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */,
 				42849B5718E483C400E5B3FB /* CoreMedia.framework */,
@@ -1264,6 +1279,7 @@
 				42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */,
 				424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */,
 				42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */,
+				422A692519101E76001CAB8D /* Logos.xcdatamodeld in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
 				42B0151518E0F57E0068019C /* MaskView.m in Sources */,
 				424756D918D389FA000AAF7C /* SearchViewController.m in Sources */,
@@ -1512,6 +1528,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		422A692319101E76001CAB8D /* Logos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				422A692419101E76001CAB8D /* Logos.xcdatamodel */,
+			);
+			currentVersion = 422A692419101E76001CAB8D /* Logos.xcdatamodel */;
+			path = Logos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 42FF7A0918CDE92A00C72695 /* Project object */;
 }

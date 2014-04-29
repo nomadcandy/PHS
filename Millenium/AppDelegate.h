@@ -6,8 +6,11 @@
 //  Copyright (c) 2014 Jami Sue Becker. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import <UIKit/UIKit.h>
 #import "DIYMenu.h"
+
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, DIYMenuDelegate>
 
