@@ -375,6 +375,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
     
+    
     NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
     int myInt = (int)sender.tag;
@@ -386,14 +387,37 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     
     
+    NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
     
-    logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
-    NSLog(@"logoUseString %@",logoUseString);
+    NSString*httpString= @"http://";
     
-    UIImage*newImage=[UIImage imageNamed:logoUseString];
+    //NSLog(@"urlString %@",urlString);
+    
+    NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+    
+    
+    //NSLog(@"urlStringAppend %@",urlStringAppend);
+    
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+    
+    UIImage * iconImage;
+    
+    iconImage = [UIImage imageWithData:data];
+    
+    NSLog(@"%@iconImage",iconImage);
+
+    
+    
+    //logoUseString=[artworkFullImageArray objectAtIndex:indexPathSend];
+    //NSLog(@"logoUseString %@",logoUseString);
+    
+    
+    
+    
+    //UIImage*newImage=[UIImage imageNamed:iconImage];
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(newImage) writeToFile:imagePath atomically:YES];
+    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
 
     
     
