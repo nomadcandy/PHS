@@ -331,23 +331,25 @@
         NSLog(@"searchLogoArray %@",searchLogoArray);
        
        
-        NSString *artworkNameString = [searchLogoArray valueForKey:@"ArtworkName"];
-        
+        //NSString *artworkNameString = [searchLogoArray valueForKey:@"ArtworkName"];
+        artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
       
-        NSLog(@"artworkNameString %@",artworkNameString);
+        
+        NSLog(@"artWorkNameArray: %@", artworkNameArray);
+       /* NSLog(@"artworkNameString %@",artworkNameString);
         
         if (artworkNameArray == nil)
         {
             artworkNameArray = [[NSMutableArray alloc] init];
             [artworkNameArray addObject:artworkNameString];
-            NSLog(@"MediumImageArray: %@", artworkNameArray);
+            NSLog(@"artWorkNameArray: %@", artworkNameArray);
         }
         
         else{
             
             [artworkNameArray addObject:artworkNameString];
-            NSLog(@"MediumImageArray: %@", artworkNameArray);
-        }
+            NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        }*/
 
         
         NSString *artworkSizeString = [searchLogoArray valueForKey:@"ArtworkSize"];
@@ -357,7 +359,7 @@
         if (artworkSizeArray == nil)
         {
             artworkSizeArray = [[NSMutableArray alloc] init];
-            [artworkSizeArray addObject:artworkNameString];
+            [artworkSizeArray addObject:artworkSizeString];
             NSLog(@"ArtworkSizeArray: %@", artworkSizeArray);
         }
         
@@ -448,15 +450,15 @@
     jsonLogoCount = artworkNameArray.count;
     
     NSLog(@"jsonLogoCount %d",jsonLogoCount);
-    /*for (int i = 0;i<jsonLogoCount;i++){
+     for (int i = 0;i<jsonLogoCount;i++){
         
         
         
-        NSDictionary*logosDictionary  = [searchLogoArray objectAtIndex:i];
+        NSDictionary*logosNameDictionary  = [artworkNameArray objectAtIndex:i];
         
-        NSLog(@"logosDictionary %@",logosDictionary);
+        NSLog(@"logosDictionary %@",logosNameDictionary);
         
-    }*/
+    }
     
 
     
@@ -846,6 +848,9 @@
         
         NSLog(@"artworkIDArray %@",artworkIDArray);
         goingController.artworkIDArray = artworkIDArray;
+        
+        NSLog(@"artworkNameDictionary %@",artworkNameDictionary);
+        goingController.artworkNameDictionary = artworkNameDictionary;
         
     }
     

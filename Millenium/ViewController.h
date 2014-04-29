@@ -41,6 +41,7 @@
     NSMutableArray *artworkIconArray;
     NSMutableArray *artworkIDArray;
     NSMutableArray *artworkInfoArray;
+    NSMutableArray *artworkNameDictionary;
     
     int jsonLogoCount;
 

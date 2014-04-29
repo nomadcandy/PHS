@@ -30,6 +30,7 @@
 
 @synthesize logoUseString;
 
+@synthesize artworkNameDictionary;
 
 @synthesize artworkNameArray;
 @synthesize artworkSizeArray;
@@ -60,7 +61,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [DIYMenu dismiss];
     
-    
+    NSLog(@"artworkNameDictionary %@",artworkNameDictionary);
     NSLog(@"artworkNameArray %@",artworkNameArray);
     NSLog(@"artworkIconArray %@",artworkIconArray);
     
@@ -138,12 +139,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //if (section == 0)
         
     //{
-    NSLog(@"jsonLogoCount %i",jsonLogoCount);
-     NSLog(@"artworkNameArray %@",artworkNameArray);
+    //NSLog(@"jsonLogoCount %i",jsonLogoCount);
+    //NSLog(@"artworkNameArray %@",artworkNameArray);
 
-        //return jsonLogoCount;
+    /*int jsonLogoCount;
+    jsonLogoCount = artworkNameArray.count;
+    return jsonLogoCount;*/
+    
+    /*int jsonArtDictCount;
+    jsonArtDictCount = artworkNameDictionary.count;
+    return jsonArtDictCount;*/
         
-        return 22;
+        //return 22;
     //}
     
     
@@ -155,6 +162,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         return jsonLogoCount;
         
     }*/
+    
+     return artworkNameArray.count;
+
 }
 
 - (UICollectionReusableView *)collectionView: (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -232,32 +242,38 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
         
         
-        logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
+      logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
+    
+    NSLog(@"logoLabel %@",logoCell.logoLabel.text);
     
     
     
-        NSString*logoImageString=[artworkIconArray objectAtIndex:indexPath.item];
-        NSLog(@"logoImageString %@",logoImageString);
+    //logoCell.logoLabel.text = [artworkNameDictionary valueForIndex:indexPath.item];
     
     
-    NSString*urlString =[artworkIconArray objectAtIndex:indexPath.item];
     
-    NSString*httpString= @"http://";
+        //NSString*logoImageString=[artworkIconArray objectAtIndex:indexPath.item];
+        //NSLog(@"logoImageString %@",logoImageString);
     
-     NSLog(@"urlString %@",urlString);
+    
+    //NSString*urlString =[artworkIconArray objectAtIndex:indexPath.item];
+    
+    //NSString*httpString= @"http://";
+    
+     //NSLog(@"urlString %@",urlString);
     
    // NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
     //crasheshere
     
     //NSLog(@"urlStringAppend %@",urlStringAppend);
 
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+    //NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
     
-    UIImage * iconImage;
+    //UIImage * iconImage;
     
-    iconImage = [UIImage imageWithData:data];
+    //iconImage = [UIImage imageWithData:data];
     
-    NSLog(@"%@iconImage",iconImage);
+    //NSLog(@"%@iconImage",iconImage);
     
     
     //collectionViewCell.picImage.image = mediumImage;
@@ -267,9 +283,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
        // [logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:iconImage]forState:UIControlStateNormal];
-        [logoCell.logoChooseButton setBackgroundImage:iconImage forState:UIControlStateNormal];
+       // [logoCell.logoChooseButton setBackgroundImage:iconImage forState:UIControlStateNormal];
     
-        [logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        //[logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
         
         /*[logoCell.logoChoose1Button setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
         
@@ -278,7 +294,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-     [[logoCell logoChooseButton] addTarget:self action:@selector(logoSelected:event:) forControlEvents:UIControlEventTouchUpInside];
+    /* [[logoCell logoChooseButton] addTarget:self action:@selector(logoSelected:event:) forControlEvents:UIControlEventTouchUpInside];
         
         if (logoCell.logoChooseButton)
             
@@ -297,9 +313,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
             
             
-        }
+        }*/
         
-        if (logoCell.logoChoose1Button)
+        /*if (logoCell.logoChoose1Button)
             
         {
             
@@ -316,7 +332,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
             
-        }
+        }*/
         
         return logoCell;
             
