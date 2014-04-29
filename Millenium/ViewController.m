@@ -331,118 +331,36 @@
         NSLog(@"searchLogoArray %@",searchLogoArray);
        
        
-        //NSString *artworkNameString = [searchLogoArray valueForKey:@"ArtworkName"];
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
       
         
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
-       /* NSLog(@"artworkNameString %@",artworkNameString);
+       
         
-        if (artworkNameArray == nil)
-        {
-            artworkNameArray = [[NSMutableArray alloc] init];
-            [artworkNameArray addObject:artworkNameString];
-            NSLog(@"artWorkNameArray: %@", artworkNameArray);
-        }
-        
-        else{
-            
-            [artworkNameArray addObject:artworkNameString];
-            NSLog(@"artWorkNameArray: %@", artworkNameArray);
-        }*/
-
-        
-        NSString *artworkSizeString = [searchLogoArray valueForKey:@"ArtworkSize"];
-        NSLog(@"artworkSizeString %@",artworkSizeString);
+        artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
+        NSLog(@"artworkSizeArray %@",artworkSizeArray);
         
         
-        if (artworkSizeArray == nil)
-        {
-            artworkSizeArray = [[NSMutableArray alloc] init];
-            [artworkSizeArray addObject:artworkSizeString];
-            NSLog(@"ArtworkSizeArray: %@", artworkSizeArray);
-        }
+       
         
-        else{
-            
-            [artworkSizeArray addObject:artworkSizeString];
-            NSLog(@"ArtWorkSizeArray: %@", artworkSizeArray);
-        }
-
-        
-        NSString *artworkFormatString = [searchLogoArray valueForKey:@"Format"];
-        NSLog(@"artworkFormatString %@",artworkFormatString);
-        
-        if (artworkFormatArray == nil)
-        {
-            artworkFormatArray = [[NSMutableArray alloc] init];
-            [artworkFormatArray addObject:artworkFormatString];
-            NSLog(@"ArtworkFormatArray: %@", artworkFormatArray);
-        }
-        
-        else{
-            
-            [artworkFormatArray addObject:artworkFormatString];
-            NSLog(@"ArtWorkFormatArray: %@", artworkFormatArray);
-        }
-
+       artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
+        NSLog(@"artworkFormatString %@",artworkFormatArray);
         
         
         
-        NSString *fullImageURLString = [searchLogoArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageURLString %@",fullImageURLString);
+        
+        artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+        NSLog(@"fullImageArray %@",artworkFullImageArray);
         
         
-        if (artworkFullImageArray == nil)
-        {
-            artworkFullImageArray  = [[NSMutableArray alloc] init];
-            [artworkFullImageArray  addObject:artworkFormatString];
-            NSLog(@"ArtworkFormatArray: %@", artworkFullImageArray );
-        }
+        artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
+                
         
-        else{
-            
-            [artworkFullImageArray  addObject:artworkFormatString];
-            NSLog(@"ArtWorkFormatArray: %@", artworkFullImageArray );
-        }
-
+        artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
+        //NSLog(@"idString %@",idString);
         
         
-        NSString *iconURLString = [searchLogoArray valueForKey:@"IconURL"];
-        NSLog(@"iconURLString %@",iconURLString);
         
-        
-        if (artworkIconArray == nil)
-        {
-            artworkIconArray  = [[NSMutableArray alloc] init];
-            [artworkIconArray  addObject:iconURLString];
-            NSLog(@"ArtworkIconArray: %@", artworkIconArray );
-        }
-        
-        else{
-            
-            [artworkIconArray  addObject:iconURLString];
-            NSLog(@"ArtWorkIconArray: %@", artworkIconArray );
-        }
-        
-        
-        NSString *idString = [searchLogoArray valueForKey:@"ProductID"];
-        NSLog(@"idString %@",idString);
-        
-        
-        if (artworkIDArray == nil)
-        {
-            artworkIDArray  = [[NSMutableArray alloc] init];
-            [artworkIDArray  addObject:idString];
-            NSLog(@"ArtworkIDArray: %@", artworkIDArray );
-        }
-        
-        else{
-            
-            [artworkIDArray  addObject:idString];
-            NSLog(@"ArtWorkIDArray: %@", artworkIDArray );
-        }
-
   }];
         
     //declare variable and return count of images returned
@@ -450,7 +368,7 @@
     jsonLogoCount = artworkNameArray.count;
     
     NSLog(@"jsonLogoCount %d",jsonLogoCount);
-     for (int i = 0;i<jsonLogoCount;i++){
+     /*for (int i = 0;i<jsonLogoCount;i++){
         
         
         
@@ -458,7 +376,7 @@
         
         NSLog(@"logosDictionary %@",logosNameDictionary);
         
-    }
+    }*/
     
 
     

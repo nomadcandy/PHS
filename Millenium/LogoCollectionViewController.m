@@ -223,11 +223,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     
     
-        /*nearMeNamesArray= @[@"Helix", @"MindCraft", @"Rainbow Hands",
-                            @"DJ Pop", @"School Anime", @"Spartan Golf Club",
-                            @"Pheonix Designs", @"Old", @"Old",
-                            @"Old", @"Old", @"Old",
-                            @"Old", @"Old", @"Old"];*/
     
         nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
                         @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
@@ -238,42 +233,32 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
-        NSLog(@"artworkNameArray %@",artworkNameArray);
+        //NSLog(@"artworkNameArray %@",artworkNameArray);
 
-        
-        
-      logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
+        logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
     
-    NSLog(@"logoLabel %@",logoCell.logoLabel.text);
+        NSLog(@"logoLabel %@",logoCell.logoLabel.text);
     
-    
-    
-    //logoCell.logoLabel.text = [artworkNameDictionary valueForIndex:indexPath.item];
+        NSString*urlString =[artworkIconArray objectAtIndex:indexPath.item];
     
     
     
-        //NSString*logoImageString=[artworkIconArray objectAtIndex:indexPath.item];
-        //NSLog(@"logoImageString %@",logoImageString);
+        NSString*httpString= @"http://";
     
+        NSLog(@"urlString %@",urlString);
     
-    //NSString*urlString =[artworkIconArray objectAtIndex:indexPath.item];
-    
-    //NSString*httpString= @"http://";
-    
-     //NSLog(@"urlString %@",urlString);
-    
-   // NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
     //crasheshere
     
-    //NSLog(@"urlStringAppend %@",urlStringAppend);
+        NSLog(@"urlStringAppend %@",urlStringAppend);
 
-    //NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     
-    //UIImage * iconImage;
+    UIImage * iconImage;
     
-    //iconImage = [UIImage imageWithData:data];
+    iconImage = [UIImage imageWithData:data];
     
-    //NSLog(@"%@iconImage",iconImage);
+    NSLog(@"%@iconImage",iconImage);
     
     
     //collectionViewCell.picImage.image = mediumImage;
@@ -282,8 +267,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-       // [logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:iconImage]forState:UIControlStateNormal];
-       // [logoCell.logoChooseButton setBackgroundImage:iconImage forState:UIControlStateNormal];
+       //[logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:iconImage]forState:UIControlStateNormal];
+       [logoCell.logoChooseButton setBackgroundImage:iconImage forState:UIControlStateNormal];
     
         //[logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
         
@@ -294,7 +279,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-    /* [[logoCell logoChooseButton] addTarget:self action:@selector(logoSelected:event:) forControlEvents:UIControlEventTouchUpInside];
+   [[logoCell logoChooseButton] addTarget:self action:@selector(logoSelected:event:) forControlEvents:UIControlEventTouchUpInside];
         
         if (logoCell.logoChooseButton)
             
@@ -313,7 +298,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
             
             
-        }*/
+        }
         
         /*if (logoCell.logoChoose1Button)
             
