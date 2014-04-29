@@ -260,7 +260,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
        //[logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:iconImage]forState:UIControlStateNormal];
     
-        [logoCell.logoChooseButton setBackgroundImage:iconImage forState:UIControlStateNormal];
+        //[logoCell.logoChooseButton setBackgroundImage:iconImage forState:UIControlStateNormal];
+    
+        [logoCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
     
         //[logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
         

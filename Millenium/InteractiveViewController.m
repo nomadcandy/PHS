@@ -136,7 +136,7 @@
         //selectedImage = [UIImage imageNamed:@"jadeteahouselogo1.png"];
         UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
 		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		[logoPicButton setBackgroundImage:image forState:UIControlStateNormal];
+		[logoPicButton setImage:image forState:UIControlStateNormal];
     }
     
     else {
@@ -147,7 +147,7 @@
         [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
         
         //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
-        [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+        [self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
         
     
     }

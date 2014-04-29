@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691C19100951001CAB8D /* AssetsPadTrans.png */; };
+		422A691F19100B4E001CAB8D /* LogoPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691E19100B4E001CAB8D /* LogoPad.png */; };
+		422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A692019100C23001CAB8D /* LogoPadGrey.png */; };
 		422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
@@ -261,6 +263,8 @@
 
 /* Begin PBXFileReference section */
 		422A691C19100951001CAB8D /* AssetsPadTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsPadTrans.png; sourceTree = "<group>"; };
+		422A691E19100B4E001CAB8D /* LogoPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPad.png; sourceTree = "<group>"; };
+		422A692019100C23001CAB8D /* LogoPadGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPadGrey.png; sourceTree = "<group>"; };
 		422BA5FD18F442B900E53B33 /* CharlesHead.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesHead.m4v; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -485,6 +489,8 @@
 		422A691B19100939001CAB8D /* ImagesAssets */ = {
 			isa = PBXGroup;
 			children = (
+				422A692019100C23001CAB8D /* LogoPadGrey.png */,
+				422A691E19100B4E001CAB8D /* LogoPad.png */,
 				422A691C19100951001CAB8D /* AssetsPadTrans.png */,
 			);
 			name = ImagesAssets;
@@ -1048,6 +1054,7 @@
 				42E9AC2618FF5A6C000E226D /* Clean3Button.png in Resources */,
 				426A6A1A18ED0CC300255331 /* SampleLogo7.png in Resources */,
 				42849B5018E4556700E5B3FB /* envelope.png in Resources */,
+				422A691F19100B4E001CAB8D /* LogoPad.png in Resources */,
 				42849B8218EA004100E5B3FB /* rugsamplea.png in Resources */,
 				42E9AC2918FF5FB9000E226D /* go1Button.png in Resources */,
 				42B0152B18E315220068019C /* WalkOffLogoMat.pdf in Resources */,
@@ -1069,6 +1076,7 @@
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
 				427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */,
+				422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */,
 				42E9AC0B18FF58D3000E226D /* Friendly1Button.png in Resources */,
 				42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */,
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
