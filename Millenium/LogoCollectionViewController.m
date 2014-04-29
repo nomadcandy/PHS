@@ -205,7 +205,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     {
         //inset of sections to account for the nav bar
         //top,left,right bottom
-        return UIEdgeInsetsMake(5, 5, 5, 5);
+        return UIEdgeInsetsMake(105, 105, 105, 105);
         
     }
     
