@@ -16,15 +16,19 @@
 #import "SketchRequestViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "LogoSearch.h"
+#import "AppDelegate.h"
 
 
 @protocol ArrayDelegate <NSObject>
 
 @end
 
-@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,ArrayDelegate>
+@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,ArrayDelegate,NSFetchedResultsControllerDelegate>
 
 {
+    LogoSearch*newLogoSearch;
+    
     IBOutlet UIButton*cleanButton;
     IBOutlet UIButton*goButton;
     IBOutlet UIViewController*InteractiveViewController;
@@ -43,12 +47,18 @@
     NSMutableArray *artworkInfoArray;
     NSMutableArray *artworkNameDictionary;
     
+    NSString*artworkNameAddString;
+    
     int jsonLogoCount;
 
     __unsafe_unretained id <ArrayDelegate> _delegate;
     
     
 }
+
+
+//@property (nonatomic, strong) NSArray *onlyAudioFiles;
+//@property (strong, nonatomic) IBOutlet UIPickerView *audioFileList;
 
 @property (copy,   nonatomic) NSURL *movieURL;
 @property (strong, nonatomic) MPMoviePlayerController *movieController;
@@ -74,13 +84,23 @@
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+@property (nonatomic, copy) NSString *artworkNameAddString;
+
 @property (nonatomic, assign) int jsonLogoCount;
 
 
+-(void)insertNewManagedObject:(NSString *)fileName;
 
 
+-(NSData *)getLogoData:(NSString *)fileName;
+
+- (NSURL *)applicationDocumentsDirectory;
 
 
+-(IBAction)addLogoSearchEntry:(id)sender;
 -(IBAction)goSearch:(id)sender;
 
 

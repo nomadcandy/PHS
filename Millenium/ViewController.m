@@ -33,7 +33,17 @@
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
 
+@synthesize artworkNameAddString;
+
 @synthesize jsonLogoCount;
+
+
+@synthesize fetchedResultsController;
+@synthesize managedObjectContext;
+
+/*@synthesize managedObjectContext=_managedObjectContext;
+@synthesize managedObjectModel=_managedObjectModel;
+@synthesize persistentStoreCoordinator=_persistentStoreCoordinator;*/
 
 
 - (void)dealloc
@@ -229,6 +239,33 @@
 }
 
 
+/*- (IBAction)addLogoSearchEntry:(id)sender
+{
+    // Add Entry to PhoneBook Data base and reset all fields
+    
+    //  1
+    LogoSearch *logoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch"
+                                                      inManagedObjectContext:self.managedObjectContext];
+    //  2
+   /* logoSearch.artworkName = self.artworkName.text;
+    logoSearch.artworkSize = self.artworkSize.text;
+    logoSearch.artworkFormat = self.artworkFormat.text;
+    logoSearch.artworkFullImageURL = self.artworkFullImageURL.text;*/
+    //  3
+   /* NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);*/
+    //}
+    //  4
+   /* self.firstNameTextfield.text = @"";
+    self.lastNameTextfield.text = @"";
+    self.cityTextfield.text = @"";
+    self.phoneNumber1.text = @"";
+    self.phoneNumber2.text = @"";*/
+    //  5
+    //[self.view endEditing:YES];
+//}
+
 
 -(IBAction)goSearch:(id)sender{
     
@@ -317,7 +354,7 @@
     
     
     NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
-     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
+    NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
     //crashes here
     //NSArray* keysAllLogosArray = [searchLogoDictionary allKeys];
@@ -335,6 +372,19 @@
       
         
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        
+        
+        //adding an array to COREDATA
+        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
+      /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
+        
+        for (NSString *anArtworkName in logoSearchs) {
+            NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
+            NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
+        
+        
+        
        
         
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
@@ -378,22 +428,120 @@
         
     }*/
     
-
-    
-    
+        //NSManagedObject *myManagedObject;
+        for (int i=0;i<jsonLogoCount;i++) {
         
-    
-    }
-     
-     
-     
-    
-    
-    
-    
+                    artworkNameAddString =[artworkNameArray objectAtIndex:i];
+                    NSLog(@"artworkNameAddString= %@", artworkNameAddString);
+
+                    //[self insertNewManagedObject:[artworkNameArray objectAtIndex:i]];
+                    [self insertNewManagedObject:artworkNameAddString];
+            
+               }
+        
+        
+                
+}
+
+
+
+
     
 
      
+
+-(NSData *)getLogoData:(NSString *)fileName{
+    NSString *root = [[NSBundle mainBundle] bundlePath];
+    NSString *filePath = [[NSString alloc] initWithString:[root stringByAppendingString:[@"/"stringByAppendingString:fileName]]];
+    
+    NSLog(@"%@",filePath);
+    
+    NSData *logoData = [[NSData alloc] initWithContentsOfFile:filePath];
+    return logoData;
+    
+}
+
+//get the managed objext from the appDelegate
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+-(void)insertNewManagedObject:(NSString *)fileName{
+    
+    
+    
+   
+    //NSManagedObjectContext *moc = [(YourApplicationDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
+    
+    
+    [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
+    //[newDevice setValue:self.versionTextField.text forKey:@"version"];
+    //[newDevice setValue:self.companyTextField.text forKey:@"company"];
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+
+   
+    
+
+}
+
+
+/*-(void)insertNewManagedObject:(NSString *)fileName{
+ 
+    LogoSearch*newLogoSearch = [NSEntityDescription
+                             insertNewObjectForEntityForName:@"LogoSearch"
+                             inManagedObjectContext:self.managedObjectContext];
+
+
+//[newLogoSearch setValue:@"test" forKey:@"artworkName"];
+
+
+
+
+if (newLogoSearch!=nil){
+    
+    
+    newLogoSearch.artworkName = artworkNameAddString;
+    
+    
+    NSError*savingError =nil;
+    
+    
+    if ([self.managedObjectContext save:&savingError]) {
+        
+        
+        NSLog(@"Successfully saved the context");
+        
+    }else{
+        
+        NSLog(@"Failed to save the context. Error = %@", savingError);
+        
+        
+    }}
+
+else{
+    
+    NSLog(@"Failed to create the new person.");
+}
+}
+*/
+
+
 
 
 -(IBAction)playFriendly:(id)sender{

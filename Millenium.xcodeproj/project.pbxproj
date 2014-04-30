@@ -10,8 +10,10 @@
 		422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691C19100951001CAB8D /* AssetsPadTrans.png */; };
 		422A691F19100B4E001CAB8D /* LogoPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691E19100B4E001CAB8D /* LogoPad.png */; };
 		422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A692019100C23001CAB8D /* LogoPadGrey.png */; };
-		422A692519101E76001CAB8D /* Logos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 422A692319101E76001CAB8D /* Logos.xcdatamodeld */; };
+		422A692519101E76001CAB8D /* Millenium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 422A692319101E76001CAB8D /* Millenium.xcdatamodeld */; };
 		422A6927191022DE001CAB8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422A6926191022DE001CAB8D /* CoreData.framework */; };
+		422A692A19102CBD001CAB8D /* LogoSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A692919102CBD001CAB8D /* LogoSearch.m */; };
+		422A692B19102CBD001CAB8D /* LogoSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A692919102CBD001CAB8D /* LogoSearch.m */; };
 		422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
@@ -267,8 +269,10 @@
 		422A691C19100951001CAB8D /* AssetsPadTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsPadTrans.png; sourceTree = "<group>"; };
 		422A691E19100B4E001CAB8D /* LogoPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPad.png; sourceTree = "<group>"; };
 		422A692019100C23001CAB8D /* LogoPadGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPadGrey.png; sourceTree = "<group>"; };
-		422A692419101E76001CAB8D /* Logos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Logos.xcdatamodel; sourceTree = "<group>"; };
+		422A692419101E76001CAB8D /* Millenium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Millenium.xcdatamodel; sourceTree = "<group>"; };
 		422A6926191022DE001CAB8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		422A692819102CBD001CAB8D /* LogoSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoSearch.h; sourceTree = "<group>"; };
+		422A692919102CBD001CAB8D /* LogoSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoSearch.m; sourceTree = "<group>"; };
 		422BA5FD18F442B900E53B33 /* CharlesHead.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesHead.m4v; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -504,7 +508,9 @@
 		422A692219101E5E001CAB8D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				422A692319101E76001CAB8D /* Logos.xcdatamodeld */,
+				422A692319101E76001CAB8D /* Millenium.xcdatamodeld */,
+				422A692819102CBD001CAB8D /* LogoSearch.h */,
+				422A692919102CBD001CAB8D /* LogoSearch.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -1268,6 +1274,7 @@
 				427CE63218F072F400865291 /* SignOffViewController.m in Sources */,
 				42B0151A18E1F0520068019C /* ClipView.m in Sources */,
 				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,
+				422A692A19102CBD001CAB8D /* LogoSearch.m in Sources */,
 				427CE63C18F07D8B00865291 /* DirectViewController.m in Sources */,
 				427CE64018F2E47C00865291 /* SignView.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
@@ -1279,7 +1286,7 @@
 				42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */,
 				424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */,
 				42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */,
-				422A692519101E76001CAB8D /* Logos.xcdatamodeld in Sources */,
+				422A692519101E76001CAB8D /* Millenium.xcdatamodeld in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
 				42B0151518E0F57E0068019C /* MaskView.m in Sources */,
 				424756D918D389FA000AAF7C /* SearchViewController.m in Sources */,
@@ -1297,6 +1304,7 @@
 				4247572F18D8AA55000AAF7C /* Logo.m in Sources */,
 				42FF7A4018CDE92A00C72695 /* MilleniumTests.m in Sources */,
 				42B0151B18E1F0520068019C /* ClipView.m in Sources */,
+				422A692B19102CBD001CAB8D /* LogoSearch.m in Sources */,
 				42B0151618E0F57E0068019C /* MaskView.m in Sources */,
 				42B0152818E312250068019C /* RequestFlierViewController.m in Sources */,
 				42FF7A5118CDF09B00C72695 /* iCarousel.m in Sources */,
@@ -1530,13 +1538,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		422A692319101E76001CAB8D /* Logos.xcdatamodeld */ = {
+		422A692319101E76001CAB8D /* Millenium.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				422A692419101E76001CAB8D /* Logos.xcdatamodel */,
+				422A692419101E76001CAB8D /* Millenium.xcdatamodel */,
 			);
-			currentVersion = 422A692419101E76001CAB8D /* Logos.xcdatamodel */;
-			path = Logos.xcdatamodeld;
+			currentVersion = 422A692419101E76001CAB8D /* Millenium.xcdatamodel */;
+			path = Millenium.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
