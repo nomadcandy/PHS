@@ -444,6 +444,15 @@
                }*/
     
     for (int i=0;i<jsonLogoCount;i++) {
+        //delete existing data
+        
+        
+        
+        
+            
+            
+        
+        
         // loops to add values
         artworkNameAddString =[artworkNameArray objectAtIndex:i];
         NSLog(@"artworkNameAddString= %@", artworkNameAddString);
@@ -452,9 +461,12 @@
         NSLog(@"artworkFullImageString = %@", artworkFullImageString );
         
         NSManagedObjectContext *context = [self managedObjectContext];
-        
+       
         // Create a new managed object
         NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
+        
+        // Delete object from database
+        //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
         
         [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
         [newLogoSearch setValue:self.artworkFullImageString forKey:@"fullImageURL"];

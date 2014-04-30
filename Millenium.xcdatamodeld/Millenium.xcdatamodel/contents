@@ -20,10 +20,12 @@
     </entity>
     <entity name="MatFavorite" syncable="YES"/>
     <entity name="MatSearch" syncable="YES"/>
+    <entity name="RepSearch" syncable="YES"/>
     <elements>
         <element name="LogoSearch" positionX="-63" positionY="-18" width="128" height="268"/>
         <element name="LogoFavorite" positionX="-54" positionY="108" width="128" height="43"/>
         <element name="MatSearch" positionX="-36" positionY="108" width="128" height="45"/>
         <element name="MatFavorite" positionX="-18" positionY="117" width="128" height="45"/>
+        <element name="RepSearch" positionX="0" positionY="126" width="128" height="45"/>
     </elements>
 </model>
