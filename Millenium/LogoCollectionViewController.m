@@ -180,13 +180,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"indexPathSend %d",indexPathSend);
     
     urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
-    
-   // NSString*httpString= @"http://";
-
-    //NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-    
     artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
-    //NSLog(@"artworkNameAddString= %@", artworkNameAddString);
+    
     
     
     
@@ -194,11 +189,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     // Create a new managed object
     NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
-    
-    // Delete object from database
-    //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
-    
-    
     
     
     [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
@@ -212,7 +202,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
     //Fetch Data entered to test
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
     self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
@@ -223,6 +213,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)removeFavorite:(id)sender{
     
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
+    
+    // Delete object from database
+    //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
 }
 
 
