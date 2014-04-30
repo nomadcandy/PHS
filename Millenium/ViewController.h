@@ -48,6 +48,7 @@
     NSMutableArray *artworkNameDictionary;
     
     NSString*artworkNameAddString;
+    NSString*artworkFullImageString;
     
     int jsonLogoCount;
 
@@ -91,6 +92,7 @@
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, copy) NSString *artworkNameAddString;
+@property (nonatomic, copy) NSString *artworkFullImageString;
 
 @property (nonatomic, assign) int jsonLogoCount;
 

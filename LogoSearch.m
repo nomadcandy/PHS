@@ -18,7 +18,7 @@
 @dynamic artworkStyle;
 @dynamic artworkErrorMessage;
 @dynamic artworkFormat;
-@dynamic artworkFullImageURL;
+@dynamic fullImageURL;
 @dynamic artworkGroupCode;
 @dynamic artworkIconURL;
 @dynamic artworkKeyword;

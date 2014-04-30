@@ -36,6 +36,7 @@
 @synthesize favoritesArray;
 
 @synthesize artworkNameAddString;
+@synthesize artworkFullImageString;
 
 @synthesize jsonLogoCount;
 
@@ -431,7 +432,7 @@
     }*/
     
         //NSManagedObject *myManagedObject;
-        for (int i=0;i<jsonLogoCount;i++) {
+        /*for (int i=0;i<jsonLogoCount;i++) {
         
                     artworkNameAddString =[artworkNameArray objectAtIndex:i];
                     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
@@ -440,18 +441,52 @@
                     //[self insertNewManagedObject:[artworkNameArray objectAtIndex:i]];
                     [self insertNewManagedObject:artworkNameAddString];
             
-               }
+               }*/
+    
+    for (int i=0;i<jsonLogoCount;i++) {
+        // loops to add values
+        artworkNameAddString =[artworkNameArray objectAtIndex:i];
+        NSLog(@"artworkNameAddString= %@", artworkNameAddString);
+        
+        artworkFullImageString =[artworkFullImageArray objectAtIndex:i];
+        NSLog(@"artworkFullImageString = %@", artworkFullImageString );
+        
+        NSManagedObjectContext *context = [self managedObjectContext];
+        
+        // Create a new managed object
+        NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
+        
+        [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
+        [newLogoSearch setValue:self.artworkFullImageString forKey:@"fullImageURL"];
+        //[newDevice setValue:self.companyTextField.text forKey:@"company"];
+        
+        NSError *error = nil;
+        // Save the object to persistent store
+        if (![context save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
+        //Fetch Data entered to test
+        NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
+        self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+        //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
         
         
-                
+        NSLog(@"favoritesArray %@",favoritesArray);
+
+        
+    }
+    
+    
+    
 }
 
 
 
 
-    
 
-     
+
+
 
 -(NSData *)getLogoData:(NSString *)fileName{
     NSString *root = [[NSBundle mainBundle] bundlePath];
