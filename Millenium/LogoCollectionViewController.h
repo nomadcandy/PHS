@@ -33,6 +33,10 @@
     NSString*artworkNameAddFavString;
     NSString*urlFavString;
     
+    NSString*artworkNameUnFavString;
+    NSString*urlUnFavString;
+
+    
     LogoSearch*logoSearch;
     //UIButton* button;
     
@@ -86,6 +90,7 @@
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
 @property (nonatomic, strong) NSMutableArray *favoritesArray;
+@property (nonatomic, strong) NSMutableArray *favoritesRemoveArray;
 
 @property (nonatomic, copy) NSDictionary *artworkNameDictionary;
 
@@ -101,6 +106,8 @@
 
 @property (nonatomic, copy) NSString *artworkNameAddFavString;
 @property (nonatomic, copy) NSString *urlFavString;
+@property (nonatomic, copy) NSString *artworkNameUnFavString;
+@property (nonatomic, copy) NSString *urlUnFavString;
 
 
 @property (nonatomic, assign) id <ButtonPickerDelegate> delegate;

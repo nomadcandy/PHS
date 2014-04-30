@@ -183,8 +183,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
     
     
-    
-    
     NSManagedObjectContext *context = [self managedObjectContext];
     
     // Create a new managed object
@@ -211,17 +209,55 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
+
 -(IBAction)removeFavorite:(id)sender{
     
     
+    /*Millenium[14492:90b] indexPathSend 0
+    2014-04-30 17:18:37.290 Millenium[14492:90b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'keypath pid not found in entity <NSSQLEntity LogoFavorite id=1>'*/
+
+    
+    
+    NSLog(@"indexPathSend %d",indexPathSend);
+    
+    urlUnFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
+    artworkNameUnFavString =[artworkNameArray objectAtIndex:indexPathSend];
     NSManagedObjectContext *context = [self managedObjectContext];
+    //NSNumber *soughtPid=[NSNumber numberWithInt:53];
+    //NSEntityDescription *artworkNameEntity=[NSEntityDescription entityForName:@"LogoFavorite" inManagedObjectContext:context];
     
-    // Create a new managed object
-    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
+    NSEntityDescription *logoFavoriteEntity=[NSEntityDescription entityForName:@"LogoFavorite" inManagedObjectContext:context];
+    NSFetchRequest *fetch=[[NSFetchRequest alloc] init];
+    [fetch setEntity:logoFavoriteEntity];
+    NSPredicate *p=[NSPredicate predicateWithFormat:@"pid == %@", urlUnFavString];
+    [fetch setPredicate:p];
+    //... add sorts if you want them
+    NSError *fetchError;
+    NSArray *fetchedFavorites=[self.managedObjectContext executeFetchRequest:fetch error:&fetchError];
+    // handle error
     
-    // Delete object from database
-    //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
+    
+    for (NSManagedObject *favorite in fetchedFavorites) {
+        [context deleteObject:favorite];
+    }
+    
+    //Fetch Data entered to test
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
+    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    NSLog(@"favoritesArray %@",_favoritesArray);
+
+    
+    
+
+    
 }
+
+
+
 
 
 
