@@ -115,7 +115,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     // Fetch the devices from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
     self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
@@ -209,7 +209,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
-
+//crashes
 -(IBAction)removeFavorite:(id)sender{
     
     
