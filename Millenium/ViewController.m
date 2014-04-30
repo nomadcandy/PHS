@@ -433,7 +433,8 @@
         
                     artworkNameAddString =[artworkNameArray objectAtIndex:i];
                     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-
+            
+                     //calls method to add the string to CoreData
                     //[self insertNewManagedObject:[artworkNameArray objectAtIndex:i]];
                     [self insertNewManagedObject:artworkNameAddString];
             
@@ -460,8 +461,8 @@
     return logoData;
     
 }
-
-//get the managed objext from the appDelegate
+//TODO add to any viewController where we need to access ManagedObject
+//get the managed objext from the appDelegate to be used here in ViewController
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
     id delegate = [[UIApplication sharedApplication] delegate];
@@ -475,15 +476,11 @@
     
     
     
-   
-    //NSManagedObjectContext *moc = [(YourApplicationDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
-    
     
     NSManagedObjectContext *context = [self managedObjectContext];
     
     // Create a new managed object
     NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
-    
     
     [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
     //[newDevice setValue:self.versionTextField.text forKey:@"version"];

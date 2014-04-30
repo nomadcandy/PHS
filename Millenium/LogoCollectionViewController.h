@@ -14,6 +14,7 @@
 #import "InteractiveViewController.h"
 #import "DIYMenu.h"
 #import "Logo.h"
+#import "LogoSearch.h"
 
 
 @protocol ButtonPickerDelegate <NSObject>
@@ -26,6 +27,8 @@
 @interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate>
 
 {
+    
+    LogoSearch*logoSearch;
     //UIButton* button;
     
     int selectedIndex;
@@ -76,6 +79,8 @@
 @property (nonatomic, copy) NSMutableArray *artworkIconArray;
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
+
+@property (nonatomic, strong) NSMutableArray *favoritesArray;
 
 @property (nonatomic, copy) NSDictionary *artworkNameDictionary;
 

@@ -54,6 +54,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     
@@ -78,7 +80,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 	// Do any additional setup after loading the view.
 }
 
-
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // Fetch the devices from persistent data store
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
+    self->logoSearch = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    NSLog(@"logoSearch %@",logoSearch);
+    
+    [self.collectionView reloadData];
+}
 
 
 - (id)initWithLogo:(Logo *)logo
@@ -465,8 +479,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
 }
-
-
+//gets managedObjectContext from the appDelegate
+- (NSManagedObjectContext *)managedObjectContext
+{
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 
 - (void)didSetLogoUseString:(InteractiveViewController *)controller{
     
