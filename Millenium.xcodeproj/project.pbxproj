@@ -14,6 +14,8 @@
 		422A6927191022DE001CAB8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 422A6926191022DE001CAB8D /* CoreData.framework */; };
 		422A692A19102CBD001CAB8D /* LogoSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A692919102CBD001CAB8D /* LogoSearch.m */; };
 		422A692B19102CBD001CAB8D /* LogoSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A692919102CBD001CAB8D /* LogoSearch.m */; };
+		422A696F19118610001CAB8D /* LogoFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A696E19118610001CAB8D /* LogoFavorite.m */; };
+		422A697019118610001CAB8D /* LogoFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A696E19118610001CAB8D /* LogoFavorite.m */; };
 		422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
@@ -273,6 +275,8 @@
 		422A6926191022DE001CAB8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		422A692819102CBD001CAB8D /* LogoSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoSearch.h; sourceTree = "<group>"; };
 		422A692919102CBD001CAB8D /* LogoSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoSearch.m; sourceTree = "<group>"; };
+		422A696D191185FA001CAB8D /* LogoFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoFavorite.h; sourceTree = "<group>"; };
+		422A696E19118610001CAB8D /* LogoFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoFavorite.m; sourceTree = "<group>"; };
 		422BA5FD18F442B900E53B33 /* CharlesHead.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesHead.m4v; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -511,6 +515,8 @@
 				422A692319101E76001CAB8D /* Millenium.xcdatamodeld */,
 				422A692819102CBD001CAB8D /* LogoSearch.h */,
 				422A692919102CBD001CAB8D /* LogoSearch.m */,
+				422A696D191185FA001CAB8D /* LogoFavorite.h */,
+				422A696E19118610001CAB8D /* LogoFavorite.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -1267,6 +1273,7 @@
 				427CE63818F07D7A00865291 /* RentalViewController.m in Sources */,
 				42B0152718E312250068019C /* RequestFlierViewController.m in Sources */,
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,
+				422A696F19118610001CAB8D /* LogoFavorite.m in Sources */,
 				4247572E18D8AA55000AAF7C /* Logo.m in Sources */,
 				42EB3EC818D0EAA400FAD7FD /* InteractiveSlideViewController.m in Sources */,
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
@@ -1303,6 +1310,7 @@
 				42E7AC0918CE2CDD0036AF00 /* InteractiveViewController.m in Sources */,
 				4247572F18D8AA55000AAF7C /* Logo.m in Sources */,
 				42FF7A4018CDE92A00C72695 /* MilleniumTests.m in Sources */,
+				422A697019118610001CAB8D /* LogoFavorite.m in Sources */,
 				42B0151B18E1F0520068019C /* ClipView.m in Sources */,
 				422A692B19102CBD001CAB8D /* LogoSearch.m in Sources */,
 				42B0151618E0F57E0068019C /* MaskView.m in Sources */,

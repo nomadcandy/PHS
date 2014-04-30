@@ -173,6 +173,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
+-(IBAction)addFavorite:(id)sender{
+    
+}
+
+-(IBAction)removeFavorite:(id)sender{
+    
+}
+
 
 
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {

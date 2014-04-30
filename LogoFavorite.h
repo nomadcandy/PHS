@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface LogoSearch : NSManagedObject{
+@interface LogoFavorite : NSManagedObject{
     
   //@private
 }
@@ -29,6 +29,5 @@
 @property (nonatomic,retain) NSString* productReleaseDate;
 @property (nonatomic,retain) NSString* searchString;
 @property (nonatomic,retain) NSString* sold;
-
 
 @end

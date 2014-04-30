@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Jami Sue Becker. All rights reserved.
 //
 
-#import "LogoSearch.h"
+#import "Logofavorite.h"
 
-@implementation LogoSearch
+@implementation LogoFavorite
 
 
 @dynamic artworkName;
@@ -25,6 +25,7 @@
 @dynamic productReleaseDate;
 @dynamic searchString;
 @dynamic sold;
+
 
 
 
