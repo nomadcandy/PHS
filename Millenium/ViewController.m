@@ -508,7 +508,7 @@
     }
     return context;
 }
-
+//not used looping now instead
 -(void)insertNewManagedObject:(NSString *)fileName{
     
     
