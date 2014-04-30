@@ -33,6 +33,8 @@
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
 
+@synthesize favoritesArray;
+
 @synthesize artworkNameAddString;
 
 @synthesize jsonLogoCount;
@@ -491,8 +493,15 @@
     if (![context save:&error]) {
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
+    //Fetch Data entered to test
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
+    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    NSLog(@"favoritesArray %@",favoritesArray);
 
-   
     
 
 }

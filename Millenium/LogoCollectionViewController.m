@@ -84,12 +84,43 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     [super viewDidAppear:animated];
     
+    
+    
+   // NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distance" ascending:YES];
+   // NSArray *sortDescriptorsArray = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    
+    
+    //NSFetchRequest*fetchAgainRequest = [[NSFetchRequest alloc]init];
+    
+    //[fetchAgainRequest setSortDescriptors:sortDescriptorsArray];
+    
+    //add Entity to Read
+   /* NSEntityDescription*entity=
+    [NSEntityDescription
+     entityForName:@"LogoSearch"
+     inManagedObjectContext:self.managedObjectContext];
+    
+    //add Entity to Read
+    [fetchAgainRequest setEntity:entity];
+    
+    NSError*requestError = nil;
+    NSArray*favoritesArray =
+    [self.managedObjectContext executeFetchRequest:fetchAgainRequest
+                                             error:&requestError];
+    
+     NSLog(@"favoritesArray %@",favoritesArray);*/
+    
+    
+    
     // Fetch the devices from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
-    self->logoSearch = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
-    NSLog(@"logoSearch %@",logoSearch);
+    
+    NSLog(@"favoritesArray %@",_favoritesArray);
+   // NSLog(@"logoSearch %@",logoSearch);
     
     [self.collectionView reloadData];
 }

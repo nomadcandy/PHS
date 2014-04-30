@@ -76,6 +76,9 @@
 @property (nonatomic, strong) IBOutlet UIButton *goSearchButton;
 
 
+
+@property (nonatomic, copy) NSMutableArray *favoritesArray;
+
 @property (nonatomic, copy) NSMutableArray *artworkNameArray;
 @property (nonatomic, copy) NSMutableArray *artworkSizeArray;
 @property (nonatomic, copy) NSMutableArray *artworkFormatArray;
