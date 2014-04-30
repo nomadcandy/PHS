@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="LogoFavorite" syncable="YES">
+    <entity name="LogoFavorite" representedClassName="LogoFavorite" syncable="YES">
         <attribute name="artworkName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkStyle" optional="YES" attributeType="String" syncable="YES"/>

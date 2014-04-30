@@ -15,6 +15,7 @@
 #import "DIYMenu.h"
 #import "Logo.h"
 #import "LogoSearch.h"
+#import "LogoFavorite.h"
 
 
 @protocol ButtonPickerDelegate <NSObject>
@@ -27,6 +28,10 @@
 @interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate>
 
 {
+    
+    
+    NSString*artworkNameAddFavString;
+    NSString*urlFavString;
     
     LogoSearch*logoSearch;
     //UIButton* button;
@@ -94,11 +99,16 @@
 @property (nonatomic,strong) IBOutlet UIButton *logoChooseButton;
 @property (nonatomic,strong) IBOutlet UIButton *logoChoose1Button;
 
+@property (nonatomic, copy) NSString *artworkNameAddFavString;
+@property (nonatomic, copy) NSString *urlFavString;
+
 
 @property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
 
 -(IBAction)goInteractive:(id)sender;
 -(IBAction)goHome:(UIButton *)sender;
+-(IBAction)addFavorite:(id)sender;
+-(IBAction)removeFavorite:(id)sender;
 
 
 

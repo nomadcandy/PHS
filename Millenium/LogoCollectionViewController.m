@@ -15,7 +15,8 @@
 
 @implementation LogoCollectionViewController
 
-
+@synthesize artworkNameAddFavString;
+@synthesize urlFavString;
 @synthesize jsonLogoCount;
 @synthesize nearMeImagesArray;
 @synthesize nearMeNamesArray;
@@ -174,6 +175,49 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 -(IBAction)addFavorite:(id)sender{
+    
+    
+    NSLog(@"indexPathSend %d",indexPathSend);
+    
+    urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
+    
+   // NSString*httpString= @"http://";
+
+    //NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+    
+    artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
+    //NSLog(@"artworkNameAddString= %@", artworkNameAddString);
+    
+    
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
+    
+    // Delete object from database
+    //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
+    
+    
+    
+    
+    [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
+    [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    //Fetch Data entered to test
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
+    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    NSLog(@"favoritesArray %@",_favoritesArray);
     
 }
 
@@ -428,6 +472,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
+
+
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
     
     
@@ -450,8 +496,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
     
-    
-    //NSLog(@"urlStringAppend %@",urlStringAppend);
     
     NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     

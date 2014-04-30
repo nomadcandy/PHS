@@ -843,7 +843,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-HA-1kT">
-                                            <rect key="frame" x="375" y="322" width="55" height="55"/>
+                                            <rect key="frame" x="375" y="326" width="55" height="55"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Use">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -861,6 +861,9 @@
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="addFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="8Wu-pC-Z2P"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i9-I0-xbo">
                                             <rect key="frame" x="220" y="326" width="58" height="55"/>
@@ -869,15 +872,20 @@
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
+                                            <connections>
+                                                <action selector="removeFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="dLx-jb-KN9"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <size key="customSize" width="970" height="427"/>
                                 <connections>
+                                    <outlet property="favButton" destination="Qr5-i0-7W6" id="e2Z-Yp-0qA"/>
                                     <outlet property="goBack" destination="AlH-HA-1kT" id="NRP-DW-o4x"/>
                                     <outlet property="logoChooseButton" destination="NGC-wB-rpF" id="MmV-f8-uAv"/>
                                     <outlet property="logoLabel" destination="ytT-DL-OMq" id="ZQx-PS-9o4"/>
+                                    <outlet property="removeFavButton" destination="2i9-I0-xbo" id="hYj-BG-gwe"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -932,7 +940,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgX-Sa-CNX">
-                                    <rect key="frame" x="253" y="20" width="51" height="55"/>
+                                    <rect key="frame" x="101" y="14" width="51" height="55"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="REP">
                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -940,7 +948,7 @@
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tee-kX-y57">
-                                    <rect key="frame" x="311" y="20" width="77" height="55"/>
+                                    <rect key="frame" x="176" y="14" width="77" height="55"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="SEARCH">
                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -951,7 +959,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ur-th-VwS">
-                                    <rect key="frame" x="195" y="20" width="53" height="55"/>
+                                    <rect key="frame" x="27" y="14" width="53" height="55"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="FAV">
                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
