@@ -25,7 +25,7 @@
 
 
 
-@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate>
+@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate, UITextFieldDelegate>
 
 {
     

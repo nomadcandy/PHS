@@ -467,7 +467,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [self.collectionView reloadData];
     //cell for header
-    //if (section == 0)
+    if (section == 0){
+        
+        return 1;
+    }
         
     //{
     //NSLog(@"jsonLogoCount %i",jsonLogoCount);
@@ -485,17 +488,17 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //}
     
     
-    /*else
+   else
     {
         
         
         //return logoNearMeArray.count;
-        return jsonLogoCount;
+        //return jsonLogoCount;
         
-    }*/
-    
      return artworkNameArray.count;
 
+}
+    
 }
 
 - (UICollectionReusableView *)collectionView: (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -505,12 +508,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     if (kind == UICollectionElementKindSectionHeader) {
         
         LogoHeaderCell *logoHeaderCell = [collectionView dequeueReusableSupplementaryViewOfKind:
-                                  UICollectionElementKindSectionHeader withReuseIdentifier:@"headerCellID" forIndexPath:indexPath];
+                                  UICollectionElementKindSectionHeader withReuseIdentifier:@"logoHeaderCellID" forIndexPath:indexPath];
         
             logoHeaderCell.pageTitleLabel.text = @" ";
         
         
         [[logoHeaderCell backButton] addTarget:self action:@selector(goInteractive1:event:) forControlEvents:UIControlEventTouchUpInside];
+        
+         [[logoHeaderCell cintasButton] addTarget:self action:@selector(goHome:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
         
             reusableview = logoHeaderCell;
             
@@ -524,27 +531,53 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //NSString *titleSection =@"Media";
+    //UIImage*mediaThumbnail =[UIImage imageNamed:@"MapTestImage.png"];
+    //UIImage*mediaThumbnail = character.mediaThumbnailsArray;
+    
+    
+    
+    CGSize size;
+    if (indexPath.section==0) {
+        //if ([element.type isEqualToString:@"selector"]) {
+        //CGSize retval =  CGSizeMake(1024, 600);
+        CGSize retval =  CGSizeMake(1004, 130);
+        retval.height += 1; retval.width += 1; return retval;
+        
+    }
+    
+    else {
+        
+        CGSize retval =  CGSizeMake(1004, 620);
+        retval.height += 20; retval.width += 20; return retval;
+    }
+    
+    
+    return size;
+}
 
 
 - (UIEdgeInsets)collectionView:
 (UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     
-   // if (section==0)
+    if (section==0)
     {
         //inset of sections to account for the nav bar
         //top,left,right bottom
-        return UIEdgeInsetsMake(105, 105, 105, 105);
+        return UIEdgeInsetsMake(30, 30, 30, 30);
         
     }
     
-    /*else  {
+    else  {
         
         
-        return UIEdgeInsetsMake(10, 540, 140, 50);
-    }*/
+        return UIEdgeInsetsMake(105, 105, 105, 105);
+    }
     
 }
 
@@ -553,7 +586,22 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
     
+    //collectionView.allowsMultipleSelection = YES;
+    if (indexPath.section == 0)
+        
+        
+        
+    {
+        LogoHeaderCell *logoHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoHeaderCellID forIndexPath:indexPath];
+        
+        
+        
+        return logoHeaderCell;
+        
+        
+    }
     
+    else  /* if (indexPath.section == 1)*/{
     
         nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
                         @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
@@ -696,7 +744,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }*/
     
 }
-
+}
 
 -(IBAction)goInteractive1:(UIButton*)sender event:(id)event {
     

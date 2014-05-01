@@ -420,7 +420,7 @@
     int jsonLogoCount;
     jsonLogoCount = artworkNameArray.count;
     
-    NSLog(@"jsonLogoCount %d",jsonLogoCount);
+   // NSLog(@"jsonLogoCount %d",jsonLogoCount);
      /*for (int i = 0;i<jsonLogoCount;i++){
         
         
@@ -443,7 +443,7 @@
             
                }*/
     
-    for (int i=0;i<jsonLogoCount;i++) {
+   /* for (int i=0;i<jsonLogoCount;i++) {
         //delete existing data
         
         
@@ -487,7 +487,7 @@
         NSLog(@"favoritesArray %@",favoritesArray);
 
         
-    }
+    }*/
     
     
     
