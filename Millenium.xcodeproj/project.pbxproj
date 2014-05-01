@@ -24,6 +24,8 @@
 		4227989819129B9800776844 /* AssetsGreyBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 4227989719129B9800776844 /* AssetsGreyBox.png */; };
 		4227989A19129F1400776844 /* AssetsGreyBox1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4227989919129F1400776844 /* AssetsGreyBox1.png */; };
 		4227989C1912A60B00776844 /* AssetsDefaultButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4227989B1912A60B00776844 /* AssetsDefaultButton.png */; };
+		4227989E1912D9F400776844 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4227989D1912D9F400776844 /* CoreLocation.framework */; };
+		422798A01912DA5F00776844 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4227989F1912DA5F00776844 /* MapKit.framework */; };
 		422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691C19100951001CAB8D /* AssetsPadTrans.png */; };
 		422A691F19100B4E001CAB8D /* LogoPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691E19100B4E001CAB8D /* LogoPad.png */; };
 		422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A692019100C23001CAB8D /* LogoPadGrey.png */; };
@@ -297,6 +299,8 @@
 		4227989719129B9800776844 /* AssetsGreyBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsGreyBox.png; sourceTree = "<group>"; };
 		4227989919129F1400776844 /* AssetsGreyBox1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsGreyBox1.png; sourceTree = "<group>"; };
 		4227989B1912A60B00776844 /* AssetsDefaultButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsDefaultButton.png; sourceTree = "<group>"; };
+		4227989D1912D9F400776844 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4227989F1912DA5F00776844 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		422A691C19100951001CAB8D /* AssetsPadTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsPadTrans.png; sourceTree = "<group>"; };
 		422A691E19100B4E001CAB8D /* LogoPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPad.png; sourceTree = "<group>"; };
 		422A692019100C23001CAB8D /* LogoPadGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPadGrey.png; sourceTree = "<group>"; };
@@ -502,6 +506,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				422798A01912DA5F00776844 /* MapKit.framework in Frameworks */,
+				4227989E1912D9F400776844 /* CoreLocation.framework in Frameworks */,
 				422A6927191022DE001CAB8D /* CoreData.framework in Frameworks */,
 				427CE62E18F069DF00865291 /* MessageUI.framework in Frameworks */,
 				42849B5C18E483DF00E5B3FB /* MobileCoreServices.framework in Frameworks */,
@@ -949,6 +955,8 @@
 		42FF7A1318CDE92A00C72695 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4227989F1912DA5F00776844 /* MapKit.framework */,
+				4227989D1912D9F400776844 /* CoreLocation.framework */,
 				422A6926191022DE001CAB8D /* CoreData.framework */,
 				427CE62D18F069DF00865291 /* MessageUI.framework */,
 				42849B5B18E483DF00E5B3FB /* MobileCoreServices.framework */,

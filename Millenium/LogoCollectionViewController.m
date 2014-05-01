@@ -151,6 +151,36 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 
+- (void)startStandardUpdates
+{
+    // Create the location manager if this object does not
+    // already have one.
+    /*if (nil == locationManager)
+        locationManager = [[CLLocationManager alloc] init];
+    
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    
+    // Set a movement threshold for new events.
+    locationManager.distanceFilter = 500; // meters
+    
+    [locationManager startUpdatingLocation];*/
+}
+
+
+-(IBAction)goNearMe:(id)sender{
+
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    //request.region = regionToSearchIn;
+    //request.region = 500;
+    request.naturalLanguageQuery = @"restaurants"; // or business name
+    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
+    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+    // do something with the results / error
+    }];
+    
+}
+
 -(IBAction)goSearch:(id)sender{
     
     NSString*searchString= searchField.text;
