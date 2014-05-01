@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422139911912883A001BD328 /* AssetsRepButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221398E1912883A001BD328 /* AssetsRepButton.png */; };
+		422139921912883A001BD328 /* AssetsCompassButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221398F1912883A001BD328 /* AssetsCompassButton.png */; };
+		422139931912883A001BD328 /* AssetsFavButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 422139901912883A001BD328 /* AssetsFavButton.png */; };
+		4221399519128864001BD328 /* AssetsAddButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221399419128864001BD328 /* AssetsAddButton.png */; };
+		4221399919128996001BD328 /* CintasLogoBlackClear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221399819128996001BD328 /* CintasLogoBlackClear.png */; };
+		4221399A19128996001BD328 /* CintasLogoBlackClear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221399819128996001BD328 /* CintasLogoBlackClear.png */; };
+		4221399C19128D43001BD328 /* AssetsSearchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221399B19128D43001BD328 /* AssetsSearchButton.png */; };
+		4221399D19128D43001BD328 /* AssetsSearchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221399B19128D43001BD328 /* AssetsSearchButton.png */; };
+		4221399F19128F7E001BD328 /* AssetsAddFavButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221399E19128F7E001BD328 /* AssetsAddFavButton.png */; };
+		422139A019128F7E001BD328 /* AssetsAddFavButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221399E19128F7E001BD328 /* AssetsAddFavButton.png */; };
+		422139A219128F8B001BD328 /* AssetsRemFavButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 422139A119128F8B001BD328 /* AssetsRemFavButtons.png */; };
+		422139A319128F8B001BD328 /* AssetsRemFavButtons.png in Resources */ = {isa = PBXBuildFile; fileRef = 422139A119128F8B001BD328 /* AssetsRemFavButtons.png */; };
+		422139A519129097001BD328 /* AssetCheckButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 422139A419129097001BD328 /* AssetCheckButton.png */; };
+		422139A619129097001BD328 /* AssetCheckButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 422139A419129097001BD328 /* AssetCheckButton.png */; };
 		422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691C19100951001CAB8D /* AssetsPadTrans.png */; };
 		422A691F19100B4E001CAB8D /* LogoPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A691E19100B4E001CAB8D /* LogoPad.png */; };
 		422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = 422A692019100C23001CAB8D /* LogoPadGrey.png */; };
@@ -268,6 +282,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4221398E1912883A001BD328 /* AssetsRepButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsRepButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsRepButton.png; sourceTree = "<group>"; };
+		4221398F1912883A001BD328 /* AssetsCompassButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsCompassButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsCompassButton.png; sourceTree = "<group>"; };
+		422139901912883A001BD328 /* AssetsFavButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsFavButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsFavButton.png; sourceTree = "<group>"; };
+		4221399419128864001BD328 /* AssetsAddButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsAddButton.png; path = ../../../Dropbox/Active/MilleniumMats/CintasLogos/AssetsAddButton.png; sourceTree = "<group>"; };
+		4221399819128996001BD328 /* CintasLogoBlackClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CintasLogoBlackClear.png; sourceTree = "<group>"; };
+		4221399B19128D43001BD328 /* AssetsSearchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsSearchButton.png; sourceTree = "<group>"; };
+		4221399E19128F7E001BD328 /* AssetsAddFavButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsAddFavButton.png; sourceTree = "<group>"; };
+		422139A119128F8B001BD328 /* AssetsRemFavButtons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsRemFavButtons.png; sourceTree = "<group>"; };
+		422139A419129097001BD328 /* AssetCheckButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetCheckButton.png; sourceTree = "<group>"; };
 		422A691C19100951001CAB8D /* AssetsPadTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsPadTrans.png; sourceTree = "<group>"; };
 		422A691E19100B4E001CAB8D /* LogoPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPad.png; sourceTree = "<group>"; };
 		422A692019100C23001CAB8D /* LogoPadGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoPadGrey.png; sourceTree = "<group>"; };
@@ -502,6 +525,15 @@
 		422A691B19100939001CAB8D /* ImagesAssets */ = {
 			isa = PBXGroup;
 			children = (
+				422139A419129097001BD328 /* AssetCheckButton.png */,
+				422139A119128F8B001BD328 /* AssetsRemFavButtons.png */,
+				4221399E19128F7E001BD328 /* AssetsAddFavButton.png */,
+				4221399B19128D43001BD328 /* AssetsSearchButton.png */,
+				4221399819128996001BD328 /* CintasLogoBlackClear.png */,
+				4221399419128864001BD328 /* AssetsAddButton.png */,
+				4221398E1912883A001BD328 /* AssetsRepButton.png */,
+				4221398F1912883A001BD328 /* AssetsCompassButton.png */,
+				422139901912883A001BD328 /* AssetsFavButton.png */,
 				422A692019100C23001CAB8D /* LogoPadGrey.png */,
 				422A691E19100B4E001CAB8D /* LogoPad.png */,
 				422A691C19100951001CAB8D /* AssetsPadTrans.png */,
@@ -1071,6 +1103,7 @@
 			files = (
 				426A6A1E18ED0CC300255331 /* SampleLogo3.png in Resources */,
 				42B0155518E316100068019C /* TripleFlexScraper.pdf in Resources */,
+				422139A219128F8B001BD328 /* AssetsRemFavButtons.png in Resources */,
 				426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */,
 				428085D018FD792D00389C9C /* goButton.png in Resources */,
 				42B0153718E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
@@ -1080,6 +1113,7 @@
 				426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */,
 				42E9AC2618FF5A6C000E226D /* Clean3Button.png in Resources */,
 				426A6A1A18ED0CC300255331 /* SampleLogo7.png in Resources */,
+				422139921912883A001BD328 /* AssetsCompassButton.png in Resources */,
 				42849B5018E4556700E5B3FB /* envelope.png in Resources */,
 				422A691F19100B4E001CAB8D /* LogoPad.png in Resources */,
 				42849B8218EA004100E5B3FB /* rugsamplea.png in Resources */,
@@ -1098,6 +1132,8 @@
 				42B0153D18E3159F0068019C /* SilverSeries.pdf in Resources */,
 				426A6A1B18ED0CC300255331 /* SampleLogo6.png in Resources */,
 				428085CC18FC585100389C9C /* MatSay.png in Resources */,
+				4221399F19128F7E001BD328 /* AssetsAddFavButton.png in Resources */,
+				4221399C19128D43001BD328 /* AssetsSearchButton.png in Resources */,
 				42B0155E18E3164B0068019C /* SafetyChef.pdf in Resources */,
 				42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
@@ -1110,10 +1146,12 @@
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42B0157318E317B00068019C /* SoftStep.pdf in Resources */,
 				42B0152218E303C40068019C /* MatChatter5.png in Resources */,
+				4221399919128996001BD328 /* CintasLogoBlackClear.png in Resources */,
 				4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */,
 				42E9AC0718FF5187000E226D /* MatClientFocusJade4.png in Resources */,
 				426A6A3218EDADBA00255331 /* ProffessionalButton.png in Resources */,
 				42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */,
+				422139931912883A001BD328 /* AssetsFavButton.png in Resources */,
 				42E9AC1418FF59E2000E226D /* Clean2Button.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
 				428085CE18FD756200389C9C /* LoginPopOver.png in Resources */,
@@ -1123,6 +1161,7 @@
 				426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */,
 				42B0156A18E317710068019C /* SpringStep.pdf in Resources */,
 				42E9AC2418FF5A6C000E226D /* Fresh3Button.png in Resources */,
+				422139911912883A001BD328 /* AssetsRepButton.png in Resources */,
 				42B0156718E3175A0068019C /* MarbleTop.pdf in Resources */,
 				42B0155818E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */,
@@ -1133,8 +1172,10 @@
 				426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
 				42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */,
+				422139A519129097001BD328 /* AssetCheckButton.png in Resources */,
 				42B0156118E316580068019C /* TripleFlexFlow.pdf in Resources */,
 				42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
+				4221399519128864001BD328 /* AssetsAddButton.png in Resources */,
 				426A6A3918EDD99200255331 /* FriendlyCharlesUse.png in Resources */,
 				42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
@@ -1211,6 +1252,7 @@
 				42B0155918E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				42849B9218EA02BE00E5B3FB /* whitepad.png in Resources */,
 				42B0158218E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
+				4221399D19128D43001BD328 /* AssetsSearchButton.png in Resources */,
 				42E9AC1B18FF59E2000E226D /* Pro2Button.png in Resources */,
 				42849B8918EA016200E5B3FB /* allmatbuttons2.png in Resources */,
 				42E9AC1518FF59E2000E226D /* Clean2Button.png in Resources */,
@@ -1229,6 +1271,7 @@
 				42E9AC2718FF5A6C000E226D /* Clean3Button.png in Resources */,
 				42B014FF18DF450F0068019C /* WebViewBG.png in Resources */,
 				42849B7918E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
+				422139A019128F7E001BD328 /* AssetsAddFavButton.png in Resources */,
 				42849B6F18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
 				42B0154118E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42B0156E18E3177F0068019C /* SafeStep.pdf in Resources */,
@@ -1239,10 +1282,12 @@
 				42B0154D18E315E30068019C /* EcoGuard.pdf in Resources */,
 				42B0157118E317A50068019C /* AirStep.pdf in Resources */,
 				42B0158018E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
+				4221399A19128996001BD328 /* CintasLogoBlackClear.png in Resources */,
 				42B0155F18E3164B0068019C /* SafetyChef.pdf in Resources */,
 				42B0150518DF47110068019C /* WebViewBG2.png in Resources */,
 				42849B8018E9FF7F00E5B3FB /* whitecirclematsize1.png in Resources */,
 				42B0152318E303C40068019C /* MatChatter5.png in Resources */,
+				422139A619129097001BD328 /* AssetCheckButton.png in Resources */,
 				42849B8618EA00CD00E5B3FB /* alllogobuttons2.png in Resources */,
 				42B0155018E315F20068019C /* ParquetWiperScraper.pdf in Resources */,
 				42849B8F18EA027800E5B3FB /* gradietebg.png in Resources */,
@@ -1253,6 +1298,7 @@
 				42849B8318EA004100E5B3FB /* rugsamplea.png in Resources */,
 				42B0152F18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0155318E316030068019C /* BrushTrip.pdf in Resources */,
+				422139A319128F8B001BD328 /* AssetsRemFavButtons.png in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42849B8C18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0155618E316100068019C /* TripleFlexScraper.pdf in Resources */,
