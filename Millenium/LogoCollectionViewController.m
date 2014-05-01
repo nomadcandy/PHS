@@ -553,8 +553,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     else {
         
-        CGSize retval =  CGSizeMake(1004, 620);
-        retval.height += 20; retval.width += 20; return retval;
+        CGSize retval =  CGSizeMake(1004, 420);
+        retval.height += 10; retval.width += 10; return retval;
     }
     
     
@@ -569,14 +569,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     {
         //inset of sections to account for the nav bar
         //top,left,right bottom
-        return UIEdgeInsetsMake(30, 30, 30, 30);
+        return UIEdgeInsetsMake(10, 10, 10, 10);
         
     }
     
     else  {
         
         
-        return UIEdgeInsetsMake(105, 105, 105, 105);
+        return UIEdgeInsetsMake(10, 10, 10, 10);
     }
     
 }
