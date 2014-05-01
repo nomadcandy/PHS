@@ -15,7 +15,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *matTitleLabel;
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UIButton *cintasButton;
+@property (strong, nonatomic) IBOutlet UIButton *searchButton;
 @property (strong, nonatomic) IBOutlet UIImageView *blackBarView;
+@property (strong, nonatomic) IBOutlet UITextField *searchField;
 
 
 @end
