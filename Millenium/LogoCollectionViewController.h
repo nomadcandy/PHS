@@ -38,6 +38,8 @@
     NSString*artworkNameUnFavString;
     NSString*urlUnFavString;
 
+    
+    IBOutlet UITextField *searchOutField;
     //IBOutlet UITextField *searchField;
     LogoSearch*logoSearch;
     //UIButton* button;
@@ -78,8 +80,8 @@
 
 @property (nonatomic, assign) int jsonLogoCount;
 
-
-@property (nonatomic, retain) IBOutlet UITextField *searchField;
+@property (nonatomic, retain) IBOutlet UITextField *searchOutField;
+//@property (nonatomic, retain) IBOutlet UITextField *searchField;
 
 @property (nonatomic, copy) NSArray *searchImagesArray;
 @property (nonatomic, copy) NSArray *nearMeImagesArray;

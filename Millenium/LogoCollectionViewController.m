@@ -17,7 +17,7 @@
 
 
 //@synthesize searchString;
-//@synthesize searchField;
+@synthesize searchOutField;
 @synthesize artworkNameAddFavString;
 @synthesize urlFavString;
 @synthesize jsonLogoCount;
@@ -54,6 +54,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+       
+        
     }
     return self;
 }
@@ -82,6 +84,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
 	// Do any additional setup after loading the view.
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 300, 40)];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.font = [UIFont systemFontOfSize:15];
+    textField.placeholder = @"enter text";
+    textField.autocorrectionType = UITextAutocorrectionTypeNo;
+    textField.keyboardType = UIKeyboardTypeDefault;
+    textField.returnKeyType = UIReturnKeyDone;
+    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    textField.delegate = self;
+    [self.view addSubview:textField];
+    //[textField release];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -113,8 +128,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                                              error:&requestError];
     
      NSLog(@"favoritesArray %@",favoritesArray);*/
-    
-    
+       
     
     // Fetch the devices from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
@@ -184,8 +198,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goSearch:(id)sender{
     
+    
+    
+    
+    
      //NSString*searchString=_logoHeaderCell.searchField.text;
-    searchString= _searchField.text;
+    searchString= searchOutField.text;
     //NSString*searchString= _searchField.text;
     NSLog(@"searchString %@",searchString);
     //NSString*passwordString= passwordField.text;
@@ -553,11 +571,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
          [[logoHeaderCell cintasButton] addTarget:self action:@selector(goHome:) forControlEvents:UIControlEventTouchUpInside];
         
         
-       /* [[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+       [[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+        
+        searchOutField = searchOutField;
         
         searchString=logoHeaderCell.searchField.text;
         
-        logoHeaderCell.searchField.text = @"palm"; // or other data from your model*/
+        //logoHeaderCell.searchField.text = @"palm"; // or other data from your model*/
         
             reusableview = logoHeaderCell;
             
@@ -609,7 +629,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     {
         //inset of sections to account for the nav bar
         //top,left,right bottom
-        return UIEdgeInsetsMake(10, 10, 10, 10);
+        return UIEdgeInsetsMake(200, 10, 10, 10);
         
     }
     
@@ -635,22 +655,24 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         LogoHeaderCell *logoHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoHeaderCellID forIndexPath:indexPath];
         
         
-        [[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+       [[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
         
-        NSString*searchString=logoHeaderCell.searchField.text;
+        //[[logoHeaderCell searchButton] addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventTouchUpInside];
+        
+        //NSString*searchString=logoHeaderCell.searchField.text;
         
         //logoHeaderCell.searchField.text = @"palm"; // or other data from your model
         
-        if (logoHeaderCell.searchButton)
+        /*if (logoHeaderCell.searchButton)
             
         {
-            
+            //[_searchField becomeFirstResponder];
             searchString=logoHeaderCell.searchField.text;
+            logoHeaderCell.searchField.text = searchString;
             
             
             
-            
-        }
+        }*/
 
         
         
@@ -919,9 +941,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
      //[self dismissViewControllerAnimated:YES completion:nil];
     
 }*/
+/*-(void)textFieldDidChange:(UITextField *)searchField{
+    [(UICollectionViewCell*)[searchField superview] superview];
+}*/
 
+/*-(void)textFieldDidChange:(UITextField *)textField{
+    
+    NSLog(@"searchField %@",searchstring);
+    searchString=_searchField.text;
+}*/
 
-//-(void)textFieldDidChange:(UITextField *)textField{
 //- (void)didSetSearchString:(InteractiveViewController *)controller{
     
             //searchString=_searchField.text;
