@@ -1125,7 +1125,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
-        //NSLog(@"artworkNameArray %@",artworkNameArray);
+        
 
         logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
     
@@ -1135,13 +1135,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
         NSString*httpString= @"http://";
     
-        //NSLog(@"urlString %@",urlString);
-    
+      
         NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-    
-    
-        //NSLog(@"urlStringAppend %@",urlStringAppend);
-
+        
         NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     
         UIImage * iconImage;
@@ -1150,18 +1146,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
         NSLog(@"%@iconImage",iconImage);
     
-       //[logoCell.logoChooseButton setBackgroundImage:[UIImage imageNamed:iconImage]forState:UIControlStateNormal];
-    
-        //[logoCell.logoChooseButton setBackgroundImage:iconImage forState:UIControlStateNormal];
+      
     
         [logoCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
     
-        //[logoCell.logoChooseButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-        
-        /*[logoCell.logoChoose1Button setBackgroundImage:[UIImage imageNamed:nearMeImageString]forState:UIControlStateNormal];
-        
-        [logoCell.logoChoose1Button setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];*/
-
+       
     
     
     

@@ -1115,6 +1115,8 @@
                                     <outlet property="goBack" destination="AlH-HA-1kT" id="NRP-DW-o4x"/>
                                     <outlet property="logoChooseButton" destination="NGC-wB-rpF" id="MmV-f8-uAv"/>
                                     <outlet property="logoLabel" destination="ytT-DL-OMq" id="ZQx-PS-9o4"/>
+                                    <outlet property="matChooseButton" destination="LqT-uu-N44" id="WHC-Bt-Xbl"/>
+                                    <outlet property="matLabel" destination="LjD-Uy-DX8" id="Q80-at-kID"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -2308,7 +2310,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
+        <segue reference="Xsv-p4-h1x"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>

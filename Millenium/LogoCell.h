@@ -10,10 +10,12 @@
 
 @interface LogoCell : UICollectionViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *matLabel;
 @property (strong, nonatomic) IBOutlet UILabel *logoLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
 @property (strong, nonatomic) IBOutlet UIButton *logoChooseButton;
 @property (strong, nonatomic) IBOutlet UIButton *logoChoose1Button;
+
 @property (strong, nonatomic) IBOutlet UIButton *matChooseButton;
 @property (strong, nonatomic) IBOutlet UIButton *matChoose1Button;
 @property (strong, nonatomic) IBOutlet UIButton *goBack;
