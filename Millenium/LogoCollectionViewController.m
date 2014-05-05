@@ -1174,7 +1174,54 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
         }
+        logoCell.matLabel.text = [matNameArray objectAtIndex:indexPath.item];
         
+        NSLog(@"logoLabel %@",logoCell.matLabel.text);
+        
+        NSString*urlMatString =[artworkFullImageArray objectAtIndex:indexPath.item];
+        
+        NSString*httpMatString= @"http://";
+        
+        
+        NSString *urlMatStringAppend = [httpMatString stringByAppendingString:urlMatString];
+        
+        NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
+        
+        UIImage * iconMatImage;
+        
+        iconMatImage = [UIImage imageWithData:dataMat];
+        
+        NSLog(@"%@iconImage",iconMatImage);
+        
+        
+        
+        [logoCell.matChooseButton setImage:iconMatImage forState:UIControlStateNormal];
+        
+        
+        
+        
+        
+        [[logoCell matChooseButton] addTarget:self action:@selector(matSelected:event:) forControlEvents:UIControlEventTouchUpInside];
+        
+        if (logoCell.matChooseButton)
+            
+        {
+            
+            selectedIndex=[indexPath row];
+            _matChooseButton.tag=[indexPath row];
+            NSLog(@"addButton.tag:%ld",(long)_matChooseButton.tag);
+            NSLog(@"indexPathSender1:%@",indexPath);
+            NSLog(@"rowSelectedHere %i",rowSelectedHere);
+            
+            NSLog(@"indexPathSender:%ld",(long)logoCell.tag);
+            
+            UIButton*button = [logoCell matChooseButton];
+            button.tag = selectedIndex;
+            
+            
+            
+        }
+
         /*if (logoCell.logoChoose1Button)
             
         {

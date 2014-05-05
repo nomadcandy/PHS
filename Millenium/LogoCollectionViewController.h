@@ -121,7 +121,8 @@
 
 @property (nonatomic,strong) IBOutlet UIButton *goBackButton;
 @property (nonatomic,strong) IBOutlet UIButton *logoChooseButton;
-@property (nonatomic,strong) IBOutlet UIButton *logoChoose1Button;
+@property (nonatomic,strong) IBOutlet UIButton *matChooseButton;
+//@property (nonatomic,strong) IBOutlet UIButton *logoChoose1Button;
 
 @property (nonatomic, copy) NSString *artworkNameAddFavString;
 @property (nonatomic, copy) NSString *urlFavString;

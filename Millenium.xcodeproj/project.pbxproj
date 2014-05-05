@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421AC8391918191400D37F7B /* InteractiveColorPickGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8351918191400D37F7B /* InteractiveColorPickGreyPad.png */; };
+		421AC83A1918191400D37F7B /* InteractiveColorsGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */; };
+		421AC83B1918191400D37F7B /* InteractiveSizeGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */; };
+		421AC83C1918191400D37F7B /* InteractiveInfoGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8381918191400D37F7B /* InteractiveInfoGreyPad.png */; };
 		422139911912883A001BD328 /* AssetsRepButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221398E1912883A001BD328 /* AssetsRepButton.png */; };
 		422139921912883A001BD328 /* AssetsCompassButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221398F1912883A001BD328 /* AssetsCompassButton.png */; };
 		422139931912883A001BD328 /* AssetsFavButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 422139901912883A001BD328 /* AssetsFavButton.png */; };
@@ -287,6 +291,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		421AC8351918191400D37F7B /* InteractiveColorPickGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveColorPickGreyPad.png; sourceTree = "<group>"; };
+		421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveColorsGreyPad.png; sourceTree = "<group>"; };
+		421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveSizeGreyPad.png; sourceTree = "<group>"; };
+		421AC8381918191400D37F7B /* InteractiveInfoGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveInfoGreyPad.png; sourceTree = "<group>"; };
 		4221398E1912883A001BD328 /* AssetsRepButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsRepButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsRepButton.png; sourceTree = "<group>"; };
 		4221398F1912883A001BD328 /* AssetsCompassButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsCompassButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsCompassButton.png; sourceTree = "<group>"; };
 		422139901912883A001BD328 /* AssetsFavButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsFavButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsFavButton.png; sourceTree = "<group>"; };
@@ -741,6 +749,10 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				421AC8351918191400D37F7B /* InteractiveColorPickGreyPad.png */,
+				421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */,
+				421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */,
+				421AC8381918191400D37F7B /* InteractiveInfoGreyPad.png */,
 				4262066319094E3500FE7066 /* MaskWhiteSquare.png */,
 				427CE64A18F3316900865291 /* jadeteahouselogo1.png */,
 				42AB550F18EF51310051AF9F /* LogoSelectedBG.png */,
@@ -1120,6 +1132,7 @@
 			files = (
 				426A6A1E18ED0CC300255331 /* SampleLogo3.png in Resources */,
 				42B0155518E316100068019C /* TripleFlexScraper.pdf in Resources */,
+				421AC83B1918191400D37F7B /* InteractiveSizeGreyPad.png in Resources */,
 				422139A219128F8B001BD328 /* AssetsRemFavButtons.png in Resources */,
 				426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */,
 				428085D018FD792D00389C9C /* goButton.png in Resources */,
@@ -1196,6 +1209,7 @@
 				4221399519128864001BD328 /* AssetsAddButton.png in Resources */,
 				426A6A3918EDD99200255331 /* FriendlyCharlesUse.png in Resources */,
 				42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
+				421AC8391918191400D37F7B /* InteractiveColorPickGreyPad.png in Resources */,
 				4227989C1912A60B00776844 /* AssetsDefaultButton.png in Resources */,
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				42E9AC1818FF59E2000E226D /* Friendly2Button.png in Resources */,
@@ -1237,7 +1251,9 @@
 				42849B8518EA00CD00E5B3FB /* alllogobuttons2.png in Resources */,
 				42E9AC2218FF5A6C000E226D /* Friendly3Button.png in Resources */,
 				426A6A3518EDADBA00255331 /* FreshButton.png in Resources */,
+				421AC83C1918191400D37F7B /* InteractiveInfoGreyPad.png in Resources */,
 				428085C618FC3F9100389C9C /* loginIcon2.png in Resources */,
+				421AC83A1918191400D37F7B /* InteractiveColorsGreyPad.png in Resources */,
 				42B0159918E35CF20068019C /* VideosWhite3.png in Resources */,
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
 				4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */,
