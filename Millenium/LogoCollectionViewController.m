@@ -85,11 +85,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
 	// Do any additional setup after loading the view.
-    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(315, 30, 200, 30)];
+    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(320, 30, 200, 30)];
     searchHereField.borderStyle = UITextBorderStyleRoundedRect;
     searchHereField.font = [UIFont systemFontOfSize:15];
     searchHereField.placeholder = @"search";
-   // searchHereField.contentMode = enabled;
     searchHereField.autocorrectionType = UITextAutocorrectionTypeNo;
     searchHereField.keyboardType = UIKeyboardTypeDefault;
     searchHereField.returnKeyType = UIReturnKeyDone;
@@ -100,19 +99,80 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
    
     
     
+    UIButton *favHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [favHereButton addTarget:self
+                         action:@selector(goFav:)
+               forControlEvents:UIControlEventTouchDown];
+    
+    
+    UIImage*favHereImage = [UIImage imageNamed:@"AssetsFavButton.png"];
+    [favHereButton setBackgroundImage:favHereImage forState:UIControlStateNormal];
+    //[favHereButton setImage:favHereImage forState:UIControlStateSelected];
+    favHereButton.frame = CGRectMake(45.0, 33.0, 50.0, 50.0);
+    [self.view addSubview:favHereButton];
+    
+    
+    UIButton *repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [repHereButton addTarget:self
+                      action:@selector(goRep:)
+            forControlEvents:UIControlEventTouchDown];
+    
+    
+    UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
+    [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
+    repHereButton.frame = CGRectMake(113.0, 33.0, 45.0, 45.0);
+    [self.view addSubview:repHereButton];
+    
+    
+    UIButton *nearHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [nearHereButton addTarget:self
+                      action:@selector(goNearMe:)
+            forControlEvents:UIControlEventTouchDown];
+    
+    
+    UIImage*nearHereImage = [UIImage imageNamed:@"AssetsCompassButton.png"];
+    [nearHereButton setBackgroundImage:nearHereImage forState:UIControlStateNormal];
+    nearHereButton.frame = CGRectMake(181.0, 33.0, 50.0, 50.0);
+    [self.view addSubview:nearHereButton];
+    
+    
+    UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [searchModeButton addTarget:self
+                       action:@selector(goSearchMode:)
+             forControlEvents:UIControlEventTouchDown];
+    
+    
+    UIImage*searchModeImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
+    [searchModeButton setBackgroundImage:searchModeImage forState:UIControlStateNormal];
+    searchModeButton.frame = CGRectMake(249.0, 33.0, 50.0, 50.0);
+    [self.view addSubview:searchModeButton];
+    
+    
+    
+
+    
     UIButton *searchHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [searchHereButton addTarget:self
                action:@selector(goSearch:)
      forControlEvents:UIControlEventTouchDown];
-        
+    
     
     UIImage*searchHereImage = [UIImage imageNamed:@"AssetsDefaultButton.png"];
-
-    
-    [searchHereButton setImage:searchHereImage forState:UIControlStateNormal];
-    //[searchHereButton setImage:AssetsDefaultButton.png" forState:UIControlStateNormal];
-    searchHereButton.frame = CGRectMake(530.0, 30.0, 40.0, 40.0);
+    [searchHereButton setBackgroundImage:searchHereImage forState:UIControlStateNormal];
+    searchHereButton.frame = CGRectMake(520.0, 30.0, 40.0, 40.0);
     [self.view addSubview:searchHereButton];
+    
+    
+    UIButton *cintasHomeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [cintasHomeButton addTarget:self
+                         action:@selector(goHome:)
+               forControlEvents:UIControlEventTouchDown];
+    
+    UIImage*cintasImage = [UIImage imageNamed:@"CintasLogoBlackClear.png"];
+    [cintasHomeButton setBackgroundImage:cintasImage forState:UIControlStateNormal];
+    //[searchHereButton setImage:AssetsDefaultButton.png" forState:UIControlStateNormal];
+    cintasHomeButton.frame = CGRectMake(888.0, 36.0, 137.0, 60.0);
+    [self.view addSubview:cintasHomeButton];
     
 }
 
@@ -199,6 +259,34 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [locationManager startUpdatingLocation];*/
 }
 
+-(IBAction)goFav:(id)sender{
+    
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    //request.region = regionToSearchIn;
+    //request.region = 500;
+    request.naturalLanguageQuery = @"restaurants"; // or business name
+    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
+    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+        // do something with the results / error
+    }];
+    
+}
+
+
+-(IBAction)goRep:(id)sender{
+    
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    //request.region = regionToSearchIn;
+    //request.region = 500;
+    request.naturalLanguageQuery = @"restaurants"; // or business name
+    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
+    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+        // do something with the results / error
+    }];
+    
+}
+
+
 
 -(IBAction)goNearMe:(id)sender{
 
@@ -213,11 +301,29 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
+
+-(IBAction)goSearchMode:(id)sender{
+    
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    //request.region = regionToSearchIn;
+    //request.region = 500;
+    request.naturalLanguageQuery = @"restaurants"; // or business name
+    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
+    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+        // do something with the results / error
+    }];
+    
+}
+
+
+
 -(IBAction)goSearch:(id)sender{
     
-    
+    NSString*searchString= _searchField.text;
+    NSLog(@"searchCellString %@",searchString);
+
      NSString*searchYeahString= searchHereField.text;
-        NSLog(@"searchString %@",searchYeahString);
+     NSLog(@"searchString %@",searchYeahString);
     
      //NSString*searchString=_logoHeaderCell.searchField.text;
     //searchString= searchHereField.text;
@@ -286,13 +392,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                                 error: &error];
     
     
-    //NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
+   
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
-    //crashes here
-    //NSArray* keysAllLogosArray = [searchLogoDictionary allKeys];
-    
-    //NSLog(@"%@KEYSALLLOGOSARRAY",keysAllLogosArray);
     
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
@@ -539,7 +641,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //cell for header
     if (section == 0){
         
-        return 1;
+        return 0;
     }
         
     //{
@@ -588,9 +690,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
          [[logoHeaderCell cintasButton] addTarget:self action:@selector(goHome:) forControlEvents:UIControlEventTouchUpInside];
         
         
-       /*[[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];*/
+       //[[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
         
-        searchOutField = searchOutField;
+        //searchOutField = searchOutField;
         
         //searchString=logoHeaderCell.searchField.text;
         

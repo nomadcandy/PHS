@@ -917,6 +917,9 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <size key="customSize" width="970" height="132"/>
+                                <connections>
+                                    <outlet property="searchField" destination="hZk-BY-ZGY" id="zM5-pV-ao3"/>
+                                </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" restorationIdentifier="logoCollectionViewCellID" reuseIdentifier="logoCollectionViewCellID" id="DvN-Pj-GIB" customClass="LogoCell">
                                 <rect key="frame" x="27" y="137" width="970" height="543"/>

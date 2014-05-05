@@ -82,6 +82,7 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *searchOutField;
 @property (nonatomic, retain) UITextField *searchHereField;
+@property (nonatomic, retain) UITextField *searchField;
 
 @property (nonatomic, copy) NSArray *searchImagesArray;
 @property (nonatomic, copy) NSArray *nearMeImagesArray;
@@ -121,6 +122,8 @@
 
 @property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
 
+
+-(IBAction)goFav:(id)sender;
 -(IBAction)goInteractive:(id)sender;
 -(IBAction)goHome:(UIButton *)sender;
 -(IBAction)addFavorite:(id)sender;
