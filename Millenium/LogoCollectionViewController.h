@@ -33,14 +33,14 @@
     NSString*artworkNameAddFavString;
     NSString*urlFavString;
     
-    NSString*searchString;
+    NSString*searchHereString;
     
     NSString*artworkNameUnFavString;
     NSString*urlUnFavString;
 
     
     IBOutlet UITextField *searchOutField;
-    //IBOutlet UITextField *searchField;
+    //UITextField *searchHereField;
     LogoSearch*logoSearch;
     //UIButton* button;
     
@@ -81,7 +81,7 @@
 @property (nonatomic, assign) int jsonLogoCount;
 
 @property (nonatomic, retain) IBOutlet UITextField *searchOutField;
-//@property (nonatomic, retain) IBOutlet UITextField *searchField;
+@property (nonatomic, retain) UITextField *searchHereField;
 
 @property (nonatomic, copy) NSArray *searchImagesArray;
 @property (nonatomic, copy) NSArray *nearMeImagesArray;
@@ -103,7 +103,7 @@
 @property (nonatomic, copy) NSDictionary *artworkNameDictionary;
 
 @property (nonatomic, copy) NSString*logoUseString;
-@property (nonatomic, copy) NSString*searchString;
+@property (nonatomic, copy) NSString*searchHereString;
 
 //@property (nonatomic, strong) UIButton*button;
 
@@ -125,7 +125,7 @@
 -(IBAction)goHome:(UIButton *)sender;
 -(IBAction)addFavorite:(id)sender;
 -(IBAction)removeFavorite:(id)sender;
--(BOOL)textFieldShouldReturn:(UITextField*)textField;
+-(BOOL)textFieldShouldReturn:(UITextField*)searchField;
 
 
 

@@ -803,9 +803,6 @@
                                             </accessibility>
                                             <attributedString key="attributedText"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
-                                            <connections>
-                                                <action selector="goSearch:" destination="l8u-Ww-K06" eventType="valueChanged" id="PmK-Nh-Ukq"/>
-                                            </connections>
                                         </textField>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcs-vW-CVy">
                                             <rect key="frame" x="-32" y="-327" width="1024" height="768"/>
@@ -920,10 +917,6 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <size key="customSize" width="970" height="132"/>
-                                <connections>
-                                    <outlet property="searchButton" destination="toq-ir-GBB" id="3in-2A-8hR"/>
-                                    <outlet property="searchField" destination="hZk-BY-ZGY" id="gEl-Vi-k6A"/>
-                                </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" restorationIdentifier="logoCollectionViewCellID" reuseIdentifier="logoCollectionViewCellID" id="DvN-Pj-GIB" customClass="LogoCell">
                                 <rect key="frame" x="27" y="137" width="970" height="543"/>

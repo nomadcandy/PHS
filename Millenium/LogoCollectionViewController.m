@@ -16,7 +16,8 @@
 @implementation LogoCollectionViewController
 
 
-//@synthesize searchString;
+@synthesize searchHereString;
+@synthesize searchHereField;
 @synthesize searchOutField;
 @synthesize artworkNameAddFavString;
 @synthesize urlFavString;
@@ -84,18 +85,28 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
 	// Do any additional setup after loading the view.
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 30, 300, 40)];
-    textField.borderStyle = UITextBorderStyleRoundedRect;
-    textField.font = [UIFont systemFontOfSize:15];
-    textField.placeholder = @"enter text";
-    textField.autocorrectionType = UITextAutocorrectionTypeNo;
-    textField.keyboardType = UIKeyboardTypeDefault;
-    textField.returnKeyType = UIReturnKeyDone;
-    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    textField.delegate = self;
-    [self.view addSubview:textField];
-    //[textField release];
+    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(200, 30, 300, 40)];
+    searchHereField.borderStyle = UITextBorderStyleRoundedRect;
+    searchHereField.font = [UIFont systemFontOfSize:15];
+    searchHereField.placeholder = @"search";
+   // searchHereField.contentMode = enabled;
+    searchHereField.autocorrectionType = UITextAutocorrectionTypeNo;
+    searchHereField.keyboardType = UIKeyboardTypeDefault;
+    searchHereField.returnKeyType = UIReturnKeyDone;
+    //searchHereField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    searchHereField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    searchHereField.delegate = self;
+    [self.view addSubview:searchHereField];
+   
+    
+    
+    UIButton *searchHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [searchHereButton addTarget:self
+               action:@selector(goSearch:)
+     forControlEvents:UIControlEventTouchDown];
+    [searchHereButton setTitle:@"Button x" forState:UIControlStateNormal];
+    searchHereButton.frame = CGRectMake(780.0, 30.0, 40.0, 40.0);
+    [self.view addSubview:searchHereButton];
     
 }
 
@@ -103,7 +114,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     [super viewDidAppear:animated];
     
-    
+    searchHereField.text = @"killme";
     
    // NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distance" ascending:YES];
    // NSArray *sortDescriptorsArray = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
@@ -199,13 +210,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goSearch:(id)sender{
     
     
-    
-    
+     NSString*searchYeahString= searchHereField.text;
+        NSLog(@"searchString %@",searchYeahString);
     
      //NSString*searchString=_logoHeaderCell.searchField.text;
-    searchString= searchOutField.text;
+    //searchString= searchHereField.text;
     //NSString*searchString= _searchField.text;
-    NSLog(@"searchString %@",searchString);
+    //NSLog(@"searchString %@",searchString);
     //NSString*passwordString= passwordField.text;
     
     //loginView.hidden =YES;
@@ -246,7 +257,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match", searchYeahString];
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -571,11 +582,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
          [[logoHeaderCell cintasButton] addTarget:self action:@selector(goHome:) forControlEvents:UIControlEventTouchUpInside];
         
         
-       [[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+       /*[[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];*/
         
         searchOutField = searchOutField;
         
-        searchString=logoHeaderCell.searchField.text;
+        //searchString=logoHeaderCell.searchField.text;
         
         //logoHeaderCell.searchField.text = @"palm"; // or other data from your model*/
         
@@ -655,7 +666,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         LogoHeaderCell *logoHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoHeaderCellID forIndexPath:indexPath];
         
         
-       [[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+       //[[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
         
         //[[logoHeaderCell searchButton] addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -945,11 +956,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [(UICollectionViewCell*)[searchField superview] superview];
 }*/
 
-/*-(void)textFieldDidChange:(UITextField *)textField{
+-(void)textFieldDidChange:(UITextField *)searchHereField{
     
-    NSLog(@"searchField %@",searchstring);
-    searchString=_searchField.text;
-}*/
+   
+    searchHereString=searchHereField.text;
+     NSLog(@"searchHereField %@",searchHereString);
+}
 
 //- (void)didSetSearchString:(InteractiveViewController *)controller{
     
