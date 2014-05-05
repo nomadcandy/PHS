@@ -137,6 +137,12 @@
 		42849B9218EA02BE00E5B3FB /* whitepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9018EA02BE00E5B3FB /* whitepad.png */; };
 		42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */; };
 		42849B9518EA04AB00E5B3FB /* logothumbnailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */; };
+		42A24BF519181FB800568305 /* Interactive2by2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BEF19181FB800568305 /* Interactive2by2Button.png */; };
+		42A24BF619181FB800568305 /* Interactive3by5.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF019181FB800568305 /* Interactive3by5.png */; };
+		42A24BF719181FB800568305 /* Interactive4by6Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF119181FB800568305 /* Interactive4by6Button.png */; };
+		42A24BF819181FB800568305 /* Interactive3by10Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF219181FB800568305 /* Interactive3by10Button.png */; };
+		42A24BF919181FB800568305 /* InteractivePortraitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF319181FB800568305 /* InteractivePortraitButton.png */; };
+		42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */; };
 		42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */; };
 		42AB550D18EF44C50051AF9F /* Charles3Animation.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */; };
 		42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550F18EF51310051AF9F /* LogoSelectedBG.png */; };
@@ -403,6 +409,12 @@
 		42849B8D18EA027800E5B3FB /* gradietebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradietebg.png; sourceTree = "<group>"; };
 		42849B9018EA02BE00E5B3FB /* whitepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitepad.png; sourceTree = "<group>"; };
 		42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logothumbnailbg.png; sourceTree = "<group>"; };
+		42A24BEF19181FB800568305 /* Interactive2by2Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Interactive2by2Button.png; sourceTree = "<group>"; };
+		42A24BF019181FB800568305 /* Interactive3by5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Interactive3by5.png; sourceTree = "<group>"; };
+		42A24BF119181FB800568305 /* Interactive4by6Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Interactive4by6Button.png; sourceTree = "<group>"; };
+		42A24BF219181FB800568305 /* Interactive3by10Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Interactive3by10Button.png; sourceTree = "<group>"; };
+		42A24BF319181FB800568305 /* InteractivePortraitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractivePortraitButton.png; sourceTree = "<group>"; };
+		42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveLandscapeButton.png; sourceTree = "<group>"; };
 		42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesAnimationUse.m4v; sourceTree = "<group>"; };
 		42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Charles3Animation.m4v; sourceTree = "<group>"; };
 		42AB550F18EF51310051AF9F /* LogoSelectedBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoSelectedBG.png; sourceTree = "<group>"; };
@@ -749,6 +761,12 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				42A24BEF19181FB800568305 /* Interactive2by2Button.png */,
+				42A24BF019181FB800568305 /* Interactive3by5.png */,
+				42A24BF119181FB800568305 /* Interactive4by6Button.png */,
+				42A24BF219181FB800568305 /* Interactive3by10Button.png */,
+				42A24BF319181FB800568305 /* InteractivePortraitButton.png */,
+				42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */,
 				421AC8351918191400D37F7B /* InteractiveColorPickGreyPad.png */,
 				421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */,
 				421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */,
@@ -1178,6 +1196,7 @@
 				42B0152218E303C40068019C /* MatChatter5.png in Resources */,
 				4227989A19129F1400776844 /* AssetsGreyBox1.png in Resources */,
 				4221399919128996001BD328 /* CintasLogoBlackClear.png in Resources */,
+				42A24BF619181FB800568305 /* Interactive3by5.png in Resources */,
 				4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */,
 				42E9AC0718FF5187000E226D /* MatClientFocusJade4.png in Resources */,
 				426A6A3218EDADBA00255331 /* ProffessionalButton.png in Resources */,
@@ -1186,14 +1205,17 @@
 				42E9AC1418FF59E2000E226D /* Clean2Button.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
 				428085CE18FD756200389C9C /* LoginPopOver.png in Resources */,
+				42A24BF919181FB800568305 /* InteractivePortraitButton.png in Resources */,
 				426A6A1718ED0CC300255331 /* SampleLogo10.png in Resources */,
 				42E9AC1618FF59E2000E226D /* Fresh2Button.png in Resources */,
+				42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */,
 				426A6A1618ED0CC300255331 /* SampleLogo11.png in Resources */,
 				426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */,
 				42B0156A18E317710068019C /* SpringStep.pdf in Resources */,
 				42E9AC2418FF5A6C000E226D /* Fresh3Button.png in Resources */,
 				422139911912883A001BD328 /* AssetsRepButton.png in Resources */,
 				42B0156718E3175A0068019C /* MarbleTop.pdf in Resources */,
+				42A24BF819181FB800568305 /* Interactive3by10Button.png in Resources */,
 				42B0155818E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */,
 				427CE62C18F0670700865291 /* FliersWhite.png in Resources */,
@@ -1212,6 +1234,7 @@
 				421AC8391918191400D37F7B /* InteractiveColorPickGreyPad.png in Resources */,
 				4227989C1912A60B00776844 /* AssetsDefaultButton.png in Resources */,
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
+				42A24BF719181FB800568305 /* Interactive4by6Button.png in Resources */,
 				42E9AC1818FF59E2000E226D /* Friendly2Button.png in Resources */,
 				426A6A1418ED0CC300255331 /* SampleLogo13.png in Resources */,
 				426A6A1C18ED0CC300255331 /* SampleLogo5.png in Resources */,
@@ -1265,6 +1288,7 @@
 				422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */,
 				426A6A2018ED0CC300255331 /* SampleLogo1.png in Resources */,
 				42B0150A18DFBD170068019C /* RectangleButton.png in Resources */,
+				42A24BF519181FB800568305 /* Interactive2by2Button.png in Resources */,
 				42B0154F18E315F20068019C /* ParquetWiperScraper.pdf in Resources */,
 				42B0153118E3153B0068019C /* MotifMat.pdf in Resources */,
 			);
