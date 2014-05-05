@@ -114,7 +114,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     [super viewDidAppear:animated];
     
-    searchHereField.text = @"killme";
+    //searchHereField.text = @"killme";
     
    // NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distance" ascending:YES];
    // NSArray *sortDescriptorsArray = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
