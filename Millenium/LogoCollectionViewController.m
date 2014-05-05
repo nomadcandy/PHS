@@ -85,7 +85,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
 	// Do any additional setup after loading the view.
-    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(200, 30, 300, 40)];
+    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(315, 30, 200, 30)];
     searchHereField.borderStyle = UITextBorderStyleRoundedRect;
     searchHereField.font = [UIFont systemFontOfSize:15];
     searchHereField.placeholder = @"search";
@@ -104,8 +104,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [searchHereButton addTarget:self
                action:@selector(goSearch:)
      forControlEvents:UIControlEventTouchDown];
-    [searchHereButton setTitle:@"Button x" forState:UIControlStateNormal];
-    searchHereButton.frame = CGRectMake(780.0, 30.0, 40.0, 40.0);
+        
+    
+    UIImage*searchHereImage = [UIImage imageNamed:@"AssetsDefaultButton.png"];
+
+    
+    [searchHereButton setImage:searchHereImage forState:UIControlStateNormal];
+    //[searchHereButton setImage:AssetsDefaultButton.png" forState:UIControlStateNormal];
+    searchHereButton.frame = CGRectMake(530.0, 30.0, 40.0, 40.0);
     [self.view addSubview:searchHereButton];
     
 }
