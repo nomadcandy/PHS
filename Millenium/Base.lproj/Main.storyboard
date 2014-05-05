@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveGreyMat.png" translatesAutoresizingMaskIntoConstraints="NO" id="B61-WR-Lik">
-                                <rect key="frame" x="423" y="127" width="577" height="460"/>
+                                <rect key="frame" x="423" y="127" width="577" height="434"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -104,11 +104,11 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveInfoGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nxm-he-Fym">
-                                <rect key="frame" x="20" y="112" width="395" height="128"/>
+                                <rect key="frame" x="13" y="112" width="402" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveSizeGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="r5v-yH-qb2">
-                                <rect key="frame" x="20" y="269" width="395" height="154"/>
+                                <rect key="frame" x="13" y="269" width="402" height="154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveColorPickGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="ERh-N6-aGz">
@@ -116,7 +116,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveColorPickGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="zyq-IV-gch">
-                                <rect key="frame" x="20" y="607" width="395" height="128"/>
+                                <rect key="frame" x="13" y="607" width="402" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-fi-6vE">
@@ -403,10 +403,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="log-b2-7Uv" customClass="SignView">
-                                <rect key="frame" x="423" y="595" width="577" height="101"/>
+                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="log-b2-7Uv" customClass="SignView">
+                                <rect key="frame" x="423" y="620" width="577" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvk-db-kfJ">
                                 <rect key="frame" x="502" y="699" width="193" height="49"/>
@@ -434,6 +435,23 @@
                                     <action selector="goAcquireSketches:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="rZc-7y-DpG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRW-Mr-nQW">
+                                <rect key="frame" x="909" y="563" width="81" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
+                                <size key="titleShadowOffset" width="2" height="1"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goAcquireSketches:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="uRO-jo-BWW"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveSignHere.png" translatesAutoresizingMaskIntoConstraints="NO" id="IT4-Tx-6eN">
+                                <rect key="frame" x="416" y="612" width="595" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -2453,6 +2471,7 @@
         <image name="InteractiveColorPickGreyPad.png" width="694" height="342"/>
         <image name="InteractiveGreyMat.png" width="1170" height="918"/>
         <image name="InteractiveInfoGreyPad.png" width="694" height="276"/>
+        <image name="InteractiveSignHere.png" width="1173" height="158"/>
         <image name="InteractiveSizeGreyPad.png" width="694" height="350"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="LogoPadGrey" width="2048" height="1536"/>
