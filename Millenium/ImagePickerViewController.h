@@ -82,6 +82,8 @@
 - (IBAction)cropScreenShot:(UIButton*)sender;
 - (IBAction)maskImage:(id)sender ;
 
+- (IBAction)screenShotRect:(UIButton *)sender;
+
 @property (nonatomic, retain) IBOutlet UIView *canvas;
 @property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
 

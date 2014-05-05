@@ -470,10 +470,52 @@
     //NSLog(@"chosenImage %@",selectedImage);
     
     
+    
+    
+    
+    
+    
+    UIImage*croppedLogoImage = chosenImageView.image;
+    //NSLog(@"chosenImage %@",selectedImage);
+    
+    
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
     
-    [UIImagePNGRepresentation(chosenImageView.image) writeToFile:imagePath atomically:YES];
+    [UIImagePNGRepresentation(croppedLogoImage) writeToFile:imagePath atomically:YES];
+    
+    
+    //trans here
+    CGRect screenRect = CGRectMake(680.0f, 413.0f, 404.0f, 504.0f);
+    
+    UIGraphicsBeginImageContext(screenRect.size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx, screenRect);
+
+    
+    CGContextBeginTransparencyLayer (ctx, NULL);// 4
+    // Your drawing code here// 5
+   /* CGContextSetRGBFillColor (ctx, 0, 1, 0, 1);
+    CGContextFillRect (ctx, CGRectMake (wd/3+ 50,ht/2 ,wd/4,ht/4));*/
+    CGContextEndTransparencyLayer (ctx);
+    
+    
+    
+    //
+    
+    
+    
+    
+    
+    
+   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(chosenImageView.image) writeToFile:imagePath atomically:YES];*/
+    
+    
 }
 
 
@@ -579,6 +621,142 @@
     
 
 }*/
+
+
+- (IBAction)screenShotRect:(UIButton *)sender{
+    
+    
+    
+    //begin capture entire webview
+    //CGRect screenRect = self->overlayWebView.frame;
+    
+    CGRect screenRect = CGRectMake(680.0f, 413.0f, 404.0f, 504.0f);
+    
+    UIGraphicsBeginImageContext(screenRect.size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx, screenRect);
+    
+    //[googleWebView.layer renderInContext:ctx];
+    
+    //[chosenImageView.layer renderInContext:ctx];
+    [logoPicButton.layer renderInContext:ctx];
+    
+    UIImage *rectImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    
+    
+    //chosenImageView.image = newImage;
+    //chosenImage = newImage;
+    
+    NSLog(@"chosenImage %@",selectedImage);
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(rectImage) writeToFile:imagePath atomically:YES];
+    
+   // [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
+    // [profilePictureHandle writeData:UIImagePNGRepresentation(croppedImage)];
+    
+    
+    
+    
+}
+
+
+- (IBAction)screenShotSquare:(UIButton *)sender{
+    
+    
+    
+    //begin capture entire webview
+    //CGRect screenRect = self->overlayWebView.frame;
+    
+    CGRect screenRect = CGRectMake(680.0f, 413.0f, 504.0f, 504.0f);
+    
+    UIGraphicsBeginImageContext(screenRect.size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx, screenRect);
+    
+    [googleWebView.layer renderInContext:ctx];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    
+    
+    chosenImageView.image = newImage;
+    //chosenImage = newImage;
+    
+    NSLog(@"chosenImage %@",selectedImage);
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(newImage) writeToFile:imagePath atomically:YES];
+    
+    [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
+    // [profilePictureHandle writeData:UIImagePNGRepresentation(croppedImage)];
+    
+    
+    
+    
+}
+
+- (IBAction)screenShotCircle:(UIButton *)sender{
+    
+   
+    
+    //begin capture entire webview
+    //CGRect screenRect = self->overlayWebView.frame;
+    
+    //CGRect ellRect = CGRectMake(680.0f, 413.0f, 504.0f, 504.0f);
+    
+    CGRect ellipseRect = CGRectMake(60.0f, 150.0f, 200.0f, 200.0f);
+    //CGContextFillEllipseInRect(ctx, ellipseRect);
+    
+    UIGraphicsBeginImageContext(ellipseRect.size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx, ellipseRect);
+    
+    
+    
+    
+    [googleWebView.layer renderInContext:ctx];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    
+    
+    chosenImageView.image = newImage;
+    //chosenImage = newImage;
+    
+    NSLog(@"chosenImage %@",selectedImage);
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(newImage) writeToFile:imagePath atomically:YES];
+    
+    [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
+    // [profilePictureHandle writeData:UIImagePNGRepresentation(croppedImage)];
+    
+    
+    
+    
+}
+
+
 
 
 
@@ -884,7 +1062,7 @@
     
     //NSLog(@"chosenImage %@",masked);
     
-    UIImage*croppedImage=chosenImageView.image;
+    //UIImage*croppedImage=chosenImageView.image;
     
     /*NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];*/
     //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];

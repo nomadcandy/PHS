@@ -98,6 +98,15 @@
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
+
+@property (nonatomic, retain) NSMutableArray *matNameArray;
+@property (nonatomic, copy) NSMutableArray *matSizeArray;
+@property (nonatomic, copy) NSMutableArray *matFormatArray;
+@property (nonatomic, copy) NSMutableArray *matFullImageArray;
+@property (nonatomic, copy) NSMutableArray *matIconArray;
+@property (nonatomic, copy) NSMutableArray *matIDArray;
+@property (nonatomic, copy) NSMutableArray *matInfoArray;
+
 @property (nonatomic, strong) NSMutableArray *favoritesArray;
 @property (nonatomic, strong) NSMutableArray *favoritesRemoveArray;
 
