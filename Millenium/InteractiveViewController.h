@@ -98,6 +98,8 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carouselColor;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
 
+-(IBAction)goAcquireSketches:(id)sender;
+-(IBAction)goSketches:(id)sender;
 - (IBAction)goSignMat:(id)sender;
 - (IBAction)backButton:(id)sender;
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;

@@ -936,6 +936,27 @@ else
 }*/
 
 
+-(IBAction)goAcquireSketches:(id)sender{
+    
+    
+    UIStoryboard *storyboardLogo = self.storyboard;
+    ImagePickerViewController *ImagePickerVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"ImagePickerBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:ImagePickerVC animated:YES completion:nil];
+    
+    
+    
+}
+-(IBAction)goSketches:(id)sender{
+
+
+    UIStoryboard *storyboardLogo = self.storyboard;
+    LogoCollectionViewController *LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+    [self presentViewController:LogoCVC animated:YES completion:nil];
+    
+}
+
 -(IBAction)goHome:(id)sender{
     
     

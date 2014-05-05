@@ -143,6 +143,8 @@
 		42A24BF819181FB800568305 /* Interactive3by10Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF219181FB800568305 /* Interactive3by10Button.png */; };
 		42A24BF919181FB800568305 /* InteractivePortraitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF319181FB800568305 /* InteractivePortraitButton.png */; };
 		42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */; };
+		42A24BFC19183F3000568305 /* InteractiveSignHere.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BFB19183F3000568305 /* InteractiveSignHere.png */; };
+		42A24BFE191843FF00568305 /* InteractiveGreyMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BFD191843FF00568305 /* InteractiveGreyMat.png */; };
 		42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */; };
 		42AB550D18EF44C50051AF9F /* Charles3Animation.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */; };
 		42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550F18EF51310051AF9F /* LogoSelectedBG.png */; };
@@ -415,6 +417,8 @@
 		42A24BF219181FB800568305 /* Interactive3by10Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Interactive3by10Button.png; sourceTree = "<group>"; };
 		42A24BF319181FB800568305 /* InteractivePortraitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractivePortraitButton.png; sourceTree = "<group>"; };
 		42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveLandscapeButton.png; sourceTree = "<group>"; };
+		42A24BFB19183F3000568305 /* InteractiveSignHere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveSignHere.png; sourceTree = "<group>"; };
+		42A24BFD191843FF00568305 /* InteractiveGreyMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveGreyMat.png; sourceTree = "<group>"; };
 		42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesAnimationUse.m4v; sourceTree = "<group>"; };
 		42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Charles3Animation.m4v; sourceTree = "<group>"; };
 		42AB550F18EF51310051AF9F /* LogoSelectedBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoSelectedBG.png; sourceTree = "<group>"; };
@@ -761,6 +765,8 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				42A24BFD191843FF00568305 /* InteractiveGreyMat.png */,
+				42A24BFB19183F3000568305 /* InteractiveSignHere.png */,
 				42A24BEF19181FB800568305 /* Interactive2by2Button.png */,
 				42A24BF019181FB800568305 /* Interactive3by5.png */,
 				42A24BF119181FB800568305 /* Interactive4by6Button.png */,
@@ -1204,6 +1210,7 @@
 				422139931912883A001BD328 /* AssetsFavButton.png in Resources */,
 				42E9AC1418FF59E2000E226D /* Clean2Button.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
+				42A24BFE191843FF00568305 /* InteractiveGreyMat.png in Resources */,
 				428085CE18FD756200389C9C /* LoginPopOver.png in Resources */,
 				42A24BF919181FB800568305 /* InteractivePortraitButton.png in Resources */,
 				426A6A1718ED0CC300255331 /* SampleLogo10.png in Resources */,
@@ -1225,6 +1232,7 @@
 				426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
 				42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */,
+				42A24BFC19183F3000568305 /* InteractiveSignHere.png in Resources */,
 				422139A519129097001BD328 /* AssetCheckButton.png in Resources */,
 				42B0156118E316580068019C /* TripleFlexFlow.pdf in Resources */,
 				42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
