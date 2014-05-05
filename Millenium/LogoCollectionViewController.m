@@ -185,7 +185,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goSearch:(id)sender{
     
      //NSString*searchString=_logoHeaderCell.searchField.text;
-    
+    searchString= _searchField.text;
     //NSString*searchString= _searchField.text;
     NSLog(@"searchString %@",searchString);
     //NSString*passwordString= passwordField.text;
