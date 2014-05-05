@@ -16,7 +16,8 @@
 @implementation LogoCollectionViewController
 
 
-@synthesize searchField;
+//@synthesize searchString;
+//@synthesize searchField;
 @synthesize artworkNameAddFavString;
 @synthesize urlFavString;
 @synthesize jsonLogoCount;
@@ -183,7 +184,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goSearch:(id)sender{
     
-    NSString*searchString= searchField.text;
+     //NSString*searchString=_logoHeaderCell.searchField.text;
+    
+    //NSString*searchString= _searchField.text;
+    NSLog(@"searchString %@",searchString);
     //NSString*passwordString= passwordField.text;
     
     //loginView.hidden =YES;
@@ -303,6 +307,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
         
+        [self.collectionView reloadData];
         
         
     }];
@@ -548,6 +553,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
          [[logoHeaderCell cintasButton] addTarget:self action:@selector(goHome:) forControlEvents:UIControlEventTouchUpInside];
         
         
+       /* [[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+        
+        searchString=logoHeaderCell.searchField.text;
+        
+        logoHeaderCell.searchField.text = @"palm"; // or other data from your model*/
         
             reusableview = logoHeaderCell;
             
@@ -624,6 +634,24 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     {
         LogoHeaderCell *logoHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoHeaderCellID forIndexPath:indexPath];
         
+        
+        [[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
+        
+        NSString*searchString=logoHeaderCell.searchField.text;
+        
+        //logoHeaderCell.searchField.text = @"palm"; // or other data from your model
+        
+        if (logoHeaderCell.searchButton)
+            
+        {
+            
+            searchString=logoHeaderCell.searchField.text;
+            
+            
+            
+            
+        }
+
         
         
         return logoHeaderCell;
@@ -885,12 +913,31 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     return context;
 }
 
-- (void)didSetLogoUseString:(InteractiveViewController *)controller{
+/*- (void)didSetLogoUseString:(InteractiveViewController *)controller{
     
     
      //[self dismissViewControllerAnimated:YES completion:nil];
     
-}
+}*/
+
+
+//-(void)textFieldDidChange:(UITextField *)textField{
+//- (void)didSetSearchString:(InteractiveViewController *)controller{
+    
+            //searchString=_searchField.text;
+        
+    
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        
+   // }
+
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    
+
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning

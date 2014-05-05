@@ -25,7 +25,7 @@
 
 
 
-@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate, UITextFieldDelegate>
+@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate, UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 
 {
     
@@ -33,10 +33,12 @@
     NSString*artworkNameAddFavString;
     NSString*urlFavString;
     
+    NSString*searchString;
+    
     NSString*artworkNameUnFavString;
     NSString*urlUnFavString;
 
-    IBOutlet UITextField *searchField;
+    //IBOutlet UITextField *searchField;
     LogoSearch*logoSearch;
     //UIButton* button;
     
@@ -59,6 +61,7 @@
     //__unsafe_unretained id <StringPickerProtocol> _delegate;
     //__unsafe_unretained id <ButtonPickerDelegate> _delegate;
     __unsafe_unretained id <ButtonPickerDelegate> _delegate;
+  
     
     
 }
@@ -98,6 +101,7 @@
 @property (nonatomic, copy) NSDictionary *artworkNameDictionary;
 
 @property (nonatomic, copy) NSString*logoUseString;
+@property (nonatomic, copy) NSString*searchString;
 
 //@property (nonatomic, strong) UIButton*button;
 
@@ -119,6 +123,7 @@
 -(IBAction)goHome:(UIButton *)sender;
 -(IBAction)addFavorite:(id)sender;
 -(IBAction)removeFavorite:(id)sender;
+-(BOOL)textFieldShouldReturn:(UITextField*)textField;
 
 
 
