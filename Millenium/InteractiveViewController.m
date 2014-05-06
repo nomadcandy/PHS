@@ -47,6 +47,8 @@
 
 @synthesize titleLabel;
 
+@synthesize chosenImageView;
+
 
 //@synthesize logoUseStringHere;
 
@@ -159,6 +161,7 @@
         //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
         //[self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
         [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+        chosenImageView.image = logoImage;
         
     
     }
@@ -305,6 +308,70 @@
     
 }
 
+#pragma mark
+#pragma mark Util
+/*- (UIImage*) maskImage:(UIImage *)selectedImage withMask:(UIImage *)maskImage {
+    
+	CGImageRef imgRef = [selectedImage CGImage];
+    CGImageRef maskRef = [maskImage CGImage];
+    CGImageRef actualMask = CGImageMaskCreate(CGImageGetWidth(maskRef),
+                                              CGImageGetHeight(maskRef),
+                                              CGImageGetBitsPerComponent(maskRef),
+                                              CGImageGetBitsPerPixel(maskRef),
+                                              CGImageGetBytesPerRow(maskRef),
+                                              CGImageGetDataProvider(maskRef), NULL, false);
+    masked = CGImageCreateWithMask(imgRef, actualMask);
+    return [UIImage imageWithCGImage:masked];
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+- (IBAction)maskButtonClicked:(id)sender
+{
+    logoPicButton.BackgroundImage.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare1"]];
+    //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
+    
+    
+    [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
+    
+    UIImage*croppedLogoImage = chosenImageView.image;
+    
+    
+   
+    
+    [UIImagePNGRepresentation(croppedLogoImage) writeToFile:imagePath atomically:YES];
+   
+    
+    
+    //trans here
+    CGRect screenRect = CGRectMake(179.0f, 290.0f, 318.0f, 259.0f);
+    
+    
+    UIGraphicsBeginImageContext(logoPicButton.frame.size);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    
+    
+    CGImageRef myColorMaskedImage;
+    const CGFloat myMaskingColors[6] = {124, 255,  68, 222, 0, 165};
+    myColorMaskedImage = CGImageCreateWithMaskingColors (masked,
+                                                         myMaskingColors);
+    CGContextDrawImage (ctx, screenRect, myColorMaskedImage);
+    
+    
+    UIImage* myImage = [[UIImage alloc] initWithCGImage:myColorMaskedImage];
+    
+    
+    
+    
+}*/
 
 
 

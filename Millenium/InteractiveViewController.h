@@ -77,6 +77,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *matButton;
 @property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
 
+@property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
+
 @property (nonatomic, strong) IBOutlet UIImageView *titleBar;
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 
