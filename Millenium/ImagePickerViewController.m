@@ -127,15 +127,15 @@
 
 -(void)move:(id)sender {
     
-    CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:canvas];
+    //CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:canvas];
+    CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:chosenImageView];
     
     if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
         _firstX = [chosenImageView center].x;
         _firstY = [chosenImageView center].y;
         
         
-       // _firstX = [logoPicButton center].x;
-       // _firstY = [logoPicButton center].y;
+        
     }
     
     translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY+translatedPoint.y);
@@ -158,10 +158,10 @@
     [chosenImageView setTransform:newTransform];
     
     
-    CGAffineTransform currentTransformLogo = logoPicButton.transform;
-    CGAffineTransform newTransformLogo = CGAffineTransformScale(currentTransform, scale, scale);
+    //CGAffineTransform currentTransformLogo = logoPicButton.transform;
+    //CGAffineTransform newTransformLogo = CGAffineTransformScale(currentTransform, scale, scale);
     
-    [logoPicButton setTransform:newTransform];
+    //[logoPicButton setTransform:newTransform];
     
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
@@ -420,7 +420,7 @@
 
 - (IBAction)maskButtonClicked:(id)sender
 {
-    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare2"]];
+    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare6"]];
     //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
     
     UIImage*croppedLogoImage = chosenImageView.image;
