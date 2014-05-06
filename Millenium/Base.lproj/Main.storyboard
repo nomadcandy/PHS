@@ -411,13 +411,13 @@
                                 </state>
                             </button>
                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="log-b2-7Uv" customClass="SignView">
-                                <rect key="frame" x="423" y="620" width="577" height="71"/>
+                                <rect key="frame" x="423" y="600" width="577" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvk-db-kfJ">
-                                <rect key="frame" x="502" y="699" width="193" height="49"/>
+                                <rect key="frame" x="501" y="659" width="193" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
@@ -430,11 +430,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEW-Zo-R2b">
-                                <rect key="frame" x="730" y="699" width="241" height="49"/>
+                                <rect key="frame" x="727" y="659" width="241" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
-                                <state key="normal" title="SKETCH EDIT/ACQUIRE">
+                                <state key="normal" title="SKETCH SEARCH">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -443,7 +443,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRW-Mr-nQW">
-                                <rect key="frame" x="909" y="563" width="81" height="49"/>
+                                <rect key="frame" x="909" y="563" width="81" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
@@ -455,23 +455,6 @@
                                     <action selector="goAcquireSketches:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="uRO-jo-BWW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6d-rx-uVq">
-                                <rect key="frame" x="815" y="563" width="81" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
-                                <size key="titleShadowOffset" width="2" height="1"/>
-                                <state key="normal" title="CROP">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goAcquireSketches:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="WSY-c1-htV"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveSignHere.png" translatesAutoresizingMaskIntoConstraints="NO" id="IT4-Tx-6eN">
-                                <rect key="frame" x="416" y="612" width="595" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Brice" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gg9-EA-31R">
                                 <rect key="frame" x="123" y="111" width="276" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -500,6 +483,24 @@
                                 <rect key="frame" x="735" y="381" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SEARCH" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-D3-7DB">
+                                <rect key="frame" x="633" y="724" width="156" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-U3-mdi">
+                                <rect key="frame" x="797" y="721" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="AssetsDefaultButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goSearch:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="7jL-sf-eE0"/>
+                                    <segue destination="l8u-Ww-K06" kind="modal" identifier="SearchSegue" id="5F9-JV-UFd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -512,6 +513,8 @@
                         <outlet property="homeButton" destination="EYB-Me-8Vk" id="Fp5-Km-pWB"/>
                         <outlet property="interactiveMatView" destination="B61-WR-Lik" id="U1I-DP-m09"/>
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
+                        <outlet property="searchButton" destination="xDA-U3-mdi" id="thT-nZ-my0"/>
+                        <outlet property="searchField" destination="7fQ-D3-7DB" id="lcc-ZA-q8m"/>
                         <outlet property="titleLabel" destination="Gp3-sR-MKY" id="Dh3-pE-Jh9"/>
                     </connections>
                 </viewController>
@@ -1360,7 +1363,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2406" y="-797"/>
+            <point key="canvasLocation" x="146" y="-1688"/>
         </scene>
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -1589,8 +1592,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LogoSelectedBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-aA-fbB" userLabel="logoSelectedBG">
-                                <rect key="frame" x="20" y="160" width="318" height="259"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebPadBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="XE3-hn-LPN" userLabel="webViewOutline">
+                                <rect key="frame" x="0.0" y="92" width="1034" height="566"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebPadLil.png" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-aA-fbB" userLabel="logoSelectedBG">
+                                <rect key="frame" x="20" y="152" width="322" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="huY-jg-CM5" userLabel="logoSelected">
@@ -1608,7 +1615,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGO SELECTED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-ef-5CF">
-                                <rect key="frame" x="35" y="137" width="161" height="24"/>
+                                <rect key="frame" x="35" y="113" width="161" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1618,35 +1625,31 @@
                                 <rect key="frame" x="0.0" y="230" width="1024" height="717"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebViewBG2.png" translatesAutoresizingMaskIntoConstraints="NO" id="I8p-6N-ndX" userLabel="webViewOutline">
-                                <rect key="frame" x="329" y="159" width="615" height="504"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebPadBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="I8p-6N-ndX" userLabel="webViewOutline">
+                                <rect key="frame" x="337" y="124" width="660" height="501"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <webView contentMode="center" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39j-QV-6iW">
-                                <rect key="frame" x="369" y="207" width="532" height="387"/>
+                                <rect key="frame" x="364" y="145" width="604" height="458"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </webView>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vaf-uC-3Xu">
-                                <rect key="frame" x="369" y="207" width="532" height="386"/>
+                                <rect key="frame" x="378" y="182" width="574" height="386"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JadeTeaHouseLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-c4-dcZ">
-                                        <rect key="frame" x="0.0" y="-8" width="532" height="400"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
                                     <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RL8-fY-L5B" customClass="MaskView">
-                                        <rect key="frame" x="0.0" y="0.0" width="532" height="386"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="574" height="386"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-W9-J1e" userLabel="editImageView">
-                                                <rect key="frame" x="94" y="81" width="364" height="305"/>
+                                                <rect key="frame" x="136" y="81" width="364" height="305"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWL-lA-bdq" userLabel="editLogoButton">
-                                                <rect key="frame" x="59" y="-51" width="472" height="437"/>
+                                                <rect key="frame" x="101" y="-51" width="472" height="437"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1655,6 +1658,10 @@
                                                     <action selector="imageMoved:withEvent:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="2Je-Z9-FPZ"/>
                                                 </connections>
                                             </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JadeTeaHouseLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-c4-dcZ">
+                                                <rect key="frame" x="0.0" y="-7" width="573" height="400"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -1662,7 +1669,7 @@
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irm-1S-0qP">
-                                <rect key="frame" x="831" y="593" width="62" height="62"/>
+                                <rect key="frame" x="882" y="552" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ImagePickerFlashButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1673,7 +1680,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAX-as-L4m">
-                                <rect key="frame" x="591" y="606" width="38" height="38"/>
+                                <rect key="frame" x="69" y="660" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal">
@@ -1681,7 +1688,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olx-cr-86c">
-                                <rect key="frame" x="637" y="606" width="42" height="39"/>
+                                <rect key="frame" x="138" y="604" width="42" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal">
@@ -1692,7 +1699,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpF-zj-RQz">
-                                <rect key="frame" x="547" y="606" width="36" height="38"/>
+                                <rect key="frame" x="25" y="642" width="36" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal">
@@ -1703,7 +1710,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNt-b2-D9f">
-                                <rect key="frame" x="485" y="609" width="46" height="30"/>
+                                <rect key="frame" x="35" y="609" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <state key="normal">
@@ -1801,7 +1808,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFw-ZU-G5o">
-                                <rect key="frame" x="20" y="550" width="78" height="30"/>
+                                <rect key="frame" x="128" y="660" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="circle mask">
                                     <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1809,7 +1816,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08t-Jn-khA">
-                                <rect key="frame" x="489" y="683" width="54" height="54"/>
+                                <rect key="frame" x="522" y="652" width="54" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -1822,7 +1829,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjm-yq-xY9">
-                                <rect key="frame" x="576" y="683" width="103" height="54"/>
+                                <rect key="frame" x="597" y="652" width="103" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -1835,7 +1842,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEo-ei-o5J">
-                                <rect key="frame" x="706" y="683" width="103" height="54"/>
+                                <rect key="frame" x="713" y="652" width="103" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -1848,7 +1855,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ife-dv-p3w">
-                                <rect key="frame" x="338" y="136" width="54" height="26"/>
+                                <rect key="frame" x="359" y="111" width="54" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="WEB">
@@ -1860,7 +1867,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBp-5G-n9D">
-                                <rect key="frame" x="956" y="86" width="48" height="33"/>
+                                <rect key="frame" x="567" y="0.0" width="48" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Trim">
@@ -1872,7 +1879,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2N-la-p5X">
-                                <rect key="frame" x="958" y="119" width="46" height="33"/>
+                                <rect key="frame" x="569" y="22" width="46" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Crop">
@@ -1881,6 +1888,23 @@
                                 </state>
                                 <connections>
                                     <action selector="cropScreenShot:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="zOW-d2-RoR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SEARCH" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ksh-rg-ieo">
+                                <rect key="frame" x="567" y="730" width="171" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhu-xd-yI0">
+                                <rect key="frame" x="746" y="727" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="AssetsDefaultButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goSearch:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="UZP-mc-8WR"/>
+                                    <segue destination="l8u-Ww-K06" kind="modal" identifier="SearchSegue" id="qwZ-va-rdB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1898,6 +1922,7 @@
                         <outlet property="maskSquareImageView" destination="zrz-ou-XL2" id="iNI-0v-Jg5"/>
                         <outlet property="overlay1WebView" destination="Vaf-uC-3Xu" id="rnY-WQ-TGQ"/>
                         <outlet property="overlayWebView" destination="RL8-fY-L5B" id="EcM-ee-vWf"/>
+                        <outlet property="searchField" destination="ksh-rg-ieo" id="eSq-Mi-iYW"/>
                         <segue destination="EOd-lr-Xtf" kind="modal" identifier="imagePickedSegue" id="WHu-6x-aPj"/>
                     </connections>
                 </viewController>
@@ -2560,7 +2585,6 @@
         <image name="InteractiveColorPickGreyPad.png" width="694" height="342"/>
         <image name="InteractiveGreyMat.png" width="1170" height="918"/>
         <image name="InteractiveInfoGreyPad.png" width="694" height="276"/>
-        <image name="InteractiveSignHere.png" width="1173" height="158"/>
         <image name="InteractiveSizeGreyPad.png" width="694" height="350"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="LogoPadGrey" width="2048" height="1536"/>
@@ -2569,7 +2593,8 @@
         <image name="MatClientFocusJade4.png" width="2078" height="1536"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="VideosWhite3.png" width="230" height="91"/>
-        <image name="WebViewBG2.png" width="557" height="395"/>
+        <image name="WebPadBig.png" width="1262" height="982"/>
+        <image name="WebPadLil.png" width="776" height="542"/>
         <image name="envelope.png" width="795" height="462"/>
         <image name="go1Button.png" width="74" height="71"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
@@ -2583,7 +2608,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aYA-g1-hsh"/>
+        <segue reference="qwZ-va-rdB"/>
         <segue reference="WHu-6x-aPj"/>
+        <segue reference="c2D-ne-Y5B"/>
     </inferredMetricsTieBreakers>
 </document>

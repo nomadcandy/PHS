@@ -359,12 +359,6 @@
     NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
-    //crashes here
-    //NSArray* keysAllLogosArray = [searchLogoDictionary allKeys];
-    
-    //NSLog(@"%@KEYSALLLOGOSARRAY",keysAllLogosArray);
-    
-    
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
         NSLog(@"%@", object);

@@ -21,6 +21,8 @@
 		421AC83A1918191400D37F7B /* InteractiveColorsGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */; };
 		421AC83B1918191400D37F7B /* InteractiveSizeGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */; };
 		421AC83C1918191400D37F7B /* InteractiveInfoGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8381918191400D37F7B /* InteractiveInfoGreyPad.png */; };
+		421EE34F1919788F008A5CAB /* WebPadBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 421EE34D1919788F008A5CAB /* WebPadBig.png */; };
+		421EE3501919788F008A5CAB /* WebPadLil.png in Resources */ = {isa = PBXBuildFile; fileRef = 421EE34E1919788F008A5CAB /* WebPadLil.png */; };
 		422139911912883A001BD328 /* AssetsRepButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221398E1912883A001BD328 /* AssetsRepButton.png */; };
 		422139921912883A001BD328 /* AssetsCompassButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4221398F1912883A001BD328 /* AssetsCompassButton.png */; };
 		422139931912883A001BD328 /* AssetsFavButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 422139901912883A001BD328 /* AssetsFavButton.png */; };
@@ -323,6 +325,8 @@
 		421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveColorsGreyPad.png; sourceTree = "<group>"; };
 		421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveSizeGreyPad.png; sourceTree = "<group>"; };
 		421AC8381918191400D37F7B /* InteractiveInfoGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveInfoGreyPad.png; sourceTree = "<group>"; };
+		421EE34D1919788F008A5CAB /* WebPadBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebPadBig.png; sourceTree = "<group>"; };
+		421EE34E1919788F008A5CAB /* WebPadLil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebPadLil.png; sourceTree = "<group>"; };
 		4221398E1912883A001BD328 /* AssetsRepButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsRepButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsRepButton.png; sourceTree = "<group>"; };
 		4221398F1912883A001BD328 /* AssetsCompassButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsCompassButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsCompassButton.png; sourceTree = "<group>"; };
 		422139901912883A001BD328 /* AssetsFavButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AssetsFavButton.png; path = ../../../Dropbox/Active/MilleniumMats/CreativeFinal/AssetsFavButton.png; sourceTree = "<group>"; };
@@ -930,6 +934,8 @@
 		42DEAF2C19192D6E0087E71D /* ImagesImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				421EE34D1919788F008A5CAB /* WebPadBig.png */,
+				421EE34E1919788F008A5CAB /* WebPadLil.png */,
 				420BEFA719195991003DCEB0 /* ImagePickerFlashButton.png */,
 				420BEFA319195613003DCEB0 /* ImagePickerMaskButton.png */,
 				420BEFA419195613003DCEB0 /* ImagePickerCropButton.png */,
@@ -1273,6 +1279,7 @@
 				42E9AC2018FF5A6C000E226D /* pro3button.png in Resources */,
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */,
+				421EE34F1919788F008A5CAB /* WebPadBig.png in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
 				42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */,
 				42A24BFC19183F3000568305 /* InteractiveSignHere.png in Resources */,
@@ -1332,6 +1339,7 @@
 				421AC83C1918191400D37F7B /* InteractiveInfoGreyPad.png in Resources */,
 				428085C618FC3F9100389C9C /* loginIcon2.png in Resources */,
 				421AC83A1918191400D37F7B /* InteractiveColorsGreyPad.png in Resources */,
+				421EE3501919788F008A5CAB /* WebPadLil.png in Resources */,
 				42B0159918E35CF20068019C /* VideosWhite3.png in Resources */,
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
 				4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */,

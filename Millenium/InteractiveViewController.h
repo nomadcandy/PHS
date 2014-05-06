@@ -44,6 +44,9 @@
     MyDraggableImage*MyDragRect;
     IBOutlet UIButton*logoButton;
     
+    IBOutlet UITextField *searchField;
+    IBOutlet UIButton *searchButton;
+    
     AppDelegate *appdelegate;
     UIImage *selectedImage;
     
@@ -63,6 +66,9 @@
 @property (nonatomic, weak) id <StringPickerProtocol> delegate;
 
 @property (nonatomic, weak) NSString *logoUseStringHere;
+
+@property (nonatomic, strong) IBOutlet UITextField *searchField;
+@property (nonatomic, strong) IBOutlet UIButton *searchButton;
 
 @property (nonatomic, strong) IBOutlet UITextField *sellerField;
 @property (nonatomic, strong) IBOutlet UITextField *companyField;
@@ -96,7 +102,13 @@
 @property (nonatomic, strong) IBOutlet UIButton *size3by10;
 
 
-
+@property (nonatomic, copy) NSMutableArray *artworkNameArray;
+@property (nonatomic, copy) NSMutableArray *artworkSizeArray;
+@property (nonatomic, copy) NSMutableArray *artworkFormatArray;
+@property (nonatomic, copy) NSMutableArray *artworkFullImageArray;
+@property (nonatomic, copy) NSMutableArray *artworkIconArray;
+@property (nonatomic, copy) NSMutableArray *artworkIDArray;
+@property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
 
 @property (nonatomic, strong) NSString *actionSelectedString;
@@ -112,6 +124,8 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carouselSize;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselColor;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
+
+-(IBAction)goSearch:(id)sender;
 
 -(IBAction)goAcquireSketches:(id)sender;
 -(IBAction)goSketches:(id)sender;

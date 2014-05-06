@@ -63,6 +63,10 @@
     IBOutlet UIButton*googleButton;
     IBOutlet UIButton*homeButton;
     
+    IBOutlet UITextField*searchField;
+    
+    
+    
     UIImagePickerController*picker;
     
     CGFloat _lastScale;
@@ -89,6 +93,18 @@
 - (IBAction)maskImage:(id)sender ;
 
 - (IBAction)screenShotRect:(UIButton *)sender;
+
+-(IBAction)goSearch:(id)sender;
+
+@property (nonatomic, copy) NSMutableArray *artworkNameArray;
+@property (nonatomic, copy) NSMutableArray *artworkSizeArray;
+@property (nonatomic, copy) NSMutableArray *artworkFormatArray;
+@property (nonatomic, copy) NSMutableArray *artworkFullImageArray;
+@property (nonatomic, copy) NSMutableArray *artworkIconArray;
+@property (nonatomic, copy) NSMutableArray *artworkIDArray;
+@property (nonatomic, copy) NSMutableArray *artworkInfoArray;
+
+@property (nonatomic, retain) IBOutlet UITextField *searchField;
 
 @property (nonatomic, retain) IBOutlet UIImageView *maskSquareImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *maskCircleImageView;
