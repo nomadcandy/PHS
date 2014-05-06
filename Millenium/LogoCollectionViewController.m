@@ -180,7 +180,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     UIImage*searchVariationImage = [UIImage imageNamed:@"AssetsDefaultButton.png"];
     [searchVariationButton setBackgroundImage:searchVariationImage forState:UIControlStateNormal];
-    searchVariationButton.frame = CGRectMake(550.0, 30.0, 40.0, 40.0);
+    searchVariationButton.frame = CGRectMake(570.0, 30.0, 40.0, 40.0);
     [self.view addSubview:searchVariationButton];
 
     
@@ -538,7 +538,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }*/
     //Search Mats
     
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?VariationOf=%@&Orderby=match", searchYeahString];
+    /*NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?VariationOf=%@&Orderby=match", searchYeahString];
     
     
     NSURL *urlSearchMats = [[NSURL alloc] initWithString:urlSearchMatString];
@@ -547,11 +547,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSError *errorMats = nil;
     NSData *dataMats = [NSData dataWithContentsOfURL:urlSearchMats];
     
-    //parse Dictionary from web
-    /* NSDictionary *searchLogoDictionary = [NSJSONSerialization
-     JSONObjectWithData:data
-     options:NSJSONReadingAllowFragments
-     error: &error];*/
     
     
     //parse Array from web
@@ -591,7 +586,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         
-        matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+        /*matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
         NSLog(@"artworkSizeArray %@",matSizeArray);
         
         
@@ -613,16 +608,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matIDArray = [searchLogoArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
         
-        [self.collectionView reloadData];
+        [self.collectionView reloadData];*/
         
         
-    }];
+  /*  }];
     
     //declare variable and return count of images returned
     int jsonMatCount;
     jsonMatCount = matNameArray.count;
     
-    NSLog(@"jsonLogoCount %d",jsonMatCount);
+    NSLog(@"jsonLogoCount %d",jsonMatCount);*/
 
     
     
@@ -690,13 +685,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
     
-    //parse Dictionary from web
-    /* NSDictionary *searchLogoDictionary = [NSJSONSerialization
-     JSONObjectWithData:data
-     options:NSJSONReadingAllowFragments
-     error: &error];*/
-    
-    
+        
     //parse Array from web
     NSArray *searchLogoArray = [NSJSONSerialization
                                 JSONObjectWithData:data
@@ -1088,38 +1077,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         LogoHeaderCell *logoHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoHeaderCellID forIndexPath:indexPath];
         
         
-       //[[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
-        
-        //[[logoHeaderCell searchButton] addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventTouchUpInside];
-        
-        //NSString*searchString=logoHeaderCell.searchField.text;
-        
-        //logoHeaderCell.searchField.text = @"palm"; // or other data from your model
-        
-        /*if (logoHeaderCell.searchButton)
-            
-        {
-            //[_searchField becomeFirstResponder];
-            searchString=logoHeaderCell.searchField.text;
-            logoHeaderCell.searchField.text = searchString;
-            
-            
-            
-        }*/
-
-        
         
         return logoHeaderCell;
         
         
     }
     
-    else  /* if (indexPath.section == 1)*/{
+    else  {
     
         nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
                         @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
 
-   /* if (indexPath.section == 0){*/
+  
         
         
         
@@ -1222,25 +1191,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
         }
 
-        /*if (logoCell.logoChoose1Button)
-            
-        {
-            
-            selectedIndex=[indexPath row];
-            _logoChoose1Button.tag=[indexPath row];
-            NSLog(@"addButton.tag:%ld",(long)_logoChoose1Button.tag);
-            NSLog(@"indexPathSender1:%@",indexPath);
-            NSLog(@"rowSelectedHere %i",rowSelectedHere);
-            
-            NSLog(@"indexPathSender:%ld",(long)logoCell.tag);
-            
-            UIButton*button = [logoCell logoChoose1Button];
-            button.tag = selectedIndex;
-            
-            
-            
-        }*/
-        
+               
         return logoCell;
             
             

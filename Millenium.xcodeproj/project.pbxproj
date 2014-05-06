@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420BEF9619192E04003DCEB0 /* MaskWhiteSquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */; };
 		421AC8391918191400D37F7B /* InteractiveColorPickGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8351918191400D37F7B /* InteractiveColorPickGreyPad.png */; };
 		421AC83A1918191400D37F7B /* InteractiveColorsGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */; };
 		421AC83B1918191400D37F7B /* InteractiveSizeGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */; };
@@ -299,6 +300,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare2.png; sourceTree = "<group>"; };
 		421AC8351918191400D37F7B /* InteractiveColorPickGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveColorPickGreyPad.png; sourceTree = "<group>"; };
 		421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveColorsGreyPad.png; sourceTree = "<group>"; };
 		421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveSizeGreyPad.png; sourceTree = "<group>"; };
@@ -907,6 +909,14 @@
 			name = SketchRequestViewController;
 			sourceTree = "<group>";
 		};
+		42DEAF2C19192D6E0087E71D /* ImagesImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */,
+			);
+			name = ImagesImagePicker;
+			sourceTree = "<group>";
+		};
 		42E7AC0518CE2C100036AF00 /* InteractiveViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,6 +970,7 @@
 				426A6A2318EDA3C800255331 /* MatAnimationUseSmall.m4v */,
 				426A6A2118EDA29E00255331 /* MatAnimationCleanMedium.m4v */,
 				422A692219101E5E001CAB8D /* CoreData */,
+				42DEAF2C19192D6E0087E71D /* ImagesImagePicker */,
 				422A691B19100939001CAB8D /* ImagesAssets */,
 				42FF0EEF18FC3C7B0060B036 /* ImagesNavBar */,
 				42AB550E18EF51190051AF9F /* ImagesInteractivePage */,
@@ -1199,6 +1210,7 @@
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
 				42B0157318E317B00068019C /* SoftStep.pdf in Resources */,
+				420BEF9619192E04003DCEB0 /* MaskWhiteSquare2.png in Resources */,
 				42B0152218E303C40068019C /* MatChatter5.png in Resources */,
 				4227989A19129F1400776844 /* AssetsGreyBox1.png in Resources */,
 				4221399919128996001BD328 /* CintasLogoBlackClear.png in Resources */,

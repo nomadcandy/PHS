@@ -17,6 +17,10 @@
 @synthesize selectedImage;
 @synthesize chosenImageView;
 @synthesize logoPicButton;
+@synthesize maskSquareButton;
+@synthesize maskSquareImageView;
+@synthesize maskCircleButton;
+@synthesize maskCircleImageView;
 
 
 
@@ -53,6 +57,12 @@
 	[panRecognizer setMaximumNumberOfTouches:1];
 	[panRecognizer setDelegate:self];
 	[canvas addGestureRecognizer:panRecognizer];
+    
+    UIPanGestureRecognizer *panRecognizerLogo = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)] ;
+	[panRecognizerLogo setMinimumNumberOfTouches:1];
+	[panRecognizerLogo setMaximumNumberOfTouches:1];
+	[panRecognizerLogo setDelegate:self];
+	[chosenImageView addGestureRecognizer:panRecognizerLogo];
 
     
     /*UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected:)];
@@ -71,6 +81,7 @@
     MaskView *view = [[MaskView alloc]initWithFrame:self.view.frame];
     overlayWebView.hidden = YES;
     overlay1WebView.hidden = YES;
+    maskSquareImageView.hidden = YES;
     
     
     //works to load on timer picker
@@ -409,7 +420,7 @@
 
 - (IBAction)maskButtonClicked:(id)sender
 {
-    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare1"]];
+    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare2"]];
     //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
     
     UIImage*croppedLogoImage = chosenImageView.image;
@@ -433,6 +444,11 @@
     
     
     
+}
+
+- (IBAction)maskSquareButton:(id)sender{
+    
+    maskSquareImageView.hidden= NO;
 }
 
 

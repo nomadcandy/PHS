@@ -48,6 +48,8 @@
     CGFloat*rectPoint3;
     CGFloat*rectPoint4;
     
+    IBOutlet UIImageView*maskCircleImageView;
+    IBOutlet UIImageView*maskSquareImageView;
     IBOutlet UIImageView*mask1ImageView;
     IBOutlet UIImageView*chosenImageView;
     IBOutlet UIImageView*editImageView;
@@ -85,6 +87,12 @@
 - (IBAction)maskImage:(id)sender ;
 
 - (IBAction)screenShotRect:(UIButton *)sender;
+
+@property (nonatomic, retain) IBOutlet UIImageView *maskSquareImageView;
+@property (nonatomic, strong) IBOutlet UIImageView *maskCircleImageView;
+
+@property (nonatomic, retain) IBOutlet UIButton *maskCircleButton;
+@property (nonatomic, strong) IBOutlet UIButton *maskSquareButton;
 
 @property (nonatomic, retain) IBOutlet UIView *canvas;
 @property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
