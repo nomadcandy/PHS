@@ -456,7 +456,7 @@
     
     
     //trans here
-    CGRect screenRect = CGRectMake(179.0f, 290.0f, 318.0f, 259.0f);
+    /*CGRect screenRect = CGRectMake(179.0f, 290.0f, 318.0f, 259.0f);
     
     
     UIGraphicsBeginImageContext(chosenImageView.frame.size);
@@ -471,7 +471,7 @@
     CGContextDrawImage (ctx, screenRect, myColorMaskedImage);
     
     
-    UIImage* myImage = [[UIImage alloc] initWithCGImage:myColorMaskedImage];
+    UIImage* myImage = [[UIImage alloc] initWithCGImage:myColorMaskedImage];*/
     
     
     

@@ -103,7 +103,7 @@
         
         UIImageView * imgView = [[UIImageView alloc] initWithImage:freshImage];
         [logoPicButton addSubview:imgView];
-        //[logoPicButton addSubview:freshImage];
+        
     }
 
     
@@ -128,10 +128,7 @@
     NSString *imagePath =  [directoryPath objectAtIndex:0];
     imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
     
-    //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.jpg"];
     
-    /*NSString *imagePath3 =  [directoryPath objectAtIndex:0];
-     imagePath3= [imagePath3 stringByAppendingPathComponent:@"logoImageClear.png"];*/
     
     
     
@@ -145,23 +142,22 @@
    
     if (imagePath == Nil){
         
-        //selectedImage = [UIImage imageNamed:@"jadeteahouselogo1.png"];
+        
         UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
-		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
 		[logoPicButton setImage:image forState:UIControlStateNormal];
     }
     
     else {
         
         
-		//[logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+		
         
-        [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
+        //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
         
-        //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+        [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
         //[self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
         [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
-        chosenImageView.image = logoImage;
+        
         
     
     }
