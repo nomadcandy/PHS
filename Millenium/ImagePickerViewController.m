@@ -413,7 +413,7 @@
 
 
 #pragma mark
-#pragma mark Util
+#pragma mark Mask
 - (UIImage*) maskImage:(UIImage *)selectedImage withMask:(UIImage *)maskImage {
     
 	CGImageRef imgRef = [selectedImage CGImage];
@@ -428,38 +428,9 @@
     return [UIImage imageWithCGImage:masked];
     
     
-    //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
-    
-    //NSLog(@"chosenImage %@",selectedImage);
-    
-    
-    /*NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
-    
-    [UIImagePNGRepresentation(croppedLogoImage) writeToFile:imagePath atomically:YES];*/
-    
-    
-   
-    
 }
 
 
-/*#pragma mark
-#pragma mark Util
-- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage {
-    
-	CGImageRef imgRef = [image CGImage];
-    CGImageRef maskRef = [maskImage CGImage];
-    CGImageRef actualMask = CGImageMaskCreate(CGImageGetWidth(maskRef),
-                                              CGImageGetHeight(maskRef),
-                                              CGImageGetBitsPerComponent(maskRef),
-                                              CGImageGetBitsPerPixel(maskRef),
-                                              CGImageGetBytesPerRow(maskRef),
-                                              CGImageGetDataProvider(maskRef), NULL, false);
-    CGImageRef masked = CGImageCreateWithMask(imgRef, actualMask);
-    return [UIImage imageWithCGImage:masked];
-    
-}*/
 
 
 - (IBAction)maskButtonClicked:(id)sender
@@ -469,7 +440,7 @@
     
     UIImage*croppedLogoImage = chosenImageView.image;
     
-    
+    //rewrite image to crop it correctly
     UIGraphicsBeginImageContext(croppedLogoImage.size);
     [croppedLogoImage drawAtPoint:CGPointZero];
     UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
@@ -479,21 +450,9 @@
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
     
-    //return [UIImage imageWithCGImage:myColorMaskedImage];
-    /*NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     
-    [UIImagePNGRepresentation(croppedLogoImage) writeToFile:imagePath atomically:YES];*/
     
     [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
-    //[logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
-
-    
-    //NSLog(@"chosenImage %@",selectedImage);
-    
-    //UIImage*croppedLogoImage = chosenImageView.image;
-    //NSLog(@"chosenImage %@",selectedImage);
-    //CGImageRef imageRef = [croppedLogoImage CGImage];
-    
     
     
     //trans here
@@ -539,89 +498,6 @@
 }
 
 
-/*- (IBAction)maskImage:(id)sender {
-
-    
-    
-    //CGContextAddPath(context, (__bridge CGPathRef)(aPath));
-    //CGContextClip(context);
-    
-    //CGContextAddPath(aRef, (__bridge CGPathRef)(aPath));
-    //CGContextClip(aRef);
-    
-    UIGraphicsBeginImageContext(editImageView.frame.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextRotateCTM(context,2*M_PI);
-    
-    [editImageView.layer renderInContext:context];
-    UIImage*imageSaveMask = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    //return imageSaveMask;
-    
-    NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/myMaskImage.jpg"]];
-    [UIImageJPEGRepresentation(imageSaveMask, 1.0) writeToFile:imagePath1 atomically:YES];
-    
-    
-
-
-    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    NSString *imagePath =  [directoryPath objectAtIndex:0];
-    imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.jpg"];
-
-    NSData *data = [NSData dataWithContentsOfFile:imagePath];
-    UIImage *logoImage = [UIImage imageWithData:data];
-    
-    
-   // NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    NSString *imagePath5 =  [directoryPath objectAtIndex:0];
-    imagePath5= [imagePath5 stringByAppendingPathComponent:@"Documents/myMaskImage.jpg"];
-    
-    NSData *dataMask = [NSData dataWithContentsOfFile:imagePath5];
-    UIImage *imageMask1 = [UIImage imageWithData:dataMask];
-
-
-
-
-    //add here masking
-    CGImageRef imageReference = (__bridge CGImageRef)(logoImage);
-
-    //CGImageRef imageReference = logoImage;
-    //CGImageRef maskReference = (__bridge CGImageRef)(imageMask1);
-    
-    //CGImageRef maskReference = (__bridge CGImageRef)(myClippingImage);
-    
-    CGImageRef maskReference = (__bridge CGImageRef)(imageMask1);
-
-
-    CGImageRef imageMask = CGImageMaskCreate(CGImageGetWidth(maskReference),
-                                         CGImageGetHeight(maskReference),
-                                         CGImageGetBitsPerComponent(maskReference),
-                                         CGImageGetBitsPerPixel(maskReference),
-                                         CGImageGetBytesPerRow(maskReference),
-                                         CGImageGetDataProvider(maskReference),
-                                         NULL, // Decode is null
-                                         YES // Should interpolate
-                                         );
-
-    CGImageRef maskedReference = CGImageCreateWithMask(imageReference, imageMask);
-    
-    CGImageRelease(imageMask);
-
-    UIImage *maskedImage = [UIImage imageWithCGImage:maskedReference];
-    CGImageRelease(maskedReference);
-    
-    NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/croppedImage.jpg"]];
-    [UIImageJPEGRepresentation(maskedImage, 1.0) writeToFile:imagePath2 atomically:YES];
-    
-    
-    
-    
-    chosenImageView.image = maskedImage;
-
-//return maskedImage;
-    
-
-}*/
 
 
 - (IBAction)screenShotRect:(UIButton *)sender{
