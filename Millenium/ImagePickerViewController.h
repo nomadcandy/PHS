@@ -76,6 +76,8 @@
 }
 
 
+- (IBAction)presentLogoCollectionViewController:(UIButton *)sender;
+
 - (IBAction)selectPhoto:(UIButton *)sender;
 - (IBAction)goWeb:(UIButton *)sender;
 - (IBAction)editLogo:(UIButton *)sender;

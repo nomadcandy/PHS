@@ -416,6 +416,16 @@
 }
 
 
+- (IBAction)presentLogoCollectionViewController:(UIButton *)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    LogoCollectionViewController *searchvc = [storyboard instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:searchvc animated:YES completion:nil];
+    
+    
+}
 
 
 - (IBAction)maskButtonClicked:(id)sender
