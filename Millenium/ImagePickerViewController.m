@@ -424,11 +424,11 @@
                                               CGImageGetBitsPerPixel(maskRef),
                                               CGImageGetBytesPerRow(maskRef),
                                               CGImageGetDataProvider(maskRef), NULL, false);
-    CGImageRef masked = CGImageCreateWithMask(imgRef, actualMask);
+    masked = CGImageCreateWithMask(imgRef, actualMask);
     return [UIImage imageWithCGImage:masked];
     
     
-    UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
+    //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
     
     //NSLog(@"chosenImage %@",selectedImage);
     
@@ -467,11 +467,13 @@
     chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare1"]];
     //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
     
+    UIImage*croppedLogoImage = chosenImageView.image;
+    
     //NSLog(@"chosenImage %@",selectedImage);
     
-    UIImage*croppedLogoImage = chosenImageView.image;
+    //UIImage*croppedLogoImage = chosenImageView.image;
     //NSLog(@"chosenImage %@",selectedImage);
-    CGImageRef imageRef = [croppedLogoImage CGImage];
+    //CGImageRef imageRef = [croppedLogoImage CGImage];
     
     
     
@@ -481,49 +483,28 @@
     
     UIGraphicsBeginImageContext(chosenImageView.frame.size);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    //CGRect screenRect = CGRectMake(self.chosenImageView.viewForBaselineLayout);
     
-    //UIGraphicsBeginImageContext(screenRect.size);
-    
-    //CGContextRef ctx = UIGraphicsGetCurrentContext();
-    //[[UIColor whiteColor] set];
-    
-    
-    //CGContextFillRect(ctx, screenRect);
 
     
     CGImageRef myColorMaskedImage;
-    const CGFloat myMaskingColors[1] = {0};
-    myColorMaskedImage = CGImageCreateWithMaskingColors (imageRef,
+    const CGFloat myMaskingColors[6] = {124, 255,  68, 222, 0, 165};
+    myColorMaskedImage = CGImageCreateWithMaskingColors (masked,
                                                          myMaskingColors);
     CGContextDrawImage (ctx, screenRect, myColorMaskedImage);
     
     
-    /*NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(croppedLogoImage) writeToFile:imagePath atomically:YES];*/
+    UIImage* myImage = [[UIImage alloc] initWithCGImage:myColorMaskedImage];
     
-    
-    
-    
-    CGContextBeginTransparencyLayer (ctx, NULL);// 4
-    // Your drawing code here// 5
-   /* CGContextSetRGBFillColor (ctx, 0, 1, 0, 1);
-    CGContextFillRect (ctx, CGRectMake (wd/3+ 50,ht/2 ,wd/4,ht/4));*/
-    CGContextEndTransparencyLayer (ctx);
-    
-    
-    
-    //
-    
-    
-    
-    
-    
-    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
+    [UIImagePNGRepresentation(myImage) writeToFile:imagePath atomically:YES];
     
-    [UIImagePNGRepresentation((__bridge UIImage *)(myColorMaskedImage)) writeToFile:imagePath atomically:YES];
+    //chosenImageView.image =myImage;
+    //chosenImageView.image =croppedLogoImage;
+    //logoPicButton.image =croppedLogoImage;
+    
+    [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
+    
     
     
 }

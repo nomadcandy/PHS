@@ -69,6 +69,8 @@
 	CGFloat _firstY;
     
     UIView *canvas;
+    
+    CGImageRef masked;
 }
 
 
