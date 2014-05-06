@@ -481,6 +481,7 @@
     //logoPicButton.image =croppedLogoImage;
     
     [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
+    //[logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
 
     
     //NSLog(@"chosenImage %@",selectedImage);

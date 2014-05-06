@@ -157,7 +157,8 @@
         [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
         
         //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
-        [self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
+        //[self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
+        [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
         
     
     }
