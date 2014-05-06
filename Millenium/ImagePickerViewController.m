@@ -469,6 +469,20 @@
     
     UIImage*croppedLogoImage = chosenImageView.image;
     
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImagePNGRepresentation(myImage) writeToFile:imagePath atomically:YES];
+    [UIImagePNGRepresentation(croppedLogoImage) writeToFile:imagePath atomically:YES];
+    //[UIImageJPEGRepresentation(croppedLogoImage,1.0) writeToFile:imagePath atomically:YES];
+    
+    //chosenImageView.image =myImage;
+    //chosenImageView.image =croppedLogoImage;
+    //logoPicButton.image =croppedLogoImage;
+    
+    [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
+
+    
     //NSLog(@"chosenImage %@",selectedImage);
     
     //UIImage*croppedLogoImage = chosenImageView.image;
@@ -495,15 +509,6 @@
     
     UIImage* myImage = [[UIImage alloc] initWithCGImage:myColorMaskedImage];
     
-    //return [UIImage imageWithCGImage:myColorMaskedImage];
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(myImage) writeToFile:imagePath atomically:YES];
-    
-    //chosenImageView.image =myImage;
-    //chosenImageView.image =croppedLogoImage;
-    //logoPicButton.image =croppedLogoImage;
-    
-    [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
     
     
     

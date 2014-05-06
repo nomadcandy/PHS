@@ -77,6 +77,8 @@
 
 -(void)ViewDidAppear
 {
+    
+    
     NSLog(@"logoUseStringSend %@",_logoUseStringHere);
      NSLog(@"logoUseStringSendDidAppear %@",_logoUseStringHere);
     
@@ -123,6 +125,8 @@
     NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
     NSString *imagePath =  [directoryPath objectAtIndex:0];
     imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+    
+    //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.jpg"];
     
     /*NSString *imagePath3 =  [directoryPath objectAtIndex:0];
      imagePath3= [imagePath3 stringByAppendingPathComponent:@"logoImageClear.png"];*/
