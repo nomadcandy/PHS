@@ -96,7 +96,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INTERACTIVE TOOL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp3-sR-MKY">
                                 <rect key="frame" x="709" y="49" width="162" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1614,18 +1614,6 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkM-NE-0Sn">
-                                <rect key="frame" x="265" y="416" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Trans">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="screenShotRect:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="Nue-gH-CNI"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradietebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFr-uU-ed4" userLabel="gradieteBG">
                                 <rect key="frame" x="0.0" y="230" width="1024" height="717"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1673,11 +1661,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irm-1S-0qP">
-                                <rect key="frame" x="816" y="602" width="95" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irm-1S-0qP">
+                                <rect key="frame" x="831" y="593" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="SnapShot">
+                                <state key="normal" image="ImagePickerFlashButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1727,11 +1714,10 @@
                                     <action selector="editLogo:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="XME-hi-Aet"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-4P-c46">
-                                <rect key="frame" x="224" y="81" width="90" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-4P-c46">
+                                <rect key="frame" x="93" y="416" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="crop square">
+                                <state key="normal" image="ImagePickerCropButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1740,15 +1726,39 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdC-Q7-KAb">
-                                <rect key="frame" x="831" y="657" width="101" height="34"/>
+                                <rect key="frame" x="258" y="416" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
-                                <state key="normal" title="DONE">
+                                <state key="normal" image="AssetCheckButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="goInteractive:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="5hm-yr-COl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-X6-Gq3">
+                                <rect key="frame" x="206" y="416" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
+                                <state key="normal" image="AssetsAddButton.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goInteractive:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="76v-ZF-qPk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XJ-TR-m4s">
+                                <rect key="frame" x="152" y="416" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
+                                <state key="normal" image="AssetsAddFavButton.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goInteractive:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="oKM-O7-C3Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bv-SI-pwO">
@@ -1761,21 +1771,28 @@
                                     <action selector="goHome:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="Pd3-uf-tpS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGO SELECT &amp; EDIT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhF-ZS-06A">
-                                <rect key="frame" x="378" y="53" width="269" height="38"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" SKETCHES" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhF-ZS-06A">
+                                <rect key="frame" x="695" y="20" width="185" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Logo" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrn-I2-g41">
+                                <rect key="frame" x="695" y="46" width="185" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MaskGreySquare6.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-ou-XL2">
                                 <rect key="frame" x="35" y="170" width="291" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-gV-E9O">
-                                <rect key="frame" x="26" y="87" width="88" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-gV-E9O">
+                                <rect key="frame" x="41" y="416" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="square mask">
+                                <state key="normal" image="ImagePickerMaskButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1784,7 +1801,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFw-ZU-G5o">
-                                <rect key="frame" x="128" y="87" width="78" height="30"/>
+                                <rect key="frame" x="20" y="550" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="circle mask">
                                     <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1818,7 +1835,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEo-ei-o5J">
-                                <rect key="frame" x="695" y="683" width="103" height="54"/>
+                                <rect key="frame" x="706" y="683" width="103" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -2533,6 +2550,9 @@
         <image name="Fresh3Button.png" width="167" height="63"/>
         <image name="Friendly3Button.png" width="167" height="63"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
+        <image name="ImagePickerCropButton.png" width="100" height="100"/>
+        <image name="ImagePickerFlashButton.png" width="100" height="100"/>
+        <image name="ImagePickerMaskButton.png" width="100" height="100"/>
         <image name="Interactive2by2Button.png" width="93" height="92"/>
         <image name="Interactive3by10Button.png" width="189" height="89"/>
         <image name="Interactive3by5.png" width="115" height="92"/>

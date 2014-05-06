@@ -14,6 +14,9 @@
 		420BEF9E1919395F003DCEB0 /* MaskWhiteSquare5.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF9D1919395F003DCEB0 /* MaskWhiteSquare5.png */; };
 		420BEFA019193F00003DCEB0 /* MaskWhiteSquare6.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF9F19193F00003DCEB0 /* MaskWhiteSquare6.png */; };
 		420BEFA219193F0B003DCEB0 /* MaskGreySquare6.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEFA119193F0B003DCEB0 /* MaskGreySquare6.png */; };
+		420BEFA519195613003DCEB0 /* ImagePickerMaskButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEFA319195613003DCEB0 /* ImagePickerMaskButton.png */; };
+		420BEFA619195613003DCEB0 /* ImagePickerCropButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEFA419195613003DCEB0 /* ImagePickerCropButton.png */; };
+		420BEFA819195991003DCEB0 /* ImagePickerFlashButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEFA719195991003DCEB0 /* ImagePickerFlashButton.png */; };
 		421AC8391918191400D37F7B /* InteractiveColorPickGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8351918191400D37F7B /* InteractiveColorPickGreyPad.png */; };
 		421AC83A1918191400D37F7B /* InteractiveColorsGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */; };
 		421AC83B1918191400D37F7B /* InteractiveSizeGreyPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */; };
@@ -313,6 +316,9 @@
 		420BEF9D1919395F003DCEB0 /* MaskWhiteSquare5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare5.png; sourceTree = "<group>"; };
 		420BEF9F19193F00003DCEB0 /* MaskWhiteSquare6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare6.png; sourceTree = "<group>"; };
 		420BEFA119193F0B003DCEB0 /* MaskGreySquare6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare6.png; sourceTree = "<group>"; };
+		420BEFA319195613003DCEB0 /* ImagePickerMaskButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImagePickerMaskButton.png; sourceTree = "<group>"; };
+		420BEFA419195613003DCEB0 /* ImagePickerCropButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImagePickerCropButton.png; sourceTree = "<group>"; };
+		420BEFA719195991003DCEB0 /* ImagePickerFlashButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImagePickerFlashButton.png; sourceTree = "<group>"; };
 		421AC8351918191400D37F7B /* InteractiveColorPickGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveColorPickGreyPad.png; sourceTree = "<group>"; };
 		421AC8361918191400D37F7B /* InteractiveColorsGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveColorsGreyPad.png; sourceTree = "<group>"; };
 		421AC8371918191400D37F7B /* InteractiveSizeGreyPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveSizeGreyPad.png; sourceTree = "<group>"; };
@@ -924,6 +930,9 @@
 		42DEAF2C19192D6E0087E71D /* ImagesImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				420BEFA719195991003DCEB0 /* ImagePickerFlashButton.png */,
+				420BEFA319195613003DCEB0 /* ImagePickerMaskButton.png */,
+				420BEFA419195613003DCEB0 /* ImagePickerCropButton.png */,
 				420BEFA119193F0B003DCEB0 /* MaskGreySquare6.png */,
 				420BEF9F19193F00003DCEB0 /* MaskWhiteSquare6.png */,
 				420BEF9D1919395F003DCEB0 /* MaskWhiteSquare5.png */,
@@ -1204,6 +1213,7 @@
 				42E9AC2918FF5FB9000E226D /* go1Button.png in Resources */,
 				42B0152B18E315220068019C /* WalkOffLogoMat.pdf in Resources */,
 				42B0150D18DFBD330068019C /* CircleButton.png in Resources */,
+				420BEFA619195613003DCEB0 /* ImagePickerCropButton.png in Resources */,
 				42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				426A6A3018EDADBA00255331 /* WeGotThis.png in Resources */,
 				42B0156418E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
@@ -1235,6 +1245,7 @@
 				4221399919128996001BD328 /* CintasLogoBlackClear.png in Resources */,
 				42A24BF619181FB800568305 /* Interactive3by5.png in Resources */,
 				420BEF98191935C7003DCEB0 /* MaskGreySquare2.png in Resources */,
+				420BEFA519195613003DCEB0 /* ImagePickerMaskButton.png in Resources */,
 				4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */,
 				42E9AC0718FF5187000E226D /* MatClientFocusJade4.png in Resources */,
 				426A6A3218EDADBA00255331 /* ProffessionalButton.png in Resources */,
@@ -1273,6 +1284,7 @@
 				420BEF9A191937C7003DCEB0 /* MaskGreySquare4.png in Resources */,
 				42B0158118E3428B0068019C /* UltraGuardLogoInlay.png in Resources */,
 				421AC8391918191400D37F7B /* InteractiveColorPickGreyPad.png in Resources */,
+				420BEFA819195991003DCEB0 /* ImagePickerFlashButton.png in Resources */,
 				4227989C1912A60B00776844 /* AssetsDefaultButton.png in Resources */,
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				42A24BF719181FB800568305 /* Interactive4by6Button.png in Resources */,
