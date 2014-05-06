@@ -56,6 +56,11 @@
 
 @property (nonatomic, weak) NSString *logoUseStringHere;
 
+@property (nonatomic, strong) IBOutlet UITextField *sellerField;
+@property (nonatomic, strong) IBOutlet UITextField *companyField;
+@property (nonatomic, strong) IBOutlet UITextField *nameField;
+@property (nonatomic, strong) IBOutlet UITextField *numberField;
+
 @property (nonatomic, strong) IBOutlet UITextField *widthField;
 @property (nonatomic, strong) IBOutlet UITextField *heightField;
 

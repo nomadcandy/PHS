@@ -37,6 +37,12 @@
 @synthesize logoPicButton;
 @synthesize homeButton;
 
+
+@synthesize nameField;
+@synthesize numberField;
+@synthesize sellerField;
+@synthesize companyField;
+
 @synthesize titleBar;
 
 @synthesize titleLabel;
