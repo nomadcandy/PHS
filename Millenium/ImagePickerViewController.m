@@ -147,11 +147,6 @@
     [chosenImageView setTransform:newTransform];
     
     
-    
-    
-    
-    
-    
     CGAffineTransform currentTransformLogo = logoPicButton.transform;
     CGAffineTransform newTransformLogo = CGAffineTransformScale(currentTransform, scale, scale);
     
@@ -341,8 +336,6 @@
     
     NSLog(@"chosenImage %@",selectedImage);
     
-   
-    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
     
     [UIImagePNGRepresentation(chosenImage) writeToFile:imagePath atomically:YES];
     
@@ -390,25 +383,6 @@
 
 
 
-/*- (UIImage *)imageWithAlpha  {
-    
-    CGImageRef imageRef = self.CGImage;
-    CGFloat width = CGImageGetWidth(imageRef);
-    CGFloat height = CGImageGetHeight(imageRef);
-    
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context =  CGBitmapContextCreate(nil, width, height, 8, 4 * width, colorSpace, kCGImageAlphaPremultipliedFirst);
-    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
-    
-    CGImageRef resultImageRef = CGBitmapContextCreateImage(context);
-    UIImage *resultImage = [UIImage imageWithCGImage:resultImageRef scale:self.scale orientation:self.imageOrientation];
-    
-    CGContextRelease(context);
-    CGColorSpaceRelease(colorSpace);
-    CGImageRelease(resultImageRef);
-    
-    return resultImage;
-}*/
 
 
 
@@ -455,23 +429,6 @@
     [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
     
     
-    //trans here
-    /*CGRect screenRect = CGRectMake(179.0f, 290.0f, 318.0f, 259.0f);
-    
-    
-    UIGraphicsBeginImageContext(chosenImageView.frame.size);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    
-
-    
-    CGImageRef myColorMaskedImage;
-    const CGFloat myMaskingColors[6] = {124, 255,  68, 222, 0, 165};
-    myColorMaskedImage = CGImageCreateWithMaskingColors (masked,
-                                                         myMaskingColors);
-    CGContextDrawImage (ctx, screenRect, myColorMaskedImage);
-    
-    
-    UIImage* myImage = [[UIImage alloc] initWithCGImage:myColorMaskedImage];*/
     
     
     

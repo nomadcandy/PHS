@@ -36,7 +36,7 @@
 
 
 
-@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,StringPickerProtocol>{
+@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,StringPickerProtocol,UIGestureRecognizerDelegate>{
     
     IBOutlet UIView *interactiveView;
     IBOutlet UIImageView *interactiveMatView;
@@ -46,6 +46,14 @@
     
     AppDelegate *appdelegate;
     UIImage *selectedImage;
+    
+    CGFloat _lastScale;
+	CGFloat _lastRotation;
+	CGFloat _firstX;
+	CGFloat _firstY;
+    
+    UIView *canvas;
+
     
     //NSString *logoUseStringHere;
     

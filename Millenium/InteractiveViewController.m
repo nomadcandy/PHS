@@ -118,6 +118,25 @@
 {
     [super viewDidLoad];
     
+    
+   /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    logoPicButton.userInteractionEnabled = YES;
+    gestureRecognizer.minimumPressDuration = 0.3;
+    gestureRecognizer.delegate = self;
+    gestureRecognizer.numberOfTouchesRequired = 1;
+    [logoPicButton addGestureRecognizer:gestureRecognizer];*/
+    
+    
+    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
+	[pinchRecognizer setDelegate:self];
+	[self.view addGestureRecognizer:pinchRecognizer];
+    
+   /* UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)] ;
+	[panRecognizer setMinimumNumberOfTouches:1];
+	[panRecognizer setMaximumNumberOfTouches:1];
+	[panRecognizer setDelegate:self];
+	[logoPicButton addGestureRecognizer:panRecognizer];*/
+    
     matButton.hidden =NO;
     logoButton.hidden= NO;
     titleLabel.hidden =NO;
@@ -178,10 +197,6 @@
 - (void)setString:(NSString *)string
 {
     [self.delegate setString:string];
-    
-    
-    //[self.delegate setString:string];
-    
     [self.delegate setString:_logoUseStringHere];
 }
 
@@ -303,71 +318,6 @@
     }
     
 }
-
-#pragma mark
-#pragma mark Util
-/*- (UIImage*) maskImage:(UIImage *)selectedImage withMask:(UIImage *)maskImage {
-    
-	CGImageRef imgRef = [selectedImage CGImage];
-    CGImageRef maskRef = [maskImage CGImage];
-    CGImageRef actualMask = CGImageMaskCreate(CGImageGetWidth(maskRef),
-                                              CGImageGetHeight(maskRef),
-                                              CGImageGetBitsPerComponent(maskRef),
-                                              CGImageGetBitsPerPixel(maskRef),
-                                              CGImageGetBytesPerRow(maskRef),
-                                              CGImageGetDataProvider(maskRef), NULL, false);
-    masked = CGImageCreateWithMask(imgRef, actualMask);
-    return [UIImage imageWithCGImage:masked];
-    
-    
-    
-    
-    
-    
-    
-}
-
-
-
-- (IBAction)maskButtonClicked:(id)sender
-{
-    logoPicButton.BackgroundImage.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare1"]];
-    //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
-    
-    
-    [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
-    
-    UIImage*croppedLogoImage = chosenImageView.image;
-    
-    
-   
-    
-    [UIImagePNGRepresentation(croppedLogoImage) writeToFile:imagePath atomically:YES];
-   
-    
-    
-    //trans here
-    CGRect screenRect = CGRectMake(179.0f, 290.0f, 318.0f, 259.0f);
-    
-    
-    UIGraphicsBeginImageContext(logoPicButton.frame.size);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    
-    
-    
-    CGImageRef myColorMaskedImage;
-    const CGFloat myMaskingColors[6] = {124, 255,  68, 222, 0, 165};
-    myColorMaskedImage = CGImageCreateWithMaskingColors (masked,
-                                                         myMaskingColors);
-    CGContextDrawImage (ctx, screenRect, myColorMaskedImage);
-    
-    
-    UIImage* myImage = [[UIImage alloc] initWithCGImage:myColorMaskedImage];
-    
-    
-    
-    
-}*/
 
 
 
@@ -836,6 +786,47 @@ else
     
 }
 
+-(void)move:(id)sender {
+    
+    CGPoint translatedPoint = [(UIPanGestureRecognizer*)sender translationInView:canvas];
+    
+    if([(UIPanGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _firstX = [chosenImageView center].x;
+        _firstY = [chosenImageView center].y;
+        
+        
+        // _firstX = [logoPicButton center].x;
+        // _firstY = [logoPicButton center].y;
+    }
+    
+    translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY+translatedPoint.y);
+    
+    [logoPicButton setCenter:translatedPoint];
+    // [self showOverlayWithFrame:chosenImageView.frame];
+}
+
+-(void)scale:(id)sender {
+    
+    if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _lastScale = 1.0;
+    }
+    
+    CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
+    
+    CGAffineTransform currentTransform = chosenImageView.transform;
+    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
+    
+    [chosenImageView setTransform:newTransform];
+    
+    
+    CGAffineTransform currentTransformLogo = logoPicButton.transform;
+    CGAffineTransform newTransformLogo = CGAffineTransformScale(currentTransform, scale, scale);
+    
+    [logoPicButton setTransform:newTransform];
+    
+    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
+    //[self showOverlayWithFrame:chosenImageView.frame];
+}
 
 
 
