@@ -840,17 +840,31 @@ else
 -(IBAction)addNote:(id)sender{
     
     
+    UITextField *textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(205, 380, 100, 60)];
+    textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
+    textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    textNoteField.backgroundColor=[UIColor clearColor];
+    textNoteField.text=@"YOUR TEXT HERE";
+    [self.view addSubview:textNoteField];
+    
+    [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
 }
 
 -(IBAction)addText:(id)sender{
     
     
-    UITextField *textDecField = [[UITextField alloc] initWithFrame:CGRectMake(45, 30, 200, 300)];
+    UITextField *textDecField = [[UITextField alloc] initWithFrame:CGRectMake(245, 300, 100, 60)];
     textDecField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
-    textDecField.backgroundColor=[UIColor redColor];
+    textDecField.backgroundColor=[UIColor clearColor];
     textDecField.text=@"YOUR TEXT HERE";
     [self.view addSubview:textDecField];
+    
+    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+
     
 }
 
