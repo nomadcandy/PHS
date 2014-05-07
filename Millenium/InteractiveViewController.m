@@ -837,6 +837,32 @@ else
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
 }
+-(IBAction)addNote:(id)sender{
+    
+    
+}
+
+-(IBAction)addText:(id)sender{
+    
+    
+    UITextField *textDecField = [[UITextField alloc] initWithFrame:CGRectMake(45, 30, 200, 300)];
+    textDecField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
+    textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    textDecField.backgroundColor=[UIColor redColor];
+    textDecField.text=@"YOUR TEXT HERE";
+    [self.view addSubview:textDecField];
+    
+}
+
+-(IBAction)hideNotes:(id)sender{
+    
+    
+}
+
+-(IBAction)showNotes:(id)sender{
+    
+    
+}
 
 
 -(IBAction)goSearch:(id)sender{
