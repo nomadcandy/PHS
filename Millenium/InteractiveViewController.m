@@ -17,6 +17,9 @@
 
 @implementation InteractiveViewController
 
+@synthesize textNoteField;
+@synthesize textDecField;
+
 
 @synthesize delegate=_delegate;
 
@@ -140,6 +143,8 @@
     UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
 	[pinchRecognizer setDelegate:self];
 	[self.view addGestureRecognizer:pinchRecognizer];
+    //[self.textDecField addGestureRecognizer:pinchRecognizer];
+    
     
     /*UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)] ;
 	[panRecognizer setMinimumNumberOfTouches:1];
@@ -821,6 +826,7 @@ else
         _lastScale = 1.0;
     }
     
+    
     CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
     CGAffineTransform currentTransform = chosenImageView.transform;
@@ -830,9 +836,20 @@ else
     
     
     CGAffineTransform currentTransformLogo = logoPicButton.transform;
-    CGAffineTransform newTransformLogo = CGAffineTransformScale(currentTransform, scale, scale);
+    CGAffineTransform newTransformLogo = CGAffineTransformScale(currentTransformLogo, scale, scale);
     
-    [logoPicButton setTransform:newTransform];
+    [logoPicButton setTransform:newTransformLogo];
+    
+    CGAffineTransform currentTransformDec = textDecField.transform;
+    CGAffineTransform newTransformDec = CGAffineTransformScale(currentTransformDec, scale, scale);
+    
+    [textDecField setTransform:newTransformDec];
+    
+    
+    CGAffineTransform currentTransformNote = textNoteField.transform;
+    CGAffineTransform newTransformNote = CGAffineTransformScale(currentTransformNote, scale, scale);
+    
+    [textNoteField setTransform:newTransformNote];
     
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
@@ -840,7 +857,7 @@ else
 -(IBAction)addNote:(id)sender{
     
     
-    UITextField *textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(205, 380, 100, 60)];
+    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(205, 380, 100, 60)];
     textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
     textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textNoteField.backgroundColor=[UIColor clearColor];
@@ -855,7 +872,7 @@ else
 -(IBAction)addText:(id)sender{
     
     
-    UITextField *textDecField = [[UITextField alloc] initWithFrame:CGRectMake(245, 300, 100, 60)];
+    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(245, 300, 100, 60)];
     textDecField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textDecField.backgroundColor=[UIColor clearColor];
@@ -864,6 +881,7 @@ else
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
 
     
 }

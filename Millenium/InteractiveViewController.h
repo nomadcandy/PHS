@@ -44,6 +44,8 @@
     MyDraggableImage*MyDragRect;
     IBOutlet UIButton*logoButton;
     
+    UITextField *textNoteField;
+    UITextField *textDecField;
     IBOutlet UITextField *searchField;
     IBOutlet UIButton *searchButton;
     
@@ -66,6 +68,10 @@
 @property (nonatomic, weak) id <StringPickerProtocol> delegate;
 
 @property (nonatomic, weak) NSString *logoUseStringHere;
+
+@property (nonatomic, strong) UITextField *textNoteField;
+@property (nonatomic, strong) UITextField *textDecField;
+
 
 @property (nonatomic, strong) IBOutlet UITextField *searchField;
 @property (nonatomic, strong) IBOutlet UIButton *searchButton;
