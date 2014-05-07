@@ -30,10 +30,10 @@
 {
     
     
-    NSString*sellerString;
+    /*NSString*sellerString;
     NSString*nameString;
     NSString*companyString;
-    NSString*numberString;
+    NSString*numberString;*/
     
     NSString*artworkNameAddFavString;
     NSString*urlFavString;
@@ -141,7 +141,7 @@
 @property (nonatomic, copy) NSString *urlUnFavString;
 
 @property (nonatomic, retain) NSString *sellerString;
-@property (nonatomic, retain) NSString *nameString;
+//@property (nonatomic, retain) NSString *nameString;
 @property (nonatomic, retain) NSString *companyString;
 @property (nonatomic, retain) NSString *numberString;
 

@@ -40,7 +40,7 @@
 @synthesize logoUseString;
 
 @synthesize sellerString;
-@synthesize nameString;
+//@synthesize nameString;
 @synthesize companyString;
 @synthesize numberString;
 
@@ -1285,7 +1285,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"indexPathSend %d",indexPathSend);
     //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     
-    nameString =[artworkNameArray objectAtIndex:indexPathSend];
+    NSString*nameString =[artworkNameArray objectAtIndex:indexPathSend];
+    NSLog(@" nameStringLogoSelected %@iconImage",nameString);
+    
     sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
     companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
     numberString =[artworkNumberArray objectAtIndex:indexPathSend];
@@ -1351,11 +1353,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         NSLog(@"logoUseString %@",logoUseString);
         destViewController.logoUseStringHere=logoUseString;
         
-        nameString=[artworkNameArray objectAtIndex:indexPathSend];
-        NSLog(@"logoUseStringSend %@",nameString);
-        destViewController.nameField.text=nameString;
+        //nameString=[artworkNameArray objectAtIndex:indexPathSend];
+        NSString*nameString =[artworkNameArray objectAtIndex:indexPathSend];
+        NSLog(@"nameStringSend %@",nameString);
+        destViewController.nameString=nameString;
         
-        numberString=[artworkNumberArray objectAtIndex:indexPathSend];
+        /*numberString=[artworkNumberArray objectAtIndex:indexPathSend];
         NSLog(@"logoUseStringSend %@",numberString);
         destViewController.numberField.text=numberString;
         
@@ -1365,7 +1368,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         companyString=[artworkCompanyArray objectAtIndex:indexPathSend];
         NSLog(@"logoUseStringSend %@",companyString);
-        destViewController.companyField.text=companyString;
+        destViewController.companyField.text=companyString;*/
         
         
 

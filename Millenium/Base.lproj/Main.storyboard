@@ -556,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gk9-Zk-GCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-990" y="-714"/>
+            <point key="canvasLocation" x="-2934" y="-3282"/>
         </scene>
         <!--Sign Off View Controller-->
         <scene sceneID="Ots-Hh-0Rn">
@@ -1241,7 +1241,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="goInteractive1:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="AIK-Op-gxg"/>
-                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="Xsv-p4-h1x"/>
+                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="KLb-Iu-kB6"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qr5-i0-7W6">
@@ -1399,7 +1399,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="-1688"/>
+            <point key="canvasLocation" x="-1389" y="-3295"/>
         </scene>
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -2645,7 +2645,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="5F9-JV-UFd"/>
-        <segue reference="Xsv-p4-h1x"/>
+        <segue reference="KLb-Iu-kB6"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -58,6 +58,11 @@
 	CGFloat _firstY;
     
     UIView *canvas;
+    
+    //NSString*sellerString;
+    //NSString*nameString;
+    /*NSString*companyString;
+    NSString*numberString;*/
 
     
     //NSString *logoUseStringHere;
@@ -123,6 +128,8 @@
 
 @property (nonatomic, strong) NSString *matColorUseString;
 @property (nonatomic, strong) NSString *matSizeUseString;
+
+@property (nonatomic, copy) NSString *nameString;
 
 @property (nonatomic, strong) UIImage *selectedImage;
 

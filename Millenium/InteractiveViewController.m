@@ -62,6 +62,8 @@
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
 
+@synthesize nameString;
+
 
 //@synthesize logoUseStringHere;
 
@@ -92,7 +94,8 @@
 
 -(void)ViewDidAppear
 {
-    
+    NSLog(@"nameStringHere %@",nameString);
+    nameField.text =nameString;
     
     NSLog(@"logoUseStringSend %@",_logoUseStringHere);
      NSLog(@"logoUseStringSendDidAppear %@",_logoUseStringHere);
@@ -130,7 +133,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    NSLog(@"nameStringHere %@",nameString);
+    nameField.text =nameString;
+
     
    /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     logoPicButton.userInteractionEnabled = YES;
@@ -145,7 +150,7 @@
 	[self.view addGestureRecognizer:pinchRecognizer];*/
     //[self.textDecField addGestureRecognizer:pinchRecognizer];
     
-    
+    //nameField.text =nameString;
     
     UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
 	[pinchRecognizer setDelegate:self];
