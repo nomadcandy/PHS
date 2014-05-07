@@ -30,6 +30,11 @@
 {
     
     
+    NSString*sellerString;
+    NSString*nameString;
+    NSString*companyString;
+    NSString*numberString;
+    
     NSString*artworkNameAddFavString;
     NSString*urlFavString;
     
@@ -73,6 +78,9 @@
 
 @property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
 
+@property (nonatomic, assign) int intMat;
+@property (nonatomic, assign) int intLogo;
+
 @property (nonatomic, assign) int selectedIndex;
 @property (nonatomic, assign) int indexPathSend;
 @property (nonatomic, assign) int rowSelectedHere;
@@ -91,6 +99,9 @@
 
 
 @property (nonatomic, retain) NSMutableArray *artworkNameArray;
+@property (nonatomic, copy) NSMutableArray *artworkSellerArray;
+@property (nonatomic, copy) NSMutableArray *artworkCompanyArray;
+@property (nonatomic, copy) NSMutableArray *artworkNumberArray;
 @property (nonatomic, copy) NSMutableArray *artworkSizeArray;
 @property (nonatomic, copy) NSMutableArray *artworkFormatArray;
 @property (nonatomic, copy) NSMutableArray *artworkFullImageArray;
@@ -128,6 +139,12 @@
 @property (nonatomic, copy) NSString *urlFavString;
 @property (nonatomic, copy) NSString *artworkNameUnFavString;
 @property (nonatomic, copy) NSString *urlUnFavString;
+
+@property (nonatomic, retain) NSString *sellerString;
+@property (nonatomic, retain) NSString *nameString;
+@property (nonatomic, retain) NSString *companyString;
+@property (nonatomic, retain) NSString *numberString;
+
 
 
 @property (nonatomic, assign) id <ButtonPickerDelegate> delegate;

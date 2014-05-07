@@ -23,6 +23,20 @@
 @synthesize maskCircleImageView;
 @synthesize searchField;
 
+@synthesize sellerField;
+@synthesize nameField;
+@synthesize companyField;
+@synthesize numberField;
+
+@synthesize sellerString;
+@synthesize nameString;
+@synthesize companyString;
+@synthesize numberString;
+
+
+
+
+
 @synthesize artworkNameArray;
 @synthesize artworkSizeArray;
 @synthesize artworkFormatArray;

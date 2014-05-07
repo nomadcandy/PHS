@@ -542,11 +542,15 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="chosenImageView" destination="0zU-6P-ULj" id="5Q5-J0-hY9"/>
+                        <outlet property="companyField" destination="frL-og-Dmi" id="Ahc-KW-gU0"/>
                         <outlet property="homeButton" destination="EYB-Me-8Vk" id="Fp5-Km-pWB"/>
                         <outlet property="interactiveMatView" destination="B61-WR-Lik" id="U1I-DP-m09"/>
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
+                        <outlet property="nameField" destination="k9N-kB-Atq" id="i9X-NH-DgM"/>
+                        <outlet property="numberField" destination="7cP-GH-qtu" id="TbC-cV-qZh"/>
                         <outlet property="searchButton" destination="xDA-U3-mdi" id="thT-nZ-my0"/>
                         <outlet property="searchField" destination="7fQ-D3-7DB" id="lcc-ZA-q8m"/>
+                        <outlet property="sellerField" destination="gg9-EA-31R" id="ClZ-Pg-GlW"/>
                         <outlet property="titleLabel" destination="Gp3-sR-MKY" id="Dh3-pE-Jh9"/>
                     </connections>
                 </viewController>
@@ -1228,7 +1232,7 @@
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-HA-1kT">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-HA-1kT" userLabel="useLogoButton">
                                             <rect key="frame" x="316" y="329" width="44" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Use" image="AssetCheckButton.png">
@@ -2640,8 +2644,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
         <segue reference="5F9-JV-UFd"/>
-        <segue reference="c2D-ne-Y5B"/>
+        <segue reference="Xsv-p4-h1x"/>
+        <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>

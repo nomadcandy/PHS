@@ -65,6 +65,20 @@
     
     IBOutlet UITextField*searchField;
     
+    IBOutlet UITextField*sellerField;
+    IBOutlet UITextField*nameField;
+    IBOutlet UITextField*companyField;
+    IBOutlet UITextField*numberField;
+    
+    
+    NSString*sellerString;
+    NSString*nameString;
+    NSString*companyString;
+    NSString*numberString;
+   
+    
+    
+    
     
     
     UIImagePickerController*picker;
@@ -105,6 +119,18 @@
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
 @property (nonatomic, retain) IBOutlet UITextField *searchField;
+
+@property (nonatomic, retain) IBOutlet UITextField *sellerField;
+@property (nonatomic, retain) IBOutlet UITextField *nameField;
+@property (nonatomic, retain) IBOutlet UITextField *companyField;
+@property (nonatomic, retain) IBOutlet UITextField *numberField;
+
+@property (nonatomic, retain) NSString *sellerString;
+@property (nonatomic, retain) NSString *nameString;
+@property (nonatomic, retain) NSString *companyString;
+@property (nonatomic, retain) NSString *numberString;
+
+
 
 @property (nonatomic, retain) IBOutlet UIImageView *maskSquareImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *maskCircleImageView;

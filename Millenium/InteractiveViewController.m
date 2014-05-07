@@ -140,10 +140,22 @@
     [logoPicButton addGestureRecognizer:gestureRecognizer];*/
     
     
+   /* UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
+	[pinchRecognizer setDelegate:self];
+	[self.view addGestureRecognizer:pinchRecognizer];*/
+    //[self.textDecField addGestureRecognizer:pinchRecognizer];
+    
+    
+    
     UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
 	[pinchRecognizer setDelegate:self];
-	[self.view addGestureRecognizer:pinchRecognizer];
-    //[self.textDecField addGestureRecognizer:pinchRecognizer];
+	[self.logoPicButton addGestureRecognizer:pinchRecognizer];
+    
+    UIPinchGestureRecognizer *pinchRecognizerDec = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scaleDec:)] ;
+	[pinchRecognizerDec setDelegate:self];
+	[self.textDecField addGestureRecognizer:pinchRecognizerDec];
+    
+    
     
     
     /*UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)] ;
@@ -820,6 +832,9 @@ else
     // [self showOverlayWithFrame:chosenImageView.frame];
 }
 
+
+
+
 -(void)scale:(id)sender {
     
     if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
@@ -829,10 +844,10 @@ else
     
     CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
-    CGAffineTransform currentTransform = chosenImageView.transform;
+   /* CGAffineTransform currentTransform = chosenImageView.transform;
     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
     
-    [chosenImageView setTransform:newTransform];
+    [chosenImageView setTransform:newTransform];*/
     
     
     CGAffineTransform currentTransformLogo = logoPicButton.transform;
@@ -840,16 +855,57 @@ else
     
     [logoPicButton setTransform:newTransformLogo];
     
-    CGAffineTransform currentTransformDec = textDecField.transform;
-    CGAffineTransform newTransformDec = CGAffineTransformScale(currentTransformDec, scale, scale);
     
-    [textDecField setTransform:newTransformDec];
+    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
+    //[self showOverlayWithFrame:chosenImageView.frame];
+}
+
+
+-(void)scaleDec:(id)sender {
+    
+    if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _lastScale = 1.0;
+    }
     
     
-    CGAffineTransform currentTransformNote = textNoteField.transform;
-    CGAffineTransform newTransformNote = CGAffineTransformScale(currentTransformNote, scale, scale);
+    CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
-    [textNoteField setTransform:newTransformNote];
+    /* CGAffineTransform currentTransform = chosenImageView.transform;
+     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
+     
+     [chosenImageView setTransform:newTransform];*/
+    
+    
+    CGAffineTransform currentTransform = textDecField.transform;
+    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
+    
+    [textDecField setTransform:newTransform];
+    
+    
+    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
+    //[self showOverlayWithFrame:chosenImageView.frame];
+}
+
+-(void)scaleNote:(id)sender {
+    
+    if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
+        _lastScale = 1.0;
+    }
+    
+    
+    CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
+    
+    /* CGAffineTransform currentTransform = chosenImageView.transform;
+     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
+     
+     [chosenImageView setTransform:newTransform];*/
+    
+    
+    CGAffineTransform currentTransform = textNoteField.transform;
+    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
+    
+    [textNoteField setTransform:newTransform];
+    
     
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
@@ -858,14 +914,22 @@ else
     
     
     textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(205, 380, 100, 60)];
-    textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
+    //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
+    textNoteField.textColor = [UIColor redColor];
     textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
-    textNoteField.backgroundColor=[UIColor clearColor];
+    textNoteField.backgroundColor=[UIColor whiteColor];
     textNoteField.text=@"YOUR TEXT HERE";
     [self.view addSubview:textNoteField];
     
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    
+    /*UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scaleNote:)] ;
+	[pinchRecognizer setDelegate:self];
+	[self.textNoteField addGestureRecognizer:pinchRecognizer];
+    
+    [textNoteField addTarget:self action:@selector(scaleNote:) forControlEvents:pinchRecognizer];*/
     
 }
 
@@ -873,7 +937,7 @@ else
     
     
     textDecField = [[UITextField alloc] initWithFrame:CGRectMake(245, 300, 100, 60)];
-    textDecField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
+    textDecField.textColor = [UIColor whiteColor];
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textDecField.backgroundColor=[UIColor clearColor];
     textDecField.text=@"YOUR TEXT HERE";

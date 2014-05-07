@@ -16,6 +16,10 @@
 @implementation LogoCollectionViewController
 
 
+@synthesize intMat;
+@synthesize intLogo;
+
+
 @synthesize searchHereString;
 @synthesize searchHereField;
 @synthesize searchOutField;
@@ -35,9 +39,17 @@
 
 @synthesize logoUseString;
 
+@synthesize sellerString;
+@synthesize nameString;
+@synthesize companyString;
+@synthesize numberString;
+
 @synthesize artworkNameDictionary;
 
 @synthesize artworkNameArray;
+@synthesize artworkSellerArray;
+@synthesize artworkCompanyArray;
+@synthesize artworkNumberArray;
 @synthesize artworkSizeArray;
 @synthesize artworkFormatArray;
 @synthesize artworkFullImageArray;
@@ -1139,6 +1151,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             UIButton*button = [logoCell logoChooseButton];
             button.tag = selectedIndex;
+            intMat=0;
+            intLogo=1;
 
             
             
@@ -1186,6 +1200,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             UIButton*button = [logoCell matChooseButton];
             button.tag = selectedIndex;
+            intMat=1;
+            intLogo=0;
             
             
             
@@ -1269,6 +1285,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"indexPathSend %d",indexPathSend);
     //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     
+    nameString =[artworkNameArray objectAtIndex:indexPathSend];
+    sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
+    companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
+    numberString =[artworkNumberArray objectAtIndex:indexPathSend];
     
     NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
     
@@ -1329,11 +1349,27 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
         NSLog(@"logoUseString %@",logoUseString);
-        
-        logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
-        NSLog(@"logoUseStringSend %@",logoUseString);
-
         destViewController.logoUseStringHere=logoUseString;
+        
+        nameString=[artworkNameArray objectAtIndex:indexPathSend];
+        NSLog(@"logoUseStringSend %@",nameString);
+        destViewController.nameField.text=nameString;
+        
+        numberString=[artworkNumberArray objectAtIndex:indexPathSend];
+        NSLog(@"logoUseStringSend %@",numberString);
+        destViewController.numberField.text=numberString;
+        
+        sellerString=[artworkSellerArray objectAtIndex:indexPathSend];
+        NSLog(@"logoUseStringSend %@",sellerString);
+        destViewController.sellerField.text=sellerString;
+        
+        companyString=[artworkCompanyArray objectAtIndex:indexPathSend];
+        NSLog(@"logoUseStringSend %@",companyString);
+        destViewController.companyField.text=companyString;
+        
+        
+
+       
         //NSLog(@"chosenImage %@",logoUseString);
         
         //destViewController.delegate = self;
