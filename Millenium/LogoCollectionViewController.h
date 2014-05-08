@@ -24,12 +24,12 @@
 @end
 
 
-@protocol StringSetDelegate <NSObject>
-- (void)didSetNameString:(NSString *)nameString;
+/*@protocol StringSetDelegate <NSObject>
+- (void)didSetNameString:(NSString *)nameString;*/
 
-@end
+//@end
 
-@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate, UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate, StringSetDelegate>
+@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate, UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate/*, StringSetDelegate*/>
 
 {
     
