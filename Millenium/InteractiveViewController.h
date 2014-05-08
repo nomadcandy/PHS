@@ -24,19 +24,25 @@
 - (void)didSetString:(NSString *)logoUseString;*/
 
 
-@protocol StringPickerProtocol <NSObject>
+/*@protocol StringPickerProtocol <NSObject>
 
-- (void)setString:(NSString *)string;
-
-
-@end
+- (void)setString:(NSString *)string;*/
 
 
 
+//- (void)didSetCompanyString:(NSString *)companyString;
+
+
+//@end
+
+/*@protocol StringSetDelegate <NSObject>
+ 
+ - (void)didSetNameString:(NSString *)nameString;*/
 
 
 
-@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,StringPickerProtocol,UIGestureRecognizerDelegate>{
+
+@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,UIGestureRecognizerDelegate>{
     
     IBOutlet UIView *interactiveView;
     IBOutlet UIImageView *interactiveMatView;
@@ -67,10 +73,12 @@
     
     //NSString *logoUseStringHere;
     
-     //__unsafe_unretained id <StringPickerProtocol> _delegate;
+    //__unsafe_unretained id <StringPickerProtocol> _delegate;
+     //__unsafe_unretained id <StringSetDelegate> delegate;
 }
 
-@property (nonatomic, weak) id <StringPickerProtocol> delegate;
+//@property (nonatomic, weak) id <StringPickerProtocol> delegate;
+//@property (nonatomic, weak) id <StringSetDelegate> delegate;
 
 @property (nonatomic, weak) NSString *logoUseStringHere;
 

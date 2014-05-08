@@ -24,8 +24,12 @@
 @end
 
 
+@protocol StringSetDelegate <NSObject>
+- (void)didSetNameString:(NSString *)nameString;
 
-@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate, UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
+@end
+
+@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate, UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate, StringSetDelegate>
 
 {
     
@@ -67,14 +71,15 @@
     
     //__unsafe_unretained id <StringPickerProtocol> _delegate;
     //__unsafe_unretained id <ButtonPickerDelegate> _delegate;
-    __unsafe_unretained id <ButtonPickerDelegate> _delegate;
+    //__unsafe_unretained id <ButtonPickerDelegate> _delegate;
+    //__unsafe_unretained id <StringSetDelegate> _delegateString;
   
     
     
 }
 
 
-//@property (nonatomic, weak) id <StringPickerProtocol> delegate;
+
 
 @property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
 
@@ -146,8 +151,11 @@
 @property (nonatomic, copy) NSString *numberString;
 
 
+//@property (nonatomic, assign) id <StringSetDelegate> delegateString;
+@property (nonatomic, weak) id <ButtonPickerDelegate> delegate;
+//@property (nonatomic, weak) id <StringPickerProtocol> delegate;
 
-@property (nonatomic, assign) id <ButtonPickerDelegate> delegate;
+//@property (weak,nonatomic) id delegate;
 
 
 -(IBAction)goFav:(id)sender;

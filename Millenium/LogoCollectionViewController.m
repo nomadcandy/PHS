@@ -31,7 +31,8 @@
 //@synthesize button;
 //@synthesize logoChooseButton;
 @synthesize selectedIndex;
-//@synthesize delegate=_delegate;
+@synthesize delegate=_delegate;
+//@synthesize delegateString=_delegateString;
 
 @synthesize rowSelectedHere;
 @synthesize rowSelectedSend;
@@ -1264,6 +1265,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goInteractive1:(UIButton*)sender event:(id)event {
     
+    [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
+    
     UIStoryboard *storyboard = self.storyboard;
      InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
      [self presentViewController:svc animated:YES completion:nil];
@@ -1339,6 +1342,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         InteractiveViewController *destViewController = segue.destinationViewController;
+         //destViewController.delegate = self;
         // NSLog(@"chosenImage %@",chosenImage);
         //NSLog(@"chosenImage %@",newImage);
         //destViewController.chosenImage = chosenImage;

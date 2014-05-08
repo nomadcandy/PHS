@@ -21,7 +21,7 @@
 @synthesize textDecField;
 
 
-@synthesize delegate=_delegate;
+//@synthesize delegate=_delegate;
 
 @synthesize interactiveView;
 @synthesize carouselSize;
@@ -225,15 +225,31 @@
     }
     
 
+- (void)didSetNameString:(NSString *)nameString{
+    
+    nameField.text =nameString;
+    
+}
 
-- (void)setString:(NSString *)string
+- (void)didSetCompanyString:(NSString *)companyString{
+    
+    nameField.text =nameString;
+    
+}
+
+
+/*- (void)setString:(NSString *)string
 {
+    
+
     [self.delegate setString:string];
     [self.delegate setString:_logoUseStringHere];
     [self.delegate setString:nameString];
     nameField.text =nameString;
+    
+   
 
-}
+}*/
 
     
 
