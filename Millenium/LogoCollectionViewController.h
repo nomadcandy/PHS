@@ -116,6 +116,8 @@
 
 
 @property (nonatomic, retain) NSMutableArray *matNameArray;
+@property (nonatomic, copy) NSMutableArray *matSellerArray;
+@property (nonatomic, copy) NSMutableArray *matCompanyArray;
 @property (nonatomic, copy) NSMutableArray *matSizeArray;
 @property (nonatomic, copy) NSMutableArray *matFormatArray;
 @property (nonatomic, copy) NSMutableArray *matFullImageArray;

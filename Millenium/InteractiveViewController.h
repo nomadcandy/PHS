@@ -122,6 +122,7 @@
 
 
 @property (nonatomic, copy) NSMutableArray *artworkNameArray;
+@property (nonatomic, copy) NSMutableArray *artworkSellerArray;
 @property (nonatomic, copy) NSMutableArray *artworkSizeArray;
 @property (nonatomic, copy) NSMutableArray *artworkFormatArray;
 @property (nonatomic, copy) NSMutableArray *artworkFullImageArray;
@@ -138,6 +139,9 @@
 @property (nonatomic, strong) NSString *matSizeUseString;
 
 @property (nonatomic, strong) NSString *nameString;
+@property (nonatomic, strong) NSString *sellerString;
+@property (nonatomic, strong) NSString *companyString;
+@property (nonatomic, strong) NSString *numberString;
 
 @property (nonatomic, strong) UIImage *selectedImage;
 

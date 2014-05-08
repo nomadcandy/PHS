@@ -55,6 +55,7 @@
 @synthesize chosenImageView;
 
 @synthesize artworkNameArray;
+@synthesize artworkSellerArray;
 @synthesize artworkSizeArray;
 @synthesize artworkFormatArray;
 @synthesize artworkFullImageArray;
@@ -63,6 +64,9 @@
 @synthesize artworkInfoArray;
 
 @synthesize nameString;
+@synthesize sellerString;
+@synthesize companyString;
+@synthesize numberString;
 
 
 //@synthesize logoUseStringHere;
@@ -133,8 +137,15 @@
 {
     [super viewDidLoad];
     NSLog(@"nameStringHere %@",nameString);
+    NSLog(@"sellerStringHere %@",sellerString);
+    NSLog(@"companyStringHere %@",companyString);
+    NSLog(@"numberStringHere %@",numberString);
+
     nameField.text =nameString;
-    //nameField.text =@"nameString";
+    sellerField.text =sellerString;
+    companyField.text =companyString;
+    numberField.text =numberString;
+    
 
     
    /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
@@ -1478,6 +1489,8 @@ else
         
         NSLog(@"artworkIDArray %@",artworkIDArray);
         goingController.artworkIDArray = artworkIDArray;
+        
+        goingController.artworkSellerArray = artworkSellerArray;
         
         
         

@@ -32,6 +32,8 @@
 @synthesize artworkIconArray;
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
+@synthesize artworkSellerArray;
+//@synthesize artworkCompanyArray;
 
 @synthesize favoritesArray;
 
@@ -406,6 +408,10 @@
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
         
+        
+        artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
+        
+        //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
         
         
   }];

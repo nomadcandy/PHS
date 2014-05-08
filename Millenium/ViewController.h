@@ -45,7 +45,12 @@
     NSMutableArray *artworkIconArray;
     NSMutableArray *artworkIDArray;
     NSMutableArray *artworkInfoArray;
+    NSMutableArray *artworkSellerArray;
+    NSMutableArray *artworkCompanyArray;
+    
+    
     NSMutableArray *artworkNameDictionary;
+    
     
     NSString*artworkNameAddString;
     NSString*artworkFullImageString;
@@ -87,6 +92,8 @@
 @property (nonatomic, copy) NSMutableArray *artworkIconArray;
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
+@property (nonatomic, copy) NSMutableArray *artworkSellerArray;
+//@property (nonatomic, copy) NSMutableArray *artworkCompanyArray;
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;

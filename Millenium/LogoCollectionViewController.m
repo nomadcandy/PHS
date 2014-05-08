@@ -60,6 +60,8 @@
 
 
 @synthesize matNameArray;
+@synthesize matSellerArray;
+@synthesize matCompanyArray;
 @synthesize matSizeArray;
 @synthesize matFormatArray;
 @synthesize matFullImageArray;
@@ -1293,7 +1295,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
     companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
-    numberString =[artworkNumberArray objectAtIndex:indexPathSend];
+    numberString =[artworkIDArray objectAtIndex:indexPathSend];
     
     NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
     
@@ -1361,6 +1363,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         //nameString =[artworkNameArray objectAtIndex:indexPathSend];
         NSLog(@"nameStringSend %@",nameString);
         destViewController.nameString=nameString;
+        destViewController.companyString=companyString;
+        destViewController.sellerString=sellerString;
+        destViewController.numberString=numberString;
+
         
         /*numberString=[artworkNumberArray objectAtIndex:indexPathSend];
         NSLog(@"logoUseStringSend %@",numberString);
