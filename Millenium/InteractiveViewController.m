@@ -970,10 +970,10 @@ else
 -(IBAction)addNote:(id)sender{
     
     
-    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(205, 380, 100, 60)];
+    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(205, 380, 200, 60)];
     //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
     textNoteField.textColor = [UIColor redColor];
-    textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:10];
     textNoteField.backgroundColor=[UIColor whiteColor];
     textNoteField.text=@"YOUR TEXT HERE";
     [self.view addSubview:textNoteField];
