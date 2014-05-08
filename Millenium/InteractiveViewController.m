@@ -129,12 +129,12 @@
 
 
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     NSLog(@"nameStringHere %@",nameString);
     nameField.text =nameString;
+    //nameField.text =@"nameString";
 
     
    /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
@@ -230,6 +230,9 @@
 {
     [self.delegate setString:string];
     [self.delegate setString:_logoUseStringHere];
+    [self.delegate setString:nameString];
+    nameField.text =nameString;
+
 }
 
     

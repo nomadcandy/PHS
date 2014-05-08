@@ -129,7 +129,7 @@
 @property (nonatomic, strong) NSString *matColorUseString;
 @property (nonatomic, strong) NSString *matSizeUseString;
 
-@property (nonatomic, copy) NSString *nameString;
+@property (nonatomic, strong) NSString *nameString;
 
 @property (nonatomic, strong) UIImage *selectedImage;
 

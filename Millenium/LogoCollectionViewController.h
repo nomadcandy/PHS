@@ -140,10 +140,10 @@
 @property (nonatomic, copy) NSString *artworkNameUnFavString;
 @property (nonatomic, copy) NSString *urlUnFavString;
 
-@property (nonatomic, retain) NSString *sellerString;
-//@property (nonatomic, retain) NSString *nameString;
-@property (nonatomic, retain) NSString *companyString;
-@property (nonatomic, retain) NSString *numberString;
+@property (nonatomic, copy) NSString *sellerString;
+@property (nonatomic, copy) NSString *nameString;
+@property (nonatomic, copy) NSString *companyString;
+@property (nonatomic, copy) NSString *numberString;
 
 
 

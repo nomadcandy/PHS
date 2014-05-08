@@ -40,7 +40,7 @@
 @synthesize logoUseString;
 
 @synthesize sellerString;
-//@synthesize nameString;
+@synthesize nameString;
 @synthesize companyString;
 @synthesize numberString;
 
@@ -1285,8 +1285,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"indexPathSend %d",indexPathSend);
     //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     
-    NSString*nameString =[artworkNameArray objectAtIndex:indexPathSend];
-    NSLog(@" nameStringLogoSelected %@iconImage",nameString);
+    nameString =[artworkNameArray objectAtIndex:indexPathSend];
+    NSLog(@" nameStringLogoSelected %@",nameString);
     
     sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
     companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
@@ -1354,7 +1354,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         destViewController.logoUseStringHere=logoUseString;
         
         //nameString=[artworkNameArray objectAtIndex:indexPathSend];
-        NSString*nameString =[artworkNameArray objectAtIndex:indexPathSend];
+        //nameString =[artworkNameArray objectAtIndex:indexPathSend];
         NSLog(@"nameStringSend %@",nameString);
         destViewController.nameString=nameString;
         
