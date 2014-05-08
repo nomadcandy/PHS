@@ -142,6 +142,7 @@
 @property (nonatomic, strong) NSString *sellerString;
 @property (nonatomic, strong) NSString *companyString;
 @property (nonatomic, strong) NSString *numberString;
+@property (nonatomic, strong) NSString *sizeString;
 
 @property (nonatomic, strong) UIImage *selectedImage;
 

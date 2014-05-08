@@ -91,7 +91,7 @@
 @property (nonatomic, assign) int rowSelectedHere;
 @property (nonatomic, assign) int rowSelectedSend;
 
-@property (nonatomic, assign) int jsonLogoCount;
+//@property (nonatomic, assign) int jsonLogoCount;
 
 @property (nonatomic, retain) IBOutlet UITextField *searchOutField;
 @property (nonatomic, retain) UITextField *searchHereField;
@@ -151,6 +151,7 @@
 @property (nonatomic, copy) NSString *nameString;
 @property (nonatomic, copy) NSString *companyString;
 @property (nonatomic, copy) NSString *numberString;
+@property (nonatomic, copy) NSString *sizeString;
 
 
 //@property (nonatomic, assign) id <StringSetDelegate> delegateString;

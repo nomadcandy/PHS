@@ -67,6 +67,7 @@
 @synthesize sellerString;
 @synthesize companyString;
 @synthesize numberString;
+@synthesize sizeString;
 
 
 //@synthesize logoUseStringHere;

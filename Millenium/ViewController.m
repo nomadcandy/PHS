@@ -950,8 +950,8 @@ else{
         NSLog(@"artworkNameArray %@",artworkNameArray);
         goingController.artworkNameArray = artworkNameArray;
         
-        NSLog(@"jsonLogoCount %i",jsonLogoCount);
-        goingController.jsonLogoCount = jsonLogoCount;
+       /* NSLog(@"jsonLogoCount %i",jsonLogoCount);
+        goingController.jsonLogoCount = jsonLogoCount;*/
         
         NSLog(@"artworkSizeArray %@",artworkSizeArray);
         goingController.artworkSizeArray = artworkSizeArray;

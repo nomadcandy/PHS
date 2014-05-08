@@ -25,7 +25,7 @@
 @synthesize searchOutField;
 @synthesize artworkNameAddFavString;
 @synthesize urlFavString;
-@synthesize jsonLogoCount;
+//@synthesize jsonLogoCount;
 @synthesize nearMeImagesArray;
 @synthesize nearMeNamesArray;
 //@synthesize button;
@@ -44,6 +44,7 @@
 @synthesize nameString;
 @synthesize companyString;
 @synthesize numberString;
+@synthesize sizeString;
 
 @synthesize artworkNameDictionary;
 
@@ -1296,6 +1297,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
     companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
     numberString =[artworkIDArray objectAtIndex:indexPathSend];
+    sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
     
     NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
     
@@ -1366,6 +1368,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         destViewController.companyString=companyString;
         destViewController.sellerString=sellerString;
         destViewController.numberString=numberString;
+        destViewController.sizeString=sizeString;
 
         
         /*numberString=[artworkNumberArray objectAtIndex:indexPathSend];
