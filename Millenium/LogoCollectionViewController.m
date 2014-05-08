@@ -1264,7 +1264,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 -(IBAction)goInteractive1:(UIButton*)sender event:(id)event {
-    
+    //added to enable passing data to other viewController forces ViewDidLoad with new Data
     [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
