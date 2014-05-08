@@ -166,8 +166,8 @@
     _widthField.text=widthString;
     _heightField.text=safeHeightString;
     
-    _widthCircleField.text=widthString;
-    _heightCircleField.text=safeHeightString;
+    _widthCircleField.text=_widthField.text;
+    _heightCircleField.text=_heightField.text;
 
     
    /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
@@ -1453,6 +1453,49 @@ else
 -(IBAction)backButton:(id)sender{
     
      //[self dismissModalViewControllerAnimated:NO];
+    
+}
+
+-(IBAction) twoByTwo:(id)sender{
+    
+    _widthField.text = @"2'";
+    _widthCircleField.text = @"2'";
+    
+    _heightField.text = @"2'";
+    _heightCircleField.text = @"2'";
+    
+}
+
+-(IBAction) threeByFive:(id)sender{
+    
+    _widthField.text = @"3'";
+    _widthCircleField.text = @"3'";
+    
+    _heightField.text = @"5'";
+    _heightCircleField.text = @"5'";
+    
+    
+    
+}
+
+-(IBAction) fourBySix:(id)sender{
+    
+   
+    _widthField.text = @"4'";
+    _widthCircleField.text = @"4'";
+    
+    _heightField.text = @"6'";
+    _heightCircleField.text = @"6'";
+}
+
+-(IBAction) threeByTen:(id)sender{
+    
+    _widthField.text = @"3'";
+    _widthCircleField.text = @"3'";
+    
+    _heightField.text = @"10'";
+    _heightCircleField.text = @"10'";
+
     
 }
 

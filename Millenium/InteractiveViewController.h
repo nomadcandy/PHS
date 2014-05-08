@@ -158,9 +158,16 @@
 
 -(IBAction)goAcquireSketches:(id)sender;
 -(IBAction)goSketches:(id)sender;
-- (IBAction)goSignMat:(id)sender;
-- (IBAction)backButton:(id)sender;
-- (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
-- (IBAction)cropSquare:(id)sender;
+-(IBAction)goSignMat:(id)sender;
+-(IBAction)backButton:(id)sender;
+-(IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
+-(IBAction)cropSquare:(id)sender;
+
+-(IBAction) twoByTwo:(id)sender;
+-(IBAction) threeByFive:(id)sender;
+-(IBAction) fourBySix:(id)sender;
+-(IBAction) threeByTen:(id)sender;
+
+
 
 @end
