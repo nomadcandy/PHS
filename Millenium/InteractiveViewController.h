@@ -161,6 +161,7 @@
 -(IBAction)goSignMat:(id)sender;
 -(IBAction)backButton:(id)sender;
 -(IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
+-(IBAction)goMail:(UIButton*)sender event:(id)event;
 -(IBAction)cropSquare:(id)sender;
 
 -(IBAction) twoByTwo:(id)sender;
