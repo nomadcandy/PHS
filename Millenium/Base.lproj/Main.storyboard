@@ -544,6 +544,8 @@
                     <connections>
                         <outlet property="chosenImageView" destination="0zU-6P-ULj" id="5Q5-J0-hY9"/>
                         <outlet property="companyField" destination="frL-og-Dmi" id="Ahc-KW-gU0"/>
+                        <outlet property="heightCircleField" destination="ia6-T9-i4N" id="5bh-9I-DjC"/>
+                        <outlet property="heightField" destination="XmO-Fy-6aA" id="6EA-CI-26m"/>
                         <outlet property="homeButton" destination="EYB-Me-8Vk" id="Fp5-Km-pWB"/>
                         <outlet property="interactiveMatView" destination="B61-WR-Lik" id="U1I-DP-m09"/>
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
@@ -553,6 +555,8 @@
                         <outlet property="searchField" destination="7fQ-D3-7DB" id="lcc-ZA-q8m"/>
                         <outlet property="sellerField" destination="gg9-EA-31R" id="ClZ-Pg-GlW"/>
                         <outlet property="titleLabel" destination="Gp3-sR-MKY" id="Dh3-pE-Jh9"/>
+                        <outlet property="widthCircleField" destination="FKe-fX-eBR" id="PyZ-DG-L4N"/>
+                        <outlet property="widthField" destination="I35-5a-Z7R" id="ViM-IG-1w0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gk9-Zk-GCM" userLabel="First Responder" sceneMemberID="firstResponder"/>

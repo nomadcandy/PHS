@@ -147,6 +147,27 @@
     companyField.text =companyString;
     numberField.text =numberString;
     
+   
+    
+    
+    NSString *sizeGetString = sizeString;
+    NSRange range = [sizeGetString rangeOfString:@"x"];
+    
+    NSString *widthString = [sizeGetString substringToIndex:range.location];
+    NSLog(@"%@",widthString);
+    
+    NSString *heightString = [sizeGetString substringFromIndex:range.location];
+    NSLog(@"%@",heightString);
+    
+    
+    NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
+    NSString *safeHeightString = [[heightString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@""];
+    
+    _widthField.text=widthString;
+    _heightField.text=safeHeightString;
+    
+    _widthCircleField.text=widthString;
+    _heightCircleField.text=safeHeightString;
 
     
    /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];

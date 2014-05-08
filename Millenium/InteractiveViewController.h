@@ -97,6 +97,9 @@
 @property (nonatomic, strong) IBOutlet UITextField *widthField;
 @property (nonatomic, strong) IBOutlet UITextField *heightField;
 
+@property (nonatomic, strong) IBOutlet UITextField *widthCircleField;
+@property (nonatomic, strong) IBOutlet UITextField *heightCircleField;
+
 @property (nonatomic, strong) IBOutlet UIView *interactiveView;
 @property (nonatomic, strong) IBOutlet UIButton *uploadLogoButton;
 @property (nonatomic, strong) IBOutlet UIButton *internetLogoButton;
