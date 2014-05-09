@@ -147,7 +147,12 @@
 //@property (nonatomic,strong) IBOutlet UIButton *logoChoose1Button;
 
 @property (nonatomic, copy) NSString *artworkNameAddFavString;
+@property (nonatomic, copy) NSString*artworkCompanyAddFavString;
+@property (nonatomic, copy) NSString*artworkSellerAddFavString;
+
+
 @property (nonatomic, copy) NSString *urlFavString;
+
 @property (nonatomic, copy) NSString *artworkNameUnFavString;
 @property (nonatomic, copy) NSString *urlUnFavString;
 

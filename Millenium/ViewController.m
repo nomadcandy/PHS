@@ -343,11 +343,7 @@
     
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
     
-    
-    
-    
-    
-    
+        
     //parse Array from web
     NSArray *searchLogoArray = [NSJSONSerialization
                                           JSONObjectWithData:data

@@ -24,6 +24,8 @@
 @synthesize searchHereField;
 @synthesize searchOutField;
 @synthesize artworkNameAddFavString;
+@synthesize artworkCompanyAddFavString;
+@synthesize artworkSellerAddFavString;
 @synthesize urlFavString;
 //@synthesize jsonLogoCount;
 @synthesize nearMeImagesArray;
@@ -1027,6 +1029,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
     artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
+    /*NSString*artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+    NSString*artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+    NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
     
     
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -1037,6 +1042,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
     [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    /*[newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
+    [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];*/
+
     
     
     NSError *error = nil;
