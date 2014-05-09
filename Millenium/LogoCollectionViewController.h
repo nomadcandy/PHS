@@ -128,6 +128,10 @@
 @property (nonatomic, strong) NSMutableArray *favoritesArray;
 @property (nonatomic, strong) NSMutableArray *favoritesRemoveArray;
 
+@property (nonatomic, strong) NSMutableArray *favoritesMatArray;
+@property (nonatomic, strong) NSMutableArray *favoritesLogoArray;
+@property (nonatomic, strong) NSMutableArray *favoritesLogoRemoveArray;
+
 @property (nonatomic, copy) NSDictionary *artworkNameDictionary;
 
 @property (nonatomic, copy) NSString*logoUseString;

@@ -313,19 +313,12 @@
     
     
     
-    //NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"]];
     
     
-   // NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", searchString,passwordString];
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match", searchString];
-    
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchString];
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
-    
-    //[theRequest setHTTPMethod:@"POST"];
-    //[theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     
     
     NSLog(@"URLLOGIN: %@",urlSearch);
@@ -340,11 +333,7 @@
     
     
     
-    //parse Dictionary from web
-    NSDictionary *searchLogoDictionary = [NSJSONSerialization
-                                     JSONObjectWithData:data
-                                     options:NSJSONReadingAllowFragments
-                                     error: &error];
+    
     
     
     //parse Array from web
@@ -358,7 +347,6 @@
     
     
     
-    NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {

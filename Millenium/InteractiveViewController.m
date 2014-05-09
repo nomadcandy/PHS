@@ -19,6 +19,7 @@
 
 @synthesize textNoteField;
 @synthesize textDecField;
+@synthesize hexField;
 
 
 //@synthesize delegate=_delegate;
@@ -967,6 +968,49 @@ else
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
 }
+
+/*-(IBAction)addHexColor:(id)sender{
+    
+
+    NSString*hexString=hexField.text;
+    NSString *cleanString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];
+    if([cleanString length] == 3) {
+        cleanString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
+                       [cleanString substringWithRange:NSMakeRange(0, 1)],[cleanString substringWithRange:NSMakeRange(0, 1)],
+                       [cleanString substringWithRange:NSMakeRange(1, 1)],[cleanString substringWithRange:NSMakeRange(1, 1)],
+                       [cleanString substringWithRange:NSMakeRange(2, 1)],[cleanString substringWithRange:NSMakeRange(2, 1)]];
+    }
+    if([cleanString length] == 6) {
+        cleanString = [cleanString stringByAppendingString:@"ff"];
+    }
+    
+    unsigned int baseValue;
+    [[NSScanner scannerWithString:cleanString] scanHexInt:&baseValue];
+    
+    if (red) {*red = ((baseValue >> 24) & 0xFF)/255.0f; }
+    if (green) { *green = ((baseValue >> 16) & 0xFF)/255.0f; }
+    if (blue) { *blue = ((baseValue >> 8) & 0xFF)/255.0f; }
+    if (alpha) { *alpha = ((baseValue >> 0) & 0xFF)/255.0f; }
+    
+    
+    UIColor * SKColorFromHexString(NSString * hexString) {
+        float red, green, blue, alpha;
+        SKScanHexColor(hexString, &red, &green, &blue, &alpha);
+        
+        return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    }
+    
+    
+    UIButton *colorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [colorButton addTarget:self action:@selector(myCustomFunction:) forControlEvents:UIControlEventTouchUpInside];
+    /*[myButton setBackgroundImage:[UIImage imageNamed:@"yourImageName.png"] forState:UIControlStateNormal];*/
+
+    /*[myButton setColor:[UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    colorButton.frame = CGRectMake(304.0, 300.0, 44.0, 44.0);
+    
+    [self addSubview:myButton];
+    
+}*/
 -(IBAction)addNote:(id)sender{
     
     

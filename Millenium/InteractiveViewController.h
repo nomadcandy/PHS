@@ -52,7 +52,9 @@
     
     UITextField *textNoteField;
     UITextField *textDecField;
+    
     IBOutlet UITextField *searchField;
+    IBOutlet UITextField *hexField;
     IBOutlet UIButton *searchButton;
     
     AppDelegate *appdelegate;
@@ -85,7 +87,7 @@
 @property (nonatomic, strong) UITextField *textNoteField;
 @property (nonatomic, strong) UITextField *textDecField;
 
-
+@property (nonatomic, strong) IBOutlet UITextField *hexField;
 @property (nonatomic, strong) IBOutlet UITextField *searchField;
 @property (nonatomic, strong) IBOutlet UIButton *searchButton;
 
@@ -112,6 +114,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *logoButton;
 @property (nonatomic, strong) IBOutlet UIButton *matButton;
 @property (nonatomic, strong) IBOutlet UIButton *logoPicButton;
+
+@property (nonatomic, strong) IBOutlet UIButton *hexButton;
 
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 
@@ -156,11 +160,13 @@
 
 -(IBAction)goSearch:(id)sender;
 
+-(IBAction) addHexField:(id)sender;
+
 -(IBAction)goAcquireSketches:(id)sender;
 -(IBAction)goSketches:(id)sender;
 -(IBAction)goSignMat:(id)sender;
 -(IBAction)backButton:(id)sender;
--(IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
+-(IBAction)imageMoved:(id) sender withEvent:(UIEvent *) event;
 -(IBAction)goMail:(UIButton*)sender event:(id)event;
 -(IBAction)cropSquare:(id)sender;
 

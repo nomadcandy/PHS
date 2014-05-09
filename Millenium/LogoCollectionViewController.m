@@ -246,7 +246,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
        
     
     // Fetch the devices from persistent data store
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    /*NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
     self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
@@ -255,7 +255,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"favoritesArray %@",_favoritesArray);
    // NSLog(@"logoSearch %@",logoSearch);
     
-    [self.collectionView reloadData];
+    [self.collectionView reloadData];*/
 }
 
 
@@ -299,14 +299,86 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goFav:(id)sender{
     
-    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
-    //request.region = regionToSearchIn;
-    //request.region = 500;
-    request.naturalLanguageQuery = @"restaurants"; // or business name
-    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
-    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
-        // do something with the results / error
+    //TODO load into CoreData anything that is in Favorites.
+    
+    // Fetch the devices from persistent data store
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
+    //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+   /* NSFetchRequest *fetchRequestMat = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+    //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequestMat error:nil] mutableCopy];*/
+    
+    
+    
+    NSLog(@"favoritesLogoArray %@",_favoritesLogoArray);
+    NSLog(@"favoritesMatArray %@",_favoritesMatArray);
+    // NSLog(@"logoSearch %@",logoSearch);
+    
+    
+    
+    [_favoritesLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        NSLog(@"%@", object);
+        NSLog(@"searchLogoArray %@",_favoritesLogoArray);
+        
+        
+        artworkNameArray = [_favoritesLogoArray valueForKey:@"ArtworkName"];
+        
+        
+        NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        
+        
+        //adding an array to COREDATA
+        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
+        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
+         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
+         
+         for (NSString *anArtworkName in logoSearchs) {
+         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
+         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
+        
+        
+        
+        
+        
+        artworkSizeArray = [_favoritesLogoArray valueForKey:@"ArtworkSize"];
+        NSLog(@"artworkSizeArray %@",artworkSizeArray);
+        
+        
+        
+        
+        artworkFormatArray = [_favoritesLogoArray valueForKey:@"Format"];
+        NSLog(@"artworkFormatString %@",artworkFormatArray);
+        
+        
+        
+        
+        artworkFullImageArray = [_favoritesLogoArray valueForKey:@"FullImageURL"];
+        NSLog(@"fullImageArray %@",artworkFullImageArray);
+        
+        
+        artworkIconArray = [_favoritesLogoArray valueForKey:@"IconURL"];
+        
+        
+        artworkIDArray = [_favoritesLogoArray valueForKey:@"ProductID"];
+        //NSLog(@"idString %@",idString);
+        
+        
+        artworkSellerArray = [_favoritesLogoArray valueForKey:@"Seller"];
+        
+        //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
+        
+        
     }];
+
+    
+    
+    [self.collectionView reloadData];
+
+    
     
 }
 
