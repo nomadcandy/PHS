@@ -52,6 +52,7 @@
 @synthesize titleBar;
 
 @synthesize titleLabel;
+@synthesize headerLabel;
 
 @synthesize chosenImageView;
 
@@ -69,6 +70,8 @@
 @synthesize companyString;
 @synthesize numberString;
 @synthesize sizeString;
+
+@synthesize interactiveHeaderString;
 
 
 //@synthesize logoUseStringHere;
@@ -147,6 +150,8 @@
     sellerField.text =sellerString;
     companyField.text =companyString;
     numberField.text =numberString;
+    
+    headerLabel.text= interactiveHeaderString;
     
    
     
@@ -1227,7 +1232,8 @@ else
     
     // NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", searchString,passwordString];
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchString];
+
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];

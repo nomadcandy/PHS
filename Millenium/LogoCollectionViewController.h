@@ -156,6 +156,7 @@
 @property (nonatomic, copy) NSString *companyString;
 @property (nonatomic, copy) NSString *numberString;
 @property (nonatomic, copy) NSString *sizeString;
+@property (nonatomic, copy) NSString *interactiveHeaderString;
 
 
 //@property (nonatomic, assign) id <StringSetDelegate> delegateString;

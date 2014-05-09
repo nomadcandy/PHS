@@ -121,6 +121,7 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView *titleBar;
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) IBOutlet UILabel *headerLabel;
 
 @property (nonatomic, strong) IBOutlet UIButton *size2by3;
 @property (nonatomic, strong) IBOutlet UIButton *size3by5;
@@ -150,6 +151,8 @@
 @property (nonatomic, strong) NSString *companyString;
 @property (nonatomic, strong) NSString *numberString;
 @property (nonatomic, strong) NSString *sizeString;
+
+@property (nonatomic, strong) NSString *interactiveHeaderString;
 
 @property (nonatomic, strong) UIImage *selectedImage;
 
