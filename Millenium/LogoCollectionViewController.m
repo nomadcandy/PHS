@@ -1281,33 +1281,59 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
-        
-
-        logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
-    
-        NSLog(@"logoLabel %@",logoCell.logoLabel.text);
-    
+        NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
         NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
-    
-        NSString*httpString= @"http://";
-    
-      
-        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+
+
         
-        NSLog(@"%@ urlStringAppend",urlStringAppend);
+           if ([logoLabelString length] == 0)
+               
+           {
+               
+               logoCell.logoLabel.text = @" ";
+               
+               
+           }else{
+           
+               logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
+                NSLog(@"logoLabel %@",logoCell.logoLabel.text);
+           }
+               
+               
+        if ([urlString length] == 0)
+            
+        {
+            
+            
+            
+            
+        }else{
+            
+            
+            NSString*httpString= @"http://";
+            
+            
+            NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+            
+            NSLog(@"%@ urlStringAppend",urlStringAppend);
+            
+            NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+            
+            UIImage * iconImage;
+            
+            iconImage = [UIImage imageWithData:data];
+            
+            
+            [logoCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
+
+            
+        }
+
         
-        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     
-        UIImage * iconImage;
+        
     
-        iconImage = [UIImage imageWithData:data];
-    
-        //NSLog(@"%@iconImage",iconImage);
-    
-      
-    
-        [logoCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
-    
+        
        
     
     
