@@ -1029,6 +1029,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
     artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
+    
+    NSLog(@"urlFavString %@",urlFavString);
+    NSLog(@"urlFavString %@",artworkNameAddFavString);
     /*NSString*artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
     NSString*artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
     NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
@@ -1041,7 +1044,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
-    [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    //[newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
     /*[newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
     [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];*/
 
@@ -1329,7 +1332,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
         }
-        logoCell.matLabel.text = [matNameArray objectAtIndex:indexPath.item];
+       /* logoCell.matLabel.text = [matNameArray objectAtIndex:indexPath.item];
         
         NSLog(@"logoLabel %@",logoCell.matLabel.text);
         
@@ -1377,7 +1380,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
             
-        }
+        }*/
 
                
         return logoCell;

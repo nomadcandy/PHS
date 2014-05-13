@@ -1019,12 +1019,12 @@ else
 -(IBAction)addNote:(id)sender{
     
     
-    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(205, 580, 300, 20)];
+    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(445, 300, 300, 60)];
     //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
     textNoteField.textColor = [UIColor redColor];
-    textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:12];
+    textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textNoteField.backgroundColor=[UIColor whiteColor];
-    textNoteField.text=@"YOUR TEXT HERE";
+    textNoteField.text=@"DESIGN TEXT";
     [self.view addSubview:textNoteField];
     
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
@@ -1042,11 +1042,11 @@ else
 -(IBAction)addText:(id)sender{
     
     
-    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(245, 300, 100, 60)];
+    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 200, 300, 60)];
     textDecField.textColor = [UIColor whiteColor];
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textDecField.backgroundColor=[UIColor clearColor];
-    textDecField.text=@"YOUR TEXT HERE";
+    textDecField.text=@"NOTES";
     [self.view addSubview:textDecField];
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
@@ -1782,6 +1782,17 @@ else
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
     return UIInterfaceOrientationLandscapeLeft;
 }*/
+
+// The mail compose view controller delegate method
+- (void)mailComposeController:(MFMailComposeViewController *)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError *)error
+{
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

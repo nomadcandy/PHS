@@ -241,7 +241,9 @@
           didFinishWithResult:(MFMailComposeResult)result
                         error:(NSError *)error
 {
-    [self dismissModalViewControllerAnimated:YES];
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES
+                                           completion:nil];
 }
 
 
