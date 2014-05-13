@@ -362,13 +362,15 @@
     
     //Search Mats
     
+    
+    
     NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/MatSearchResults/?searchMatString=%@&Orderby=match", searchString];
     
     
     
     NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
     
-    NSLog(@"URLLOGIN: %@",urlSearchMat);
+    NSLog(@"URLSearchMat: %@",urlSearchMat);
     NSError *errorMat = nil;
     NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
     
@@ -445,7 +447,7 @@
     [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
         NSLog(@"%@", object);
-        NSLog(@"searchLogoArray %@",searchMatArray);
+        NSLog(@"searchMatArray %@",searchMatArray);
         
         
         matNameArray = [searchMatArray valueForKey:@"ArtworkName"];

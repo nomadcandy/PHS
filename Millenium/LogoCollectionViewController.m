@@ -1294,13 +1294,15 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
       
         NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
         
+        NSLog(@"%@ urlStringAppend",urlStringAppend);
+        
         NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     
         UIImage * iconImage;
     
         iconImage = [UIImage imageWithData:data];
     
-        NSLog(@"%@iconImage",iconImage);
+        //NSLog(@"%@iconImage",iconImage);
     
       
     
@@ -1332,7 +1334,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
         }
-       /* logoCell.matLabel.text = [matNameArray objectAtIndex:indexPath.item];
+       logoCell.matLabel.text = [matNameArray objectAtIndex:indexPath.item];
         
         NSLog(@"logoLabel %@",logoCell.matLabel.text);
         
@@ -1340,7 +1342,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         NSString*httpMatString= @"http://";
         
-        
+        //crashes here
         NSString *urlMatStringAppend = [httpMatString stringByAppendingString:urlMatString];
         
         NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
@@ -1380,7 +1382,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
             
-        }*/
+        }
 
                
         return logoCell;
