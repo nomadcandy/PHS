@@ -2020,11 +2020,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebPadLil.png" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-aA-fbB" userLabel="logoSelectedBG">
-                                <rect key="frame" x="20" y="152" width="322" height="274"/>
+                                <rect key="frame" x="24" y="152" width="322" height="274"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="huY-jg-CM5" userLabel="logoSelected">
-                                <rect key="frame" x="35" y="169" width="291" height="239"/>
+                                <rect key="frame" x="40" y="169" width="291" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
@@ -2216,7 +2216,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MaskGreySquare6.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-ou-XL2">
-                                <rect key="frame" x="35" y="170" width="291" height="238"/>
+                                <rect key="frame" x="40" y="170" width="291" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-gV-E9O">
@@ -2257,11 +2257,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEo-ei-o5J">
-                                <rect key="frame" x="713" y="652" width="103" height="54"/>
+                                <rect key="frame" x="723" y="652" width="146" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="ASSETS">
+                                <state key="normal" title="MY SKETCHES">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
