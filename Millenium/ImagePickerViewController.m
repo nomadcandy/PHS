@@ -174,10 +174,10 @@
     
     CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
-    CGAffineTransform currentTransform = chosenImageView.transform;
+    /*CGAffineTransform currentTransform = chosenImageView.transform;
     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
     
-    [chosenImageView setTransform:newTransform];
+    [chosenImageView setTransform:newTransform];*/
     
     
     //CGAffineTransform currentTransformLogo = logoPicButton.transform;
@@ -904,7 +904,8 @@
     //begin capture entire webview
     //CGRect screenRect = self->overlayWebView.frame;
     
-    CGRect screenRect = CGRectMake(680.0f, 413.0f, 504.0f, 504.0f);
+    //CGRect screenRect = CGRectMake(680.0f, 413.0f, 504.0f, 504.0f);
+    CGRect screenRect = CGRectMake(666.0f, 374.0f, 604.0f, 458.0f);
 
     UIGraphicsBeginImageContext(screenRect.size);
 
@@ -1097,7 +1098,8 @@
     //CGContextFillRect(ctx, maskUse);
     //CGContextFillRect (__bridge CAShapeLayer *)(addPath[]);
     
-    [googleWebView.layer renderInContext:ctx];
+    [chosenImageView.layer renderInContext:ctx];
+   // [googleWebView.layer renderInContext:ctx];
     
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     
@@ -1130,7 +1132,7 @@
     [chosenImageView setOpaque:NO];
     [chosenImageView setOpaque:NO];
     [chosenImageView setBackgroundColor:[UIColor clearColor]];
-    [chosenImageView setBackgroundColor:[UIColor clearColor].CGColor];
+    //[chosenImageView setBackgroundColor:[UIColor clearColor].CGColor];
     
    //[chosenImageView renderInContext:ctx];
 
