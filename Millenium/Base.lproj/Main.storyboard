@@ -2140,7 +2140,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MaskGreySquare8.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-ou-XL2">
-                                <rect key="frame" x="40" y="175" width="291" height="238"/>
+                                <rect key="frame" x="39" y="174" width="282" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-gV-E9O">
@@ -2948,7 +2948,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="WHu-6x-aPj"/>
-        <segue reference="5F9-JV-UFd"/>
+        <segue reference="qwZ-va-rdB"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>
