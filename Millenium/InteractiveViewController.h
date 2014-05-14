@@ -139,6 +139,9 @@
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
 
+
+
+
 @property (nonatomic, strong) NSString *actionSelectedString;
 @property (nonatomic, strong) NSString *matSizeString;
 @property (nonatomic, strong) NSString *matColorString;

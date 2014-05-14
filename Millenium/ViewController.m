@@ -1035,6 +1035,7 @@ else{
         goingController.artworkFormatArray = artworkFormatArray;
         goingController.artworkIconArray = artworkIconArray;
         goingController.artworkFullImageArray = artworkFullImageArray;
+        
         goingController.artworkIDArray = artworkIDArray;
         goingController.artworkCompanyArray = artworkCompanyArray;
         goingController.artworkSellerArray = artworkSellerArray;
@@ -1045,6 +1046,7 @@ else{
         goingController.matFormatArray = matFormatArray;
         goingController.matIconArray = matIconArray;
         goingController.matFullImageArray = matFullImageArray;
+        ///goingController.matIconImageArray = matIconImageArray;
         goingController.matIDArray = matIDArray;
         goingController.matCompanyArray = matCompanyArray;
         goingController.matSellerArray = matSellerArray;

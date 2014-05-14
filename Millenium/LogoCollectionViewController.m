@@ -1360,28 +1360,64 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
         }
-       logoCell.matLabel.text = [matNameArray objectAtIndex:indexPath.item];
         
-        NSLog(@"logoLabel %@",logoCell.matLabel.text);
-        
+        NSString*matLabelString =[matNameArray objectAtIndex:indexPath.item];
         NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
+
         
-        NSString*httpMatString= @"http://";
+        if ([matLabelString length] == 0)
+            
+        {
+            
+            logoCell.matLabel.text = @" ";
+            
+            
+        }else{
+            
+            logoCell.matLabel.text = [matNameArray objectAtIndex:indexPath.item];
+            NSLog(@"logoLabel %@",logoCell.matLabel.text);
+        }
         
-        //crashes here
-        NSString *urlMatStringAppend = [httpMatString stringByAppendingString:urlMatString];
         
-        NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
+        if ([urlMatString length] == 0)
+            
+        {
+            
+            
+            
+            
+        }else{
+            
+            
+           
+            
+            NSString*httpMatString= @"http://";
+            
+            //crashes here
+            NSString *urlMatStringAppend = [httpMatString stringByAppendingString:urlMatString];
+            
+            NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
+            
+            UIImage * iconMatImage;
+            
+            iconMatImage = [UIImage imageWithData:dataMat];
+            
+            NSLog(@"%@iconImage",iconMatImage);
+            
+            
+            
+            [logoCell.matChooseButton setImage:iconMatImage forState:UIControlStateNormal];
+            
+            
+        }
         
-        UIImage * iconMatImage;
-        
-        iconMatImage = [UIImage imageWithData:dataMat];
-        
-        NSLog(@"%@iconImage",iconMatImage);
+
         
         
         
-        [logoCell.matChooseButton setImage:iconMatImage forState:UIControlStateNormal];
+       
+        
+        
         
         
         
@@ -1514,6 +1550,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     iconImage = [UIImage imageWithData:data];
     
     NSLog(@"%@iconImage",iconImage);
+    
+    interactiveHeaderString = @"Create Mat";
 
     
     
@@ -1630,6 +1668,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         destViewController.numberString=numberString;
         destViewController.sizeString=sizeString;
 
+        destViewController.interactiveHeaderString=interactiveHeaderString;
         
         /*numberString=[artworkNumberArray objectAtIndex:indexPathSend];
         NSLog(@"logoUseStringSend %@",numberString);

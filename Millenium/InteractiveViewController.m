@@ -65,6 +65,8 @@
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
 
+
+
 @synthesize nameString;
 @synthesize sellerString;
 @synthesize companyString;
@@ -153,7 +155,6 @@
     
     headerLabel.text= interactiveHeaderString;
     
-   
     
     
     NSString *sizeGetString = sizeString;
@@ -174,7 +175,33 @@
     
     _widthCircleField.text=_widthField.text;
     _heightCircleField.text=_heightField.text;
+    
+    int w = [_widthField.text intValue];
+    int h = [_heightField.text intValue];
+    
+    int wHundred = w*100;
+    int hHundred = h*100;
 
+    
+    /*CGFloat width = w;
+    CGFloat height = w;*/
+    
+   
+
+    
+    if([headerLabel.text isEqualToString:@"Edit Mat"]){
+        
+        CGRect myMatRect = CGRectMake( 100.0f, 100.0f, wHundred, hHundred);
+        interactiveMatView = [[UIImageView alloc]initWithFrame:myMatRect];
+       // CGRect myImageRect = CGRectMake( 100.0f, 100.0f, 40.0f, 40.0f);
+        
+        
+    }else{
+        
+        
+    }
+
+    
     
    /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     logoPicButton.userInteractionEnabled = YES;
