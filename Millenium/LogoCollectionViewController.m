@@ -112,8 +112,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                          @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
     
     
-	// Do any additional setup after loading the view.
-    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(320, 30, 200, 30)];
+    //headers for Logos and Mats
+    UILabel*logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 180, 280, 30)];
+    logoLabel.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    logoLabel.text = @"INTERACTIVE LOGO'S";
+    [self.view addSubview:logoLabel];
+    
+    UILabel*matLabel = [[UILabel alloc] initWithFrame:CGRectMake(550, 180, 200, 30)];
+    matLabel.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    matLabel.text = @"MAT'S";
+    [self.view addSubview:matLabel];
+
+    
+    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(320, 40, 200, 30)];
     searchHereField.borderStyle = UITextBorderStyleRoundedRect;
     searchHereField.font = [UIFont systemFontOfSize:15];
     searchHereField.placeholder = @"search";
@@ -187,11 +198,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     UIImage*searchHereImage = [UIImage imageNamed:@"AssetsDefaultButton.png"];
     [searchHereButton setBackgroundImage:searchHereImage forState:UIControlStateNormal];
-    searchHereButton.frame = CGRectMake(520.0, 30.0, 40.0, 40.0);
+    searchHereButton.frame = CGRectMake(520.0, 35.0, 40.0, 40.0);
     [self.view addSubview:searchHereButton];
     
     
-    UIButton *searchVariationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+   /* UIButton *searchVariationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [searchVariationButton addTarget:self
                          action:@selector(goSearchVariation:)
                forControlEvents:UIControlEventTouchDown];
@@ -200,7 +211,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     UIImage*searchVariationImage = [UIImage imageNamed:@"AssetsDefaultButton.png"];
     [searchVariationButton setBackgroundImage:searchVariationImage forState:UIControlStateNormal];
     searchVariationButton.frame = CGRectMake(570.0, 30.0, 40.0, 40.0);
-    [self.view addSubview:searchVariationButton];
+    [self.view addSubview:searchVariationButton];*/
 
     
     
@@ -212,7 +223,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     UIImage*cintasImage = [UIImage imageNamed:@"CintasLogoBlackClear.png"];
     [cintasHomeButton setBackgroundImage:cintasImage forState:UIControlStateNormal];
     //[searchHereButton setImage:AssetsDefaultButton.png" forState:UIControlStateNormal];
-    cintasHomeButton.frame = CGRectMake(888.0, 36.0, 137.0, 60.0);
+    cintasHomeButton.frame = CGRectMake(888.0, 20.0, 137.0, 60.0);
     [self.view addSubview:cintasHomeButton];
     
 }
