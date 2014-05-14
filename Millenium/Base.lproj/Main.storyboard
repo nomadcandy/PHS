@@ -2092,7 +2092,7 @@
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irm-1S-0qP">
-                                <rect key="frame" x="882" y="552" width="62" height="62"/>
+                                <rect key="frame" x="364" y="547" width="62" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ImagePickerFlashButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -2215,7 +2215,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MaskGreySquare6.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-ou-XL2">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MaskGreySquare8.png" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-ou-XL2">
                                 <rect key="frame" x="40" y="170" width="291" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -3004,7 +3004,7 @@
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="LogoPadGrey" width="2048" height="1536"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
-        <image name="MaskGreySquare6.png" width="293" height="241"/>
+        <image name="MaskGreySquare8.png" width="293" height="252"/>
         <image name="MatClientFocusJade4.png" width="2078" height="1536"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="VideosWhite3.png" width="230" height="91"/>
@@ -3024,7 +3024,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="WHu-6x-aPj"/>
-        <segue reference="5F9-JV-UFd"/>
+        <segue reference="qwZ-va-rdB"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>

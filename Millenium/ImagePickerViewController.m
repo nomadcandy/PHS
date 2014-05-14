@@ -707,7 +707,7 @@
 
 - (IBAction)maskButtonClicked:(id)sender
 {
-    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare6"]];
+    chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare15"]];
     //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
     
     UIImage*croppedLogoImage = chosenImageView.image;
@@ -725,6 +725,9 @@
     
     
     [logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
+    
+    chosenImageView.image = newImg;
+
     
     
     
