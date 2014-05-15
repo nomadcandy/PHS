@@ -41,6 +41,10 @@
 @synthesize logoPicButton;
 @synthesize homeButton;
 
+
+@synthesize aquamarineButton;
+@synthesize steelBlueButton;
+
 @synthesize searchButton;
 @synthesize searchField;
 
@@ -226,7 +230,13 @@
 	[pinchRecognizerDec setDelegate:self];
 	[self.textDecField addGestureRecognizer:pinchRecognizerDec];
     
+    [steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     
+    steelBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    steelBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    steelBlueButton.layer.shadowOpacity = 1.00f;
+    steelBlueButton.layer.shadowRadius = 3.0f;
     
     
     /*UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)] ;

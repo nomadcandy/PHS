@@ -5,7 +5,7 @@
 //  Created by Jami Sue Becker on 3/10/14.
 //  Copyright (c) 2014 Jami Sue Becker. All rights reserved.
 //
-
+#import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 #import "iCarousel.h"
@@ -56,6 +56,9 @@
     IBOutlet UITextField *searchField;
     IBOutlet UITextField *hexField;
     IBOutlet UIButton *searchButton;
+    
+    IBOutlet UIButton *aquamarineButton;
+    //IBOutlet UIButton *steelBlueButton;
     
     AppDelegate *appdelegate;
     UIImage *selectedImage;
@@ -127,6 +130,9 @@
 @property (nonatomic, strong) IBOutlet UIButton *size3by5;
 @property (nonatomic, strong) IBOutlet UIButton *size4by6;
 @property (nonatomic, strong) IBOutlet UIButton *size3by10;
+
+@property (nonatomic, strong) IBOutlet UIButton *aquamarineButton;
+@property (nonatomic, strong) IBOutlet UIButton *steelBlueButton;
 
 
 @property (nonatomic, copy) NSMutableArray *artworkNameArray;
