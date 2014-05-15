@@ -53,6 +53,8 @@
 @synthesize artworkFullImageString;
 
 @synthesize jsonLogoCount;
+@synthesize logoCountInt;
+@synthesize matCountInt;
 
 
 @synthesize fetchedResultsController;
@@ -352,7 +354,7 @@
     
     
     
-    
+    int logoCountInt = searchLogoArray.count;
     
     
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);

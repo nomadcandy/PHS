@@ -56,6 +56,8 @@
     NSString*artworkFullImageString;
     
     int jsonLogoCount;
+    int logoCountInt;
+    int matCountInt;
 
     __unsafe_unretained id <ArrayDelegate> _delegate;
     
@@ -113,6 +115,8 @@
 @property (nonatomic, copy) NSString *artworkFullImageString;
 
 @property (nonatomic, assign) int jsonLogoCount;
+@property (nonatomic, assign) int logoCountInt;
+@property (nonatomic, assign) int matCountInt;
 
 
 -(void)insertNewManagedObject:(NSString *)fileName;

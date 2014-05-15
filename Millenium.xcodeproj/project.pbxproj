@@ -158,6 +158,33 @@
 		4297E05A1923CFE700E43779 /* MaskWhiteSquare13.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E0591923CFE700E43779 /* MaskWhiteSquare13.png */; };
 		4297E05C1923D08100E43779 /* MaskWhiteSquare14.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E05B1923D08100E43779 /* MaskWhiteSquare14.png */; };
 		4297E05E1923D11D00E43779 /* MaskWhiteSquare15.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E05D1923D11D00E43779 /* MaskWhiteSquare15.png */; };
+		4297E07A19250F8100E43779 /* Steel Blue_121.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E05F19250F8100E43779 /* Steel Blue_121.jpg */; };
+		4297E07B19250F8100E43779 /* Suede_123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06019250F8100E43779 /* Suede_123.jpg */; };
+		4297E07C19250F8100E43779 /* White_140.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06119250F8100E43779 /* White_140.jpg */; };
+		4297E07D19250F8100E43779 /* Rose_119.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06219250F8100E43779 /* Rose_119.jpg */; };
+		4297E07E19250F8100E43779 /* Royal Blue_107.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06319250F8100E43779 /* Royal Blue_107.jpg */; };
+		4297E07F19250F8100E43779 /* Sandalwood_120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06419250F8100E43779 /* Sandalwood_120.jpg */; };
+		4297E08019250F8100E43779 /* Silver_116.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06519250F8100E43779 /* Silver_116.jpg */; };
+		4297E08119250F8100E43779 /* Orange_127.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06619250F8100E43779 /* Orange_127.jpg */; };
+		4297E08219250F8100E43779 /* Purple_105.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06719250F8100E43779 /* Purple_105.jpg */; };
+		4297E08319250F8100E43779 /* Red_112.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06819250F8100E43779 /* Red_112.jpg */; };
+		4297E08419250F8100E43779 /* Gold_109.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06919250F8100E43779 /* Gold_109.jpg */; };
+		4297E08519250F8100E43779 /* Grey_115.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06A19250F8100E43779 /* Grey_115.jpg */; };
+		4297E08619250F8100E43779 /* Light Blue_106.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06B19250F8100E43779 /* Light Blue_106.jpg */; };
+		4297E08719250F8100E43779 /* Navy_118.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06C19250F8100E43779 /* Navy_118.jpg */; };
+		4297E08819250F8100E43779 /* Emerald Green_110.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06D19250F8100E43779 /* Emerald Green_110.jpg */; };
+		4297E08919250F8100E43779 /* Forest Green_117.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06E19250F8100E43779 /* Forest Green_117.jpg */; };
+		4297E08A19250F8100E43779 /* Cranberry_114.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E06F19250F8100E43779 /* Cranberry_114.jpg */; };
+		4297E08B19250F8100E43779 /* Dark Gold_103.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07019250F8100E43779 /* Dark Gold_103.jpg */; };
+		4297E08C19250F8100E43779 /* Charcoal_101.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07119250F8100E43779 /* Charcoal_101.jpg */; };
+		4297E08D19250F8100E43779 /* Chocolate_111.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07219250F8100E43779 /* Chocolate_111.jpg */; };
+		4297E08E19250F8100E43779 /* Clay_126.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07319250F8100E43779 /* Clay_126.jpg */; };
+		4297E08F19250F8100E43779 /* Black_108.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07419250F8100E43779 /* Black_108.jpg */; };
+		4297E09019250F8100E43779 /* Brown_102.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07519250F8100E43779 /* Brown_102.jpg */; };
+		4297E09119250F8100E43779 /* Burgundy_100.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07619250F8100E43779 /* Burgundy_100.jpg */; };
+		4297E09219250F8100E43779 /* Aquamarine_130.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07719250F8100E43779 /* Aquamarine_130.jpg */; };
+		4297E09319250F8100E43779 /* Turquoise_104.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07819250F8100E43779 /* Turquoise_104.jpg */; };
+		4297E09419250F8100E43779 /* Yellow_128.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4297E07919250F8100E43779 /* Yellow_128.jpg */; };
 		42A24BF519181FB800568305 /* Interactive2by2Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BEF19181FB800568305 /* Interactive2by2Button.png */; };
 		42A24BF619181FB800568305 /* Interactive3by5.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF019181FB800568305 /* Interactive3by5.png */; };
 		42A24BF719181FB800568305 /* Interactive4by6Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF119181FB800568305 /* Interactive4by6Button.png */; };
@@ -453,6 +480,33 @@
 		4297E0591923CFE700E43779 /* MaskWhiteSquare13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare13.png; sourceTree = "<group>"; };
 		4297E05B1923D08100E43779 /* MaskWhiteSquare14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare14.png; sourceTree = "<group>"; };
 		4297E05D1923D11D00E43779 /* MaskWhiteSquare15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare15.png; sourceTree = "<group>"; };
+		4297E05F19250F8100E43779 /* Steel Blue_121.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Steel Blue_121.jpg"; sourceTree = "<group>"; };
+		4297E06019250F8100E43779 /* Suede_123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Suede_123.jpg; sourceTree = "<group>"; };
+		4297E06119250F8100E43779 /* White_140.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = White_140.jpg; sourceTree = "<group>"; };
+		4297E06219250F8100E43779 /* Rose_119.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rose_119.jpg; sourceTree = "<group>"; };
+		4297E06319250F8100E43779 /* Royal Blue_107.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Royal Blue_107.jpg"; sourceTree = "<group>"; };
+		4297E06419250F8100E43779 /* Sandalwood_120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sandalwood_120.jpg; sourceTree = "<group>"; };
+		4297E06519250F8100E43779 /* Silver_116.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Silver_116.jpg; sourceTree = "<group>"; };
+		4297E06619250F8100E43779 /* Orange_127.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Orange_127.jpg; sourceTree = "<group>"; };
+		4297E06719250F8100E43779 /* Purple_105.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Purple_105.jpg; sourceTree = "<group>"; };
+		4297E06819250F8100E43779 /* Red_112.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Red_112.jpg; sourceTree = "<group>"; };
+		4297E06919250F8100E43779 /* Gold_109.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Gold_109.jpg; sourceTree = "<group>"; };
+		4297E06A19250F8100E43779 /* Grey_115.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grey_115.jpg; sourceTree = "<group>"; };
+		4297E06B19250F8100E43779 /* Light Blue_106.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Light Blue_106.jpg"; sourceTree = "<group>"; };
+		4297E06C19250F8100E43779 /* Navy_118.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Navy_118.jpg; sourceTree = "<group>"; };
+		4297E06D19250F8100E43779 /* Emerald Green_110.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Emerald Green_110.jpg"; sourceTree = "<group>"; };
+		4297E06E19250F8100E43779 /* Forest Green_117.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Forest Green_117.jpg"; sourceTree = "<group>"; };
+		4297E06F19250F8100E43779 /* Cranberry_114.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cranberry_114.jpg; sourceTree = "<group>"; };
+		4297E07019250F8100E43779 /* Dark Gold_103.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Dark Gold_103.jpg"; sourceTree = "<group>"; };
+		4297E07119250F8100E43779 /* Charcoal_101.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Charcoal_101.jpg; sourceTree = "<group>"; };
+		4297E07219250F8100E43779 /* Chocolate_111.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Chocolate_111.jpg; sourceTree = "<group>"; };
+		4297E07319250F8100E43779 /* Clay_126.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clay_126.jpg; sourceTree = "<group>"; };
+		4297E07419250F8100E43779 /* Black_108.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Black_108.jpg; sourceTree = "<group>"; };
+		4297E07519250F8100E43779 /* Brown_102.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Brown_102.jpg; sourceTree = "<group>"; };
+		4297E07619250F8100E43779 /* Burgundy_100.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burgundy_100.jpg; sourceTree = "<group>"; };
+		4297E07719250F8100E43779 /* Aquamarine_130.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Aquamarine_130.jpg; sourceTree = "<group>"; };
+		4297E07819250F8100E43779 /* Turquoise_104.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Turquoise_104.jpg; sourceTree = "<group>"; };
+		4297E07919250F8100E43779 /* Yellow_128.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Yellow_128.jpg; sourceTree = "<group>"; };
 		42A24BEF19181FB800568305 /* Interactive2by2Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Interactive2by2Button.png; sourceTree = "<group>"; };
 		42A24BF019181FB800568305 /* Interactive3by5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Interactive3by5.png; sourceTree = "<group>"; };
 		42A24BF119181FB800568305 /* Interactive4by6Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Interactive4by6Button.png; sourceTree = "<group>"; };
@@ -807,6 +861,33 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				4297E05F19250F8100E43779 /* Steel Blue_121.jpg */,
+				4297E06019250F8100E43779 /* Suede_123.jpg */,
+				4297E06119250F8100E43779 /* White_140.jpg */,
+				4297E06219250F8100E43779 /* Rose_119.jpg */,
+				4297E06319250F8100E43779 /* Royal Blue_107.jpg */,
+				4297E06419250F8100E43779 /* Sandalwood_120.jpg */,
+				4297E06519250F8100E43779 /* Silver_116.jpg */,
+				4297E06619250F8100E43779 /* Orange_127.jpg */,
+				4297E06719250F8100E43779 /* Purple_105.jpg */,
+				4297E06819250F8100E43779 /* Red_112.jpg */,
+				4297E06919250F8100E43779 /* Gold_109.jpg */,
+				4297E06A19250F8100E43779 /* Grey_115.jpg */,
+				4297E06B19250F8100E43779 /* Light Blue_106.jpg */,
+				4297E06C19250F8100E43779 /* Navy_118.jpg */,
+				4297E06D19250F8100E43779 /* Emerald Green_110.jpg */,
+				4297E06E19250F8100E43779 /* Forest Green_117.jpg */,
+				4297E06F19250F8100E43779 /* Cranberry_114.jpg */,
+				4297E07019250F8100E43779 /* Dark Gold_103.jpg */,
+				4297E07119250F8100E43779 /* Charcoal_101.jpg */,
+				4297E07219250F8100E43779 /* Chocolate_111.jpg */,
+				4297E07319250F8100E43779 /* Clay_126.jpg */,
+				4297E07419250F8100E43779 /* Black_108.jpg */,
+				4297E07519250F8100E43779 /* Brown_102.jpg */,
+				4297E07619250F8100E43779 /* Burgundy_100.jpg */,
+				4297E07719250F8100E43779 /* Aquamarine_130.jpg */,
+				4297E07819250F8100E43779 /* Turquoise_104.jpg */,
+				4297E07919250F8100E43779 /* Yellow_128.jpg */,
 				42A24BFD191843FF00568305 /* InteractiveGreyMat.png */,
 				42A24BFB19183F3000568305 /* InteractiveSignHere.png */,
 				42A24BEF19181FB800568305 /* Interactive2by2Button.png */,
@@ -1226,19 +1307,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				426A6A1E18ED0CC300255331 /* SampleLogo3.png in Resources */,
+				4297E08E19250F8100E43779 /* Clay_126.jpg in Resources */,
 				42B0155518E316100068019C /* TripleFlexScraper.pdf in Resources */,
+				4297E08A19250F8100E43779 /* Cranberry_114.jpg in Resources */,
 				421AC83B1918191400D37F7B /* InteractiveSizeGreyPad.png in Resources */,
+				4297E08F19250F8100E43779 /* Black_108.jpg in Resources */,
 				422139A219128F8B001BD328 /* AssetsRemFavButtons.png in Resources */,
 				426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */,
 				428085D018FD792D00389C9C /* goButton.png in Resources */,
 				42B0153718E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
 				422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */,
+				4297E08319250F8100E43779 /* Red_112.jpg in Resources */,
 				42B0155B18E3163F0068019C /* Dura-Lite.pdf in Resources */,
 				426A6A1D18ED0CC300255331 /* SampleLogo4.png in Resources */,
 				426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */,
 				42E9AC2618FF5A6C000E226D /* Clean3Button.png in Resources */,
 				426A6A1A18ED0CC300255331 /* SampleLogo7.png in Resources */,
 				422139921912883A001BD328 /* AssetsCompassButton.png in Resources */,
+				4297E08619250F8100E43779 /* Light Blue_106.jpg in Resources */,
+				4297E07E19250F8100E43779 /* Royal Blue_107.jpg in Resources */,
 				42849B5018E4556700E5B3FB /* envelope.png in Resources */,
 				422A691F19100B4E001CAB8D /* LogoPad.png in Resources */,
 				420BEFA019193F00003DCEB0 /* MaskWhiteSquare6.png in Resources */,
@@ -1265,18 +1352,23 @@
 				42B0155E18E3164B0068019C /* SafetyChef.pdf in Resources */,
 				42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0154918E315D40068019C /* UltraGuard.pdf in Resources */,
+				4297E07C19250F8100E43779 /* White_140.jpg in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
 				427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */,
 				422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */,
+				4297E08919250F8100E43779 /* Forest Green_117.jpg in Resources */,
 				42E9AC0B18FF58D3000E226D /* Friendly1Button.png in Resources */,
 				42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */,
+				4297E07F19250F8100E43779 /* Sandalwood_120.jpg in Resources */,
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
+				4297E08D19250F8100E43779 /* Chocolate_111.jpg in Resources */,
 				42B0157318E317B00068019C /* SoftStep.pdf in Resources */,
 				420BEF9619192E04003DCEB0 /* MaskWhiteSquare2.png in Resources */,
 				42B0152218E303C40068019C /* MatChatter5.png in Resources */,
 				4227989A19129F1400776844 /* AssetsGreyBox1.png in Resources */,
 				4221399919128996001BD328 /* CintasLogoBlackClear.png in Resources */,
+				4297E08519250F8100E43779 /* Grey_115.jpg in Resources */,
 				42A24BF619181FB800568305 /* Interactive3by5.png in Resources */,
 				420BEF98191935C7003DCEB0 /* MaskGreySquare2.png in Resources */,
 				420BEFA519195613003DCEB0 /* ImagePickerMaskButton.png in Resources */,
@@ -1284,6 +1376,7 @@
 				42E9AC0718FF5187000E226D /* MatClientFocusJade4.png in Resources */,
 				426A6A3218EDADBA00255331 /* ProffessionalButton.png in Resources */,
 				42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */,
+				4297E09419250F8100E43779 /* Yellow_128.jpg in Resources */,
 				422139931912883A001BD328 /* AssetsFavButton.png in Resources */,
 				42E9AC1418FF59E2000E226D /* Clean2Button.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
@@ -1291,6 +1384,7 @@
 				428085CE18FD756200389C9C /* LoginPopOver.png in Resources */,
 				42A24BF919181FB800568305 /* InteractivePortraitButton.png in Resources */,
 				426A6A1718ED0CC300255331 /* SampleLogo10.png in Resources */,
+				4297E09119250F8100E43779 /* Burgundy_100.jpg in Resources */,
 				42E9AC1618FF59E2000E226D /* Fresh2Button.png in Resources */,
 				42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */,
 				426A6A1618ED0CC300255331 /* SampleLogo11.png in Resources */,
@@ -1309,8 +1403,11 @@
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */,
 				421EE34F1919788F008A5CAB /* WebPadBig.png in Resources */,
+				4297E07A19250F8100E43779 /* Steel Blue_121.jpg in Resources */,
 				42B0155218E316030068019C /* BrushTrip.pdf in Resources */,
 				42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */,
+				4297E07D19250F8100E43779 /* Rose_119.jpg in Resources */,
+				4297E08719250F8100E43779 /* Navy_118.jpg in Resources */,
 				42A24BFC19183F3000568305 /* InteractiveSignHere.png in Resources */,
 				422139A519129097001BD328 /* AssetCheckButton.png in Resources */,
 				42B0156118E316580068019C /* TripleFlexFlow.pdf in Resources */,
@@ -1326,19 +1423,24 @@
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
 				42A24BF719181FB800568305 /* Interactive4by6Button.png in Resources */,
 				420BEF9C191937D2003DCEB0 /* MaskWhiteSquare4.png in Resources */,
+				4297E08119250F8100E43779 /* Orange_127.jpg in Resources */,
 				42E9AC1818FF59E2000E226D /* Friendly2Button.png in Resources */,
+				4297E07B19250F8100E43779 /* Suede_123.jpg in Resources */,
 				426A6A1418ED0CC300255331 /* SampleLogo13.png in Resources */,
 				426A6A1C18ED0CC300255331 /* SampleLogo5.png in Resources */,
 				428085C818FC412100389C9C /* loginBlackIcon.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
+				4297E09019250F8100E43779 /* Brown_102.jpg in Resources */,
 				42E9AC0C18FF58D3000E226D /* Fresh1Button.png in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
 				426A6A3718EDD3B100255331 /* Professional_video.mp4 in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				426A6A1818ED0CC300255331 /* SampleLogo9.png in Resources */,
 				426A6A2F18EDADBA00255331 /* LookingSerious.png in Resources */,
+				4297E08019250F8100E43779 /* Silver_116.jpg in Resources */,
 				42DBC73B18EE03AA005BF791 /* CintasLogoHighRes.png in Resources */,
 				4227989819129B9800776844 /* AssetsGreyBox.png in Resources */,
+				4297E09319250F8100E43779 /* Turquoise_104.jpg in Resources */,
 				426206621907004900FE7066 /* mask.png in Resources */,
 				4297E0561923CB6A00E43779 /* MaskWhiteSquare10.png in Resources */,
 				42AB550D18EF44C50051AF9F /* Charles3Animation.m4v in Resources */,
@@ -1351,6 +1453,7 @@
 				4297E05C1923D08100E43779 /* MaskWhiteSquare14.png in Resources */,
 				426206661909634500FE7066 /* MaskWhiteSquare1.png in Resources */,
 				42849B8B18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
+				4297E08C19250F8100E43779 /* Charcoal_101.jpg in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */,
 				426A6A2218EDA29E00255331 /* MatAnimationCleanMedium.m4v in Resources */,
@@ -1358,12 +1461,16 @@
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
 				426A6A1518ED0CC300255331 /* SampleLogo12.png in Resources */,
+				4297E08B19250F8100E43779 /* Dark Gold_103.jpg in Resources */,
+				4297E09219250F8100E43779 /* Aquamarine_130.jpg in Resources */,
 				42B0150718DFBD0A0068019C /* SquareButton.png in Resources */,
+				4297E08419250F8100E43779 /* Gold_109.jpg in Resources */,
 				42E9AC1A18FF59E2000E226D /* Pro2Button.png in Resources */,
 				42B0157018E317A50068019C /* AirStep.pdf in Resources */,
 				42849B7C18E9FE6000E5B3FB /* whitecirclerugsample2.png in Resources */,
 				42B0158718E3428B0068019C /* WalkOffLogoMat.png in Resources */,
 				42849B7F18E9FF7F00E5B3FB /* whitecirclematsize1.png in Resources */,
+				4297E08219250F8100E43779 /* Purple_105.jpg in Resources */,
 				426A6A3118EDADBA00255331 /* OrganizedButton.png in Resources */,
 				42849B8518EA00CD00E5B3FB /* alllogobuttons2.png in Resources */,
 				4297E04E1923C5E800E43779 /* MaskWhiteSquare7.png in Resources */,
@@ -1387,6 +1494,7 @@
 				42B0156D18E3177F0068019C /* SafeStep.pdf in Resources */,
 				422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */,
 				426A6A2018ED0CC300255331 /* SampleLogo1.png in Resources */,
+				4297E08819250F8100E43779 /* Emerald Green_110.jpg in Resources */,
 				42B0150A18DFBD170068019C /* RectangleButton.png in Resources */,
 				42A24BF519181FB800568305 /* Interactive2by2Button.png in Resources */,
 				42B0154F18E315F20068019C /* ParquetWiperScraper.pdf in Resources */,

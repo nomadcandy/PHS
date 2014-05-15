@@ -112,15 +112,25 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                          @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
     
     
+    UIImageView *whitePadView = [[UIImageView alloc] initWithFrame:CGRectMake(00, 0, 1024, 170)];
+    whitePadView.backgroundColor = [UIColor lightGrayColor];
+    whitePadView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    whitePadView.layer.shadowOffset = CGSizeMake(0, 1);
+    whitePadView.layer.shadowOpacity = 1.0;
+    whitePadView.alpha = 0.5;
+    whitePadView.clipsToBounds = NO;
+    [self.view addSubview:whitePadView];
+    
+    
     //headers for Logos and Mats
-    UILabel*logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 180, 280, 30)];
+    UILabel*logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 140, 280, 30)];
     logoLabel.font = [UIFont fontWithName:@"Avenir-Light" size:25];
-    logoLabel.text = @"INTERACTIVE LOGO'S";
+    logoLabel.text = @"INTERACTIVE LOGOS";
     [self.view addSubview:logoLabel];
     
-    UILabel*matLabel = [[UILabel alloc] initWithFrame:CGRectMake(550, 180, 200, 30)];
+    UILabel*matLabel = [[UILabel alloc] initWithFrame:CGRectMake(550, 140, 200, 30)];
     matLabel.font = [UIFont fontWithName:@"Avenir-Light" size:25];
-    matLabel.text = @"MAT'S";
+    matLabel.text = @"MATS";
     [self.view addSubview:matLabel];
 
     
@@ -1283,19 +1293,22 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     else  {
     
-        nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
-                        @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
-
-  
+        
         
         
         
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
-        NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
-        NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+        
+        //int count = [artworkNameArray count];
+        //for (int i = 0; i <count-1 ; i++){
+       
+            NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
+            NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+        
+        
 
-
+   
         
            if ([logoLabelString length] == 0)
                
@@ -1342,7 +1355,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
         
     
-        
+       
     
         
        
