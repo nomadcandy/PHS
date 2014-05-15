@@ -131,8 +131,36 @@
 @property (nonatomic, strong) IBOutlet UIButton *size4by6;
 @property (nonatomic, strong) IBOutlet UIButton *size3by10;
 
-@property (nonatomic, strong) IBOutlet UIButton *aquamarineButton;
+
+
 @property (nonatomic, strong) IBOutlet UIButton *steelBlueButton;
+@property (nonatomic, strong) IBOutlet UIButton *suedeButton;
+@property (nonatomic, strong) IBOutlet UIButton *whiteButton;
+@property (nonatomic, strong) IBOutlet UIButton *roseButton;
+@property (nonatomic, strong) IBOutlet UIButton *royalBlueButton;
+@property (nonatomic, strong) IBOutlet UIButton *sandalWoodButton;
+@property (nonatomic, strong) IBOutlet UIButton *silverButton;
+@property (nonatomic, strong) IBOutlet UIButton *orangeButton;
+@property (nonatomic, strong) IBOutlet UIButton *purpleButton;
+@property (nonatomic, strong) IBOutlet UIButton *redButton;
+@property (nonatomic, strong) IBOutlet UIButton *goldButton;
+@property (nonatomic, strong) IBOutlet UIButton *greyButton;
+@property (nonatomic, strong) IBOutlet UIButton *lightBlueButton;
+@property (nonatomic, strong) IBOutlet UIButton *navyButton;
+@property (nonatomic, strong) IBOutlet UIButton *emeraldGreenButton;
+@property (nonatomic, strong) IBOutlet UIButton *forestGreenButton;
+@property (nonatomic, strong) IBOutlet UIButton *cranberryButton;
+@property (nonatomic, strong) IBOutlet UIButton *darkGoldButton;
+@property (nonatomic, strong) IBOutlet UIButton *charcoalButton;
+@property (nonatomic, strong) IBOutlet UIButton *chocolateButton;
+@property (nonatomic, strong) IBOutlet UIButton *clayButton;
+@property (nonatomic, strong) IBOutlet UIButton *blackButton;
+@property (nonatomic, strong) IBOutlet UIButton *brownButton;
+@property (nonatomic, strong) IBOutlet UIButton *burgundyButton;
+@property (nonatomic, strong) IBOutlet UIButton *aquamarineButton;
+@property (nonatomic, strong) IBOutlet UIButton *turquoiseButton;
+@property (nonatomic, strong) IBOutlet UIButton *yellowButton;
+
 
 
 @property (nonatomic, copy) NSMutableArray *artworkNameArray;

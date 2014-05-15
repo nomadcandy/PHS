@@ -959,23 +959,49 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="aquamarineButton" destination="C1G-mV-haq" id="fMf-4K-4xT"/>
+                        <outlet property="blackButton" destination="bd8-6i-tyn" id="hui-en-YFq"/>
+                        <outlet property="brownButton" destination="s9X-K9-WIm" id="hNl-u2-8Te"/>
+                        <outlet property="burgundyButton" destination="mOY-Fe-vDB" id="6Cq-Fz-GZc"/>
+                        <outlet property="charcoalButton" destination="D5e-e4-B0S" id="naK-c0-xs8"/>
+                        <outlet property="chocolateButton" destination="ZpO-QQ-s2Q" id="vgd-vw-FA0"/>
                         <outlet property="chosenImageView" destination="0zU-6P-ULj" id="5Q5-J0-hY9"/>
+                        <outlet property="clayButton" destination="CUY-LO-Uwi" id="0yp-GT-CX7"/>
                         <outlet property="companyField" destination="frL-og-Dmi" id="Ahc-KW-gU0"/>
+                        <outlet property="cranberryButton" destination="RNa-ET-uaV" id="TQZ-En-GQB"/>
+                        <outlet property="darkGoldButton" destination="Oe7-gF-hA8" id="4bQ-Pq-Uhs"/>
+                        <outlet property="emeraldGreenButton" destination="2JR-7N-w2l" id="Jxo-Sx-RTc"/>
+                        <outlet property="forestGreenButton" destination="8UE-1i-YGV" id="XXq-5v-omH"/>
+                        <outlet property="goldButton" destination="Qbk-aK-qWo" id="C0N-H6-2NE"/>
+                        <outlet property="greyButton" destination="Ezl-RH-nzd" id="jP5-UW-cLk"/>
                         <outlet property="heightCircleField" destination="ia6-T9-i4N" id="5bh-9I-DjC"/>
                         <outlet property="heightField" destination="XmO-Fy-6aA" id="6EA-CI-26m"/>
                         <outlet property="hexField" destination="akD-1Y-Zwg" id="Rx0-6k-0Ag"/>
                         <outlet property="homeButton" destination="EYB-Me-8Vk" id="Fp5-Km-pWB"/>
                         <outlet property="interactiveMatView" destination="B61-WR-Lik" id="U1I-DP-m09"/>
+                        <outlet property="lightBlueButton" destination="FsE-zG-GQy" id="e8C-fT-BZ4"/>
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
                         <outlet property="nameField" destination="k9N-kB-Atq" id="i9X-NH-DgM"/>
+                        <outlet property="navyButton" destination="gbN-FR-xoE" id="QfP-rB-rPt"/>
                         <outlet property="numberField" destination="7cP-GH-qtu" id="TbC-cV-qZh"/>
+                        <outlet property="orangeButton" destination="jj4-Wg-ynm" id="Dic-fW-qDY"/>
+                        <outlet property="purpleButton" destination="SET-ap-KYP" id="BrK-zf-A2H"/>
+                        <outlet property="redButton" destination="1s6-so-Gob" id="kv9-FW-ZbS"/>
+                        <outlet property="roseButton" destination="61Y-mW-2Pl" id="GaC-eR-gT9"/>
+                        <outlet property="royalBlueButton" destination="qRe-1U-pej" id="iH8-6o-CTY"/>
+                        <outlet property="sandalWoodButton" destination="FFP-WK-h6P" id="rvt-7o-Faa"/>
                         <outlet property="searchButton" destination="xDA-U3-mdi" id="thT-nZ-my0"/>
                         <outlet property="searchField" destination="7fQ-D3-7DB" id="lcc-ZA-q8m"/>
                         <outlet property="sellerField" destination="gg9-EA-31R" id="ClZ-Pg-GlW"/>
+                        <outlet property="silverButton" destination="czk-Kk-atJ" id="O8p-Uk-YXA"/>
                         <outlet property="steelBlueButton" destination="TuV-5b-4aV" id="iWY-ed-lVl"/>
+                        <outlet property="suedeButton" destination="tim-gd-TdR" id="7e3-yE-Yzq"/>
                         <outlet property="titleLabel" destination="Gp3-sR-MKY" id="Dh3-pE-Jh9"/>
+                        <outlet property="turquoiseButton" destination="LiC-Ae-Fd7" id="6Lo-jD-KPZ"/>
+                        <outlet property="whiteButton" destination="i4g-fc-CgV" id="FZL-OQ-pvA"/>
                         <outlet property="widthCircleField" destination="FKe-fX-eBR" id="PyZ-DG-L4N"/>
                         <outlet property="widthField" destination="I35-5a-Z7R" id="ViM-IG-1w0"/>
+                        <outlet property="yellowButton" destination="zNE-HM-pA6" id="JtW-1u-Acq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gk9-Zk-GCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
