@@ -1539,7 +1539,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
     
-    
+    interactiveHeaderString = @"Create Mat";
+
     NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
     int myInt = (int)sender.tag;
@@ -1558,35 +1559,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     numberString =[artworkIDArray objectAtIndex:indexPathSend];
     sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
     
+    
+    
     NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
-    
     NSString*httpString= @"http://";
-    
-    //NSLog(@"urlString %@",urlString);
-    
     NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-    
-    
     NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-    
     UIImage * iconImage;
-    
     iconImage = [UIImage imageWithData:data];
-    
     NSLog(@"%@iconImage",iconImage);
     
-    interactiveHeaderString = @"Create Mat";
-    
-
-    
-    
-    //logoUseString=[artworkFullImageArray objectAtIndex:indexPathSend];
-    //NSLog(@"logoUseString %@",logoUseString);
-    
-    
-    
-    
-    //UIImage*newImage=[UIImage imageNamed:iconImage];
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
@@ -1601,7 +1583,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)matSelected:(UIButton*)sender event:(id)event {
     
-    
+    interactiveHeaderString = @"Edit Mat";
     NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
     int myInt = (int)sender.tag;
@@ -1638,18 +1620,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSLog(@"%@iconImage",iconImage);
     
-    interactiveHeaderString = @"Edit Mat";
-    
-    //logoUseString=[artworkFullImageArray objectAtIndex:indexPathSend];
-    //NSLog(@"logoUseString %@",logoUseString);
     
     
     
-    
-    //UIImage*newImage=[UIImage imageNamed:iconImage];
-    
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
+    NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
+    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath1 atomically:YES];
     
     
     
