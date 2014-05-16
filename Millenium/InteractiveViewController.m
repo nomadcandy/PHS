@@ -157,7 +157,7 @@
     
     headerLabel.text= interactiveHeaderString;
     
-    
+    NSLog(@"sizeStringHere %@",sizeString);
     
     NSString *sizeGetMatString = sizeString;
     NSRange range = [sizeGetMatString rangeOfString:@"x"];
@@ -183,6 +183,9 @@
     
     int wMatHundred = wMat*100;
     int hMatHundred = hMat*100;
+    
+    int wMatHundredDivide = wMatHundred/2;
+    int hMatHundredDivide = hMatHundred/2;
     
     //To Do add Logo sizing when available
     /*int wLogo = [_widthField.text intValue];
@@ -217,8 +220,10 @@
         
        // UIImage *image1=[UIImage imageNamed:@name.jpg"];
                          UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
-                         
-                         matView.frame=CGRectMake(712,322,600,400);
+                         CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);
+                        //CGRect myMatRect = CGRectMake( 712, 322, hMatHundred, wMatHundred);
+                         //matView.frame=CGRectMake(712,322,600,400);
+                         matView.frame=myMatRect;
                          [self.view addSubview:matView];
                          //[image release];
         
