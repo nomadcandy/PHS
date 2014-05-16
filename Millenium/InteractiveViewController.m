@@ -105,8 +105,8 @@
     return self;
 }
 
-
--(void)ViewDidAppear
+//Not Used
+/*-(void)ViewDidAppear
 {
     NSLog(@"nameStringHere %@",nameString);
     nameField.text =nameString;
@@ -129,15 +129,13 @@
         NSLog(@"logoUseStringImageName %@",_logoUseStringHere);
 		//[logoPicButton setBackgroundImage:freshImage forState:UIControlStateNormal];
         [logoPicButton setImage:freshImage forState:UIControlStateNormal];
-        
-        
         UIImageView * imgView = [[UIImageView alloc] initWithImage:freshImage];
         [logoPicButton addSubview:imgView];
         
     }
 
     
-}
+}*/
 
 
 
@@ -150,6 +148,7 @@
     NSLog(@"sellerStringHere %@",sellerString);
     NSLog(@"companyStringHere %@",companyString);
     NSLog(@"numberStringHere %@",numberString);
+    NSLog(@"interactiveHeaderString %@",interactiveHeaderString);
 
     nameField.text =nameString;
     sellerField.text =sellerString;
@@ -160,30 +159,37 @@
     
     
     
-    NSString *sizeGetString = sizeString;
-    NSRange range = [sizeGetString rangeOfString:@"x"];
+    NSString *sizeGetMatString = sizeString;
+    NSRange range = [sizeGetMatString rangeOfString:@"x"];
     
-    NSString *widthString = [sizeGetString substringToIndex:range.location];
-    NSLog(@"%@",widthString);
+    NSString *widthMatString = [sizeGetMatString substringToIndex:range.location];
+    NSLog(@"%@",widthMatString);
     
-    NSString *heightString = [sizeGetString substringFromIndex:range.location];
-    NSLog(@"%@",heightString);
+    NSString *heightMatString = [sizeGetMatString substringFromIndex:range.location];
+    NSLog(@"%@",heightMatString);
     
     
     NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
-    NSString *safeHeightString = [[heightString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@""];
+    NSString *safeHeightMatString = [[heightMatString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@""];
     
-    _widthField.text=widthString;
-    _heightField.text=safeHeightString;
+    _widthField.text=widthMatString;
+    _heightField.text=safeHeightMatString;
     
     _widthCircleField.text=_widthField.text;
     _heightCircleField.text=_heightField.text;
     
-    int w = [_widthField.text intValue];
-    int h = [_heightField.text intValue];
+    int wMat = [_widthField.text intValue];
+    int hMat = [_heightField.text intValue];
     
-    int wHundred = w*100;
-    int hHundred = h*100;
+    int wMatHundred = wMat*100;
+    int hMatHundred = hMat*100;
+    
+    //To Do add Logo sizing when available
+    /*int wLogo = [_widthField.text intValue];
+    int hLogo = [_heightField.text intValue];
+    
+    int wLogoHundred = w*100;
+    int hLogoHundred = h*100;*/
 
     
     /*CGFloat width = w;
@@ -192,16 +198,66 @@
    
 
     
-    if([headerLabel.text isEqualToString:@"Edit Mat"]){
+    if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
-        CGRect myMatRect = CGRectMake( 100.0f, 100.0f, wHundred, hHundred);
+        CGRect myMatRect = CGRectMake( 712+hMatHundred/2, 322+wMatHundred/2, wMatHundred, hMatHundred);
+        //CGRect myMatRect = CGRectMake( 100.0f, 100.0f, wHundred, hHundred);
         interactiveMatView = [[UIImageView alloc]initWithFrame:myMatRect];
        // CGRect myImageRect = CGRectMake( 100.0f, 100.0f, 40.0f, 40.0f);
         
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath =  [directoryPath objectAtIndex:0];
+        imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
         
+        
+        NSData *data = [NSData dataWithContentsOfFile:imagePath];
+        UIImage *matImage = [UIImage imageWithData:data];
+        interactiveMatView.image = matImage;
+        
+        //[interactiveMatView addSubview:imgView];
+        //interactiveMatView.image =freshImage;
+        //[self.view reloadInputViews];
+     //create logo size
     }else{
         
         
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath =  [directoryPath objectAtIndex:0];
+        imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+        
+        
+        NSData *data = [NSData dataWithContentsOfFile:imagePath];
+        UIImage *logoImage = [UIImage imageWithData:data];
+        
+        //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+        NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
+        
+        if (imagePath == Nil){
+            
+            
+            UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+            [logoPicButton setImage:image forState:UIControlStateNormal];
+        }
+        
+        else {
+            
+            
+            
+            
+            //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
+            
+            [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+            //[self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
+            [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+            
+            
+            
+        }
+
+        
+        //added dived by two just for testing to string below
+        /*CGRect myLogoRect = CGRectMake( 712+hHundred/4, 322+wHundred/4, wHundred/2, hHundred/2);
+        logoPicButton = [[UIButton alloc]initWithFrame:myLogoRect];*/
     }
 
     
@@ -466,43 +522,6 @@
     homeButton.hidden =NO;
     titleBar.hidden =NO;
     
-    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    NSString *imagePath =  [directoryPath objectAtIndex:0];
-    imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
-    
-    
-    
-    
-    
-    
-    
-    NSData *data = [NSData dataWithContentsOfFile:imagePath];
-    UIImage *logoImage = [UIImage imageWithData:data];
-    
-    //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
-    NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
-   
-    if (imagePath == Nil){
-        
-        
-        UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
-		[logoPicButton setImage:image forState:UIControlStateNormal];
-    }
-    
-    else {
-        
-        
-		
-        
-        //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
-        
-        [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
-        //[self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
-        [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
-        
-        
-    
-    }
     
    
     

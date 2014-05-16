@@ -1576,6 +1576,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"%@iconImage",iconImage);
     
     interactiveHeaderString = @"Create Mat";
+    
 
     
     
@@ -1637,7 +1638,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSLog(@"%@iconImage",iconImage);
     
-    
+    interactiveHeaderString = @"Edit Mat";
     
     //logoUseString=[artworkFullImageArray objectAtIndex:indexPathSend];
     //NSLog(@"logoUseString %@",logoUseString);
