@@ -330,7 +330,13 @@
     
     
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchString];
+   /* NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchString];*/
+    
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
+
+    
+    
+    //http://ipad.cintasmats.com/LogoSearchResults/?searchString=Best%20Buy&Orderby=match&interactiveOnly=1&locationID=-1
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     
@@ -366,7 +372,9 @@
     
     
     
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/MatSearchResults/?searchMatString=%@&Orderby=match", searchString];
+    /*NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/MatSearchResults/?searchMatString=%@&Orderby=match", searchString];*/
+    
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
     
     
     

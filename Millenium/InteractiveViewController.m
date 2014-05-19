@@ -222,7 +222,8 @@
                         /*CGRect myMatRect = CGRectMake( 742-hMatHundredDivide, 335-wMatHundredDivide, 540.0f, 360.0f);*/
                          matView.frame=myMatRect;
                          //matView.ContentMode=  UIViewContentModeScaleAspectFit;
-                         matView.ContentMode=  UIViewContentModeCenter;
+                         //matView.ContentMode=  UIViewContentModeScaleToFill;
+                          matView.ContentMode=  UIViewContentModeCenter;
         
                          [self.view addSubview:matView];
         
@@ -1358,6 +1359,24 @@ else
 
     
 }
+
+-(IBAction)addPMS:(id)sender{
+    
+    
+    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(145, 400, 38, 38)];
+    textDecField.textColor = [UIColor darkGrayColor];
+    textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    textDecField.backgroundColor=[UIColor whiteColor];
+    textDecField.text=@"PMS";
+    [self.view addSubview:textDecField];
+    
+    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    
+    
+}
+
 
 -(IBAction)hideNotes:(id)sender{
     
