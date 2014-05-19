@@ -68,6 +68,16 @@
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
 
+@synthesize matNameArray;
+@synthesize matSizeArray;
+@synthesize matFormatArray;
+@synthesize matFullImageArray;
+@synthesize matIconArray;
+@synthesize matIDArray;
+@synthesize matInfoArray;
+@synthesize matSellerArray;
+@synthesize matCompanyArray;
+
 
 
 @synthesize nameString;
@@ -204,6 +214,8 @@
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
         
+        interactiveMatView.hidden= YES;
+        
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath1 =  [directoryPath objectAtIndex:0];
         imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImage.png"];
@@ -221,9 +233,9 @@
         
                         /*CGRect myMatRect = CGRectMake( 742-hMatHundredDivide, 335-wMatHundredDivide, 540.0f, 360.0f);*/
                          matView.frame=myMatRect;
-                         //matView.ContentMode=  UIViewContentModeScaleAspectFit;
+                         matView.ContentMode=  UIViewContentModeScaleAspectFit;
                          //matView.ContentMode=  UIViewContentModeScaleToFill;
-                          matView.ContentMode=  UIViewContentModeCenter;
+                          //matView.ContentMode=  UIViewContentModeCenter;
         
                          [self.view addSubview:matView];
         
@@ -1365,7 +1377,7 @@ else
     
     textDecField = [[UITextField alloc] initWithFrame:CGRectMake(145, 400, 38, 38)];
     textDecField.textColor = [UIColor darkGrayColor];
-    textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:14];
     textDecField.backgroundColor=[UIColor whiteColor];
     textDecField.text=@"PMS";
     [self.view addSubview:textDecField];
@@ -1598,6 +1610,30 @@ else
     NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
+    
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
+    
+    
+    
+    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    
+    NSLog(@"URLSearchMat: %@",urlSearchMat);
+    NSError *errorMat = nil;
+    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+    
+    
+    
+    //parse Array from web
+    NSArray *searchMatArray = [NSJSONSerialization
+                               JSONObjectWithData:dataMat
+                               options:NSJSONReadingAllowFragments
+                               error: &error];
+    
+    
+    
+    NSLog(@"%@SearchMatArray",searchMatArray);
+
+    
     //crashes here
     //NSArray* keysAllLogosArray = [searchLogoDictionary allKeys];
     
@@ -1654,6 +1690,63 @@ else
         
         
     }];
+    
+    
+    
+    [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        NSLog(@"%@", object);
+        NSLog(@"searchMatArray %@",searchMatArray);
+        
+        
+        matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+        
+        
+        NSLog(@"artWorkNameArray: %@", matNameArray);
+        
+        
+        //adding an array to COREDATA
+        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
+        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
+         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
+         
+         for (NSString *anArtworkName in logoSearchs) {
+         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
+         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
+        
+        
+        
+        
+        
+        matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+        NSLog(@"matSizeArray %@",matSizeArray);
+        
+        
+        
+        
+        matFormatArray = [searchMatArray valueForKey:@"Format"];
+        NSLog(@"matFormatString %@",matFormatArray);
+        
+        
+        
+        
+        matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+        NSLog(@"fullImageArray %@",matFullImageArray);
+        
+        
+        matIconArray = [searchMatArray valueForKey:@"IconURL"];
+        
+        
+        matIDArray = [searchMatArray valueForKey:@"ProductID"];
+        //NSLog(@"idString %@",idString);
+        
+        
+        
+        
+        
+    }];
+    
+
     
     //declare variable and return count of images returned
     int jsonLogoCount;
@@ -2047,6 +2140,17 @@ else
         goingController.artworkIDArray = artworkIDArray;
         
         goingController.artworkSellerArray = artworkSellerArray;
+        
+        
+        goingController.matNameArray = matNameArray;
+        goingController.matSizeArray = matSizeArray;
+        goingController.matFormatArray = matFormatArray;
+        goingController.matIconArray = matIconArray;
+        goingController.matFullImageArray = matFullImageArray;
+        ///goingController.matIconImageArray = matIconImageArray;
+        goingController.matIDArray = matIDArray;
+        goingController.matCompanyArray = matCompanyArray;
+        goingController.matSellerArray = matSellerArray;
         
         
         

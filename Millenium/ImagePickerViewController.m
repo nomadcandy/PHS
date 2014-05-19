@@ -45,6 +45,16 @@
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
 
+@synthesize matNameArray;
+@synthesize matSizeArray;
+@synthesize matFormatArray;
+@synthesize matFullImageArray;
+@synthesize matIconArray;
+@synthesize matIDArray;
+@synthesize matInfoArray;
+@synthesize matSellerArray;
+@synthesize matCompanyArray;
+
 
 
 
@@ -399,28 +409,32 @@
     if ([segue.identifier isEqualToString:@"SearchSegue"]) {
         
         LogoCollectionViewController *goingController = segue.destinationViewController;
-        //[self presentViewController:goingController animated:YES completion:nil];
         
-        NSLog(@"artworkNameArray %@",artworkNameArray);
+        
         goingController.artworkNameArray = artworkNameArray;
         
         // NSLog(@"jsonLogoCount %i",jsonLogoCount);
         // goingController.jsonLogoCount = jsonLogoCount;
         
-        NSLog(@"artworkSizeArray %@",artworkSizeArray);
+       
         goingController.artworkSizeArray = artworkSizeArray;
-        
-        NSLog(@"artworkFormatArray %@",artworkFormatArray);
         goingController.artworkFormatArray = artworkFormatArray;
-        
-        NSLog(@"artworkIconArray %@",artworkIconArray);
         goingController.artworkIconArray = artworkIconArray;
         
-        NSLog(@"artworkFullImageArray %@",artworkFullImageArray);
         goingController.artworkFullImageArray = artworkFullImageArray;
         
-        NSLog(@"artworkIDArray %@",artworkIDArray);
+        
         goingController.artworkIDArray = artworkIDArray;
+        
+        goingController.matNameArray = matNameArray;
+        goingController.matSizeArray = matSizeArray;
+        goingController.matFormatArray = matFormatArray;
+        goingController.matIconArray = matIconArray;
+        goingController.matFullImageArray = matFullImageArray;
+        ///goingController.matIconImageArray = matIconImageArray;
+        goingController.matIDArray = matIDArray;
+        goingController.matCompanyArray = matCompanyArray;
+        goingController.matSellerArray = matSellerArray;
         
         
         
@@ -557,11 +571,30 @@
     NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
-    //crashes here
-    //NSArray* keysAllLogosArray = [searchLogoDictionary allKeys];
     
-    //NSLog(@"%@KEYSALLLOGOSARRAY",keysAllLogosArray);
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
     
+    
+    
+    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    
+    NSLog(@"URLSearchMat: %@",urlSearchMat);
+    NSError *errorMat = nil;
+    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+    
+    
+    
+    //parse Array from web
+    NSArray *searchMatArray = [NSJSONSerialization
+                               JSONObjectWithData:dataMat
+                               options:NSJSONReadingAllowFragments
+                               error: &error];
+    
+    
+    
+    NSLog(@"%@SearchMatArray",searchMatArray);
+    
+        
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
@@ -613,6 +646,61 @@
         
         
     }];
+    
+    
+    [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        NSLog(@"%@", object);
+        NSLog(@"searchMatArray %@",searchMatArray);
+        
+        
+        matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+        
+        
+        NSLog(@"artWorkNameArray: %@", matNameArray);
+        
+        
+        //adding an array to COREDATA
+        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
+        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
+         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
+         
+         for (NSString *anArtworkName in logoSearchs) {
+         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
+         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
+        
+        
+        
+        
+        
+        matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+        NSLog(@"matSizeArray %@",matSizeArray);
+        
+        
+        
+        
+        matFormatArray = [searchMatArray valueForKey:@"Format"];
+        NSLog(@"matFormatString %@",matFormatArray);
+        
+        
+        
+        
+        matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+        NSLog(@"fullImageArray %@",matFullImageArray);
+        
+        
+        matIconArray = [searchMatArray valueForKey:@"IconURL"];
+        
+        
+        matIDArray = [searchMatArray valueForKey:@"ProductID"];
+        //NSLog(@"idString %@",idString);
+        
+        
+        
+        
+        
+    }];
+
     
     //declare variable and return count of images returned
     int jsonLogoCount;
