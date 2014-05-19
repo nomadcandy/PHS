@@ -204,10 +204,6 @@
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
         
-        
-        
-        //IBOutlet UIImageView *matView;
-        
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath1 =  [directoryPath objectAtIndex:0];
         imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImage.png"];
@@ -215,36 +211,17 @@
         
         NSData *dataMat = [NSData dataWithContentsOfFile:imagePath1];
         UIImage *matImage = [UIImage imageWithData:dataMat];
-        //interactiveMatViewSelected.image = matImage;
-
-        
-       // UIImage *image1=[UIImage imageNamed:@name.jpg"];
+       
                          UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
                          CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);
-                        //CGRect myMatRect = CGRectMake( 712, 322, hMatHundred, wMatHundred);
-                         //matView.frame=CGRectMake(712,322,600,400);
+                          //CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
+        
                          matView.frame=myMatRect;
                          [self.view addSubview:matView];
-                         //[image release];
-        
-        //CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
-        
-        //CGRect myMatRect = CGRectMake( 712+hMatHundred/2, 322+wMatHundred/2, wMatHundred, hMatHundred);
-       
-        //UIImageView*interactiveMatViewSelected = [[UIImageView alloc]initWithFrame:myMatRect];
         
         
-        //UIImageView*interactiveMatViewSelected = [[UIImageView alloc] initWithFrame:self.bounds];
-        /*UIImageView*interactiveMatViewSelected = [[UIImageView alloc] initWithFrame:myMatRect];
-        interactiveMatViewSelected.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;*/
-        //interactiveMatViewSelected.contentMode = self.contentMode;
-        //[self addSubview:interactiveMatViewSelected];
-       
         
-               
-        //[interactiveMatView addSubview:interactiveMatViewSelected];
-        //interactiveMatView.image =freshImage;
-        //[self.view reloadInputViews];
+        
      //create logo size
     }else{
         
