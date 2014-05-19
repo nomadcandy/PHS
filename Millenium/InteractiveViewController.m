@@ -213,12 +213,39 @@
         UIImage *matImage = [UIImage imageWithData:dataMat];
        
                          UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
-                         CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);
-                          //CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
+                         /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);*/
+                        /*CGRect myMatRect = CGRectMake( 700-hMatHundredDivide, 300-wMatHundredDivide, hMatHundred, wMatHundred);*/
+                        // CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
+                        CGRect myMatRect = CGRectMake( 406.0f, 121.0f, 600.0f, 400.0f);
+                        /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 300-wMatHundredDivide, 540.0f, 360.0f);*/
         
+                        /*CGRect myMatRect = CGRectMake( 742-hMatHundredDivide, 335-wMatHundredDivide, 540.0f, 360.0f);*/
                          matView.frame=myMatRect;
+                         //matView.ContentMode=  UIViewContentModeScaleAspectFit;
+                         matView.ContentMode=  UIViewContentModeCenter;
+        
                          [self.view addSubview:matView];
         
+        
+        
+        /*if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
+            
+            
+            NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+            NSString *imagePath1 =  [directoryPath objectAtIndex:0];
+            imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImage.png"];
+            
+            
+            NSData *dataMat = [NSData dataWithContentsOfFile:imagePath1];
+            UIImage *matImage = [UIImage imageWithData:dataMat];
+            
+            UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
+            CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);
+            //CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
+            
+            matView.frame=myMatRect;
+            [self.view addSubview:matView];*/
+    
         
         
         
