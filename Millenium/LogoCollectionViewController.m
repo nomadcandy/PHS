@@ -1489,8 +1489,38 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        NSString*matLabelString =[matNameArray objectAtIndex:indexPath.item];
-        NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
+        
+        if([NSNull null] != [matNameArray objectAtIndex:indexPath.item]) {
+            NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
+            
+            logoCell.matLabel.text =matLabelString;
+        }
+     
+        if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item]) {
+            NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
+            
+            NSString*httpString= @"http://";
+            
+            
+            NSString *urlMatStringAppend = [httpString stringByAppendingString:urlMatString];
+            
+            NSLog(@"%@ urlStringAppend",urlMatStringAppend);
+            
+            NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
+            
+            UIImage * iconImage;
+            
+            iconImage = [UIImage imageWithData:dataMat];
+            
+            
+            [logoCell.matChooseButton setImage:iconImage forState:UIControlStateNormal];
+            
+        }
+        
+
+        
+        
+       /* NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
 
         
         if ([matLabelString length] == 0)
@@ -1537,7 +1567,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             [logoCell.matChooseButton setImage:iconMatImage forState:UIControlStateNormal];
             
             
-        }
+        }*/
         
 
         
@@ -1573,6 +1603,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
         }
+        
+        
 
                
         return logoCell;
