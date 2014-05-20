@@ -1288,36 +1288,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         //int count = [artworkNameArray count];
         //for (int i = 0; i <count-1 ; i++){
-       
-            NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
-            NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+        if([NSNull null] != [artworkNameArray objectAtIndex:indexPath.item]) {
+           NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
+            
+            logoCell.logoLabel.text =logoLabelString;
+        }
         
         
-
-   
         
-           if ([logoLabelString length] == 0)
-               
-           {
-               
-               logoCell.logoLabel.text = @" ";
-               
-               
-           }else{
-           
-               logoCell.logoLabel.text = [artworkNameArray objectAtIndex:indexPath.item];
-                NSLog(@"logoLabel %@",logoCell.logoLabel.text);
-           }
-               
-               
-        if ([urlString length] == 0)
-            
-        {
+        
+        if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item]) {
+             NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
             
             
-            
-            
-        }else{
             
             
             NSString*httpString= @"http://";
@@ -1336,8 +1319,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             [logoCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
 
-            
         }
+   
+        
+        
+            
+        
+            
+       
 
         
     
