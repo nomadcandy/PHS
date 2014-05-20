@@ -146,11 +146,15 @@
 @property (nonatomic,strong) IBOutlet UIButton *matChooseButton;
 //@property (nonatomic,strong) IBOutlet UIButton *logoChoose1Button;
 
-@property (nonatomic, copy) NSString *artworkNameAddFavString;
+@property (nonatomic, copy) NSString*artworkNameAddFavString;
 @property (nonatomic, copy) NSString*artworkCompanyAddFavString;
 @property (nonatomic, copy) NSString*artworkSellerAddFavString;
 
+@property (nonatomic, copy) NSString*matNameAddFavString;
+@property (nonatomic, copy) NSString*matCompanyAddFavString;
+@property (nonatomic, copy) NSString*matSellerAddFavString;
 
+@property (nonatomic, copy) NSString *matUrlFavString;
 @property (nonatomic, copy) NSString *urlFavString;
 
 @property (nonatomic, copy) NSString *artworkNameUnFavString;
@@ -176,6 +180,9 @@
 -(IBAction)goHome:(UIButton *)sender;
 -(IBAction)addLogoFavorite:(id)sender;
 -(IBAction)removeFavorite:(id)sender;
+
+-(IBAction)addMatFavorite:(id)sender;
+-(IBAction)removeMatFavorite:(id)sender;
 
 -(BOOL)textFieldShouldReturn:(UITextField*)searchField;
 

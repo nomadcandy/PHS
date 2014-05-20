@@ -322,6 +322,7 @@
 		42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EF618D3456E00FAD7FD /* DIYMenu.m */; };
 		42EB3EFB18D3456E00FAD7FD /* DIYMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3EF718D3456E00FAD7FD /* DIYMenuItem.m */; };
 		42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EC7E3818DC9609003B49A3 /* ImagePickerViewController.m */; };
+		42F30DD1192AEB3A0004A019 /* MatFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F30DD0192AEB3A0004A019 /* MatFavorite.m */; };
 		42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */ = {isa = PBXBuildFile; fileRef = 42FF0EED18FC32C10060B036 /* MatClientFocusJade.png */; };
 		42FF7A1518CDE92A00C72695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1418CDE92A00C72695 /* Foundation.framework */; };
 		42FF7A1718CDE92A00C72695 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */; };
@@ -607,6 +608,8 @@
 		42EB3EFC18D3458A00FAD7FD /* DIYMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIYMenuItem.h; sourceTree = "<group>"; };
 		42EC7E3718DC9609003B49A3 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
 		42EC7E3818DC9609003B49A3 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
+		42F30DCF192AEB2A0004A019 /* MatFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatFavorite.h; sourceTree = "<group>"; };
+		42F30DD0192AEB3A0004A019 /* MatFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatFavorite.m; sourceTree = "<group>"; };
 		42FF0EED18FC32C10060B036 /* MatClientFocusJade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatClientFocusJade.png; sourceTree = "<group>"; };
 		42FF7A1118CDE92A00C72695 /* Millenium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millenium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A1418CDE92A00C72695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -694,6 +697,8 @@
 				422A692919102CBD001CAB8D /* LogoSearch.m */,
 				422A696D191185FA001CAB8D /* LogoFavorite.h */,
 				422A696E19118610001CAB8D /* LogoFavorite.m */,
+				42F30DCF192AEB2A0004A019 /* MatFavorite.h */,
+				42F30DD0192AEB3A0004A019 /* MatFavorite.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -1604,6 +1609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				424756EB18D38B2C000AAF7C /* LogoCell.m in Sources */,
+				42F30DD1192AEB3A0004A019 /* MatFavorite.m in Sources */,
 				427CE63818F07D7A00865291 /* RentalViewController.m in Sources */,
 				42B0152718E312250068019C /* RequestFlierViewController.m in Sources */,
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,

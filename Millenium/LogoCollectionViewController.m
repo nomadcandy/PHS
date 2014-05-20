@@ -344,9 +344,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         artworkNameArray = [_favoritesLogoArray valueForKey:@"ArtworkName"];
-        
-        
-        
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
         
         
@@ -366,14 +363,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkSizeArray = [_favoritesLogoArray valueForKey:@"ArtworkSize"];
         NSLog(@"artworkSizeArray %@",artworkSizeArray);
         
-        
-        
-        
         artworkFormatArray = [_favoritesLogoArray valueForKey:@"Format"];
         NSLog(@"artworkFormatString %@",artworkFormatArray);
-        
-        
-        
         
         artworkFullImageArray = [_favoritesLogoArray valueForKey:@"FullImageURL"];
         NSLog(@"fullImageArray %@",artworkFullImageArray);
@@ -387,11 +378,57 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         artworkSellerArray = [_favoritesLogoArray valueForKey:@"Seller"];
-        
         //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
         
         
     }];
+    
+    [_favoritesMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        NSLog(@"%@", object);
+        NSLog(@"searchLogoArray %@",_favoritesMatArray);
+        
+        
+        matNameArray = [_favoritesMatArray valueForKey:@"ArtworkName"];
+        NSLog(@"matNameArray: %@", matNameArray);
+        
+        
+        //adding an array to COREDATA
+        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
+        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
+         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
+         
+         for (NSString *anArtworkName in logoSearchs) {
+         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
+         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
+        
+        
+        
+        
+        
+        matSizeArray = [_favoritesMatArray valueForKey:@"ArtworkSize"];
+        NSLog(@"matSizeArray %@",matSizeArray);
+        
+        matFormatArray = [_favoritesMatArray valueForKey:@"Format"];
+        NSLog(@"artworkFormatString %@",artworkFormatArray);
+        
+        matFullImageArray = [_favoritesMatArray valueForKey:@"FullImageURL"];
+        NSLog(@"fullImageArray %@",matFullImageArray);
+        
+        
+        matIconArray = [_favoritesMatArray valueForKey:@"IconURL"];
+        
+        
+        matIDArray = [_favoritesMatArray valueForKey:@"ProductID"];
+        //NSLog(@"idString %@",idString);
+        
+        
+        matSellerArray = [_favoritesMatArray valueForKey:@"Seller"];
+        //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
+        
+        
+    }];
+
 
     
     
@@ -1027,6 +1064,98 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
+-(IBAction)addMatFavorite:(id)sender{
+    
+    
+    NSLog(@"indexPathSend %d",indexPathSend);
+    
+    _matUrlFavString =[matFullImageArray objectAtIndex:indexPathSend];
+    _matNameAddFavString =[matNameArray objectAtIndex:indexPathSend];
+    
+    NSLog(@"urlFavString %@",_matUrlFavString);
+    NSLog(@"urlFavString %@",_matNameAddFavString);
+    /*NSString*artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+     NSString*artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+     NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
+    
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
+    
+    
+    [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
+    //[newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    /*[newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
+     [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];*/
+    
+    
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    //Fetch Data entered to test
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    NSLog(@"favoritesMatArray %@",_favoritesMatArray);
+    
+}
+
+-(IBAction)removeMatFavorite:(id)sender{
+    
+    
+    /*Millenium[14492:90b] indexPathSend 0
+     2014-04-30 17:18:37.290 Millenium[14492:90b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'keypath pid not found in entity <NSSQLEntity LogoFavorite id=1>'*/
+    
+    
+    
+    NSLog(@"indexPathSend %d",indexPathSend);
+    
+    urlUnFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
+    artworkNameUnFavString =[artworkNameArray objectAtIndex:indexPathSend];
+    NSManagedObjectContext *context = [self managedObjectContext];
+    //NSNumber *soughtPid=[NSNumber numberWithInt:53];
+    //NSEntityDescription *artworkNameEntity=[NSEntityDescription entityForName:@"LogoFavorite" inManagedObjectContext:context];
+    
+    NSEntityDescription *logoFavoriteEntity=[NSEntityDescription entityForName:@"MatFavorite" inManagedObjectContext:context];
+    NSFetchRequest *fetch=[[NSFetchRequest alloc] init];
+    [fetch setEntity:logoFavoriteEntity];
+    NSPredicate *p=[NSPredicate predicateWithFormat:@"pid == %@", urlUnFavString];
+    [fetch setPredicate:p];
+    //... add sorts if you want them
+    NSError *fetchError;
+    NSArray *fetchedFavorites=[self.managedObjectContext executeFetchRequest:fetch error:&fetchError];
+    // handle error
+    
+    
+    for (NSManagedObject *favorite in fetchedFavorites) {
+        [context deleteObject:favorite];
+    }
+    
+    //Fetch Data entered to test
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    NSLog(@"favoritesArray %@",_favoritesArray);
+    
+    
+    
+    
+    
+}
+
+
+
 -(IBAction)addLogoFavorite:(id)sender{
     
     
@@ -1071,7 +1200,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
-//crashes
+
 -(IBAction)removeFavorite:(id)sender{
     
     
