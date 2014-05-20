@@ -20,13 +20,13 @@
         <attribute name="sold" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="LogoSearch" representedClassName="LogoSearch" syncable="YES">
+        <attribute name="artworkGroupCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkStyle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="errorMessage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="format" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fullImageURL" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="groupCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="iconURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="keyword" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderBy" optional="YES" attributeType="String" syncable="YES"/>

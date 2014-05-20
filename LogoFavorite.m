@@ -14,6 +14,7 @@
 @dynamic artworkName;
 @dynamic artworkSize;
 @dynamic artworkStyle;
+@dynamic company;
 @dynamic errorMessage;
 @dynamic format;
 @dynamic fullImageURL;
@@ -22,9 +23,13 @@
 @dynamic keyword;
 @dynamic orderBy;
 @dynamic productID;
+@dynamic productInfoPDF;
 @dynamic productReleaseDate;
 @dynamic searchString;
+@dynamic seller;
 @dynamic sold;
+
+
 
 
 
