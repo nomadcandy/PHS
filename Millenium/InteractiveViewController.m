@@ -67,6 +67,8 @@
 @synthesize artworkIconArray;
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
+@synthesize artworkCompanyArray;
+@synthesize artworkColorArray;
 
 @synthesize matNameArray;
 @synthesize matSizeArray;
@@ -77,6 +79,7 @@
 @synthesize matInfoArray;
 @synthesize matSellerArray;
 @synthesize matCompanyArray;
+@synthesize matColorArray;
 
 
 
@@ -154,6 +157,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //CGRect image_rect1 = CGRectMake(_steelBlueButton.position.x,blueSteelButton.position.y,35,35);
+    
+    //For img_view2 rect
+    //parameters are x,y,width,height
+    //CGRect image_rect2 = CGRectMake(img_view2.position.x,img_view2.position.y,100,100);
+    
+    NSLog(@"logoColorString %@",_matColorString);
+    NSLog(@"logoColorString %@",_logoColorString);
+    
     NSLog(@"nameStringHere %@",nameString);
     NSLog(@"sellerStringHere %@",sellerString);
     NSLog(@"companyStringHere %@",companyString);
@@ -214,6 +227,24 @@
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
         
+            NSRange rangeValue = [_matColorString rangeOfString:@"121,123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128" options:NSCaseInsensitiveSearch];
+            
+                    if (rangeValue.length > 0){
+                
+                        NSLog(@"string contains number");
+                
+                
+                        } else {
+                
+                        NSLog(@"string does not contain hello!");
+                
+                        }
+            
+            
+        
+    
+
+
         interactiveMatView.hidden= YES;
         
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
@@ -265,6 +296,52 @@
      //create logo size
     }else{
         
+        
+        /*NSRange rangeValue = [_logoColorString rangeOfString:@"121,123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128" options:NSCaseInsensitiveSearch];*/
+        
+        /*NSRegularExpression *re = [NSRegularExpression
+                                   regularExpressionWithPattern:@"(?= )" options:0 error:NULL];*/
+       
+        
+        
+        
+        
+        
+        /*NSRange rangeValue = [_logoColorString rangeOfString:@"Black,123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128" options:NSCaseInsensitiveSearch];
+        
+        NSLog(@"range = %@", NSStringFromRange(_logoColorString.rangeValue));
+        //NSRange rangeValue = _logoColorString.selectedRange;
+        
+        if (rangeValue.location == NSNotFound) {
+            //The textfield was not selected.
+            NSLog(@"string contains number");
+            
+        } else {
+            //There is a valid range.
+            
+        }*/
+        
+        
+        NSString *string = _logoColorString;
+        if ([string rangeOfString:@"123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128"].location == NSNotFound) {
+            NSLog(@"string does not contain bla");
+        } else {
+            NSLog(@"string contains bla!");
+        }
+        
+        //if (rangeValue!==0){
+            
+        //if (rangeValue.length > 0){
+            
+         /*   NSLog(@"string contains number");
+            
+            
+        } else {
+            
+            NSLog(@"string does not contain hello!");
+            
+        }*/
+
         
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath =  [directoryPath objectAtIndex:0];
@@ -1566,7 +1643,7 @@ else
     
     // NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", searchString,passwordString];
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
 
     
     
@@ -2081,6 +2158,24 @@ else
     _heightCircleField.text = @"10'";
 
     
+}
+
+
+/*-(BOOL)viewsDoCollide:(UIView *)view1 :(UIView *)view2{
+    if(CGRectIntersectsRect(view1.frame, view2.frame))
+    {
+        return YES;
+    }
+    return NO;
+}*/
+
+
+-(BOOL)viewsDoCollide:(UIImageView *)_matBGImageView :(UIButton *)_steelBlueButton{
+    if(CGRectIntersectsRect(_matBGImageView.frame, _steelBlueButton.frame))
+    {
+        return YES;
+    }
+    return NO;
 }
 
 //Not Used

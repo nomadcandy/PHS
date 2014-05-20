@@ -96,6 +96,7 @@
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 @property (nonatomic, copy) NSMutableArray *artworkSellerArray;
 @property (nonatomic, copy) NSMutableArray *artworkCompanyArray;
+@property (nonatomic, copy) NSMutableArray *artworkColorArray;
 
 
 @property (nonatomic, copy) NSMutableArray *matNameArray;
@@ -107,6 +108,7 @@
 @property (nonatomic, copy) NSMutableArray *matInfoArray;
 @property (nonatomic, copy) NSMutableArray *matSellerArray;
 @property (nonatomic, copy) NSMutableArray *matCompanyArray;
+@property (nonatomic, copy) NSMutableArray *matColorArray;
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;

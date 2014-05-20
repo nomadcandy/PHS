@@ -32,5 +32,6 @@
 @property (nonatomic,retain) NSString* searchString;
 @property (nonatomic,retain) NSString* seller;
 @property (nonatomic,retain) NSString* sold;
+@property (nonatomic,retain) NSString* color;
 
 @end

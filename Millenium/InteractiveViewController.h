@@ -122,6 +122,9 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 
+@property (nonatomic, strong) IBOutlet UIImageView *matBGImageView;
+@property (nonatomic, strong) IBOutlet UIImageView *steelBlueImageView;
+
 @property (nonatomic, strong) IBOutlet UIImageView *titleBar;
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *headerLabel;
@@ -165,12 +168,14 @@
 
 @property (nonatomic, copy) NSMutableArray *artworkNameArray;
 @property (nonatomic, copy) NSMutableArray *artworkSellerArray;
+@property (nonatomic, copy) NSMutableArray *artworkCompanyArray;
 @property (nonatomic, copy) NSMutableArray *artworkSizeArray;
 @property (nonatomic, copy) NSMutableArray *artworkFormatArray;
 @property (nonatomic, copy) NSMutableArray *artworkFullImageArray;
 @property (nonatomic, copy) NSMutableArray *artworkIconArray;
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
+@property (nonatomic, copy) NSMutableArray *artworkColorArray;
 
 @property (nonatomic, copy) NSMutableArray *matNameArray;
 @property (nonatomic, copy) NSMutableArray *matSizeArray;
@@ -181,6 +186,7 @@
 @property (nonatomic, copy) NSMutableArray *matInfoArray;
 @property (nonatomic, copy) NSMutableArray *matSellerArray;
 @property (nonatomic, copy) NSMutableArray *matCompanyArray;
+@property (nonatomic, copy) NSMutableArray *matColorArray;
 
 
 
@@ -190,6 +196,7 @@
 @property (nonatomic, strong) NSString *actionSelectedString;
 @property (nonatomic, strong) NSString *matSizeString;
 @property (nonatomic, strong) NSString *matColorString;
+@property (nonatomic, strong) NSString *logoColorString;
 
 @property (nonatomic, strong) NSString *matColorUseString;
 @property (nonatomic, strong) NSString *matSizeUseString;

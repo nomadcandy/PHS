@@ -25,6 +25,7 @@
 @dynamic productReleaseDate;
 @dynamic searchString;
 @dynamic sold;
+@dynamic color;
 
 
 

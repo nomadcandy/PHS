@@ -34,6 +34,7 @@
 @synthesize artworkInfoArray;
 @synthesize artworkSellerArray;
 @synthesize artworkCompanyArray;
+@synthesize artworkColorArray;
 
 
 @synthesize matNameArray;
@@ -45,6 +46,7 @@
 @synthesize matInfoArray;
 @synthesize matSellerArray;
 @synthesize matCompanyArray;
+@synthesize matColorArray;
 
 
 @synthesize favoritesArray;
@@ -446,8 +448,10 @@
         
         
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
-        
         //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
+        
+        artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+        NSLog(@"artworkColorArray %@",artworkColorArray);
         
         
   }];
@@ -500,6 +504,9 @@
         
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
+        matColorArray = [searchMatArray valueForKey:@"Color"];
+        NSLog(@"matColorArray %@",matColorArray);
+
         
         
         
@@ -1045,10 +1052,10 @@ else{
         goingController.artworkFormatArray = artworkFormatArray;
         goingController.artworkIconArray = artworkIconArray;
         goingController.artworkFullImageArray = artworkFullImageArray;
-        
         goingController.artworkIDArray = artworkIDArray;
         goingController.artworkCompanyArray = artworkCompanyArray;
         goingController.artworkSellerArray = artworkSellerArray;
+        goingController.artworkColorArray = artworkColorArray;
 
         
         goingController.matNameArray = matNameArray;
@@ -1060,6 +1067,7 @@ else{
         goingController.matIDArray = matIDArray;
         goingController.matCompanyArray = matCompanyArray;
         goingController.matSellerArray = matSellerArray;
+        goingController.matColorArray = matColorArray;
 
         
         

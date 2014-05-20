@@ -28,6 +28,7 @@
 @dynamic searchString;
 @dynamic seller;
 @dynamic sold;
+@dynamic color;
 
 
 

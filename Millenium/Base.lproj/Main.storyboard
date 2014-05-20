@@ -1054,6 +1054,7 @@
                         <outlet property="interactiveMatView" destination="B61-WR-Lik" id="U1I-DP-m09"/>
                         <outlet property="lightBlueButton" destination="FsE-zG-GQy" id="e8C-fT-BZ4"/>
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
+                        <outlet property="matBGImageView" destination="50N-Xd-J20" id="pAo-n1-8Ae"/>
                         <outlet property="nameField" destination="oeY-YL-pre" id="q5B-Ev-oYg"/>
                         <outlet property="navyButton" destination="gbN-FR-xoE" id="QfP-rB-rPt"/>
                         <outlet property="numberField" destination="S9N-le-kjx" id="cSx-ej-BAc"/>

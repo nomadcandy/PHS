@@ -4,6 +4,7 @@
         <attribute name="artworkName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="errorMessage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="format" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,6 +25,7 @@
         <attribute name="artworkName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="errorMessage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="format" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fullImageURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -40,6 +42,7 @@
         <attribute name="artworkName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="errorMessage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="format" optional="YES" attributeType="String" syncable="YES"/>
@@ -59,6 +62,7 @@
         <attribute name="artworkName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="errorMessage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="format" optional="YES" attributeType="String" syncable="YES"/>
@@ -76,10 +80,10 @@
     </entity>
     <entity name="RepSearch" syncable="YES"/>
     <elements>
-        <element name="LogoFavorite" positionX="18" positionY="135" width="128" height="300"/>
-        <element name="LogoSearch" positionX="-63" positionY="-18" width="128" height="268"/>
-        <element name="MatFavorite" positionX="-18" positionY="117" width="128" height="298"/>
-        <element name="MatSearch" positionX="-36" positionY="108" width="128" height="300"/>
+        <element name="LogoFavorite" positionX="18" positionY="135" width="128" height="313"/>
+        <element name="LogoSearch" positionX="-63" positionY="-18" width="128" height="283"/>
+        <element name="MatFavorite" positionX="-18" positionY="117" width="128" height="313"/>
+        <element name="MatSearch" positionX="-36" positionY="108" width="128" height="313"/>
         <element name="RepSearch" positionX="0" positionY="126" width="128" height="45"/>
     </elements>
 </model>

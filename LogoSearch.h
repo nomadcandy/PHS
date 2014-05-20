@@ -29,6 +29,7 @@
 @property (nonatomic,retain) NSString* productReleaseDate;
 @property (nonatomic,retain) NSString* searchString;
 @property (nonatomic,retain) NSString* sold;
+@property (nonatomic,retain) NSString* color;
 
 
 @end

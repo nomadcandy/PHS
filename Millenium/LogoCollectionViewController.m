@@ -42,6 +42,9 @@
 
 @synthesize logoUseString;
 
+@synthesize logoColorString;
+@synthesize matColorString;
+
 @synthesize sellerString;
 @synthesize nameString;
 @synthesize companyString;
@@ -61,6 +64,7 @@
 @synthesize artworkIconArray;
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
+@synthesize artworkColorArray;
 
 
 @synthesize matNameArray;
@@ -72,6 +76,7 @@
 @synthesize matIconArray;
 @synthesize matIDArray;
 @synthesize matInfoArray;
+@synthesize matColorArray;
 
 
 NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
@@ -361,23 +366,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         artworkSizeArray = [_favoritesLogoArray valueForKey:@"ArtworkSize"];
-        NSLog(@"artworkSizeArray %@",artworkSizeArray);
-        
         artworkFormatArray = [_favoritesLogoArray valueForKey:@"Format"];
-        NSLog(@"artworkFormatString %@",artworkFormatArray);
-        
         artworkFullImageArray = [_favoritesLogoArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",artworkFullImageArray);
-        
-        
         artworkIconArray = [_favoritesLogoArray valueForKey:@"IconURL"];
-        
-        
         artworkIDArray = [_favoritesLogoArray valueForKey:@"ProductID"];
-        //NSLog(@"idString %@",idString);
-        
-        
         artworkSellerArray = [_favoritesLogoArray valueForKey:@"Seller"];
+        artworkColorArray = [_favoritesLogoArray valueForKey:@"Color"];
         //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
         
         
@@ -425,6 +419,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         matSellerArray = [_favoritesMatArray valueForKey:@"Seller"];
         //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
+        matColorArray = [_favoritesMatArray valueForKey:@"Color"];
         
         
     }];
@@ -533,7 +528,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     //Search Logos
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchYeahString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchYeahString];
 
     
     
@@ -958,6 +953,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
+        
+        
+        artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         //NSLog(@"idString %@",idString);
         
         [self.collectionView reloadData];
@@ -1495,6 +1493,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             logoCell.matLabel.text =matLabelString;
         }
+        
+        
+        
+
      
         if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item]) {
             NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
@@ -1694,9 +1696,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
     numberString =[artworkIDArray objectAtIndex:indexPathSend];
     sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
+    logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
     
-    
-    
+        
     NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
     NSString*httpString= @"http://";
     NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
@@ -1737,6 +1739,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     companyString =[matCompanyArray objectAtIndex:indexPathSend];
     numberString =[matIDArray objectAtIndex:indexPathSend];
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
+    //matColorString =[matColorArray objectAtIndex:indexPathSend];
     interactiveHeaderString = @"Edit Mat";
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
@@ -1792,7 +1795,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
-        NSLog(@"logoUseString %@",logoUseString);
+        //NSLog(@"logoUseString %@",logoUseString);
         destViewController.logoUseStringHere=logoUseString;
         
         //nameString=[artworkNameArray objectAtIndex:indexPathSend];
@@ -1803,8 +1806,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         destViewController.sellerString=sellerString;
         destViewController.numberString=numberString;
         destViewController.sizeString=sizeString;
+        destViewController.logoColorString=logoColorString;
+        destViewController.matColorString=matColorString;
+
 
         destViewController.interactiveHeaderString=interactiveHeaderString;
+        
         
         /*numberString=[artworkNumberArray objectAtIndex:indexPathSend];
         NSLog(@"logoUseStringSend %@",numberString);
