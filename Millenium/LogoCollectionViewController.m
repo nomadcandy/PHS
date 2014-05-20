@@ -102,14 +102,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"artworkNameArray %@",artworkNameArray);
     NSLog(@"artworkIconArray %@",artworkIconArray);
     
-    /*nearMeNamesArray= @[@"Helix", @"MindCraft", @"Rainbow Hands",
-                        @"DJ Pop", @"School Anime", @"Spartan Golf Club",
-                        @"Pheonix Designs", @"Old", @"Old",
-                        @"Old", @"Old", @"Old",
-                        @"Old", @"Old", @"Old"];*/
     
-    nearMeImagesArray= @[@"SampleLogo1.png", @"SampleLogo2.png", @"SampleLogo3.png",
-                         @"SampleLogo4.png", @"SampleLogo5.png", @"SampleLogo6.png", @"SampleLogo7.png", @"SampleLogo8.png",@"SampleLogo9.png",@"SampleLogo10.png",@"SampleLogo11.png",@"SampleLogo12.png",@"SampleLogo13.png",@"SampleLogo14.png",@"SampleLogo15.png",@"SampleLogo16.png"];
     
     
     UIImageView *whitePadView = [[UIImageView alloc] initWithFrame:CGRectMake(00, 0, 1024, 170)];
@@ -331,6 +324,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
+    
    /* NSFetchRequest *fetchRequestMat = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
     //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequestMat error:nil] mutableCopy];*/
@@ -350,6 +344,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         artworkNameArray = [_favoritesLogoArray valueForKey:@"ArtworkName"];
+        
         
         
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
@@ -511,11 +506,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
     
-    //parse Dictionary from web
-   /* NSDictionary *searchLogoDictionary = [NSJSONSerialization
-                                          JSONObjectWithData:data
-                                          options:NSJSONReadingAllowFragments
-                                          error: &error];*/
+   
     
     
     //parse Array from web
@@ -541,11 +532,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSError *errorMat = nil;
     NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
     
-    //parse Dictionary from web
-    /* NSDictionary *searchLogoDictionary = [NSJSONSerialization
-     JSONObjectWithData:data
-     options:NSJSONReadingAllowFragments
-     error: &error];*/
+    
     
     
     //parse Array from web
@@ -572,14 +559,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
         
         
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
         
         
         
@@ -1048,7 +1027,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
--(IBAction)addFavorite:(id)sender{
+-(IBAction)addLogoFavorite:(id)sender{
     
     
     NSLog(@"indexPathSend %d",indexPathSend);
@@ -1174,11 +1153,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
    else
     {
         
-        
+        //return artworkNameArray.count;
+        //return matNameArray.count;
         //return logoNearMeArray.count;
         //return jsonLogoCount;
-        if (artworkNameArray.count<matNameArray.count){
+        if (artworkNameArray.count <=matNameArray.count){
                 return matNameArray.count;
+            
         }else{
             
             return artworkNameArray.count;

@@ -174,8 +174,9 @@
 -(IBAction)goFav:(id)sender;
 -(IBAction)goInteractive:(id)sender;
 -(IBAction)goHome:(UIButton *)sender;
--(IBAction)addFavorite:(id)sender;
+-(IBAction)addLogoFavorite:(id)sender;
 -(IBAction)removeFavorite:(id)sender;
+
 -(BOOL)textFieldShouldReturn:(UITextField*)searchField;
 
 
