@@ -631,7 +631,7 @@
         } else {
             
             
-            [logoColorArray addObject:@"Aqaumarine_130.jpg"];
+            [logoColorArray addObject:@"Aquamarine_130.jpg"];
             //add string to an array
             
         }
@@ -684,7 +684,7 @@
                 
                 //if ([logoColorArray indexOfObject:0]){
                     
-              if (1 < logoColorCount){
+              if (1 <= logoColorCount){
                     
                 
                     //id myObj = [logoColorArray objectAtIndex: objIdx];
@@ -695,7 +695,7 @@
                     
                 }
                 
-               if (2 < logoColorCount){
+               if (2 <= logoColorCount){
                    
                    NSString*secondColorString = [logoColorArray objectAtIndex:1];
                    UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
@@ -703,7 +703,7 @@
                 
                 }
             
-             if (3 < logoColorCount){
+             if (3 <= logoColorCount){
            
                  NSString*thirdColorString=[logoColorArray objectAtIndex:2];
                  UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
@@ -712,7 +712,7 @@
             
              }
                 
-                if (4 < logoColorCount){
+                if (4 <= logoColorCount){
                     
                     NSString*fourthColorString=[logoColorArray objectAtIndex:3];
                     UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
@@ -721,7 +721,7 @@
                     
                 }
                 
-                if (5 < logoColorCount){
+                if (5 <= logoColorCount){
                     
                     NSString*fifthColorString=[logoColorArray objectAtIndex:4];
                     UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
@@ -730,7 +730,7 @@
                     
                 }
                 
-                if (6 < logoColorCount){
+                if (6 <= logoColorCount){
                     
                     NSString*sixthColorString=[logoColorArray objectAtIndex:5];
                     UIImage*sixthColorImage = [UIImage imageNamed:sixthColorString];
@@ -739,7 +739,7 @@
                     
                 }
                 
-                if (7 < logoColorCount){
+                if (7 <= logoColorCount){
                     
                     NSString*seventhColorString=[logoColorArray objectAtIndex:6];
                     UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];

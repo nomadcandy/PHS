@@ -58,6 +58,11 @@
 @synthesize logoCountInt;
 @synthesize matCountInt;
 
+@synthesize artworkCount;
+@synthesize matCount;
+
+
+
 
 @synthesize fetchedResultsController;
 @synthesize managedObjectContext;
@@ -362,7 +367,7 @@
     
     
     
-    int logoCountInt = searchLogoArray.count;
+    artworkCount = searchLogoArray.count;
     
     
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
@@ -397,6 +402,8 @@
     
     
     NSLog(@"%@SearchMatArray",searchMatArray);
+    
+    matCount=searchMatArray.count;
 
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
@@ -1056,6 +1063,7 @@ else{
         goingController.artworkCompanyArray = artworkCompanyArray;
         goingController.artworkSellerArray = artworkSellerArray;
         goingController.artworkColorArray = artworkColorArray;
+        goingController.artworkCount = artworkCount;
 
         
         goingController.matNameArray = matNameArray;
@@ -1068,6 +1076,7 @@ else{
         goingController.matCompanyArray = matCompanyArray;
         goingController.matSellerArray = matSellerArray;
         goingController.matColorArray = matColorArray;
+        goingController.matCount = matCount;
 
         
         

@@ -58,6 +58,9 @@
     int jsonLogoCount;
     int logoCountInt;
     int matCountInt;
+    
+    int artworkCount;
+    int matCount;
 
     __unsafe_unretained id <ArrayDelegate> _delegate;
     
@@ -119,6 +122,10 @@
 @property (nonatomic, assign) int jsonLogoCount;
 @property (nonatomic, assign) int logoCountInt;
 @property (nonatomic, assign) int matCountInt;
+
+
+@property (nonatomic, assign) int artworkCount;
+@property (nonatomic, assign) int matCount;
 
 
 -(void)insertNewManagedObject:(NSString *)fileName;

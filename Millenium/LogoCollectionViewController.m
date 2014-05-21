@@ -19,6 +19,9 @@
 @synthesize intMat;
 @synthesize intLogo;
 
+@synthesize artworkCount;
+@synthesize matCount;
+
 
 @synthesize searchHereString;
 @synthesize searchHereField;
@@ -549,7 +552,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
    
-    NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
+    //NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
+    artworkCount= searchLogoArray.count;
     
     
     //Search Mats
@@ -575,14 +579,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-    NSLog(@"%@SearchMatArray",searchMatArray);
+    //NSLog(@"%@SearchMatArray",searchMatArray);
     
-    
+    matCount= searchMatArray.count;
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchLogoArray %@",searchLogoArray);
+        //NSLog(@"%@", object);
+        //NSLog(@"searchLogoArray %@",searchLogoArray);
         
         
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
@@ -968,6 +972,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     jsonLogoCount = artworkNameArray.count;
     
     NSLog(@"jsonLogoCount %d",jsonLogoCount);
+    
+    
+    artworkCount;
+    matCount;
+    
     /*for (int i = 0;i<jsonLogoCount;i++){
      
      
@@ -1284,12 +1293,15 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         //return matNameArray.count;
         //return logoNearMeArray.count;
         //return jsonLogoCount;
-        if (artworkNameArray.count <=matNameArray.count){
-                return matNameArray.count;
+        if (artworkCount < matCount){
+            
+            return matCount;
+            NSLog(@"matCount %i",matCount);
             
         }else{
             
-            return artworkNameArray.count;
+            return artworkCount;
+            NSLog(@"logoCount %i",artworkCount);
             
         }
         
@@ -1415,8 +1427,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         //int count = [artworkNameArray count];
         //for (int i = 0; i <count-1 ; i++){
-        if([NSNull null] != [artworkNameArray objectAtIndex:indexPath.item]) {
+        /*if([NSNull null] != [artworkNameArray objectAtIndex:indexPath.item]) {
            NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
+            
+            logoCell.logoLabel.text =logoLabelString;
+        }*/
+        
+        
+        if ( indexPath.item <= artworkCount){
+        
+        //if ( logoCount <= matCount) {
+            
+        
+            NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
             
             logoCell.logoLabel.text =logoLabelString;
         }
@@ -1424,23 +1447,15 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item]) {
-             NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+       // if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item]) {
+        
+        if ( indexPath.item <= artworkCount){
             
-            
-            
-            
+            NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
             NSString*httpString= @"http://";
-            
-            
             NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-            
-            NSLog(@"%@ urlStringAppend",urlStringAppend);
-            
             NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-            
             UIImage * iconImage;
-            
             iconImage = [UIImage imageWithData:data];
             
             

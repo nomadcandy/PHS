@@ -58,6 +58,9 @@
     int rowSelectedHere;
     int rowSelectedSend;
     
+    int artworkCount;
+    int matCount;
+    
     //int jsonLogoCount;
     
     /*NSMutableArray *artworkNameArray;
@@ -90,6 +93,9 @@
 @property (nonatomic, assign) int indexPathSend;
 @property (nonatomic, assign) int rowSelectedHere;
 @property (nonatomic, assign) int rowSelectedSend;
+
+@property (nonatomic, assign) int artworkCount;
+@property (nonatomic, assign) int matCount;
 
 //@property (nonatomic, assign) int jsonLogoCount;
 
