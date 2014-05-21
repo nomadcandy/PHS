@@ -684,12 +684,12 @@
                 
                 //if ([logoColorArray indexOfObject:0]){
                     
-                if (1 < logoColorCount){
+              if (1 < logoColorCount){
                     
                 
                     //id myObj = [logoColorArray objectAtIndex: objIdx];
                     
-                    NSString*firstColorString = [logoColorArray objectAtIndex:1];
+                    NSString*firstColorString = [logoColorArray objectAtIndex:0];
                     UIImage*firstColorImage = [UIImage imageNamed:firstColorString];
                     [_logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
                     
@@ -697,7 +697,7 @@
                 
                if (2 < logoColorCount){
                    
-                   NSString*secondColorString = [logoColorArray objectAtIndex:2];
+                   NSString*secondColorString = [logoColorArray objectAtIndex:1];
                    UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
                     [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
                 
@@ -705,7 +705,7 @@
             
              if (3 < logoColorCount){
            
-                 NSString*thirdColorString=[logoColorArray objectAtIndex:3];
+                 NSString*thirdColorString=[logoColorArray objectAtIndex:2];
                  UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
                  [_logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
                  
@@ -714,7 +714,7 @@
                 
                 if (4 < logoColorCount){
                     
-                    NSString*fourthColorString=[logoColorArray objectAtIndex:4];
+                    NSString*fourthColorString=[logoColorArray objectAtIndex:3];
                     UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
                     [_logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
                     
@@ -723,7 +723,7 @@
                 
                 if (5 < logoColorCount){
                     
-                    NSString*fifthColorString=[logoColorArray objectAtIndex:5];
+                    NSString*fifthColorString=[logoColorArray objectAtIndex:4];
                     UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
                     [_logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
                     
@@ -741,7 +741,7 @@
                 
                 if (7 < logoColorCount){
                     
-                    NSString*seventhColorString=[logoColorArray objectAtIndex:7];
+                    NSString*seventhColorString=[logoColorArray objectAtIndex:6];
                     UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];
                     [_logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
                     
@@ -750,7 +750,7 @@
                 
                 if (8 == logoColorCount){
                     
-                    NSString*eighthColorString=[logoColorArray objectAtIndex:8];
+                    NSString*eighthColorString=[logoColorArray objectAtIndex:7];
                     UIImage*eighthColorImage = [UIImage imageNamed:eighthColorString];
                     [_logoColorButton8 setBackgroundImage:eighthColorImage forState:UIControlStateNormal];
                     

@@ -550,7 +550,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" backgroundImage="White_140.jpg">
+                                <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="1">
                                             <attributes>
@@ -568,7 +568,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" backgroundImage="White_140.jpg">
+                                <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="2">
                                             <attributes>
@@ -580,13 +580,13 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcP-YM-edR">
+                            <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcP-YM-edR">
                                 <rect key="frame" x="125" y="500" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" backgroundImage="White_140.jpg">
+                                <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="3">
                                             <attributes>
@@ -604,7 +604,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" backgroundImage="White_140.jpg">
+                                <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="4">
                                             <attributes>
@@ -622,7 +622,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" backgroundImage="White_140.jpg">
+                                <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="5">
                                             <attributes>
@@ -640,7 +640,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" backgroundImage="White_140.jpg">
+                                <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="6">
                                             <attributes>
@@ -658,7 +658,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" backgroundImage="White_140.jpg">
+                                <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="7">
                                             <attributes>
@@ -676,7 +676,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="1" height="2"/>
-                                <state key="normal" backgroundImage="White_140.jpg">
+                                <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="8">
                                             <attributes>
