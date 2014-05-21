@@ -109,7 +109,7 @@
 @property (nonatomic, copy) NSArray *nearMeNamesArray;
 
 
-@property (nonatomic, retain) NSMutableArray *artworkNameArray;
+@property (nonatomic, copy) NSMutableArray *artworkNameArray;
 @property (nonatomic, copy) NSMutableArray *artworkSellerArray;
 @property (nonatomic, copy) NSMutableArray *artworkCompanyArray;
 @property (nonatomic, copy) NSMutableArray *artworkNumberArray;

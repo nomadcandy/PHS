@@ -1431,7 +1431,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         }*/
         
         
-        if ( indexPath.item < artworkCount){
+        if ( indexPath.item <= artworkNameArray.count){
         
         //if ( logoCount <= matCount) {
             
@@ -1446,7 +1446,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
        // if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item]) {
         
-        if ( indexPath.item < artworkCount){
+        if ( indexPath.item <= artworkFullImageArray.count){
             
             NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
             NSString*httpString= @"http://";
@@ -1500,7 +1500,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         }
         
         
-        if([NSNull null] != [matNameArray objectAtIndex:indexPath.item]) {
+        //if([NSNull null] != [matNameArray objectAtIndex:indexPath.item]) {
+        
+        if ( indexPath.item <= matNameArray.count){
             NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
             
             logoCell.matLabel.text =matLabelString;
@@ -1510,7 +1512,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
 
      
-        if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item]) {
+        //if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item]) {
+        
+        if ( indexPath.item <= matFullImageArray.count){
             NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
             
             NSString*httpString= @"http://";
@@ -1793,60 +1797,50 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     if ([segue.identifier isEqualToString:@"logoPickedSegue"]) {
         
         
-        //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        InteractiveViewController *destViewController = segue.destinationViewController;
-         //destViewController.delegate = self;
-        // NSLog(@"chosenImage %@",chosenImage);
-        //NSLog(@"chosenImage %@",newImage);
-        //destViewController.chosenImage = chosenImage;
         
-        
-        
-        //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
+        InteractiveViewController *goingController = segue.destinationViewController;
         
         
         
         logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
-        //NSLog(@"logoUseString %@",logoUseString);
-        destViewController.logoUseStringHere=logoUseString;
+               goingController.logoUseStringHere=logoUseString;
         
-        //nameString=[artworkNameArray objectAtIndex:indexPathSend];
-        //nameString =[artworkNameArray objectAtIndex:indexPathSend];
+        
         NSLog(@"nameStringSend %@",nameString);
-        destViewController.nameString=nameString;
-        destViewController.companyString=companyString;
-        destViewController.sellerString=sellerString;
-        destViewController.numberString=numberString;
-        destViewController.sizeString=sizeString;
-        destViewController.logoColorString=logoColorString;
-        destViewController.matColorString=matColorString;
+        goingController.nameString=nameString;
+        goingController.companyString=companyString;
+        goingController.sellerString=sellerString;
+        goingController.numberString=numberString;
+        goingController.sizeString=sizeString;
+        goingController.logoColorString=logoColorString;
+        goingController.matColorString=matColorString;
+        goingController.interactiveHeaderString=interactiveHeaderString;
+        
+        /*goingController.artworkNameArray = artworkNameArray;
+        goingController.artworkSizeArray = artworkSizeArray;
+        goingController.artworkFormatArray = artworkFormatArray;
+        goingController.artworkIconArray = artworkIconArray;
+        goingController.artworkFullImageArray = artworkFullImageArray;
+        goingController.artworkIDArray = artworkIDArray;
+        goingController.artworkCompanyArray = artworkCompanyArray;
+        goingController.artworkSellerArray = artworkSellerArray;
+        goingController.artworkColorArray = artworkColorArray;
+        goingController.artworkCount = artworkCount;
+        
+        goingController.matNameArray = matNameArray;
+        goingController.matSizeArray = matSizeArray;
+        goingController.matFormatArray = matFormatArray;
+        goingController.matIconArray = matIconArray;
+        goingController.matFullImageArray = matFullImageArray;
+        goingController.matIDArray = matIDArray;
+        goingController.matCompanyArray = matCompanyArray;
+        goingController.matSellerArray = matSellerArray;
+        goingController.matColorArray = matColorArray;
+        goingController.matCount = matCount;*/
 
-
-        destViewController.interactiveHeaderString=interactiveHeaderString;
         
         
-        /*numberString=[artworkNumberArray objectAtIndex:indexPathSend];
-        NSLog(@"logoUseStringSend %@",numberString);
-        destViewController.numberField.text=numberString;
         
-        sellerString=[artworkSellerArray objectAtIndex:indexPathSend];
-        NSLog(@"logoUseStringSend %@",sellerString);
-        destViewController.sellerField.text=sellerString;
-        
-        companyString=[artworkCompanyArray objectAtIndex:indexPathSend];
-        NSLog(@"logoUseStringSend %@",companyString);
-        destViewController.companyField.text=companyString;*/
-        
-        
-
-       
-        //NSLog(@"chosenImage %@",logoUseString);
-        
-        //destViewController.delegate = self;
-        
-        /*UIStoryboard *storyboard = self.storyboard;
-         InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
-         [self presentViewController:svc animated:YES completion:nil];*/
         
     }
 }
