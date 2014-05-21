@@ -367,21 +367,16 @@
     
     
     
-    artworkCount = searchLogoArray.count;
+    //artworkCount = searchLogoArray.count;
     
     
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
     
     
+    /*NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];*/
     
-    //Search Mats
-    
-    
-    
-    /*NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/MatSearchResults/?searchMatString=%@&Orderby=match", searchString];*/
-    
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1", searchString];
     
     
     
@@ -413,7 +408,7 @@
        
        
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-      
+        artworkCount= artworkNameArray.count;
         
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
         
@@ -467,14 +462,14 @@
     
     [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchMatArray %@",searchMatArray);
+        //NSLog(@"%@", object);
+        //NSLog(@"searchMatArray %@",searchMatArray);
         
         
         matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+        matCount= matNameArray.count;
         
-        
-        NSLog(@"artWorkNameArray: %@", matNameArray);
+        //NSLog(@"artWorkNameArray: %@", matNameArray);
         
         
         //adding an array to COREDATA
@@ -710,11 +705,8 @@ else{
     NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"CharlesHead" ofType:@"m4v"];
     NSURL *movieURL = [NSURL fileURLWithPath:moviePath];
     self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
-    //[self.movieController.view setFrame:CGRectMake (392, 200, 240, 136)];
-    //[self.movieController.view setFrame:CGRectMake (370, 255, 360, 204)];
     
     [self.movieController.view setFrame:CGRectMake (285, 213, 482, 274)];
-   //[self.movieController.view setFrame:CGRectMake (272, 200, 480, 272)];
     self.movieController.movieSourceType = MPMovieSourceTypeFile;
     [self.view addSubview:self.movieController.view];
     [self.movieController play];

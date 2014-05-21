@@ -233,6 +233,32 @@
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
         
+        interactiveMatView.hidden= YES;
+        
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath1 =  [directoryPath objectAtIndex:0];
+        imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImage.png"];
+        
+        
+        NSData *dataMat = [NSData dataWithContentsOfFile:imagePath1];
+        UIImage *matImage = [UIImage imageWithData:dataMat];
+        
+        UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
+        /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);*/
+        /*CGRect myMatRect = CGRectMake( 700-hMatHundredDivide, 300-wMatHundredDivide, hMatHundred, wMatHundred);*/
+        // CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
+        CGRect myMatRect = CGRectMake( 406.0f, 121.0f, 600.0f, 400.0f);
+        /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 300-wMatHundredDivide, 540.0f, 360.0f);*/
+        
+        /*CGRect myMatRect = CGRectMake( 742-hMatHundredDivide, 335-wMatHundredDivide, 540.0f, 360.0f);*/
+        matView.frame=myMatRect;
+        matView.ContentMode=  UIViewContentModeScaleAspectFit;
+        //matView.ContentMode=  UIViewContentModeScaleToFill;
+        //matView.ContentMode=  UIViewContentModeCenter;
+        
+        [self.view addSubview:matView];
+        
+        
             NSRange rangeValue = [_matColorString rangeOfString:@"121,123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128" options:NSCaseInsensitiveSearch];
             
                     if (rangeValue.length > 0){
@@ -251,30 +277,7 @@
     
 
 
-        interactiveMatView.hidden= YES;
         
-        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-        NSString *imagePath1 =  [directoryPath objectAtIndex:0];
-        imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImage.png"];
-        
-        
-        NSData *dataMat = [NSData dataWithContentsOfFile:imagePath1];
-        UIImage *matImage = [UIImage imageWithData:dataMat];
-       
-                         UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
-                         /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);*/
-                        /*CGRect myMatRect = CGRectMake( 700-hMatHundredDivide, 300-wMatHundredDivide, hMatHundred, wMatHundred);*/
-                        // CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
-                        CGRect myMatRect = CGRectMake( 406.0f, 121.0f, 600.0f, 400.0f);
-                        /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 300-wMatHundredDivide, 540.0f, 360.0f);*/
-        
-                        /*CGRect myMatRect = CGRectMake( 742-hMatHundredDivide, 335-wMatHundredDivide, 540.0f, 360.0f);*/
-                         matView.frame=myMatRect;
-                         matView.ContentMode=  UIViewContentModeScaleAspectFit;
-                         //matView.ContentMode=  UIViewContentModeScaleToFill;
-                          //matView.ContentMode=  UIViewContentModeCenter;
-        
-                         [self.view addSubview:matView];
         
         
         
@@ -301,7 +304,36 @@
         
      //create logo size
     }else{
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath =  [directoryPath objectAtIndex:0];
+        imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
         
+        
+        NSData *data = [NSData dataWithContentsOfFile:imagePath];
+        UIImage *logoImage = [UIImage imageWithData:data];
+        
+        //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+        NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
+        
+        if (imagePath == Nil){
+            
+            
+            UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+            [logoPicButton setImage:image forState:UIControlStateNormal];
+        }
+        
+        else {
+            
+            
+            //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
+            [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+            //[self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
+            [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+            
+            
+            
+        }
+
         
         /*NSRange rangeValue = [_logoColorString rangeOfString:@"121,123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128" options:NSCaseInsensitiveSearch];*/
         
@@ -690,7 +722,7 @@
 
 
 
-
+        NSLog(@"logoColorNumberArray %@",logoColorNumberArray);
         NSLog(@"logoColorArray %@",logoColorArray);
         int logoColorCount= logoColorArray.count;
         NSLog(@"logoColorCount %i",logoColorCount);
@@ -708,9 +740,9 @@
                     [_logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
                   
                     NSString*firstColorNoString = [logoColorNumberArray objectAtIndex:0];
-                    [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
+                   [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
                   
-                    
+                  [_logoColorButton1 setNeedsDisplay];
                 }
                 
                if (2 <= logoColorCount){
@@ -797,64 +829,16 @@
                     
                 }
 
-        
-            //}
-            
-    
-    
-        //if (rangeValue!==0){
-            
-        //if (rangeValue.length > 0){
-            
-         /*   NSLog(@"string contains number");
-            
-            
-        } else {
-            
-            NSLog(@"string does not contain hello!");
-            
-        }*/
-
-        
-        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-        NSString *imagePath =  [directoryPath objectAtIndex:0];
-        imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
-        
-        
-        NSData *data = [NSData dataWithContentsOfFile:imagePath];
-        UIImage *logoImage = [UIImage imageWithData:data];
-        
-        //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
-        NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
-        
-        if (imagePath == Nil){
-            
-            
-            UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
-            [logoPicButton setImage:image forState:UIControlStateNormal];
-        }
-        
-        else {
-            
-            
-            
-            
-            //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
-            
-            [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
-            //[self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
-            [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
-            
-            
-            
-        }
-
-        
-        //added dived by two just for testing to string below
-        /*CGRect myLogoRect = CGRectMake( 712+hHundred/4, 322+wHundred/4, wHundred/2, hHundred/2);
-        logoPicButton = [[UIButton alloc]initWithFrame:myLogoRect];*/
     }
-
+    
+            
+    
+    
+    
+        
+    
+        
+    
     
     
    /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
@@ -1926,10 +1910,12 @@ else
     
     
     textDecField = [[UITextField alloc] initWithFrame:CGRectMake(145, 400, 38, 38)];
-    textDecField.textColor = [UIColor darkGrayColor];
-    textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:14];
-    textDecField.backgroundColor=[UIColor whiteColor];
+    textDecField.textColor = [UIColor whiteColor];
+    textDecField.font = [UIFont fontWithName:@"Avenir-Bold" size:14];
+    textDecField.backgroundColor=[UIColor darkGrayColor];
     textDecField.text=@"PMS";
+    textDecField.textAlignment= NSTextAlignmentCenter;
+    
     [self.view addSubview:textDecField];
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
