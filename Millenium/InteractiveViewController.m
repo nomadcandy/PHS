@@ -74,6 +74,7 @@
 @synthesize matCount;
 
 @synthesize logoColorArray;
+@synthesize logoColorNumberArray;
 
 @synthesize matNameArray;
 @synthesize matSizeArray;
@@ -334,6 +335,13 @@
         
         NSLog(@"logoColorArray %@",logoColorArray);
         
+        
+        if (logoColorNumberArray == nil)
+        {
+            logoColorNumberArray = [[NSMutableArray alloc] init];
+        }
+
+        
     
 
         
@@ -347,6 +355,7 @@
             NSLog(@"black Found!");
             
             [logoColorArray addObject:@"Black_108.jpg"];
+            [logoColorNumberArray addObject:@"108"];
             //add string to an array
             
         }
@@ -359,6 +368,7 @@
             
             
             [logoColorArray addObject:@"Steel Blue_121.jpg"];
+            [logoColorNumberArray addObject:@"121"];
             //add string to an array
             
         }
@@ -371,7 +381,7 @@
             
             
             [logoColorArray addObject:@"Suede_123.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"123"];
             
         }
         
@@ -383,6 +393,7 @@
             
             
             [logoColorArray addObject:@"White_140.jpg"];
+             [logoColorNumberArray addObject:@"140"];
             //add string to an array
             
         }
@@ -395,6 +406,7 @@
             
             
             [logoColorArray addObject:@"Rose_119.jpg"];
+            [logoColorNumberArray addObject:@"119"];
             //add string to an array
             
         }
@@ -407,6 +419,7 @@
             
             
             [logoColorArray addObject:@"Royal Blue_107.jpg"];
+            [logoColorNumberArray addObject:@"107"];
             //add string to an array
             
         }
@@ -419,6 +432,7 @@
             
             
             [logoColorArray addObject:@"Sandalwood_120.jpg"];
+            [logoColorNumberArray addObject:@"120"];
             //add string to an array
             
         }
@@ -431,6 +445,7 @@
             
             
             [logoColorArray addObject:@"Silver_116.jpg"];
+            [logoColorNumberArray addObject:@"116"];
             //add string to an array
             
         }
@@ -443,7 +458,8 @@
             
             
             [logoColorArray addObject:@"Orange_127.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"127"];
+            
             
         }
         
@@ -455,7 +471,9 @@
             
             
             [logoColorArray addObject:@"Purple_105.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"105"];
+            
+            
             
         }
         
@@ -467,7 +485,8 @@
             
             
             [logoColorArray addObject:@"Red_112.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"112"];
+            
             
         }
         
@@ -479,7 +498,8 @@
             
             
             [logoColorArray addObject:@"Gold_109.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"109"];
+            
             
         }
         
@@ -491,8 +511,7 @@
             
             
             [logoColorArray addObject:@"Grey_115.jpg"];
-            //add string to an array
-            
+            [logoColorNumberArray addObject:@"115"];
         }
         
         if ([string rangeOfString:@"106-Light Blue"].location == NSNotFound) {
@@ -503,7 +522,8 @@
             
             
             [logoColorArray addObject:@"Light Blue_106.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"106"];
+            
             
         }
         
@@ -515,7 +535,7 @@
             
             
             [logoColorArray addObject:@"Navy_118.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"118"];
             
         }
         
@@ -527,8 +547,7 @@
             
             
             [logoColorArray addObject:@"Emerald Green_110.jpg"];
-            //add string to an array
-            
+            [logoColorNumberArray addObject:@"110"];
         }
         
         if ([string rangeOfString:@"117-Forest Green"].location == NSNotFound) {
@@ -539,8 +558,7 @@
             
             
             [logoColorArray addObject:@"Forest Green_117.jpg"];
-            //add string to an array
-            
+            [logoColorNumberArray addObject:@"117"];
         }
         
         if ([string rangeOfString:@"114-Cranberry"].location == NSNotFound) {
@@ -551,7 +569,7 @@
             
             
             [logoColorArray addObject:@"Cranberry_114.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"114"];
             
         }
         
@@ -563,7 +581,7 @@
             
             
             [logoColorArray addObject:@"Dark Gold_103.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"103"];
             
         }
         
@@ -575,7 +593,7 @@
             
             
             [logoColorArray addObject:@"Charcoal_101.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"101"];
             
         }
         
@@ -587,7 +605,7 @@
             
             
             [logoColorArray addObject:@"Chocolate_111.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"111"];
             
         }
         
@@ -599,7 +617,7 @@
             
             
             [logoColorArray addObject:@"Clay_126.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"126"];
             
         }
         
@@ -611,7 +629,7 @@
             
             
             [logoColorArray addObject:@"Brown_102.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"102"];
             
         }
         
@@ -623,7 +641,7 @@
             
             
             [logoColorArray addObject:@"Burgundy_100.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"100"];
             
         }
         
@@ -635,7 +653,7 @@
             
             
             [logoColorArray addObject:@"Aquamarine_130.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"130"];
             
         }
         
@@ -647,7 +665,8 @@
             
             
             [logoColorArray addObject:@"Turquoise_104.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"104"];
+            
             
         }
         
@@ -659,7 +678,8 @@
             
             
             [logoColorArray addObject:@"Yellow_128.jpg"];
-            //add string to an array
+            [logoColorNumberArray addObject:@"128"];
+            
             
         }
 
@@ -676,16 +696,7 @@
         NSLog(@"logoColorCount %i",logoColorCount);
         
         
-        //for (int i=0;i<logoColorCount;i++)
-            
-           // for (int i=0;(i+1)<logoColorCount;i++){
-            
-            
-           // NSArray *itemArray = [section items];
-        //for (int i = 0; (i + 1) < logoColorCount; i += 2) {
-                
-                
-                //if ([logoColorArray indexOfObject:0]){
+       
                     
               if (1 <= logoColorCount){
                     
@@ -695,6 +706,10 @@
                     NSString*firstColorString = [logoColorArray objectAtIndex:0];
                     UIImage*firstColorImage = [UIImage imageNamed:firstColorString];
                     [_logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
+                  
+                    NSString*firstColorNoString = [logoColorNumberArray objectAtIndex:0];
+                    [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
+                  
                     
                 }
                 
@@ -703,6 +718,9 @@
                    NSString*secondColorString = [logoColorArray objectAtIndex:1];
                    UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
                     [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
+                   
+                   NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
+                   [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
                 
                 }
             
@@ -711,6 +729,9 @@
                  NSString*thirdColorString=[logoColorArray objectAtIndex:2];
                  UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
                  [_logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
+                 
+                 NSString*thirdColorNoString = [logoColorNumberArray objectAtIndex:2];
+                 [_logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
                  
             
              }
@@ -721,6 +742,9 @@
                     UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
                     [_logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
                     
+                    NSString*fourthColorNoString = [logoColorNumberArray objectAtIndex:3];
+                    [_logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
+                    
                     
                 }
                 
@@ -729,6 +753,10 @@
                     NSString*fifthColorString=[logoColorArray objectAtIndex:4];
                     UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
                     [_logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
+                    
+                    NSString*fifthColorNoString = [logoColorNumberArray objectAtIndex:4];
+                    [_logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
+
                     
                     
                 }
@@ -740,6 +768,10 @@
                     [_logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
                     
                     
+                    NSString*sixthColorNoString = [logoColorNumberArray objectAtIndex:5];
+                    [_logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
+
+                    
                 }
                 
                 if (7 <= logoColorCount){
@@ -747,6 +779,9 @@
                     NSString*seventhColorString=[logoColorArray objectAtIndex:6];
                     UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];
                     [_logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
+                    
+                    NSString*seventhColorNoString = [logoColorNumberArray objectAtIndex:6];
+                    [_logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
                     
                     
                 }
@@ -757,6 +792,8 @@
                     UIImage*eighthColorImage = [UIImage imageNamed:eighthColorString];
                     [_logoColorButton8 setBackgroundImage:eighthColorImage forState:UIControlStateNormal];
                     
+                    NSString*eighthColorNoString = [logoColorNumberArray objectAtIndex:7];
+                    [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
                     
                 }
 
