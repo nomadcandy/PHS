@@ -76,7 +76,8 @@
     NSString*companyString;
     NSString*numberString;
    
-    
+    int artworkCount;
+    int matCount;
     
     
     
@@ -118,6 +119,9 @@
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
+
+
+
 @property (nonatomic, copy) NSMutableArray *matNameArray;
 @property (nonatomic, copy) NSMutableArray *matSizeArray;
 @property (nonatomic, copy) NSMutableArray *matFormatArray;
@@ -127,6 +131,10 @@
 @property (nonatomic, copy) NSMutableArray *matInfoArray;
 @property (nonatomic, copy) NSMutableArray *matSellerArray;
 @property (nonatomic, copy) NSMutableArray *matCompanyArray;
+
+
+@property (nonatomic, assign) int artworkCount;
+@property (nonatomic, assign) int matCount;
 
 @property (nonatomic, retain) IBOutlet UITextField *searchField;
 

@@ -70,6 +70,9 @@
     
     UIView *canvas;
     
+    int artworkCount;
+    int matCount;
+    
     //NSString*sellerString;
     //NSString*nameString;
     /*NSString*companyString;
@@ -211,7 +214,8 @@
 @property (nonatomic, copy) NSMutableArray *matColorArray;
 
 
-
+@property (nonatomic, assign) int artworkCount;
+@property (nonatomic, assign) int matCount;
 
 
 

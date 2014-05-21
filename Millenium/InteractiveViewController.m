@@ -70,6 +70,9 @@
 @synthesize artworkCompanyArray;
 @synthesize artworkColorArray;
 
+@synthesize artworkCount;
+@synthesize matCount;
+
 @synthesize logoColorArray;
 
 @synthesize matNameArray;
@@ -2114,7 +2117,7 @@ else
     
     
     
-    
+    artworkCount= searchLogoArray.count;
     
     
     NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
@@ -2140,7 +2143,7 @@ else
                                error: &error];
     
     
-    
+    matCount= searchMatArray.count;
     NSLog(@"%@SearchMatArray",searchMatArray);
 
     
@@ -2644,32 +2647,18 @@ else
     if ([segue.identifier isEqualToString:@"SearchSegue"]) {
         
         LogoCollectionViewController *goingController = segue.destinationViewController;
-        //[self presentViewController:goingController animated:YES completion:nil];
         
-        NSLog(@"artworkNameArray %@",artworkNameArray);
+        
         goingController.artworkNameArray = artworkNameArray;
-        
-        // NSLog(@"jsonLogoCount %i",jsonLogoCount);
-        // goingController.jsonLogoCount = jsonLogoCount;
-        
-        NSLog(@"artworkSizeArray %@",artworkSizeArray);
+        goingController.artworkCount = artworkCount;
         goingController.artworkSizeArray = artworkSizeArray;
-        
-        NSLog(@"artworkFormatArray %@",artworkFormatArray);
         goingController.artworkFormatArray = artworkFormatArray;
-        
-        NSLog(@"artworkIconArray %@",artworkIconArray);
         goingController.artworkIconArray = artworkIconArray;
-        
-        NSLog(@"artworkFullImageArray %@",artworkFullImageArray);
         goingController.artworkFullImageArray = artworkFullImageArray;
-        
-        NSLog(@"artworkIDArray %@",artworkIDArray);
         goingController.artworkIDArray = artworkIDArray;
-        
         goingController.artworkSellerArray = artworkSellerArray;
         
-        
+        goingController.matCount = matCount;
         goingController.matNameArray = matNameArray;
         goingController.matSizeArray = matSizeArray;
         goingController.matFormatArray = matFormatArray;

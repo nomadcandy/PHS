@@ -55,6 +55,9 @@
 @synthesize matSellerArray;
 @synthesize matCompanyArray;
 
+@synthesize artworkCount;
+@synthesize matCount;
+
 
 
 
@@ -412,29 +415,22 @@
         
         
         goingController.artworkNameArray = artworkNameArray;
-        
-        // NSLog(@"jsonLogoCount %i",jsonLogoCount);
-        // goingController.jsonLogoCount = jsonLogoCount;
-        
-       
         goingController.artworkSizeArray = artworkSizeArray;
         goingController.artworkFormatArray = artworkFormatArray;
         goingController.artworkIconArray = artworkIconArray;
-        
         goingController.artworkFullImageArray = artworkFullImageArray;
-        
-        
         goingController.artworkIDArray = artworkIDArray;
+        goingController.artworkCount = artworkCount;
         
         goingController.matNameArray = matNameArray;
         goingController.matSizeArray = matSizeArray;
         goingController.matFormatArray = matFormatArray;
         goingController.matIconArray = matIconArray;
         goingController.matFullImageArray = matFullImageArray;
-        ///goingController.matIconImageArray = matIconImageArray;
         goingController.matIDArray = matIDArray;
         goingController.matCompanyArray = matCompanyArray;
         goingController.matSellerArray = matSellerArray;
+        goingController.matCount = matCount;
         
         
         
@@ -550,11 +546,6 @@
     
     
     
-    //parse Dictionary from web
-    NSDictionary *searchLogoDictionary = [NSJSONSerialization
-                                          JSONObjectWithData:data
-                                          options:NSJSONReadingAllowFragments
-                                          error: &error];
     
     
     //parse Array from web
@@ -568,8 +559,7 @@
     
     
     
-    NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
-    NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
+    artworkCount= searchLogoArray.count;
     
     
     NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
@@ -592,7 +582,7 @@
     
     
     
-    NSLog(@"%@SearchMatArray",searchMatArray);
+    matCount= searchMatArray.count;
     
         
     
