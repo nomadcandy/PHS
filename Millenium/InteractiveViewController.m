@@ -645,15 +645,121 @@
             
         }
         
+     //
+        NSLog(@"matColorNumberArray %@",matColorNumberArray);
+        NSLog(@"matColorArray %@",matColorArray);
+        int matColorCount= matColorArray.count;
+        NSLog(@"matColorCount %i",matColorCount);
+        
+        
+        if (1 <= matColorCount){
+            
+            
+            //id myObj = [logoColorArray objectAtIndex: objIdx];
+            
+            NSString*firstColorString = [matColorArray objectAtIndex:0];
+            UIImage*firstColorImage = [UIImage imageNamed:firstColorString];
+            [_logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
+            
+            NSString*firstColorNoString = [matColorNumberArray objectAtIndex:0];
+            [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
+            [_logoColorButton1 setNeedsDisplay];
+        }
+        
+        if (2 <= matColorCount){
+            
+            NSString*secondColorString = [matColorArray objectAtIndex:1];
+            UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
+            [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
+            
+            NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
+            [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
+            
+        }
+        
+        if (3 <= matColorCount){
+            
+            NSString*thirdColorString=[matColorArray objectAtIndex:2];
+            UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
+            [_logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
+            
+            NSString*thirdColorNoString = [matColorNumberArray objectAtIndex:2];
+            [_logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (4 <= matColorCount){
+            
+            NSString*fourthColorString=[matColorArray objectAtIndex:3];
+            UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
+            [_logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
+            
+            NSString*fourthColorNoString = [matColorNumberArray objectAtIndex:3];
+            [_logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (5 <= matColorCount){
+            
+            NSString*fifthColorString=[matColorArray objectAtIndex:4];
+            UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
+            [_logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
+            
+            NSString*fifthColorNoString = [matColorNumberArray objectAtIndex:4];
+            [_logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
+            
+            
+            
+        }
+        
+        if (6 <= matColorCount){
+            
+            NSString*sixthColorString=[matColorArray objectAtIndex:5];
+            UIImage*sixthColorImage = [UIImage imageNamed:sixthColorString];
+            [_logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
+            
+            
+            NSString*sixthColorNoString = [matColorNumberArray objectAtIndex:5];
+            [_logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (7 <= matColorCount){
+            
+            NSString*seventhColorString=[matColorArray objectAtIndex:6];
+            UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];
+            [_logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
+            
+            NSString*seventhColorNoString = [matColorNumberArray objectAtIndex:6];
+            [_logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (8 == matColorCount){
+            
+            NSString*eighthColorString=[matColorArray objectAtIndex:7];
+            UIImage*eighthColorImage = [UIImage imageNamed:eighthColorString];
+            [_logoColorButton8 setBackgroundImage:eighthColorImage forState:UIControlStateNormal];
+            
+            NSString*eighthColorNoString = [matColorNumberArray objectAtIndex:7];
+            [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
+            
+        }
+   
+        
+        
+        
+        
+        
+    //
 
-        
-        
-        
-    
-
     
         
-        //
+       
      
     }
     
