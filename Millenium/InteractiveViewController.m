@@ -288,16 +288,379 @@
         [self.view addSubview:matView];
         
         
+        //
         
+        if (matColorArray == nil)
+        {
+            matColorArray = [[NSMutableArray alloc] init];
+        }
+        
+        NSLog(@"matColorArray %@",matColorArray);
+        
+        
+        if (matColorNumberArray == nil)
+        {
+            matColorNumberArray = [[NSMutableArray alloc] init];
+        }
+        
+        
+        
+        
+        
+        NSString *string = _matColorString;
+        if ([string rangeOfString:@"108-Black"].location == NSNotFound) {
+            NSLog(@"string does not contain bla");
             
+            
+            
+        } else {
+            NSLog(@"black Found!");
+            
+            [matColorArray addObject:@"Black_108.jpg"];
+            [matColorNumberArray addObject:@"108"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Steel Blue_121.jpg"];
+            [matColorNumberArray addObject:@"121"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"123-Suede"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Suede_123.jpg"];
+            [matColorNumberArray addObject:@"123"];
+            
+        }
+        
+        if ([string rangeOfString:@"140-White"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"White_140.jpg"];
+            [matColorNumberArray addObject:@"140"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"119-Rose"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Rose_119.jpg"];
+            [matColorNumberArray addObject:@"119"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Royal Blue_107.jpg"];
+            [matColorNumberArray addObject:@"107"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Sandalwood_120.jpg"];
+            [matColorNumberArray addObject:@"120"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"116-Silver"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Silver_116.jpg"];
+            [matColorNumberArray addObject:@"116"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"127-Orange"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Orange_127.jpg"];
+            [matColorNumberArray addObject:@"127"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"105-Purple"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Purple_105.jpg"];
+            [matColorNumberArray addObject:@"105"];
+            
+            
+            
+        }
+        
+        if ([string rangeOfString:@"112-Red"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Red_112.jpg"];
+            [matColorNumberArray addObject:@"112"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"109-Gold"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Gold_109.jpg"];
+            [matColorNumberArray addObject:@"109"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"115-Grey"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Grey_115.jpg"];
+            [matColorNumberArray addObject:@"115"];
+        }
+        
+        if ([string rangeOfString:@"106-Light Blue"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Light Blue_106.jpg"];
+            [matColorNumberArray addObject:@"106"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"118-Navy"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Navy_118.jpg"];
+            [matColorNumberArray addObject:@"118"];
+            
+        }
+        
+        if ([string rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Emerald Green_110.jpg"];
+            [matColorNumberArray addObject:@"110"];
+        }
+        
+        if ([string rangeOfString:@"117-Forest Green"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Forest Green_117.jpg"];
+            [matColorNumberArray addObject:@"117"];
+        }
+        
+        if ([string rangeOfString:@"114-Cranberry"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Cranberry_114.jpg"];
+            [matColorNumberArray addObject:@"114"];
+            
+        }
+        
+        if ([string rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Dark Gold_103.jpg"];
+            [matColorNumberArray addObject:@"103"];
+            
+        }
+        
+        if ([string rangeOfString:@"101-Charcoal"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Charcoal_101.jpg"];
+            [matColorNumberArray addObject:@"101"];
+            
+        }
+        
+        if ([string rangeOfString:@"111-Chocolate"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Chocolate_111.jpg"];
+            [matColorNumberArray addObject:@"111"];
+            
+        }
+        
+        if ([string rangeOfString:@"126-Clay"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Clay_126.jpg"];
+            [matColorNumberArray addObject:@"126"];
+            
+        }
+        
+        if ([string rangeOfString:@"102-Brown"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Brown_102.jpg"];
+            [matColorNumberArray addObject:@"102"];
+            
+        }
+        
+        if ([string rangeOfString:@"100-Burgundy"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Burgundy_100.jpg"];
+            [matColorNumberArray addObject:@"100"];
+            
+        }
+        
+        if ([string rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Aquamarine_130.jpg"];
+            [matColorNumberArray addObject:@"130"];
+            
+        }
+        
+        if ([string rangeOfString:@"104-Turquoise"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Turquoise_104.jpg"];
+            [matColorNumberArray addObject:@"104"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"128-Yellow"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [matColorArray addObject:@"Yellow_128.jpg"];
+            [matColorNumberArray addObject:@"128"];
+            
+            
+        }
+        
+
+        
+        
         
     
 
     
         
-        
-     //create logo size
-    }else{
+        //
+     
+    }
+    
+    
+    
+    //create logo size
+    else{
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath =  [directoryPath objectAtIndex:0];
         imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
@@ -319,9 +682,8 @@
         else {
             
             
-            //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleToFill];
+            
             [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
-            //[self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
             [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
             
             
