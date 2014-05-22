@@ -87,6 +87,8 @@
 @synthesize matCompanyArray;
 @synthesize matColorArray;
 
+@synthesize matColorNumberArray;
+
 
 
 @synthesize nameString;
@@ -204,7 +206,7 @@
     //parameters are x,y,width,height
     //CGRect image_rect2 = CGRectMake(img_view2.position.x,img_view2.position.y,100,100);
     
-    NSLog(@"logoColorString %@",_matColorString);
+    NSLog(@"matColorString %@",_matColorString);
     NSLog(@"logoColorString %@",_logoColorString);
     
     NSLog(@"nameStringHere %@",nameString);
@@ -278,62 +280,20 @@
         UIImage *matImage = [UIImage imageWithData:dataMat];
         
         UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
-        /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);*/
-        /*CGRect myMatRect = CGRectMake( 700-hMatHundredDivide, 300-wMatHundredDivide, hMatHundred, wMatHundred);*/
-        // CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
         CGRect myMatRect = CGRectMake( 426.0f, 121.0f, 600.0f, 400.0f);
-        /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 300-wMatHundredDivide, 540.0f, 360.0f);*/
         
-        /*CGRect myMatRect = CGRectMake( 742-hMatHundredDivide, 335-wMatHundredDivide, 540.0f, 360.0f);*/
         matView.frame=myMatRect;
         matView.ContentMode=  UIViewContentModeScaleAspectFit;
-        //matView.ContentMode=  UIViewContentModeScaleToFill;
-        //matView.ContentMode=  UIViewContentModeCenter;
         
         [self.view addSubview:matView];
         
         
-            NSRange rangeValue = [_matColorString rangeOfString:@"121,123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128" options:NSCaseInsensitiveSearch];
-            
-                    if (rangeValue.length > 0){
-                
-                        NSLog(@"string contains number");
-                
-                
-                        } else {
-                
-                        NSLog(@"string does not contain hello!");
-                
-                        }
-            
+        
             
         
     
 
-
-        
-        
-        
-        
-        /*if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
-            
-            
-            NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-            NSString *imagePath1 =  [directoryPath objectAtIndex:0];
-            imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImage.png"];
-            
-            
-            NSData *dataMat = [NSData dataWithContentsOfFile:imagePath1];
-            UIImage *matImage = [UIImage imageWithData:dataMat];
-            
-            UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
-            CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);
-            //CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
-            
-            matView.frame=myMatRect;
-            [self.view addSubview:matView];*/
     
-        
         
         
      //create logo size
@@ -369,31 +329,6 @@
         }
 
         
-        /*NSRange rangeValue = [_logoColorString rangeOfString:@"121,123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128" options:NSCaseInsensitiveSearch];*/
-        
-        /*NSRegularExpression *re = [NSRegularExpression
-                                   regularExpressionWithPattern:@"(?= )" options:0 error:NULL];*/
-       
-        
-        
-        
-        
-        
-        /*NSRange rangeValue = [_logoColorString rangeOfString:@"Black,123,140,119,107,120,116,127,105,112,109,115,106,118,110,117,114,103,101,111,126,108,102,100,130,104,128" options:NSCaseInsensitiveSearch];
-        
-        NSLog(@"range = %@", NSStringFromRange(_logoColorString.rangeValue));
-        //NSRange rangeValue = _logoColorString.selectedRange;
-        
-        if (rangeValue.location == NSNotFound) {
-            //The textfield was not selected.
-            NSLog(@"string contains number");
-            
-        } else {
-            //There is a valid range.
-            
-        }*/
-        
-       /* ,Steel Blue,Suede,White,Rose,Royal,Sandalwood,Silver,Orange,Purple,Red,Gold,Grey,Light,Navy,Emerald,Forest,Cranberry,Dark Gold,Charcoal,Chocolate,Clay,Black,Brown,Burgundy,Aquamarine,Turquoise,Yellow*/
         if (logoColorArray == nil)
         {
             logoColorArray = [[NSMutableArray alloc] init];
@@ -863,13 +798,12 @@
                     
                 }
 
-    }
     
             
-    
-    
-    
-        
+   
+
+
+
     
         
     
@@ -1147,6 +1081,8 @@
         
     }
     
+}
+
 
 - (void)didSetNameString:(NSString *)nameString{
     
@@ -2136,7 +2072,7 @@ else
     
     // NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", searchString,passwordString];
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
 
     
     
@@ -2309,7 +2245,7 @@ else
         
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
-        
+        matColorArray = [searchMatArray valueForKey:@"Color"];
         
         
         

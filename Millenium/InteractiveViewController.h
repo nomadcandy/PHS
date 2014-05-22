@@ -202,6 +202,7 @@
 
 @property (nonatomic, copy) NSMutableArray *logoColorArray;
 @property (nonatomic, copy) NSMutableArray *logoColorNumberArray;
+@property (nonatomic, copy) NSMutableArray *matColorNumberArray;
 
 @property (nonatomic, copy) NSMutableArray *matNameArray;
 @property (nonatomic, copy) NSMutableArray *matSizeArray;

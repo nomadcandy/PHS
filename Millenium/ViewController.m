@@ -367,7 +367,7 @@
     
    /* NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchString];*/
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=bestMatch&interactiveOnly=1&locationID=-1", searchString];
 
     
     
@@ -402,9 +402,8 @@
     
     
     
-    /*NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];*/
     
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1", searchString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=bestMatch&interactiveOnly=0&locationID=-1", searchString];
     
     
     
@@ -455,9 +454,7 @@
        
         
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-        NSLog(@"artworkSizeArray %@",artworkSizeArray);
-        
-        
+                
        
         
        artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
