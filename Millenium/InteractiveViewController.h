@@ -243,6 +243,9 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carouselColor;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
 
+@property (nonatomic, strong) UIAttachmentBehavior *attachmentBehavior;
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+
 -(IBAction)goSearch:(id)sender;
 
 -(IBAction) addHexField:(id)sender;

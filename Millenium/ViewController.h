@@ -87,6 +87,13 @@
 @property (nonatomic, strong) IBOutlet UIButton *goSearchButton;
 
 
+@property (nonatomic, copy) NSString *firstNameString;
+@property (nonatomic, copy) NSString *lastNameString;
+@property (nonatomic, copy) NSString *locationIDString;
+@property (nonatomic, copy) NSString *locationNameString;
+@property (nonatomic, copy) NSString *locationNumberString;
+
+
 
 @property (nonatomic, copy) NSMutableArray *favoritesArray;
 

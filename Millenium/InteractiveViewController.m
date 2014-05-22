@@ -164,6 +164,40 @@
 {
     [super viewDidLoad];
     
+    
+    
+    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    
+    UICollisionBehavior *collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.steelBlueButton]];
+    // Creates collision boundaries from the bounds of the dynamic animator's
+    // reference view (self.view).
+    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+    [animator addBehavior: collisionBehavior];
+    
+    CGPoint squareCenterPoint = CGPointMake(self.steelBlueButton.center.x, self.steelBlueButton.center.y - 110.0);
+    UIOffset attachmentPoint = UIOffsetMake(-25.0, -25.0);
+    // By default, an attachment behavior uses the center of a view. By using a
+    // small offset, we get a more interesting effect which will cause the view
+    // to have rotation movement when dragging the attachment.
+    UIAttachmentBehavior *attachmentBehavior = [[UIAttachmentBehavior alloc] initWithItem:self.steelBlueButton offsetFromCenter:attachmentPoint attachedToAnchor:squareCenterPoint];
+    [animator addBehavior:attachmentBehavior];
+    self.attachmentBehavior = attachmentBehavior;
+    
+    // Visually show the attachment points
+    /*self.attachmentView.center = attachmentBehavior.anchorPoint;
+    self.attachmentView.tintColor = [UIColor redColor];
+    self.attachmentView.image = [self.attachmentView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    self.square1AttachmentView.center = CGPointMake(25.0, 25.0);
+    self.square1AttachmentView.tintColor = [UIColor blueColor];
+    self.square1AttachmentView.image = [self.square1AttachmentView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    
+    // Visually show the connection between the attachment points.
+    [(APLDecorationView*)self.view trackAndDrawAttachmentFromView:self.attachmentView toView:self.square1 withAttachmentOffset:CGPointMake(-25.0, -25.0)];*/
+    
+    self.animator = animator;
+
+    
     //CGRect image_rect1 = CGRectMake(_steelBlueButton.position.x,blueSteelButton.position.y,35,35);
     
     //For img_view2 rect
@@ -233,7 +267,7 @@
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
         
-        interactiveMatView.hidden= YES;
+        //interactiveMatView.hidden= YES;
         
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath1 =  [directoryPath objectAtIndex:0];
@@ -247,7 +281,7 @@
         /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 322-wMatHundredDivide, hMatHundred, wMatHundred);*/
         /*CGRect myMatRect = CGRectMake( 700-hMatHundredDivide, 300-wMatHundredDivide, hMatHundred, wMatHundred);*/
         // CGRect myMatRect = CGRectMake( 712.0f, 322.0f, 600.0f, 400.0f);
-        CGRect myMatRect = CGRectMake( 406.0f, 121.0f, 600.0f, 400.0f);
+        CGRect myMatRect = CGRectMake( 426.0f, 121.0f, 600.0f, 400.0f);
         /*CGRect myMatRect = CGRectMake( 712-hMatHundredDivide, 300-wMatHundredDivide, 540.0f, 360.0f);*/
         
         /*CGRect myMatRect = CGRectMake( 742-hMatHundredDivide, 335-wMatHundredDivide, 540.0f, 360.0f);*/
@@ -2555,6 +2589,10 @@ else
     [self presentViewController:LogoCVC animated:YES completion:nil];
     
 }
+
+
+
+
 
 -(IBAction)goHome:(id)sender{
     

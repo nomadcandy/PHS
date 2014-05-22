@@ -40,6 +40,14 @@
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 
 
+@property (nonatomic, copy) NSString *firstNameString;
+@property (nonatomic, copy) NSString *lastNameString;
+@property (nonatomic, copy) NSString *locationIDString;
+@property (nonatomic, copy) NSString *locationNameString;
+@property (nonatomic, copy) NSString *locationNumberString;
+
+
+
 
 
 @end

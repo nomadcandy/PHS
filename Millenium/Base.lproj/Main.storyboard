@@ -21,10 +21,10 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveGreyMat.png" translatesAutoresizingMaskIntoConstraints="NO" id="B61-WR-Lik">
-                                <rect key="frame" x="423" y="84" width="577" height="477"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B61-WR-Lik">
+                                <rect key="frame" x="423" y="91" width="577" height="470"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.68831712369999998" green="0.68831712369999998" blue="0.68831712369999998" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAKE EDIT MAT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxA-mc-ZIs">
                                 <rect key="frame" x="678" y="20" width="193" height="29"/>
@@ -3255,7 +3255,6 @@
         <image name="Interactive3by5.png" width="115" height="92"/>
         <image name="Interactive4by6Button.png" width="150" height="96"/>
         <image name="InteractiveColorPickGreyPad.png" width="694" height="342"/>
-        <image name="InteractiveGreyMat.png" width="1170" height="918"/>
         <image name="InteractiveInfoGreyPad.png" width="694" height="276"/>
         <image name="InteractiveSizeGreyPad.png" width="694" height="350"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>

@@ -25,6 +25,13 @@
 @synthesize goSearchButton;
 
 
+@synthesize firstNameString;
+@synthesize lastNameString;
+@synthesize locationIDString;
+@synthesize locationNameString;
+@synthesize locationNumberString;
+
+
 @synthesize artworkNameArray;
 @synthesize artworkSizeArray;
 @synthesize artworkFormatArray;
@@ -203,9 +210,30 @@
     NSLog(@"%@LoginDICTIONARY",loginDictionary);
     
     
-    //crashes here
-    //creates array of all Dictionary objects nested as well
-    //NSArray* loginArray = [loginDictionary allKeys];
+    //parse Array from web
+    NSArray *loginArray = [NSJSONSerialization
+                               JSONObjectWithData:data
+                               options:NSJSONReadingAllowFragments
+                               error: &error];
+
+    
+    [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        NSLog(@"%@", object);
+        NSLog(@"loginArray %@",loginArray);
+        
+        
+        firstNameString = [loginArray valueForKey:@"FirstName"];
+        lastNameString = [loginArray valueForKey:@"LastName"];
+        locationIDString = [loginArray valueForKey:@"LocationID"];
+        locationNameString = [loginArray valueForKey:@"LocationName"];
+        locationNumberString = [loginArray valueForKey:@"LocationNumber"];
+        
+        
+          }];
+        
+  
+    
     
     
     
@@ -339,7 +367,7 @@
     
    /* NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchString];*/
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchString];
 
     
     
@@ -1069,6 +1097,15 @@ else{
         goingController.matSellerArray = matSellerArray;
         goingController.matColorArray = matColorArray;
         goingController.matCount = matCount;
+        
+        goingController.firstNameString = firstNameString;
+        goingController.lastNameString = lastNameString;
+        goingController.locationIDString = locationIDString;
+        goingController.locationNameString = locationNameString;
+        goingController.locationNumberString = locationNumberString;
+        
+        
+        
 
         
         

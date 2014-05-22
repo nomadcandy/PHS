@@ -142,6 +142,14 @@
 
 @property (nonatomic, copy) NSDictionary *artworkNameDictionary;
 
+
+@property (nonatomic, copy) NSString *firstNameString;
+@property (nonatomic, copy) NSString *lastNameString;
+@property (nonatomic, copy) NSString *locationIDString;
+@property (nonatomic, copy) NSString *locationNameString;
+@property (nonatomic, copy) NSString *locationNumberString;
+
+
 @property (nonatomic, copy) NSString*logoUseString;
 @property (nonatomic, copy) NSString*searchHereString;
 

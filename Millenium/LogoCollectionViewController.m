@@ -82,6 +82,13 @@
 @synthesize matColorArray;
 
 
+@synthesize firstNameString;
+@synthesize lastNameString;
+@synthesize locationIDString;
+@synthesize locationNameString;
+@synthesize locationNumberString;
+
+
 NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
 NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
 NSString *kLogoHeaderCellID = @"logoHeaderCellID";
@@ -479,6 +486,149 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
+
+-(IBAction)goLocation:(id)sender{
+    
+    NSString*searchYeahString= searchHereField.text;
+    NSLog(@"searchString %@",searchYeahString);
+    
+    
+    
+    //Search Logos
+    
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=all&Orderby=match&interactiveOnly=0&locationID=%@", searchYeahString];
+    
+    
+    
+    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+    
+    NSLog(@"URLLOGIN: %@",urlSearch);
+    NSError *error = nil;
+    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
+    
+    
+    
+    
+    //parse Array from web
+    NSArray *searchLogoArray = [NSJSONSerialization
+                                JSONObjectWithData:data
+                                options:NSJSONReadingAllowFragments
+                                error: &error];
+    
+    
+    
+    //NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
+    //artworkCount= searchLogoArray.count;
+    
+    
+    //Search Mats
+    
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchYeahString];
+    
+    
+    
+    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    
+    NSLog(@"URLLOGIN: %@",urlSearchMat);
+    NSError *errorMat = nil;
+    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+    
+    
+    
+    
+    //parse Array from web
+    NSArray *searchMatArray = [NSJSONSerialization
+                               JSONObjectWithData:dataMat
+                               options:NSJSONReadingAllowFragments
+                               error: &error];
+    
+    
+    
+    //NSLog(@"%@SearchMatArray",searchMatArray);
+    
+    //matCount= searchMatArray.count;
+    
+    [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        //NSLog(@"%@", object);
+        //NSLog(@"searchLogoArray %@",searchLogoArray);
+        
+        
+        artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+        artworkCount= artworkNameArray.count;
+        
+        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        
+        
+        
+        
+        
+        
+        
+        artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
+        NSLog(@"artworkSizeArray %@",artworkSizeArray);
+        
+        
+        
+        
+        artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
+        NSLog(@"artworkFormatString %@",artworkFormatArray);
+        
+        
+        
+        
+        artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+        NSLog(@"fullImageArray %@",artworkFullImageArray);
+        
+        
+        artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
+        
+        
+        artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
+        
+        
+        
+    }];
+    
+    [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        
+        
+        matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+        matCount= matNameArray.count;
+        
+        NSLog(@"matArray: %@", matNameArray);
+        
+        
+        matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+        NSLog(@"matSizeArray %@",matSizeArray);
+        
+        matFormatArray = [searchMatArray valueForKey:@"Format"];
+        NSLog(@"matFormatString %@",matFormatArray);
+        
+        
+        matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+        NSLog(@"fullImageArray %@",matFullImageArray);
+        
+        
+        matIconArray = [searchMatArray valueForKey:@"IconURL"];
+        
+        
+        matIDArray = [searchMatArray valueForKey:@"ProductID"];
+        //NSLog(@"idString %@",idString);
+        
+        
+        [self.collectionView reloadData];
+        
+        
+    }];
+    
+   
+    
+
+    
+    
+}
 
 
 -(IBAction)goSearch:(id)sender{
@@ -1430,8 +1580,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             logoCell.logoLabel.text =logoLabelString;
         }*/
         
+        //int artNameCount=artworkFullImageArray.count + 1;
+        //NSLog(@"artNameCount %i",artNameCount);
         
-        if ( indexPath.item <= artworkNameArray.count){
+        if ( indexPath.item < artworkNameArray.count){
         
         //if ( logoCount <= matCount) {
             
@@ -1444,9 +1596,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         
+        
+        
+        
+        
        // if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item]) {
         
-        if ( indexPath.item <= artworkFullImageArray.count){
+        if ( indexPath.item < artworkFullImageArray.count){
             
             NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
             NSString*httpString= @"http://";
@@ -1502,7 +1658,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         //if([NSNull null] != [matNameArray objectAtIndex:indexPath.item]) {
         
-        if ( indexPath.item <= matNameArray.count){
+        if ( indexPath.item <= matNameArray.count + 1){
             NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
             
             logoCell.matLabel.text =matLabelString;
@@ -1514,7 +1670,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
      
         //if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item]) {
         
-        if ( indexPath.item <= matFullImageArray.count){
+        if ( indexPath.item <= matFullImageArray.count + 1){
             NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
             
             NSString*httpString= @"http://";
