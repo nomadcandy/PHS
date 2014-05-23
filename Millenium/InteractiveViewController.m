@@ -517,7 +517,7 @@
         [self.view addSubview:matView];
         
         
-        //
+        
         
         if (matColorArray == nil)
         {
@@ -875,18 +875,7 @@
         }
         
         
-        if ([string rangeOfString:@"108-Black(BG)"].location == NSNotFound) {
-            
-            NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            matBGColorString=@"Black_108";
-            NSLog(@"matBGColorString %@",matBGColorString);
-            matBGTextColorString=@"108";
-            
-        }
+        
         
         UIImage*matBGColorImage = [UIImage imageNamed:matBGColorString];
         [_bgColorButton setBackgroundImage:matBGColorImage forState:UIControlStateNormal];

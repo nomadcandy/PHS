@@ -54,6 +54,7 @@
 @synthesize matSellerArray;
 @synthesize matCompanyArray;
 @synthesize matColorArray;
+@synthesize matBGColorArray;
 
 
 @synthesize favoritesArray;
@@ -511,28 +512,18 @@
         
         
         matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-        NSLog(@"matSizeArray %@",matSizeArray);
-        
-        
-        
-        
         matFormatArray = [searchMatArray valueForKey:@"Format"];
         NSLog(@"matFormatString %@",matFormatArray);
-        
-        
-        
-        
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
         NSLog(@"fullImageArray %@",matFullImageArray);
-        
-        
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
-        
-        
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
         matColorArray = [searchMatArray valueForKey:@"Color"];
         NSLog(@"matColorArray %@",matColorArray);
+        matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+        NSLog(@"matBGColorArray %@",matBGColorArray);
+
 
         
         
@@ -1093,6 +1084,7 @@ else{
         goingController.matCompanyArray = matCompanyArray;
         goingController.matSellerArray = matSellerArray;
         goingController.matColorArray = matColorArray;
+        goingController.matBGColorArray = matBGColorArray;
         goingController.matCount = matCount;
         
         goingController.firstNameString = firstNameString;

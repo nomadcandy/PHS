@@ -47,6 +47,7 @@
 
 @synthesize logoColorString;
 @synthesize matColorString;
+@synthesize matBGColorString;
 
 @synthesize sellerString;
 @synthesize nameString;
@@ -80,6 +81,7 @@
 @synthesize matIDArray;
 @synthesize matInfoArray;
 @synthesize matColorArray;
+@synthesize matBGColorArray;
 
 
 @synthesize firstNameString;
@@ -531,6 +533,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
+        matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         artworkColorArray = [searchMatArray valueForKey:@"Color"];
         
        
@@ -705,6 +708,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             //NSLog(@"idString %@",idString);
             matColorArray=[searchMatArray valueForKey:@"Color"];
+            matBGColorArray=[searchMatArray valueForKey:@"BGColor"];
 
 
         
@@ -1790,14 +1794,15 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     numberString =[matIDArray objectAtIndex:indexPathSend];
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
     matColorString =[matColorArray objectAtIndex:indexPathSend];
-    //matColorString =[matColorArray objectAtIndex:indexPathSend];
+    matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
+    NSLog(@"matBGColorString %@",matBGColorString);
     interactiveHeaderString = @"Edit Mat";
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
     
     NSString*httpString= @"http://";
     
-    //NSLog(@"urlString %@",urlString);
+    
     
     NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
     
@@ -1849,6 +1854,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         goingController.sizeString=sizeString;
         goingController.logoColorString=logoColorString;
         goingController.matColorString=matColorString;
+        goingController.matBGColorString=matBGColorString;
         goingController.interactiveHeaderString=interactiveHeaderString;
         
         /*goingController.artworkNameArray = artworkNameArray;

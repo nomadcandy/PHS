@@ -132,6 +132,7 @@
 @property (nonatomic, copy) NSMutableArray *matIDArray;
 @property (nonatomic, copy) NSMutableArray *matInfoArray;
 @property (nonatomic, copy) NSMutableArray *matColorArray;
+@property (nonatomic, copy) NSMutableArray *matBGColorArray;
 
 @property (nonatomic, strong) NSMutableArray *favoritesArray;
 @property (nonatomic, strong) NSMutableArray *favoritesRemoveArray;
@@ -180,6 +181,7 @@
 
 @property (nonatomic, copy) NSString *logoColorString;
 @property (nonatomic, copy) NSString *matColorString;
+@property (nonatomic, copy) NSString *matBGColorString;
 
 @property (nonatomic, copy) NSString *nameString;
 @property (nonatomic, copy) NSString *companyString;
