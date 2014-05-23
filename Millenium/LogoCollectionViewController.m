@@ -381,29 +381,17 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         artworkNameArray = [_favoritesLogoArray valueForKey:@"ArtworkName"];
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
-        
-        
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        
-        
-        
-        
         artworkSizeArray = [_favoritesLogoArray valueForKey:@"ArtworkSize"];
         artworkFormatArray = [_favoritesLogoArray valueForKey:@"Format"];
         artworkFullImageArray = [_favoritesLogoArray valueForKey:@"FullImageURL"];
         artworkIconArray = [_favoritesLogoArray valueForKey:@"IconURL"];
         artworkIDArray = [_favoritesLogoArray valueForKey:@"ProductID"];
+        artworkLocationIDArray = [_favoritesLogoArray valueForKey:@"LocationID"];
         artworkSellerArray = [_favoritesLogoArray valueForKey:@"Seller"];
         artworkColorArray = [_favoritesLogoArray valueForKey:@"Color"];
-        //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
+        artworkCompanyArray = [_favoritesLogoArray valueForKey:@"Company"];
+        
+        artworkCount = artworkNameArray.count;
         
         
     }];
@@ -417,20 +405,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matNameArray = [_favoritesMatArray valueForKey:@"ArtworkName"];
         NSLog(@"matNameArray: %@", matNameArray);
         
-        
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        
-        
-        
-        
         matSizeArray = [_favoritesMatArray valueForKey:@"ArtworkSize"];
         matFormatArray = [_favoritesMatArray valueForKey:@"Format"];
         matFullImageArray = [_favoritesMatArray valueForKey:@"FullImageURL"];
@@ -438,9 +412,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matIDArray = [_favoritesMatArray valueForKey:@"ProductID"];
         matLocationIDArray = [_favoritesMatArray valueForKey:@"LocationID"];
         matSellerArray = [_favoritesMatArray valueForKey:@"Seller"];
-        matSellerArray = [_favoritesMatArray valueForKey:@"Seller"];
-        //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
-        artworkColorArray = [_favoritesMatArray valueForKey:@"Color"];
+        matCompanyArray = [_favoritesMatArray valueForKey:@"Company"];
+        matColorArray = [_favoritesMatArray valueForKey:@"Color"];
+        matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
+        
+        matCount = matNameArray.count;
         
         
     }];
