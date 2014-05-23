@@ -314,7 +314,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUb-hm-vNf">
-                                <rect key="frame" x="968" y="686" width="56" height="40"/>
+                                <rect key="frame" x="968" y="630" width="56" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="envelope.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -337,7 +337,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" background="widthCircle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gnm-bs-gKc">
-                                <rect key="frame" x="978" y="516" width="64" height="60"/>
+                                <rect key="frame" x="982" y="567" width="64" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="7">
@@ -1161,6 +1161,10 @@
                         <outlet property="logoColorButton2" destination="riq-ZZ-dct" id="Re2-yK-AEO"/>
                         <outlet property="logoColorButton3" destination="WcP-YM-edR" id="sMb-Nb-8DB"/>
                         <outlet property="logoColorButton4" destination="InF-1N-Qmg" id="Dbr-Vt-t9A"/>
+                        <outlet property="logoColorButton5" destination="y2l-ox-7Vn" id="JJl-dn-0NX"/>
+                        <outlet property="logoColorButton6" destination="01b-cn-rTj" id="kKi-9h-rlc"/>
+                        <outlet property="logoColorButton7" destination="PcC-gY-OAn" id="1i7-tf-UlX"/>
+                        <outlet property="logoColorButton8" destination="KpV-XW-ZZU" id="CSV-uq-UzM"/>
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
                         <outlet property="matBGImageView" destination="50N-Xd-J20" id="pAo-n1-8Ae"/>
                         <outlet property="matBGLogoView" destination="mlP-c3-Xyb" id="6TG-4a-5Nj"/>

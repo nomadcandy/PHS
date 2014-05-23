@@ -1751,6 +1751,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     numberString =[artworkIDArray objectAtIndex:indexPathSend];
     sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
     logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+    NSLog(@"logoColorString %@",logoColorString);
     
         
     NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
