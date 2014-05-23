@@ -1214,7 +1214,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
-    //[newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
     /*[newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
     [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];*/
 
