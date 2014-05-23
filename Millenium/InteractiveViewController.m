@@ -3479,7 +3479,7 @@ else
     _heightField.text = @"2'";
     _heightCircleField.text = @"3'";
     
-    CGRect myLogoMatRect = CGRectMake( 626.0f, 121.0f, 300.0f, 200.0f);
+    CGRect myLogoMatRect = CGRectMake( 576.0f, 250.0f, 300.0f, 200.0f);
     
     matBGLogoView.frame=myLogoMatRect;
     matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
@@ -3496,7 +3496,7 @@ else
     _heightCircleField.text = @"5'";
     
     
-    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 500.0f, 300.0f);
+    CGRect myLogoMatRect = CGRectMake( 476.0f, 200.0f, 500.0f, 300.0f);
     
     matBGLogoView.frame=myLogoMatRect;
     matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
@@ -3517,7 +3517,7 @@ else
     _heightCircleField.text = @"6'";
     
     
-    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 600.0f, 400.0f);
+    CGRect myLogoMatRect = CGRectMake( 427.0f, 143.0f, 600.0f, 400.0f);
     
     matBGLogoView.frame=myLogoMatRect;
     matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
@@ -3531,7 +3531,7 @@ else
     _heightField.text = @"10'";
     _heightCircleField.text = @"10'";
     
-    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 500.0f, 150.0f);
+    CGRect myLogoMatRect = CGRectMake( 476.0f, 270.0f, 500.0f, 150.0f);
     
     matBGLogoView.frame=myLogoMatRect;
     matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
