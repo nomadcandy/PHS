@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B61-WR-Lik">
-                                <rect key="frame" x="423" y="91" width="601" height="470"/>
+                                <rect key="frame" x="423" y="91" width="601" height="511"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -33,6 +33,11 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlP-c3-Xyb" userLabel="BGColorMat">
+                                <rect key="frame" x="571" y="92" width="300" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-1x-oeW">
                                 <rect key="frame" x="52" y="727" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjd-hV-uA4">
-                                <rect key="frame" x="558" y="168" width="302" height="229"/>
+                                <rect key="frame" x="571" y="170" width="302" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal">
@@ -211,13 +216,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="log-b2-7Uv" customClass="SignView">
-                                <rect key="frame" x="428" y="600" width="540" height="59"/>
+                                <rect key="frame" x="428" y="630" width="540" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvk-db-kfJ">
-                                <rect key="frame" x="501" y="659" width="193" height="49"/>
+                                <rect key="frame" x="501" y="681" width="193" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
@@ -230,7 +235,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEW-Zo-R2b">
-                                <rect key="frame" x="727" y="659" width="241" height="49"/>
+                                <rect key="frame" x="727" y="681" width="241" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
@@ -243,7 +248,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRW-Mr-nQW">
-                                <rect key="frame" x="909" y="563" width="81" height="29"/>
+                                <rect key="frame" x="887" y="603" width="81" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
@@ -385,6 +390,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="Landscape:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="g3V-KU-PCz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-j3-n9x">
                                 <rect key="frame" x="235" y="209" width="83" height="70"/>
@@ -401,6 +409,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="Portrait:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="twN-1u-3XF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qbs-dU-PPf">
                                 <rect key="frame" x="110" y="299" width="75" height="45"/>
@@ -1152,6 +1163,7 @@
                         <outlet property="logoColorButton4" destination="InF-1N-Qmg" id="Dbr-Vt-t9A"/>
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
                         <outlet property="matBGImageView" destination="50N-Xd-J20" id="pAo-n1-8Ae"/>
+                        <outlet property="matBGLogoView" destination="mlP-c3-Xyb" id="6TG-4a-5Nj"/>
                         <outlet property="nameField" destination="oeY-YL-pre" id="q5B-Ev-oYg"/>
                         <outlet property="navyButton" destination="gbN-FR-xoE" id="QfP-rB-rPt"/>
                         <outlet property="numberField" destination="S9N-le-kjx" id="cSx-ej-BAc"/>
@@ -1177,7 +1189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gk9-Zk-GCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2934" y="-3282"/>
+            <point key="canvasLocation" x="-2926" y="-3309"/>
         </scene>
         <!--Sign Off View Controller-->
         <scene sceneID="Ots-Hh-0Rn">

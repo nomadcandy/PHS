@@ -126,6 +126,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *matBGImageView;
+@property (nonatomic, strong) IBOutlet UIImageView *matBGLogoView;
 @property (nonatomic, strong) IBOutlet UIImageView *steelBlueImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *titleBar;
@@ -264,6 +265,9 @@
 -(IBAction)goMail:(UIButton*)sender event:(id)event;
 -(IBAction)cropSquare:(id)sender;
 
+
+-(IBAction) Portrait:(id)sender;
+-(IBAction) Landscape:(id)sender;
 -(IBAction) twoByTwo:(id)sender;
 -(IBAction) threeByFive:(id)sender;
 -(IBAction) fourBySix:(id)sender;

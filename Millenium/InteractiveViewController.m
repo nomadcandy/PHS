@@ -26,6 +26,7 @@
 //@synthesize delegate=_delegate;
 
 @synthesize interactiveView;
+@synthesize matBGLogoView;
 @synthesize carouselSize;
 @synthesize carouselColor;
 @synthesize carouselLogo;
@@ -226,35 +227,6 @@
     
     headerLabel.text= interactiveHeaderString;
     
-    NSLog(@"sizeStringHere %@",sizeString);
-    
-    NSString *sizeGetMatString = sizeString;
-    NSRange range = [sizeGetMatString rangeOfString:@"x"];
-    
-    NSString *widthMatString = [sizeGetMatString substringToIndex:range.location];
-    NSLog(@"%@",widthMatString);
-    
-    NSString *heightMatString = [sizeGetMatString substringFromIndex:range.location];
-    NSLog(@"%@",heightMatString);
-    
-    
-    NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
-    NSString *safeHeightMatString = [[heightMatString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@""];
-    
-    _widthField.text=widthMatString;
-    _heightField.text=safeHeightMatString;
-    
-    _widthCircleField.text=_widthField.text;
-    _heightCircleField.text=_heightField.text;
-    
-    int wMat = [_widthField.text intValue];
-    int hMat = [_heightField.text intValue];
-    
-    int wMatHundred = wMat*100;
-    int hMatHundred = hMat*100;
-    
-    int wMatHundredDivide = wMatHundred/2;
-    int hMatHundredDivide = hMatHundred/2;
     
     //To Do add Logo sizing when available
     /*int wLogo = [_widthField.text intValue];
@@ -500,7 +472,38 @@
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
         
-        //interactiveMatView.hidden= YES;
+        matBGLogoView.hidden= YES;
+        
+        NSLog(@"sizeStringHere %@",sizeString);
+        
+        NSString *sizeGetMatString = sizeString;
+        NSRange range = [sizeGetMatString rangeOfString:@"x"];
+        
+        NSString *widthMatString = [sizeGetMatString substringToIndex:range.location];
+        NSLog(@"%@",widthMatString);
+        
+        NSString *heightMatString = [sizeGetMatString substringFromIndex:range.location];
+        NSLog(@"%@",heightMatString);
+        
+        
+        NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
+        NSString *safeHeightMatString = [[heightMatString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@""];
+        
+        _widthField.text=widthMatString;
+        _heightField.text=safeHeightMatString;
+        
+        _widthCircleField.text=_widthField.text;
+        _heightCircleField.text=_heightField.text;
+        
+        int wMat = [_widthField.text intValue];
+        int hMat = [_heightField.text intValue];
+        
+        int wMatHundred = wMat*100;
+        int hMatHundred = hMat*100;
+        
+        int wMatHundredDivide = wMatHundred/2;
+        int hMatHundredDivide = hMatHundred/2;
+
         
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath1 =  [directoryPath objectAtIndex:0];
@@ -1346,6 +1349,53 @@
     
     //create logo size
     else{
+        
+        
+        matBGLogoView.hidden= NO;
+        
+        
+        NSLog(@"sizeStringHere %@",sizeString);
+        
+        NSString *sizeGetMatLogoString = sizeString;
+        NSRange range = [sizeGetMatLogoString rangeOfString:@"x"];
+        
+        NSString *widthLogoMatString = [sizeGetMatLogoString substringToIndex:range.location];
+        NSLog(@"%@",widthLogoMatString);
+        
+        NSString *heightLogoMatString = [sizeGetMatLogoString substringFromIndex:range.location];
+        NSLog(@"%@",heightLogoMatString);
+        
+        
+        NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
+        NSString *safeHeightLogoMatString = [[heightLogoMatString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@""];
+        
+        _widthField.text=widthLogoMatString;
+        _heightField.text=safeHeightLogoMatString;
+        
+        _widthCircleField.text=_widthField.text;
+        _heightCircleField.text=_heightField.text;
+        
+        int wLogoMat = [_widthField.text intValue];
+        int hLogoMat = [_heightField.text intValue];
+        
+        int wLogoMatHundred = wLogoMat*100;
+        int hLogoMatHundred = hLogoMat*100;
+        
+        /*int wLogoMatHundredDivide = wLogoMatHundred/2;
+        int hLogoMatHundredDivide = hLogoMatHundred/2;*/
+        
+        //UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
+        //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 600.0f, 400.0f);
+        CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, wLogoMatHundred, hLogoMatHundred);
+        
+        matBGLogoView.frame=myLogoMatRect;
+        matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+        
+        //[self.view addSubview:matBGLogoView];
+
+
+        
+        
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath =  [directoryPath objectAtIndex:0];
         imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
@@ -3379,13 +3429,61 @@ else
     
 }
 
+-(IBAction) Portrait:(id)sender{
+    
+   
+    
+    _widthField.text = @"5'";
+    _widthCircleField.text = @"3'";
+    
+    _heightField.text = @"5'";
+    _heightCircleField.text = @"3'";
+    
+    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    
+}
+
+-(IBAction) Landscape:(id)sender{
+    
+    
+    
+    
+    _widthField.text = @"3'";
+    _widthCircleField.text = @"5'";
+    
+    _heightField.text = @"3'";
+    _heightCircleField.text = @"5'";
+    
+    
+    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 500.0f, 300.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    
+}
+
+
+
+
+
+
+
 -(IBAction) twoByTwo:(id)sender{
     
     _widthField.text = @"2'";
-    _widthCircleField.text = @"2'";
+    _widthCircleField.text = @"3'";
     
     _heightField.text = @"2'";
-    _heightCircleField.text = @"2'";
+    _heightCircleField.text = @"3'";
+    
+    CGRect myLogoMatRect = CGRectMake( 626.0f, 121.0f, 300.0f, 200.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+
     
 }
 
@@ -3396,6 +3494,14 @@ else
     
     _heightField.text = @"5'";
     _heightCircleField.text = @"5'";
+    
+    
+    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 500.0f, 300.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    
+  
     
     
     
@@ -3409,6 +3515,12 @@ else
     
     _heightField.text = @"6'";
     _heightCircleField.text = @"6'";
+    
+    
+    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 600.0f, 400.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
 }
 
 -(IBAction) threeByTen:(id)sender{
@@ -3418,6 +3530,11 @@ else
     
     _heightField.text = @"10'";
     _heightCircleField.text = @"10'";
+    
+    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 500.0f, 150.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
 
     
 }
