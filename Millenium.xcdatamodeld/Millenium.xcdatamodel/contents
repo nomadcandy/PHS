@@ -12,6 +12,7 @@
         <attribute name="groupCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="iconURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="keyword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderBy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productInfoPDF" optional="YES" attributeType="String" syncable="YES"/>
@@ -42,6 +43,7 @@
         <attribute name="artworkName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkStyle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bgColor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="errorMessage" optional="YES" attributeType="String" syncable="YES"/>
@@ -50,6 +52,7 @@
         <attribute name="groupCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="iconURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="keyword" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="orderBy" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productInfoPDF" optional="YES" attributeType="String" syncable="YES"/>
@@ -80,9 +83,9 @@
     </entity>
     <entity name="RepSearch" syncable="YES"/>
     <elements>
-        <element name="LogoFavorite" positionX="18" positionY="135" width="128" height="313"/>
+        <element name="LogoFavorite" positionX="18" positionY="135" width="128" height="328"/>
         <element name="LogoSearch" positionX="-63" positionY="-18" width="128" height="283"/>
-        <element name="MatFavorite" positionX="-18" positionY="117" width="128" height="313"/>
+        <element name="MatFavorite" positionX="-18" positionY="117" width="128" height="343"/>
         <element name="MatSearch" positionX="-36" positionY="108" width="128" height="313"/>
         <element name="RepSearch" positionX="0" positionY="126" width="128" height="45"/>
     </elements>

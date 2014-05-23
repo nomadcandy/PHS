@@ -26,9 +26,26 @@
 @synthesize searchHereString;
 @synthesize searchHereField;
 @synthesize searchOutField;
+
 @synthesize artworkNameAddFavString;
 @synthesize artworkCompanyAddFavString;
 @synthesize artworkSellerAddFavString;
+@synthesize artworkIDAddFavString;
+@synthesize artworkLocationIDAddFavString;
+@synthesize artworkColorAddFavString;
+@synthesize artworkSizeAddFavString;
+
+@synthesize matUrlAddFavString;
+@synthesize matNameAddFavString;
+@synthesize matCompanyAddFavString;
+@synthesize matSellerAddFavString;
+@synthesize matIDAddFavString;
+@synthesize matLocationIDAddFavString;
+
+@synthesize matColorAddFavString;
+@synthesize matBGColorAddFavString;
+@synthesize matSizeAddFavString;
+
 @synthesize urlFavString;
 //@synthesize jsonLogoCount;
 @synthesize nearMeImagesArray;
@@ -67,6 +84,7 @@
 @synthesize artworkFullImageArray;
 @synthesize artworkIconArray;
 @synthesize artworkIDArray;
+@synthesize artworkLocationIDArray;
 @synthesize artworkInfoArray;
 @synthesize artworkColorArray;
 
@@ -79,6 +97,7 @@
 @synthesize matFullImageArray;
 @synthesize matIconArray;
 @synthesize matIDArray;
+@synthesize matLocationIDArray;
 @synthesize matInfoArray;
 @synthesize matColorArray;
 @synthesize matBGColorArray;
@@ -417,6 +436,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matFullImageArray = [_favoritesMatArray valueForKey:@"FullImageURL"];
         matIconArray = [_favoritesMatArray valueForKey:@"IconURL"];
         matIDArray = [_favoritesMatArray valueForKey:@"ProductID"];
+        matLocationIDArray = [_favoritesMatArray valueForKey:@"LocationID"];
+        matSellerArray = [_favoritesMatArray valueForKey:@"Seller"];
         matSellerArray = [_favoritesMatArray valueForKey:@"Seller"];
         //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
         artworkColorArray = [_favoritesMatArray valueForKey:@"Color"];
@@ -1105,24 +1126,50 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSLog(@"indexPathSend %d",indexPathSend);
     
-    _matUrlFavString =[matFullImageArray objectAtIndex:indexPathSend];
-    _matNameAddFavString =[matNameArray objectAtIndex:indexPathSend];
+    matUrlAddFavString =[matFullImageArray objectAtIndex:indexPathSend];
+    matNameAddFavString =[matNameArray objectAtIndex:indexPathSend];
+    matSellerAddFavString =[matSellerArray objectAtIndex:indexPathSend];
+    matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
+    matIDAddFavString =[matIDArray objectAtIndex:indexPathSend];
+    matLocationIDAddFavString =[matLocationIDArray objectAtIndex:indexPathSend];
     
-    NSLog(@"urlFavString %@",_matUrlFavString);
-    NSLog(@"urlFavString %@",_matNameAddFavString);
+    
+    matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
+    matBGColorAddFavString =[matBGColorArray objectAtIndex:indexPathSend];
+    matSizeAddFavString =[matSizeArray objectAtIndex:indexPathSend];
+    
+    
+    matSizeAddFavString =[matIDArray objectAtIndex:indexPathSend];
+    matLocationIDAddFavString = [matLocationIDArray objectAtIndex:indexPathSend];
+
+
+    
+    NSLog(@"urlFavString %@",matUrlAddFavString);
+    NSLog(@"urlFavString %@",matNameAddFavString);
     /*NSString*artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
      NSString*artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
      NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
     
     
+    
+    
     NSManagedObjectContext *context = [self managedObjectContext];
     
     // Create a new managed object
-    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
+    NSManagedObject *newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
     
+    [newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
+    [newMatFavorite setValue:self.matNameAddFavString forKey:@"artworkName"];
     
-    [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
-    //[newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    [newMatFavorite setValue:self.matCompanyAddFavString forKey:@"company"];
+    [newMatFavorite setValue:self.matSellerAddFavString forKey:@"seller"];
+    [newMatFavorite setValue:self.matIDAddFavString forKey:@"productID"];
+    [newMatFavorite setValue:self.matLocationIDAddFavString forKey:@"locationID"];
+    
+    [newMatFavorite setValue:self.matColorAddFavString forKey:@"color"];
+    [newMatFavorite setValue:self.matBGColorAddFavString forKey:@"bgColor"];
+    [newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];
+    
     /*[newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
      [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];*/
     
@@ -1199,6 +1246,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
     artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
+    artworkColorAddFavString =[artworkColorArray objectAtIndex:indexPathSend];
+    artworkSizeAddFavString =[artworkSizeArray objectAtIndex:indexPathSend];
     
     NSLog(@"urlFavString %@",urlFavString);
     NSLog(@"urlFavString %@",artworkNameAddFavString);
@@ -1217,6 +1266,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
     /*[newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
     [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];*/
+    [newLogoFavorite setValue:self.artworkColorAddFavString forKey:@"color"];
+    [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
+
 
     
     

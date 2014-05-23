@@ -118,6 +118,7 @@
 @property (nonatomic, copy) NSMutableArray *artworkFullImageArray;
 @property (nonatomic, copy) NSMutableArray *artworkIconArray;
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
+@property (nonatomic, copy) NSMutableArray *artworkLocationIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
 @property (nonatomic, copy) NSMutableArray *artworkColorArray;
 
@@ -130,6 +131,7 @@
 @property (nonatomic, copy) NSMutableArray *matFullImageArray;
 @property (nonatomic, copy) NSMutableArray *matIconArray;
 @property (nonatomic, copy) NSMutableArray *matIDArray;
+@property (nonatomic, copy) NSMutableArray *matLocationIDArray;
 @property (nonatomic, copy) NSMutableArray *matInfoArray;
 @property (nonatomic, copy) NSMutableArray *matColorArray;
 @property (nonatomic, copy) NSMutableArray *matBGColorArray;
@@ -166,12 +168,25 @@
 @property (nonatomic, copy) NSString*artworkNameAddFavString;
 @property (nonatomic, copy) NSString*artworkCompanyAddFavString;
 @property (nonatomic, copy) NSString*artworkSellerAddFavString;
+@property (nonatomic, copy) NSString*artworkIDAddFavString;
+@property (nonatomic, copy) NSString*artworkLocationIDAddFavString;
+
+
+@property (nonatomic, copy) NSString*artworkSizeAddFavString;
+@property (nonatomic, copy) NSString*artworkColorAddFavString;
 
 @property (nonatomic, copy) NSString*matNameAddFavString;
 @property (nonatomic, copy) NSString*matCompanyAddFavString;
 @property (nonatomic, copy) NSString*matSellerAddFavString;
+@property (nonatomic, copy) NSString*matIDAddFavString;
+@property (nonatomic, copy) NSString*matLocationIDAddFavString;
 
-@property (nonatomic, copy) NSString *matUrlFavString;
+@property (nonatomic, copy) NSString*matSizeAddFavString;
+@property (nonatomic, copy) NSString*matColorAddFavString;
+@property (nonatomic, copy) NSString*matBGColorAddFavString;
+
+
+@property (nonatomic, copy) NSString *matUrlAddFavString;
 @property (nonatomic, copy) NSString *urlFavString;
 
 @property (nonatomic, copy) NSString *artworkNameUnFavString;

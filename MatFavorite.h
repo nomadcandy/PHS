@@ -27,11 +27,13 @@
 @property (nonatomic,retain) NSString* keyword;
 @property (nonatomic,retain) NSString* orderBy;
 @property (nonatomic,retain) NSString* productID;
+@property (nonatomic,retain) NSString* locationID;
 @property (nonatomic,retain) NSString* productInfoPDF;
 @property (nonatomic,retain) NSString* productReleaseDate;
 @property (nonatomic,retain) NSString* searchString;
 @property (nonatomic,retain) NSString* seller;
 @property (nonatomic,retain) NSString* sold;
 @property (nonatomic,retain) NSString* color;
+@property (nonatomic,retain) NSString* bgColor;
 
 @end

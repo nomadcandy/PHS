@@ -23,12 +23,14 @@
 @dynamic keyword;
 @dynamic orderBy;
 @dynamic productID;
+@dynamic locationID;
 @dynamic productInfoPDF;
 @dynamic productReleaseDate;
 @dynamic searchString;
 @dynamic seller;
 @dynamic sold;
 @dynamic color;
+@dynamic bgColor;
 
 
 
