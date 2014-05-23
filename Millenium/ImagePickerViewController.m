@@ -54,6 +54,8 @@
 @synthesize matInfoArray;
 @synthesize matSellerArray;
 @synthesize matCompanyArray;
+@synthesize matColorArray;
+@synthesize matBGColorArray;
 
 @synthesize artworkCount;
 @synthesize matCount;
@@ -645,8 +647,6 @@
         
         
         matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-        
-        
         NSLog(@"artWorkNameArray: %@", matNameArray);
         
         
@@ -660,14 +660,8 @@
          NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
         
         
-        
-        
-        
         matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
         NSLog(@"matSizeArray %@",matSizeArray);
-        
-        
-        
         
         matFormatArray = [searchMatArray valueForKey:@"Format"];
         NSLog(@"matFormatString %@",matFormatArray);
@@ -678,12 +672,10 @@
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
         NSLog(@"fullImageArray %@",matFullImageArray);
         
-        
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
-        
-        
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
-        //NSLog(@"idString %@",idString);
+        matColorArray = [searchMatArray valueForKey:@"Color"];
+        matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         
         
         

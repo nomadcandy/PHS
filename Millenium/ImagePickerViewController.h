@@ -131,6 +131,8 @@
 @property (nonatomic, copy) NSMutableArray *matInfoArray;
 @property (nonatomic, copy) NSMutableArray *matSellerArray;
 @property (nonatomic, copy) NSMutableArray *matCompanyArray;
+@property (nonatomic, copy) NSMutableArray *matColorArray;
+@property (nonatomic, copy) NSMutableArray *matBGColorArray;
 
 
 @property (nonatomic, assign) int artworkCount;

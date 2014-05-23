@@ -86,6 +86,7 @@
 @synthesize matSellerArray;
 @synthesize matCompanyArray;
 @synthesize matColorArray;
+@synthesize matBGColorArray;
 
 @synthesize matColorNumberArray;
 
@@ -3073,6 +3074,7 @@ else
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
         matColorArray = [searchMatArray valueForKey:@"Color"];
+        matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         
         
         
@@ -3488,10 +3490,11 @@ else
         goingController.matFormatArray = matFormatArray;
         goingController.matIconArray = matIconArray;
         goingController.matFullImageArray = matFullImageArray;
-        ///goingController.matIconImageArray = matIconImageArray;
         goingController.matIDArray = matIDArray;
         goingController.matCompanyArray = matCompanyArray;
         goingController.matSellerArray = matSellerArray;
+        goingController.matColorArray = matColorArray;
+        goingController.matBGColorArray = matBGColorArray;
         
         
         
