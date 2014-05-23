@@ -222,6 +222,7 @@
 
 @property (nonatomic, strong) NSString *matBGTextColorString;
 @property (nonatomic, strong) NSString *matBGColorString;
+@property (nonatomic, strong) NSString *matUseBGColorString;
 @property (nonatomic, strong) NSString *logoBGColorString;
 
 @property (nonatomic, strong) NSString *actionSelectedString;
