@@ -1104,6 +1104,16 @@
                                     <action selector="addPMS:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="WDL-LR-gPo"/>
                                 </connections>
                             </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8H-9x-V7d">
+                                <rect key="frame" x="29" y="422" width="38" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="titleShadowOffset" width="1" height="2"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1114,6 +1124,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="aquamarineButton" destination="C1G-mV-haq" id="fMf-4K-4xT"/>
+                        <outlet property="bgColorButton" destination="H8H-9x-V7d" id="F1H-zq-c8F"/>
                         <outlet property="blackButton" destination="bd8-6i-tyn" id="hui-en-YFq"/>
                         <outlet property="brownButton" destination="s9X-K9-WIm" id="hNl-u2-8Te"/>
                         <outlet property="burgundyButton" destination="mOY-Fe-vDB" id="6Cq-Fz-GZc"/>

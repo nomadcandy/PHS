@@ -156,6 +156,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *matColorButton6;
 @property (nonatomic, strong) IBOutlet UIButton *matColorButton7;
 @property (nonatomic, strong) IBOutlet UIButton *matColorButton8;
+@property (nonatomic, strong) IBOutlet UIButton *bgColorButton;
 
 
 
@@ -219,7 +220,9 @@
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
 
-
+@property (nonatomic, strong) NSString *matBGTextColorString;
+@property (nonatomic, strong) NSString *matBGColorString;
+@property (nonatomic, strong) NSString *logoBGColorString;
 
 @property (nonatomic, strong) NSString *actionSelectedString;
 @property (nonatomic, strong) NSString *matSizeString;

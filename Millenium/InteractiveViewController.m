@@ -88,9 +88,11 @@
 @synthesize matColorArray;
 
 @synthesize matColorNumberArray;
+@synthesize matBGTextColorString;
 
 
-
+@synthesize matBGColorString;
+@synthesize logoBGColorString;
 @synthesize nameString;
 @synthesize sellerString;
 @synthesize companyString;
@@ -262,6 +264,233 @@
     
     /*CGFloat width = w;
     CGFloat height = w;*/
+    
+    
+    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
+	[pinchRecognizer setDelegate:self];
+	[self.logoPicButton addGestureRecognizer:pinchRecognizer];
+    
+    UIPinchGestureRecognizer *pinchRecognizerDec = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scaleDec:)] ;
+	[pinchRecognizerDec setDelegate:self];
+	[self.textDecField addGestureRecognizer:pinchRecognizerDec];
+    
+    [_steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _steelBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _steelBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _steelBlueButton.layer.shadowOpacity = 1.00f;
+    _steelBlueButton.layer.shadowRadius = 3.0f;
+    
+    
+    [_suedeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_suedeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _suedeButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _suedeButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _suedeButton.layer.shadowOpacity = 1.00f;
+    _suedeButton.layer.shadowRadius = 3.0f;
+    
+    [_whiteButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_whiteButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _whiteButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _whiteButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _whiteButton.layer.shadowOpacity = 1.00f;
+    _whiteButton.layer.shadowRadius = 3.0f;
+    
+    [_roseButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_roseButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _roseButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _roseButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _roseButton.layer.shadowOpacity = 1.00f;
+    _roseButton.layer.shadowRadius = 3.0f;
+    
+    [_royalBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_royalBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _royalBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _royalBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _royalBlueButton.layer.shadowOpacity = 1.00f;
+    _royalBlueButton.layer.shadowRadius = 3.0f;
+    
+    [_sandalWoodButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_sandalWoodButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _sandalWoodButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _sandalWoodButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _sandalWoodButton.layer.shadowOpacity = 1.00f;
+    _sandalWoodButton.layer.shadowRadius = 3.0f;
+    
+    [_silverButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_silverButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _silverButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _silverButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _silverButton.layer.shadowOpacity = 1.00f;
+    _silverButton.layer.shadowRadius = 3.0f;
+    
+    [_orangeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_orangeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _orangeButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _orangeButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _orangeButton.layer.shadowOpacity = 1.00f;
+    _orangeButton.layer.shadowRadius = 3.0f;
+    
+    [_purpleButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_purpleButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _purpleButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _purpleButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _purpleButton.layer.shadowOpacity = 1.00f;
+    _purpleButton.layer.shadowRadius = 3.0f;
+    
+    [_redButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_redButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _redButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _redButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _redButton.layer.shadowOpacity = 1.00f;
+    _redButton.layer.shadowRadius = 3.0f;
+    
+    [_goldButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_goldButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _goldButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _goldButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _goldButton.layer.shadowOpacity = 1.00f;
+    _goldButton.layer.shadowRadius = 3.0f;
+    
+    [_greyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_greyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _greyButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _greyButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _greyButton.layer.shadowOpacity = 1.00f;
+    _greyButton.layer.shadowRadius = 3.0f;
+    
+    [_lightBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_lightBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _lightBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _lightBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _lightBlueButton.layer.shadowOpacity = 1.00f;
+    _lightBlueButton.layer.shadowRadius = 3.0f;
+    
+    [_navyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_navyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _navyButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _navyButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _navyButton.layer.shadowOpacity = 1.00f;
+    _navyButton.layer.shadowRadius = 3.0f;
+    
+    [_emeraldGreenButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_emeraldGreenButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _emeraldGreenButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _emeraldGreenButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _emeraldGreenButton.layer.shadowOpacity = 1.00f;
+    _emeraldGreenButton.layer.shadowRadius = 3.0f;
+    
+    [_forestGreenButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_forestGreenButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _forestGreenButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _forestGreenButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _forestGreenButton.layer.shadowOpacity = 1.00f;
+    _forestGreenButton.layer.shadowRadius = 3.0f;
+    
+    [_cranberryButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_cranberryButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _cranberryButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _cranberryButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _cranberryButton.layer.shadowOpacity = 1.00f;
+    _cranberryButton.layer.shadowRadius = 3.0f;
+    
+    [_darkGoldButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_darkGoldButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _darkGoldButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _darkGoldButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _darkGoldButton.layer.shadowOpacity = 1.00f;
+    _darkGoldButton.layer.shadowRadius = 3.0f;
+    
+    [_charcoalButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_charcoalButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _charcoalButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _charcoalButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _charcoalButton.layer.shadowOpacity = 1.00f;
+    _charcoalButton.layer.shadowRadius = 3.0f;
+    
+    [_chocolateButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_chocolateButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _chocolateButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _chocolateButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _chocolateButton.layer.shadowOpacity = 1.00f;
+    _chocolateButton.layer.shadowRadius = 3.0f;
+    
+    [_clayButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_clayButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _clayButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _clayButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _clayButton.layer.shadowOpacity = 1.00f;
+    _clayButton.layer.shadowRadius = 3.0f;
+    
+    
+    [_blackButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_blackButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _blackButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _blackButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _blackButton.layer.shadowOpacity = 1.00f;
+    _blackButton.layer.shadowRadius = 3.0f;
+    
+    [_brownButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_brownButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _brownButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _brownButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _brownButton.layer.shadowOpacity = 1.00f;
+    _brownButton.layer.shadowRadius = 3.0f;
+    
+    [_burgundyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_burgundyButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _burgundyButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _burgundyButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _burgundyButton.layer.shadowOpacity = 1.00f;
+    _burgundyButton.layer.shadowRadius = 3.0f;
+    
+    [_aquamarineButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_aquamarineButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _aquamarineButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _aquamarineButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _aquamarineButton.layer.shadowOpacity = 1.00f;
+    _aquamarineButton.layer.shadowRadius = 3.0f;
+    
+    [_turquoiseButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_turquoiseButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _turquoiseButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _turquoiseButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _turquoiseButton.layer.shadowOpacity = 1.00f;
+    _turquoiseButton.layer.shadowRadius = 3.0f;
+    
+    [_yellowButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [_yellowButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    _yellowButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    _yellowButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    _yellowButton.layer.shadowOpacity = 1.00f;
+    _yellowButton.layer.shadowRadius = 3.0f;
     
    
 
@@ -645,7 +874,25 @@
             
         }
         
-     //
+        
+        if ([string rangeOfString:@"108-Black(BG)"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            matBGColorString=@"Black_108";
+            NSLog(@"matBGColorString %@",matBGColorString);
+            matBGTextColorString=@"108";
+            
+        }
+        
+        UIImage*matBGColorImage = [UIImage imageNamed:matBGColorString];
+        [_bgColorButton setBackgroundImage:matBGColorImage forState:UIControlStateNormal];
+        [_bgColorButton setTitle:matBGTextColorString forState:UIControlStateNormal];
+        
+     
         NSLog(@"matColorNumberArray %@",matColorNumberArray);
         NSLog(@"matColorArray %@",matColorArray);
         int matColorCount= matColorArray.count;
@@ -1292,231 +1539,7 @@
     
     //nameField.text =nameString;
     
-    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
-	[pinchRecognizer setDelegate:self];
-	[self.logoPicButton addGestureRecognizer:pinchRecognizer];
     
-    UIPinchGestureRecognizer *pinchRecognizerDec = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scaleDec:)] ;
-	[pinchRecognizerDec setDelegate:self];
-	[self.textDecField addGestureRecognizer:pinchRecognizerDec];
-    
-    [_steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _steelBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _steelBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _steelBlueButton.layer.shadowOpacity = 1.00f;
-    _steelBlueButton.layer.shadowRadius = 3.0f;
-    
-    
-    [_suedeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_suedeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _suedeButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _suedeButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _suedeButton.layer.shadowOpacity = 1.00f;
-    _suedeButton.layer.shadowRadius = 3.0f;
-    
-    [_whiteButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_whiteButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _whiteButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _whiteButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _whiteButton.layer.shadowOpacity = 1.00f;
-    _whiteButton.layer.shadowRadius = 3.0f;
-    
-    [_roseButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_roseButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _roseButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _roseButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _roseButton.layer.shadowOpacity = 1.00f;
-    _roseButton.layer.shadowRadius = 3.0f;
-    
-    [_royalBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_royalBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _royalBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _royalBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _royalBlueButton.layer.shadowOpacity = 1.00f;
-    _royalBlueButton.layer.shadowRadius = 3.0f;
-    
-    [_sandalWoodButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_sandalWoodButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _sandalWoodButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _sandalWoodButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _sandalWoodButton.layer.shadowOpacity = 1.00f;
-    _sandalWoodButton.layer.shadowRadius = 3.0f;
-    
-    [_silverButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_silverButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _silverButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _silverButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _silverButton.layer.shadowOpacity = 1.00f;
-    _silverButton.layer.shadowRadius = 3.0f;
-    
-    [_orangeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_orangeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _orangeButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _orangeButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _orangeButton.layer.shadowOpacity = 1.00f;
-    _orangeButton.layer.shadowRadius = 3.0f;
-    
-    [_purpleButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_purpleButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _purpleButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _purpleButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _purpleButton.layer.shadowOpacity = 1.00f;
-    _purpleButton.layer.shadowRadius = 3.0f;
-    
-    [_redButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_redButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _redButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _redButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _redButton.layer.shadowOpacity = 1.00f;
-    _redButton.layer.shadowRadius = 3.0f;
-    
-    [_goldButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_goldButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _goldButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _goldButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _goldButton.layer.shadowOpacity = 1.00f;
-    _goldButton.layer.shadowRadius = 3.0f;
-    
-    [_greyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_greyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _greyButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _greyButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _greyButton.layer.shadowOpacity = 1.00f;
-    _greyButton.layer.shadowRadius = 3.0f;
-    
-    [_lightBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_lightBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _lightBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _lightBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _lightBlueButton.layer.shadowOpacity = 1.00f;
-    _lightBlueButton.layer.shadowRadius = 3.0f;
-    
-    [_navyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_navyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _navyButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _navyButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _navyButton.layer.shadowOpacity = 1.00f;
-    _navyButton.layer.shadowRadius = 3.0f;
-    
-    [_emeraldGreenButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_emeraldGreenButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _emeraldGreenButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _emeraldGreenButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _emeraldGreenButton.layer.shadowOpacity = 1.00f;
-    _emeraldGreenButton.layer.shadowRadius = 3.0f;
-    
-    [_forestGreenButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_forestGreenButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _forestGreenButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _forestGreenButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _forestGreenButton.layer.shadowOpacity = 1.00f;
-    _forestGreenButton.layer.shadowRadius = 3.0f;
-    
-    [_cranberryButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_cranberryButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _cranberryButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _cranberryButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _cranberryButton.layer.shadowOpacity = 1.00f;
-    _cranberryButton.layer.shadowRadius = 3.0f;
-    
-    [_darkGoldButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_darkGoldButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _darkGoldButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _darkGoldButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _darkGoldButton.layer.shadowOpacity = 1.00f;
-    _darkGoldButton.layer.shadowRadius = 3.0f;
-    
-    [_charcoalButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_charcoalButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _charcoalButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _charcoalButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _charcoalButton.layer.shadowOpacity = 1.00f;
-    _charcoalButton.layer.shadowRadius = 3.0f;
-    
-    [_chocolateButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_chocolateButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _chocolateButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _chocolateButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _chocolateButton.layer.shadowOpacity = 1.00f;
-    _chocolateButton.layer.shadowRadius = 3.0f;
-    
-    [_clayButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_clayButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _clayButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _clayButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _clayButton.layer.shadowOpacity = 1.00f;
-    _clayButton.layer.shadowRadius = 3.0f;
-    
-    
-    [_blackButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_blackButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _blackButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _blackButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _blackButton.layer.shadowOpacity = 1.00f;
-    _blackButton.layer.shadowRadius = 3.0f;
-    
-    [_brownButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_brownButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _brownButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _brownButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _brownButton.layer.shadowOpacity = 1.00f;
-    _brownButton.layer.shadowRadius = 3.0f;
-    
-    [_burgundyButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_burgundyButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _burgundyButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _burgundyButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _burgundyButton.layer.shadowOpacity = 1.00f;
-    _burgundyButton.layer.shadowRadius = 3.0f;
-    
-    [_aquamarineButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_aquamarineButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _aquamarineButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _aquamarineButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _aquamarineButton.layer.shadowOpacity = 1.00f;
-    _aquamarineButton.layer.shadowRadius = 3.0f;
-    
-    [_turquoiseButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_turquoiseButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _turquoiseButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _turquoiseButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _turquoiseButton.layer.shadowOpacity = 1.00f;
-    _turquoiseButton.layer.shadowRadius = 3.0f;
-    
-    [_yellowButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_yellowButton  addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    
-    _yellowButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _yellowButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _yellowButton.layer.shadowOpacity = 1.00f;
-    _yellowButton.layer.shadowRadius = 3.0f;
 
 
 
@@ -2120,7 +2143,12 @@ else
     
 }
 
-
+- (void)touchDownRepeat:(UIButton *)blackButton {
+    //worked
+    blackButton.hidden = YES;
+    
+    
+}
 
 #pragma mark -
 #pragma mark Button tap event
@@ -2351,7 +2379,7 @@ else
     textDecField.textColor = [UIColor whiteColor];
     textDecField.font = [UIFont fontWithName:@"Avenir-Bold" size:14];
     textDecField.backgroundColor=[UIColor darkGrayColor];
-    textDecField.text=@"PMS";
+    //textDecField.text=@" ";
     textDecField.textAlignment= NSTextAlignmentCenter;
     
     [self.view addSubview:textDecField];
