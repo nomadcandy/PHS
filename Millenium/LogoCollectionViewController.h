@@ -217,6 +217,7 @@
 -(IBAction)goHome:(UIButton *)sender;
 -(IBAction)addLogoFavorite:(id)sender;
 -(IBAction)removeFavorite:(id)sender;
+-(IBAction)removeAllFavorites:(id)sender;
 
 -(IBAction)addMatFavorite:(id)sender;
 -(IBAction)removeMatFavorite:(id)sender;

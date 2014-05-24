@@ -214,10 +214,15 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [self.view addSubview:nearHereButton];
     
     
-    UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    /*UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [searchModeButton addTarget:self
                        action:@selector(goSearchMode:)
-             forControlEvents:UIControlEventTouchDown];
+             forControlEvents:UIControlEventTouchDown];*/
+    
+    UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [searchModeButton addTarget:self
+                         action:@selector(removeAllFavorites:)
+               forControlEvents:UIControlEventTouchDown];
     
     
     UIImage*searchModeImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
@@ -414,7 +419,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matSellerArray = [_favoritesMatArray valueForKey:@"Seller"];
         matCompanyArray = [_favoritesMatArray valueForKey:@"Company"];
         matColorArray = [_favoritesMatArray valueForKey:@"Color"];
-        matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
+        //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
         
         matCount = matNameArray.count;
         
@@ -515,7 +520,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         
-        
+        artworkCount = artworkNameArray.count;
         
     }];
     
@@ -532,6 +537,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         artworkColorArray = [searchMatArray valueForKey:@"Color"];
+        
+        matCount = matNameArray.count;
         
        
         
@@ -676,7 +683,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         
-        
+        artworkCount= artworkNameArray.count;
         
         }];
         
@@ -707,7 +714,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matColorArray=[searchMatArray valueForKey:@"Color"];
             matBGColorArray=[searchMatArray valueForKey:@"BGColor"];
 
-
+            matCount= matNameArray.count;
         
         [self.collectionView reloadData];
         
@@ -1096,6 +1103,59 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [self presentViewController:vc animated:YES completion:nil];
     
 }
+
+
+
+-(IBAction)removeAllFavorites:(id)sender{
+    
+    
+    
+    //NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+   
+    
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
+    //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    self.favoritesLogoArray = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    
+   /* NSFetchRequest * removeAllLogos = [[NSFetchRequest alloc] init];
+    [removeAllLogos setEntity:[NSEntityDescription entityForName:@"LogoFavorite" inManagedObjectContext:context]];*/
+    [fetchRequest setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+    
+    NSError * error = nil;
+    //NSArray * Logos = [context executeFetchRequest:fetchRequest error:&error];
+    //[removeAllLogos release];
+    //error handling goes here
+    for (NSManagedObject * logo in self.favoritesLogoArray) {
+        [context deleteObject:logo];
+    }
+    NSError *saveError = nil;
+    [context save:&saveError];
+    
+    
+    NSManagedObjectContext *matContext = [self managedObjectContext];
+    
+    
+    NSFetchRequest * removeAllMats = [[NSFetchRequest alloc] init];
+    [removeAllMats setEntity:[NSEntityDescription entityForName:@"MatFavorite" inManagedObjectContext:matContext]];
+    [removeAllMats setIncludesPropertyValues:NO]; //only fetch the managedObjectID
+    
+    NSError * errorMats = nil;
+    NSArray * Mats = [matContext executeFetchRequest:removeAllMats error:&error];
+    
+    for (NSManagedObject * mat in Mats) {
+        [context deleteObject:mat];
+    }
+    NSError *saveErrorMat = nil;
+    [context save:&saveErrorMat];
+
+}
+
+    
+
 
 -(IBAction)addMatFavorite:(id)sender{
     

@@ -2845,6 +2845,10 @@ else
     //NSArray *toRecipents = [NSArray arrayWithObject:emailString];
     //NSArray *toRecipents = @"yummy@nomadcandy.com";
     
+    
+    //Display Email Composer
+    
+    
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;
     [mc setSubject:emailTitle];

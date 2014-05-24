@@ -51,8 +51,6 @@
 		422A692B19102CBD001CAB8D /* LogoSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A692919102CBD001CAB8D /* LogoSearch.m */; };
 		422A696F19118610001CAB8D /* LogoFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A696E19118610001CAB8D /* LogoFavorite.m */; };
 		422A697019118610001CAB8D /* LogoFavorite.m in Sources */ = {isa = PBXBuildFile; fileRef = 422A696E19118610001CAB8D /* LogoFavorite.m */; };
-		422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
-		422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 422BA5FD18F442B900E53B33 /* CharlesHead.m4v */; };
 		424756D918D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756DA18D389FA000AAF7C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756D818D389FA000AAF7C /* SearchViewController.m */; };
 		424756E718D38ADB000AAF7C /* LogoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */; };
@@ -88,8 +86,6 @@
 		426A6A1E18ED0CC300255331 /* SampleLogo3.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0D18ED0CC300255331 /* SampleLogo3.png */; };
 		426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0E18ED0CC300255331 /* SampleLogo2.png */; };
 		426A6A2018ED0CC300255331 /* SampleLogo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A0F18ED0CC300255331 /* SampleLogo1.png */; };
-		426A6A2218EDA29E00255331 /* MatAnimationCleanMedium.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2118EDA29E00255331 /* MatAnimationCleanMedium.m4v */; };
-		426A6A2418EDA3C800255331 /* MatAnimationUseSmall.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2318EDA3C800255331 /* MatAnimationUseSmall.m4v */; };
 		426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2618EDACD600255331 /* MatChatterBg.png */; };
 		426A6A2F18EDADBA00255331 /* LookingSerious.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2818EDADBA00255331 /* LookingSerious.png */; };
 		426A6A3018EDADBA00255331 /* WeGotThis.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2918EDADBA00255331 /* WeGotThis.png */; };
@@ -98,7 +94,6 @@
 		426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2C18EDADBA00255331 /* FriendlyButton.png */; };
 		426A6A3418EDADBA00255331 /* CleanButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2D18EDADBA00255331 /* CleanButton.png */; };
 		426A6A3518EDADBA00255331 /* FreshButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2E18EDADBA00255331 /* FreshButton.png */; };
-		426A6A3718EDD3B100255331 /* Professional_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A3618EDD3B100255331 /* Professional_video.mp4 */; };
 		426A6A3918EDD99200255331 /* FriendlyCharlesUse.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */; };
 		426A6A6E18EDE32200255331 /* WalkOffLogoMatMedium.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */; };
 		427CE62C18F0670700865291 /* FliersWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CE62B18F0670700865291 /* FliersWhite.png */; };
@@ -198,8 +193,6 @@
 		42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */; };
 		42A24BFC19183F3000568305 /* InteractiveSignHere.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BFB19183F3000568305 /* InteractiveSignHere.png */; };
 		42A24BFE191843FF00568305 /* InteractiveGreyMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BFD191843FF00568305 /* InteractiveGreyMat.png */; };
-		42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */; };
-		42AB550D18EF44C50051AF9F /* Charles3Animation.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */; };
 		42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550F18EF51310051AF9F /* LogoSelectedBG.png */; };
 		42B014FE18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B014FF18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
@@ -393,7 +386,6 @@
 		422A692919102CBD001CAB8D /* LogoSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoSearch.m; sourceTree = "<group>"; };
 		422A696D191185FA001CAB8D /* LogoFavorite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoFavorite.h; sourceTree = "<group>"; };
 		422A696E19118610001CAB8D /* LogoFavorite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoFavorite.m; sourceTree = "<group>"; };
-		422BA5FD18F442B900E53B33 /* CharlesHead.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesHead.m4v; sourceTree = "<group>"; };
 		424756D718D389FA000AAF7C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		424756D818D389FA000AAF7C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoCollectionViewController.h; sourceTree = "<group>"; };
@@ -428,8 +420,6 @@
 		426A6A0D18ED0CC300255331 /* SampleLogo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo3.png; sourceTree = "<group>"; };
 		426A6A0E18ED0CC300255331 /* SampleLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo2.png; sourceTree = "<group>"; };
 		426A6A0F18ED0CC300255331 /* SampleLogo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SampleLogo1.png; sourceTree = "<group>"; };
-		426A6A2118EDA29E00255331 /* MatAnimationCleanMedium.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatAnimationCleanMedium.m4v; sourceTree = "<group>"; };
-		426A6A2318EDA3C800255331 /* MatAnimationUseSmall.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = MatAnimationUseSmall.m4v; sourceTree = "<group>"; };
 		426A6A2618EDACD600255331 /* MatChatterBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBg.png; sourceTree = "<group>"; };
 		426A6A2818EDADBA00255331 /* LookingSerious.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LookingSerious.png; sourceTree = "<group>"; };
 		426A6A2918EDADBA00255331 /* WeGotThis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeGotThis.png; sourceTree = "<group>"; };
@@ -438,7 +428,6 @@
 		426A6A2C18EDADBA00255331 /* FriendlyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FriendlyButton.png; sourceTree = "<group>"; };
 		426A6A2D18EDADBA00255331 /* CleanButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CleanButton.png; sourceTree = "<group>"; };
 		426A6A2E18EDADBA00255331 /* FreshButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FreshButton.png; sourceTree = "<group>"; };
-		426A6A3618EDD3B100255331 /* Professional_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Professional_video.mp4; sourceTree = "<group>"; };
 		426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FriendlyCharlesUse.png; sourceTree = "<group>"; };
 		426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMedium.m4v; sourceTree = "<group>"; };
 		427CE62B18F0670700865291 /* FliersWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FliersWhite.png; sourceTree = "<group>"; };
@@ -527,8 +516,6 @@
 		42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveLandscapeButton.png; sourceTree = "<group>"; };
 		42A24BFB19183F3000568305 /* InteractiveSignHere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveSignHere.png; sourceTree = "<group>"; };
 		42A24BFD191843FF00568305 /* InteractiveGreyMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveGreyMat.png; sourceTree = "<group>"; };
-		42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = CharlesAnimationUse.m4v; sourceTree = "<group>"; };
-		42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = Charles3Animation.m4v; sourceTree = "<group>"; };
 		42AB550F18EF51310051AF9F /* LogoSelectedBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoSelectedBG.png; sourceTree = "<group>"; };
 		42B014FD18DF450F0068019C /* WebViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG.png; sourceTree = "<group>"; };
 		42B0150018DF46970068019C /* WebViewBG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG1.png; sourceTree = "<group>"; };
@@ -1126,13 +1113,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
-				422BA5FD18F442B900E53B33 /* CharlesHead.m4v */,
-				42AB550C18EF44C50051AF9F /* Charles3Animation.m4v */,
-				42AB550A18EF439A0051AF9F /* CharlesAnimationUse.m4v */,
 				426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */,
-				426A6A3618EDD3B100255331 /* Professional_video.mp4 */,
-				426A6A2318EDA3C800255331 /* MatAnimationUseSmall.m4v */,
-				426A6A2118EDA29E00255331 /* MatAnimationCleanMedium.m4v */,
 				422A692219101E5E001CAB8D /* CoreData */,
 				42DEAF2C19192D6E0087E71D /* ImagesImagePicker */,
 				422A691B19100939001CAB8D /* ImagesAssets */,
@@ -1339,7 +1320,6 @@
 				426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */,
 				428085D018FD792D00389C9C /* goButton.png in Resources */,
 				42B0153718E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
-				422BA5FE18F442B900E53B33 /* CharlesHead.m4v in Resources */,
 				4297E08319250F8100E43779 /* Red_112.jpg in Resources */,
 				42B0155B18E3163F0068019C /* Dura-Lite.pdf in Resources */,
 				426A6A1D18ED0CC300255331 /* SampleLogo4.png in Resources */,
@@ -1383,7 +1363,6 @@
 				422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */,
 				4297E08919250F8100E43779 /* Forest Green_117.jpg in Resources */,
 				42E9AC0B18FF58D3000E226D /* Friendly1Button.png in Resources */,
-				42AB550B18EF439B0051AF9F /* CharlesAnimationUse.m4v in Resources */,
 				4297E07F19250F8100E43779 /* Sandalwood_120.jpg in Resources */,
 				42B0153A18E315920068019C /* GoldenSeries.pdf in Resources */,
 				42FF7A1F18CDE92A00C72695 /* InfoPlist.strings in Resources */,
@@ -1424,7 +1403,6 @@
 				42B0155818E3161C0068019C /* FirstStepScraper.pdf in Resources */,
 				426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */,
 				427CE62C18F0670700865291 /* FliersWhite.png in Resources */,
-				426A6A2418EDA3C800255331 /* MatAnimationUseSmall.m4v in Resources */,
 				42E9AC2018FF5A6C000E226D /* pro3button.png in Resources */,
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */,
@@ -1462,7 +1440,6 @@
 				4297E09019250F8100E43779 /* Brown_102.jpg in Resources */,
 				42E9AC0C18FF58D3000E226D /* Fresh1Button.png in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
-				426A6A3718EDD3B100255331 /* Professional_video.mp4 in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
 				426A6A1818ED0CC300255331 /* SampleLogo9.png in Resources */,
 				426A6A2F18EDADBA00255331 /* LookingSerious.png in Resources */,
@@ -1472,7 +1449,6 @@
 				4297E09319250F8100E43779 /* Turquoise_104.jpg in Resources */,
 				426206621907004900FE7066 /* mask.png in Resources */,
 				4297E0561923CB6A00E43779 /* MaskWhiteSquare10.png in Resources */,
-				42AB550D18EF44C50051AF9F /* Charles3Animation.m4v in Resources */,
 				42B0150118DF46970068019C /* WebViewBG1.png in Resources */,
 				42FF7A2818CDE92A00C72695 /* Main.storyboard in Resources */,
 				42849B6B18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
@@ -1485,7 +1461,6 @@
 				4297E08C19250F8100E43779 /* Charcoal_101.jpg in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */,
-				426A6A2218EDA29E00255331 /* MatAnimationCleanMedium.m4v in Resources */,
 				426A6A3418EDADBA00255331 /* CleanButton.png in Resources */,
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				42B0157F18E3428B0068019C /* FirstStepLogoScraper.png in Resources */,
@@ -1535,7 +1510,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				422BA5FF18F442B900E53B33 /* CharlesHead.m4v in Resources */,
 				42B0156B18E317710068019C /* SpringStep.pdf in Resources */,
 				42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */,
 				42E9AC2318FF5A6C000E226D /* Friendly3Button.png in Resources */,
