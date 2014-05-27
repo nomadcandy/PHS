@@ -93,6 +93,9 @@
 @property (nonatomic, strong) UITextField *textNoteField;
 @property (nonatomic, strong) UITextField *textDecField;
 
+
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @property (nonatomic, strong) IBOutlet UITextField *hexField;
 @property (nonatomic, strong) IBOutlet UITextField *searchField;
 @property (nonatomic, strong) IBOutlet UIButton *searchButton;
@@ -107,6 +110,8 @@
 
 @property (nonatomic, strong) IBOutlet UITextField *widthCircleField;
 @property (nonatomic, strong) IBOutlet UITextField *heightCircleField;
+
+@property (nonatomic, strong) IBOutlet UITextField *textOrientField;
 
 @property (nonatomic, strong) IBOutlet UIView *interactiveView;
 @property (nonatomic, strong) IBOutlet UIButton *uploadLogoButton;

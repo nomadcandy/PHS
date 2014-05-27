@@ -18,6 +18,8 @@
 @implementation InteractiveViewController
 
 
+@synthesize activityIndicator;
+
 @synthesize textNoteField;
 @synthesize textDecField;
 @synthesize hexField;
@@ -52,6 +54,7 @@
 @synthesize numberField;
 @synthesize sellerField;
 @synthesize companyField;
+@synthesize textOrientField;
 
 @synthesize titleBar;
 
@@ -173,7 +176,7 @@
 {
     [super viewDidLoad];
     
-    
+    textOrientField.hidden= YES;
     
     UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
@@ -212,6 +215,21 @@
     //For img_view2 rect
     //parameters are x,y,width,height
     //CGRect image_rect2 = CGRectMake(img_view2.position.x,img_view2.position.y,100,100);
+    
+    
+    
+    _widthField.text = @"3'";
+    _widthCircleField.text = @"3'";
+    
+    _heightField.text = @"5'";
+    _heightCircleField.text = @"5'";
+    
+    
+    CGRect myLogoMatRect = CGRectMake( 476.0f, 200.0f, 500.0f, 300.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+
     
     NSLog(@"matColorString %@",_matColorString);
     NSLog(@"logoColorString %@",_logoColorString);
@@ -2912,6 +2930,9 @@ else
 
 -(IBAction)goSearch:(id)sender{
     
+    
+    [activityIndicator startAnimating];
+    
    if( searchField.text!= Nil || [searchField.text length] == 0 ) {
     
     
@@ -3316,14 +3337,35 @@ else
     //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
     
     matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
     
 }
 
 
 -(IBAction) Portrait:(id)sender{
     
-    orientString=@"portrait";
+    textOrientField.hidden= NO;
+    
+    
+    //textOrientField = [[UITextField alloc] initWithFrame:CGRectMake(445, 300, 200, 60)];
+    //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
+    textOrientField.textColor = [UIColor redColor];
+    textOrientField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    textOrientField.backgroundColor=[UIColor whiteColor];
+    textOrientField.text=@"Portrait";
+    [self.view addSubview:textNoteField];
+    
+    [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+
+    /*orientString=@"portrait";
+    
+    if ([orientString isEqualToString:@"portrait"])
+        
+    {
+        
+        
+    
     
     //_widthField.text = _widthField.text;
     _widthCircleField.text =_widthField.text;
@@ -3335,8 +3377,8 @@ else
     int wMat = [_widthField.text intValue];
     int hMat = [_heightField.text intValue];
     
-    int wMatHundred = wMat*100;
-    int hMatHundred = hMat*100;
+    int wMatHundred = wMat*85;
+    int hMatHundred = hMat*85;
     
     int wMatHundredDivide = wMatHundred/2;
     int hMatHundredDivide = hMatHundred/2;
@@ -3347,7 +3389,11 @@ else
     //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
     
     matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    //matBGLogoView.ContentMode=  UIViewContentModeCenter;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
+        
+    
     
     /*_widthField.text = @"5'";
     _widthCircleField.text = @"3'";
@@ -3359,12 +3405,32 @@ else
     
     matBGLogoView.frame=myLogoMatRect;
     matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;*/
+        
+    }
     
-}
+//}
 
 -(IBAction)Landscape:(id)sender{
     
-    orientString=@"landscape";
+    textOrientField.hidden= NO;
+    textOrientField.textColor = [UIColor redColor];
+    textOrientField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    textOrientField.backgroundColor=[UIColor whiteColor];
+    textOrientField.text=@"Landscape";
+    //[self.view addSubview:textOrientField];
+    
+    [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+
+    /*orientString=@"landscape";
+    
+    
+    if ([orientString isEqualToString:@"landscape"])
+        
+    {
+        
+    
+
     
     //_widthField.text = _widthField.text;
     _widthCircleField.text =_widthField.text;
@@ -3388,7 +3454,8 @@ else
     //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
     
     matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    matBGLogoView.ContentMode=  UIViewContentModeCenter;
     
     
    /* _widthField.text = @"3'";
@@ -3402,6 +3469,8 @@ else
     
     matBGLogoView.frame=myLogoMatRect;
     matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;*/
+        
+   // }
     
 }
 
@@ -3414,9 +3483,9 @@ else
 -(IBAction) twoByTwo:(id)sender{
     
     _widthField.text = @"2'";
-    _widthCircleField.text = @"3'";
+    _widthCircleField.text = @"2'";
     
-    _heightField.text = @"2'";
+    _heightField.text = @"3'";
     _heightCircleField.text = @"3'";
     
     CGRect myLogoMatRect = CGRectMake( 576.0f, 250.0f, 300.0f, 200.0f);

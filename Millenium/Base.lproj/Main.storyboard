@@ -1133,6 +1133,16 @@
                                     <attributedString key="attributedTitle"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgd-E0-5tB">
+                                <rect key="frame" x="423" y="57" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="de4-mm-P8n">
+                                <rect key="frame" x="995" y="738" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1142,6 +1152,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="de4-mm-P8n" id="Bgp-8J-bDn"/>
                         <outlet property="aquamarineButton" destination="C1G-mV-haq" id="fMf-4K-4xT"/>
                         <outlet property="bgColorButton" destination="H8H-9x-V7d" id="F1H-zq-c8F"/>
                         <outlet property="blackButton" destination="bd8-6i-tyn" id="hui-en-YFq"/>
@@ -1189,6 +1200,7 @@
                         <outlet property="silverButton" destination="czk-Kk-atJ" id="O8p-Uk-YXA"/>
                         <outlet property="steelBlueButton" destination="TuV-5b-4aV" id="iWY-ed-lVl"/>
                         <outlet property="suedeButton" destination="tim-gd-TdR" id="7e3-yE-Yzq"/>
+                        <outlet property="textOrientField" destination="jgd-E0-5tB" id="NPo-Ad-zEW"/>
                         <outlet property="titleLabel" destination="Gp3-sR-MKY" id="Dh3-pE-Jh9"/>
                         <outlet property="turquoiseButton" destination="LiC-Ae-Fd7" id="6Lo-jD-KPZ"/>
                         <outlet property="whiteButton" destination="i4g-fc-CgV" id="FZL-OQ-pvA"/>
