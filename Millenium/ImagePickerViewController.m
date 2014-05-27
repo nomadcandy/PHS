@@ -482,49 +482,20 @@
 
 -(IBAction)goSearch:(id)sender{
     
-    NSString*searchString= searchField.text;
-    //NSString*passwordString= passwordField.text;
     
-    //loginView.hidden =YES;
-    //loginField.hidden=YES;
-    //passwordField.hidden =YES;
-    //goButton.hidden =YES;
+    if( searchField.text!= Nil || [searchField.text length] == 0 ) {
+        
+        
+        NSString*searchOneString= searchField.text;
+        
+        NSInteger nWords = 1;
+        NSRange wordRange = NSMakeRange(0, nWords);
+        NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
+        
+        NSString*searchString= [searchStringArray objectAtIndex:0];
     
+        
     
-    
-    
-    
-    
-    /*BOOL error = NO;
-     
-     if(loginField.text == nil || [loginField.text length] == 0)
-     {
-     error = YES;
-     //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }
-     
-     if(passwordField.text == nil || [passwordField.text length] == 0)
-     {
-     error = YES;
-     //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }*/
-    
-    
-    
-    /*if(error)
-     {
-     [self showError];
-     return;
-     }*/
-    
-    
-    
-    
-    
-    //NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"]];
-    
-    
-    // NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", searchString,passwordString];
     
     NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
     
@@ -684,79 +655,7 @@
     }];
 
     
-    //declare variable and return count of images returned
-    int jsonLogoCount;
-    jsonLogoCount = artworkNameArray.count;
-    
-    // NSLog(@"jsonLogoCount %d",jsonLogoCount);
-    /*for (int i = 0;i<jsonLogoCount;i++){
-     
-     
-     
-     NSDictionary*logosNameDictionary  = [artworkNameArray objectAtIndex:i];
-     
-     NSLog(@"logosDictionary %@",logosNameDictionary);
-     
-     }*/
-    
-    //NSManagedObject *myManagedObject;
-    /*for (int i=0;i<jsonLogoCount;i++) {
-     
-     artworkNameAddString =[artworkNameArray objectAtIndex:i];
-     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-     
-     //calls method to add the string to CoreData
-     //[self insertNewManagedObject:[artworkNameArray objectAtIndex:i]];
-     [self insertNewManagedObject:artworkNameAddString];
-     
-     }*/
-    
-    /* for (int i=0;i<jsonLogoCount;i++) {
-     //delete existing data
-     
-     
-     
-     
-     
-     
-     
-     
-     // loops to add values
-     artworkNameAddString =[artworkNameArray objectAtIndex:i];
-     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-     
-     artworkFullImageString =[artworkFullImageArray objectAtIndex:i];
-     NSLog(@"artworkFullImageString = %@", artworkFullImageString );
-     
-     NSManagedObjectContext *context = [self managedObjectContext];
-     
-     // Create a new managed object
-     NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
-     
-     // Delete object from database
-     //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
-     
-     [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
-     [newLogoSearch setValue:self.artworkFullImageString forKey:@"fullImageURL"];
-     //[newDevice setValue:self.companyTextField.text forKey:@"company"];
-     
-     NSError *error = nil;
-     // Save the object to persistent store
-     if (![context save:&error]) {
-     NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-     }
-     //Fetch Data entered to test
-     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
-     self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-     
-     
-     NSLog(@"favoritesArray %@",favoritesArray);
-     
-     
-     }*/
-    
+    }
     
     
 }

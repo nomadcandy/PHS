@@ -267,12 +267,6 @@
 -(IBAction)goSearch:(id)sender{
     
     
-    
-    
-    
-   
-    
-    
     if( searchField.text!= Nil || [searchField.text length] == 0 ) {
         
         

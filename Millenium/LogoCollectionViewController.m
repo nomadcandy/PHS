@@ -23,6 +23,9 @@
 @synthesize matCount;
 
 
+@synthesize searchField;
+
+
 @synthesize searchHereString;
 @synthesize searchHereField;
 @synthesize searchOutField;
@@ -575,50 +578,17 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goSearch:(id)sender{
     
-   
-     NSString*searchYeahString= searchHereField.text;
-     NSLog(@"searchString %@",searchYeahString);
-    
-     //NSString*searchString=_logoHeaderCell.searchField.text;
-    //searchString= searchHereField.text;
-    //NSString*searchString= _searchField.text;
-    //NSLog(@"searchString %@",searchString);
-    //NSString*passwordString= passwordField.text;
-    
-    //loginView.hidden =YES;
-    //loginField.hidden=YES;
-    //passwordField.hidden =YES;
-    //goButton.hidden =YES;
-    
-    
-    
-    
-    
-    
-    /*BOOL error = NO;
-     
-     if(loginField.text == nil || [loginField.text length] == 0)
-     {
-     error = YES;
-     //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }
-     
-     if(passwordField.text == nil || [passwordField.text length] == 0)
-     {
-     error = YES;
-     //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }*/
-    
-    
-    
-    /*if(error)
-     {
-     [self showError];
-     return;
-     }*/
-    
-    
-    
+        
+    if( searchHereField.text!= Nil || [searchHereField.text length] == 0 ) {
+        
+        
+        NSString*searchOneString= searchHereField.text;
+        
+        NSInteger nWords = 1;
+        NSRange wordRange = NSMakeRange(0, nWords);
+        NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
+        
+        NSString*searchYeahString= [searchStringArray objectAtIndex:0];
     
     
     //Search Logos
@@ -874,11 +844,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
 }
-   
+    
+}
+
 
 -(IBAction)goSearchVariation:(id)sender{
     
-    NSString*searchString= _searchField.text;
+    NSString*searchString= searchField.text;
     NSLog(@"searchCellString %@",searchString);
     
     NSString*searchYeahString= searchHereField.text;

@@ -2910,49 +2910,21 @@ else
 
 -(IBAction)goSearch:(id)sender{
     
-    NSString*searchString= searchField.text;
-    //NSString*passwordString= passwordField.text;
-    
-    //loginView.hidden =YES;
-    //loginField.hidden=YES;
-    //passwordField.hidden =YES;
-    //goButton.hidden =YES;
+   if( searchField.text!= Nil || [searchField.text length] == 0 ) {
     
     
+    NSString*searchOneString= searchField.text;
     
+    NSInteger nWords = 1;
+    NSRange wordRange = NSMakeRange(0, nWords);
+    NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
     
-    
-    
-    /*BOOL error = NO;
-     
-     if(loginField.text == nil || [loginField.text length] == 0)
-     {
-     error = YES;
-     //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }
-     
-     if(passwordField.text == nil || [passwordField.text length] == 0)
-     {
-     error = YES;
-     //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }*/
-    
-    
-    
-    /*if(error)
-     {
-     [self showError];
-     return;
-     }*/
+    NSString*searchString= [searchStringArray objectAtIndex:0];
     
     
     
     
     
-    //NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"]];
-    
-    
-    // NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", searchString,passwordString];
     
     NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
 
@@ -2961,8 +2933,7 @@ else
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     
     
-    //[theRequest setHTTPMethod:@"POST"];
-    //[theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+   
     
     
     NSLog(@"URLLOGIN: %@",urlSearch);
@@ -2977,11 +2948,6 @@ else
     
     
     
-    //parse Dictionary from web
-    /*NSDictionary *searchLogoDictionary = [NSJSONSerialization
-                                          JSONObjectWithData:data
-                                          options:NSJSONReadingAllowFragments
-                                          error: &error];*/
     
     
     //parse Array from web
@@ -3022,10 +2988,6 @@ else
     NSLog(@"%@SearchMatArray",searchMatArray);
 
     
-    //crashes here
-    //NSArray* keysAllLogosArray = [searchLogoDictionary allKeys];
-    
-    //NSLog(@"%@KEYSALLLOGOSARRAY",keysAllLogosArray);
     
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
@@ -3084,61 +3046,39 @@ else
     
     [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchMatArray %@",searchMatArray);
+            NSLog(@"%@", object);
+            NSLog(@"searchMatArray %@",searchMatArray);
         
         
-        matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-        matCount= matNameArray.count;
+            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+            matCount= matNameArray.count;
+            NSLog(@"artWorkNameArray: %@", matNameArray);
+        
+            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+            NSLog(@"matSizeArray %@",matSizeArray);
+        
+            matFormatArray = [searchMatArray valueForKey:@"Format"];
+            NSLog(@"matFormatString %@",matFormatArray);
+        
+            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+            NSLog(@"fullImageArray %@",matFullImageArray);
         
         
-        NSLog(@"artWorkNameArray: %@", matNameArray);
+            matIconArray = [searchMatArray valueForKey:@"IconURL"];
         
         
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        
-        
-        
-        
-        matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-        NSLog(@"matSizeArray %@",matSizeArray);
-        
-        
-        
-        
-        matFormatArray = [searchMatArray valueForKey:@"Format"];
-        NSLog(@"matFormatString %@",matFormatArray);
+            matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            //NSLog(@"idString %@",idString);
+            matColorArray = [searchMatArray valueForKey:@"Color"];
+            matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         
         
         
         
-        matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",matFullImageArray);
-        
-        
-        matIconArray = [searchMatArray valueForKey:@"IconURL"];
-        
-        
-        matIDArray = [searchMatArray valueForKey:@"ProductID"];
-        //NSLog(@"idString %@",idString);
-        matColorArray = [searchMatArray valueForKey:@"Color"];
-        matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
-        
-        
-        
-        
-    }];
+        }];
     
 
-    
+   }
     
     
     
