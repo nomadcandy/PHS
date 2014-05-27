@@ -138,67 +138,30 @@
 
 -(IBAction)goLogin:(id)sender{
     
-    NSString*loginString= loginField.text;
-    NSString*passwordString= passwordField.text;
     
-    loginView.hidden =YES;
-    //loginField.hidden=YES;
-    //passwordField.hidden =YES;
-    //goButton.hidden =YES;
+    if (loginField.text!=Nil || passwordField.text!= Nil || [loginField.text length] == 0 || [passwordField.text length] == 0)
+    
+    {
+        NSString*loginString= loginField.text;
+        NSString*passwordString= passwordField.text;
+    
+        loginView.hidden =YES;
+    
 
         
         
         
     
         
-        /*BOOL error = NO;
         
-        if(loginField.text == nil || [loginField.text length] == 0)
-        {
-            error = YES;
-            //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-        }
-        
-        if(passwordField.text == nil || [passwordField.text length] == 0)
-        {
-            error = YES;
-            //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-        }*/
-        
-    
-        
-        /*if(error)
-        {
-            [self showError];
-            return;
-        }*/
-        
-        
-        
-    
-    
-    //NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"]];
-    
     
     NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", loginString,passwordString];
     
     
     NSURL *urlLogin = [[NSURL alloc] initWithString:urlLoginString];
-    
-    
-    //[theRequest setHTTPMethod:@"POST"];
-    //[theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    
-    
     NSLog(@"URLLOGIN: %@",urlLogin);
-    
-   
-    
-   NSError *error = nil;
-    
- 
-    
-   NSData *data = [NSData dataWithContentsOfURL:urlLogin];
+    NSError *error = nil;
+    NSData *data = [NSData dataWithContentsOfURL:urlLogin];
     
     
     
@@ -238,44 +201,10 @@
     
     
     
-   /* [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-        NSLog(@"%@", object);
-        
-        NSLog(@"keysPhotosArray %@",loginArray);
-        
-        NSDictionary *resultDictionary = [loginDictionary objectForKey:object];*/
-    
-    
-        /*NSString *artistString = [resultDictionary objectForKey:@"artist"];
-        NSLog(@"artistString %@",artistString);
-        NSString *titleString = [resultDictionary objectForKey:@"title"];
-        NSLog(@"titleString %@",titleString);
-        
-        NSString *albumArtistSpaceString = [artistString stringByAppendingString:@"   "];
-        
-        NSString *albumArtistString = [albumArtistSpaceString stringByAppendingString:titleString];
-        
-        NSString *copyrightString = [resultDictionary objectForKey:@"copyright"];
-        NSLog(@"copyrightString %@",copyrightString);
-        
-        NSString *copyLabelSpaceString = [copyrightString stringByAppendingString:@"   "];
-        
-        
-        NSString *labelNameString = [resultDictionary objectForKey:@"label_name"];
-        NSLog(@"labelName %@",labelNameString);
-        
-        
-        NSString *copyLabelString = [copyLabelSpaceString stringByAppendingString:labelNameString];
-        
-        NSArray *photosArray = [resultDictionary objectForKey:@"photos"];
-        NSLog(@"photosArray %@",photosArray);
-        
-        NSDictionary *photosDictonary1 = [resultDictionary objectForKey:@"photos"];
-        NSLog(@"photosDictionary1 %@",photosDictonary1);*/
         
 
         
-        
+    }
     
     
 }
@@ -324,40 +253,11 @@
 
 -(IBAction)goSearch:(id)sender{
     
-    NSString*searchString= searchField.text;
-    //NSString*passwordString= passwordField.text;
     
-    //loginView.hidden =YES;
-    //loginField.hidden=YES;
-    //passwordField.hidden =YES;
-    //goButton.hidden =YES;
+    if( searchField.text!= Nil || [searchField.text length] == 0 ) {
     
-    
-    
-    
-    
-    
-    /*BOOL error = NO;
-     
-     if(loginField.text == nil || [loginField.text length] == 0)
-     {
-     error = YES;
-     //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }
-     
-     if(passwordField.text == nil || [passwordField.text length] == 0)
-     {
-     error = YES;
-     //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }*/
-    
-    
-    
-    /*if(error)
-     {
-     [self showError];
-     return;
-     }*/
+            NSString*searchString= searchField.text;
+        
     
     
     
@@ -365,15 +265,12 @@
     
     
     
-    
-   /* NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchLogoString=%@&Orderby=match", searchString];*/
-    
+       
     NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=bestMatch&interactiveOnly=1&locationID=-1", searchString];
 
     
     
-    //http://ipad.cintasmats.com/LogoSearchResults/?searchString=Best%20Buy&Orderby=match&interactiveOnly=1&locationID=-1
-    
+        
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     
     
@@ -531,6 +428,20 @@
         
         
     }];
+        
+    } else{
+        
+        
+        NSLog(@"Button was clicked, lets display our alert view");
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Search Field Empty"
+                                                            message:@"You need to enter a valued in the search Field"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                                  otherButtonTitles:@"Ok", nil];
+        
+        [alertView show];
+        
+    }
 
     
     //declare variable and return count of images returned

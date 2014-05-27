@@ -2992,7 +2992,7 @@ else
     
     
     
-    artworkCount= searchLogoArray.count;
+    
     
     
     NSLog(@"%@SEARCHLOGODICTIONARY",searchLogoDictionary);
@@ -3035,6 +3035,7 @@ else
         
         
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+        artworkCount= artworkNameArray.count;
         
         
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
@@ -3088,6 +3089,7 @@ else
         
         
         matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+        matCount= matNameArray.count;
         
         
         NSLog(@"artWorkNameArray: %@", matNameArray);

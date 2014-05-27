@@ -545,7 +545,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }];
     
-     [self.collectionView reloadData];
+     //[self.collectionView reloadData];
     
     
     
@@ -928,12 +928,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-    /*NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?VariationOf=%@&Orderby=match", searchYeahString];*/
     
     NSString*urlSearchString=[NSString stringWithFormat:@" http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchYeahString];
 
     
-    //http://ipad.cintasmats.com/LogoSearchResults/?searchString=Best%20Buy&Orderby=match&interactiveOnly=1&locationID=-1
+    
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -1387,38 +1386,25 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         return 0;
     }
         
-    //{
-    //NSLog(@"jsonLogoCount %i",jsonLogoCount);
-    //NSLog(@"artworkNameArray %@",artworkNameArray);
-
-    /*int jsonLogoCount;
-    jsonLogoCount = artworkNameArray.count;
-    return jsonLogoCount;*/
-    
-    /*int jsonArtDictCount;
-    jsonArtDictCount = artworkNameDictionary.count;
-    return jsonArtDictCount;*/
         
-        //return 22;
-    //}
-    
     
    else
     {
         
-        //return artworkNameArray.count;
+         return artworkNameArray.count;
+         return matNameArray.count;
         //return matNameArray.count;
         //return logoNearMeArray.count;
         //return jsonLogoCount;
-        if (artworkCount < matCount){
+        if (artworkNameArray.count < matNameArray.count){
             
-            return matCount;
-            NSLog(@"matCount %i",matCount);
+            return matNameArray.count;
+            NSLog(@"matCount %i",matNameArray.count);
             
         }else{
             
-            return artworkCount;
-            NSLog(@"logoCount %i",artworkCount);
+            return artworkNameArray.count;
+            NSLog(@"logoCount %i",artworkNameArray.count);
             
         }
         
@@ -1610,11 +1596,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             selectedIndex=[indexPath row];
             _logoChooseButton.tag=[indexPath row];
-            NSLog(@"addButton.tag:%ld",(long)_logoChooseButton.tag);
+           /* NSLog(@"addButton.tag:%ld",(long)_logoChooseButton.tag);
             NSLog(@"indexPathSender1:%@",indexPath);
             NSLog(@"rowSelectedHere %i",rowSelectedHere);
             
-            NSLog(@"indexPathSender:%ld",(long)logoCell.tag);
+            NSLog(@"indexPathSender:%ld",(long)logoCell.tag);*/
             
             UIButton*button = [logoCell logoChooseButton];
             button.tag = selectedIndex;
@@ -1627,7 +1613,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         //if([NSNull null] != [matNameArray objectAtIndex:indexPath.item]) {
-        
+         //if ( indexPath.item < matCount){
         if ( indexPath.item < matNameArray.count){
             NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
             NSLog(@"matNameArray:%@",matNameArray);
@@ -1834,17 +1820,41 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     nameString =[artworkNameArray objectAtIndex:indexPathSend];
     NSLog(@" nameStringLogoSelected %@",nameString);
     
-    sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
-    companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
-    numberString =[artworkIDArray objectAtIndex:indexPathSend];
-    sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
-    logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
-    NSLog(@"logoColorString %@",logoColorString);
+    if (indexPathSend <artworkSellerArray.count){
     
+        sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
         
-    NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
-    NSString*httpString= @"http://";
-    NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+    }
+    
+    if (indexPathSend <artworkCompanyArray.count){
+        
+        companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
+    }
+    
+     if (indexPathSend <artworkIDArray.count){
+         
+         numberString =[artworkIDArray objectAtIndex:indexPathSend];
+         
+     }
+    
+    if (indexPathSend <artworkSizeArray.count){
+        
+        sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
+        
+    }
+    
+    if (indexPathSend <artworkColorArray.count){
+    
+        logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+        
+        
+    }
+    
+    if (indexPathSend <artworkFullImageArray.count){
+        
+        NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
+        NSString*httpString= @"http://";
+        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
     NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     UIImage * iconImage;
     iconImage = [UIImage imageWithData:data];
@@ -1853,6 +1863,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
+        
+        
+    }
 
     
     

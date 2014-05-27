@@ -526,14 +526,14 @@
     
     // NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", searchString,passwordString];
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
+    
+    
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     
-    
-    //[theRequest setHTTPMethod:@"POST"];
-    //[theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+
     
     
     NSLog(@"URLLOGIN: %@",urlSearch);

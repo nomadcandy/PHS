@@ -24,7 +24,7 @@
 
 @end
 
-@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,ArrayDelegate,NSFetchedResultsControllerDelegate>
+@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,ArrayDelegate,NSFetchedResultsControllerDelegate, UIAlertViewDelegate>
 
 {
     LogoSearch*newLogoSearch;
