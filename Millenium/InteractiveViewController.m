@@ -102,6 +102,8 @@
 @synthesize numberString;
 @synthesize sizeString;
 
+@synthesize orientString;
+
 @synthesize interactiveHeaderString;
 
 
@@ -3287,29 +3289,109 @@ else
     
 }
 
--(IBAction) Portrait:(id)sender{
+
+-(IBAction)sizeFieldUpdate:(id)sender{
     
-   
     
-    _widthField.text = @"5'";
-    _widthCircleField.text = @"3'";
     
-    _heightField.text = @"5'";
-    _heightCircleField.text = @"3'";
+    //_widthField.text = _widthField.text;
+    _widthCircleField.text =_widthField.text;
     
-    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
+    //_heightField.text =_heightField.text;
+    _heightCircleField.text = _heightField.text;
+    
+    
+    int wMat = [_widthField.text intValue];
+    int hMat = [_heightField.text intValue];
+    
+    int wMatHundred = wMat*100;
+    int hMatHundred = hMat*100;
+    
+    int wMatHundredDivide = wMatHundred/2;
+    int hMatHundredDivide = hMatHundred/2;
+
+    
+    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, wMatHundred, hMatHundred);
+    
+    //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
     
     matBGLogoView.frame=myLogoMatRect;
     matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     
 }
 
--(IBAction) Landscape:(id)sender{
+
+-(IBAction) Portrait:(id)sender{
+    
+    orientString=@"portrait";
+    
+    //_widthField.text = _widthField.text;
+    _widthCircleField.text =_widthField.text;
+    
+    //_heightField.text =_heightField.text;
+    _heightCircleField.text = _heightField.text;
     
     
+    int wMat = [_widthField.text intValue];
+    int hMat = [_heightField.text intValue];
+    
+    int wMatHundred = wMat*100;
+    int hMatHundred = hMat*100;
+    
+    int wMatHundredDivide = wMatHundred/2;
+    int hMatHundredDivide = hMatHundred/2;
     
     
-    _widthField.text = @"3'";
+    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, wMatHundred, hMatHundred);
+    
+    //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    
+    /*_widthField.text = @"5'";
+    _widthCircleField.text = @"3'";
+    
+    _heightField.text = @"5'";
+    _heightCircleField.text = @"3'";
+    
+    CGRect myLogoMatRect = CGRectMake(426.0f, 121.0f, 300.0f, 500.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;*/
+    
+}
+
+-(IBAction)Landscape:(id)sender{
+    
+    orientString=@"landscape";
+    
+    //_widthField.text = _widthField.text;
+    _widthCircleField.text =_widthField.text;
+    
+    //_heightField.text =_heightField.text;
+    _heightCircleField.text = _heightField.text;
+    
+    
+    int wMat = [_widthField.text intValue];
+    int hMat = [_heightField.text intValue];
+    
+    int wMatHundred = wMat*100;
+    int hMatHundred = hMat*100;
+    
+    //int wMatHundredDivide = wMatHundred/2;
+    //int hMatHundredDivide = hMatHundred/2;
+    
+    
+    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, hMatHundred, wMatHundred);
+    
+    //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
+    
+    matBGLogoView.frame=myLogoMatRect;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    
+    
+   /* _widthField.text = @"3'";
     _widthCircleField.text = @"5'";
     
     _heightField.text = @"3'";
@@ -3319,7 +3401,7 @@ else
     CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 500.0f, 300.0f);
     
     matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;*/
     
 }
 
@@ -3528,6 +3610,14 @@ else
     return UIInterfaceOrientationLandscapeLeft;
 }*/
 
+-(void)widthFieldDidChange:(UITextField *)widthField{
+    
+}
+
+
+-(void)heightFieldDidChange:(UITextField *)heightField{
+    
+}
 
 
 

@@ -126,7 +126,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *matBGImageView;
-@property (nonatomic, strong) IBOutlet UIImageView *matBGLogoView;
+@property (nonatomic, weak) IBOutlet UIImageView *matBGLogoView;
 @property (nonatomic, strong) IBOutlet UIImageView *steelBlueImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *titleBar;
@@ -240,6 +240,8 @@
 @property (nonatomic, strong) NSString *companyString;
 @property (nonatomic, strong) NSString *numberString;
 @property (nonatomic, strong) NSString *sizeString;
+
+@property (nonatomic, strong) NSString *orientString;
 
 @property (nonatomic, strong) NSString *interactiveHeaderString;
 
