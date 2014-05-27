@@ -142,6 +142,11 @@
     if (loginField.text!=Nil || passwordField.text!= Nil || [loginField.text length] == 0 || [passwordField.text length] == 0)
     
     {
+        
+        
+        
+        
+        
         NSString*loginString= loginField.text;
         NSString*passwordString= passwordField.text;
     
@@ -250,31 +255,45 @@
     //[self.view endEditing:YES];
 //}
 
+- (NSUInteger) countWords: (NSString *) searchString {
+    NSScanner *scanner = [NSScanner scannerWithString: searchString];
+    NSCharacterSet *whiteSpace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSUInteger count = 0; while ([scanner scanUpToCharactersFromSet: whiteSpace intoString: nil]) { count++; } return count;
+    
+    //searchString=
+}
+
 
 -(IBAction)goSearch:(id)sender{
     
     
+    
+    
+    
+   
+    
+    
     if( searchField.text!= Nil || [searchField.text length] == 0 ) {
-    
-            NSString*searchString= searchField.text;
         
-    
-    
-    
-    
-    
-    
-    
+        
+        
+        NSString*searchOneString= searchField.text;
+        
+        NSInteger nWords = 1;
+        NSRange wordRange = NSMakeRange(0, nWords);
+        NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
+        
+        NSString*searchString= [searchStringArray objectAtIndex:0];
        
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=bestMatch&interactiveOnly=1&locationID=-1", searchString];
+        
+        
+       
+        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=bestMatch&interactiveOnly=1&locationID=-1", searchString];
 
     
+        NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     
-        
-    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
-    
-    NSLog(@"URLLOGIN: %@",urlSearch);
+        NSLog(@"URLLOGIN: %@",urlSearch);
     
     
     
