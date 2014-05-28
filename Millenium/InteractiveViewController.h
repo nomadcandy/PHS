@@ -131,7 +131,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *matBGImageView;
-@property (nonatomic, weak) IBOutlet UIImageView *matBGLogoView;
+@property (nonatomic, strong) IBOutlet UIImageView *matBGLogoView;
 @property (nonatomic, strong) IBOutlet UIImageView *steelBlueImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *titleBar;

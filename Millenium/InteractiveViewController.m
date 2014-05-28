@@ -2734,6 +2734,31 @@ else
     [self addSubview:myButton];
     
 }*/
+
+
+-(IBAction)bgColorSelected:(UIButton*)sender event:(id)event {
+    
+    interactiveHeaderString = @"Create Mat";
+    
+    NSLog(@"addButton.tag:%ld",(long)sender.tag);
+    
+    int myInt = (int)sender.tag;
+    NSLog(@"sender %@",sender);
+   
+    
+    if ((long)sender.tag==123){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+   
+    
+}
+
 -(IBAction)addNote:(id)sender{
     
     
