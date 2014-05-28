@@ -176,6 +176,16 @@
 {
     [super viewDidLoad];
     
+    
+    [_widthField addTarget:self
+                   action:@selector(sizeFieldUpdate:)
+         forControlEvents:UIControlEventEditingChanged];
+    
+    [_heightField addTarget:self
+                    action:@selector(sizeFieldUpdate:)
+          forControlEvents:UIControlEventEditingChanged];
+
+    
     textOrientField.hidden= YES;
     
     UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];

@@ -42,8 +42,10 @@
 
 
 
-@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,UIGestureRecognizerDelegate>{
+@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,UIGestureRecognizerDelegate,UITextFieldDelegate>{
     
+    
+        
     IBOutlet UIView *interactiveView;
     IBOutlet UIImageView *interactiveMatView;
     
