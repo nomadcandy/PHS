@@ -2744,9 +2744,20 @@ else
     
     int myInt = (int)sender.tag;
     NSLog(@"sender %@",sender);
+    
+    
+    if ((long)sender.tag==121){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Steel Blue_123.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+
    
     
-    if ((long)sender.tag==123){
+    else if ((long)sender.tag==123){
         
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
@@ -2754,6 +2765,241 @@ else
         
         
     }
+    
+    else if ((long)sender.tag==140){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"White_140.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    else if ((long)sender.tag==119){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    else if ((long)sender.tag==107){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    else if ((long)sender.tag==120){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    else if ((long)sender.tag==116){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==127){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Orange_127.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==105){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Purple_105.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    if ((long)sender.tag==112){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Red_112.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==109){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Gold_109.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    
+    if ((long)sender.tag==115){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Grey_115.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==106){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Light Blue_106.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==118){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Navy_118.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==110){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Emerald Green_110.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==117){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Forest Green_117.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==114){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Cranberry_114.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==103){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Dark Gold_103.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==101){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Charcoal_101.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==111){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Chocolate_111.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==126){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Clay_126.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==108){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Black_108.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==102){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Brown_102.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==100){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Burgundy_100.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==130){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Aqaumarine_130.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==104){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Turquoise_104.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+    
+    if ((long)sender.tag==128){
+        
+        //create an image
+        UIImage *myBGColor = [UIImage imageNamed:@"Yellow_128.jpg"];
+        [matBGLogoView setImage:myBGColor];
+        
+        
+    }
+
+
+
+
+
+
+
+
+
+
     
    
     
