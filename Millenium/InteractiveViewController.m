@@ -2749,8 +2749,10 @@ else
     if ((long)sender.tag==121){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Steel Blue_123.jpg"];
+        UIImage *myBGColor = [UIImage imageNamed:@"Steel Blue_121.jpg"];
         [matBGLogoView setImage:myBGColor];
+        //matBGLogoView.contentMode = UIViewContentModeScaleAspectFill;
+        
         
         
     }
@@ -2991,7 +2993,7 @@ else
         
     }
 
-
+  matBGLogoView.contentMode = UIViewContentModeScaleToFill;
 
 
 
@@ -3215,45 +3217,19 @@ else
     
     NSString*searchString= [searchStringArray objectAtIndex:0];
     
-    
-    
-    
-    
-    
+       
     NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
 
-    
-    
+       
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
-    
-   
-    
-    
     NSLog(@"URLLOGIN: %@",urlSearch);
-    
-    
-    
     NSError *error = nil;
-    
-    
-    
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
-    
-    
-    
-    
-    //parse Array from web
+        //parse Array from web
     NSArray *searchLogoArray = [NSJSONSerialization
                                 JSONObjectWithData:data
                                 options:NSJSONReadingAllowFragments
                                 error: &error];
-    
-    
-    
-    
-    
     
     
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
@@ -3762,7 +3738,8 @@ else
     CGRect myLogoMatRect = CGRectMake( 576.0f, 250.0f, 300.0f, 200.0f);
     
     matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    matBGLogoView.contentMode = UIViewContentModeScaleToFill;
 
     
 }
@@ -3779,7 +3756,8 @@ else
     CGRect myLogoMatRect = CGRectMake( 476.0f, 200.0f, 500.0f, 300.0f);
     
     matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    matBGLogoView.contentMode = UIViewContentModeScaleToFill;
     
   
     
@@ -3800,7 +3778,8 @@ else
     CGRect myLogoMatRect = CGRectMake( 427.0f, 143.0f, 600.0f, 400.0f);
     
     matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    matBGLogoView.contentMode = UIViewContentModeScaleToFill;
 }
 
 -(IBAction) threeByTen:(id)sender{
@@ -3814,7 +3793,8 @@ else
     CGRect myLogoMatRect = CGRectMake( 476.0f, 270.0f, 500.0f, 150.0f);
     
     matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    matBGLogoView.contentMode = UIViewContentModeScaleToFill;
 
     
 }
