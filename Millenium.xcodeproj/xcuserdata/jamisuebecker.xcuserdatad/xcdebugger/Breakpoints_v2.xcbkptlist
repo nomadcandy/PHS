@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1070"
-            endingLineNumber = "1070"
+            startingLineNumber = "1071"
+            endingLineNumber = "1071"
             landmarkName = "-goHome:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1199"
-            endingLineNumber = "1199"
+            startingLineNumber = "1200"
+            endingLineNumber = "1200"
             landmarkName = "-addMatFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1784,11 +1784,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1252"
-            endingLineNumber = "1252"
+            startingLineNumber = "1253"
+            endingLineNumber = "1253"
             landmarkName = "-addLogoFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1800,11 +1800,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1967"
-            endingLineNumber = "1967"
+            startingLineNumber = "1968"
+            endingLineNumber = "1968"
             landmarkName = "-managedObjectContext"
             landmarkType = "5">
          </BreakpointContent>
@@ -1816,11 +1816,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1989"
-            endingLineNumber = "1989"
+            startingLineNumber = "1990"
+            endingLineNumber = "1990"
             landmarkName = "@implementation LogoCollectionViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1848,11 +1848,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2057"
-            endingLineNumber = "2057">
+            startingLineNumber = "2058"
+            endingLineNumber = "2058">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1862,11 +1862,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2021"
-            endingLineNumber = "2021">
+            startingLineNumber = "2022"
+            endingLineNumber = "2022">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1876,11 +1876,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1968"
-            endingLineNumber = "1968"
+            startingLineNumber = "1969"
+            endingLineNumber = "1969"
             landmarkName = "-managedObjectContext"
             landmarkType = "5">
          </BreakpointContent>
@@ -1892,11 +1892,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1980"
-            endingLineNumber = "1980"
+            startingLineNumber = "1981"
+            endingLineNumber = "1981"
             landmarkName = "@implementation LogoCollectionViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1908,23 +1908,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1913"
-            endingLineNumber = "1913"
-            landmarkName = "-prepareForSegue:sender:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1914"
@@ -1940,11 +1924,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1978"
-            endingLineNumber = "1978"
+            startingLineNumber = "1915"
+            endingLineNumber = "1915"
+            landmarkName = "-prepareForSegue:sender:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millenium/LogoCollectionViewController.m"
+            timestampString = "422999516.726042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1979"
+            endingLineNumber = "1979"
             landmarkName = "@implementation LogoCollectionViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1972,11 +1972,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2000"
-            endingLineNumber = "2000"
+            startingLineNumber = "2001"
+            endingLineNumber = "2001"
             landmarkName = "@implementation LogoCollectionViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1988,11 +1988,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2022"
-            endingLineNumber = "2022">
+            startingLineNumber = "2023"
+            endingLineNumber = "2023">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2496,11 +2496,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1559"
-            endingLineNumber = "1559"
+            startingLineNumber = "1560"
+            endingLineNumber = "1560"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2512,11 +2512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1565"
-            endingLineNumber = "1565"
+            startingLineNumber = "1566"
+            endingLineNumber = "1566"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2592,11 +2592,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1577"
-            endingLineNumber = "1577"
+            startingLineNumber = "1578"
+            endingLineNumber = "1578"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2608,11 +2608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1575"
-            endingLineNumber = "1575"
+            startingLineNumber = "1576"
+            endingLineNumber = "1576"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2624,11 +2624,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1392"
-            endingLineNumber = "1392"
+            startingLineNumber = "1393"
+            endingLineNumber = "1393"
             landmarkName = "-collectionView:viewForSupplementaryElementOfKind:atIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2640,11 +2640,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1569"
-            endingLineNumber = "1569"
+            startingLineNumber = "1570"
+            endingLineNumber = "1570"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2672,11 +2672,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1846"
-            endingLineNumber = "1846"
+            startingLineNumber = "1847"
+            endingLineNumber = "1847"
             landmarkName = "-logoSelected:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2880,11 +2880,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1268"
-            endingLineNumber = "1268"
+            startingLineNumber = "1269"
+            endingLineNumber = "1269"
             landmarkName = "-addLogoFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2896,11 +2896,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1348"
-            endingLineNumber = "1348"
+            startingLineNumber = "1349"
+            endingLineNumber = "1349"
             landmarkName = "@implementation LogoCollectionViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -2912,11 +2912,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906012.583542"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "458"
+            endingLineNumber = "458"
             landmarkName = "-goNearMe:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2928,11 +2928,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906012.583542"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "579"
-            endingLineNumber = "579"
+            startingLineNumber = "580"
+            endingLineNumber = "580"
             landmarkName = "-goSearch:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2944,11 +2944,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1487"
-            endingLineNumber = "1487"
+            startingLineNumber = "1488"
+            endingLineNumber = "1488"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2960,11 +2960,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2032"
-            endingLineNumber = "2032">
+            startingLineNumber = "2033"
+            endingLineNumber = "2033">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2974,11 +2974,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2028"
-            endingLineNumber = "2028">
+            startingLineNumber = "2029"
+            endingLineNumber = "2029">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3004,11 +3004,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2034"
-            endingLineNumber = "2034">
+            startingLineNumber = "2035"
+            endingLineNumber = "2035">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3018,11 +3018,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2036"
-            endingLineNumber = "2036">
+            startingLineNumber = "2037"
+            endingLineNumber = "2037">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3048,11 +3048,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1728"
-            endingLineNumber = "1728"
+            startingLineNumber = "1729"
+            endingLineNumber = "1729"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3256,11 +3256,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1910"
-            endingLineNumber = "1910"
+            startingLineNumber = "1911"
+            endingLineNumber = "1911"
             landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3272,11 +3272,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1909"
-            endingLineNumber = "1909"
+            startingLineNumber = "1910"
+            endingLineNumber = "1910"
             landmarkName = "@implementation LogoCollectionViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -3288,11 +3288,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1923"
-            endingLineNumber = "1923"
+            startingLineNumber = "1924"
+            endingLineNumber = "1924"
             landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3304,11 +3304,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1778"
-            endingLineNumber = "1778"
+            startingLineNumber = "1779"
+            endingLineNumber = "1779"
             landmarkName = "-logoSelected:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3320,11 +3320,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1793"
-            endingLineNumber = "1793"
+            startingLineNumber = "1794"
+            endingLineNumber = "1794"
             landmarkName = "-logoSelected:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3384,11 +3384,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1797"
-            endingLineNumber = "1797"
+            startingLineNumber = "1798"
+            endingLineNumber = "1798"
             landmarkName = "-logoSelected:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3400,11 +3400,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1804"
-            endingLineNumber = "1804"
+            startingLineNumber = "1805"
+            endingLineNumber = "1805"
             landmarkName = "-logoSelected:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3512,11 +3512,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1679"
-            endingLineNumber = "1679"
+            startingLineNumber = "1680"
+            endingLineNumber = "1680"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3560,11 +3560,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1266"
-            endingLineNumber = "1266"
+            startingLineNumber = "1267"
+            endingLineNumber = "1267"
             landmarkName = "-addLogoFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3576,11 +3576,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1269"
-            endingLineNumber = "1269"
+            startingLineNumber = "1270"
+            endingLineNumber = "1270"
             landmarkName = "-addLogoFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3592,23 +3592,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1272"
-            endingLineNumber = "1272"
-            landmarkName = "-addLogoFavorite:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1273"
@@ -3624,11 +3608,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1259"
-            endingLineNumber = "1259"
+            startingLineNumber = "1274"
+            endingLineNumber = "1274"
             landmarkName = "-addLogoFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3640,7 +3624,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1260"
@@ -3656,11 +3640,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "851"
-            endingLineNumber = "851"
+            startingLineNumber = "1261"
+            endingLineNumber = "1261"
+            landmarkName = "-addLogoFavorite:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millenium/LogoCollectionViewController.m"
+            timestampString = "422999516.726042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "852"
+            endingLineNumber = "852"
             landmarkName = "-goSearchVariation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3672,11 +3672,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1556"
-            endingLineNumber = "1556"
+            startingLineNumber = "1557"
+            endingLineNumber = "1557"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3688,11 +3688,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1558"
-            endingLineNumber = "1558"
+            startingLineNumber = "1559"
+            endingLineNumber = "1559"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3798,11 +3798,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1555"
-            endingLineNumber = "1555"
+            startingLineNumber = "1556"
+            endingLineNumber = "1556"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3878,11 +3878,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "958"
-            endingLineNumber = "958"
+            startingLineNumber = "959"
+            endingLineNumber = "959"
             landmarkName = "-goSearchVariation:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3926,11 +3926,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1285"
-            endingLineNumber = "1285"
+            startingLineNumber = "1286"
+            endingLineNumber = "1286"
             landmarkName = "-addLogoFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3942,11 +3942,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1249"
-            endingLineNumber = "1249"
+            startingLineNumber = "1250"
+            endingLineNumber = "1250"
             landmarkName = "-addLogoFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -3958,11 +3958,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1371"
-            endingLineNumber = "1371"
+            startingLineNumber = "1372"
+            endingLineNumber = "1372"
             landmarkName = "-collectionView:numberOfItemsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4294,7 +4294,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1517"
+            endingLineNumber = "1517"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millenium/LogoCollectionViewController.m"
+            timestampString = "422999516.726042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1534"
+            endingLineNumber = "1534"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millenium/LogoCollectionViewController.m"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1516"
@@ -4310,43 +4342,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1533"
-            endingLineNumber = "1533"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1515"
             endingLineNumber = "1515"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1514"
-            endingLineNumber = "1514"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4406,11 +4406,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1511"
-            endingLineNumber = "1511"
+            startingLineNumber = "1512"
+            endingLineNumber = "1512"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4438,11 +4438,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1589"
-            endingLineNumber = "1589"
+            startingLineNumber = "1590"
+            endingLineNumber = "1590"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4518,11 +4518,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1932"
-            endingLineNumber = "1932"
+            startingLineNumber = "1933"
+            endingLineNumber = "1933"
             landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4550,23 +4550,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1871"
-            endingLineNumber = "1871"
-            landmarkName = "-matSelected:event:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1872"
@@ -4582,11 +4566,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1819"
-            endingLineNumber = "1819"
+            startingLineNumber = "1873"
+            endingLineNumber = "1873"
+            landmarkName = "-matSelected:event:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millenium/LogoCollectionViewController.m"
+            timestampString = "422999516.726042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1820"
+            endingLineNumber = "1820"
             landmarkName = "-logoSelected:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4598,11 +4598,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1824"
-            endingLineNumber = "1824"
+            startingLineNumber = "1825"
+            endingLineNumber = "1825"
             landmarkName = "-logoSelected:event:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4614,11 +4614,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1131"
-            endingLineNumber = "1131"
+            startingLineNumber = "1132"
+            endingLineNumber = "1132"
             landmarkName = "-addMatFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4646,11 +4646,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1084"
-            endingLineNumber = "1084"
+            startingLineNumber = "1085"
+            endingLineNumber = "1085"
             landmarkName = "-removeAllFavorites:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4662,11 +4662,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "685"
-            endingLineNumber = "685"
+            startingLineNumber = "686"
+            endingLineNumber = "686"
             landmarkName = "-goSearch:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4678,11 +4678,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1299"
-            endingLineNumber = "1299"
+            startingLineNumber = "1300"
+            endingLineNumber = "1300"
             landmarkName = "-removeFavorite:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4694,11 +4694,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1103"
-            endingLineNumber = "1103"
+            startingLineNumber = "1104"
+            endingLineNumber = "1104"
             landmarkName = "-removeAllFavorites:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4710,11 +4710,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1379"
-            endingLineNumber = "1379"
+            startingLineNumber = "1380"
+            endingLineNumber = "1380"
             landmarkName = "-collectionView:numberOfItemsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4726,11 +4726,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1374"
-            endingLineNumber = "1374"
+            startingLineNumber = "1375"
+            endingLineNumber = "1375"
             landmarkName = "-collectionView:numberOfItemsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4742,23 +4742,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1366"
-            endingLineNumber = "1366"
-            landmarkName = "-collectionView:numberOfItemsInSection:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1367"
@@ -4774,11 +4758,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1688"
-            endingLineNumber = "1688"
+            startingLineNumber = "1368"
+            endingLineNumber = "1368"
+            landmarkName = "-collectionView:numberOfItemsInSection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Millenium/LogoCollectionViewController.m"
+            timestampString = "422999516.726042"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1689"
+            endingLineNumber = "1689"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4854,11 +4854,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "582"
-            endingLineNumber = "582"
+            startingLineNumber = "583"
+            endingLineNumber = "583"
             landmarkName = "-goSearch:"
             landmarkType = "5">
          </BreakpointContent>
@@ -4870,11 +4870,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Millenium/LogoCollectionViewController.m"
-            timestampString = "422906126.066312"
+            timestampString = "422999516.726042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "585"
-            endingLineNumber = "585"
+            startingLineNumber = "586"
+            endingLineNumber = "586"
             landmarkName = "-goSearch:"
             landmarkType = "5">
          </BreakpointContent>
