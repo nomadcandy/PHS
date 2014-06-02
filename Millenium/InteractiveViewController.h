@@ -229,6 +229,8 @@
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
 
+@property (nonatomic, strong) NSString *locationIDString;
+
 @property (nonatomic, strong) NSString *matBGTextColorString;
 @property (nonatomic, strong) NSString *matBGColorString;
 @property (nonatomic, strong) NSString *matUseBGColorString;

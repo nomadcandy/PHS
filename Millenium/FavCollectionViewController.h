@@ -8,9 +8,9 @@
 #import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
-#import "LogoCell.h"
+#import "FavCell.h"
 #import "MatCell.h"
-#import "LogoHeaderCell.h"
+#import "FavHeaderCell.h"
 #import "InteractiveViewController.h"
 #import "FavCollectionViewController.h"
 #import "DIYMenu.h"
@@ -19,7 +19,7 @@
 #import "LogoFavorite.h"
 
 
-@protocol ButtonPickerDelegate <NSObject>
+@protocol ButtonFavPickerDelegate <NSObject>
 
 
 @end
@@ -30,7 +30,7 @@
 
 //@end
 
-@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonPickerDelegate, UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate/*, StringSetDelegate*/>
+@interface FavCollectionViewController : UICollectionViewController <DIYMenuDelegate,ButtonFavPickerDelegate, UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate/*, StringSetDelegate*/>
 
 {
     
@@ -226,7 +226,7 @@
 
 
 //@property (nonatomic, assign) id <StringSetDelegate> delegateString;
-@property (nonatomic, weak) id <ButtonPickerDelegate> delegate;
+@property (nonatomic, weak) id <ButtonFavPickerDelegate> delegate;
 //@property (nonatomic, weak) id <StringPickerProtocol> delegate;
 
 //@property (weak,nonatomic) id delegate;

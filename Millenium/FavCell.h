@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LogoCell : UICollectionViewCell
+@interface FavCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *matLabel;
 @property (strong, nonatomic) IBOutlet UILabel *logoLabel;

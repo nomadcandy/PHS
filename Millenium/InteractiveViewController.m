@@ -18,6 +18,8 @@
 @implementation InteractiveViewController
 
 
+@synthesize locationIDString;
+
 @synthesize activityIndicator;
 
 @synthesize textNoteField;
@@ -175,6 +177,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+   
     
     
     [_widthField addTarget:self
@@ -3861,6 +3865,9 @@ else
         
         LogoCollectionViewController *goingController = segue.destinationViewController;
         
+        NSLog(@"locationIDString %@",locationIDString);
+        
+        goingController.locationIDString = locationIDString;
         
         goingController.artworkNameArray = artworkNameArray;
         goingController.artworkCount = artworkCount;

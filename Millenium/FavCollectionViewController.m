@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Jami Sue Becker. All rights reserved.
 //
 
-#import "LogoCollectionViewController.h"
+#import "FavCollectionViewController.h"
 
 
-@interface LogoCollectionViewController ()
+@interface FavCollectionViewController ()
 
 @end
 
-@implementation LogoCollectionViewController
+@implementation FavCollectionViewController
 
 
 @synthesize searchingString;
@@ -123,9 +123,9 @@
 @synthesize locationNumberString;
 
 
-NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
-NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
-NSString *kLogoHeaderCellID = @"logoHeaderCellID";
+//NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
+NSString *kFavCollectionViewCellID = @"favCollectionViewCellID";
+NSString *kFavHeaderCellID = @"favHeaderCellID";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -448,13 +448,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
     
     
-    //[self.collectionView reloadData];
-    
-    
-    UIStoryboard *storyboard = self.storyboard;
-    FavCollectionViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"FavViewBoard"];
-    [self presentViewController:svc animated:YES completion:nil];
-
+    [self.collectionView reloadData];
 
     
     
@@ -479,6 +473,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goNearMe:(id)sender{
 
+    
+    
    
     NSLog(@"locationIDString: %@", locationIDString);
     
@@ -571,7 +567,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }];
     
-     [self.collectionView reloadData];
+    
+    UIStoryboard *storyboard = self.storyboard;
+    LogoCollectionViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+    [self presentViewController:svc animated:YES completion:nil];
+
+    
+     //[self.collectionView reloadData];
     
     
     
@@ -1509,7 +1511,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
     {
-        LogoHeaderCell *logoHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoHeaderCellID forIndexPath:indexPath];
+        FavHeaderCell *logoHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:kFavHeaderCellID forIndexPath:indexPath];
         
         
         
@@ -1524,7 +1526,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         
-        LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
+        FavCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kFavCollectionViewCellID forIndexPath:indexPath];
         
         
         
@@ -1867,6 +1869,57 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
     }
+    
+    
+    if ([segue.identifier isEqualToString:@"collectionPickedSegue"]) {
+        
+        
+        
+        LogoCollectionViewController *goingController = segue.destinationViewController;
+        
+        
+        
+        
+        
+        /*NSLog(@"nameStringSend %@",nameString);
+        goingController.nameString=nameString;
+        goingController.companyString=companyString;
+        goingController.sellerString=sellerString;
+        goingController.numberString=numberString;
+        goingController.sizeString=sizeString;
+        goingController.logoColorString=logoColorString;
+        goingController.matColorString=matColorString;
+        goingController.matBGColorString=matBGColorString;
+        goingController.interactiveHeaderString=interactiveHeaderString;*/
+        
+        goingController.artworkNameArray = artworkNameArray;
+         goingController.artworkSizeArray = artworkSizeArray;
+         goingController.artworkFormatArray = artworkFormatArray;
+         goingController.artworkIconArray = artworkIconArray;
+         goingController.artworkFullImageArray = artworkFullImageArray;
+         goingController.artworkIDArray = artworkIDArray;
+         goingController.artworkCompanyArray = artworkCompanyArray;
+         goingController.artworkSellerArray = artworkSellerArray;
+         goingController.artworkColorArray = artworkColorArray;
+         goingController.artworkCount = artworkCount;
+         
+         goingController.matNameArray = matNameArray;
+         goingController.matSizeArray = matSizeArray;
+         goingController.matFormatArray = matFormatArray;
+         goingController.matIconArray = matIconArray;
+         goingController.matFullImageArray = matFullImageArray;
+         goingController.matIDArray = matIDArray;
+         goingController.matCompanyArray = matCompanyArray;
+         goingController.matSellerArray = matSellerArray;
+         goingController.matColorArray = matColorArray;
+         goingController.matCount = matCount;
+        
+        
+        
+        
+        
+    }
+
 }
 //gets managedObjectContext from the appDelegate
 - (NSManagedObjectContext *)managedObjectContext

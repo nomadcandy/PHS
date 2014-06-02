@@ -148,6 +148,7 @@
 
 -(IBAction)addLogoSearchEntry:(id)sender;
 -(IBAction)goSearch:(id)sender;
+-(IBAction)goNearMe:(id)sender;
 
 
 -(IBAction)showLogin:(id)sender;

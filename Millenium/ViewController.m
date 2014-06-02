@@ -171,12 +171,12 @@
     
     
     //parse Dictionary from web
-    NSDictionary *loginDictionary = [NSJSONSerialization
+    /*NSDictionary *loginDictionary = [NSJSONSerialization
                                      JSONObjectWithData:data
                                      options:NSJSONReadingAllowFragments
                                      error: &error];
     
-    NSLog(@"%@LoginDICTIONARY",loginDictionary);
+    NSLog(@"%@LoginDICTIONARY",loginDictionary);*/
     
     
     //parse Array from web
@@ -184,7 +184,8 @@
                                JSONObjectWithData:data
                                options:NSJSONReadingAllowFragments
                                error: &error];
-
+        
+   //NSArray* loginArray = [loginDictionary allKeys];
     
     [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
@@ -194,9 +195,31 @@
         
         firstNameString = [loginArray valueForKey:@"FirstName"];
         lastNameString = [loginArray valueForKey:@"LastName"];
-        locationIDString = [loginArray valueForKey:@"LocationID"];
+        NSArray*locationIDArray = [loginArray valueForKey:@"LocationID"];
         locationNameString = [loginArray valueForKey:@"LocationName"];
         locationNumberString = [loginArray valueForKey:@"LocationNumber"];
+        
+        locationIDString = [locationIDArray objectAtIndex:0];
+        
+        //NSLog(@"locationIDParaString %@",locationIDParaString);
+        
+       // NSString* str = @"This string uses (something special)";
+       /* NSRange rgMin = [locationIDParaString rangeOfString:@"("];
+        NSRange rgMax = [locationIDParaString rangeOfString:@")"];
+        
+        NSRange replaceRange = NSMakeRange(rgMin.location, rgMax.location-rgMin.location+1);
+        
+        locationIDString = locationIDParaString;
+        
+        if (rgMin.location < rgMax.location)
+        {
+            locationIDString = [locationIDParaString stringByReplacingCharactersInRange:replaceRange withString:@""];
+        }*/
+        
+       
+        //NSString *originalString = @"(123) 123123 abc";
+        NSLog(@"locationIDString %@",locationIDString);
+        
         
         
           }];
@@ -391,6 +414,11 @@
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         NSLog(@"artworkColorArray %@",artworkColorArray);
         
+        NSLog(@"locationIDString %@",locationIDString);
+        
+        
+        
+        
         
   }];
     
@@ -534,9 +562,133 @@
     
 }
 
+-(IBAction)goNearMe:(id)sender{
+    
+    
+    if( locationIDString!= Nil || [locationIDString length] == 0 ) {
+        
+        
+        
+        
+        
+        NSLog(@"locationIDString: %@", locationIDString);
+        
+        
+       /* NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+        NSNumber *myLocationNumber = [f numberFromString:locationIDString];*/
+        
+        //int locationINT = [locationIDString integerValue];
+        
+        //Search Logos
+        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=1&locationID=%@",20,locationIDString];
+        
+         NSLog(@"URLSearchString: %@",urlSearchString);
+        
+        NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+        
+        NSLog(@"URLSearchNearMe: %@",urlSearch);
+        NSError *error = nil;
+        NSData *data = [NSData dataWithContentsOfURL:urlSearch];
+        
+        
+        
+        
+        //parse Array from web
+        NSArray *searchLogoArray = [NSJSONSerialization
+                                    JSONObjectWithData:data
+                                    options:NSJSONReadingAllowFragments
+                                    error: &error];
+        
+        
+        
+        
+        
+        //Search Mats
+        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=0&locationID=%@",20,locationIDString];
+        
+        
+        
+        NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+        
+        NSLog(@"URLLOGIN: %@",urlSearchMat);
+        NSError *errorMat = nil;
+        NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+        
+        
+        
+        
+        //parse Array from web
+        NSArray *searchMatArray = [NSJSONSerialization
+                                   JSONObjectWithData:dataMat
+                                   options:NSJSONReadingAllowFragments
+                                   error: &error];
+        
+        
+        
+        
+        
+        [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+            
+            
+            
+            artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+            artworkCount= artworkNameArray.count;
+            artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
+            artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
+            artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+            artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
+            artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
+            artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+            
+            artworkCount = artworkNameArray.count;
+            
+        }];
+        
+        [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+            
+            
+            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+            matCount= matNameArray.count;
+            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+            matFormatArray = [searchMatArray valueForKey:@"Format"];
+            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+            matIconArray = [searchMatArray valueForKey:@"IconURL"];
+            matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+            artworkColorArray = [searchMatArray valueForKey:@"Color"];
+            
+            matCount = matNameArray.count;
+            
+            
+            
+            
+        }];
+
+        
+        
+        
+            
+      
+        
+    } else{
+        
+        
+        NSLog(@"Button was clicked, lets display our alert view");
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Search Field Empty"
+                                                            message:@"You need to enter a valued in the search Field"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancel"
+                                                  otherButtonTitles:@"Ok", nil];
+        
+        [alertView show];
+        
+    }
 
 
-
+}
 
 
 
@@ -973,8 +1125,12 @@ else{
     
     if ([segue.identifier isEqualToString:@"InteractiveSegue"]) {
         
-        InteractiveViewController *destViewController = segue.destinationViewController;
-        [self presentViewController:destViewController animated:YES completion:nil];
+        InteractiveViewController *goingController = segue.destinationViewController;
+        //[self presentViewController:goingController animated:YES completion:nil];
+        
+        NSLog(@"locationIDString %@",locationIDString);
+        goingController.locationIDString = locationIDString;
+        
         
         
         
@@ -1014,6 +1170,7 @@ else{
         goingController.firstNameString = firstNameString;
         goingController.lastNameString = lastNameString;
         goingController.locationIDString = locationIDString;
+         NSLog(@"locationIDString %@",locationIDString);
         goingController.locationNameString = locationNameString;
         goingController.locationNumberString = locationNumberString;
         

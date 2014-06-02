@@ -66,6 +66,9 @@
 		4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */; };
 		4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
 		4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
+		425B8B2C193D039600DF40C6 /* FavCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B8B2B193D039600DF40C6 /* FavCollectionViewController.m */; };
+		425B8B2F193D04EE00DF40C6 /* FavCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B8B2E193D04EE00DF40C6 /* FavCell.m */; };
+		425B8B32193D054400DF40C6 /* FavHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 425B8B31193D054400DF40C6 /* FavHeaderCell.m */; };
 		426206621907004900FE7066 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 426206611907004900FE7066 /* mask.png */; };
 		4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 4262066319094E3500FE7066 /* MaskWhiteSquare.png */; };
 		426206661909634500FE7066 /* MaskWhiteSquare1.png in Resources */ = {isa = PBXBuildFile; fileRef = 426206651909634500FE7066 /* MaskWhiteSquare1.png */; };
@@ -400,6 +403,12 @@
 		4247572D18D8AA55000AAF7C /* Logo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Logo.m; sourceTree = "<group>"; };
 		4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgSay.png; sourceTree = "<group>"; };
 		4259BC4418F6F90100861033 /* MatChatterBgCool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgCool.png; sourceTree = "<group>"; };
+		425B8B2A193D038A00DF40C6 /* FavCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavCollectionViewController.h; sourceTree = "<group>"; };
+		425B8B2B193D039600DF40C6 /* FavCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavCollectionViewController.m; sourceTree = "<group>"; };
+		425B8B2D193D04E000DF40C6 /* FavCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavCell.h; sourceTree = "<group>"; };
+		425B8B2E193D04EE00DF40C6 /* FavCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavCell.m; sourceTree = "<group>"; };
+		425B8B30193D053900DF40C6 /* FavHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavHeaderCell.h; sourceTree = "<group>"; };
+		425B8B31193D054400DF40C6 /* FavHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavHeaderCell.m; sourceTree = "<group>"; };
 		426206611907004900FE7066 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		4262066319094E3500FE7066 /* MaskWhiteSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare.png; sourceTree = "<group>"; };
 		426206651909634500FE7066 /* MaskWhiteSquare1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare1.png; sourceTree = "<group>"; };
@@ -705,11 +714,17 @@
 			isa = PBXGroup;
 			children = (
 				424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */,
+				425B8B2A193D038A00DF40C6 /* FavCollectionViewController.h */,
 				424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */,
+				425B8B2B193D039600DF40C6 /* FavCollectionViewController.m */,
 				424756E918D38B2C000AAF7C /* LogoCell.h */,
+				425B8B2D193D04E000DF40C6 /* FavCell.h */,
 				424756EA18D38B2C000AAF7C /* LogoCell.m */,
+				425B8B2E193D04EE00DF40C6 /* FavCell.m */,
 				4247572818D7D70F000AAF7C /* LogoHeaderCell.h */,
+				425B8B30193D053900DF40C6 /* FavHeaderCell.h */,
 				4247572918D7D70F000AAF7C /* LogoHeaderCell.m */,
+				425B8B31193D054400DF40C6 /* FavHeaderCell.m */,
 				4247572C18D8AA55000AAF7C /* Logo.h */,
 				4247572D18D8AA55000AAF7C /* Logo.m */,
 				42D95171190ADF5600FD69B3 /* MatCell.h */,
@@ -1586,6 +1601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425B8B2C193D039600DF40C6 /* FavCollectionViewController.m in Sources */,
 				424756EB18D38B2C000AAF7C /* LogoCell.m in Sources */,
 				42F30DD1192AEB3A0004A019 /* MatFavorite.m in Sources */,
 				427CE63818F07D7A00865291 /* RentalViewController.m in Sources */,
@@ -1598,12 +1614,14 @@
 				42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */,
 				427CE63218F072F400865291 /* SignOffViewController.m in Sources */,
 				42B0151A18E1F0520068019C /* ClipView.m in Sources */,
+				425B8B2F193D04EE00DF40C6 /* FavCell.m in Sources */,
 				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,
 				422A692A19102CBD001CAB8D /* LogoSearch.m in Sources */,
 				427CE63C18F07D8B00865291 /* DirectViewController.m in Sources */,
 				427CE64018F2E47C00865291 /* SignView.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,
 				42B0151F18E2F79F0068019C /* MarketingViewController.m in Sources */,
+				425B8B32193D054400DF40C6 /* FavHeaderCell.m in Sources */,
 				42849B5418E46C5700E5B3FB /* VideoViewController.m in Sources */,
 				42D95173190ADF5600FD69B3 /* MatCell.m in Sources */,
 				4247572A18D7D70F000AAF7C /* LogoHeaderCell.m in Sources */,
