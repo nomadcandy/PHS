@@ -26,7 +26,7 @@
 @synthesize textDecField;
 @synthesize hexField;
 
-
+@synthesize bgColorButton;
 //@synthesize delegate=_delegate;
 
 @synthesize interactiveView;
@@ -1258,9 +1258,11 @@
         
         
         UIImage*matBGColorImage = [UIImage imageNamed:matUseBGColorString];
-        [_bgColorButton setBackgroundImage:matBGColorImage forState:UIControlStateNormal];
-        [_bgColorButton setTitle:matBGTextColorString forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:matBGColorImage forState:UIControlStateNormal];
+        [bgColorButton setTitle:matBGTextColorString forState:UIControlStateNormal];
+
         
+        [self.bgColorButton reloadInputViews];
      
         NSLog(@"matColorNumberArray %@",matColorNumberArray);
         NSLog(@"matColorArray %@",matColorArray);
@@ -3572,34 +3574,64 @@ else
     
 }
 
+//# UpdateMatSize
 
 -(IBAction)sizeFieldUpdate:(id)sender{
     
     
     
-    //_widthField.text = _widthField.text;
-    _widthCircleField.text =_widthField.text;
+        
+        //_widthField.text = _widthField.text;
+        _widthCircleField.text =_widthField.text;
     
-    //_heightField.text =_heightField.text;
-    _heightCircleField.text = _heightField.text;
+        //_heightField.text =_heightField.text;
+        _heightCircleField.text = _heightField.text;
     
     
-    int wMat = [_widthField.text intValue];
-    int hMat = [_heightField.text intValue];
+        int wMat = [_widthField.text intValue];
+        int hMat = [_heightField.text intValue];
     
-    int wMatHundred = wMat*100;
-    int hMatHundred = hMat*100;
     
-    int wMatHundredDivide = wMatHundred/2;
-    int hMatHundredDivide = hMatHundred/2;
-
+    if (wMat <= 5 & hMat <= 5){
     
-    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, wMatHundred, hMatHundred);
+        int wMatHundred = wMat*100;
+        int hMatHundred = hMat*100;
     
-    //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
+        int wMatHundredDivide = wMatHundred/2;
+        int hMatHundredDivide = hMatHundred/2;
+        
+        int wPlaceDouble =  601-wMatHundredDivide;
+        int hPlaceDouble =  511-hMatHundredDivide;
+        
+        int wPlace=wPlaceDouble/2;
+        int hPlace=hPlaceDouble/2;
+        
+        //int wPlaceUse=wPlace+426;
+        //int hPlaceUse=hPlace+100;
+        
+        int wPlaceUse=wPlace+345;
+        //int hPlaceUse=hPlace+20;
+        int hPlaceUse=hPlace+15;
+      
+        
+        CGRect myLogoMatRect = CGRectMake( wPlaceUse, hPlaceUse, wMatHundred, hMatHundred);
     
-    matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
+        //CGRect myLogoMatRect = CGRectMake( 426.0f, 100.0f, wMatHundred, hMatHundred);
+    
+        //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
+    
+        matBGLogoView.frame=myLogoMatRect;
+        matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
+        //interactiveMatView.ContentMode = UIViewContentModeCenter;
+        
+    } else {
+        
+        
+        
+        
+        
+        
+    }
     
 }
 

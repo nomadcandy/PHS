@@ -178,7 +178,7 @@
     translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY+translatedPoint.y);
     
     [chosenImageView setCenter:translatedPoint];
-   // [self showOverlayWithFrame:chosenImageView.frame];
+    //[self showOverlayWithFrame:chosenImageView.frame];
 }
 
 -(void)scale:(id)sender {
@@ -981,35 +981,11 @@
     
     CGImageCreateWithImageInRect(myClippingImage.CGImage, CGRectMake(0,0, 800,600));
     
-    //CGContextSaveGState((__bridge CGContextRef)(aPath));
     
-    
-    
-    
-    
-    
-    //CGContextAddPath(context, (__bridge CGPathRef)(aPath));
-    //CGContextClip(context);
-    
-    
-    
-    //UIImage*myMaskOriginalImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    
-    /*UIImage*myMaskOriginalImage = CGContextDrawImage(aRef, image, CGRectMake(0, 0, imageWidth,
-     imageHeight));*/
-    
-    //UIImage*myMaskOriginalImage = CGContextDrawImage(aRef, image, CGRectMake(0, 0, 800, 600));
-    
-    
-    
-    
-    //NSString *imagePath1 =  [directoryPath objectAtIndex:0];
-    //imagePath1= [imagePath1 stringByAppendingPathComponent:@"myMaskImage.jpg"];
     
     //writes masked image to documents
     NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/myMaskImage.jpg"]];
-    //[UIImageJPEGRepresentation(myClippingImage, 1.0) writeToFile:imagePath1 atomically:YES];
+    
     
     [UIImagePNGRepresentation(myClippingImage) writeToFile:imagePath1 atomically:YES];
     
@@ -1019,13 +995,7 @@
     
     UIGraphicsEndImageContext();
     
-   // CGContextAddPath(context, (__bridge CGPathRef)(aRef));
-   // CGContextClip(context);
-    
-    
-    
-    
-    //CGContextFillRect(context, self.bounds);
+  
     
     
 }
@@ -1083,7 +1053,7 @@
     
     
     
-    //chosenImage = newImage;
+   
     
     
     
@@ -1095,11 +1065,10 @@
     
     CGRect screenRect = CGRectMake(180.0f, 290.0f, 228.0f, 228.0f);
     
-     //CGSize screenRect = editImageView.frame.size;
-   
+    
     CGContextFillRect(ctx, screenRect);
     
-    //[chosenImageView renderInContext:ctx];
+    
     
     [chosenImageView setOpaque:NO];
     [chosenImageView setOpaque:NO];
@@ -1121,7 +1090,7 @@
     UIImage *image1 = UIGraphicsGetImageFromCurrentImageContext();
     
     NSString  *imagePath3 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImageClear.png"]];
-    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
+    
     
     [UIImagePNGRepresentation(image1) writeToFile:imagePath3 atomically:YES];
 

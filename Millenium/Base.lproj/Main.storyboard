@@ -297,10 +297,11 @@
                                 <rect key="frame" x="735" y="381" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" placeholder="               SEARCH" minimumFontSize="17" background="SearchBoxB.png" disabledBackground="SearchBoxB.png" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-D3-7DB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="SEARCH" textAlignment="center" minimumFontSize="17" background="SearchBoxB.png" disabledBackground="SearchBoxB.png" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-D3-7DB">
                                 <rect key="frame" x="630" y="718" width="215" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-U3-mdi">
@@ -3657,8 +3658,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aYA-g1-hsh"/>
-        <segue reference="QQh-is-hk2"/>
         <segue reference="KLb-Iu-kB6"/>
+        <segue reference="gYW-Ou-qn0"/>
+        <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>
