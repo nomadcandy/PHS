@@ -1,4 +1,4 @@
-//
+0//
 //  InteractiveViewController.m
 //  Millenium
 //
@@ -3592,23 +3592,145 @@ else
         int hMat = [_heightField.text intValue];
     
     
+        NSNumber *wMatNumber = [NSNumber numberWithInt:wMat];
+        NSNumber *hMatNumber = [NSNumber numberWithInt:hMat];
+    
+    
+    
+    /*int i = 60;
+    float x = (float)i/100.0f;
+    NSLog(@"%.2lf", x);*/
+    //this will print 0.60
+
+    
+      if (  wMat > hMat)
+          
+      {
+          float x = (float)hMat/wMat;
+           NSLog(@"%.2lf", x);
+          
+          _doubleMat = x;
+          /*_PercentMat =  hMatNumber/wMatNumber;
+           NSLog(@"_PercentMat %d",_PercentMat);*/
+          
+      }
+    
+    
+      else{
+          
+          float x = (float)wMat/hMat;
+          NSLog(@"%.2lf", x);
+          
+          _doubleMat = x;
+          
+        /* _PercentMat = (float) wMat/hMat;
+        NSLog(@"_PercentMat %d",_PercentMat);*/
+          
+          
+      }
+    
+    
+    
+    
+    
     if (wMat == hMat){
         
-        //[matBGLogoView CGRectMake[(601/2) - (wMat/2), (511 / 2) - (hMat / 2), wMat, hMat];
-         
-        // [image drawInRect:CGRectMake((self.frame.size.width/2) - (image.size.width/2), (self.frame.size.height / 2) - (image.size.height / 2), image.size.width, image.size.height)];
+        
         
         
         CGRect myLogoMatRect = CGRectMake( 476.0f, 96.0f, 500.0f, 500.0f);
         
         matBGLogoView.frame=myLogoMatRect;
-        //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
 
         
     }
     
-   else  if (wMat <= 5 & hMat <= 5){
+    else if (_doubleMat <=.10){
+        
+        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 50.0f);
+        
+        matBGLogoView.frame=myLogoMatRect;
+        matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+        
+    }
+    
+    else if (_doubleMat >.10 || _doubleMat  <=.21){
+        
+        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 100.0f);
+        
+        matBGLogoView.frame=myLogoMatRect;
+        matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+        
+    }
+    
+    
+    else if (_doubleMat >.21 || _doubleMat <=.34){
+        
+        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 165.0f);
+        
+        matBGLogoView.frame=myLogoMatRect;
+        matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+        
+    }
+    
+    else if (_doubleMat >.34 || _doubleMat <=.41){
+        
+        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 200.0f);
+        
+        matBGLogoView.frame=myLogoMatRect;
+        matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+        
+    }
+    
+    else if (_doubleMat >.41 || _doubleMat <=.51){
+        
+        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 250.0f);
+        
+        matBGLogoView.frame=myLogoMatRect;
+        matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+        
+    }
+
+
+    
+    
+   /* else  if (_PercentMat == .20){
+        
+        int wMatHundred = wMat*100;
+        int hMatHundred = hMat*100;
+        
+        int wMatHundredDivide = wMatHundred/2;
+        int hMatHundredDivide = hMatHundred/2;
+        
+        int wPlaceDouble =  601-wMatHundredDivide;
+        int hPlaceDouble =  511-hMatHundredDivide;
+        
+        int wPlace=wPlaceDouble/2;
+        int hPlace=hPlaceDouble/2;
+        
+        //int wPlaceUse=wPlace+426;
+        //int hPlaceUse=hPlace+100;
+        
+        int wPlaceUse=wPlace+345;
+        //int hPlaceUse=hPlace+20;
+        int hPlaceUse=hPlace+15;
+        
+        
+        CGRect myLogoMatRect = CGRectMake( wPlaceUse, hPlaceUse, wMatHundred, hMatHundred);
+        
+        //CGRect myLogoMatRect = CGRectMake( 426.0f, 100.0f, wMatHundred, hMatHundred);
+        
+        //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
+        
+        matBGLogoView.frame=myLogoMatRect;
+        matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
+        //interactiveMatView.ContentMode = UIViewContentModeCenter;
+        
+        
+    }*/
+    
+   /*else  if (wMat <= 5 & hMat <= 5){
     
         int wMatHundred = wMat*100;
         int hMatHundred = hMat*100;
@@ -3641,7 +3763,7 @@ else
         //interactiveMatView.ContentMode = UIViewContentModeCenter;
    
         
-    } else {
+    } */else {
         
         
         

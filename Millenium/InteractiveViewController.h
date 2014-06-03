@@ -229,6 +229,12 @@
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
 
+@property (nonatomic, assign) float x;
+
+@property (nonatomic, assign) double doubleMat;
+
+@property (nonatomic, assign) NSDecimalNumber *PercentMat;
+
 @property (nonatomic, strong) NSString *locationIDString;
 
 @property (nonatomic, strong) NSString *matBGTextColorString;
