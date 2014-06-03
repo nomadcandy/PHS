@@ -409,7 +409,7 @@
         
         
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
-        //artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
+        artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
         
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         NSLog(@"artworkColorArray %@",artworkColorArray);
@@ -455,6 +455,8 @@
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
         NSLog(@"fullImageArray %@",matFullImageArray);
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
+        matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
+        matSellerArray = [searchMatArray valueForKey:@"Seller"];
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
         matColorArray = [searchMatArray valueForKey:@"Color"];

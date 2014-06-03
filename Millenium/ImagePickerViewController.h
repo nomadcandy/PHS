@@ -118,6 +118,8 @@
 @property (nonatomic, copy) NSMutableArray *artworkIconArray;
 @property (nonatomic, copy) NSMutableArray *artworkIDArray;
 @property (nonatomic, copy) NSMutableArray *artworkInfoArray;
+@property (nonatomic, copy) NSMutableArray *artworkCompanyArray;
+@property (nonatomic, copy) NSMutableArray *artworkSellerArray;
 
 
 

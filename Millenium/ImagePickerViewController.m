@@ -44,6 +44,8 @@
 @synthesize artworkIconArray;
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
+@synthesize artworkCompanyArray;
+@synthesize artworkSellerArray;
 
 @synthesize matNameArray;
 @synthesize matSizeArray;
@@ -606,6 +608,11 @@
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
         
+        artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
+        
+        artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
+
+        
         
         
     }];
@@ -647,6 +654,9 @@
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         matColorArray = [searchMatArray valueForKey:@"Color"];
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+        
+        matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
+        matSellerArray = [searchMatArray valueForKey:@"Seller"];
         
         
         

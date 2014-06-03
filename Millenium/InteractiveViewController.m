@@ -3320,10 +3320,11 @@ else
         
         
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
-        
-        
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
+        
+        artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
+        artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         
         
         
@@ -3353,7 +3354,7 @@ else
         
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
         
-        
+            matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             //NSLog(@"idString %@",idString);
             matColorArray = [searchMatArray valueForKey:@"Color"];
@@ -3667,7 +3668,7 @@ else
     else if ((_doubleMat >=.20)&&(_doubleMat <=.33)){
     //else if (_doubleMat ==.33){
         
-        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 165.0f);
+        CGRect myLogoMatRect = CGRectMake( 476.0f, 2681.0f, 500.0f, 165.0f);
         
         matBGLogoView.frame=myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
@@ -4043,6 +4044,7 @@ else
         goingController.artworkFullImageArray = artworkFullImageArray;
         goingController.artworkIDArray = artworkIDArray;
         goingController.artworkSellerArray = artworkSellerArray;
+        goingController.artworkCompanyArray = artworkCompanyArray;
         
         goingController.matCount = matCount;
         goingController.matNameArray = matNameArray;

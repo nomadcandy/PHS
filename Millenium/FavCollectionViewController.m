@@ -190,7 +190,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkLocationIDArray = [favoritesLogoArray valueForKey:@"LocationID"];
         artworkSellerArray = [favoritesLogoArray valueForKey:@"Seller"];
         artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
-        artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
+        artworkCompanyArray = [favoritesLogoArray valueForKey:@"CompanyName"];
         
         artworkCount = artworkNameArray.count;
         
@@ -213,7 +213,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matIDArray = [favoritesMatArray valueForKey:@"ProductID"];
         matLocationIDArray = [favoritesMatArray valueForKey:@"LocationID"];
         matSellerArray = [favoritesMatArray valueForKey:@"Seller"];
-        matCompanyArray = [favoritesMatArray valueForKey:@"Company"];
+        matCompanyArray = [favoritesMatArray valueForKey:@"CompanyName"];
         matColorArray = [favoritesMatArray valueForKey:@"Color"];
         //matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
         
@@ -496,7 +496,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkLocationIDArray = [favoritesLogoArray valueForKey:@"LocationID"];
         artworkSellerArray = [favoritesLogoArray valueForKey:@"Seller"];
         artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
-        artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
+        artworkCompanyArray = [favoritesLogoArray valueForKey:@"CompanyName"];
         
         artworkCount = artworkNameArray.count;
         
@@ -519,7 +519,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matIDArray = [favoritesMatArray valueForKey:@"ProductID"];
         matLocationIDArray = [favoritesMatArray valueForKey:@"LocationID"];
         matSellerArray = [favoritesMatArray valueForKey:@"Seller"];
-        matCompanyArray = [favoritesMatArray valueForKey:@"Company"];
+        matCompanyArray = [favoritesMatArray valueForKey:@"CompanyName"];
         matColorArray = [favoritesMatArray valueForKey:@"Color"];
         //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
         
