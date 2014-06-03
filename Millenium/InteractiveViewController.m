@@ -3592,7 +3592,23 @@ else
         int hMat = [_heightField.text intValue];
     
     
-    if (wMat <= 5 & hMat <= 5){
+    if (wMat == hMat){
+        
+        //[matBGLogoView CGRectMake[(601/2) - (wMat/2), (511 / 2) - (hMat / 2), wMat, hMat];
+         
+        // [image drawInRect:CGRectMake((self.frame.size.width/2) - (image.size.width/2), (self.frame.size.height / 2) - (image.size.height / 2), image.size.width, image.size.height)];
+        
+        
+        CGRect myLogoMatRect = CGRectMake( 476.0f, 96.0f, 500.0f, 500.0f);
+        
+        matBGLogoView.frame=myLogoMatRect;
+        //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+        matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+
+        
+    }
+    
+   else  if (wMat <= 5 & hMat <= 5){
     
         int wMatHundred = wMat*100;
         int hMatHundred = hMat*100;
@@ -3623,6 +3639,7 @@ else
         matBGLogoView.frame=myLogoMatRect;
         matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
         //interactiveMatView.ContentMode = UIViewContentModeCenter;
+   
         
     } else {
         
