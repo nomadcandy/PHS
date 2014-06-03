@@ -150,6 +150,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [DIYMenu dismiss];
     
+     NSLog(@"locationIDString: %@", locationIDString);
+    
     
     //removeFavLogoLabel.hidden= YES;
     

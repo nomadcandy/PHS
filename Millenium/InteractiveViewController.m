@@ -4008,8 +4008,10 @@ else
     
     if ([segue.identifier isEqualToString:@"InteractiveSegue"]) {
         
-        InteractiveViewController *destViewController = segue.destinationViewController;
+        InteractiveViewController *goingController = segue.destinationViewController;
         //[self presentViewController:destViewController animated:YES completion:nil];
+        NSLog(@"locationIDString %@",locationIDString);
+        goingController.locationIDString = locationIDString;
         
         
     }

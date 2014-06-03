@@ -297,10 +297,10 @@
                                 <rect key="frame" x="735" y="381" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="SEARCH" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" background="SearchBoxB.png" disabledBackground="SearchBoxB.png" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-D3-7DB">
-                                <rect key="frame" x="630" y="718" width="215" height="65"/>
+                            <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SEARCH" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-D3-7DB">
+                                <rect key="frame" x="445" y="717" width="215" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
@@ -326,7 +326,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" background="widthCircle.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKe-fX-eBR">
-                                <rect key="frame" x="982" y="62" width="60" height="57"/>
+                                <rect key="frame" x="966" y="62" width="60" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="7">
@@ -339,7 +339,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="17" background="widthCircle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gnm-bs-gKc">
-                                <rect key="frame" x="982" y="567" width="64" height="60"/>
+                                <rect key="frame" x="966" y="567" width="64" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="7">
@@ -1226,6 +1226,13 @@
                                 <rect key="frame" x="995" y="738" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="SEARCH" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-bS-z4q">
+                                <rect key="frame" x="697" y="735" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1278,7 +1285,7 @@
                         <outlet property="royalBlueButton" destination="qRe-1U-pej" id="iH8-6o-CTY"/>
                         <outlet property="sandalWoodButton" destination="FFP-WK-h6P" id="rvt-7o-Faa"/>
                         <outlet property="searchButton" destination="xDA-U3-mdi" id="thT-nZ-my0"/>
-                        <outlet property="searchField" destination="7fQ-D3-7DB" id="lcc-ZA-q8m"/>
+                        <outlet property="searchField" destination="LYz-bS-z4q" id="Ky2-AE-Jqa"/>
                         <outlet property="sellerField" destination="gg9-EA-31R" id="ClZ-Pg-GlW"/>
                         <outlet property="silverButton" destination="czk-Kk-atJ" id="O8p-Uk-YXA"/>
                         <outlet property="steelBlueButton" destination="TuV-5b-4aV" id="iWY-ed-lVl"/>
@@ -2281,7 +2288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2707" y="-2290"/>
+            <point key="canvasLocation" x="-4226" y="-3091"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="ugm-Pt-D7d">
@@ -3632,7 +3639,6 @@
         <image name="Rose_119.jpg" width="800" height="514"/>
         <image name="Royal Blue_107.jpg" width="800" height="514"/>
         <image name="Sandalwood_120.jpg" width="800" height="514"/>
-        <image name="SearchBoxB.png" width="580" height="152"/>
         <image name="Silver_116.jpg" width="800" height="514"/>
         <image name="Steel Blue_121.jpg" width="800" height="514"/>
         <image name="Suede_123.jpg" width="800" height="514"/>
@@ -3658,8 +3664,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="KLb-Iu-kB6"/>
-        <segue reference="gYW-Ou-qn0"/>
+        <segue reference="T0F-q4-d7o"/>
         <segue reference="aYA-g1-hsh"/>
+        <segue reference="QQh-is-hk2"/>
     </inferredMetricsTieBreakers>
 </document>
