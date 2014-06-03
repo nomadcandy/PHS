@@ -2072,7 +2072,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1765" y="-3325"/>
+            <point key="canvasLocation" x="-1589" y="-2751"/>
         </scene>
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -3312,7 +3312,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="logoFavCellID" reuseIdentifier="logoHeaderCellID" id="I5O-3d-6BP" customClass="FavHeaderCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="logoHeaderCellID" reuseIdentifier="logoHeaderCellID" id="I5O-3d-6BP" customClass="FavHeaderCell">
                                 <rect key="frame" x="27" y="64" width="970" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -3424,7 +3424,7 @@
                                 </view>
                                 <size key="customSize" width="970" height="132"/>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" restorationIdentifier="favCollectionViewCellID" reuseIdentifier="logoCollectionViewCellID" id="6MQ-7R-NhE" customClass="FavCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" restorationIdentifier="logoCollectionViewCellID" reuseIdentifier="logoCollectionViewCellID" id="6MQ-7R-NhE" customClass="FavCell">
                                 <rect key="frame" x="27" y="201" width="970" height="543"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -3479,6 +3479,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="goInteractive1:event:" destination="xYA-bA-MQ0" eventType="touchUpInside" id="SFk-02-jcY"/>
+                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="SGM-ZV-0fv"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0i0-RT-6jg">
@@ -3515,6 +3516,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="goInteractive1:event:" destination="xYA-bA-MQ0" eventType="touchUpInside" id="fhA-tV-VTz"/>
+                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="Q7o-Tf-pTp"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-GR-k0J">
@@ -3548,9 +3550,9 @@
                                 <size key="customSize" width="970" height="543"/>
                                 <connections>
                                     <outlet property="goBack" destination="gCC-Br-Aki" id="aQr-YZ-5V9"/>
-                                    <outlet property="logoChooseButton" destination="dM1-bm-huB" id="Yqa-t7-5rB"/>
+                                    <outlet property="logoChooseButton" destination="dM1-bm-huB" id="qiZ-Dw-7m1"/>
                                     <outlet property="logoLabel" destination="dfr-Ra-ajW" id="hbc-cd-NgC"/>
-                                    <outlet property="matChooseButton" destination="MXD-B2-aEM" id="cZG-dx-HMM"/>
+                                    <outlet property="matChooseButton" destination="MXD-B2-aEM" id="SY1-rL-HMS"/>
                                     <outlet property="matLabel" destination="dhQ-O0-rVE" id="7Pw-ri-fTy"/>
                                     <outlet property="removeFavLogoButton" destination="0i0-RT-6jg" id="Uh1-I5-BOO"/>
                                     <outlet property="removeFavLogoLabel" destination="3X3-R8-0dl" id="BdK-ej-F1t"/>
@@ -3572,7 +3574,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLp-9A-bgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-573" y="-3333"/>
+            <point key="canvasLocation" x="-2875" y="-4210"/>
         </scene>
     </scenes>
     <resources>

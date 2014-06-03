@@ -192,7 +192,7 @@
     
     textOrientField.hidden= YES;
     
-    UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    /*UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
     UICollisionBehavior *collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.steelBlueButton]];
     // Creates collision boundaries from the bounds of the dynamic animator's
@@ -201,13 +201,13 @@
     [animator addBehavior: collisionBehavior];
     
     CGPoint squareCenterPoint = CGPointMake(self.steelBlueButton.center.x, self.steelBlueButton.center.y - 110.0);
-    UIOffset attachmentPoint = UIOffsetMake(-25.0, -25.0);
+    UIOffset attachmentPoint = UIOffsetMake(-25.0, -25.0);*/
     // By default, an attachment behavior uses the center of a view. By using a
     // small offset, we get a more interesting effect which will cause the view
     // to have rotation movement when dragging the attachment.
-    UIAttachmentBehavior *attachmentBehavior = [[UIAttachmentBehavior alloc] initWithItem:self.steelBlueButton offsetFromCenter:attachmentPoint attachedToAnchor:squareCenterPoint];
+   /* UIAttachmentBehavior *attachmentBehavior = [[UIAttachmentBehavior alloc] initWithItem:self.steelBlueButton offsetFromCenter:attachmentPoint attachedToAnchor:squareCenterPoint];
     [animator addBehavior:attachmentBehavior];
-    self.attachmentBehavior = attachmentBehavior;
+    self.attachmentBehavior = attachmentBehavior;*/
     
     // Visually show the attachment points
     /*self.attachmentView.center = attachmentBehavior.anchorPoint;
@@ -221,7 +221,7 @@
     // Visually show the connection between the attachment points.
     [(APLDecorationView*)self.view trackAndDrawAttachmentFromView:self.attachmentView toView:self.square1 withAttachmentOffset:CGPointMake(-25.0, -25.0)];*/
     
-    self.animator = animator;
+    //self.animator = animator;
 
     
     //CGRect image_rect1 = CGRectMake(_steelBlueButton.position.x,blueSteelButton.position.y,35,35);
@@ -1387,8 +1387,9 @@
         
         matBGLogoView.hidden= NO;
         
+        //sizeString = @"3 X 5";
         
-        NSLog(@"sizeStringHere %@",sizeString);
+       NSLog(@"sizeStringHere %@",sizeString);
         
         NSString *sizeGetMatLogoString = sizeString;
         NSRange range = [sizeGetMatLogoString rangeOfString:@"x"];
