@@ -1,4 +1,4 @@
-0//
+//
 //  InteractiveViewController.m
 //  Millenium
 //
@@ -1983,9 +1983,9 @@
    
     
     //configure carousel
-    carouselSize.type = iCarouselTypeCoverFlow2;
+    /*carouselSize.type = iCarouselTypeCoverFlow2;
     carouselColor.type = iCarouselTypeCoverFlow2;
-    carouselLogo.type = iCarouselTypeCustom;
+    carouselLogo.type = iCarouselTypeCustom;*/
     
    
         
@@ -3645,8 +3645,8 @@ else
 
         
     }
-    
-    else if (_doubleMat <=.10){
+    //((x >= 5) && (y < 10))
+    else if ((_doubleMat >=.0)&&(_doubleMat <=.10)){
         
         CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 50.0f);
         
@@ -3654,8 +3654,8 @@ else
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
         
     }
-    
-    else if (_doubleMat >.10 || _doubleMat  <=.21){
+    else if ((_doubleMat >=.10)&&(_doubleMat <=.20)){
+    //else if (_doubleMat ==.20){
         
         CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 100.0f);
         
@@ -3664,8 +3664,8 @@ else
         
     }
     
-    
-    else if (_doubleMat >.21 || _doubleMat <=.34){
+    else if ((_doubleMat >=.20)&&(_doubleMat <=.33)){
+    //else if (_doubleMat ==.33){
         
         CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 165.0f);
         
@@ -3673,8 +3673,8 @@ else
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
         
     }
-    
-    else if (_doubleMat >.34 || _doubleMat <=.41){
+    else if ((_doubleMat >=.33)&&(_doubleMat <=.40)){
+    //else if (_doubleMat==.40){
         
         CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 200.0f);
         
@@ -3682,10 +3682,10 @@ else
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
         
     }
-    
-    else if (_doubleMat >.41 || _doubleMat <=.51){
+    else if ((_doubleMat >=.40)&&(_doubleMat <=.50)){
+    //else if (_doubleMat == .50){
         
-        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 250.0f);
+        CGRect myLogoMatRect = CGRectMake( 476.0f, 195.0f, 500.0f, 250.0f);
         
         matBGLogoView.frame=myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
@@ -3763,16 +3763,10 @@ else
         //interactiveMatView.ContentMode = UIViewContentModeCenter;
    
         
-    } */else {
-        
-        
-        
-        
-        
-        
-    }
-    
+    } */
 }
+
+
 
 
 -(IBAction) Portrait:(id)sender{
