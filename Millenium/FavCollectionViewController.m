@@ -191,7 +191,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkSellerArray = [favoritesLogoArray valueForKey:@"Seller"];
         artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
         artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
-        //NSLog(@"searchLogoArray %@",favoritesLogoArray);
+        NSLog(@"artworkCompanyArray %@",artworkCompanyArray);
         artworkCount = artworkNameArray.count;
         
         

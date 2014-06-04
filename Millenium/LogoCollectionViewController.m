@@ -1180,8 +1180,56 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     matSizeAddFavString =[matSizeArray objectAtIndex:indexPathSend];
     
     
-    matSizeAddFavString =[matIDArray objectAtIndex:indexPathSend];
-    matLocationIDAddFavString = [matLocationIDArray objectAtIndex:indexPathSend];
+    
+    
+    
+    
+    if (matUrlAddFavString==NULL)
+    {
+        
+        matUrlAddFavString= @"No Image Is Available";
+        
+    }
+    
+    if (matNameAddFavString==NULL)
+    {
+        
+        matNameAddFavString= @"The Artwork has no name";
+        
+    }
+    
+    
+   
+    
+    if (matSellerAddFavString==NULL)
+    {
+        
+        matSellerAddFavString= @"Sales Person Unknown";
+        
+    }
+    
+    
+    if (matCompanyAddFavString==NULL)
+    {
+        
+        matCompanyAddFavString= @"No Company Name Is Available";
+        
+    }
+    
+    if (matIDAddFavString==NULL)
+    {
+        
+        matIDAddFavString= @"No ID Provided";
+        
+    }
+
+    
+    
+    
+   
+    
+    
+
 
 
     
@@ -1210,6 +1258,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [newMatFavorite setValue:self.matColorAddFavString forKey:@"color"];
     [newMatFavorite setValue:self.matBGColorAddFavString forKey:@"bgColor"];
     [newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];
+    
     
     
     
@@ -1289,7 +1338,47 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     artworkColorAddFavString =[artworkColorArray objectAtIndex:indexPathSend];
     artworkSizeAddFavString =[artworkSizeArray objectAtIndex:indexPathSend];
     artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+    
+    if (urlFavString==NULL)
+    {
+        
+        urlFavString= @"No Image Is Available";
+        
+    }
+    
+    if (artworkNameAddFavString==NULL)
+    {
+        
+        artworkNameAddFavString= @"The Artwork has no name";
+        
+    }
+
+    
     artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+    
+    if (artworkSellerAddFavString==NULL)
+    {
+        
+        artworkSellerAddFavString= @"No Company Name Is Available";
+        
+    }
+
+    
+    if (artworkCompanyAddFavString==NULL)
+    {
+        
+        artworkCompanyAddFavString= @"No Company Name Is Available";
+        
+    }
+        
+    artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+    
+    if (artworkSellerAddFavString==NULL)
+    {
+        
+        artworkSellerAddFavString= @"Sales Person Not Known";
+        
+    }
     
     NSLog(@"urlFavString %@",urlFavString);
     NSLog(@"urlFavString %@",artworkNameAddFavString);

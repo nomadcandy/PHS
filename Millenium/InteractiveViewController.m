@@ -255,27 +255,11 @@
     NSLog(@"interactiveHeaderString %@",interactiveHeaderString);
 
     nameField.text =nameString;
-    
-    //TODO crash on favorites being selected???
-    
-    if (sellerString!=nil){
-    
-        sellerField.text =sellerString;
+    sellerField.text =sellerString;
+    companyField.text =companyString;
+    numberField.text =numberString;
         
-    }
     
-     if (companyString!=nil){
-    
-        companyField.text =companyString;
-         
-     }
-    
-    
-    if (numberString!=nil){
-    
-        numberField.text =numberString;
-        
-    }
     
     headerLabel.text= interactiveHeaderString;
     
