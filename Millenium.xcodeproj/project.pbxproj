@@ -98,7 +98,6 @@
 		426A6A3418EDADBA00255331 /* CleanButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2D18EDADBA00255331 /* CleanButton.png */; };
 		426A6A3518EDADBA00255331 /* FreshButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2E18EDADBA00255331 /* FreshButton.png */; };
 		426A6A3918EDD99200255331 /* FriendlyCharlesUse.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */; };
-		426A6A6E18EDE32200255331 /* WalkOffLogoMatMedium.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */; };
 		427CE62C18F0670700865291 /* FliersWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CE62B18F0670700865291 /* FliersWhite.png */; };
 		427CE62E18F069DF00865291 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427CE62D18F069DF00865291 /* MessageUI.framework */; };
 		427CE63218F072F400865291 /* SignOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63118F072F400865291 /* SignOffViewController.m */; };
@@ -284,6 +283,8 @@
 		42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
 		42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
 		42B70D2118F3D45900CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
+		42D35011193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */; };
+		42D35013193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42D35012193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v */; };
 		42D95173190ADF5600FD69B3 /* MatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D95172190ADF5600FD69B3 /* MatCell.m */; };
 		42DBC73B18EE03AA005BF791 /* CintasLogoHighRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */; };
 		42E7AC0818CE2CDD0036AF00 /* InteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E7AC0718CE2CDD0036AF00 /* InteractiveViewController.m */; };
@@ -438,7 +439,6 @@
 		426A6A2D18EDADBA00255331 /* CleanButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CleanButton.png; sourceTree = "<group>"; };
 		426A6A2E18EDADBA00255331 /* FreshButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FreshButton.png; sourceTree = "<group>"; };
 		426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FriendlyCharlesUse.png; sourceTree = "<group>"; };
-		426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMedium.m4v; sourceTree = "<group>"; };
 		427CE62B18F0670700865291 /* FliersWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FliersWhite.png; sourceTree = "<group>"; };
 		427CE62D18F069DF00865291 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		427CE63018F072F400865291 /* SignOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignOffViewController.h; sourceTree = "<group>"; };
@@ -575,6 +575,8 @@
 		42B0159818E35CF20068019C /* VideosWhite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite3.png; sourceTree = "<group>"; };
 		42B70D1E18F3D45800CF0C97 /* SketchRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchRequestViewController.h; sourceTree = "<group>"; };
 		42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchRequestViewController.m; sourceTree = "<group>"; };
+		42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMediumMob.m4v; sourceTree = "<group>"; };
+		42D35012193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMobile.m4v; sourceTree = "<group>"; };
 		42D95171190ADF5600FD69B3 /* MatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatCell.h; sourceTree = "<group>"; };
 		42D95172190ADF5600FD69B3 /* MatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatCell.m; sourceTree = "<group>"; };
 		42DBC73A18EE03AA005BF791 /* CintasLogoHighRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CintasLogoHighRes.png; sourceTree = "<group>"; };
@@ -808,6 +810,8 @@
 		426A6A3A18EDDC2400255331 /* MatVideos */ = {
 			isa = PBXGroup;
 			children = (
+				42D35012193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v */,
+				42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */,
 			);
 			name = MatVideos;
 			sourceTree = "<group>";
@@ -1128,7 +1132,6 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
-				426A6A6D18EDE32200255331 /* WalkOffLogoMatMedium.m4v */,
 				422A692219101E5E001CAB8D /* CoreData */,
 				42DEAF2C19192D6E0087E71D /* ImagesImagePicker */,
 				422A691B19100939001CAB8D /* ImagesAssets */,
@@ -1358,13 +1361,13 @@
 				42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				426A6A3018EDADBA00255331 /* WeGotThis.png in Resources */,
 				42B0156418E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
-				426A6A6E18EDE32200255331 /* WalkOffLogoMatMedium.m4v in Resources */,
 				42FF7A2D18CDE92A00C72695 /* Images.xcassets in Resources */,
 				42B0153418E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
 				426A6A1918ED0CC300255331 /* SampleLogo8.png in Resources */,
 				42B0150418DF47110068019C /* WebViewBG2.png in Resources */,
 				42849B8818EA016200E5B3FB /* allmatbuttons2.png in Resources */,
 				42B0153D18E3159F0068019C /* SilverSeries.pdf in Resources */,
+				42D35013193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v in Resources */,
 				426A6A1B18ED0CC300255331 /* SampleLogo6.png in Resources */,
 				428085CC18FC585100389C9C /* MatSay.png in Resources */,
 				4221399F19128F7E001BD328 /* AssetsAddFavButton.png in Resources */,
@@ -1453,6 +1456,7 @@
 				429C4AAE192563D500AF8050 /* widthCircle.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
 				4297E09019250F8100E43779 /* Brown_102.jpg in Resources */,
+				42D35011193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v in Resources */,
 				42E9AC0C18FF58D3000E226D /* Fresh1Button.png in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,

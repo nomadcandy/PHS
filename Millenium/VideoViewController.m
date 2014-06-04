@@ -318,8 +318,9 @@
        hideCarouselView.hidden=NO;
         hideGradCarouselView.hidden=NO;
     
-    
-        NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"WalkOffLogoMatMedium" ofType:@"m4v"];
+        //NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"WalkOffLogoMatMedium" ofType:@"m4v"];
+
+        NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"WalkOffLogoMatMobile" ofType:@"m4v"];
         NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
         
         _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
