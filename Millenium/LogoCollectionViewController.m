@@ -1380,6 +1380,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
     
+    if (artworkIDAddFavString==NULL)
+    {
+        
+        artworkIDAddFavString= @"No ID Provided";
+        
+    }
+    
     NSLog(@"urlFavString %@",urlFavString);
     NSLog(@"urlFavString %@",artworkNameAddFavString);
     
@@ -1399,6 +1406,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];
     [newLogoFavorite setValue:self.artworkColorAddFavString forKey:@"color"];
     [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
+    [newLogoFavorite setValue:self.artworkIDAddFavString forKey:@"productID"];
 
 
     
