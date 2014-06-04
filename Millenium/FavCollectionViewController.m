@@ -190,7 +190,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkLocationIDArray = [favoritesLogoArray valueForKey:@"LocationID"];
         artworkSellerArray = [favoritesLogoArray valueForKey:@"Seller"];
         artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
-        artworkCompanyArray = [favoritesLogoArray valueForKey:@"CompanyName"];
+        artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
         
         artworkCount = artworkNameArray.count;
         
@@ -213,7 +213,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matIDArray = [favoritesMatArray valueForKey:@"ProductID"];
         matLocationIDArray = [favoritesMatArray valueForKey:@"LocationID"];
         matSellerArray = [favoritesMatArray valueForKey:@"Seller"];
-        matCompanyArray = [favoritesMatArray valueForKey:@"CompanyName"];
+        matCompanyArray = [favoritesMatArray valueForKey:@"Company"];
         matColorArray = [favoritesMatArray valueForKey:@"Color"];
         //matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
         

@@ -156,7 +156,8 @@
 
 @property (nonatomic, copy) NSString *firstNameString;
 @property (nonatomic, copy) NSString *lastNameString;
-@property (nonatomic, assign) NSString *locationIDString;
+//@property (nonatomic, assign) NSString *locationIDString;
+@property (nonatomic, strong) NSString *locationIDString;
 @property (nonatomic, copy) NSString *locationNameString;
 @property (nonatomic, copy) NSString *locationNumberString;
 

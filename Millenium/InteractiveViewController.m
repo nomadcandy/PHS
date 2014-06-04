@@ -255,9 +255,9 @@
     NSLog(@"interactiveHeaderString %@",interactiveHeaderString);
 
     nameField.text =nameString;
-    sellerField.text =sellerString;
-    companyField.text =companyString;
-    numberField.text =numberString;
+    //sellerField.text =sellerString;
+    //companyField.text =companyString;
+    //numberField.text =numberString;
     
     headerLabel.text= interactiveHeaderString;
     
@@ -1390,43 +1390,48 @@
         matBGLogoView.hidden= NO;
         
         //sizeString = @"3 X 5";
+        if (sizeString!=nil){
+       
+            
+            NSLog(@"sizeStringHere %@",sizeString);
         
-       NSLog(@"sizeStringHere %@",sizeString);
+            NSString *sizeGetMatLogoString = sizeString;
+            NSRange range = [sizeGetMatLogoString rangeOfString:@"x"];
         
-        NSString *sizeGetMatLogoString = sizeString;
-        NSRange range = [sizeGetMatLogoString rangeOfString:@"x"];
+            NSString *widthLogoMatString = [sizeGetMatLogoString substringToIndex:range.location];
+            NSLog(@"%@",widthLogoMatString);
         
-        NSString *widthLogoMatString = [sizeGetMatLogoString substringToIndex:range.location];
-        NSLog(@"%@",widthLogoMatString);
-        
-        NSString *heightLogoMatString = [sizeGetMatLogoString substringFromIndex:range.location];
-        NSLog(@"%@",heightLogoMatString);
+            NSString *heightLogoMatString = [sizeGetMatLogoString substringFromIndex:range.location];
+            NSLog(@"%@",heightLogoMatString);
         
         
-        NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
-        NSString *safeHeightLogoMatString = [[heightLogoMatString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@""];
+            NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
+            NSString *safeHeightLogoMatString = [[heightLogoMatString componentsSeparatedByCharactersInSet:charSet] componentsJoinedByString:@""];
         
-        _widthField.text=widthLogoMatString;
-        _heightField.text=safeHeightLogoMatString;
+            _widthField.text=widthLogoMatString;
+            _heightField.text=safeHeightLogoMatString;
         
-        _widthCircleField.text=_widthField.text;
-        _heightCircleField.text=_heightField.text;
+            _widthCircleField.text=_widthField.text;
+            _heightCircleField.text=_heightField.text;
         
-        int wLogoMat = [_widthField.text intValue];
-        int hLogoMat = [_heightField.text intValue];
+            int wLogoMat = [_widthField.text intValue];
+            int hLogoMat = [_heightField.text intValue];
         
-        int wLogoMatHundred = wLogoMat*100;
-        int hLogoMatHundred = hLogoMat*100;
+            int wLogoMatHundred = wLogoMat*100;
+            int hLogoMatHundred = hLogoMat*100;
         
         /*int wLogoMatHundredDivide = wLogoMatHundred/2;
         int hLogoMatHundredDivide = hLogoMatHundred/2;*/
         
         //UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
         //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 600.0f, 400.0f);
-        CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, wLogoMatHundred, hLogoMatHundred);
+            
+            CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, wLogoMatHundred, hLogoMatHundred);
         
-        matBGLogoView.frame=myLogoMatRect;
-        matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+            matBGLogoView.frame=myLogoMatRect;
+            matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+        
+        }
         
         //[self.view addSubview:matBGLogoView];
 

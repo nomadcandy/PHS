@@ -161,6 +161,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"artworkIconArray %@",artworkIconArray);
     
     
+    if (locationIDString==nil) {
+   
+        
+        locationIDString = [[NSUserDefaults standardUserDefaults]
+                            stringForKey:@"locationID"];
+        
+    }
     
     
     UIImageView *whitePadView = [[UIImageView alloc] initWithFrame:CGRectMake(00, 0, 1024, 170)];
@@ -417,7 +424,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkLocationIDArray = [favoritesLogoArray valueForKey:@"LocationID"];
         artworkSellerArray = [favoritesLogoArray valueForKey:@"Seller"];
         artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
-        artworkCompanyArray = [favoritesLogoArray valueForKey:@"CompanyName"];
+        artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
         
         artworkCount = artworkNameArray.count;
         
@@ -440,7 +447,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matIDArray = [favoritesMatArray valueForKey:@"ProductID"];
         matLocationIDArray = [favoritesMatArray valueForKey:@"LocationID"];
         matSellerArray = [favoritesMatArray valueForKey:@"Seller"];
-        matCompanyArray = [favoritesMatArray valueForKey:@"CompanyName"];
+        matCompanyArray = [favoritesMatArray valueForKey:@"Company"];
         matColorArray = [favoritesMatArray valueForKey:@"Color"];
         //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
         

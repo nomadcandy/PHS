@@ -219,6 +219,9 @@
        
         //NSString *originalString = @"(123) 123123 abc";
         NSLog(@"locationIDString %@",locationIDString);
+        NSString *valueToSave = locationIDString;
+        [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"locationID"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
         
         
