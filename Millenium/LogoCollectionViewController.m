@@ -192,7 +192,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [self.view addSubview:matLabel];
 
     
-    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(320, 40, 200, 30)];
+    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(226, 44, 200, 30)];
     searchHereField.borderStyle = UITextBorderStyleRoundedRect;
     searchHereField.font = [UIFont systemFontOfSize:15];
     searchHereField.placeholder = @"search";
@@ -215,11 +215,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     UIImage*favHereImage = [UIImage imageNamed:@"AssetsFavButton.png"];
     [favHereButton setBackgroundImage:favHereImage forState:UIControlStateNormal];
     //[favHereButton setImage:favHereImage forState:UIControlStateSelected];
-    favHereButton.frame = CGRectMake(45.0, 33.0, 50.0, 50.0);
+    favHereButton.frame = CGRectMake(90.0, 33.0, 50.0, 50.0);
     [self.view addSubview:favHereButton];
     
     
-    UIButton *repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    /*UIButton *repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [repHereButton addTarget:self
                       action:@selector(goRep:)
             forControlEvents:UIControlEventTouchDown];
@@ -228,7 +228,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
     [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
     repHereButton.frame = CGRectMake(113.0, 33.0, 45.0, 45.0);
-    [self.view addSubview:repHereButton];
+    [self.view addSubview:repHereButton];*/
     
     
     UIButton *nearHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -239,7 +239,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     UIImage*nearHereImage = [UIImage imageNamed:@"AssetsCompassButton.png"];
     [nearHereButton setBackgroundImage:nearHereImage forState:UIControlStateNormal];
-    nearHereButton.frame = CGRectMake(181.0, 33.0, 50.0, 50.0);
+    nearHereButton.frame = CGRectMake(158.0, 33.0, 50.0, 50.0);
     [self.view addSubview:nearHereButton];
     
     
@@ -248,7 +248,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                        action:@selector(goSearchMode:)
              forControlEvents:UIControlEventTouchDown];*/
     
-    UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    /*UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [searchModeButton addTarget:self
                          action:@selector(removeAllFavorites:)
                forControlEvents:UIControlEventTouchDown];
@@ -257,7 +257,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     UIImage*searchModeImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
     [searchModeButton setBackgroundImage:searchModeImage forState:UIControlStateNormal];
     searchModeButton.frame = CGRectMake(249.0, 33.0, 50.0, 50.0);
-    [self.view addSubview:searchModeButton];
+    [self.view addSubview:searchModeButton];*/
     
     
     
@@ -269,9 +269,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
      forControlEvents:UIControlEventTouchDown];
     
     
-    UIImage*searchHereImage = [UIImage imageNamed:@"AssetsDefaultButton.png"];
+    UIImage*searchHereImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
     [searchHereButton setBackgroundImage:searchHereImage forState:UIControlStateNormal];
-    searchHereButton.frame = CGRectMake(520.0, 35.0, 40.0, 40.0);
+    searchHereButton.frame = CGRectMake(430.0, 35.0, 50.0, 50.0);
     [self.view addSubview:searchHereButton];
     
     
