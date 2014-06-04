@@ -2080,7 +2080,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1589" y="-2751"/>
+            <point key="canvasLocation" x="-1349" y="-3327"/>
         </scene>
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -3582,7 +3582,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLp-9A-bgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2875" y="-4210"/>
+            <point key="canvasLocation" x="-2371" y="-4358"/>
         </scene>
     </scenes>
     <resources>
@@ -3664,8 +3664,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
         <segue reference="gYW-Ou-qn0"/>
+        <segue reference="SGM-ZV-0fv"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>
