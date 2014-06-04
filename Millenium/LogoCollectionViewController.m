@@ -194,8 +194,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(226, 44, 200, 30)];
     searchHereField.borderStyle = UITextBorderStyleRoundedRect;
-    searchHereField.font = [UIFont systemFontOfSize:15];
-    searchHereField.placeholder = @"search";
+    searchHereField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    searchHereField.placeholder = @"SEARCH";
     searchHereField.autocorrectionType = UITextAutocorrectionTypeNo;
     searchHereField.keyboardType = UIKeyboardTypeDefault;
     searchHereField.returnKeyType = UIReturnKeyDone;
