@@ -241,12 +241,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     //removeFavLogoLabel.hidden= YES;
     
-    NSLog(@"locationIDString %@",locationIDString);
-    NSLog(@"artworkNameDictionary %@",artworkNameDictionary);
-    NSLog(@"artworkNameArray %@",artworkNameArray);
-    NSLog(@"artworkIconArray %@",artworkIconArray);
-    
-    
     
     
     UIImageView *whitePadView = [[UIImageView alloc] initWithFrame:CGRectMake(00, 0, 1024, 170)];
@@ -271,10 +265,10 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     [self.view addSubview:matLabel];
 
     
-    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(320, 40, 200, 30)];
+    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(226, 44, 200, 30)];
     searchHereField.borderStyle = UITextBorderStyleRoundedRect;
-    searchHereField.font = [UIFont systemFontOfSize:15];
-    searchHereField.placeholder = @"search";
+    searchHereField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    searchHereField.placeholder = @"SEARCH";
     searchHereField.autocorrectionType = UITextAutocorrectionTypeNo;
     searchHereField.keyboardType = UIKeyboardTypeDefault;
     searchHereField.returnKeyType = UIReturnKeyDone;
@@ -282,76 +276,78 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     searchHereField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     searchHereField.delegate = self;
     [self.view addSubview:searchHereField];
-   
+    
     
     
     UIButton *favHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [favHereButton addTarget:self
-                         action:@selector(goFav:)
-               forControlEvents:UIControlEventTouchDown];
+                      action:@selector(goFav:)
+            forControlEvents:UIControlEventTouchDown];
     
     
     UIImage*favHereImage = [UIImage imageNamed:@"AssetsFavButton.png"];
     [favHereButton setBackgroundImage:favHereImage forState:UIControlStateNormal];
     //[favHereButton setImage:favHereImage forState:UIControlStateSelected];
-    favHereButton.frame = CGRectMake(45.0, 33.0, 50.0, 50.0);
+    favHereButton.frame = CGRectMake(90.0, 33.0, 50.0, 50.0);
     [self.view addSubview:favHereButton];
     
     
-    UIButton *repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [repHereButton addTarget:self
-                      action:@selector(goRep:)
-            forControlEvents:UIControlEventTouchDown];
-    
-    
-    UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
-    [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
-    repHereButton.frame = CGRectMake(113.0, 33.0, 45.0, 45.0);
-    [self.view addSubview:repHereButton];
+    /*UIButton *repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+     [repHereButton addTarget:self
+     action:@selector(goRep:)
+     forControlEvents:UIControlEventTouchDown];
+     
+     
+     UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
+     [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
+     repHereButton.frame = CGRectMake(113.0, 33.0, 45.0, 45.0);
+     [self.view addSubview:repHereButton];*/
     
     
     UIButton *nearHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [nearHereButton addTarget:self
-                      action:@selector(goNearMe:)
-            forControlEvents:UIControlEventTouchDown];
+                       action:@selector(goNearMe:)
+             forControlEvents:UIControlEventTouchDown];
     
     
     UIImage*nearHereImage = [UIImage imageNamed:@"AssetsCompassButton.png"];
     [nearHereButton setBackgroundImage:nearHereImage forState:UIControlStateNormal];
-    nearHereButton.frame = CGRectMake(181.0, 33.0, 50.0, 50.0);
+    nearHereButton.frame = CGRectMake(158.0, 33.0, 50.0, 50.0);
     [self.view addSubview:nearHereButton];
     
     
     /*UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [searchModeButton addTarget:self
-                       action:@selector(goSearchMode:)
-             forControlEvents:UIControlEventTouchDown];*/
+     [searchModeButton addTarget:self
+     action:@selector(goSearchMode:)
+     forControlEvents:UIControlEventTouchDown];*/
     
-    UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [searchModeButton addTarget:self
-                         action:@selector(removeAllFavorites:)
-               forControlEvents:UIControlEventTouchDown];
+    /*UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+     [searchModeButton addTarget:self
+     action:@selector(removeAllFavorites:)
+     forControlEvents:UIControlEventTouchDown];
+     
+     
+     UIImage*searchModeImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
+     [searchModeButton setBackgroundImage:searchModeImage forState:UIControlStateNormal];
+     searchModeButton.frame = CGRectMake(249.0, 33.0, 50.0, 50.0);
+     [self.view addSubview:searchModeButton];*/
     
     
-    UIImage*searchModeImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
-    [searchModeButton setBackgroundImage:searchModeImage forState:UIControlStateNormal];
-    searchModeButton.frame = CGRectMake(249.0, 33.0, 50.0, 50.0);
-    [self.view addSubview:searchModeButton];
     
     
-    
-
     
     UIButton *searchHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [searchHereButton addTarget:self
-               action:@selector(goSearch:)
-     forControlEvents:UIControlEventTouchDown];
+                         action:@selector(goSearch:)
+               forControlEvents:UIControlEventTouchDown];
     
     
-    UIImage*searchHereImage = [UIImage imageNamed:@"AssetsDefaultButton.png"];
+    UIImage*searchHereImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
     [searchHereButton setBackgroundImage:searchHereImage forState:UIControlStateNormal];
-    searchHereButton.frame = CGRectMake(520.0, 35.0, 40.0, 40.0);
+    searchHereButton.frame = CGRectMake(430.0, 35.0, 50.0, 50.0);
     [self.view addSubview:searchHereButton];
+
+    
     
     
    /* UIButton *searchVariationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -384,44 +380,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 {
     [super viewDidAppear:animated];
     
-    //searchHereField.text = @"killme";
     
-   // NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distance" ascending:YES];
-   // NSArray *sortDescriptorsArray = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-    
-    
-    //NSFetchRequest*fetchAgainRequest = [[NSFetchRequest alloc]init];
-    
-    //[fetchAgainRequest setSortDescriptors:sortDescriptorsArray];
-    
-    //add Entity to Read
-   /* NSEntityDescription*entity=
-    [NSEntityDescription
-     entityForName:@"LogoSearch"
-     inManagedObjectContext:self.managedObjectContext];
-    
-    //add Entity to Read
-    [fetchAgainRequest setEntity:entity];
-    
-    NSError*requestError = nil;
-    NSArray*favoritesArray =
-    [self.managedObjectContext executeFetchRequest:fetchAgainRequest
-                                             error:&requestError];
-    
-     NSLog(@"favoritesArray %@",favoritesArray);*/
-       
-    
-    // Fetch the devices from persistent data store
-    /*NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
-    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
-    
-    NSLog(@"favoritesArray %@",_favoritesArray);
-   // NSLog(@"logoSearch %@",logoSearch);
-    
-    [self.collectionView reloadData];*/
 }
 
 
@@ -447,21 +406,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 }
 
 
-- (void)startStandardUpdates
-{
-    // Create the location manager if this object does not
-    // already have one.
-    /*if (nil == locationManager)
-        locationManager = [[CLLocationManager alloc] init];
-    
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-    
-    // Set a movement threshold for new events.
-    locationManager.distanceFilter = 500; // meters
-    
-    [locationManager startUpdatingLocation];*/
-}
+
 
 -(IBAction)goFav:(id)sender{
     
@@ -476,9 +421,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
-   /* NSFetchRequest *fetchRequestMat = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
-    //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequestMat error:nil] mutableCopy];*/
+  
     
     
     

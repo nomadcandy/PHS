@@ -305,45 +305,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 {
     [super viewDidAppear:animated];
     
-    //searchHereField.text = @"killme";
-    
-   // NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distance" ascending:YES];
-   // NSArray *sortDescriptorsArray = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-    
-    
-    //NSFetchRequest*fetchAgainRequest = [[NSFetchRequest alloc]init];
-    
-    //[fetchAgainRequest setSortDescriptors:sortDescriptorsArray];
-    
-    //add Entity to Read
-   /* NSEntityDescription*entity=
-    [NSEntityDescription
-     entityForName:@"LogoSearch"
-     inManagedObjectContext:self.managedObjectContext];
-    
-    //add Entity to Read
-    [fetchAgainRequest setEntity:entity];
-    
-    NSError*requestError = nil;
-    NSArray*favoritesArray =
-    [self.managedObjectContext executeFetchRequest:fetchAgainRequest
-                                             error:&requestError];
-    
-     NSLog(@"favoritesArray %@",favoritesArray);*/
-       
-    
-    // Fetch the devices from persistent data store
-    /*NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
-    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
-    
-    NSLog(@"favoritesArray %@",_favoritesArray);
-   // NSLog(@"logoSearch %@",logoSearch);
-    
-    [self.collectionView reloadData];*/
-}
+   }
 
 
 - (id)initWithLogo:(Logo *)logo
@@ -368,21 +330,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 
-- (void)startStandardUpdates
-{
-    // Create the location manager if this object does not
-    // already have one.
-    /*if (nil == locationManager)
-        locationManager = [[CLLocationManager alloc] init];
-    
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
-    
-    // Set a movement threshold for new events.
-    locationManager.distanceFilter = 500; // meters
-    
-    [locationManager startUpdatingLocation];*/
-}
+
 
 -(IBAction)goFav:(id)sender{
     
@@ -589,25 +537,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 
--(IBAction)goSearchMode:(id)sender{
-    
-    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
-    //request.region = regionToSearchIn;
-    //request.region = 500;
-    request.naturalLanguageQuery = @"restaurants"; // or business name
-    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
-    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
-        // do something with the results / error
-    }];
-    
-}
 
 
--(IBAction)goLocation:(id)sender{
-    
-    
-    
-}
+
 
 
 -(IBAction)goSearch:(id)sender{
@@ -699,14 +631,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matCount= matNameArray.count;
             
         
-            //adding an array to COREDATA
-            //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-            /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-             NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-             
-             for (NSString *anArtworkName in logoSearchs) {
-             NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-             NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
+        
             
                       
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
@@ -714,7 +639,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
-            //NSLog(@"idString %@",idString);
             matColorArray=[searchMatArray valueForKey:@"Color"];
             matBGColorArray=[searchMatArray valueForKey:@"BGColor"];
 
@@ -725,155 +649,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }];
     
-    //declare variable and return count of images returned
-    int jsonLogoCount;
-    jsonLogoCount = artworkNameArray.count;
     
-    NSLog(@"jsonLogoCount %d",jsonLogoCount);
-    /*for (int i = 0;i<jsonLogoCount;i++){
-     
-     
-     
-     NSDictionary*logosNameDictionary  = [artworkNameArray objectAtIndex:i];
-     
-     NSLog(@"logosDictionary %@",logosNameDictionary);
-     
-     }*/
-    
-    //NSManagedObject *myManagedObject;
-    /*for (int i=0;i<jsonLogoCount;i++) {
-     
-     artworkNameAddString =[artworkNameArray objectAtIndex:i];
-     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-     
-     //calls method to add the string to CoreData
-     //[self insertNewManagedObject:[artworkNameArray objectAtIndex:i]];
-     [self insertNewManagedObject:artworkNameAddString];
-     
-     }*/
-    
-    //ADD TO CORE DATA?
-    /*for (int i=0;i<jsonLogoCount;i++) {
-        //delete existing data
-        
-                
-        // loops to add values
-        artworkNameAddString =[artworkNameArray objectAtIndex:i];
-        NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-        
-        artworkFullImageString =[artworkFullImageArray objectAtIndex:i];
-        NSLog(@"artworkFullImageString = %@", artworkFullImageString );
-        
-        NSManagedObjectContext *context = [self managedObjectContext];
-        
-        // Create a new managed object
-        NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
-        
-        // Delete object from database
-        //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
-        
-        [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
-        [newLogoSearch setValue:self.artworkFullImageString forKey:@"fullImageURL"];
-        //[newDevice setValue:self.companyTextField.text forKey:@"company"];
-        
-        NSError *error = nil;
-        // Save the object to persistent store
-        if (![context save:&error]) {
-            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-        }
-        //Fetch Data entered to test
-        NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
-        self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-        //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-        
-        
-        NSLog(@"favoritesArray %@",favoritesArray);
-        
-        
-    }*/
-    //Search Mats
-    
-    /*NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?VariationOf=%@&Orderby=match", searchYeahString];
-    
-    
-    NSURL *urlSearchMats = [[NSURL alloc] initWithString:urlSearchMatString];
-    
-    NSLog(@"URLMats: %@",urlSearchMats);
-    NSError *errorMats = nil;
-    NSData *dataMats = [NSData dataWithContentsOfURL:urlSearchMats];
-    
-    
-    
-    //parse Array from web
-    NSArray *searchMatArray = [NSJSONSerialization
-                                JSONObjectWithData:dataMats
-                                options:NSJSONReadingAllowFragments
-                                error: &error];
-    
-    
-    
-    NSLog(@"%@SearchMatArray",searchMatArray);
-    
-    
-    
-    [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-        
-        NSLog(@"%@", object);
-        NSLog(@"searchMatArray %@",searchMatArray);
-        
-        
-        matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-        
-        
-        NSLog(@"matNameArray: %@", matNameArray);
-        
-        
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        
-        
-        
-        
-        /*matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-        NSLog(@"artworkSizeArray %@",matSizeArray);
-        
-        
-        
-        
-        matFormatArray = [searchMatArray valueForKey:@"Format"];
-        NSLog(@"artworkFormatString %@",artworkFormatArray);
-        
-        
-        
-        
-        matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",artworkFullImageArray);
-        
-        
-        matIconArray = [searchLogoArray valueForKey:@"IconURL"];
-        
-        
-        matIDArray = [searchLogoArray valueForKey:@"ProductID"];
-        //NSLog(@"idString %@",idString);
-        
-        [self.collectionView reloadData];*/
-        
-        
-  /*  }];
-    
-    //declare variable and return count of images returned
-    int jsonMatCount;
-    jsonMatCount = matNameArray.count;
-    
-    NSLog(@"jsonLogoCount %d",jsonMatCount);*/
 
     
     
@@ -881,206 +657,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
 
-
--(IBAction)goSearchVariation:(id)sender{
-    
-    NSString*searchString= searchField.text;
-    NSLog(@"searchCellString %@",searchString);
-    
-    NSString*searchYeahString= searchHereField.text;
-    NSLog(@"searchString %@",searchYeahString);
-    
-    //NSString*searchString=_logoHeaderCell.searchField.text;
-    //searchString= searchHereField.text;
-    //NSString*searchString= _searchField.text;
-    //NSLog(@"searchString %@",searchString);
-    //NSString*passwordString= passwordField.text;
-    
-    //loginView.hidden =YES;
-    //loginField.hidden=YES;
-    //passwordField.hidden =YES;
-    //goButton.hidden =YES;
-    
-    
-    
-    
-    
-    
-    /*BOOL error = NO;
-     
-     if(loginField.text == nil || [loginField.text length] == 0)
-     {
-     error = YES;
-     //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }
-     
-     if(passwordField.text == nil || [passwordField.text length] == 0)
-     {
-     error = YES;
-     //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }*/
-    
-    
-    
-    /*if(error)
-     {
-     [self showError];
-     return;
-     }*/
-    
-    
-    
-    
-    
-    
-    
-    
-    NSString*urlSearchString=[NSString stringWithFormat:@" http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchYeahString];
-
-    
-    
-    
-    
-    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
-    NSLog(@"URLLOGIN: %@",urlSearch);
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
-        
-    //parse Array from web
-    NSArray *searchLogoArray = [NSJSONSerialization
-                                JSONObjectWithData:data
-                                options:NSJSONReadingAllowFragments
-                                error: &error];
-    
-    
-    
-    NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
-    
-    
-    
-    [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-        
-        NSLog(@"%@", object);
-        NSLog(@"searchLogoArray %@",searchLogoArray);
-        
-        
-        artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-        NSLog(@"artworkSizeArray %@",artworkSizeArray);
-        
-        
-        
-        
-        artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        NSLog(@"artworkFormatString %@",artworkFormatArray);
-        
-        
-        
-        
-        artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",artworkFullImageArray);
-        
-        
-        artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
-        
-        
-        artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
-        
-        
-        artworkColorArray = [searchLogoArray valueForKey:@"Color"];
-        //NSLog(@"idString %@",idString);
-        
-        [self.collectionView reloadData];
-        
-        
-    }];
-    
-    //declare variable and return count of images returned
-    /*int jsonLogoCount;
-    jsonLogoCount = artworkNameArray.count;
-    
-    NSLog(@"jsonLogoCount %d",jsonLogoCount);*/
-    
-    
-   
-    
-    /*for (int i = 0;i<jsonLogoCount;i++){
-     
-     
-     
-     NSDictionary*logosNameDictionary  = [artworkNameArray objectAtIndex:i];
-     
-     NSLog(@"logosDictionary %@",logosNameDictionary);
-     
-     }*/
-    
-    //NSManagedObject *myManagedObject;
-    /*for (int i=0;i<jsonLogoCount;i++) {
-     
-     artworkNameAddString =[artworkNameArray objectAtIndex:i];
-     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-     
-     //calls method to add the string to CoreData
-     //[self insertNewManagedObject:[artworkNameArray objectAtIndex:i]];
-     [self insertNewManagedObject:artworkNameAddString];
-     
-     }*/
-    
-    //ADD TO CORE DATA?
-    /*for (int i=0;i<jsonLogoCount;i++) {
-     //delete existing data
-     
-     
-     // loops to add values
-     artworkNameAddString =[artworkNameArray objectAtIndex:i];
-     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-     
-     artworkFullImageString =[artworkFullImageArray objectAtIndex:i];
-     NSLog(@"artworkFullImageString = %@", artworkFullImageString );
-     
-     NSManagedObjectContext *context = [self managedObjectContext];
-     
-     // Create a new managed object
-     NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
-     
-     // Delete object from database
-     //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
-     
-     [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
-     [newLogoSearch setValue:self.artworkFullImageString forKey:@"fullImageURL"];
-     //[newDevice setValue:self.companyTextField.text forKey:@"company"];
-     
-     NSError *error = nil;
-     // Save the object to persistent store
-     if (![context save:&error]) {
-     NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-     }
-     //Fetch Data entered to test
-     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
-     self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-     
-     
-     NSLog(@"favoritesArray %@",favoritesArray);
-     
-     
-     }*/
-    
-    
-    
-}
 
 
 
@@ -1115,8 +691,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-    //NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-   
+    
     
     
     NSManagedObjectContext *context = [self managedObjectContext];
