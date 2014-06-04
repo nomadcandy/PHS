@@ -1288,12 +1288,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
     artworkColorAddFavString =[artworkColorArray objectAtIndex:indexPathSend];
     artworkSizeAddFavString =[artworkSizeArray objectAtIndex:indexPathSend];
+    artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+    artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
     
     NSLog(@"urlFavString %@",urlFavString);
     NSLog(@"urlFavString %@",artworkNameAddFavString);
     
-    artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
-    artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+    
    /* NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
     
     
