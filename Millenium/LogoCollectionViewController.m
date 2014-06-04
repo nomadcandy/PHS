@@ -1199,7 +1199,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     
-   
+    if (matCompanyAddFavString==NULL)
+    {
+        
+        matCompanyAddFavString= @"No Company Name Is Available";
+        
+    }
     
     if (matSellerAddFavString==NULL)
     {
@@ -1209,13 +1214,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     
-    if (matCompanyAddFavString==NULL)
-    {
-        
-        matCompanyAddFavString= @"No Company Name Is Available";
-        
-    }
-    
     if (matIDAddFavString==NULL)
     {
         
@@ -1223,14 +1221,33 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
 
+    if (matLocationIDAddFavString==NULL)
+    {
+        
+        matLocationIDAddFavString= @"No Location Provided";
+        
+    }
     
+    if (matColorAddFavString==NULL)
+    {
+        
+        matColorAddFavString= @"No Colors are provided";
+        
+    }
     
+    if (matBGColorAddFavString==NULL)
+    {
+        
+        matBGColorAddFavString= @"No Background Color is provided";
+        
+    }
     
-   
-    
-    
-
-
+    if (matSizeAddFavString==NULL)
+    {
+        
+        matSizeAddFavString= @"4' x 6'";
+        
+    }
 
     
     NSLog(@"urlFavString %@",matUrlAddFavString);
@@ -1240,8 +1257,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
      NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
     
     
-    
-    
     NSManagedObjectContext *context = [self managedObjectContext];
     
     // Create a new managed object
@@ -1249,18 +1264,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
     [newMatFavorite setValue:self.matNameAddFavString forKey:@"artworkName"];
-    
     [newMatFavorite setValue:self.matCompanyAddFavString forKey:@"company"];
     [newMatFavorite setValue:self.matSellerAddFavString forKey:@"seller"];
     [newMatFavorite setValue:self.matIDAddFavString forKey:@"productID"];
     [newMatFavorite setValue:self.matLocationIDAddFavString forKey:@"locationID"];
-    
     [newMatFavorite setValue:self.matColorAddFavString forKey:@"color"];
     [newMatFavorite setValue:self.matBGColorAddFavString forKey:@"bgColor"];
     [newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];
-    
-    
-    
     
     
     
