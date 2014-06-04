@@ -152,6 +152,15 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     [DIYMenu dismiss];
     
     
+    if (locationIDString==nil) {
+        
+        
+        locationIDString = [[NSUserDefaults standardUserDefaults]
+                            stringForKey:@"locationID"];
+        
+    }
+
+    
     searchingString=@"searchingFavString";
     //TODO load into CoreData anything that is in Favorites.
     
@@ -650,6 +659,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
     }];
     
+    
+    [self performSegueWithIdentifier:@"collectionPickedSegue" sender:self];
     
     UIStoryboard *storyboard = self.storyboard;
     LogoCollectionViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
