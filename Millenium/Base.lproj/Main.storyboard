@@ -2080,7 +2080,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1349" y="-3327"/>
+            <point key="canvasLocation" x="-3541" y="-4358"/>
         </scene>
         <!--View Controller - LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -3579,10 +3579,13 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <segue destination="l8u-Ww-K06" kind="modal" identifier="collectionPickedSegue" id="7Yo-1I-ggJ"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLp-9A-bgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2371" y="-4358"/>
+            <point key="canvasLocation" x="-2231" y="-4358"/>
         </scene>
     </scenes>
     <resources>
@@ -3664,7 +3667,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gYW-Ou-qn0"/>
+        <segue reference="7Yo-1I-ggJ"/>
         <segue reference="SGM-ZV-0fv"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>

@@ -799,6 +799,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
     }];
         
+        [self performSegueWithIdentifier:@"collectionPickedSegue" sender:self];
+        
         UIStoryboard *storyboard = self.storyboard;
         LogoCollectionViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
         [self presentViewController:svc animated:YES completion:nil];
@@ -934,77 +936,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
     }];
     
-    //declare variable and return count of images returned
-    /*int jsonLogoCount;
-    jsonLogoCount = artworkNameArray.count;
-    
-    NSLog(@"jsonLogoCount %d",jsonLogoCount);*/
-    
-    
-   
-    
-    /*for (int i = 0;i<jsonLogoCount;i++){
-     
-     
-     
-     NSDictionary*logosNameDictionary  = [artworkNameArray objectAtIndex:i];
-     
-     NSLog(@"logosDictionary %@",logosNameDictionary);
-     
-     }*/
-    
-    //NSManagedObject *myManagedObject;
-    /*for (int i=0;i<jsonLogoCount;i++) {
-     
-     artworkNameAddString =[artworkNameArray objectAtIndex:i];
-     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-     
-     //calls method to add the string to CoreData
-     //[self insertNewManagedObject:[artworkNameArray objectAtIndex:i]];
-     [self insertNewManagedObject:artworkNameAddString];
-     
-     }*/
-    
-    //ADD TO CORE DATA?
-    /*for (int i=0;i<jsonLogoCount;i++) {
-     //delete existing data
-     
-     
-     // loops to add values
-     artworkNameAddString =[artworkNameArray objectAtIndex:i];
-     NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-     
-     artworkFullImageString =[artworkFullImageArray objectAtIndex:i];
-     NSLog(@"artworkFullImageString = %@", artworkFullImageString );
-     
-     NSManagedObjectContext *context = [self managedObjectContext];
-     
-     // Create a new managed object
-     NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
-     
-     // Delete object from database
-     //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
-     
-     [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
-     [newLogoSearch setValue:self.artworkFullImageString forKey:@"fullImageURL"];
-     //[newDevice setValue:self.companyTextField.text forKey:@"company"];
-     
-     NSError *error = nil;
-     // Save the object to persistent store
-     if (![context save:&error]) {
-     NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-     }
-     //Fetch Data entered to test
-     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
-     self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-     
-     
-     NSLog(@"favoritesArray %@",favoritesArray);
-     
-     
-     }*/
     
     
     
