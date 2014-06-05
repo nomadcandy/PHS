@@ -225,6 +225,8 @@
 @property (nonatomic, copy) NSMutableArray *matColorArray;
 @property (nonatomic, copy) NSMutableArray *matBGColorArray;
 
+@property (nonatomic, strong) NSMutableArray *favoritesMatArray;
+
 
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;

@@ -219,18 +219,8 @@
     UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
     //UIImage *image = [[UIImage alloc] init];
     NSLog(@"%f,%f",image.size.width,image.size.height);
-    // Let's save the file into Document folder.
-    // You can also change this to your desktop for testing. (e.g. /Users/kiichi/Desktop/)
+    
     chosenImageView.image=image;
-    
-    //[logoPicButton setBackgroundImage:image forState:UIControlStateNormal];
-    
-    //UIImage*croppedLogoImage = chosenImageView.image;
-    
-    //rewrite image to crop it correctly
-   // UIGraphicsBeginImageContext(croppedLogoImage.size);
-   // [croppedLogoImage drawAtPoint:CGPointZero];
-    
     UIGraphicsBeginImageContext(image.size);
     [image drawAtPoint:CGPointZero];
     
@@ -241,20 +231,8 @@
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
     
-    /*NSString *deskTopDir = @"/Users/jamisuebecker/Desktop";
-    //NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    // If you go to the folder below, you will find those pictures
-    NSLog(@"%@",deskTopDir);
-    NSLog(@"saving png");
-    NSString *pngFilePath = [NSString stringWithFormat:@"%@/jpg.png",deskTopDir];
-    NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(image)];
-    [data1 writeToFile:pngFilePath atomically:YES];
-    NSLog(@"saving jpeg");
-    NSString *jpegFilePath = [NSString stringWithFormat:@"%@/jpg.jpeg",deskTopDir];
-    NSData *data2 = [NSData dataWithData:UIImageJPEGRepresentation(image, 1.0f)];
-    [data2 writeToFile:jpegFilePath atomically:YES];
-    NSLog(@"saving image done");*/
-    //[image release];
+    
+   
     
 
     
@@ -431,8 +409,7 @@
     AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model=NO;
     
-   // [self performSegueWithIdentifier:@"imagePickedSegue" sender:self];
-    
+   
     selectedImage = chosenImage;
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
@@ -644,27 +621,11 @@
         
         
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-        NSLog(@"artworkSizeArray %@",artworkSizeArray);
-        
-        
-        
-        
         artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        NSLog(@"artworkFormatString %@",artworkFormatArray);
-        
-        
-        
-        
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",artworkFullImageArray);
-        
-        
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
-        
-        
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
-        //NSLog(@"idString %@",idString);
-        
+               
         artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
         
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];

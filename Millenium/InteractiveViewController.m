@@ -96,6 +96,8 @@
 
 @synthesize matColorNumberArray;
 
+@synthesize favoritesMatArray;
+
 @synthesize matBGTextColorString;
 
 @synthesize matUseBGColorString;
@@ -137,6 +139,18 @@
     }
     return self;
 }
+
+//gets managedObjectContext from the appDelegate
+- (NSManagedObjectContext *)managedObjectContext
+{
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
 
 //Not Used
 /*-(void)ViewDidAppear
@@ -1261,6 +1275,7 @@
         
         UIImage*matBGColorImage = [UIImage imageNamed:matUseBGColorString];
         [bgColorButton setBackgroundImage:matBGColorImage forState:UIControlStateNormal];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setTitle:matBGTextColorString forState:UIControlStateNormal];
 
         
@@ -1283,6 +1298,7 @@
             
             NSString*firstColorNoString = [matColorNumberArray objectAtIndex:0];
             [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
+            [_logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             [_logoColorButton1 setNeedsDisplay];
         }
         
@@ -1291,7 +1307,7 @@
             NSString*secondColorString = [matColorArray objectAtIndex:1];
             UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
             [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
-            
+            [_logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
             [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
             
@@ -1302,7 +1318,7 @@
             NSString*thirdColorString=[matColorArray objectAtIndex:2];
             UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
             [_logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
-            
+            [_logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*thirdColorNoString = [matColorNumberArray objectAtIndex:2];
             [_logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
             
@@ -1314,6 +1330,7 @@
             NSString*fourthColorString=[matColorArray objectAtIndex:3];
             UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
             [_logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
+            [_logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             
             NSString*fourthColorNoString = [matColorNumberArray objectAtIndex:3];
             [_logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
@@ -1326,7 +1343,7 @@
             NSString*fifthColorString=[matColorArray objectAtIndex:4];
             UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
             [_logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
-            
+             [_logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*fifthColorNoString = [matColorNumberArray objectAtIndex:4];
             [_logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
             
@@ -1339,7 +1356,7 @@
             NSString*sixthColorString=[matColorArray objectAtIndex:5];
             UIImage*sixthColorImage = [UIImage imageNamed:sixthColorString];
             [_logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
-            
+            [_logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             
             NSString*sixthColorNoString = [matColorNumberArray objectAtIndex:5];
             [_logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
@@ -1352,7 +1369,7 @@
             NSString*seventhColorString=[matColorArray objectAtIndex:6];
             UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];
             [_logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
-            
+            [_logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*seventhColorNoString = [matColorNumberArray objectAtIndex:6];
             [_logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
             
@@ -1364,7 +1381,7 @@
             NSString*eighthColorString=[matColorArray objectAtIndex:7];
             UIImage*eighthColorImage = [UIImage imageNamed:eighthColorString];
             [_logoColorButton8 setBackgroundImage:eighthColorImage forState:UIControlStateNormal];
-            
+             [_logoColorButton8.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*eighthColorNoString = [matColorNumberArray objectAtIndex:7];
             [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
             
@@ -1851,6 +1868,7 @@
                   
                     NSString*firstColorNoString = [logoColorNumberArray objectAtIndex:0];
                    [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
+                   [_logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
                   
                   [_logoColorButton1 setNeedsDisplay];
                 }
@@ -1863,6 +1881,7 @@
                    
                    NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
                    [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
+                   [_logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
                 
                 }
             
@@ -1874,6 +1893,7 @@
                  
                  NSString*thirdColorNoString = [logoColorNumberArray objectAtIndex:2];
                  [_logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
+                [_logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
                  
             
              }
@@ -1886,6 +1906,7 @@
                     
                     NSString*fourthColorNoString = [logoColorNumberArray objectAtIndex:3];
                     [_logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
+                    [_logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
                     
                     
                 }
@@ -1898,6 +1919,7 @@
                     
                     NSString*fifthColorNoString = [logoColorNumberArray objectAtIndex:4];
                     [_logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
+                    [_logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
 
                     
                     
@@ -1912,6 +1934,7 @@
                     
                     NSString*sixthColorNoString = [logoColorNumberArray objectAtIndex:5];
                     [_logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
+                    [_logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
 
                     
                 }
@@ -1924,6 +1947,7 @@
                     
                     NSString*seventhColorNoString = [logoColorNumberArray objectAtIndex:6];
                     [_logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
+                    [_logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
                     
                     
                 }
@@ -1935,6 +1959,7 @@
                     [_logoColorButton8 setBackgroundImage:eighthColorImage forState:UIControlStateNormal];
                     
                     NSString*eighthColorNoString = [logoColorNumberArray objectAtIndex:7];
+                    [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
                     [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
                     
                 }
@@ -3030,6 +3055,147 @@ else
    
     
 }
+
+
+-(IBAction)addMatFavorite:(id)sender{
+    
+    
+    //NSLog(@"indexPathSend %d",indexPathSend);
+    
+    //matUrlAddFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
+    NSString*matNameAddFavString =nameField.text;
+    NSString*matSellerAddFavString =sellerField.text;
+    NSString*matCompanyAddFavString =companyField.text;
+    NSString*matIDAddFavString =numberField.text;
+    NSString*matLocationIDAddFavString =locationIDString;
+    
+    
+    NSString*matColorAddFavString =_matColorString;
+    NSString*matBGColorAddFavString =matBGColorString;
+    NSString*matSizeAddFavString =matSizeString;
+    
+    
+    
+    
+    
+    
+   /* if (matUrlAddFavString==NULL)
+    {
+        
+        matUrlAddFavString= @"No Image Is Available";
+        
+    }*/
+    
+    if (matNameAddFavString==NULL)
+    {
+        
+        matNameAddFavString= @"The Artwork has no name";
+        
+    }
+    
+    
+    if (matCompanyAddFavString==NULL)
+    {
+        
+        matCompanyAddFavString= @"No Company Name Is Available";
+        
+    }
+    
+    if (matSellerAddFavString==NULL)
+    {
+        
+        matSellerAddFavString= @"Sales Person Unknown";
+        
+    }
+    
+    
+    if (matIDAddFavString==NULL)
+    {
+        
+        matIDAddFavString= @"No ID Provided";
+        
+    }
+    
+    if (matLocationIDAddFavString==NULL)
+    {
+        
+        matLocationIDAddFavString= @"No Location Provided";
+        
+    }
+    
+    if (matColorAddFavString==NULL)
+    {
+        
+        matColorAddFavString= @"No Colors are provided";
+        
+    }
+    
+    if (matBGColorAddFavString==NULL)
+    {
+        
+        matBGColorAddFavString= @"No Background Color is provided";
+        
+    }
+    
+    if (matSizeAddFavString==NULL)
+    {
+        
+        matSizeAddFavString= @"4' x 6'";
+        
+    }
+    
+    
+    //NSLog(@"urlFavString %@",matUrlAddFavString);
+    //NSLog(@"urlFavString %@",matNameAddFavString);
+    /*NSString*artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+     NSString*artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+     NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
+    
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
+    
+    //[newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
+    /*[newMatFavorite setValue:self.matNameAddFavString forKey:@"artworkName"];
+    [newMatFavorite setValue:self.matCompanyAddFavString forKey:@"company"];
+    [newMatFavorite setValue:self.matSellerAddFavString forKey:@"seller"];
+    [newMatFavorite setValue:self.matIDAddFavString forKey:@"productID"];
+    [newMatFavorite setValue:self.matLocationIDAddFavString forKey:@"locationID"];
+    [newMatFavorite setValue:self.matColorAddFavString forKey:@"color"];
+    [newMatFavorite setValue:self.matBGColorAddFavString forKey:@"bgColor"];*/
+    //[newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];
+    
+    
+    //[newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
+    [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
+    [newMatFavorite setValue:companyField.text forKey:@"company"];
+    [newMatFavorite setValue:sellerField.text forKey:@"seller"];
+    [newMatFavorite setValue:numberField.text forKey:@"productID"];
+    [newMatFavorite setValue:locationIDString forKey:@"locationID"];
+    [newMatFavorite setValue:_matColorString forKey:@"color"];
+    [newMatFavorite setValue:matUseBGColorString forKey:@"bgColor"];
+    [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
+    
+    
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    //Fetch Data entered to test
+   NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    NSLog(@"favoritesMatArray %@",favoritesMatArray);
+    
+}
+
 
 -(IBAction)addNote:(id)sender{
     
