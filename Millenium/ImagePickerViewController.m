@@ -223,13 +223,17 @@
     // You can also change this to your desktop for testing. (e.g. /Users/kiichi/Desktop/)
     chosenImageView.image=image;
     
-    [logoPicButton setBackgroundImage:image forState:UIControlStateNormal];
+    //[logoPicButton setBackgroundImage:image forState:UIControlStateNormal];
     
-    UIImage*croppedLogoImage = chosenImageView.image;
+    //UIImage*croppedLogoImage = chosenImageView.image;
     
     //rewrite image to crop it correctly
-    UIGraphicsBeginImageContext(croppedLogoImage.size);
-    [croppedLogoImage drawAtPoint:CGPointZero];
+   // UIGraphicsBeginImageContext(croppedLogoImage.size);
+   // [croppedLogoImage drawAtPoint:CGPointZero];
+    
+    UIGraphicsBeginImageContext(image.size);
+    [image drawAtPoint:CGPointZero];
+    
     UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
