@@ -205,7 +205,59 @@
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
 }
+//crashing here supposed to save to photos
 -(void) handleLongPress:(UITapGestureRecognizer*) sender{
+    
+    NSURL*url = [googleWebView.request URL];
+    UITextField*urlField;
+    urlField.text = [url absoluteString];
+    
+    //url = [googleWebView request:URL];
+    NSLog(@"url recieved: %@", url);
+    NSLog(@"Downloading...");
+    // Get an image from the URL below
+    UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
+    //UIImage *image = [[UIImage alloc] init];
+    NSLog(@"%f,%f",image.size.width,image.size.height);
+    // Let's save the file into Document folder.
+    // You can also change this to your desktop for testing. (e.g. /Users/kiichi/Desktop/)
+    chosenImageView.image=image;
+    
+    [logoPicButton setBackgroundImage:image forState:UIControlStateNormal];
+    
+    UIImage*croppedLogoImage = chosenImageView.image;
+    
+    //rewrite image to crop it correctly
+    UIGraphicsBeginImageContext(croppedLogoImage.size);
+    [croppedLogoImage drawAtPoint:CGPointZero];
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
+    
+    /*NSString *deskTopDir = @"/Users/jamisuebecker/Desktop";
+    //NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    // If you go to the folder below, you will find those pictures
+    NSLog(@"%@",deskTopDir);
+    NSLog(@"saving png");
+    NSString *pngFilePath = [NSString stringWithFormat:@"%@/jpg.png",deskTopDir];
+    NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(image)];
+    [data1 writeToFile:pngFilePath atomically:YES];
+    NSLog(@"saving jpeg");
+    NSString *jpegFilePath = [NSString stringWithFormat:@"%@/jpg.jpeg",deskTopDir];
+    NSData *data2 = [NSData dataWithData:UIImageJPEGRepresentation(image, 1.0f)];
+    [data2 writeToFile:jpegFilePath atomically:YES];
+    NSLog(@"saving image done");*/
+    //[image release];
+    
+
+    
+}
+
+
+/*-(void) handleLongPress:(UITapGestureRecognizer*) sender{
     
     NSURL*url = [googleWebView.request URL];
     UITextField*urlField;
@@ -235,9 +287,10 @@
     NSLog(@"saving image done");
     //[image release];
     
-
     
-}
+    
+}*/
+
 
 /*- (void)handleLongPress:(UILongPressGestureRecognizer*)gestureRecognizer{
     if (gestureRecognizer.state == UIGestureRecognizerStateBegan){
@@ -1056,17 +1109,7 @@
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
-    
-    
-    
     chosenImageView.image = newImage;
-    
-    
-    
-   
-    
-    
-    
     NSLog(@"chosenImage %@",selectedImage);
     
     
@@ -1083,19 +1126,7 @@
     [chosenImageView setOpaque:NO];
     [chosenImageView setOpaque:NO];
     [chosenImageView setBackgroundColor:[UIColor clearColor]];
-    //[chosenImageView setBackgroundColor:[UIColor clearColor].CGColor];
     
-   //[chosenImageView renderInContext:ctx];
-
-    
-    /*[[[[globalSingleton paintingView] drawingView] layer] renderInContext:ctx];
-    
-    [[[globalSingleton paintingView] drawingView] setOpaque:NO];
-    [[[[globalSingleton paintingView] drawingView] layer] setOpaque:NO];
-    [[[globalSingleton paintingView] drawingView] setBackgroundColor:[UIColor clearColor]];
-    [[[[globalSingleton paintingView] drawingView] layer] setBackgroundColor:[UIColor clearColor].CGColor];
-    
-    [[[[globalSingleton paintingView] drawingView] layer] renderInContext:ctx];*/
     
     UIImage *image1 = UIGraphicsGetImageFromCurrentImageContext();
     

@@ -2341,7 +2341,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="huY-jg-CM5" userLabel="logoSelected">
-                                <rect key="frame" x="40" y="169" width="291" height="239"/>
+                                <rect key="frame" x="55" y="182" width="281" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
@@ -3667,8 +3667,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="7Yo-1I-ggJ"/>
+        <segue reference="qwZ-va-rdB"/>
+        <segue reference="WHu-6x-aPj"/>
         <segue reference="aYA-g1-hsh"/>
-        <segue reference="KLb-Iu-kB6"/>
     </inferredMetricsTieBreakers>
 </document>
