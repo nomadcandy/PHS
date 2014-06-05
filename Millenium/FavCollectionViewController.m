@@ -374,6 +374,13 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     cintasHomeButton.frame = CGRectMake(888.0, 20.0, 137.0, 60.0);
     [self.view addSubview:cintasHomeButton];
     
+    
+    UILabel*headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(894, 70, 200, 30)];
+    headerLabel.font = [UIFont fontWithName:@"Avenir-Light" size:24];
+    headerLabel.text = @"FAVORITES";
+    [self.view addSubview:headerLabel];
+
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
