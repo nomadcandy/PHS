@@ -32,8 +32,8 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselIndoor;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselIndoorOutdoor;
-@property (nonatomic, strong) IBOutlet iCarousel *carouselIndoorScraper;
-@property (nonatomic, strong) IBOutlet iCarousel *carouselUtilityMats;
+@property (nonatomic, strong) IBOutlet iCarousel *carouselScraperUtility;
+@property (nonatomic, strong) IBOutlet iCarousel *carouselFoodService;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselAntiFatigue;
 
 - (IBAction)pressedButton:(id)sender;

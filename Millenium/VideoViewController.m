@@ -19,8 +19,8 @@
 @synthesize carouselLogo;
 @synthesize carouselIndoor;
 @synthesize carouselIndoorOutdoor;
-@synthesize carouselIndoorScraper;
-@synthesize carouselUtilityMats;
+@synthesize carouselScraperUtility;
+@synthesize carouselFoodService;
 @synthesize carouselAntiFatigue;
 
 
@@ -44,10 +44,8 @@
     carouselIndoor.dataSource = nil;
     carouselIndoorOutdoor.delegate = nil;
     carouselIndoorOutdoor.dataSource = nil;
-    carouselIndoorScraper.delegate = nil;
-    carouselIndoorScraper.dataSource = nil;
-    carouselUtilityMats.delegate = nil;
-    carouselUtilityMats.dataSource = nil;
+    carouselScraperUtility.delegate = nil;
+    carouselFoodService.dataSource = nil;
     carouselAntiFatigue.delegate = nil;
     carouselAntiFatigue.dataSource = nil;
     
@@ -67,14 +65,15 @@
     carouselLogo.type= iCarouselTypeCoverFlow2;
     carouselIndoor.type = iCarouselTypeCoverFlow2;
     carouselIndoorOutdoor.type = iCarouselTypeCoverFlow2;
-    carouselIndoorScraper.type = iCarouselTypeCoverFlow2;
-    carouselUtilityMats.type = iCarouselTypeCoverFlow2;
+    carouselScraperUtility.type = iCarouselTypeCoverFlow2;
+    carouselFoodService.type = iCarouselTypeCoverFlow2;
     carouselAntiFatigue.type = iCarouselTypeCoverFlow2;
     
     carouselIndoor.hidden =YES;
     carouselIndoorOutdoor.hidden =YES;
-    carouselIndoorScraper.hidden =YES;
-    carouselUtilityMats.hidden =YES;
+    carouselIndoorOutdoor.hidden =YES;
+    carouselScraperUtility.hidden =YES;
+    carouselFoodService.hidden =YES;
     carouselAntiFatigue.hidden =YES;
     
     hideCarouselView.hidden =YES;
@@ -88,8 +87,8 @@
     self.carouselLogo = nil;
     self.carouselIndoor = nil;
     self.carouselIndoorOutdoor = nil;
-    self.carouselIndoorScraper = nil;
-    self.carouselUtilityMats = nil;
+    self.carouselScraperUtility = nil;
+    self.carouselFoodService = nil;
     self.carouselAntiFatigue = nil;
     
     
@@ -293,6 +292,18 @@
  
  }*/
 
+- (IBAction)indoorMats:(UIButton *)sender {
+    
+    carouselLogo.hidden =YES;
+    carouselIndoor.hidden =NO;
+    carouselIndoorOutdoor.hidden =YES;
+    carouselScraperUtility.hidden =YES;
+    carouselFoodService.hidden =YES;
+    carouselAntiFatigue.hidden =YES;
+    
+}
+
+
 
 - (IBAction)goMarketing:(UIButton *)sender {
     
@@ -318,10 +329,18 @@
        hideCarouselView.hidden=NO;
         hideGradCarouselView.hidden=NO;
     
-        //NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"WalkOffLogoMatMedium" ofType:@"m4v"];
-
-        NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"WalkOffLogoMatMobile" ofType:@"m4v"];
+    
+    
+        //NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"WalkOffLogoMatMobile" ofType:@"m4v"];
+        //NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
+    
+        NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
         NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
+
+    
+    
+       [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+
         
         _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
         _movieController.scalingMode = MPMovieScalingModeFill;

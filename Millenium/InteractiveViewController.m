@@ -3137,7 +3137,7 @@ else
         
         
     }
-    
+    //TODO FIX ALL THESE
     if ((long)sender.tag==128){
         
         //create an image
