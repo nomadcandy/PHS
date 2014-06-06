@@ -44,7 +44,7 @@
 
 @interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,UIGestureRecognizerDelegate,UITextFieldDelegate>{
     
-    
+    NSURLRequest * request;
         
     IBOutlet UIView *interactiveView;
     IBOutlet UIImageView *interactiveMatView;

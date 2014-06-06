@@ -18,6 +18,8 @@
 @implementation InteractiveViewController
 
 
+
+
 @synthesize locationIDString;
 
 @synthesize activityIndicator;

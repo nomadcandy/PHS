@@ -212,8 +212,64 @@
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
 }
+
+-(void) handleLongPress2:(UITapGestureRecognizer*) sender{
+
+    NSURL*urlRequest = [googleWebView.request URL];
+    NSLog(@"URL recieved: %@", urlRequest);
+            //NSLog(@"URL recieved: %@", urlRequest.URL);
+            NSLog(@"Downloading...");
+
+ // Get an image from the URL below
+ NSURLSession *session = [NSURLSession sharedSession];
+ NSURLRequest*urlRequestDownload;
+ NSURLSessionDataTask *downloadTask = [session dataTaskWithRequest:urlRequestDownload
+                                           completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                              
+                                              NSLog(@"...download completed.");
+                                              
+                                               UIImage *image = [[UIImage alloc] initWithData:data];
+                                               NSLog(@"%f,%f", image.size.width, image.size.height);
+                                              
+                                              // Set the image on the image view
+                                              
+                                              // This completion block will keep a strong reference to this image view until the
+                                              // download complete. This could be a problem if the image view is in a table view
+                                              // cell and the cell gets recycled through the usual dequeue process
+                                              
+                                               chosenImageView.image = image;
+                                              
+                                               // `image.size` should be changed to whatever CGSize / CGRect you want to scale the image to
+                                               UIGraphicsBeginImageContextWithOptions(image.size, NO, [[UIScreen mainScreen] scale]);
+                                               [image drawInRect:CGRectMake(0.0, 0.0, image.size.width, image.size.height)];
+                                              
+                                               UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+                                               UIGraphicsEndImageContext();
+                                              
+                                               // Get a file URL (file://) for saving the image to the app's Documents folder on
+                                              // disk. Similar to the path-style code that was here before, but Apple is
+                                               // encouraging using URLs as of 10.7 / iOS 5
+                                              
+                                              NSError *localFilesystemError = nil;
+                                               NSURL *imageResourceLocation = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
+                                                                                                                                      inDomain:NSUserDomainMask
+                                                                                                                                      appropriateForURL:nil
+                                                                                                                                      create:NO
+                                                                                                                                       error:&localFilesystemError];
+                                              
+                                              NSAssert(imageResourceLocation, @"Crashing the app because error finding the Documents folder:\n%@", localFilesystemError);
+                                              imageResourceLocation = [imageResourceLocation URLByAppendingPathComponent:@"logo-image.png"];
+                                              
+                                              NSData *resizedImageData = UIImagePNGRepresentation(newImg);
+                                              [resizedImageData writeToURL:imageResourceLocation atomically:YES];
+                                              }];
+                                        [downloadTask resume];
+
+}
+
+
 //crashing here supposed to save to photos
--(void) handleLongPress:(UITapGestureRecognizer*) sender{
+-(void) handleLongPress1:(UITapGestureRecognizer*) sender{
     
     
     
@@ -253,11 +309,57 @@
     [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
     
     
-   
-    
-
     
 }
+
+-(void) handleLongPress:(UITapGestureRecognizer*) sender{
+    
+    
+   // NSString *londonWeatherUrl =
+   // @"http://api.openweathermap.org/data/2.5/weather?q=London,uk";
+    
+    
+    //NSString *londonWeatherUrl =[googleWebView.request URL];
+    
+    NSURL*url = [googleWebView.request URL];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:
+                             url];
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *data,
+                                               NSError *connectionError) {
+                               // handle response
+                           }];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:url
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error) {
+                // handle response
+                
+            }] resume];
+    
+    imageDownloaded = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
+    //UIImage *image = [[UIImage alloc] init];
+    NSLog(@"%f,%f",imageDownloaded.size.width,imageDownloaded.size.height);
+    
+    chosenImageView.image=imageDownloaded;
+    UIGraphicsBeginImageContext(imageDownloaded.size);
+    [imageDownloaded drawAtPoint:CGPointZero];
+    
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
+    
+}
+
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse {
     return nil;

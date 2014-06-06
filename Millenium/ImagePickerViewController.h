@@ -16,6 +16,8 @@
 @interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,NSURLConnectionDelegate,NSURLConnectionDataDelegate, UIGestureRecognizerDelegate>
 {
     
+    //NSURLRequest*urlRequest;
+    
     AppDelegate *appdelegate;
     MyDraggableImage*MyDragRect;
     //UIImage *chosenImage;
