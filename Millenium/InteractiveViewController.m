@@ -2874,7 +2874,8 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Steel Blue_121.jpg"];
         [matBGLogoView setImage:myBGColor];
-        //matBGLogoView.contentMode = UIViewContentModeScaleAspectFill;
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        
         
         
         
@@ -2887,7 +2888,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
         [matBGLogoView setImage:myBGColor];
-        
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
     }
     
@@ -2896,6 +2897,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"White_140.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2905,6 +2907,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2914,6 +2917,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2923,6 +2927,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2932,6 +2937,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2941,6 +2947,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Orange_127.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2950,6 +2957,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Purple_105.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2958,6 +2966,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Red_112.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2967,6 +2976,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Gold_109.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2977,6 +2987,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Grey_115.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2986,6 +2997,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Light Blue_106.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -2995,6 +3007,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Navy_118.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3004,6 +3017,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Emerald Green_110.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3013,6 +3027,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Forest Green_117.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3022,6 +3037,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Cranberry_114.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3031,6 +3047,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Dark Gold_103.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3040,6 +3057,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Charcoal_101.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3049,6 +3067,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Chocolate_111.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3058,6 +3077,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Clay_126.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3067,6 +3087,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Black_108.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3076,6 +3097,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Brown_102.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3085,6 +3107,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Burgundy_100.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3094,6 +3117,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Aqaumarine_130.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3103,6 +3127,7 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Turquoise_104.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         
         
     }
@@ -3112,10 +3137,11 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Yellow_128.jpg"];
         [matBGLogoView setImage:myBGColor];
-        
+        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [self.bgColorButton reloadInputViews];
         
     }
-
+  [self.bgColorButton reloadInputViews];
   matBGLogoView.contentMode = UIViewContentModeScaleToFill;
 
 
