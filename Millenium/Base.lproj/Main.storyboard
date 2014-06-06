@@ -2773,6 +2773,15 @@
                                     <outlet property="delegate" destination="x2s-mf-Toe" id="YYd-8d-R9N"/>
                                 </connections>
                             </view>
+                            <view alpha="0.89999999999999991" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pz-ra-3Na" userLabel="CarIndoor" customClass="iCarousel">
+                                <rect key="frame" x="84" y="166" width="855" height="436"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="x2s-mf-Toe" id="ddQ-rT-AQw"/>
+                                    <outlet property="delegate" destination="x2s-mf-Toe" id="zz6-Sb-kit"/>
+                                </connections>
+                            </view>
                             <view tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pha-3x-9ff" userLabel="CarAntiFatigue" customClass="iCarousel">
                                 <rect key="frame" x="84" y="166" width="855" height="436"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2789,15 +2798,6 @@
                                 <connections>
                                     <outlet property="dataSource" destination="x2s-mf-Toe" id="yx7-7K-a34"/>
                                     <outlet property="delegate" destination="x2s-mf-Toe" id="fAa-DA-i6V"/>
-                                </connections>
-                            </view>
-                            <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pz-ra-3Na" userLabel="CarIndoor" customClass="iCarousel">
-                                <rect key="frame" x="84" y="166" width="855" height="436"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="x2s-mf-Toe" id="ddQ-rT-AQw"/>
-                                    <outlet property="delegate" destination="x2s-mf-Toe" id="zz6-Sb-kit"/>
                                 </connections>
                             </view>
                             <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2f-NE-kqV" userLabel="CarIndoorOutdoor" customClass="iCarousel">

@@ -70,7 +70,9 @@
     carouselFoodService.type = iCarouselTypeCoverFlow2;
     carouselAntiFatigue.type = iCarouselTypeCoverFlow2;
     
-    carouselIndoor.hidden =YES;
+    //carouselIndoor.hidden =NO;
+    [carouselLogo setAlpha:0.9f];
+    [carouselIndoor setAlpha:0.1f];
     carouselIndoorOutdoor.hidden =YES;
     carouselIndoorOutdoor.hidden =YES;
     carouselScraperUtility.hidden =YES;
@@ -198,7 +200,9 @@
 	//[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
     
     
-    if (carousel.tag==1)
+    //if (carousel.tag==1)
+        
+    if ([carousel isEqual:carouselLogo])
         
     {
 
@@ -300,7 +304,7 @@
     }
     
     
-    if (carousel.tag==2)
+    if ([carousel isEqual:carouselIndoor])
         
     {
         
@@ -311,7 +315,7 @@
             
             titleLabel.text = @"Golden Series";
             
-            UIImage *image = [UIImage imageNamed:@"LogoColorGuidelines.png"];
+            UIImage *image = [UIImage imageNamed:@"WebPadBig.png"];
             [button setTitle:[NSString stringWithFormat:@"Golden Series"] forState:UIControlStateNormal ];
             
             [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
@@ -711,12 +715,16 @@
 
 - (IBAction)indoorMats:(UIButton *)sender {
     
-    carouselLogo.hidden =YES;
-    carouselIndoor.hidden =NO;
-    carouselIndoorOutdoor.hidden =YES;
+    [carouselLogo setAlpha:0.1f];
+    [carouselIndoor setAlpha:1.0f];
+    //carouselLogo.hidden =YES;
+    //carouselIndoor.hidden =NO;
+    /*carouselIndoorOutdoor.hidden =YES;
     carouselScraperUtility.hidden =YES;
     carouselFoodService.hidden =YES;
-    carouselAntiFatigue.hidden =YES;
+    carouselAntiFatigue.hidden =YES;*/
+    
+    //[self.carouselIndoor reloadData];
     
 }
 
