@@ -111,6 +111,9 @@
 
 -(IBAction)goSearch:(id)sender;
 
+@property (nonatomic, copy) UIImage *imageDownloaded;
+
+
 @property (nonatomic, copy) NSMutableArray *artworkNameArray;
 @property (nonatomic, copy) NSMutableArray *artworkSizeArray;
 @property (nonatomic, copy) NSMutableArray *artworkFormatArray;
@@ -136,6 +139,8 @@
 @property (nonatomic, copy) NSMutableArray *matColorArray;
 @property (nonatomic, copy) NSMutableArray *matBGColorArray;
 
+//@property (nonatomic, assign) UIWebView *googleWebView;
+
 
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
@@ -146,6 +151,10 @@
 @property (nonatomic, retain) IBOutlet UITextField *nameField;
 @property (nonatomic, retain) IBOutlet UITextField *companyField;
 @property (nonatomic, retain) IBOutlet UITextField *numberField;
+
+@property (nonatomic, copy) NSString *interactiveHeaderString;
+
+
 
 @property (nonatomic, retain) NSString *sellerString;
 @property (nonatomic, retain) NSString *nameString;

@@ -14,6 +14,11 @@
 
 @implementation ImagePickerViewController
 //@synthesize chosenImage;
+
+@synthesize imageDownloaded;
+
+@synthesize interactiveHeaderString;
+
 @synthesize selectedImage;
 @synthesize chosenImageView;
 @synthesize logoPicButton;
@@ -78,6 +83,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
     
     UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     googleWebView.userInteractionEnabled = YES;
@@ -144,7 +151,7 @@
     
     chosenImageView.image = selectedImage;
     
-    NSString *strURL = @"http://www.google.com";
+    NSString *strURL = @"http://www.images.google.com";
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self->googleWebView loadRequest:urlRequest];
@@ -208,7 +215,21 @@
 //crashing here supposed to save to photos
 -(void) handleLongPress:(UITapGestureRecognizer*) sender{
     
+    
+    
+    
+    
     NSURL*url = [googleWebView.request URL];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url
+                                             cachePolicy:NSURLRequestReloadIgnoringCacheData
+                                         timeoutInterval:60.0];
+    
+    NSURLConnection *conn = [NSURLConnection connectionWithRequest:request
+                                                          delegate:self];
+
+    /*NSMutableURLRequest*request=[NSMutableURLRequest requestWithURL:url];
+    request.cachePolicy=NSURLRequestReloadIgnoringCacheData;*/
     UITextField*urlField;
     urlField.text = [url absoluteString];
     
@@ -216,13 +237,13 @@
     NSLog(@"url recieved: %@", url);
     NSLog(@"Downloading...");
     // Get an image from the URL below
-    UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
+    imageDownloaded = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
     //UIImage *image = [[UIImage alloc] init];
-    NSLog(@"%f,%f",image.size.width,image.size.height);
+    NSLog(@"%f,%f",imageDownloaded.size.width,imageDownloaded.size.height);
     
-    chosenImageView.image=image;
-    UIGraphicsBeginImageContext(image.size);
-    [image drawAtPoint:CGPointZero];
+    chosenImageView.image=imageDownloaded;
+    UIGraphicsBeginImageContext(imageDownloaded.size);
+    [imageDownloaded drawAtPoint:CGPointZero];
     
     UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -236,6 +257,10 @@
     
 
     
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse {
+    return nil;
 }
 
 
@@ -437,13 +462,17 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"imagePickedSegue"])
+    if ([segue.identifier isEqualToString:@"ImagePickedSegue"])
     
     {
         
-        InteractiveViewController *destViewController = segue.destinationViewController;
-        destViewController.selectedImage=chosenImageView.image;
+        InteractiveViewController *goingController = segue.destinationViewController;
+        goingController.selectedImage=chosenImageView.image;
         NSLog(@"chosenImage %@",chosenImageView.image);
+        goingController.interactiveHeaderString=@"Logo Picked";
+        goingController.logoColorString=@" ";
+        
+        
 
     }
     
@@ -1119,16 +1148,26 @@
 }
 
 - (IBAction)takePhoto:(UIButton *)sender {
+    
+    
+    
+        
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
+        
+    
  
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
- 
-    [self presentViewController:picker animated:YES completion:NULL];
+
  
  }
- 
+
+
+
+
  - (IBAction)selectPhoto:(UIButton *)sender {
      
      AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -1146,15 +1185,10 @@
 
 - (IBAction)goInteractive:(UIButton *)sender {
     
-    //NSLog(@"chosenImage %@",masked);
     
-    //UIImage*croppedImage=chosenImageView.image;
-    
-    /*NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];*/
-    //[UIImageJPEGRepresentation(CFBridgingRelease(masked), 1.0) writeToFile:imagePath atomically:YES];
+    interactiveHeaderString= @"Logo Picked";
     
     
-   //[UIImagePNGRepresentation(croppedImage) writeToFile:imagePath atomically:YES];
     
     UIStoryboard *storyboard = self.storyboard;
     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
@@ -1183,7 +1217,8 @@
         overlay1WebView.hidden= YES;
         editLogoButton.hidden =YES;
         editImageView.hidden = YES;
-        NSString *strURL = @"http://www.google.com";
+        NSString *strURL = @"http://www.images.google.com";
+        //NSString *strURL = @"http://www.google.com";
         NSURL *url = [NSURL URLWithString:strURL];
         NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
         [self->googleWebView loadRequest:urlRequest];
@@ -1196,7 +1231,8 @@
         overlay1WebView.hidden= YES;
         editLogoButton.hidden =YES;
         editImageView.hidden = YES;
-        NSString *strURL = @"http://www.google.com";
+        NSString *strURL = @"http://www.images.google.com";
+        //NSString *strURL = @"http://www.google.com";
         NSURL *url = [NSURL URLWithString:strURL];
         NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
         [self->googleWebView loadRequest:urlRequest];
@@ -1215,7 +1251,18 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    //self.imageDownloaded = nil;
+    //self.chosenImageView =nil;
+    //self->googleWebView =nil;
     // Dispose of any resources that can be recreated.
 }
+
+- (void)dealloc {
+    //self.imageDownloaded = nil;
+    //self.chosenImageView =nil;
+    //self->googleWebView =nil;
+}
+
 
 @end

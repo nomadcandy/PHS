@@ -299,6 +299,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     cintasHomeButton.frame = CGRectMake(888.0, 20.0, 137.0, 60.0);
     [self.view addSubview:cintasHomeButton];
     
+    UILabel*headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(932, 70, 200, 30)];
+    headerLabel.font = [UIFont fontWithName:@"Avenir-Light" size:24];
+    headerLabel.text = @"LOGOS";
+    [self.view addSubview:headerLabel];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -1472,7 +1477,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     matColorString =[matColorArray objectAtIndex:indexPathSend];
     matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
     NSLog(@"matBGColorString %@",matBGColorString);
-    interactiveHeaderString = @"Edit Mat";
+    //interactiveHeaderString = @"Edit Mat";
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
     

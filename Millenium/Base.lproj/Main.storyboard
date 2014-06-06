@@ -2472,6 +2472,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goInteractive:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="5hm-yr-COl"/>
+                                    <segue destination="EOd-lr-Xtf" kind="modal" identifier="ImagePickedSegue" id="9on-R8-RE4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTT-X6-Gq3">
@@ -2548,7 +2549,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="selectPhoto:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="O9S-cC-7Tq"/>
+                                    <action selector="takePhoto:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="fKO-tF-d7I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AEo-ei-o5J">
@@ -2666,7 +2667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYG-Qq-Z8L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="-797"/>
+            <point key="canvasLocation" x="-1729" y="-2881"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="ttx-go-Svj">
@@ -3657,8 +3658,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gYW-Ou-qn0"/>
-        <segue reference="WHu-6x-aPj"/>
+        <segue reference="qwZ-va-rdB"/>
+        <segue reference="9on-R8-RE4"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>

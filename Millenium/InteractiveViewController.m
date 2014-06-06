@@ -1287,6 +1287,31 @@
         NSLog(@"matColorCount %i",matColorCount);
         
         
+       /* if (0 == matColorCount){
+            
+            
+            UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
+            [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            
+            NSString*emptyString = @" ";
+            [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
+
+            
+                    }*/
+
+        
+        
         if (1 <= matColorCount){
             
             
@@ -1403,6 +1428,28 @@
     
     
     //create logo size
+    if ([interactiveHeaderString isEqualToString:@"Create Mat"]){
+        
+        UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
+        [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        
+        NSString*emptyString = @" ";
+        [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
+
+        
+        }
+    
     else{
         
         
@@ -1449,6 +1496,7 @@
         
             matBGLogoView.frame=myLogoMatRect;
             matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+            //UIViewContentModeScaleAspectFit
         
         }
         
@@ -1855,6 +1903,31 @@
         NSLog(@"logoColorCount %i",logoColorCount);
         
         
+        
+        if (0 == logoColorCount){
+            
+            
+            UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
+            [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+            
+            NSString*emptyString = @" ";
+            [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
+            [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
+            
+            
+        }
+      
+        
        
                     
               if (1 <= logoColorCount){
@@ -1966,45 +2039,7 @@
 
     
             
-   
-
-
-
-    
-        
-    
-    
-    
-   /* UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    logoPicButton.userInteractionEnabled = YES;
-    gestureRecognizer.minimumPressDuration = 0.3;
-    gestureRecognizer.delegate = self;
-    gestureRecognizer.numberOfTouchesRequired = 1;
-    [logoPicButton addGestureRecognizer:gestureRecognizer];*/
-    
-    
-   /* UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
-	[pinchRecognizer setDelegate:self];
-	[self.view addGestureRecognizer:pinchRecognizer];*/
-    //[self.textDecField addGestureRecognizer:pinchRecognizer];
-    
-    //nameField.text =nameString;
-    
-    
-
-
-
-
-
-
-    
-    
-    /*UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)] ;
-	[panRecognizer setMinimumNumberOfTouches:1];
-	[panRecognizer setMaximumNumberOfTouches:1];
-	[panRecognizer setDelegate:self];
-	[logoPicButton addGestureRecognizer:panRecognizer];*/
-    
+       
     matButton.hidden =NO;
     logoButton.hidden= NO;
     titleLabel.hidden =NO;
@@ -2014,11 +2049,7 @@
     
    
     
-    //configure carousel
-    /*carouselSize.type = iCarouselTypeCoverFlow2;
-    carouselColor.type = iCarouselTypeCoverFlow2;
-    carouselLogo.type = iCarouselTypeCustom;*/
-    
+        
    
         
     }
