@@ -2709,7 +2709,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N0-fy-10D">
-                                <rect key="frame" x="11" y="48" width="92" height="33"/>
+                                <rect key="frame" x="8" y="50" width="92" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Logo Mats">
@@ -2717,16 +2717,15 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0E-2p-TDl">
-                                <rect key="frame" x="136" y="46" width="92" height="36"/>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0E-2p-TDl">
+                                <rect key="frame" x="133" y="48" width="92" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Indoor Mats">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="indoorMats:" destination="x2s-mf-Toe" eventType="touchUpInside" id="QF3-sv-ayr"/>
+                                    <action selector="indoorMats:" destination="x2s-mf-Toe" eventType="touchUpInside" id="Sdd-xk-957"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIf-Vg-cPI">
@@ -2861,6 +2860,7 @@
                         <outlet property="carouselScraperUtility" destination="IkG-Eg-ogD" id="tIs-Q2-b4g"/>
                         <outlet property="hideCarouselView" destination="bXg-Cd-mDe" id="MLv-hf-36X"/>
                         <outlet property="hideGradCarouselView" destination="6Fn-gZ-AmF" id="LXY-M3-aPj"/>
+                        <outlet property="indoorButton" destination="k0E-2p-TDl" id="kUF-Cz-kzj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmM-R5-UNN" userLabel="First Responder" sceneMemberID="firstResponder"/>

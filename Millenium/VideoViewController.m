@@ -14,7 +14,8 @@
 
 @implementation VideoViewController
 
-
+@synthesize logoButton;
+@synthesize indoorButton;
 
 @synthesize carouselLogo;
 @synthesize carouselIndoor;
@@ -196,86 +197,502 @@
 	//set button label
 	//[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
     
-    if (index ==0)  {
+    
+    if (carousel.tag==1)
         
-        
-        
-        titleLabel.text = @"Walk-Off Logo Mat";
-        
-        UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
-        [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal ];
-        
-		[button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    {
 
-        button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
-        [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
-        [button setBackgroundImage:image forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
+    
+        if (index ==0)  {
+        
+        
+        
+            titleLabel.text = @"Walk-Off Logo Mat";
+        
+            UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
+            [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal ];
+        
+            [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
+        }
+    
+        if (index ==1){
+        
+            titleLabel.text = @"Water Guard Logo Inlay";
+            [button setTitle:[NSString stringWithFormat:@"Water Guard Logo Inlay"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"WaterGuardLogoInlay.png"];
+        
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(WaterGuardLogoInlay:) forControlEvents:UIControlEventTouchUpInside];
+        
+        }
+    
+        if (index ==2){
+        
+            [button setTitle:[NSString stringWithFormat:@"Motif Mat"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"MotifMat.png"];
+        
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(MotifMat:) forControlEvents:UIControlEventTouchUpInside];
+        
+        }
+    
+    
+    
+        if (index == 3){
+        
+            [button setTitle:[NSString stringWithFormat:@"Ultra Guard Logo Inlay"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"UltraGuardLogoInlay.png"];
+        
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(UltraGuardLogoInlay:) forControlEvents:UIControlEventTouchUpInside];
+            
+        
+        
+        }
+    
+        if (index == 4){
+        
+        
+            [button setTitle:[NSString stringWithFormat:@"First Step Logo Scraper"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"FirstStepLogoScraper.png"];
+        
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(FirstStepLogoScraper:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        }
+    
+        if (index == 5){
+        
+            [button setTitle:[NSString stringWithFormat:@"Logo Color Guidelines"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"LogoColorGuidelines.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(LogoColorGuidelines:) forControlEvents:UIControlEventTouchUpInside];
+
+        
+        
+        
+        
+        }
+        
     }
     
-    if (index ==1){
+    
+    if (carousel.tag==2)
         
-        titleLabel.text = @"Water Guard Logo Inlay";
-        [button setTitle:[NSString stringWithFormat:@"Water Guard Logo Inlay"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"WaterGuardLogoInlay.png"];
+    {
         
-		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[button setBackgroundImage:image forState:UIControlStateNormal];
+        
+        if (index ==0)  {
+            
+            
+            
+            titleLabel.text = @"Golden Series";
+            
+            UIImage *image = [UIImage imageNamed:@"LogoColorGuidelines.png"];
+            [button setTitle:[NSString stringWithFormat:@"Golden Series"] forState:UIControlStateNormal ];
+            
+            [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedGoldenSeries:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
+        if (index ==1){
+            
+            titleLabel.text = @"Silver Series";
+            [button setTitle:[NSString stringWithFormat:@"Silver Series"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"SilverSeries.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedSilverSeries:) forControlEvents:UIControlEventTouchUpInside];
+            
+        }
+        
+        if (index ==2){
+            
+            [button setTitle:[NSString stringWithFormat:@"Walk-Off Pheonix Mat"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"Walk-OffPheonixMat.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedWalkOffPheonixMat:) forControlEvents:UIControlEventTouchUpInside];
+            
+        }
+        
+        
+        
+        if (index == 3){
+            
+            [button setTitle:[NSString stringWithFormat:@"Tread Lock"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"TreadLock.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedWalkOffTreadLock:) forControlEvents:UIControlEventTouchUpInside];
+            
+            
+        }
+        
         
     }
     
-    if (index ==2){
+    if (carousel.tag==3)
         
-        [button setTitle:[NSString stringWithFormat:@"Motif Mat"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"MotifMat.png"];
+    {
         
-		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[button setBackgroundImage:image forState:UIControlStateNormal];
+        
+        if (index ==0)  {
+            
+            
+            
+            titleLabel.text = @"WaterGuard Mat";
+            
+            UIImage *image = [UIImage imageNamed:@"WaterGuardMat.png"];
+            [button setTitle:[NSString stringWithFormat:@"WaterGuard Mat"] forState:UIControlStateNormal ];
+            
+            [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedWaterGuard:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
+        if (index ==1){
+            
+            titleLabel.text = @"UltraGuard";
+            [button setTitle:[NSString stringWithFormat:@"UltraGuard"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"UltraGuard.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedUltraGuard:) forControlEvents:UIControlEventTouchUpInside];
+            
+        }
+        
+        if (index ==2){
+            
+            titleLabel.text = @"EcoGuard";
+            [button setTitle:[NSString stringWithFormat:@"EcoGuard"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"EcoGuard.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedEcoGuard:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
+        
+        
+        
+        
+    }
+
+
+    //TODO change titles here-SCRAPER MATS
+    if (carousel.tag==4)
+        
+    {
+        
+        
+        if (index ==0)  {
+            
+            
+            
+            titleLabel.text = @"Walk-Off Logo Mat";
+            
+            UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
+            [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal ];
+            
+            [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
+        if (index ==1){
+            
+            titleLabel.text = @"Water Guard Logo Inlay";
+            [button setTitle:[NSString stringWithFormat:@"Water Guard Logo Inlay"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"WaterGuardLogoInlay.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+        }
+        
+        if (index ==2){
+            
+            [button setTitle:[NSString stringWithFormat:@"Motif Mat"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"MotifMat.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+        }
+        
+        
+        
+        if (index == 3){
+            
+            [button setTitle:[NSString stringWithFormat:@"Ultra Guard Logo Inlay"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"UltraGuardLogoInlay.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (index == 4){
+            
+            
+            [button setTitle:[NSString stringWithFormat:@"First Step Logo Scraper"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"FirstStepLogoScraper.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (index == 5){
+            
+            [button setTitle:[NSString stringWithFormat:@"Logo Color Guidelines"] forState:UIControlStateNormal];
+            
+            //[button addTarget:self action:@selector(buttonTappedSix:) forControlEvents:UIControlEventTouchUpInside];
+            
+            
+        }
         
     }
     
-    
-    
-    if (index == 3){
+    if (carousel.tag==5)
         
-        [button setTitle:[NSString stringWithFormat:@"Ultra Guard Logo Inlay"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"UltraGuardLogoInlay.png"];
+    {
         
-		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[button setBackgroundImage:image forState:UIControlStateNormal];
         
+        if (index ==0)  {
+            
+            
+            
+            titleLabel.text = @"Walk-Off Logo Mat";
+            
+            UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
+            [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal ];
+            
+            [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        
+        if (index ==1){
+            
+            titleLabel.text = @"Water Guard Logo Inlay";
+            [button setTitle:[NSString stringWithFormat:@"Water Guard Logo Inlay"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"WaterGuardLogoInlay.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+        }
+        
+        if (index ==2){
+            
+            [button setTitle:[NSString stringWithFormat:@"Motif Mat"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"MotifMat.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+        }
+        
+        
+        
+        if (index == 3){
+            
+            [button setTitle:[NSString stringWithFormat:@"Ultra Guard Logo Inlay"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"UltraGuardLogoInlay.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (index == 4){
+            
+            
+            [button setTitle:[NSString stringWithFormat:@"First Step Logo Scraper"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"FirstStepLogoScraper.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (index == 5){
+            
+            [button setTitle:[NSString stringWithFormat:@"Logo Color Guidelines"] forState:UIControlStateNormal];
+            
+            //[button addTarget:self action:@selector(buttonTappedSix:) forControlEvents:UIControlEventTouchUpInside];
+            
+            
+        }
         
     }
     
-    if (index == 4){
+    if (carousel.tag==6)
+        
+    {
         
         
-        [button setTitle:[NSString stringWithFormat:@"First Step Logo Scraper"] forState:UIControlStateNormal];
-        UIImage *image = [UIImage imageNamed:@"FirstStepLogoScraper.png"];
+        if (index ==0)  {
+            
+            
+            
+            titleLabel.text = @"Walk-Off Logo Mat";
+            
+            UIImage *image = [UIImage imageNamed:@"WalkOffLogoMat.png"];
+            [button setTitle:[NSString stringWithFormat:@"Walk-Off Logo Mat"] forState:UIControlStateNormal ];
+            
+            [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
+        }
         
-		button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
-		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-		[button setBackgroundImage:image forState:UIControlStateNormal];
+        if (index ==1){
+            
+            titleLabel.text = @"Water Guard Logo Inlay";
+            [button setTitle:[NSString stringWithFormat:@"Water Guard Logo Inlay"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"WaterGuardLogoInlay.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+        }
         
+        if (index ==2){
+            
+            [button setTitle:[NSString stringWithFormat:@"Motif Mat"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"MotifMat.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+        }
+        
+        
+        
+        if (index == 3){
+            
+            [button setTitle:[NSString stringWithFormat:@"Ultra Guard Logo Inlay"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"UltraGuardLogoInlay.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (index == 4){
+            
+            
+            [button setTitle:[NSString stringWithFormat:@"First Step Logo Scraper"] forState:UIControlStateNormal];
+            UIImage *image = [UIImage imageNamed:@"FirstStepLogoScraper.png"];
+            
+            button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0.0f, 0.0f, image.size.width/1.15, image.size.height/1.15);
+            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            [button setBackgroundImage:image forState:UIControlStateNormal];
+            
+            
+        }
+        
+        if (index == 5){
+            
+            [button setTitle:[NSString stringWithFormat:@"Logo Color Guidelines"] forState:UIControlStateNormal];
+            
+            //[button addTarget:self action:@selector(buttonTappedSix:) forControlEvents:UIControlEventTouchUpInside];
+            
+            
+        }
         
     }
-    
-    if (index == 5){
-        
-        [button setTitle:[NSString stringWithFormat:@"Logo Color Guidelines"] forState:UIControlStateNormal];
-        
-        //[button addTarget:self action:@selector(buttonTappedSix:) forControlEvents:UIControlEventTouchUpInside];
-        
-        
-    }
+
+
+
     
     
 	return button;

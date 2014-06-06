@@ -29,6 +29,9 @@
 @property (nonatomic, strong) IBOutlet UILabel *label;
 
 
+@property (nonatomic, strong) IBOutlet UIButton *logoButton;
+@property (nonatomic, strong) IBOutlet UIButton *indoorButton;
+
 @property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselIndoor;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselIndoorOutdoor;
@@ -36,6 +39,7 @@
 @property (nonatomic, strong) IBOutlet iCarousel *carouselFoodService;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselAntiFatigue;
 
+- (IBAction)indoorMats:(UIButton *)sender;
 - (IBAction)pressedButton:(id)sender;
 - (IBAction)goHome:(UIButton *)sender;
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender;
