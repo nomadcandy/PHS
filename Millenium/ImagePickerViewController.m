@@ -84,7 +84,7 @@
 {
     [super viewDidLoad];
     
-    
+    interactiveHeaderString = @"Logo Picked";
     
     UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     googleWebView.userInteractionEnabled = YES;
@@ -469,7 +469,7 @@
         InteractiveViewController *goingController = segue.destinationViewController;
         goingController.selectedImage=chosenImageView.image;
         NSLog(@"chosenImage %@",chosenImageView.image);
-        goingController.interactiveHeaderString=@"Logo Picked";
+        goingController.interactiveHeaderString=interactiveHeaderString;
         goingController.logoColorString=@" ";
         
         
@@ -1187,6 +1187,10 @@
     
     
     interactiveHeaderString= @"Logo Picked";
+    
+    [self performSegueWithIdentifier:@"ImagePickedSegue" sender:sender];
+    
+    
     
     
     

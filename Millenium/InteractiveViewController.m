@@ -516,6 +516,69 @@
     _yellowButton.layer.shadowOpacity = 1.00f;
     _yellowButton.layer.shadowRadius = 3.0f;
     
+    
+    if([interactiveHeaderString isEqualToString:@"Logo Picked"]){
+        
+        
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath =  [directoryPath objectAtIndex:0];
+        imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+        
+        
+        NSData *data = [NSData dataWithContentsOfFile:imagePath];
+        UIImage *logoImage = [UIImage imageWithData:data];
+        
+        //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+        NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
+        
+        if (imagePath == Nil){
+            
+            
+            UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
+            [logoPicButton setImage:image forState:UIControlStateNormal];
+        }
+        
+        else {
+            
+            
+            
+            [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+            [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+            
+            
+            
+        }
+
+        
+        UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
+        [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        
+        NSString*emptyString = @" ";
+        [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton7 setTitle:emptyString forState:UIControlStateNormal];
+        
+        
+        [self.logoColorButton1 reloadInputViews];
+        [self.logoColorButton2 reloadInputViews];
+        [self.logoColorButton3 reloadInputViews];
+        [self.logoColorButton4 reloadInputViews];
+        [self.logoColorButton5 reloadInputViews];
+        [self.logoColorButton6 reloadInputViews];
+        [self.logoColorButton7 reloadInputViews];
+        
+        
+    }
    
 
     
@@ -930,7 +993,7 @@
         }
         
         
-        
+        NSLog(@"%@ matBGColorString", matBGColorString);
         NSString *BGString = matBGColorString;
         if ([BGString rangeOfString:@"108-Black"].location == NSNotFound) {
             NSLog(@"string does not contain bla");
@@ -1063,7 +1126,7 @@
             
         }
         
-        if ([string rangeOfString:@"112-Red"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"112-Red"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1076,7 +1139,7 @@
             
         }
         
-        if ([string rangeOfString:@"109-Gold"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"109-Gold"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1089,7 +1152,7 @@
             
         }
         
-        if ([string rangeOfString:@"115-Grey"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"115-Grey"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1100,7 +1163,7 @@
              matBGTextColorString= @"115";
         }
         
-        if ([string rangeOfString:@"106-Light Blue"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"106-Light Blue"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1113,7 +1176,7 @@
             
         }
         
-        if ([string rangeOfString:@"118-Navy"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"118-Navy"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1125,7 +1188,7 @@
             
         }
         
-        if ([string rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1136,7 +1199,7 @@
             matBGTextColorString=@"110";
         }
         
-        if ([string rangeOfString:@"117-Forest Green"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"117-Forest Green"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1147,7 +1210,7 @@
             matBGTextColorString=@"117";
         }
         
-        if ([string rangeOfString:@"114-Cranberry"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"114-Cranberry"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1159,7 +1222,7 @@
             
         }
         
-        if ([string rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1171,7 +1234,7 @@
             
         }
         
-        if ([string rangeOfString:@"101-Charcoal"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"101-Charcoal"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1183,7 +1246,7 @@
             
         }
         
-        if ([string rangeOfString:@"111-Chocolate"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"111-Chocolate"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1195,7 +1258,7 @@
             
         }
         
-        if ([string rangeOfString:@"126-Clay"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"126-Clay"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1207,7 +1270,7 @@
             
         }
         
-        if ([string rangeOfString:@"102-Brown"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"102-Brown"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1219,7 +1282,7 @@
             
         }
         
-        if ([string rangeOfString:@"100-Burgundy"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"100-Burgundy"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1231,7 +1294,7 @@
             
         }
         
-        if ([string rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1243,7 +1306,7 @@
             
         }
         
-        if ([string rangeOfString:@"104-Turquoise"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"104-Turquoise"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1256,7 +1319,7 @@
             
         }
         
-        if ([string rangeOfString:@"128-Yellow"].location == NSNotFound) {
+        if ([BGString rangeOfString:@"128-Yellow"].location == NSNotFound) {
             
             NSLog(@"string does not contain bla");
             
@@ -1280,7 +1343,7 @@
 
         
         [self.bgColorButton reloadInputViews];
-     
+        NSLog(@"matUseBGColorString %@",matUseBGColorString);
         NSLog(@"matColorNumberArray %@",matColorNumberArray);
         NSLog(@"matColorArray %@",matColorArray);
         int matColorCount= matColorArray.count;
@@ -1428,29 +1491,9 @@
     
     
     //create logo size
-    if ([interactiveHeaderString isEqualToString:@"Create Mat"]){
-        
-        UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
-        [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-        [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-        [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-        [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-        [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-        [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-        [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-        
-        NSString*emptyString = @" ";
-        [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
-
-        
-        }
+    if ([interactiveHeaderString isEqualToString:@"Create Mat"])
     
-    else{
+    {
         
         
         matBGLogoView.hidden= NO;

@@ -1475,6 +1475,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     numberString =[matIDArray objectAtIndex:indexPathSend];
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
     matColorString =[matColorArray objectAtIndex:indexPathSend];
+    NSLog(@"matColorString %@",matColorString);
     matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
     NSLog(@"matBGColorString %@",matBGColorString);
     //interactiveHeaderString = @"Edit Mat";
