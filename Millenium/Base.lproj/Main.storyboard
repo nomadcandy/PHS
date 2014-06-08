@@ -2332,7 +2332,7 @@
                         <viewControllerLayoutGuide type="bottom" id="32D-sl-Kv4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nhB-Oy-g9W">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradietebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="AKg-be-qo6">
@@ -2359,7 +2359,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uuz-jQ-Mto">
-                                <rect key="frame" x="28" y="-261" width="958" height="1532"/>
+                                <rect key="frame" x="28" y="74" width="958" height="1532"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK9-Qg-AoU">
@@ -2408,6 +2408,9 @@
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTappedWalkOffLogoMat:" destination="rPS-DJ-Fxn" eventType="touchUpInside" id="hnR-VY-q54"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZy-dF-1gx">
                                         <rect key="frame" x="170" y="153" width="139" height="33"/>
@@ -2494,6 +2497,9 @@
                                         <state key="normal" backgroundImage="ThumbWalkOffLogoMat.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTappedWalkOffLogoMat:" destination="rPS-DJ-Fxn" eventType="touchUpInside" id="GC4-g0-AfN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ur3-tm-hDY">
                                         <rect key="frame" x="318" y="47" width="145" height="98"/>
@@ -2630,7 +2636,9 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DV7-oj-bkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

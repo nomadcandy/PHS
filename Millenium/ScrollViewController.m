@@ -35,6 +35,58 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender {
+    
+    
+    //hideCarouselView.hidden=NO;
+    // hideGradCarouselView.hidden=NO;
+    
+    
+    
+    //NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"WalkOffLogoMatMobile" ofType:@"m4v"];
+    //NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
+    
+    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
+    
+    
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    
+    
+    _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+    _movieController.scalingMode = MPMovieScalingModeFill;
+    _movieController.controlStyle = MPMovieControlStyleNone;
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    
+    
+    [_movieController.view setFrame:CGRectMake(150,130, 920, 520)];
+    
+    [self.view addSubview:_movieController.view];
+    [_movieController play];
+    
+    
+    
+    
+}
+
+- (void)moviePlayBackDidFinish:(NSNotification *)notification {
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    
+    [self.movieController stop];
+    [self.movieController.view removeFromSuperview];
+    self.movieController = nil;
+    
+        
+}
+
+
 /*
 #pragma mark - Navigation
 

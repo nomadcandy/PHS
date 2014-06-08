@@ -751,8 +751,8 @@
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender {
     
     
-       hideCarouselView.hidden=NO;
-        hideGradCarouselView.hidden=NO;
+       //hideCarouselView.hidden=NO;
+       // hideGradCarouselView.hidden=NO;
     
     
     
@@ -815,8 +815,8 @@
     [self.movieController.view removeFromSuperview];
     self.movieController = nil;
     
-    hideGradCarouselView.hidden=YES;
-    hideCarouselView.hidden=YES;
+    //hideGradCarouselView.hidden=YES;
+    //hideCarouselView.hidden=YES;
     
 }
 

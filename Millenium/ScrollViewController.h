@@ -19,11 +19,13 @@ ScrollViewController : UIViewController{
     
     
 }
+@property (strong, nonatomic) MPMoviePlayerController *movieController;
+
 @property (nonatomic, strong) IBOutlet UIScrollView*movieScrollView;
 @property (nonatomic, strong) IBOutlet UIButton * walkOffLogoMatButton;
 @property (nonatomic, strong) IBOutlet UIButton * waterGuardLogoInlayButton;
 
-
+- (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender;
 
 //- (IBAction)drawCircle:(UIButton *)sender;
 
