@@ -2505,7 +2505,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoV-rn-GTu">
                                         <rect key="frame" x="13" y="203" width="145" height="98"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" backgroundImage="Photorealistic.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -2531,7 +2531,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAm-j7-sfc">
                                         <rect key="frame" x="318" y="203" width="145" height="98"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" backgroundImage="MediaMat.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -4146,10 +4146,12 @@
         <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="MaskGreySquare8.png" width="293" height="252"/>
         <image name="MatClientFocusJade4.png" width="2078" height="1536"/>
+        <image name="MediaMat.png" width="640" height="354"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
         <image name="MotifMat.png" width="612" height="792"/>
         <image name="Navy_118.jpg" width="800" height="514"/>
         <image name="Orange_127.jpg" width="800" height="514"/>
+        <image name="Photorealistic.png" width="640" height="354"/>
         <image name="PrintedMessage1.png" width="640" height="354"/>
         <image name="Purple_105.jpg" width="800" height="514"/>
         <image name="Red_112.jpg" width="800" height="514"/>
