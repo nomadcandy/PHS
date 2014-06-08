@@ -2414,6 +2414,9 @@
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTappedWaterGuardLogoInlay:" destination="rPS-DJ-Fxn" eventType="touchUpInside" id="jyf-2p-UZq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRb-y9-Fxo">
                                         <rect key="frame" x="318" y="153" width="145" height="33"/>
@@ -2484,6 +2487,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTappedWaterGuardLogoInlay:" destination="rPS-DJ-Fxn" eventType="touchUpInside" id="k0H-7I-Ac5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ej-gQ-dFd">
                                         <rect key="frame" x="13" y="47" width="145" height="98"/>
