@@ -10,6 +10,7 @@
 #import "iCarousel.h"
 #import "DirectViewController.h"
 #import "RentalViewController.h"
+#import "ScrollViewController.h"
 #import "InteractiveViewController.h"
 #import "MarketingViewController.h"
 #import "SearchViewController.h"

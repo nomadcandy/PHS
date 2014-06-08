@@ -109,6 +109,8 @@
 		427CE64018F2E47C00865291 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63F18F2E47C00865291 /* SignView.m */; };
 		427CE64118F2E47C00865291 /* SignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63F18F2E47C00865291 /* SignView.m */; };
 		427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CE64A18F3316900865291 /* jadeteahouselogo1.png */; };
+		427DF92C1942269C00DBF91D /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427DF92B1942269C00DBF91D /* ScrollViewController.m */; };
+		427DF92F19423CF500DBF91D /* ThumbWalkOffLogoMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 427DF92E19423CF500DBF91D /* ThumbWalkOffLogoMat.png */; };
 		428085C618FC3F9100389C9C /* loginIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 428085C518FC3F9100389C9C /* loginIcon2.png */; };
 		428085C818FC412100389C9C /* loginBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 428085C718FC412100389C9C /* loginBlackIcon.png */; };
 		428085CA18FC4B4200389C9C /* MatCintasCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 428085C918FC4B4200389C9C /* MatCintasCenter.png */; };
@@ -450,6 +452,9 @@
 		427CE63E18F2E47C00865291 /* SignView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignView.h; sourceTree = "<group>"; };
 		427CE63F18F2E47C00865291 /* SignView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignView.m; sourceTree = "<group>"; };
 		427CE64A18F3316900865291 /* jadeteahouselogo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jadeteahouselogo1.png; sourceTree = "<group>"; };
+		427DF92A1942269C00DBF91D /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		427DF92B1942269C00DBF91D /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		427DF92E19423CF500DBF91D /* ThumbWalkOffLogoMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbWalkOffLogoMat.png; sourceTree = "<group>"; };
 		428085C518FC3F9100389C9C /* loginIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginIcon2.png; sourceTree = "<group>"; };
 		428085C718FC412100389C9C /* loginBlackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBlackIcon.png; sourceTree = "<group>"; };
 		428085C918FC4B4200389C9C /* MatCintasCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatCintasCenter.png; sourceTree = "<group>"; };
@@ -845,6 +850,23 @@
 			name = RentalViewController;
 			sourceTree = "<group>";
 		};
+		427DF92D19423CD200DBF91D /* ThumbNailMovies */ = {
+			isa = PBXGroup;
+			children = (
+				427DF92E19423CF500DBF91D /* ThumbWalkOffLogoMat.png */,
+			);
+			name = ThumbNailMovies;
+			sourceTree = "<group>";
+		};
+		427DF9301944CA9F00DBF91D /* ScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				427DF92B1942269C00DBF91D /* ScrollViewController.m */,
+				427DF92A1942269C00DBF91D /* ScrollViewController.h */,
+			);
+			name = ScrollViewController;
+			sourceTree = "<group>";
+		};
 		42849B5118E46C3D00E5B3FB /* VideoViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1132,6 +1154,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				427DF92D19423CD200DBF91D /* ThumbNailMovies */,
 				422A692219101E5E001CAB8D /* CoreData */,
 				42DEAF2C19192D6E0087E71D /* ImagesImagePicker */,
 				422A691B19100939001CAB8D /* ImagesAssets */,
@@ -1185,6 +1208,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				427DF9301944CA9F00DBF91D /* ScrollViewController */,
 				42B70D1D18F3D43700CF0C97 /* SketchRequestViewController */,
 				427CE63518F07D6200865291 /* RentalViewController */,
 				427CE63418F07D5100865291 /* DirectViewController */,
@@ -1501,6 +1525,7 @@
 				426A6A3518EDADBA00255331 /* FreshButton.png in Resources */,
 				421AC83C1918191400D37F7B /* InteractiveInfoGreyPad.png in Resources */,
 				428085C618FC3F9100389C9C /* loginIcon2.png in Resources */,
+				427DF92F19423CF500DBF91D /* ThumbWalkOffLogoMat.png in Resources */,
 				421AC83A1918191400D37F7B /* InteractiveColorsGreyPad.png in Resources */,
 				4297E0581923CF2000E43779 /* MaskWhiteSquare12.png in Resources */,
 				421EE3501919788F008A5CAB /* WebPadLil.png in Resources */,
@@ -1609,6 +1634,7 @@
 				424756EB18D38B2C000AAF7C /* LogoCell.m in Sources */,
 				42F30DD1192AEB3A0004A019 /* MatFavorite.m in Sources */,
 				427CE63818F07D7A00865291 /* RentalViewController.m in Sources */,
+				427DF92C1942269C00DBF91D /* ScrollViewController.m in Sources */,
 				42B0152718E312250068019C /* RequestFlierViewController.m in Sources */,
 				42FF7A2B18CDE92A00C72695 /* ViewController.m in Sources */,
 				422A696F19118610001CAB8D /* LogoFavorite.m in Sources */,

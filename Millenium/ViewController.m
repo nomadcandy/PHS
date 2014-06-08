@@ -1064,6 +1064,19 @@ else{
 
 
 //Method Works
+- (IBAction)presentScrollViewController:(UIButton *)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    ScrollViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PleaseLoad"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
+    
+    
+}
+
+
+
 - (IBAction)presentInteractiveViewController:(UIButton *)sender{
     
     UIStoryboard *storyboard = self.storyboard;
@@ -1207,6 +1220,9 @@ else{
         
         // Configure the new view controller here.
         [self presentViewController:mvc animated:YES completion:nil];
+        
+        
+        
         
         
         
