@@ -27,6 +27,6 @@ ScrollViewController : UIViewController<UIScrollViewDelegate>{
 
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender;
 
-//- (IBAction)drawCircle:(UIButton *)sender;
+
 
 @end
