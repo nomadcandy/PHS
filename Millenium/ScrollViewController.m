@@ -27,13 +27,17 @@
 
 - (void)viewDidLoad
 {
-    
-    movieScrollView.contentSize = CGSizeMake(958, 1532);
+    [movieScrollView setContentSize:CGSizeMake(958, 2000)];
+    //movieScrollView.contentSize = CGSizeMake(958, 1532);
     [movieScrollView flashScrollIndicators];
     
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidLayoutSubviews {
+    [movieScrollView setContentSize:CGSizeMake(958, 2000)];
 }
 
 - (void)didReceiveMemoryWarning

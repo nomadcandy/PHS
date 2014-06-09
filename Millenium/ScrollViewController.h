@@ -15,7 +15,7 @@
 #import "ViewController.h"
 
 @interface
-ScrollViewController : UIViewController{
+ScrollViewController : UIViewController<UIScrollViewDelegate>{
     
     
 }
