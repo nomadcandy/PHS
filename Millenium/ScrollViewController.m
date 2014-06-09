@@ -14,6 +14,8 @@
 
 @implementation ScrollViewController
 
+@synthesize movieScrollView;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -25,7 +27,12 @@
 
 - (void)viewDidLoad
 {
+    
+    movieScrollView.contentSize = CGSizeMake(958, 1532);
+    [movieScrollView flashScrollIndicators];
+    
     [super viewDidLoad];
+
     // Do any additional setup after loading the view.
 }
 
@@ -35,6 +42,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)goHome:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = self.storyboard;
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+    [self presentViewController:vc animated:YES completion:nil];
+    
+}
 
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender {
     
@@ -397,12 +412,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/e08yLohDWqs";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/e08yLohDWqs"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -430,12 +445,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/gM4jDCSXjt8";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/gM4jDCSXjt8"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -457,6 +472,39 @@
     
     
 }
+
+- (IBAction)buttonTappedWaterGuardDiamond:(UIButton *)sender {
+    
+    
+    
+    NSString* moviePath =@"http://youtu.be/Ir8BUqf2Wj8";
+    NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
+    
+    
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/Ir8BUqf2Wj8"]];
+    
+    
+    _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
+    _movieController.scalingMode = MPMovieScalingModeFill;
+    _movieController.controlStyle = MPMovieControlStyleNone;
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification object:nil];
+    
+    
+    [_movieController.view setFrame:CGRectMake(150,130, 920, 520)];
+    
+    [self.view addSubview:_movieController.view];
+    [_movieController play];
+    
+    
+    
+    
+}
+
 
 
 - (IBAction)buttonTappedEcoGuard:(UIButton *)sender {
@@ -563,12 +611,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/n950F44ej68";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/n950F44ej68"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -595,12 +643,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/Vwq_PJY5oBg";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/Vwq_PJY5oBg"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -632,12 +680,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/qzkn_tcA6T4";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/qzkn_tcA6T4"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -664,12 +712,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/bGPL4mtzgaU";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/bGPL4mtzgaU"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -696,12 +744,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/1AEUq_1ca88";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/1AEUq_1ca88"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -729,12 +777,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/W5oSFq4iCPc";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/W5oSFq4iCPc"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -761,12 +809,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/LK_imBmdP3E";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/LK_imBmdP3E"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -793,12 +841,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/GCRUGv7iMNU";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/GCRUGv7iMNU"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -828,12 +876,12 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    NSString* moviePath =@"http://youtu.be/t_6GHNtRsIY";
     NSURL* movieURL = [NSURL fileURLWithPath:moviePath];
     
     
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/i0eDiP9ib6Q"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/t_6GHNtRsIY"]];
     
     
     _movieController =  [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
@@ -879,6 +927,8 @@
     
     
 }
+
+
 
 
 /*

@@ -68,6 +68,20 @@
 		425010AE194517440040B9A9 /* GoldenSeries1.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010AD194517440040B9A9 /* GoldenSeries1.png */; };
 		425010B0194518F10040B9A9 /* Photorealistic.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010AF194518F10040B9A9 /* Photorealistic.png */; };
 		425010B2194519700040B9A9 /* MediaMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010B1194519700040B9A9 /* MediaMat.png */; };
+		425010B51945FAC90040B9A9 /* WaterGuard.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010B31945FAC80040B9A9 /* WaterGuard.png */; };
+		425010B61945FAC90040B9A9 /* UltraGuard.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010B41945FAC80040B9A9 /* UltraGuard.png */; };
+		425010B81945FBAC0040B9A9 /* WaterGuardDiamond.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010B71945FBAC0040B9A9 /* WaterGuardDiamond.png */; };
+		425010BA1945FCDD0040B9A9 /* SpringStep.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010B91945FCDD0040B9A9 /* SpringStep.png */; };
+		425010BC1945FDFB0040B9A9 /* MarbleTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010BB1945FDFB0040B9A9 /* MarbleTop.png */; };
+		425010BE1945FE9C0040B9A9 /* AirStep.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010BD1945FE9C0040B9A9 /* AirStep.png */; };
+		425010C01945FF1B0040B9A9 /* SoftStep.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010BF1945FF1B0040B9A9 /* SoftStep.png */; };
+		425010C5194602B10040B9A9 /* FreeFlowComfort.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010C1194602B10040B9A9 /* FreeFlowComfort.png */; };
+		425010C6194602B10040B9A9 /* TripleFlexFlow.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010C2194602B10040B9A9 /* TripleFlexFlow.png */; };
+		425010C7194602B10040B9A9 /* SafetyChef.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010C3194602B10040B9A9 /* SafetyChef.png */; };
+		425010C8194602B10040B9A9 /* DuraLite.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010C4194602B10040B9A9 /* DuraLite.png */; };
+		425010CA194603D60040B9A9 /* ParquetWiperScraper1.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010C9194603D60040B9A9 /* ParquetWiperScraper1.png */; };
+		425010CC194604720040B9A9 /* BrushTipScraper1.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010CB194604720040B9A9 /* BrushTipScraper1.png */; };
+		425010CE194605570040B9A9 /* EcoGuard1.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010CD194605570040B9A9 /* EcoGuard1.png */; };
 		4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */; };
 		4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
 		4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
@@ -414,6 +428,20 @@
 		425010AD194517440040B9A9 /* GoldenSeries1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoldenSeries1.png; sourceTree = "<group>"; };
 		425010AF194518F10040B9A9 /* Photorealistic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photorealistic.png; sourceTree = "<group>"; };
 		425010B1194519700040B9A9 /* MediaMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MediaMat.png; sourceTree = "<group>"; };
+		425010B31945FAC80040B9A9 /* WaterGuard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuard.png; sourceTree = "<group>"; };
+		425010B41945FAC80040B9A9 /* UltraGuard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UltraGuard.png; sourceTree = "<group>"; };
+		425010B71945FBAC0040B9A9 /* WaterGuardDiamond.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardDiamond.png; sourceTree = "<group>"; };
+		425010B91945FCDD0040B9A9 /* SpringStep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpringStep.png; sourceTree = "<group>"; };
+		425010BB1945FDFB0040B9A9 /* MarbleTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MarbleTop.png; sourceTree = "<group>"; };
+		425010BD1945FE9C0040B9A9 /* AirStep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AirStep.png; sourceTree = "<group>"; };
+		425010BF1945FF1B0040B9A9 /* SoftStep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoftStep.png; sourceTree = "<group>"; };
+		425010C1194602B10040B9A9 /* FreeFlowComfort.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FreeFlowComfort.png; sourceTree = "<group>"; };
+		425010C2194602B10040B9A9 /* TripleFlexFlow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TripleFlexFlow.png; sourceTree = "<group>"; };
+		425010C3194602B10040B9A9 /* SafetyChef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SafetyChef.png; sourceTree = "<group>"; };
+		425010C4194602B10040B9A9 /* DuraLite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DuraLite.png; sourceTree = "<group>"; };
+		425010C9194603D60040B9A9 /* ParquetWiperScraper1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParquetWiperScraper1.png; sourceTree = "<group>"; };
+		425010CB194604720040B9A9 /* BrushTipScraper1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrushTipScraper1.png; sourceTree = "<group>"; };
+		425010CD194605570040B9A9 /* EcoGuard1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EcoGuard1.png; sourceTree = "<group>"; };
 		4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgSay.png; sourceTree = "<group>"; };
 		4259BC4418F6F90100861033 /* MatChatterBgCool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgCool.png; sourceTree = "<group>"; };
 		425B8B2A193D038A00DF40C6 /* FavCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavCollectionViewController.h; sourceTree = "<group>"; };
@@ -870,6 +898,20 @@
 		427DF92D19423CD200DBF91D /* ThumbNailMovies */ = {
 			isa = PBXGroup;
 			children = (
+				425010CD194605570040B9A9 /* EcoGuard1.png */,
+				425010CB194604720040B9A9 /* BrushTipScraper1.png */,
+				425010C9194603D60040B9A9 /* ParquetWiperScraper1.png */,
+				425010C1194602B10040B9A9 /* FreeFlowComfort.png */,
+				425010C2194602B10040B9A9 /* TripleFlexFlow.png */,
+				425010C3194602B10040B9A9 /* SafetyChef.png */,
+				425010C4194602B10040B9A9 /* DuraLite.png */,
+				425010BF1945FF1B0040B9A9 /* SoftStep.png */,
+				425010BD1945FE9C0040B9A9 /* AirStep.png */,
+				425010BB1945FDFB0040B9A9 /* MarbleTop.png */,
+				425010B91945FCDD0040B9A9 /* SpringStep.png */,
+				425010B71945FBAC0040B9A9 /* WaterGuardDiamond.png */,
+				425010B31945FAC80040B9A9 /* WaterGuard.png */,
+				425010B41945FAC80040B9A9 /* UltraGuard.png */,
 				425010B1194519700040B9A9 /* MediaMat.png */,
 				425010AF194518F10040B9A9 /* Photorealistic.png */,
 				425010AD194517440040B9A9 /* GoldenSeries1.png */,
@@ -1383,6 +1425,7 @@
 				4297E08F19250F8100E43779 /* Black_108.jpg in Resources */,
 				422139A219128F8B001BD328 /* AssetsRemFavButtons.png in Resources */,
 				426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */,
+				425010BC1945FDFB0040B9A9 /* MarbleTop.png in Resources */,
 				428085D018FD792D00389C9C /* goButton.png in Resources */,
 				42B0153718E315810068019C /* FirstStepLogoScraper.pdf in Resources */,
 				4297E08319250F8100E43779 /* Red_112.jpg in Resources */,
@@ -1407,6 +1450,7 @@
 				4297E05E1923D11D00E43779 /* MaskWhiteSquare15.png in Resources */,
 				42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				426A6A3018EDADBA00255331 /* WeGotThis.png in Resources */,
+				425010B61945FAC90040B9A9 /* UltraGuard.png in Resources */,
 				42B0156418E3174C0068019C /* FreeFlowComfort.pdf in Resources */,
 				42FF7A2D18CDE92A00C72695 /* Images.xcassets in Resources */,
 				42B0153418E3155F0068019C /* UltraGuardLogoInlay.pdf in Resources */,
@@ -1417,6 +1461,8 @@
 				42D35013193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v in Resources */,
 				426A6A1B18ED0CC300255331 /* SampleLogo6.png in Resources */,
 				428085CC18FC585100389C9C /* MatSay.png in Resources */,
+				425010B51945FAC90040B9A9 /* WaterGuard.png in Resources */,
+				425010CA194603D60040B9A9 /* ParquetWiperScraper1.png in Resources */,
 				4221399F19128F7E001BD328 /* AssetsAddFavButton.png in Resources */,
 				4221399C19128D43001BD328 /* AssetsSearchButton.png in Resources */,
 				42B0155E18E3164B0068019C /* SafetyChef.pdf in Resources */,
@@ -1425,6 +1471,7 @@
 				4297E07C19250F8100E43779 /* White_140.jpg in Resources */,
 				42B0154C18E315E30068019C /* EcoGuard.pdf in Resources */,
 				427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */,
+				425010BA1945FCDD0040B9A9 /* SpringStep.png in Resources */,
 				422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */,
 				4297E08919250F8100E43779 /* Forest Green_117.jpg in Resources */,
 				42E9AC0B18FF58D3000E226D /* Friendly1Button.png in Resources */,
@@ -1453,11 +1500,13 @@
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
 				42A24BFE191843FF00568305 /* InteractiveGreyMat.png in Resources */,
 				428085CE18FD756200389C9C /* LoginPopOver.png in Resources */,
+				425010C6194602B10040B9A9 /* TripleFlexFlow.png in Resources */,
 				42A24BF919181FB800568305 /* InteractivePortraitButton.png in Resources */,
 				429C4AAC1925622D00AF8050 /* SearchBox.png in Resources */,
 				426A6A1718ED0CC300255331 /* SampleLogo10.png in Resources */,
 				4297E09119250F8100E43779 /* Burgundy_100.jpg in Resources */,
 				42E9AC1618FF59E2000E226D /* Fresh2Button.png in Resources */,
+				425010CE194605570040B9A9 /* EcoGuard1.png in Resources */,
 				42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */,
 				426A6A1618ED0CC300255331 /* SampleLogo11.png in Resources */,
 				426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */,
@@ -1493,6 +1542,7 @@
 				420BEFA819195991003DCEB0 /* ImagePickerFlashButton.png in Resources */,
 				4227989C1912A60B00776844 /* AssetsDefaultButton.png in Resources */,
 				42B0158518E3428B0068019C /* WaterGuardLogoInlay.png in Resources */,
+				425010C5194602B10040B9A9 /* FreeFlowComfort.png in Resources */,
 				42A24BF719181FB800568305 /* Interactive4by6Button.png in Resources */,
 				420BEF9C191937D2003DCEB0 /* MaskWhiteSquare4.png in Resources */,
 				4297E08119250F8100E43779 /* Orange_127.jpg in Resources */,
@@ -1501,11 +1551,14 @@
 				426A6A1418ED0CC300255331 /* SampleLogo13.png in Resources */,
 				429C4AB4192566D900AF8050 /* textButton.png in Resources */,
 				426A6A1C18ED0CC300255331 /* SampleLogo5.png in Resources */,
+				425010BE1945FE9C0040B9A9 /* AirStep.png in Resources */,
 				428085C818FC412100389C9C /* loginBlackIcon.png in Resources */,
+				425010B81945FBAC0040B9A9 /* WaterGuardDiamond.png in Resources */,
 				425010B0194518F10040B9A9 /* Photorealistic.png in Resources */,
 				429C4AAE192563D500AF8050 /* widthCircle.png in Resources */,
 				42B0154618E315C80068019C /* WaterGuard.pdf in Resources */,
 				4297E09019250F8100E43779 /* Brown_102.jpg in Resources */,
+				425010C7194602B10040B9A9 /* SafetyChef.png in Resources */,
 				42D35011193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v in Resources */,
 				42E9AC0C18FF58D3000E226D /* Fresh1Button.png in Resources */,
 				42B0158318E3428B0068019C /* MotifMat.png in Resources */,
@@ -1523,6 +1576,7 @@
 				42849B6B18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42849B9118EA02BE00E5B3FB /* whitepad.png in Resources */,
 				420BEF9E1919395F003DCEB0 /* MaskWhiteSquare5.png in Resources */,
+				425010C01945FF1B0040B9A9 /* SoftStep.png in Resources */,
 				42E9AC0D18FF58D3000E226D /* Clean1Button.png in Resources */,
 				4297E05C1923D08100E43779 /* MaskWhiteSquare14.png in Resources */,
 				426206661909634500FE7066 /* MaskWhiteSquare1.png in Resources */,
@@ -1530,6 +1584,7 @@
 				4297E08C19250F8100E43779 /* Charcoal_101.jpg in Resources */,
 				42B0154018E315AD0068019C /* Walk-OffPhoenixMat.pdf in Resources */,
 				42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */,
+				425010CC194604720040B9A9 /* BrushTipScraper1.png in Resources */,
 				426A6A3418EDADBA00255331 /* CleanButton.png in Resources */,
 				42B0152E18E3152F0068019C /* WaterGuardLogoInlay.pdf in Resources */,
 				425010AA194516A50040B9A9 /* PrintedMessage1.png in Resources */,
@@ -1538,6 +1593,7 @@
 				4297E08B19250F8100E43779 /* Dark Gold_103.jpg in Resources */,
 				4297E09219250F8100E43779 /* Aquamarine_130.jpg in Resources */,
 				42B0150718DFBD0A0068019C /* SquareButton.png in Resources */,
+				425010C8194602B10040B9A9 /* DuraLite.png in Resources */,
 				4297E08419250F8100E43779 /* Gold_109.jpg in Resources */,
 				42E9AC1A18FF59E2000E226D /* Pro2Button.png in Resources */,
 				42B0157018E317A50068019C /* AirStep.pdf in Resources */,
