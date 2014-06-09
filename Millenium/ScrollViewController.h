@@ -25,6 +25,7 @@ ScrollViewController : UIViewController<UIScrollViewDelegate>{
 @property (nonatomic, strong) IBOutlet UIButton * walkOffLogoMatButton;
 @property (nonatomic, strong) IBOutlet UIButton * waterGuardLogoInlayButton;
 
+
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender;
 
 

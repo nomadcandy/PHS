@@ -14,7 +14,7 @@
 
 @implementation PDFViewController
 
-@synthesize movieScrollView;
+@synthesize pdfScrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,8 +27,8 @@
 
 - (void)viewDidLoad
 {
-    [movieScrollView setContentSize:CGSizeMake(958, 1650)];
-    [movieScrollView flashScrollIndicators];
+    [pdfScrollView setContentSize:CGSizeMake(958, 1650)];
+    [pdfScrollView flashScrollIndicators];
     
     [super viewDidLoad];
 
@@ -36,7 +36,7 @@
 }
 
 - (void)viewDidLayoutSubviews {
-    [movieScrollView setContentSize:CGSizeMake(958, 2000)];
+    [pdfScrollView setContentSize:CGSizeMake(958, 2000)];
 }
 
 - (void)didReceiveMemoryWarning

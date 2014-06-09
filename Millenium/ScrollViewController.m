@@ -27,7 +27,9 @@
 
 - (void)viewDidLoad
 {
-    [movieScrollView setContentSize:CGSizeMake(958, 1650)];
+    [movieScrollView setContentSize:CGSizeMake(1024, 3432)];
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, 100, 0.0);
+    movieScrollView.contentInset = contentInsets;
     [movieScrollView flashScrollIndicators];
     
     [super viewDidLoad];
@@ -36,7 +38,9 @@
 }
 
 - (void)viewDidLayoutSubviews {
-    [movieScrollView setContentSize:CGSizeMake(958, 2000)];
+    [movieScrollView setContentSize:CGSizeMake(1024, 3432)];
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, 100, 0.0);
+    movieScrollView.contentInset = contentInsets;
 }
 
 - (void)didReceiveMemoryWarning
