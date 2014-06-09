@@ -82,6 +82,7 @@
 		425010CA194603D60040B9A9 /* ParquetWiperScraper1.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010C9194603D60040B9A9 /* ParquetWiperScraper1.png */; };
 		425010CC194604720040B9A9 /* BrushTipScraper1.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010CB194604720040B9A9 /* BrushTipScraper1.png */; };
 		425010CE194605570040B9A9 /* EcoGuard1.png in Resources */ = {isa = PBXBuildFile; fileRef = 425010CD194605570040B9A9 /* EcoGuard1.png */; };
+		425010D0194622520040B9A9 /* PDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 425010CF194622520040B9A9 /* PDFViewController.m */; };
 		4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */; };
 		4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
 		4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
@@ -442,6 +443,8 @@
 		425010C9194603D60040B9A9 /* ParquetWiperScraper1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParquetWiperScraper1.png; sourceTree = "<group>"; };
 		425010CB194604720040B9A9 /* BrushTipScraper1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrushTipScraper1.png; sourceTree = "<group>"; };
 		425010CD194605570040B9A9 /* EcoGuard1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EcoGuard1.png; sourceTree = "<group>"; };
+		425010CF194622520040B9A9 /* PDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFViewController.m; sourceTree = "<group>"; };
+		425010D11946225F0040B9A9 /* PDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFViewController.h; sourceTree = "<group>"; };
 		4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgSay.png; sourceTree = "<group>"; };
 		4259BC4418F6F90100861033 /* MatChatterBgCool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgCool.png; sourceTree = "<group>"; };
 		425B8B2A193D038A00DF40C6 /* FavCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavCollectionViewController.h; sourceTree = "<group>"; };
@@ -790,6 +793,15 @@
 		425010A8194514780040B9A9 /* PDFViewController */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			name = PDFViewController;
+			sourceTree = "<group>";
+		};
+		425010D2194622680040B9A9 /* PDFViewController */ = {
+			isa = PBXGroup;
+			children = (
+				425010D11946225F0040B9A9 /* PDFViewController.h */,
+				425010CF194622520040B9A9 /* PDFViewController.m */,
 			);
 			name = PDFViewController;
 			sourceTree = "<group>";
@@ -1273,6 +1285,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				425010D2194622680040B9A9 /* PDFViewController */,
 				427DF9301944CA9F00DBF91D /* ScrollViewController */,
 				42B70D1D18F3D43700CF0C97 /* SketchRequestViewController */,
 				427CE63518F07D6200865291 /* RentalViewController */,
@@ -1745,6 +1758,7 @@
 				42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */,
 				422A692519101E76001CAB8D /* Millenium.xcdatamodeld in Sources */,
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
+				425010D0194622520040B9A9 /* PDFViewController.m in Sources */,
 				42B0151518E0F57E0068019C /* MaskView.m in Sources */,
 				424756D918D389FA000AAF7C /* SearchViewController.m in Sources */,
 				42EB3EE118D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
