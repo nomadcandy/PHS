@@ -4392,11 +4392,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.68831712369999998" green="0.68831712369999998" blue="0.68831712369999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kr0-Np-y4I">
-                                        <rect key="frame" x="33" y="2724" width="962" height="227"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.68831712369999998" green="0.68831712369999998" blue="0.68831712369999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ie-zm-LkA">
                                         <rect key="frame" x="-8" y="602" width="225" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4476,7 +4471,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3b-Kz-33p">
                                         <rect key="frame" x="319" y="67" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="WaterGuardLogoInlay.png">
+                                        <state key="normal" backgroundImage="WaterGuardLogoInlayPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4486,7 +4481,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udW-tM-ruc">
                                         <rect key="frame" x="81" y="67" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="WalkOffLogoMat.png">
+                                        <state key="normal" backgroundImage="WalkOffLogoMatPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4496,7 +4491,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onN-5G-gEU">
                                         <rect key="frame" x="542" y="67" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="MotifMat.png">
+                                        <state key="normal" backgroundImage="MotifMatPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4527,14 +4522,14 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmK-OC-nXH">
                                         <rect key="frame" x="316" y="328" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="PhotorealisticMat.png">
+                                        <state key="normal" backgroundImage="LogoColorGuidelinesPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfO-VM-0Z5">
                                         <rect key="frame" x="775" y="67" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="WaterGuardLogoInlay.png">
+                                        <state key="normal" backgroundImage="UltraGuardLogoInlayPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4542,7 +4537,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQe-30-qga">
-                                        <rect key="frame" x="82" y="874" width="145" height="36"/>
+                                        <rect key="frame" x="92" y="874" width="145" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Golden Series">
@@ -4580,7 +4575,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdX-pD-7ZI">
                                         <rect key="frame" x="317" y="665" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="ParquetWiperScraperM.png">
+                                        <state key="normal" backgroundImage="SilverSeriesPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4590,7 +4585,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sy-5G-zYP">
                                         <rect key="frame" x="77" y="668" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="FirstStepLogoScraperM.png">
+                                        <state key="normal" backgroundImage="GoldenSeriesPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4609,7 +4604,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sq4-hO-TvK">
                                         <rect key="frame" x="75" y="930" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="FirstStepLogoScraperM.png">
+                                        <state key="normal" backgroundImage="WaterGuardDiamondPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4619,7 +4614,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flR-XN-su3">
                                         <rect key="frame" x="541" y="668" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="BrushTipScraperM.png">
+                                        <state key="normal" backgroundImage="WalkOffPhoenixPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4629,7 +4624,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbs-T5-uen">
                                         <rect key="frame" x="776" y="668" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="BrushTipScraperM.png">
+                                        <state key="normal" backgroundImage="TreadLockPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4655,7 +4650,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FB-Ju-iPh">
-                                        <rect key="frame" x="320" y="1453" width="139" height="33"/>
+                                        <rect key="frame" x="73" y="1457" width="139" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="WaterGuard">
@@ -4664,10 +4659,10 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0K-yI-rPy">
-                                        <rect key="frame" x="519" y="1453" width="198" height="33"/>
+                                        <rect key="frame" x="519" y="1453" width="198" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="WaterGuard Diamond">
+                                        <state key="normal" title="EcoGuard">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -4675,7 +4670,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHz-2t-5Vh">
                                         <rect key="frame" x="304" y="1247" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="WaterGuardM.png">
+                                        <state key="normal" backgroundImage="UltraGuardPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4685,7 +4680,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsJ-JU-jCg">
                                         <rect key="frame" x="72" y="1248" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="UltraGuardM.png">
+                                        <state key="normal" backgroundImage="WaterGuardPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4695,21 +4690,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojt-Sf-yGW">
                                         <rect key="frame" x="541" y="1247" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="WaterGuardDiamondM.png">
+                                        <state key="normal" backgroundImage="EcoGuardPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonTappedWaterGuardDiamond:" destination="LNG-cb-6CN" eventType="touchUpInside" id="ZKl-vu-3sJ"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjm-qL-X3h">
-                                        <rect key="frame" x="800" y="1453" width="145" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="EcoGuard">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-bT-YWd">
                                         <rect key="frame" x="75" y="2100" width="139" height="38"/>
@@ -4750,7 +4736,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avQ-39-Wgt">
                                         <rect key="frame" x="60" y="1574" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="GoldenSeriesM.png">
+                                        <state key="normal" backgroundImage="ParquetWiperScraperPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4758,10 +4744,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpk-sE-9Vt">
-                                        <rect key="frame" x="78" y="1448" width="139" height="38"/>
+                                        <rect key="frame" x="317" y="1457" width="139" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Spring Step">
+                                        <state key="normal" title="UltraGuard">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -4769,7 +4755,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjg-Dn-PdC">
                                         <rect key="frame" x="307" y="1893" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SpringStepM.png">
+                                        <state key="normal" backgroundImage="SafetyChefPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4788,7 +4774,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1G-DY-NmP">
                                         <rect key="frame" x="307" y="1574" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="MarbleTopM.png">
+                                        <state key="normal" backgroundImage="BrushTipPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4807,7 +4793,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQH-f1-EZn">
                                         <rect key="frame" x="551" y="1574" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SafeStepM.png">
+                                        <state key="normal" backgroundImage="TripleFlexScraperPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4826,7 +4812,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmf-Hx-J7V">
                                         <rect key="frame" x="796" y="1574" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="AirStepM.png">
+                                        <state key="normal" backgroundImage="FirstStepScraperPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4845,27 +4831,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilE-uh-j1d">
                                         <rect key="frame" x="64" y="1893" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SoftStepM.png">
+                                        <state key="normal" backgroundImage="DuraLitePDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonTappedDuraLite:" destination="LNG-cb-6CN" eventType="touchUpInside" id="wpW-0g-tiu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD3-yb-3mq">
-                                        <rect key="frame" x="786" y="1254" width="165" height="198"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="EcoGuardM.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTappedEcoGuard:" destination="LNG-cb-6CN" eventType="touchUpInside" id="Qj3-uO-dnJ"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94o-R4-XxQ">
                                         <rect key="frame" x="552" y="1893" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SilverSeriesM.png">
+                                        <state key="normal" backgroundImage="TripleFlexFlowPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4875,93 +4851,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwK-4o-UEg">
                                         <rect key="frame" x="796" y="1893" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SilverSeriesM.png">
+                                        <state key="normal" backgroundImage="FreeFlowComfortPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonTappedFreeFlowComfort:" destination="LNG-cb-6CN" eventType="touchUpInside" id="0hr-yr-aaa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zef-h3-d7L">
-                                        <rect key="frame" x="62" y="2902" width="196" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Dura-Lite">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUs-fO-yN5">
-                                        <rect key="frame" x="292" y="2902" width="195" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Safety Chef">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JJ-9B-01c">
-                                        <rect key="frame" x="522" y="2902" width="195" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Triple Flex Flow">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGa-Jc-KfW">
-                                        <rect key="frame" x="293" y="2754" width="195" height="136"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SafetyChefM.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTappedSafetyChef:" destination="LNG-cb-6CN" eventType="touchUpInside" id="eEO-VS-1OQ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6j-IC-uWh">
-                                        <rect key="frame" x="64" y="2752" width="195" height="136"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="DuraLiteM.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTappedDuraLite:" destination="LNG-cb-6CN" eventType="touchUpInside" id="AaI-Cx-wRL"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E0-hb-XyB">
-                                        <rect key="frame" x="522" y="2754" width="195" height="136"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="TripleFlexFlowM.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTappedTripleFlexFlow:" destination="LNG-cb-6CN" eventType="touchUpInside" id="XkW-fi-sZg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUW-n0-qHv">
-                                        <rect key="frame" x="756" y="2902" width="195" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                        <state key="normal" title="Free Flow Comfort">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clx-5d-3Ob">
-                                        <rect key="frame" x="756" y="2754" width="195" height="136"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="FreeFlowComfortM.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="buttonTappedFreeFlowComfort:" destination="LNG-cb-6CN" eventType="touchUpInside" id="EWQ-wa-bC8"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05p-14-H4v">
                                         <rect key="frame" x="77" y="328" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="FirstStepLogoScraper.png">
+                                        <state key="normal" backgroundImage="FirstStepLogoScraperPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -4999,7 +4899,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGZ-ai-6EL">
                                         <rect key="frame" x="307" y="2218" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SpringStepM.png">
+                                        <state key="normal" backgroundImage="SpringStepPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5018,7 +4918,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKe-TR-pXK">
                                         <rect key="frame" x="64" y="2218" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SoftStepM.png">
+                                        <state key="normal" backgroundImage="MarbleTopPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5037,7 +4937,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eie-8M-7Vl">
                                         <rect key="frame" x="62" y="2471" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SoftStepM.png">
+                                        <state key="normal" backgroundImage="SoftStepPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5047,7 +4947,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4n-4H-jeS">
                                         <rect key="frame" x="552" y="2218" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SilverSeriesM.png">
+                                        <state key="normal" backgroundImage="SafeStepPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5057,7 +4957,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yR6-Pp-9nN">
                                         <rect key="frame" x="796" y="2218" width="165" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SilverSeriesM.png">
+                                        <state key="normal" backgroundImage="AirStepPDF.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5111,6 +5011,7 @@
     </scenes>
     <resources>
         <image name="AirStepM.png" width="640" height="354"/>
+        <image name="AirStepPDF.png" width="612" height="792"/>
         <image name="Aquamarine_130.jpg" width="800" height="514"/>
         <image name="AssetCheckButton.png" width="106" height="102"/>
         <image name="AssetsAddButton.png" width="106" height="102"/>
@@ -5123,6 +5024,7 @@
         <image name="AssetsSearchButton.png" width="106" height="102"/>
         <image name="Black_108.jpg" width="800" height="514"/>
         <image name="Brown_102.jpg" width="800" height="514"/>
+        <image name="BrushTipPDF.png" width="612" height="792"/>
         <image name="BrushTipScraperM.png" width="640" height="354"/>
         <image name="Burgundy_100.jpg" width="800" height="514"/>
         <image name="Charcoal_101.jpg" width="800" height="514"/>
@@ -5134,17 +5036,22 @@
         <image name="Cranberry_114.jpg" width="800" height="514"/>
         <image name="Dark Gold_103.jpg" width="800" height="514"/>
         <image name="DuraLiteM.png" width="640" height="354"/>
+        <image name="DuraLitePDF.png" width="612" height="792"/>
         <image name="EcoGuardM.png" width="640" height="354"/>
+        <image name="EcoGuardPDF.png" width="612" height="792"/>
         <image name="Emerald Green_110.jpg" width="800" height="514"/>
-        <image name="FirstStepLogoScraper.png" width="612" height="792"/>
         <image name="FirstStepLogoScraperM.png" width="640" height="354"/>
+        <image name="FirstStepLogoScraperPDF.png" width="612" height="792"/>
+        <image name="FirstStepScraperPDF.png" width="612" height="792"/>
         <image name="FliersWhite.png" width="230" height="91"/>
         <image name="Forest Green_117.jpg" width="800" height="514"/>
         <image name="FreeFlowComfortM.png" width="640" height="354"/>
+        <image name="FreeFlowComfortPDF.png" width="612" height="792"/>
         <image name="Fresh3Button.png" width="167" height="63"/>
         <image name="Friendly3Button.png" width="167" height="63"/>
         <image name="Gold_109.jpg" width="800" height="514"/>
         <image name="GoldenSeriesM.png" width="640" height="354"/>
+        <image name="GoldenSeriesPDF.png" width="612" height="792"/>
         <image name="GreenBGPages.png" width="1024" height="768"/>
         <image name="Grey_115.jpg" width="800" height="514"/>
         <image name="ImagePickerCropButton.png" width="100" height="100"/>
@@ -5159,45 +5066,60 @@
         <image name="InteractiveSizeGreyPad.png" width="694" height="350"/>
         <image name="JadeTeaHouseLogo.png" width="360" height="360"/>
         <image name="Light Blue_106.jpg" width="800" height="514"/>
+        <image name="LogoColorGuidelinesPDF.png" width="2048" height="1536"/>
         <image name="LogoPadGrey" width="2048" height="1536"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="MarbleTopM.png" width="640" height="354"/>
+        <image name="MarbleTopPDF.png" width="612" height="792"/>
         <image name="MaskGreySquare8.png" width="293" height="252"/>
         <image name="MatClientFocusJade4.png" width="2078" height="1536"/>
         <image name="MediaMatM.png" width="640" height="354"/>
         <image name="MillenniumLogo.jpg" width="169" height="73"/>
-        <image name="MotifMat.png" width="612" height="792"/>
         <image name="MotifMatM.png" width="640" height="354"/>
+        <image name="MotifMatPDF.png" width="612" height="792"/>
         <image name="Navy_118.jpg" width="800" height="514"/>
         <image name="Orange_127.jpg" width="800" height="514"/>
         <image name="ParquetWiperScraperM.png" width="640" height="354"/>
+        <image name="ParquetWiperScraperPDF.png" width="612" height="792"/>
         <image name="PhotorealisticM.png" width="640" height="354"/>
-        <image name="PhotorealisticMat.png" width="2048" height="1536"/>
         <image name="PrintedMessageM.png" width="640" height="354"/>
         <image name="Purple_105.jpg" width="800" height="514"/>
         <image name="Red_112.jpg" width="800" height="514"/>
         <image name="Rose_119.jpg" width="800" height="514"/>
         <image name="Royal Blue_107.jpg" width="800" height="514"/>
         <image name="SafeStepM.png" width="640" height="354"/>
+        <image name="SafeStepPDF.png" width="612" height="792"/>
         <image name="SafetyChefM.png" width="640" height="354"/>
+        <image name="SafetyChefPDF.png" width="612" height="792"/>
         <image name="Sandalwood_120.jpg" width="800" height="514"/>
         <image name="SilverSeriesM.png" width="640" height="354"/>
+        <image name="SilverSeriesPDF.png" width="612" height="792"/>
         <image name="Silver_116.jpg" width="800" height="514"/>
         <image name="SoftStepM.png" width="640" height="354"/>
+        <image name="SoftStepPDF.png" width="612" height="792"/>
         <image name="SpringStepM.png" width="640" height="354"/>
+        <image name="SpringStepPDF.png" width="612" height="792"/>
         <image name="Steel Blue_121.jpg" width="800" height="514"/>
         <image name="Suede_123.jpg" width="800" height="514"/>
         <image name="ThumbWalkOffLogoMatM.png" width="639" height="356"/>
+        <image name="TreadLockPDF.png" width="612" height="792"/>
         <image name="TripleFlexFlowM.png" width="640" height="354"/>
+        <image name="TripleFlexFlowPDF.png" width="2048" height="1536"/>
+        <image name="TripleFlexScraperPDF.png" width="612" height="792"/>
         <image name="Turquoise_104.jpg" width="800" height="514"/>
         <image name="UltraGuardLogoInlayM.png" width="640" height="354"/>
+        <image name="UltraGuardLogoInlayPDF.png" width="612" height="792"/>
         <image name="UltraGuardM.png" width="640" height="354"/>
+        <image name="UltraGuardPDF.png" width="612" height="792"/>
         <image name="VideosWhite3.png" width="230" height="91"/>
-        <image name="WalkOffLogoMat.png" width="612" height="792"/>
+        <image name="WalkOffLogoMatPDF.png" width="612" height="792"/>
+        <image name="WalkOffPhoenixPDF.png" width="612" height="792"/>
         <image name="WaterGuardDiamondM.png" width="640" height="354"/>
-        <image name="WaterGuardLogoInlay.png" width="612" height="792"/>
+        <image name="WaterGuardDiamondPDF.png" width="2048" height="1536"/>
         <image name="WaterGuardLogoInlayM.png" width="640" height="354"/>
+        <image name="WaterGuardLogoInlayPDF.png" width="612" height="792"/>
         <image name="WaterGuardM.png" width="640" height="354"/>
+        <image name="WaterGuardPDF.png" width="612" height="792"/>
         <image name="WebPadBig.png" width="1262" height="982"/>
         <image name="WebPadLil.png" width="776" height="542"/>
         <image name="White_140.jpg" width="800" height="514"/>

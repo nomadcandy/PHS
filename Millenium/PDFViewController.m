@@ -67,7 +67,7 @@
     
     
     
-    selectedPdfString=@"WalkOffLogoMat.png";
+    selectedPdfString=@"WalkOffLogoMatPDF.png";
     selectedString=@"Walk Off Logo Mat";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -85,7 +85,7 @@
 - (IBAction)buttonTappedWaterGuardLogoInlay:(UIButton *)sender {
     
     
-    selectedPdfString=@"WaterGuardLogoInlay.png";
+    selectedPdfString=@"WaterGuardLogoInlayPDF.png";
     selectedString=@"Water Guard Logo Inlay";
 
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -104,8 +104,8 @@
 - (IBAction)buttonTappedMotifMat:(UIButton *)sender {
     
     
-    selectedPdfString=@"WaterGuardMotifMat.png";
-    selectedString=@"Water Guard Motif Mat";
+    selectedPdfString=@"MotifMatPDF.png";
+    selectedString=@"Motif Mat";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
@@ -121,7 +121,7 @@
     
     
     
-    selectedPdfString=@"UltraGuardLogoInlay.png";
+    selectedPdfString=@"UltraGuardLogoInlayPDF.png";
     selectedString=@"Water Guard Logo Inlay";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -140,7 +140,7 @@
     
     
     
-    selectedPdfString=@"FirstStepLogoScraper.png";
+    selectedPdfString=@"FirstStepLogoScraperPDF.png";
     selectedString=@"First Step Logo Scraper";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -161,7 +161,7 @@
     
     
     
-    selectedPdfString=@"GoldenSeries.png";
+    selectedPdfString=@"GoldenSeriesPDF.png";
     selectedString=@"Golden Series";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -176,7 +176,7 @@
     
     
     
-    selectedPdfString=@"SilverSeries.png";
+    selectedPdfString=@"SilverSeriesPDF.png";
     selectedString=@"Silver Series";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -196,7 +196,7 @@
     
     
     
-    selectedPdfString=@"WalkOffPhoenixMat.png";
+    selectedPdfString=@"WalkOffPhoenixMatPDF.png";
     selectedString=@"Walk Off Phoenix Mat";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -213,7 +213,7 @@
     
     
     
-    selectedPdfString=@"TreadLock.png";
+    selectedPdfString=@"TreadLockPDF.png";
     selectedString=@"Tread Lock";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -231,7 +231,7 @@
     
     
     
-    selectedPdfString=@"WaterGuardDiamond.png";
+    selectedPdfString=@"WaterGuardDiamondPDF.png";
     selectedString=@"Water Guard Diamond";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -253,7 +253,7 @@
     
     
     
-    selectedPdfString=@"WaterGuard.png";
+    selectedPdfString=@"WaterGuardPDF.png";
     selectedString=@"Water Guard";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -274,7 +274,7 @@
     
     
     
-    selectedPdfString=@"UltraGuard.png";
+    selectedPdfString=@"UltraGuardPDF.png";
     selectedString=@"Ultra Guard";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -291,7 +291,7 @@
     
     
     
-    selectedPdfString=@"EcoGuard.png";
+    selectedPdfString=@"EcoGuardPDF.png";
     selectedString=@"Eco Guard";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -310,7 +310,7 @@
     
     
     
-    selectedPdfString=@"ParquetWiperScraper.png";
+    selectedPdfString=@"ParquetWiperScraperPDF.png";
     selectedString=@"Parquet Wiper Scraper";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -329,7 +329,7 @@
     
     
     
-    selectedPdfString=@"BrushTip.png";
+    selectedPdfString=@"BrushTipPDF.png";
     selectedString=@"Brush Tip";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -347,7 +347,7 @@
     
     
    
-    selectedPdfString=@"FlexScraper.png";
+    selectedPdfString=@"FlexScraperPDF.png";
     selectedString=@"Flex Scraper";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -363,7 +363,7 @@
     
     
     
-    selectedPdfString=@"StepScraper.png";
+    selectedPdfString=@"StepScraperPDF.png";
     selectedString=@"Step Scraper";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -380,7 +380,7 @@
 - (IBAction)buttonTappedDuraLite:(UIButton *)sender {
     
     
-    selectedPdfString=@"DuraLite.png";
+    selectedPdfString=@"DuraLitePDF.png";
     selectedString=@"Dura Lite";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -396,7 +396,7 @@
 - (IBAction)buttonTappedSafetyChef:(UIButton *)sender {
     
    
-    selectedPdfString=@"SafetyChef.png";
+    selectedPdfString=@"SafetyChefPDF.png";
     selectedString=@"Safety Chef";
     
      [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -411,7 +411,7 @@
 - (IBAction)buttonTappedTripleFlexFlow:(UIButton *)sender {
     
     
-    selectedPdfString=@"TripleFlexFlow.png";
+    selectedPdfString=@"TripleFlexFlowPDF.png";
     selectedString=@"Triple Flex Flow";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -426,7 +426,7 @@
 - (IBAction)buttonTappedFreeFlowComfort:(UIButton *)sender {
     
     
-    selectedPdfString=@"FreeFlowComfort.png";
+    selectedPdfString=@"FreeFlowComfortPDF.png";
     selectedString=@"Free Flow Comfort";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -446,7 +446,7 @@
     
     
    
-    selectedPdfString=@"MarbleTop.png";
+    selectedPdfString=@"MarbleTopPDF.png";
     selectedString=@"Marble Top";
  
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -461,7 +461,7 @@
     
     
     
-    selectedPdfString=@"SpringStep.png";
+    selectedPdfString=@"SpringStepPDF.png";
     selectedString=@"Spring Step";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -479,7 +479,7 @@
     
     
     
-    selectedPdfString=@"SafeStep.png";
+    selectedPdfString=@"SafeStepPDF.png";
     selectedString=@"Safe Step";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -492,7 +492,7 @@
 
 - (IBAction)buttonTappedAirStep:(UIButton *)sender {
     
-    selectedPdfString=@"AirStep.png";
+    selectedPdfString=@"AirStepPDF.png";
     selectedString=@"Air Step";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -507,7 +507,7 @@
 - (IBAction)buttonTappedSoftStep:(UIButton *)sender {
     
     
-    selectedPdfString=@"SoftStep.png";
+    selectedPdfString=@"SoftStepPDF.png";
     selectedString=@"SoftStep";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
