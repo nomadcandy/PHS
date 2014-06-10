@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PDFViewController.h"
+#import "ViewController.h"
 #import <Social/Social.h>
 #import <MessageUI/MessageUI.h>
 
@@ -15,9 +16,11 @@
 
 
 
-@property (nonatomic, strong) NSString*selectedString;
-@property (nonatomic, strong) NSString*selectedPdfString;
+@property (nonatomic, copy) NSString*selectedString;
+@property (nonatomic, copy) NSString*selectedPdfString;
 @property (nonatomic, strong) IBOutlet UIImageView*pdfImageView;
+
+- (IBAction)goHome:(UIButton *)sender;
 
 
 @end
