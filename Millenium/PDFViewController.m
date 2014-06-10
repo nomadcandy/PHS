@@ -14,6 +14,8 @@
 
 @implementation PDFViewController
 
+@synthesize selectedPdfString;
+@synthesize selectedString;
 @synthesize pdfScrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -66,9 +68,14 @@
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    selectedPdfString=@"WalkOffLogoMat.png";
+    selectedString=@"Walk Off Logo Mat";
     
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
+
     
     
 }
@@ -76,9 +83,13 @@
 - (IBAction)buttonTappedWaterGuardLogoInlay:(UIButton *)sender {
     
     
-    
-    NSString* moviePath =@"http://youtu.be/AU_UlosRDeU";
-    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"WaterGuardLogoInlay.png";
+    selectedString=@"Water Guard Logo Inlay";
+
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
     
@@ -88,20 +99,28 @@
 
 - (IBAction)buttonTappedMotifMat:(UIButton *)sender {
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"WaterGuardMotifMat.png";
+    selectedString=@"Water Guard Motif Mat";
     
-    
-    NSString* moviePath =@"http://youtu.be/jdB_DNvXy7k";
-    
-    
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
+
+ 
 }
 
 - (IBAction)buttonTappedUltraGuardLogoInlay:(UIButton *)sender {
     
     
     
-    NSString* moviePath =@"http://youtu.be/B-jMxjCZD-s";
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"UltraGuardLogoInlay.png";
+    selectedString=@"Water Guard Logo Inlay";
+    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
     
@@ -112,7 +131,13 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/NBj_dJwn4xM";
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"FirstStepLogoScraper.png";
+    selectedString=@"First Step Logo Scraper";
+    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
     
@@ -125,17 +150,26 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/B-jMxjCZD-s";
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"GoldenSeries.png";
+    selectedString=@"Golden Series";
     
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
 - (IBAction)buttonTappedSilverSeries:(UIButton *)sender {
     
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"SilverSeries.png";
+    selectedString=@"Silver Series";
     
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
     
@@ -147,9 +181,13 @@
 - (IBAction)buttonTappedWalkOffPhoenixMat:(UIButton *)sender {
     
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"WalkOffPhoenixMat.png";
+    selectedString=@"Walk Off Phoenix Mat";
     
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
@@ -158,8 +196,13 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/ZXv5bun6mn0";
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"TreadLock.png";
+    selectedString=@"Tread Lock";
     
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
     
@@ -169,7 +212,9 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"WaterGuardDiamond.png";
+    selectedString=@"Water Guard Diamond";
     
     
     
@@ -181,7 +226,14 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/i0eDiP9ib6Q";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"WaterGuard.png";
+    selectedString=@"Water Guard";
+
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
     
@@ -194,9 +246,13 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/e08yLohDWqs";
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"UltraGuard.png";
+    selectedString=@"Ultra Guard";
     
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
@@ -206,9 +262,14 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/gM4jDCSXjt8";
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"EcoGuard.png";
+    selectedString=@"Eco Guard";
     
     
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
@@ -217,10 +278,13 @@
     
     
     
-    NSString* moviePath =@"http://youtu.be/Ir8BUqf2Wj8";
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"ParquetWiperScraper.png";
+    selectedString=@"Parquet Wiper Scraper";
     
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
 }
 
@@ -230,8 +294,13 @@
     
     
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"BrushTip.png";
+    selectedString=@"Brush Tip";
     
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
@@ -241,8 +310,13 @@
 - (IBAction)buttonTappedTripleFlexScraper:(UIButton *)sender {
     
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"FlexScraper.png";
+    selectedString=@"Flex Scraper";
     
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
@@ -250,9 +324,13 @@
 - (IBAction)buttonTappedFirstStepScraper:(UIButton *)sender {
     
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"StepScraper.png";
+    selectedString=@"Step Scraper";
     
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
@@ -262,9 +340,13 @@
 - (IBAction)buttonTappedDuraLite:(UIButton *)sender {
     
     
-    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"DuraLite.png";
+    selectedString=@"Dura Lite";
    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
     
@@ -272,28 +354,40 @@
 
 - (IBAction)buttonTappedSafetyChef:(UIButton *)sender {
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"SafetyChef.png";
+    selectedString=@"Safety Chef";
     
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
 
 - (IBAction)buttonTappedTripleFlexFlow:(UIButton *)sender {
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"TripleFlexFlow.png";
+    selectedString=@"Triple Flex Flow";
     
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
 
 - (IBAction)buttonTappedFreeFlowComfort:(UIButton *)sender {
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"FreeFlowComfort.png";
+    selectedString=@"Free Flow Comfort";
     
     
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
 }
 
@@ -305,24 +399,29 @@
 - (IBAction)buttonTappedMarbleTop:(UIButton *)sender {
     
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"MarbleTop.png";
+    selectedString=@"Marble Top";
+ 
     
-    
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
 }
 
 - (IBAction)buttonTappedSpringStep:(UIButton *)sender {
     
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"SpringStep.png";
+    selectedString=@"Spring Step";
     
-    
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
 }
-
-
 
 
 
@@ -330,17 +429,25 @@
 - (IBAction)buttonTappedSafeStep:(UIButton *)sender {
     
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"SafeStep.png";
+    selectedString=@"Safe Step";
     
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
 }
 
 - (IBAction)buttonTappedAirStep:(UIButton *)sender {
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"AirStep.png";
+    selectedString=@"Air Step";
     
-    
-    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
 }
@@ -348,8 +455,13 @@
 - (IBAction)buttonTappedSoftStep:(UIButton *)sender {
     
     
-    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    selectedPdfString=@"SoftStep.png";
+    selectedString=@"SoftStep";
    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
     
     
     
@@ -357,10 +469,24 @@
 }
 
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    
+    if ([segue.identifier isEqualToString:@"pdfPickedSegue"]) {
+        
+        PDFBigViewController *goingController = segue.destinationViewController;
+        //[self presentViewController:destViewController animated:YES completion:nil];
+        NSLog(@"locationIDString %@",selectedString);
+        goingController.selectedPdfString = selectedPdfString;
+        goingController.selectedString = selectedString;
+        
+        
+    }
 
 
 
-
+}
 
 
 

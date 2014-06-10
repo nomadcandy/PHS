@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42081FBD1947610200412486 /* PDFBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42081FBC1947610200412486 /* PDFBigViewController.m */; };
 		420BEF9619192E04003DCEB0 /* MaskWhiteSquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */; };
 		420BEF98191935C7003DCEB0 /* MaskGreySquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF97191935C7003DCEB0 /* MaskGreySquare2.png */; };
 		420BEF9A191937C7003DCEB0 /* MaskGreySquare4.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF99191937C7003DCEB0 /* MaskGreySquare4.png */; };
@@ -378,6 +379,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42081FBB1947610200412486 /* PDFBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFBigViewController.h; sourceTree = "<group>"; };
+		42081FBC1947610200412486 /* PDFBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFBigViewController.m; sourceTree = "<group>"; };
 		420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare2.png; sourceTree = "<group>"; };
 		420BEF97191935C7003DCEB0 /* MaskGreySquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare2.png; sourceTree = "<group>"; };
 		420BEF99191937C7003DCEB0 /* MaskGreySquare4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare4.png; sourceTree = "<group>"; };
@@ -723,6 +726,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42081FBA194760E400412486 /* PDFBigViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42081FBB1947610200412486 /* PDFBigViewController.h */,
+				42081FBC1947610200412486 /* PDFBigViewController.m */,
+			);
+			name = PDFBigViewController;
+			sourceTree = "<group>";
+		};
 		422A691B19100939001CAB8D /* ImagesAssets */ = {
 			isa = PBXGroup;
 			children = (
@@ -1292,6 +1304,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				42081FBA194760E400412486 /* PDFBigViewController */,
 				425010D2194622680040B9A9 /* PDFViewController */,
 				427DF9301944CA9F00DBF91D /* ScrollViewController */,
 				42B70D1D18F3D43700CF0C97 /* SketchRequestViewController */,
@@ -1756,6 +1769,7 @@
 				425B8B2F193D04EE00DF40C6 /* FavCell.m in Sources */,
 				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,
 				422A692A19102CBD001CAB8D /* LogoSearch.m in Sources */,
+				42081FBD1947610200412486 /* PDFBigViewController.m in Sources */,
 				427CE63C18F07D8B00865291 /* DirectViewController.m in Sources */,
 				427CE64018F2E47C00865291 /* SignView.m in Sources */,
 				42FF7A2518CDE92A00C72695 /* AppDelegate.m in Sources */,

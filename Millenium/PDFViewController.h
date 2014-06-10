@@ -13,14 +13,18 @@
 #import "iCarousel.h"
 #import "MarketingViewController.h"
 #import "ViewController.h"
+#import "PDFBigViewController.h"
+
 
 @interface
 PDFViewController : UIViewController<UIScrollViewDelegate>{
     
     
 }
-//@property (strong, nonatomic) MPMoviePlayerController *movieController;
 
+
+@property (nonatomic, strong) NSString*selectedString;
+@property (nonatomic, strong) NSString*selectedPdfString;
 @property (nonatomic, strong) IBOutlet UIScrollView*pdfScrollView;
 @property (nonatomic, strong) IBOutlet UIButton * walkOffLogoMatButton;
 @property (nonatomic, strong) IBOutlet UIButton * waterGuardLogoInlayButton;
