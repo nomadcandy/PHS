@@ -1075,6 +1075,17 @@ else{
     
 }
 
+- (IBAction)presentPDFViewController:(UIButton *)sender{
+    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFStoryboard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
+    
+    
+}
+
 
 
 - (IBAction)presentInteractiveViewController:(UIButton *)sender{
@@ -1216,7 +1227,7 @@ else{
         
         
         UIStoryboard *storyboard = self.storyboard;
-        MarketingViewController *mvc = [storyboard instantiateViewControllerWithIdentifier:@"MarketingViewBoard"];
+        PDFViewController *mvc = [storyboard instantiateViewControllerWithIdentifier:@"PDFStoryboard"];
         
         // Configure the new view controller here.
         [self presentViewController:mvc animated:YES completion:nil];

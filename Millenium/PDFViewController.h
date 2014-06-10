@@ -19,7 +19,7 @@ PDFViewController : UIViewController<UIScrollViewDelegate>{
     
     
 }
-@property (strong, nonatomic) MPMoviePlayerController *movieController;
+//@property (strong, nonatomic) MPMoviePlayerController *movieController;
 
 @property (nonatomic, strong) IBOutlet UIScrollView*pdfScrollView;
 @property (nonatomic, strong) IBOutlet UIButton * walkOffLogoMatButton;

@@ -800,13 +800,6 @@
 			name = InternetViewController;
 			sourceTree = "<group>";
 		};
-		425010A8194514780040B9A9 /* PDFViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = PDFViewController;
-			sourceTree = "<group>";
-		};
 		425010D2194622680040B9A9 /* PDFViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1245,7 +1238,6 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
-				425010A8194514780040B9A9 /* PDFViewController */,
 				427DF92D19423CD200DBF91D /* ThumbNailMovies */,
 				422A692219101E5E001CAB8D /* CoreData */,
 				42DEAF2C19192D6E0087E71D /* ImagesImagePicker */,

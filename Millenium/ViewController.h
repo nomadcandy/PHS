@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "iCarousel.h"
+#import "PDFViewController.h"
 #import "DirectViewController.h"
 #import "RentalViewController.h"
 #import "ScrollViewController.h"
