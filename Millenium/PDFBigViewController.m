@@ -14,6 +14,9 @@
 
 @implementation PDFBigViewController
 
+@synthesize pdfImageView,selectedString,selectedPdfString;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,6 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
+    UIImage *pdfImage= [UIImage imageNamed:selectedPdfString];
+    pdfImageView.image =pdfImage;
     // Do any additional setup after loading the view.
 }
 

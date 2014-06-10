@@ -65,11 +65,13 @@
 
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender {
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     
     selectedPdfString=@"WalkOffLogoMat.png";
     selectedString=@"Walk Off Logo Mat";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -82,11 +84,13 @@
 
 - (IBAction)buttonTappedWaterGuardLogoInlay:(UIButton *)sender {
     
-    
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     selectedPdfString=@"WaterGuardLogoInlay.png";
     selectedString=@"Water Guard Logo Inlay";
 
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+
+    
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
     [self presentViewController:pleaseLoad animated:YES completion:nil];
@@ -99,9 +103,11 @@
 
 - (IBAction)buttonTappedMotifMat:(UIButton *)sender {
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"WaterGuardMotifMat.png";
     selectedString=@"Water Guard Motif Mat";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -118,6 +124,8 @@
     selectedPdfString=@"UltraGuardLogoInlay.png";
     selectedString=@"Water Guard Logo Inlay";
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
     [self presentViewController:pleaseLoad animated:YES completion:nil];
@@ -131,9 +139,11 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"FirstStepLogoScraper.png";
     selectedString=@"First Step Logo Scraper";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -150,9 +160,11 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"GoldenSeries.png";
     selectedString=@"Golden Series";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -163,9 +175,11 @@
 - (IBAction)buttonTappedSilverSeries:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"SilverSeries.png";
     selectedString=@"Silver Series";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -181,9 +195,11 @@
 - (IBAction)buttonTappedWalkOffPhoenixMat:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"WalkOffPhoenixMat.png";
     selectedString=@"Walk Off Phoenix Mat";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -196,9 +212,11 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"TreadLock.png";
     selectedString=@"Tread Lock";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -212,9 +230,16 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"WaterGuardDiamond.png";
     selectedString=@"Water Guard Diamond";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
+
     
     
     
@@ -227,9 +252,11 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"WaterGuard.png";
     selectedString=@"Water Guard";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
 
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -246,9 +273,11 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"UltraGuard.png";
     selectedString=@"Ultra Guard";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -262,9 +291,11 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     selectedPdfString=@"EcoGuard.png";
     selectedString=@"Eco Guard";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+
     
     
     UIStoryboard *storyboard = self.storyboard;
@@ -278,9 +309,12 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"ParquetWiperScraper.png";
     selectedString=@"Parquet Wiper Scraper";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -294,9 +328,11 @@
     
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"BrushTip.png";
     selectedString=@"Brush Tip";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -310,9 +346,11 @@
 - (IBAction)buttonTappedTripleFlexScraper:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+   
     selectedPdfString=@"FlexScraper.png";
     selectedString=@"Flex Scraper";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -324,9 +362,11 @@
 - (IBAction)buttonTappedFirstStepScraper:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"StepScraper.png";
     selectedString=@"Step Scraper";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -340,9 +380,10 @@
 - (IBAction)buttonTappedDuraLite:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     selectedPdfString=@"DuraLite.png";
     selectedString=@"Dura Lite";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
    
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -354,9 +395,11 @@
 
 - (IBAction)buttonTappedSafetyChef:(UIButton *)sender {
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+   
     selectedPdfString=@"SafetyChef.png";
     selectedString=@"Safety Chef";
+    
+     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -367,9 +410,11 @@
 
 - (IBAction)buttonTappedTripleFlexFlow:(UIButton *)sender {
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"TripleFlexFlow.png";
     selectedString=@"Triple Flex Flow";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -380,10 +425,11 @@
 
 - (IBAction)buttonTappedFreeFlowComfort:(UIButton *)sender {
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"FreeFlowComfort.png";
     selectedString=@"Free Flow Comfort";
     
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -399,10 +445,11 @@
 - (IBAction)buttonTappedMarbleTop:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+   
     selectedPdfString=@"MarbleTop.png";
     selectedString=@"Marble Top";
  
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -413,9 +460,11 @@
 - (IBAction)buttonTappedSpringStep:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"SpringStep.png";
     selectedString=@"Spring Step";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -429,9 +478,11 @@
 - (IBAction)buttonTappedSafeStep:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
     selectedPdfString=@"SafeStep.png";
     selectedString=@"Safe Step";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -441,9 +492,10 @@
 
 - (IBAction)buttonTappedAirStep:(UIButton *)sender {
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     selectedPdfString=@"AirStep.png";
     selectedString=@"Air Step";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
@@ -455,9 +507,10 @@
 - (IBAction)buttonTappedSoftStep:(UIButton *)sender {
     
     
-    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     selectedPdfString=@"SoftStep.png";
     selectedString=@"SoftStep";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
    
     UIStoryboard *storyboard = self.storyboard;
     PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];

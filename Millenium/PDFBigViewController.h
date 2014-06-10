@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) NSString*selectedString;
 @property (nonatomic, strong) NSString*selectedPdfString;
+@property (nonatomic, strong) IBOutlet UIImageView*pdfImageView;
 
 
 @end
