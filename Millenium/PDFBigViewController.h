@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PDFViewController.h"
+#import <Social/Social.h>
+#import <MessageUI/MessageUI.h>
 
 @interface PDFBigViewController : UIViewController
 
