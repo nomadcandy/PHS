@@ -28,7 +28,9 @@
     [super viewDidLoad];
     
     //NSString *strURL = @"http://www.google.com";
-    NSString *strURL = @"http://cintasqa.millmats.com/Commerce/Default.aspx?id=1";
+    //NSString *strURL = @"http://cintasqa.millmats.com/Commerce/Default.aspx?id=1";
+   NSString *strURL = @"http://ipadqa.millmats.com/commerce/default.aspx";
+
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self->rentalWebView loadRequest:urlRequest];
