@@ -240,7 +240,7 @@
 @property (nonatomic, strong) NSString *locationIDString;
 
 @property (nonatomic, strong) NSString *matBGTextColorString;
-@property (nonatomic, strong) NSString *matBGColorString;
+@property (nonatomic, assign) NSString *matBGColorString;
 @property (nonatomic, strong) NSString *matUseBGColorString;
 @property (nonatomic, strong) NSString *logoBGColorString;
 
