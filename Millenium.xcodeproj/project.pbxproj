@@ -27,6 +27,14 @@
 		42081FE11947B29600412486 /* WaterGuard.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42081FE01947B29600412486 /* WaterGuard.pdf */; };
 		42081FE31947B34400412486 /* UltraGuardPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FE21947B34400412486 /* UltraGuardPDF.png */; };
 		42081FE51947B3B300412486 /* EcoGuardPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FE41947B3B200412486 /* EcoGuardPDF.png */; };
+		42081FED1948A3A200412486 /* RepHead.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FE71948A3A200412486 /* RepHead.png */; };
+		42081FEE1948A3A200412486 /* BuildMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FE81948A3A200412486 /* BuildMat.png */; };
+		42081FEF1948A3A200412486 /* DirectPurchase.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FE91948A3A200412486 /* DirectPurchase.png */; };
+		42081FF01948A3A200412486 /* Marketing.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FEA1948A3A200412486 /* Marketing.png */; };
+		42081FF11948A3A200412486 /* RentalButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FEB1948A3A200412486 /* RentalButton.png */; };
+		42081FF21948A3A200412486 /* Homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FEC1948A3A200412486 /* Homepage.png */; };
+		42081FFC1948AB3800412486 /* SearchBoxSimple3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FFB1948AB3800412486 /* SearchBoxSimple3.png */; };
+		42081FFE1948AB9C00412486 /* Mag.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FFD1948AB9C00412486 /* Mag.png */; };
 		420BEF9619192E04003DCEB0 /* MaskWhiteSquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */; };
 		420BEF98191935C7003DCEB0 /* MaskGreySquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF97191935C7003DCEB0 /* MaskGreySquare2.png */; };
 		420BEF9A191937C7003DCEB0 /* MaskGreySquare4.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF99191937C7003DCEB0 /* MaskGreySquare4.png */; };
@@ -369,6 +377,14 @@
 		42081FE01947B29600412486 /* WaterGuard.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = WaterGuard.pdf; sourceTree = "<group>"; };
 		42081FE21947B34400412486 /* UltraGuardPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UltraGuardPDF.png; sourceTree = "<group>"; };
 		42081FE41947B3B200412486 /* EcoGuardPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EcoGuardPDF.png; sourceTree = "<group>"; };
+		42081FE71948A3A200412486 /* RepHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RepHead.png; sourceTree = "<group>"; };
+		42081FE81948A3A200412486 /* BuildMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuildMat.png; sourceTree = "<group>"; };
+		42081FE91948A3A200412486 /* DirectPurchase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DirectPurchase.png; sourceTree = "<group>"; };
+		42081FEA1948A3A200412486 /* Marketing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Marketing.png; sourceTree = "<group>"; };
+		42081FEB1948A3A200412486 /* RentalButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RentalButton.png; sourceTree = "<group>"; };
+		42081FEC1948A3A200412486 /* Homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Homepage.png; sourceTree = "<group>"; };
+		42081FFB1948AB3800412486 /* SearchBoxSimple3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchBoxSimple3.png; sourceTree = "<group>"; };
+		42081FFD1948AB9C00412486 /* Mag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mag.png; sourceTree = "<group>"; };
 		420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare2.png; sourceTree = "<group>"; };
 		420BEF97191935C7003DCEB0 /* MaskGreySquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare2.png; sourceTree = "<group>"; };
 		420BEF99191937C7003DCEB0 /* MaskGreySquare4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare4.png; sourceTree = "<group>"; };
@@ -696,6 +712,21 @@
 				42081FBC1947610200412486 /* PDFBigViewController.m */,
 			);
 			name = PDFBigViewController;
+			sourceTree = "<group>";
+		};
+		42081FE61948A33800412486 /* ImagesNewHome */ = {
+			isa = PBXGroup;
+			children = (
+				42081FFD1948AB9C00412486 /* Mag.png */,
+				42081FFB1948AB3800412486 /* SearchBoxSimple3.png */,
+				42081FE71948A3A200412486 /* RepHead.png */,
+				42081FE81948A3A200412486 /* BuildMat.png */,
+				42081FE91948A3A200412486 /* DirectPurchase.png */,
+				42081FEA1948A3A200412486 /* Marketing.png */,
+				42081FEB1948A3A200412486 /* RentalButton.png */,
+				42081FEC1948A3A200412486 /* Homepage.png */,
+			);
+			name = ImagesNewHome;
 			sourceTree = "<group>";
 		};
 		422A691B19100939001CAB8D /* ImagesAssets */ = {
@@ -1199,6 +1230,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				42081FE61948A33800412486 /* ImagesNewHome */,
 				427DF92D19423CD200DBF91D /* ThumbNailMovies */,
 				422A692219101E5E001CAB8D /* CoreData */,
 				42DEAF2C19192D6E0087E71D /* ImagesImagePicker */,
@@ -1408,9 +1440,11 @@
 				422139A219128F8B001BD328 /* AssetsRemFavButtons.png in Resources */,
 				42081FD81947B04700412486 /* TripleFlexScraperPDF.png in Resources */,
 				426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */,
+				42081FED1948A3A200412486 /* RepHead.png in Resources */,
 				428085D018FD792D00389C9C /* goButton.png in Resources */,
 				42F399C91946675B00C84189 /* WaterGuardM.png in Resources */,
 				4297E08319250F8100E43779 /* Red_112.jpg in Resources */,
+				42081FF01948A3A200412486 /* Marketing.png in Resources */,
 				42F399D01946675B00C84189 /* SilverSeriesM.png in Resources */,
 				426A6A1D18ED0CC300255331 /* SampleLogo4.png in Resources */,
 				42F399C11946675B00C84189 /* SafetyChefM.png in Resources */,
@@ -1430,6 +1464,7 @@
 				42E9AC2918FF5FB9000E226D /* go1Button.png in Resources */,
 				42F399D21946675B00C84189 /* FirstStepLogoScraperM.png in Resources */,
 				429C4AB3192566D900AF8050 /* addNote.png in Resources */,
+				42081FFE1948AB9C00412486 /* Mag.png in Resources */,
 				42B0150D18DFBD330068019C /* CircleButton.png in Resources */,
 				420BEFA619195613003DCEB0 /* ImagePickerCropButton.png in Resources */,
 				4297E05E1923D11D00E43779 /* MaskWhiteSquare15.png in Resources */,
@@ -1472,8 +1507,10 @@
 				422139931912883A001BD328 /* AssetsFavButton.png in Resources */,
 				42E9AC1418FF59E2000E226D /* Clean2Button.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
+				42081FF21948A3A200412486 /* Homepage.png in Resources */,
 				42A24BFE191843FF00568305 /* InteractiveGreyMat.png in Resources */,
 				428085CE18FD756200389C9C /* LoginPopOver.png in Resources */,
+				42081FF11948A3A200412486 /* RentalButton.png in Resources */,
 				42A24BF919181FB800568305 /* InteractivePortraitButton.png in Resources */,
 				429C4AAC1925622D00AF8050 /* SearchBox.png in Resources */,
 				42F399D41946675B00C84189 /* MotifMatM.png in Resources */,
@@ -1481,6 +1518,7 @@
 				4297E09119250F8100E43779 /* Burgundy_100.jpg in Resources */,
 				42E9AC1618FF59E2000E226D /* Fresh2Button.png in Resources */,
 				42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */,
+				42081FEF1948A3A200412486 /* DirectPurchase.png in Resources */,
 				426A6A1618ED0CC300255331 /* SampleLogo11.png in Resources */,
 				426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */,
 				42E9AC2418FF5A6C000E226D /* Fresh3Button.png in Resources */,
@@ -1497,6 +1535,7 @@
 				42E9AC2018FF5A6C000E226D /* pro3button.png in Resources */,
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
 				426A6A2718EDACD600255331 /* MatChatterBg.png in Resources */,
+				42081FFC1948AB3800412486 /* SearchBoxSimple3.png in Resources */,
 				42081FD21947B04700412486 /* SpringStepPDF.png in Resources */,
 				421EE34F1919788F008A5CAB /* WebPadBig.png in Resources */,
 				42F399C01946675B00C84189 /* TripleFlexFlowM.png in Resources */,
@@ -1504,6 +1543,7 @@
 				42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */,
 				4297E07D19250F8100E43779 /* Rose_119.jpg in Resources */,
 				42F399C71946675B00C84189 /* SpringStepM.png in Resources */,
+				42081FEE1948A3A200412486 /* BuildMat.png in Resources */,
 				4297E08719250F8100E43779 /* Navy_118.jpg in Resources */,
 				42A24BFC19183F3000568305 /* InteractiveSignHere.png in Resources */,
 				42F30DD3192D05500004A019 /* PMSRainbow.png in Resources */,

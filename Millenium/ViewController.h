@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "iCarousel.h"
+//#import "iCarousel.h"
 #import "PDFViewController.h"
 #import "DirectViewController.h"
 #import "RentalViewController.h"
@@ -26,7 +26,7 @@
 
 @end
 
-@interface ViewController : UIViewController <iCarouselDataSource, iCarouselDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,ArrayDelegate,NSFetchedResultsControllerDelegate, UIAlertViewDelegate>
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,ArrayDelegate,NSFetchedResultsControllerDelegate, UIAlertViewDelegate>
 
 {
     LogoSearch*newLogoSearch;
@@ -162,7 +162,7 @@
 -(IBAction)playPro:(id)sender;
 -(IBAction)playFriendly:(id)sender;
 
--(IBAction)pressedButton:(id)sender;
+//-(IBAction)pressedButton:(id)sender;
 -(IBAction)toggledSwitch:(id)sender;
 -(IBAction)changedSlider:(id)sender;
 -(IBAction)presentInteractiveViewController:(UIButton *)sender;

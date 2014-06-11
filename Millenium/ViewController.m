@@ -928,33 +928,6 @@ else{
     //but for this example we haven't bothered
     return 6;
 }
-//hell0
-
-
-
-/*- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
-{
-	UIButton *button = (UIButton *)view;
-	if (button == nil)
-	{
-        
-        
-         
-		//no button available to recycle, so create new one
-		UIImage *image = [UIImage imageNamed:@"WhiteCircleRugSample2.png"];
-		button = [UIButton buttonWithType:UIButtonTypeCustom];
-		button.frame = CGRectMake(0.0f, 0.0f, image.size.width, image.size.height);
-		[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-		[button setBackgroundImage:image forState:UIControlStateNormal];
-		button.titleLabel.font = [button.titleLabel.font fontWithSize:50];
-		[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
-	}
-	
-	//set button label
-	[button setTitle:[NSString stringWithFormat:@"%i", index] forState:UIControlStateNormal];
-	
-	return button;
-}*/
 
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
@@ -962,8 +935,7 @@ else{
 	UIButton *button = (UIButton *)view;
 	if (button == nil)
 	{
-		//no button available to recycle, so create new one
-		//UIImage *image = [UIImage imageNamed:@"CarouselBGWhite.png"];
+		
         
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         UIImage *image = [UIImage imageNamed:@"carouselbgnopicuse.png"];
@@ -975,7 +947,7 @@ else{
 		[button setBackgroundImage:image forState:UIControlStateNormal];
          button.alpha = 0.8;
         
-        //[button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+       
         
         
         button.layer.shadowColor = [UIColor darkGrayColor].CGColor;
@@ -1049,16 +1021,6 @@ else{
 }
 
 
-/*- (IBAction)buttonTappedSix:(UIButton *)sender{
-    
-    
-    
-    
-       [self presentViewController:InteractiveViewController animated:YES completion:nil];
-    
-    
-    
-}*/
 
 
 
@@ -1103,8 +1065,6 @@ else{
     
     UIStoryboard *storyboard = self.storyboard;
     DirectViewController *dvc = [storyboard instantiateViewControllerWithIdentifier:@"DirectStoryBoard"];
-    
-    // Configure the new view controller here.
     [self presentViewController:dvc animated:YES completion:nil];
     
     
@@ -1114,8 +1074,6 @@ else{
     
     UIStoryboard *storyboard = self.storyboard;
     RentalViewController *rvc = [storyboard instantiateViewControllerWithIdentifier:@"RentalStoryBoard"];
-    
-    // Configure the new view controller here.
     [self presentViewController:rvc animated:YES completion:nil];
     
     
@@ -1126,8 +1084,6 @@ else{
     
     UIStoryboard *storyboard = self.storyboard;
     LogoCollectionViewController *searchvc = [storyboard instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
-    
-    // Configure the new view controller here.
     [self presentViewController:searchvc animated:YES completion:nil];
     
     
@@ -1139,7 +1095,6 @@ else{
     UIStoryboard *storyboard = self.storyboard;
     SketchRequestViewController *srvc = [storyboard instantiateViewControllerWithIdentifier:@"SketchRequestStoryBoard"];
     
-    // Configure the new view controller here.
     [self presentViewController:srvc animated:YES completion:nil];
     
     
