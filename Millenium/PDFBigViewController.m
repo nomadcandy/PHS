@@ -89,10 +89,7 @@
     
     
     
-    // Add attachment
     
-    
-    //[mailComposer addAttachmentData:data mimeType:@"image/png" fileName:@"EcoGuardPDF.png"];
     
     /*NSString*firstNameString= firstNameField.text;
     NSString*lastNameString= lastNameField.text;
@@ -122,15 +119,8 @@
     [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"pdfImage.jpg"];
     //[mc setMessageBody:messageBody isHTML:NO];
     
-    //[mc setToRecipients:toRecipents];
-    
     NSMutableArray*recipients=[[NSMutableArray alloc]init];
-    
-    [mailComposer setToRecipients:recipients];
-    
-    
-    
-    
+    [mc setToRecipients:recipients];
     
     [self presentViewController:mc animated:YES completion:NULL];
     
