@@ -95,6 +95,7 @@
 {
     [super viewDidLoad];
     
+    searchField.textAlignment = NSTextAlignmentCenter;
     
     charlesBGView.hidden =YES;
     charlesView.hidden=YES;
