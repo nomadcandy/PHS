@@ -122,6 +122,7 @@
 
 @synthesize firstNameString;
 @synthesize lastNameString;
+@synthesize userIDString;
 @synthesize locationIDString;
 @synthesize locationNameString;
 @synthesize locationNumberString;
@@ -265,7 +266,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     [self.view addSubview:matLabel];
 
     
-    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(226, 44, 200, 30)];
+    searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(326, 44, 200, 30)];
     searchHereField.borderStyle = UITextBorderStyleRoundedRect;
     searchHereField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     searchHereField.placeholder = @"SEARCH";
@@ -292,7 +293,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     [self.view addSubview:favHereButton];
     
     
-    /*UIButton *repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
      [repHereButton addTarget:self
      action:@selector(goRep:)
      forControlEvents:UIControlEventTouchDown];
@@ -300,8 +301,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
      
      UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
      [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
-     repHereButton.frame = CGRectMake(113.0, 33.0, 45.0, 45.0);
-     [self.view addSubview:repHereButton];*/
+     repHereButton.frame = CGRectMake(430.0, 33.0, 45.0, 45.0);
+     [self.view addSubview:repHereButton];
     
     
     UIButton *nearHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -344,7 +345,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     UIImage*searchHereImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
     [searchHereButton setBackgroundImage:searchHereImage forState:UIControlStateNormal];
-    searchHereButton.frame = CGRectMake(430.0, 35.0, 50.0, 50.0);
+    searchHereButton.frame = CGRectMake(530.0, 35.0, 50.0, 50.0);
     [self.view addSubview:searchHereButton];
 
     
@@ -500,14 +501,113 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goRep:(id)sender{
     
-    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
-    //request.region = regionToSearchIn;
-    //request.region = 500;
-    request.naturalLanguageQuery = @"restaurants"; // or business name
-    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
-    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
-        // do something with the results / error
-    }];
+    userIDString = [[NSUserDefaults standardUserDefaults]
+                    stringForKey:@"userID"];
+    NSLog(@"userIDString: %@", userIDString);
+    
+    
+    //Search Logos
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=1&userID=%@",20,userIDString];
+    
+    
+    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+    
+    NSLog(@"URLLOGIN: %@",urlSearch);
+    NSError *error = nil;
+    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
+    
+    
+    
+    
+    //parse Array from web
+    NSArray *searchLogoArray = [NSJSONSerialization
+                                JSONObjectWithData:data
+                                options:NSJSONReadingAllowFragments
+                                error: &error];
+    
+    
+    
+    
+    
+    //Search Mats
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=0&userID=%@",20,userIDString];
+    
+    
+    
+    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    
+    NSLog(@"URLLOGIN: %@",urlSearchMat);
+    NSError *errorMat = nil;
+    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+    
+    
+    
+    
+    //parse Array from web
+    NSArray *searchMatArray = [NSJSONSerialization
+                               JSONObjectWithData:dataMat
+                               options:NSJSONReadingAllowFragments
+                               error: &error];
+    
+    
+    if(data!=nil)
+        
+    {
+        
+        
+        
+        [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+            
+            
+            
+            artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+            artworkCount= artworkNameArray.count;
+            artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
+            artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
+            artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+            artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
+            artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
+            artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+            
+            artworkCount = artworkNameArray.count;
+            
+        }];
+        
+        [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+            
+            
+            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+            matCount= matNameArray.count;
+            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+            matFormatArray = [searchMatArray valueForKey:@"Format"];
+            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+            matIconArray = [searchMatArray valueForKey:@"IconURL"];
+            matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+            artworkColorArray = [searchMatArray valueForKey:@"Color"];
+            
+            matCount = matNameArray.count;
+            
+            
+            
+            
+        }];
+        
+        [self.collectionView reloadData];
+        
+    }
+    
+    else {
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your personal data is not available please login once more to the application" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+        
+        
+    }
     
 }
 

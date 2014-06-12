@@ -226,7 +226,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             forControlEvents:UIControlEventTouchDown];
     
     
-    UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
+    UIImage*repHereImage = [UIImage imageNamed:@"RepHead.png"];
     [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
     repHereButton.frame = CGRectMake(226.0, 33.0, 45.0, 45.0);
     [self.view addSubview:repHereButton];
@@ -432,6 +432,111 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     userIDString = [[NSUserDefaults standardUserDefaults]
                         stringForKey:@"userID"];
     NSLog(@"userIDString: %@", userIDString);
+    
+    
+    //Search Logos
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=1&userID=%@",20,userIDString];
+    
+    
+    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+    
+    NSLog(@"URLLOGIN: %@",urlSearch);
+    NSError *error = nil;
+    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
+    
+    
+    
+    
+    //parse Array from web
+    NSArray *searchLogoArray = [NSJSONSerialization
+                                JSONObjectWithData:data
+                                options:NSJSONReadingAllowFragments
+                                error: &error];
+    
+    
+    
+    
+    
+    //Search Mats
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=0&userID=%@",20,userIDString];
+    
+    
+    
+    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    
+    NSLog(@"URLLOGIN: %@",urlSearchMat);
+    NSError *errorMat = nil;
+    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+    
+    
+    
+    
+    //parse Array from web
+    NSArray *searchMatArray = [NSJSONSerialization
+                               JSONObjectWithData:dataMat
+                               options:NSJSONReadingAllowFragments
+                               error: &error];
+    
+    
+    if(data!=nil)
+        
+    {
+        
+        
+        
+        [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+            
+            
+            
+            artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+            artworkCount= artworkNameArray.count;
+            artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
+            artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
+            artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+            artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
+            artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
+            artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+            
+            artworkCount = artworkNameArray.count;
+            
+        }];
+        
+        [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+            
+            
+            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+            matCount= matNameArray.count;
+            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+            matFormatArray = [searchMatArray valueForKey:@"Format"];
+            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+            matIconArray = [searchMatArray valueForKey:@"IconURL"];
+            matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+            artworkColorArray = [searchMatArray valueForKey:@"Color"];
+            
+            matCount = matNameArray.count;
+            
+            
+            
+            
+        }];
+        
+        [self.collectionView reloadData];
+        
+    }
+    
+    else {
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your personal data is not available please login once more to the application" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+        
+        
+    }
+
 }
 
 
