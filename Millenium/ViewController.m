@@ -140,104 +140,11 @@
 -(IBAction)goLogin:(id)sender{
     
     
-    if (loginField.text!=Nil || passwordField.text!= Nil || [loginField.text length] == 0 || [passwordField.text length] == 0)
+    UIStoryboard *storyboard = self.storyboard;
+    LoginViewController *loginLoad = [storyboard instantiateViewControllerWithIdentifier:@"LoginStoryboard"];
     
-    {
-        
-        
-        
-        
-        
-        NSString*loginString= loginField.text;
-        NSString*passwordString= passwordField.text;
-    
-        loginView.hidden =YES;
-    
-
-        
-        
-        
-    
-        
-        
-    
-    NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", loginString,passwordString];
-    
-    
-    NSURL *urlLogin = [[NSURL alloc] initWithString:urlLoginString];
-    NSLog(@"URLLOGIN: %@",urlLogin);
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfURL:urlLogin];
-    
-    
-    
-    //parse Dictionary from web
-    /*NSDictionary *loginDictionary = [NSJSONSerialization
-                                     JSONObjectWithData:data
-                                     options:NSJSONReadingAllowFragments
-                                     error: &error];
-    
-    NSLog(@"%@LoginDICTIONARY",loginDictionary);*/
-    
-    
-    //parse Array from web
-    NSArray *loginArray = [NSJSONSerialization
-                               JSONObjectWithData:data
-                               options:NSJSONReadingAllowFragments
-                               error: &error];
-        
-   //NSArray* loginArray = [loginDictionary allKeys];
-    
-    [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-        
-        NSLog(@"%@", object);
-        NSLog(@"loginArray %@",loginArray);
-        
-        
-        firstNameString = [loginArray valueForKey:@"FirstName"];
-        lastNameString = [loginArray valueForKey:@"LastName"];
-        NSArray*locationIDArray = [loginArray valueForKey:@"LocationID"];
-        locationNameString = [loginArray valueForKey:@"LocationName"];
-        locationNumberString = [loginArray valueForKey:@"LocationNumber"];
-        
-        locationIDString = [locationIDArray objectAtIndex:0];
-        
-        //NSLog(@"locationIDParaString %@",locationIDParaString);
-        
-       // NSString* str = @"This string uses (something special)";
-       /* NSRange rgMin = [locationIDParaString rangeOfString:@"("];
-        NSRange rgMax = [locationIDParaString rangeOfString:@")"];
-        
-        NSRange replaceRange = NSMakeRange(rgMin.location, rgMax.location-rgMin.location+1);
-        
-        locationIDString = locationIDParaString;
-        
-        if (rgMin.location < rgMax.location)
-        {
-            locationIDString = [locationIDParaString stringByReplacingCharactersInRange:replaceRange withString:@""];
-        }*/
-        
-       
-        //NSString *originalString = @"(123) 123123 abc";
-        NSLog(@"locationIDString %@",locationIDString);
-        NSString *valueToSave = locationIDString;
-        [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"locationID"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        
-        
-          }];
-        
-  
-    
-    
-    
-    
-        
-
-        
-    }
-    
+    // Configure the new view controller here.
+    [self presentViewController:loginLoad animated:YES completion:nil];
     
 }
 

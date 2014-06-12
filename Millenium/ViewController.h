@@ -16,6 +16,7 @@
 #import "MarketingViewController.h"
 #import "SearchViewController.h"
 #import "SketchRequestViewController.h"
+#import "LoginViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "LogoSearch.h"

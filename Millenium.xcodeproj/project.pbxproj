@@ -263,6 +263,7 @@
 		42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
 		42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
 		42B70D2118F3D45900CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
+		42CEE8C9194907CB00405489 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CEE8C8194907CB00405489 /* LoginViewController.m */; };
 		42D35011193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */; };
 		42D35013193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42D35012193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v */; };
 		42D95173190ADF5600FD69B3 /* MatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D95172190ADF5600FD69B3 /* MatCell.m */; };
@@ -588,6 +589,8 @@
 		42B0159818E35CF20068019C /* VideosWhite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite3.png; sourceTree = "<group>"; };
 		42B70D1E18F3D45800CF0C97 /* SketchRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchRequestViewController.h; sourceTree = "<group>"; };
 		42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchRequestViewController.m; sourceTree = "<group>"; };
+		42CEE8C7194907CB00405489 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		42CEE8C8194907CB00405489 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMediumMob.m4v; sourceTree = "<group>"; };
 		42D35012193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMobile.m4v; sourceTree = "<group>"; };
 		42D95171190ADF5600FD69B3 /* MatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatCell.h; sourceTree = "<group>"; };
@@ -1157,6 +1160,16 @@
 			name = SketchRequestViewController;
 			sourceTree = "<group>";
 		};
+		42CEE8C6194907AE00405489 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				42CEE8C7194907CB00405489 /* LoginViewController.h */,
+				42CEE8C8194907CB00405489 /* LoginViewController.m */,
+			);
+			name = LoginViewController;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		42DEAF2C19192D6E0087E71D /* ImagesImagePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1284,6 +1297,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				42CEE8C6194907AE00405489 /* LoginViewController */,
 				42081FBA194760E400412486 /* PDFBigViewController */,
 				425010D2194622680040B9A9 /* PDFViewController */,
 				427DF9301944CA9F00DBF91D /* ScrollViewController */,
@@ -1744,6 +1758,7 @@
 				42FF7A2118CDE92A00C72695 /* main.m in Sources */,
 				425010D0194622520040B9A9 /* PDFViewController.m in Sources */,
 				42B0151518E0F57E0068019C /* MaskView.m in Sources */,
+				42CEE8C9194907CB00405489 /* LoginViewController.m in Sources */,
 				424756D918D389FA000AAF7C /* SearchViewController.m in Sources */,
 				42EB3EE118D232AB00FAD7FD /* MyDraggableImage.m in Sources */,
 				424756F018D7379E000AAF7C /* InternetViewController.m in Sources */,
