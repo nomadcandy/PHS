@@ -164,7 +164,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *matColorButton6;
 @property (nonatomic, strong) IBOutlet UIButton *matColorButton7;
 @property (nonatomic, strong) IBOutlet UIButton *matColorButton8;
-@property (nonatomic, strong) IBOutlet UIButton *bgColorButton;
+@property (nonatomic, assign) IBOutlet UIButton *bgColorButton;
 
 
 

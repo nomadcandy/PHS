@@ -195,6 +195,7 @@
     [super viewDidLoad];
     
    
+    searchField.textAlignment = NSTextAlignmentCenter;
     
     
     [_widthField addTarget:self
@@ -1340,6 +1341,7 @@
         
         UIImage*matBGColorImage = [UIImage imageNamed:matUseBGColorString];
         [bgColorButton setBackgroundImage:matBGColorImage forState:UIControlStateNormal];
+        [bgColorButton setImage:matBGColorImage forState:UIControlStateNormal];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setTitle:matBGTextColorString forState:UIControlStateNormal];
 
@@ -2860,6 +2862,7 @@ else
     
 }*/
 
+#pragma bgColorSelected
 
 -(IBAction)bgColorSelected:(UIButton*)sender event:(id)event {
     
@@ -2877,7 +2880,11 @@ else
         UIImage *myBGColor = [UIImage imageNamed:@"Steel Blue_121.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
-        //[self.bgColorButton reloadInputViews];
+        [bgColorButton setImage:myBGColor forState:UIControlStateSelected];
+        [bgColorButton setImage:myBGColor forState:UIControlStateHighlighted];
+        [bgColorButton setImage:myBGColor forState:UIControlStateApplication];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [self.bgColorButton reloadInputViews];
         
         
         
@@ -2891,6 +2898,7 @@ else
         UIImage *myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3149,7 +3157,7 @@ else
         [self.bgColorButton reloadInputViews];
         
     }
- // [self.bgColorButton reloadInputViews];
+  [self.bgColorButton reloadInputViews];
   matBGLogoView.contentMode = UIViewContentModeScaleToFill;
 
 
