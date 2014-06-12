@@ -27,6 +27,9 @@
 
 - (void)viewDidLoad
 {
+    
+    loginField.textAlignment = NSTextAlignmentCenter;
+    passwordField.textAlignment = NSTextAlignmentCenter;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

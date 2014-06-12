@@ -4935,7 +4935,7 @@
                                 <rect key="frame" x="347" y="554" width="369" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRY-BK-gW4">
                                 <rect key="frame" x="702" y="494" width="44" height="42"/>
@@ -5102,8 +5102,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QQh-is-hk2"/>
         <segue reference="qOq-Ne-VbY"/>
         <segue reference="wpq-PH-bdK"/>
+        <segue reference="gYW-Ou-qn0"/>
     </inferredMetricsTieBreakers>
 </document>
