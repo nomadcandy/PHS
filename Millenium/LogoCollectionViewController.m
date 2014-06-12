@@ -118,6 +118,7 @@
 
 @synthesize firstNameString;
 @synthesize lastNameString;
+@synthesize userIDString;
 @synthesize locationIDString;
 @synthesize locationNameString;
 @synthesize locationNumberString;
@@ -166,7 +167,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         locationIDString = [[NSUserDefaults standardUserDefaults]
                             stringForKey:@"locationID"];
-        
+        NSLog(@"locationIDString: %@", locationIDString);
     }
     
     
@@ -428,25 +429,22 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goRep:(id)sender{
     
-    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
-    //request.region = regionToSearchIn;
-    //request.region = 500;
-    request.naturalLanguageQuery = @"restaurants"; // or business name
-    MKLocalSearch *localSearch = [[MKLocalSearch alloc] initWithRequest:request];
-    [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
-        // do something with the results / error
-    }];
-    
+    userIDString = [[NSUserDefaults standardUserDefaults]
+                        stringForKey:@"userID"];
+    NSLog(@"userIDString: %@", userIDString);
 }
 
 
 
 -(IBAction)goNearMe:(id)sender{
-
    
-    NSLog(@"locationIDString: %@", locationIDString);
     
+    locationIDString = [[NSUserDefaults standardUserDefaults]
+                        stringForKey:@"locationID"];
+    
+    NSLog(@"locationIDString: %@", locationIDString);
    
+    
     
     
     //Search Logos
@@ -493,49 +491,64 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                                error: &error];
     
     
+    if(data!=nil)
+        
+    {
+        
+        
+       
+        [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        
+        
+        
+        
+            artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+            artworkCount= artworkNameArray.count;
+            artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
+            artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
+            artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+            artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
+            artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
+            artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+        
+            artworkCount = artworkNameArray.count;
+        
+        }];
     
-    
-    
-    [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
         
         
+            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+            matCount= matNameArray.count;
+            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+            matFormatArray = [searchMatArray valueForKey:@"Format"];
+            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+            matIconArray = [searchMatArray valueForKey:@"IconURL"];
+            matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+            artworkColorArray = [searchMatArray valueForKey:@"Color"];
         
-        artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-        artworkCount= artworkNameArray.count;
-        artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-        artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
-        artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
-        artworkColorArray = [searchLogoArray valueForKey:@"Color"];
-        
-        artworkCount = artworkNameArray.count;
-        
-    }];
-    
-    [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-        
-        
-        
-        matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-        matCount= matNameArray.count;
-        matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-        matFormatArray = [searchMatArray valueForKey:@"Format"];
-        matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-        matIconArray = [searchMatArray valueForKey:@"IconURL"];
-        matIDArray = [searchMatArray valueForKey:@"ProductID"];
-        matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
-        artworkColorArray = [searchMatArray valueForKey:@"Color"];
-        
-        matCount = matNameArray.count;
+            matCount = matNameArray.count;
         
        
         
         
-    }];
+        }];
     
      [self.collectionView reloadData];
+        
+    }
+    
+    else {
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your location is not available please login once more to the application" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+
+        
+    }
     
     
     

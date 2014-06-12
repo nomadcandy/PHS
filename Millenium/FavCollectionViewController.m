@@ -516,10 +516,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goNearMe:(id)sender{
 
     
+    locationIDString = [[NSUserDefaults standardUserDefaults]
+                        stringForKey:@"locationID"];
     
-   
     NSLog(@"locationIDString: %@", locationIDString);
-    
+   
+        
    
     
     

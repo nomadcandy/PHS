@@ -3128,7 +3128,7 @@ else
     if ((long)sender.tag==130){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Aqaumarine_130.jpg"];
+        UIImage *myBGColor = [UIImage imageNamed:@"Aquamarine_130.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3655,6 +3655,11 @@ else
         }];
     
 
+   } else{
+       
+       UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please enter text in the search field" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+       
+       [alert show];
    }
     
     

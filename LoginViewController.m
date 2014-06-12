@@ -14,7 +14,7 @@
 
 @implementation LoginViewController
 
-@synthesize  firstNameString,lastNameString,locationIDString,locationNameString,locationNumberString,errorMessageString,accessString,locationIDArray,loginField,passwordField,goButton;
+@synthesize  firstNameString,lastNameString,locationIDString,locationNameString,locationNumberString,errorMessageString,userIDString,accessString,locationIDArray,loginField,passwordField,goButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -82,13 +82,13 @@
             locationNumberString = [loginArray valueForKey:@"LocationNumber"];
             //errorMessageString = [loginArray valueForKey:@"ErrorMessage"];
             
-            
-
-            
             NSArray*accessArray = [loginArray valueForKey:@"AccessStatus"];
             accessString = [accessArray objectAtIndex:0];
-            //NSLog(@"locationIDString %@",locationIDString);
-            NSLog(@"accessString %@",accessString);
+
+            
+            NSArray*userIDArray = [loginArray valueForKey:@"UserID"];
+            userIDString = [userIDArray objectAtIndex:0];
+            NSLog(@"userIDString %@",userIDString);
             
             
             
@@ -99,6 +99,10 @@
         
         if ([accessString isEqualToString:@"YES"]) {
             
+            
+            //NSString *userIDToSave = locationIDString;
+            [[NSUserDefaults standardUserDefaults] setObject:userIDString forKey:@"userID"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
             
             locationIDString = [locationIDArray objectAtIndex:0];
             NSLog(@"locationIDString %@",locationIDString);

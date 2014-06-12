@@ -23,6 +23,7 @@
 @property (nonatomic, copy) NSString *locationNameString;
 @property (nonatomic, copy) NSString *locationNumberString;
 @property (nonatomic, copy) NSString *errorMessageString;
+@property (nonatomic, copy) NSString *userIDString;
 @property (nonatomic, copy) NSString *accessString;
 @property (nonatomic, copy) NSArray*locationIDArray;
 
