@@ -1189,51 +1189,101 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSLog(@"indexPathSend %d",indexPathSend);
     
-    urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
-    artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
-    artworkColorAddFavString =[artworkColorArray objectAtIndex:indexPathSend];
-    artworkSizeAddFavString =[artworkSizeArray objectAtIndex:indexPathSend];
-    artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
     
-    if (urlFavString==NULL)
-    {
+    if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPathSend])
         
-        urlFavString= @"No Image Is Available";
+    {
+        //matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
+        urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        urlFavString =@"No Image is provided";
+        
         
     }
     
-    if (artworkNameAddFavString==NULL)
+    if([NSNull null] != [artworkNameArray objectAtIndex:indexPathSend])
+        
+    {
+        //matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
+        artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        artworkNameAddFavString =@"No Name is provided";
+        
+        
+    }
+    
+    
+    if([NSNull null] != [artworkColorArray objectAtIndex:indexPathSend])
+        
     {
         
-        artworkNameAddFavString= @"The Artwork has no name";
+        artworkColorAddFavString =[artworkColorArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        artworkColorAddFavString =@"No Color is provided";
+        
+        
+    }
+    
+    if([NSNull null] != [artworkSizeArray objectAtIndex:indexPathSend])
+        
+    {
+        
+        artworkSizeAddFavString =[artworkSizeArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        artworkSizeAddFavString =@"4'x 6'";
+        
+        
+    }
+    
+    if([NSNull null] != [artworkCompanyArray objectAtIndex:indexPathSend])
+        
+    {
+        
+        artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        artworkCompanyAddFavString =@"no company name has been provided";
+        
         
     }
 
-    
-    artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
-    
-    if (artworkSellerAddFavString==NULL)
+
+    if([NSNull null] != [artworkSellerArray objectAtIndex:indexPathSend])
+        
     {
         
-        artworkSellerAddFavString= @"No Company Name Is Available";
+        artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        artworkSellerAddFavString =@"no company name has been provided";
+        
+        
+    }
+    
+    if([NSNull null] != [artworkIDArray objectAtIndex:indexPathSend])
+        
+    {
+        
+        artworkIDAddFavString =[artworkIDArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        artworkIDAddFavString =@"no ID has been provided";
+        
         
     }
 
-    //artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
-    if (artworkCompanyAddFavString==NULL)
-    {
-        
-        artworkCompanyAddFavString= @"No Company Name Is Available";
-        
-    }
-        
        
-    if (artworkIDAddFavString==NULL)
-    {
-        
-        artworkIDAddFavString= @"No ID Provided";
-        
-    }
     
     NSLog(@"urlFavString %@",urlFavString);
     NSLog(@"urlFavString %@",artworkNameAddFavString);
