@@ -101,6 +101,10 @@
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
 
+@property (nonatomic, assign) int favLogoCount;
+@property (nonatomic, assign) int favMatCount;
+
+
 //@property (nonatomic, assign) int jsonLogoCount;
 
 @property (nonatomic, retain) IBOutlet UITextField *searchOutField;

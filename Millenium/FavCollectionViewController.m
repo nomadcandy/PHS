@@ -19,6 +19,8 @@
 @synthesize searchingString;
 //@synthesize searchingString;
 
+@synthesize favLogoCount;
+@synthesize favMatCount;
 
 @synthesize intMat;
 @synthesize intLogo;
@@ -460,6 +462,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         artworkCount = artworkNameArray.count;
         
+        favLogoCount=favoritesLogoArray.count;
+        
         
     }];
     
@@ -484,6 +488,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
         
         matCount = matNameArray.count;
+        
+        favMatCount=favoritesMatArray.count;
         
         
     }];
@@ -1195,20 +1201,20 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
    else
     {
         
-         return artworkNameArray.count;
-         return matNameArray.count;
+         //return artworkNameArray.count;
+         //return matNameArray.count;
         //return matNameArray.count;
         //return logoNearMeArray.count;
         //return jsonLogoCount;
         if (artworkNameArray.count < matNameArray.count){
             
             return matNameArray.count;
-            //NSLog(@"matCount %i",matNameArray.count);
+            NSLog(@"matCount %i",matNameArray.count);
             
         }else{
             
             return artworkNameArray.count;
-            //NSLog(@"logoCount %i",artworkNameArray.count);
+            NSLog(@"logoCount %i",artworkNameArray.count);
             
         }
         
@@ -1363,7 +1369,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-       // if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item]) {
+       
         
         if ( indexPath.item < artworkFullImageArray.count){
             
@@ -1406,7 +1412,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         }
         
         
-        //if([NSNull null] != [matNameArray objectAtIndex:indexPath.item]) {
+        
         
         if ( indexPath.item < matNameArray.count){
             NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
@@ -1418,7 +1424,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
 
      
-        //if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item]) {
+       
         
         if ( indexPath.item < matFullImageArray.count){
             NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
@@ -1481,6 +1487,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 }
 
 -(IBAction)goInteractive1:(UIButton*)sender event:(id)event {
+    
     //added to enable passing data to other viewController forces ViewDidLoad with new Data
     [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
     
@@ -1500,7 +1507,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     int myInt = (int)sender.tag;
     indexPathSend = (int)sender.tag;
-    //int indexSend = addButton.tag;
     
     NSLog(@"sender %@",sender);
     NSLog(@"indexPathSend %d",indexPathSend);
@@ -1509,32 +1515,21 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     nameString =[artworkNameArray objectAtIndex:indexPathSend];
     NSLog(@" nameStringLogoSelected %@",nameString);
     
-    //if (indexPathSend <artworkSellerArray.count){
     
         sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
         NSLog(@" sellerString %@",sellerString);
-    //}
     
-    //if (indexPathSend <artworkCompanyArray.count){
-        
         companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
         NSLog(@"companyString %@",companyString);
-    //}
     
-     //if (indexPathSend <artworkIDArray.count){
-         
-         numberString =[artworkIDArray objectAtIndex:indexPathSend];
-          NSLog(@"numberString %@",numberString);
-     //}
+        numberString =[artworkIDArray objectAtIndex:indexPathSend];
+        NSLog(@"numberString %@",numberString);
+    
     
     if (indexPathSend <artworkSizeArray.count){
         
         sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
-        
-    //}
-    
-    //if (indexPathSend <artworkColorArray.count){
-    
+      
         logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
          NSLog(@"logoColorString %@",logoColorString);
         
@@ -1545,14 +1540,14 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
         NSString*httpString= @"http://";
         NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-    UIImage * iconImage;
-    iconImage = [UIImage imageWithData:data];
-    NSLog(@"%@iconImage",iconImage);
+        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+        UIImage * iconImage;
+        iconImage = [UIImage imageWithData:data];
+        NSLog(@"%@iconImage",iconImage);
     
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
+        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+        [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
         
         
     }
@@ -1572,11 +1567,11 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     int myInt = (int)sender.tag;
     indexPathSend = (int)sender.tag;
-    //int indexSend = addButton.tag;
+    
     
     NSLog(@"sender %@",sender);
     NSLog(@"indexPathSend %d",indexPathSend);
-    //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
+    
     
     nameString =[matNameArray objectAtIndex:indexPathSend];
     NSLog(@" nameStringLogoSelected %@",nameString);
@@ -1615,9 +1610,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     
-    /*UIStoryboard *storyboard = self.storyboard;
-     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
-     [self presentViewController:svc animated:YES completion:nil];*/
+    
     
     
     
@@ -1632,10 +1625,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         InteractiveViewController *goingController = segue.destinationViewController;
         
-        
-        
-        /*logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
-               goingController.logoUseStringHere=logoUseString;*/
         
         
         NSLog(@"nameStringSend %@",nameString);
