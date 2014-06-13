@@ -875,56 +875,158 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"matNameArrayCount %d",matNameArray.count);
     NSLog(@"indexPathSend %d",indexPathSend);
     
-    matUrlAddFavString =[matFullImageArray objectAtIndex:indexPathSend];
+    
+    
+    
+    if([NSNull null] != [matFullImageArray objectAtIndex:indexPathSend])
+        
+    {
+        matUrlAddFavString =[matFullImageArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        matUrlAddFavString =@"No Image has been provided";
+        
+        
+    }
+
     NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
     NSLog(@"matFullImageArrayCount %d",matFullImageArray.count);
     
-    matNameAddFavString =[matNameArray objectAtIndex:indexPathSend];
+    
+    
+    if([NSNull null] != [matNameArray objectAtIndex:indexPathSend])
+        
+    {
+        matNameAddFavString =[matNameArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        matNameAddFavString =@"No Name has been provided";
+
+        
+    }
+    
+    
     NSLog(@"matNameAddFavString %@",matNameAddFavString);
     NSLog(@"matNameArrayCount %d",matNameArray.count);
     
-    matSellerAddFavString =[matSellerArray objectAtIndex:indexPathSend];
-    NSLog(@" matSellerAddFavString %@",matSellerAddFavString);
+    if([NSNull null] != [matSellerArray objectAtIndex:indexPathSend])
+        
+    {
+        matSellerAddFavString =[matSellerArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        matSellerAddFavString =@"No Seller Name has been provided";
+        
+
+    }
+
+    
+        NSLog(@" matSellerAddFavString %@",matSellerAddFavString);
     NSLog(@" matSellerArrayCount %d",matSellerArray.count);
     
     
     if([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend])
         
     {
+        matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
         
         matCompanyAddFavString =@"No Company Name has been provided";
-    } else {
-    
-        matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
+        
         
     }
     NSLog(@"matCompanyAddFavString %@",matCompanyAddFavString);
     NSLog(@"matCompanyArrayCount %d",matCompanyArray.count);
     
-    matIDAddFavString =[matIDArray objectAtIndex:indexPathSend];
+    
+    if([NSNull null] != [matIDArray objectAtIndex:indexPathSend])
+        
+    {
+        matIDAddFavString =[matIDArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        
+        
+        matIDAddFavString =@"No product ID has been provided";
+        
+    }
+
+    
     NSLog(@" matIDAddFavString %@",matIDAddFavString);
     NSLog(@" matIDArrayCount %d",matIDArray.count);
     
-    matLocationIDAddFavString =[matLocationIDArray objectAtIndex:indexPathSend];
+    if([NSNull null] != [matLocationIDArray objectAtIndex:indexPathSend])
+        
+    {
+        matLocationIDAddFavString =[matLocationIDArray objectAtIndex:indexPathSend];
+
+        
+    } else {
+        
+        matLocationIDAddFavString =@"No location is available";
+    }
+    
+    
     NSLog(@" matLocationIDAddFavString %@",matLocationIDAddFavString);
     
+    if([NSNull null] != [matColorArray objectAtIndex:indexPathSend])
+        
+    {
+        matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        matColorAddFavString =@"No Colors are provided";
+        
+        
+    }
+        NSLog(@" matColorAddFavString %@",matColorAddFavString);
     
-    matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
-    NSLog(@" matColorAddFavString %@",matColorAddFavString);
+    if([NSNull null] != [matBGColorArray objectAtIndex:indexPathSend])
+        
+    {
+        matBGColorAddFavString =[matBGColorArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        matBGColorAddFavString =@"No BG Colors are provided";
+        
+        
+    }
     
-    matBGColorAddFavString =[matBGColorArray objectAtIndex:indexPathSend];
     NSLog(@" matBGColorAddFavString %@",matBGColorAddFavString);
     
     
-    matSizeAddFavString =[matSizeArray objectAtIndex:indexPathSend];
+    if([NSNull null] != [matSizeArray objectAtIndex:indexPathSend])
+        
+    {
+        
+        matSizeAddFavString =[matSizeArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        matSizeAddFavString =@"4'x 6'";
+        
+    }
+    
+    
     NSLog(@" matSizeAddFavString %@",matSizeAddFavString);
     
     
+   
     
     
+
     
     
-    if (matUrlAddFavString==NULL)
+   /* if (matUrlAddFavString==NULL)
     {
         
         matUrlAddFavString= @"No Image Is Available";
@@ -936,7 +1038,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         matNameAddFavString= @"The Artwork has no name";
         
-    }
+    }*/
     
     
     //if (matCompanyAddFavString==NULL)
@@ -950,7 +1052,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }*/
     
-    if (matSellerAddFavString==NULL)
+   /* if (matSellerAddFavString==NULL)
     {
         
         matSellerAddFavString= @"Sales Person Unknown";
@@ -991,7 +1093,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         matSizeAddFavString= @"4' x 6'";
         
-    }
+    }*/
 
     
     NSLog(@"urlFavString %@",matUrlAddFavString);
