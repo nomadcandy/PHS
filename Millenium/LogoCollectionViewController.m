@@ -160,6 +160,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSLog(@"artworkNameDictionary %@",artworkNameDictionary);
     NSLog(@"artworkNameArray %@",artworkNameArray);
     NSLog(@"artworkIconArray %@",artworkIconArray);
+    NSLog(@"matNameArray %@",matNameArray);
+    
+    NSLog(@"matSellerArray %@",matSellerArray);
     
     
     if (locationIDString==nil) {
@@ -226,7 +229,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             forControlEvents:UIControlEventTouchDown];
     
     
-    UIImage*repHereImage = [UIImage imageNamed:@"RepHead.png"];
+    UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
     [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
     repHereButton.frame = CGRectMake(226.0, 33.0, 45.0, 45.0);
     [self.view addSubview:repHereButton];
@@ -741,6 +744,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+        artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
+        artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         
         artworkCount= artworkNameArray.count;
         
@@ -762,6 +767,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            matSellerArray=[searchMatArray valueForKey:@"Seller"];
+            matCompanyArray=[searchMatArray valueForKey:@"Company"];
+            matLocationIDArray=[searchMatArray valueForKey:@"LocationID"];
+        
             matColorArray=[searchMatArray valueForKey:@"Color"];
             matBGColorArray=[searchMatArray valueForKey:@"BGColor"];
 
@@ -862,20 +871,53 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)addMatFavorite:(id)sender{
     
-    
+    NSLog(@"matNameArray %@",matNameArray);
+    NSLog(@"matNameArrayCount %d",matNameArray.count);
     NSLog(@"indexPathSend %d",indexPathSend);
     
     matUrlAddFavString =[matFullImageArray objectAtIndex:indexPathSend];
+    NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    NSLog(@"matFullImageArrayCount %d",matFullImageArray.count);
+    
     matNameAddFavString =[matNameArray objectAtIndex:indexPathSend];
+    NSLog(@"matNameAddFavString %@",matNameAddFavString);
+    NSLog(@"matNameArrayCount %d",matNameArray.count);
+    
     matSellerAddFavString =[matSellerArray objectAtIndex:indexPathSend];
-    matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
+    NSLog(@" matSellerAddFavString %@",matSellerAddFavString);
+    NSLog(@" matSellerArrayCount %d",matSellerArray.count);
+    
+    
+    if([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend])
+        
+    {
+        
+        matCompanyAddFavString =@"No Company Name has been provided";
+    } else {
+    
+        matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
+        
+    }
+    NSLog(@"matCompanyAddFavString %@",matCompanyAddFavString);
+    NSLog(@"matCompanyArrayCount %d",matCompanyArray.count);
+    
     matIDAddFavString =[matIDArray objectAtIndex:indexPathSend];
+    NSLog(@" matIDAddFavString %@",matIDAddFavString);
+    NSLog(@" matIDArrayCount %d",matIDArray.count);
+    
     matLocationIDAddFavString =[matLocationIDArray objectAtIndex:indexPathSend];
+    NSLog(@" matLocationIDAddFavString %@",matLocationIDAddFavString);
     
     
     matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
+    NSLog(@" matColorAddFavString %@",matColorAddFavString);
+    
     matBGColorAddFavString =[matBGColorArray objectAtIndex:indexPathSend];
+    NSLog(@" matBGColorAddFavString %@",matBGColorAddFavString);
+    
+    
     matSizeAddFavString =[matSizeArray objectAtIndex:indexPathSend];
+    NSLog(@" matSizeAddFavString %@",matSizeAddFavString);
     
     
     
@@ -897,12 +939,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     
-    if (matCompanyAddFavString==NULL)
+    //if (matCompanyAddFavString==NULL)
+    
+    
+        
+    /*if ([matCompanyAddFavString isEqualToString:@"class name = NSNull"])
     {
         
         matCompanyAddFavString= @"No Company Name Is Available";
         
-    }
+    }*/
     
     if (matSellerAddFavString==NULL)
     {
@@ -1071,7 +1117,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
 
-    
+    //artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
     if (artworkCompanyAddFavString==NULL)
     {
         
@@ -1079,15 +1125,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
         
-    artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
-    
-    if (artworkSellerAddFavString==NULL)
-    {
-        
-        artworkSellerAddFavString= @"Sales Person Not Known";
-        
-    }
-    
+       
     if (artworkIDAddFavString==NULL)
     {
         

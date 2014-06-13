@@ -301,7 +301,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
      
      UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
      [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
-     repHereButton.frame = CGRectMake(430.0, 33.0, 45.0, 45.0);
+     repHereButton.frame = CGRectMake(226.0, 33.0, 45.0, 45.0);
      [self.view addSubview:repHereButton];
     
     
@@ -851,9 +851,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            matSellerArray = [searchMatArray valueForKey:@"Seller"];
+            matCompanyArray = [searchMatArray valueForKey:@"Company"];
             //NSLog(@"idString %@",idString);
             matColorArray=[searchMatArray valueForKey:@"Color"];
             matBGColorArray=[searchMatArray valueForKey:@"BGColor"];
+            matLocationIDArray=[searchMatArray valueForKey:@"BGColor"];
 
             matCount= matNameArray.count;
         
@@ -875,134 +878,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 }
 
 
--(IBAction)goSearchVariation:(id)sender{
-    
-    NSString*searchString= searchField.text;
-    //NSLog(@"searchCellString %@",searchString);
-    
-    NSString*searchYeahString= searchHereField.text;
-    //NSLog(@"searchString %@",searchYeahString);
-    
-    //NSString*searchString=_logoHeaderCell.searchField.text;
-    //searchString= searchHereField.text;
-    //NSString*searchString= _searchField.text;
-    //NSLog(@"searchString %@",searchString);
-    //NSString*passwordString= passwordField.text;
-    
-    //loginView.hidden =YES;
-    //loginField.hidden=YES;
-    //passwordField.hidden =YES;
-    //goButton.hidden =YES;
-    
-    
-    
-    
-    
-    
-    /*BOOL error = NO;
-     
-     if(loginField.text == nil || [loginField.text length] == 0)
-     {
-     error = YES;
-     //[nameErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }
-     
-     if(passwordField.text == nil || [passwordField.text length] == 0)
-     {
-     error = YES;
-     //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
-     }*/
-    
-    
-    
-    /*if(error)
-     {
-     [self showError];
-     return;
-     }*/
-    
-    
-    
-    
-    
-    
-    
-    
-    NSString*urlSearchString=[NSString stringWithFormat:@" http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchYeahString];
-
-    
-    
-    
-    
-    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
-    //NSLog(@"URLLOGIN: %@",urlSearch);
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
-        
-    //parse Array from web
-    NSArray *searchLogoArray = [NSJSONSerialization
-                                JSONObjectWithData:data
-                                options:NSJSONReadingAllowFragments
-                                error: &error];
-    
-    
-    
-    //NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
-    
-    
-    
-    [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-        
-        //NSLog(@"%@", object);
-        //NSLog(@"searchLogoArray %@",searchLogoArray);
-        
-        
-        artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-        //NSLog(@"artworkSizeArray %@",artworkSizeArray);
-        
-        
-        
-        
-        artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        //NSLog(@"artworkFormatString %@",artworkFormatArray);
-        
-        
-        
-        
-        artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        //NSLog(@"fullImageArray %@",artworkFullImageArray);
-        
-        
-        artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
-        
-        
-        artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
-        
-        
-        artworkColorArray = [searchLogoArray valueForKey:@"Color"];
-        //NSLog(@"idString %@",idString);
-        
-        [self.collectionView reloadData];
-        
-        
-    }];
-    
-    
-    
-    
-}
 
 
 
@@ -1834,6 +1709,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
          goingController.artworkCompanyArray = artworkCompanyArray;
          goingController.artworkSellerArray = artworkSellerArray;
          goingController.artworkColorArray = artworkColorArray;
+         goingController.artworkLocationIDArray = artworkLocationIDArray;
          goingController.artworkCount = artworkCount;
          
          goingController.matNameArray = matNameArray;
@@ -1845,6 +1721,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
          goingController.matCompanyArray = matCompanyArray;
          goingController.matSellerArray = matSellerArray;
          goingController.matColorArray = matColorArray;
+         goingController.matBGColorArray = matColorArray;
+         goingController.matLocationIDArray = matLocationIDArray;
          goingController.matCount = matCount;
         
         

@@ -3562,6 +3562,11 @@ else
     
     matCount= searchMatArray.count;
     NSLog(@"%@SearchMatArray",searchMatArray);
+       
+       
+       
+       
+       
 
     
     
@@ -3629,7 +3634,8 @@ else
         
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
             matCount= matNameArray.count;
-            NSLog(@"artWorkNameArray: %@", matNameArray);
+            NSLog(@"matNameArray: %@", matNameArray);
+            NSLog(@"matNameArrayCount: %d", matNameArray.count);
         
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
             NSLog(@"matSizeArray %@",matSizeArray);
@@ -3644,6 +3650,9 @@ else
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
         
             matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
+            matSellerArray = [searchMatArray valueForKey:@"Seller"];
+            NSLog(@"matNameSellerArrayCount: %d", matSellerArray.count);
+        
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             //NSLog(@"idString %@",idString);
             matColorArray = [searchMatArray valueForKey:@"Color"];
