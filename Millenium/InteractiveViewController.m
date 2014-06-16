@@ -3184,9 +3184,13 @@ else
     //
     // Get size of current image
     
+     //CGSize size = [myBGColor size];
     
+    //CGRect screenRect2 = [myBGColor size];
     
-    CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
+    //CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
+    CGRect screenRect2 = CGRectMake(723,342,600,400);
+
     
     
     UIGraphicsBeginImageContext(screenRect2.size);
@@ -3195,6 +3199,8 @@ else
     CGContextRef ctx1 = UIGraphicsGetCurrentContext();
     [[UIColor whiteColor] set];
     CGContextFillRect(ctx1, screenRect2);
+    
+    //[self.matBGLogoView.layer renderInContext:ctx1];
     
     [self.view.layer renderInContext:ctx1];
     
