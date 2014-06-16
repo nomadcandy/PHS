@@ -1058,12 +1058,11 @@
     NSLog(@"chosenImage %@",selectedImage);
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
     
     [UIImagePNGRepresentation(newImage) writeToFile:imagePath atomically:YES];
     
     [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
-   // [profilePictureHandle writeData:UIImagePNGRepresentation(croppedImage)];
+  
     
     
    

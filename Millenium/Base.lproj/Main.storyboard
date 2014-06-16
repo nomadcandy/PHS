@@ -33,11 +33,31 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlP-c3-Xyb" userLabel="BGColorMat">
-                                <rect key="frame" x="423" y="142" width="600" height="400"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YvJ-Xo-UFd" userLabel="SnapshotView">
+                                <rect key="frame" x="423" y="122" width="607" height="457"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlP-c3-Xyb" userLabel="BGColorMat">
+                                        <rect key="frame" x="3" y="19" width="600" height="418"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjd-hV-uA4">
+                                        <rect key="frame" x="152" y="104" width="302" height="229"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchDragOutside" id="Inf-rL-f7t"/>
+                                            <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchDragInside" id="Jpx-pB-RGl"/>
+                                            <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Zh5-Rd-yFs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-1x-oeW">
                                 <rect key="frame" x="52" y="727" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -58,19 +78,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="GNI-E4-d44" kind="push" identifier="" id="g0x-cn-24J"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjd-hV-uA4">
-                                <rect key="frame" x="571" y="170" width="302" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchDragOutside" id="Inf-rL-f7t"/>
-                                    <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchDragInside" id="Jpx-pB-RGl"/>
-                                    <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Zh5-Rd-yFs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="INFORMATION:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poD-qq-Xob">
@@ -560,7 +567,7 @@
                                     <action selector="bgColorSelected:event:" destination="EOd-lr-Xtf" eventType="touchDownRepeat" id="pEY-eP-fDx"/>
                                 </connections>
                             </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCc-eT-dr1">
+                            <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCc-eT-dr1" userLabel="logoColor1">
                                 <rect key="frame" x="33" y="500" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1270,6 +1277,7 @@
                         <outlet property="sellerField" destination="gg9-EA-31R" id="ClZ-Pg-GlW"/>
                         <outlet property="silverButton" destination="czk-Kk-atJ" id="O8p-Uk-YXA"/>
                         <outlet property="snapShotTestImageView" destination="JEo-KD-ZmM" id="Mqu-xR-15R"/>
+                        <outlet property="snapshotView" destination="YvJ-Xo-UFd" id="aK7-Tx-xqR"/>
                         <outlet property="steelBlueButton" destination="TuV-5b-4aV" id="iWY-ed-lVl"/>
                         <outlet property="suedeButton" destination="tim-gd-TdR" id="7e3-yE-Yzq"/>
                         <outlet property="textOrientField" destination="jgd-E0-5tB" id="NPo-Ad-zEW"/>

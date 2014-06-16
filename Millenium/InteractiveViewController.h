@@ -105,7 +105,8 @@
 
 @property (nonatomic, strong) IBOutlet UITextField *sellerField;
 @property (nonatomic, strong) IBOutlet UITextField *companyField;
-@property (nonatomic, strong) IBOutlet UITextField *nameField;
+@property (nonatomic,strong) IBOutlet UITextField *nameField;
+//@property (nonatomic, strong) IBOutlet UITextField *nameField;
 @property (nonatomic, strong) IBOutlet UITextField *numberField;
 
 @property (nonatomic, strong) IBOutlet UITextField *widthField;
@@ -116,6 +117,7 @@
 
 @property (nonatomic, strong) IBOutlet UITextField *textOrientField;
 
+@property (nonatomic, strong) IBOutlet UIView *snapshotView;
 @property (nonatomic, strong) IBOutlet UIView *interactiveView;
 @property (nonatomic, strong) IBOutlet UIButton *uploadLogoButton;
 @property (nonatomic, strong) IBOutlet UIButton *internetLogoButton;

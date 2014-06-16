@@ -17,7 +17,7 @@
 
 @implementation InteractiveViewController
 
-
+@synthesize snapshotView;
 @synthesize snapShotTestImageView;
 
 @synthesize urlMatStringAppend;
@@ -3189,7 +3189,7 @@ else
     //CGRect screenRect2 = [myBGColor size];
     
     //CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
-    CGRect screenRect2 = CGRectMake(723,342,600,400);
+    CGRect screenRect2 = CGRectMake(723,342,600,490);
 
     
     
@@ -3202,86 +3202,51 @@ else
     
     //[self.matBGLogoView.layer renderInContext:ctx1];
     
-    [self.view.layer renderInContext:ctx1];
+    [self.snapshotView.layer renderInContext:ctx1];
+    
+    //[self.view.layer renderInContext:ctx1];
     
     UIImage *matImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
+    //cut smalller image out
     
-    //save image to documents
-    
-    //[NSString stringWithFormat:@"Documents/%@.png",nameField.text]
-     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.jpg",nameField.text]];
-    //NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.jpg"]];
-    [UIImageJPEGRepresentation(matImage, 1.0) writeToFile:imagePath atomically:YES];
-    
-    
-    [snapShotTestImageView  setImage:matImage];
-    
-
-    
-    
-   /* CGSize size = [myBGColor size];
-    
-    
-    CGRect screenRect = CGRectMake(size.width / 4, size.height / 4 ,
-                             (size.width / 2), (size.height / 2));
-    
-    UIGraphicsBeginImageContext(screenRect.size);
-    
-    CGImageRef imageRef = CGImageCreateWithImageInRect([myBGColor CGImage], screenRect);
-    UIImage *img = [UIImage imageWithCGImage:imageRef];*/
-    //CGImageRelease(imageRef);
-    
-    
-    
-    //snapshot
-    /*CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx, screenRect);
-    
-    [matBGLogoView.layer renderInContext:ctx];
-    
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
+   /* UIGraphicsBeginImageContextWithOptions(CGSizeMake(600, 400), NO, [UIScreen mainScreen].scale);
+    [self.testView drawViewHierarchyInRect:CGRectMake(-50, -50, self.testView.bounds.size.width, self.testView.bounds.size.height) afterScreenUpdates:YES];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();*/
     
     
+  
+    //save image to documents
+   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.jpg",nameField.text]];*/
     
-    //chosenImageView.image = newImage;
-    //chosenImage = newImage;
+   /* [UIImageJPEGRepresentation(matImage, 1.0) writeToFile:imagePath atomically:YES];
+    [snapShotTestImageView  setImage:matImage];*/
     
-    NSLog(@"chosenImage %@",selectedImage);
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameField.text]];
     
+    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
     
-    
-   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameField.text]];
-    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
-    
-   [UIImagePNGRepresentation((__bridge UIImage *)(imageRef)) writeToFile:imagePath atomically:YES];*/
-    
-    //testing
-    
-    //Get Image
-   /* NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    imagePath =  [directoryPath objectAtIndex:0];
-    imagePath= [imagePath stringByAppendingPathComponent:@"cupcake 4x6 B1-4 cake Logo2.png"];*/
+   // [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
     
     
-   /* NSData *data = [NSData dataWithContentsOfFile:imagePath];
-    UIImage *logoImage = [UIImage imageWithData:data];*/
+    
+   // NSLog(@"chosenImage %@",selectedImage);
+    
+    //get snapshot string to save as URL.
+    
+    //[self.view.layer renderInContext:ctx1];
+    // [self.view.layer renderInContext:(__bridge CGContextRef)(self)];
+    
+    //[self.view reloadInputViews];
+    
+    [self.view addSubview:snapshotView];
 
-    
-        //[logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
-    
-    
-   //float cg points of the mat
-   //save data a unique image name-name what's in box if no name use alert view
-   //get snapshot string to save as URL.
-    
+
     NSString*matUrlAppendAddFavString= nameField.text;
-    NSString*pngString= @".jpg";
+    NSString*pngString= @".png";
     NSLog(@"nameFieldText %@",nameField.text);
     
     
@@ -3305,10 +3270,10 @@ else
     
     
     
+   //TODO FIX HERE
     
-    
-    
-   if (matUrlAddFavString==NULL)
+     //if([NSNull null] != matUrlAddFavString)
+   /*if (matUrlAddFavString==nil)
     {
         
         UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
@@ -3318,7 +3283,7 @@ else
         
         matUrlAddFavString= @"No Image Is Available";
         
-    }
+    }*/
     
     if (matNameAddFavString==NULL)
     {
@@ -3420,13 +3385,13 @@ else
         NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
     //Fetch Data entered to test
-   NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+  /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
-    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];*/
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
-    NSLog(@"favoritesMatArray %@",favoritesMatArray);
+    //NSLog(@"favoritesMatArray %@",favoritesMatArray);
     
 }
 
