@@ -157,7 +157,7 @@
 @property (nonatomic, copy) NSString *searchingString;
 //@property (nonatomic, copy) NSString *searchingOtherString;
 
-
+@property (nonatomic, copy) NSString *urlMatString;
 @property (nonatomic, copy) NSString *firstNameString;
 @property (nonatomic, copy) NSString *lastNameString;
 @property (nonatomic, assign) NSString *locationIDString;

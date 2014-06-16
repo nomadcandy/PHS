@@ -18,8 +18,9 @@
 @implementation InteractiveViewController
 
 
+@synthesize snapShotTestImageView;
 
-
+@synthesize urlMatStringAppend;
 @synthesize locationIDString;
 
 @synthesize activityIndicator;
@@ -27,7 +28,7 @@
 @synthesize textNoteField;
 @synthesize textDecField;
 @synthesize hexField;
-
+@synthesize myBGColor;
 @synthesize bgColorButton;
 //@synthesize delegate=_delegate;
 
@@ -3176,9 +3177,115 @@ else
 -(IBAction)addMatFavorite:(id)sender{
     
     
-    //NSLog(@"indexPathSend %d",indexPathSend);
+   //snapshot picture on screen
+    //UIGraphicsBeginImageContext(matBGLogoView.size);
     
-    //matUrlAddFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
+    
+    //
+    // Get size of current image
+    
+    
+    
+    CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
+    
+    
+    UIGraphicsBeginImageContext(screenRect2.size);
+    //UIGraphicsBeginImageContext(interactiveMatView.size);
+    
+    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx1, screenRect2);
+    
+    [self.view.layer renderInContext:ctx1];
+    
+    UIImage *matImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    
+    //save image to documents
+    
+    //[NSString stringWithFormat:@"Documents/%@.png",nameField.text]
+     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.jpg",nameField.text]];
+    //NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.jpg"]];
+    [UIImageJPEGRepresentation(matImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    
+    [snapShotTestImageView  setImage:matImage];
+    
+
+    
+    
+   /* CGSize size = [myBGColor size];
+    
+    
+    CGRect screenRect = CGRectMake(size.width / 4, size.height / 4 ,
+                             (size.width / 2), (size.height / 2));
+    
+    UIGraphicsBeginImageContext(screenRect.size);
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect([myBGColor CGImage], screenRect);
+    UIImage *img = [UIImage imageWithCGImage:imageRef];*/
+    //CGImageRelease(imageRef);
+    
+    
+    
+    //snapshot
+    /*CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx, screenRect);
+    
+    [matBGLogoView.layer renderInContext:ctx];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();*/
+    
+    
+    
+    //chosenImageView.image = newImage;
+    //chosenImage = newImage;
+    
+    NSLog(@"chosenImage %@",selectedImage);
+    
+    
+    
+   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameField.text]];
+    //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+   [UIImagePNGRepresentation((__bridge UIImage *)(imageRef)) writeToFile:imagePath atomically:YES];*/
+    
+    //testing
+    
+    //Get Image
+   /* NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    imagePath =  [directoryPath objectAtIndex:0];
+    imagePath= [imagePath stringByAppendingPathComponent:@"cupcake 4x6 B1-4 cake Logo2.png"];*/
+    
+    
+   /* NSData *data = [NSData dataWithContentsOfFile:imagePath];
+    UIImage *logoImage = [UIImage imageWithData:data];*/
+
+    
+        //[logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
+    
+    
+   //float cg points of the mat
+   //save data a unique image name-name what's in box if no name use alert view
+   //get snapshot string to save as URL.
+    
+    NSString*matUrlAppendAddFavString= nameField.text;
+    NSString*pngString= @".jpg";
+    NSLog(@"nameFieldText %@",nameField.text);
+    
+    
+    urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
+
+    
+   
+    
+    NSString*matUrlAddFavString = urlMatStringAppend;
+    NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
     NSString*matNameAddFavString =nameField.text;
     NSString*matSellerAddFavString =sellerField.text;
     NSString*matCompanyAddFavString =companyField.text;
@@ -3195,12 +3302,17 @@ else
     
     
     
-   /* if (matUrlAddFavString==NULL)
+   if (matUrlAddFavString==NULL)
     {
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+
         
         matUrlAddFavString= @"No Image Is Available";
         
-    }*/
+    }
     
     if (matNameAddFavString==NULL)
     {
@@ -3284,7 +3396,7 @@ else
     //[newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];
     
     
-    //[newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
+    [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
     [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
     [newMatFavorite setValue:companyField.text forKey:@"company"];
     [newMatFavorite setValue:sellerField.text forKey:@"seller"];

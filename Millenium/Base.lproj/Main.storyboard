@@ -257,6 +257,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMatFavorite:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="ibr-ED-Rua"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gg9-EA-31R">
                                 <rect key="frame" x="124" y="45" width="276" height="28"/>
@@ -292,6 +295,10 @@
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zU-6P-ULj">
                                 <rect key="frame" x="735" y="381" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JEo-KD-ZmM">
+                                <rect key="frame" x="486" y="216" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDA-U3-mdi">
@@ -1262,6 +1269,7 @@
                         <outlet property="searchField" destination="LYz-bS-z4q" id="Ky2-AE-Jqa"/>
                         <outlet property="sellerField" destination="gg9-EA-31R" id="ClZ-Pg-GlW"/>
                         <outlet property="silverButton" destination="czk-Kk-atJ" id="O8p-Uk-YXA"/>
+                        <outlet property="snapShotTestImageView" destination="JEo-KD-ZmM" id="Mqu-xR-15R"/>
                         <outlet property="steelBlueButton" destination="TuV-5b-4aV" id="iWY-ed-lVl"/>
                         <outlet property="suedeButton" destination="tim-gd-TdR" id="7e3-yE-Yzq"/>
                         <outlet property="textOrientField" destination="jgd-E0-5tB" id="NPo-Ad-zEW"/>

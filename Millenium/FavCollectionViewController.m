@@ -50,6 +50,9 @@
 @synthesize artworkColorAddFavString;
 @synthesize artworkSizeAddFavString;
 
+@synthesize urlMatString;
+
+
 @synthesize matUrlAddFavString;
 @synthesize matNameAddFavString;
 @synthesize matCompanyAddFavString;
@@ -1423,27 +1426,56 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
 
-     
-       
+        //NSString *searchString = @"cintas";
         
+        /*NSString *beginsTest = @"Agencies";
+        NSRange prefixRange = [urlMatString rangeOfString:searchString
+                                                options:(NSAnchoredSearch | NSCaseInsensitiveSearch)];*/
+     
         if ( indexPath.item < matFullImageArray.count){
-            NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
+        
+           
             
-            NSString*httpString= @"http://";
+            urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
+            NSLog(@"urlMatString:%@",urlMatString);
             
-            
-            NSString *urlMatStringAppend = [httpString stringByAppendingString:urlMatString];
-            
-            NSLog(@"%@ urlStringAppend",urlMatStringAppend);
-            
-            NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
-            
-            UIImage * iconImage;
-            
-            iconImage = [UIImage imageWithData:dataMat];
-            
-            
-            [favCell.matChooseButton setImage:iconImage forState:UIControlStateNormal];
+            //if ([string rangeOfString:@"102-Brown"].location == NSNotFound)
+           if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
+           
+            {
+                
+                
+                
+                
+                //not working
+                NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+                NSString *imagePath =  [directoryPath objectAtIndex:0];
+                //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+                imagePath= [imagePath stringByAppendingPathComponent:urlMatString];
+                NSLog(@"urlMatStringInMethod:%@",urlMatString);
+                
+                NSData *data = [NSData dataWithContentsOfFile:imagePath];
+                //no data here
+                UIImage *logoImage = [UIImage imageWithData:data];
+                [favCell.matChooseButton setImage:logoImage forState:UIControlStateNormal];
+
+                
+                
+            }else {
+                
+                NSString*httpString= @"http://";
+                NSString *urlMatStringAppend = [httpString stringByAppendingString:urlMatString];
+                
+                NSLog(@"%@ urlStringAppend",urlMatStringAppend);
+                
+                NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
+                
+                UIImage * iconImage;
+                
+                iconImage = [UIImage imageWithData:dataMat];
+                [favCell.matChooseButton setImage:iconImage forState:UIControlStateNormal];
+                
+            }
             
         }
         

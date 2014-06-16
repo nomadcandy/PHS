@@ -91,6 +91,7 @@
 //@property (nonatomic, weak) id <StringSetDelegate> delegate;
 
 @property (nonatomic, weak) NSString *logoUseStringHere;
+@property (nonatomic, weak) NSString *urlMatStringAppend;
 
 @property (nonatomic, strong) UITextField *textNoteField;
 @property (nonatomic, strong) UITextField *textDecField;
@@ -131,6 +132,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *hexButton;
 
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
+@property (nonatomic, strong) IBOutlet UIImageView *snapShotTestImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *matBGImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *matBGLogoView;
@@ -263,6 +265,7 @@
 @property (nonatomic, strong) NSString *interactiveHeaderString;
 
 @property (nonatomic, strong) UIImage *selectedImage;
+@property (nonatomic, strong) UIImage *myBGColor;
 
 
 @property (nonatomic, strong) IBOutlet iCarousel *carouselSize;
