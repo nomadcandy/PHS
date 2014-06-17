@@ -33,6 +33,7 @@
 //@synthesize delegate=_delegate;
 
 @synthesize interactiveView;
+@synthesize matView1;
 @synthesize matBGLogoView;
 @synthesize carouselSize;
 @synthesize carouselColor;
@@ -613,14 +614,16 @@
         NSData *dataMat = [NSData dataWithContentsOfFile:imagePath1];
         UIImage *matImage = [UIImage imageWithData:dataMat];
         
-        UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
+        //UIImageView* matView=[[UIImageView alloc]initWithImage:matImage];
+        //matView1=[[UIImageView alloc]initWithImage:matImage];
+        matView1.image = matImage;
         CGRect myMatRect = CGRectMake( 426.0f, 121.0f, 600.0f, 400.0f);
         
-        matView.frame=myMatRect;
-        matView.ContentMode=  UIViewContentModeScaleAspectFit;
+        matView1.frame=myMatRect;
+        matView1.ContentMode=  UIViewContentModeScaleAspectFit;
         
         [self.view addSubview:snapshotView];
-        [self.view addSubview:matView];
+       // [self.view addSubview:matView1];
         
         
         

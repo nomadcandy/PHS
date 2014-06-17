@@ -62,6 +62,11 @@
                                             <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Zh5-Rd-yFs"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DlZ-Yc-mhz" userLabel="MatView1">
+                                        <rect key="frame" x="3" y="20" width="600" height="418"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -1270,6 +1275,7 @@
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
                         <outlet property="matBGImageView" destination="50N-Xd-J20" id="pAo-n1-8Ae"/>
                         <outlet property="matBGLogoView" destination="mlP-c3-Xyb" id="6TG-4a-5Nj"/>
+                        <outlet property="matView1" destination="DlZ-Yc-mhz" id="Npe-Ku-Xgf"/>
                         <outlet property="nameField" destination="oeY-YL-pre" id="q5B-Ev-oYg"/>
                         <outlet property="nameHideField" destination="6Ms-IS-vla" id="gVO-Ew-KPe"/>
                         <outlet property="navyButton" destination="gbN-FR-xoE" id="QfP-rB-rPt"/>
