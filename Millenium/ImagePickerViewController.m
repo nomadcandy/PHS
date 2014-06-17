@@ -1174,16 +1174,11 @@
 {
     [super didReceiveMemoryWarning];
     
-    //self.imageDownloaded = nil;
-    //self.chosenImageView =nil;
-    //self->googleWebView =nil;
-    // Dispose of any resources that can be recreated.
+        
 }
 
 - (void)dealloc {
-    //self.imageDownloaded = nil;
-    //self.chosenImageView =nil;
-    //self->googleWebView =nil;
+    
 }
 
 
