@@ -3205,7 +3205,9 @@ else
     
     
         [self.view addSubview:snapshotView];
-
+        
+        
+        //NOTE- Do not remove local NSString values will break
 
         NSString*matUrlAppendAddFavString= nameHideField.text;
         NSString*pngString= @".png";
@@ -3228,25 +3230,14 @@ else
     
     
     
-   //TODO FIX HERE
+   
     
-//if([NSNull null] != matUrlAddFavString)
-  /*if (nameHideField.text == NULL)*/
-     NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+
+    NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
     if (matUrlAddFavString==NULL)
       
     {
-        
-        /*UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-        
-        alert.tag = 2;
-        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-        
-        [alert show];*/
-
-        
-       
-        
+               
         matUrlAddFavString= @"No Image Is Available";
         
     }

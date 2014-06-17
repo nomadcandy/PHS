@@ -36,93 +36,99 @@
 
 -(IBAction)goLogin:(id)sender{
     
-    
-    if (loginField.text!=Nil || passwordField.text!= Nil || [loginField.text length] == 0 || [passwordField.text length] == 0)
+    NSString*loginFieldString= loginField.text;
+    NSString*passwordFieldString= passwordField.text;
+    NSLog(@"loginFieldString %@",loginFieldString);
+    if (loginFieldString==NULL|| passwordFieldString==NULL || [loginFieldString length] == 0 || [passwordFieldString length] == 0)
+        
         
     {
         
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your Login or Password is invalid please try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         
-        
-        loginField.textAlignment = NSTextAlignmentCenter;
-        passwordField.textAlignment = NSTextAlignmentCenter;
+        [alert show];
 
         
-        NSString*loginString= loginField.text;
-        NSString*passwordString= passwordField.text;
         
         
-        
-        NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", loginString,passwordString];
-        
-        
-        NSURL *urlLogin = [[NSURL alloc] initWithString:urlLoginString];
-        NSLog(@"URLLOGIN: %@",urlLogin);
-        NSError *error = nil;
-        NSData *data = [NSData dataWithContentsOfURL:urlLogin];
-        
-        
-        //parse Array from web
-        NSArray *loginArray = [NSJSONSerialization
-                               JSONObjectWithData:data
-                               options:NSJSONReadingAllowFragments
-                               error: &error];
-        
-       
-        
-        [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-            
-            NSLog(@"%@", object);
-            NSLog(@"loginArray %@",loginArray);
-            
-            
-            firstNameString = [loginArray valueForKey:@"FirstName"];
-            lastNameString = [loginArray valueForKey:@"LastName"];
-            locationIDArray = [loginArray valueForKey:@"LocationID"];
-            locationNameString = [loginArray valueForKey:@"LocationName"];
-            locationNumberString = [loginArray valueForKey:@"LocationNumber"];
-            //errorMessageString = [loginArray valueForKey:@"ErrorMessage"];
-            
-            NSArray*accessArray = [loginArray valueForKey:@"AccessStatus"];
-            accessString = [accessArray objectAtIndex:0];
-
-            
-            NSArray*userIDArray = [loginArray valueForKey:@"UserID"];
-            userIDString = [userIDArray objectAtIndex:0];
-            NSLog(@"userIDString %@",userIDString);
-            
-            
-            
-            
-            
-            
-        }];
-        
-        if ([accessString isEqualToString:@"YES"]) {
-            
-            
-            //NSString *userIDToSave = locationIDString;
-            [[NSUserDefaults standardUserDefaults] setObject:userIDString forKey:@"userID"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            
-            locationIDString = [locationIDArray objectAtIndex:0];
-            NSLog(@"locationIDString %@",locationIDString);
-            NSString *valueToSave = locationIDString;
-            [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"locationID"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            [self performSegueWithIdentifier:@"HomeSegue" sender:sender];
-            
-            UIStoryboard *storyboard = self.storyboard;
-            ViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
-            [self presentViewController:svc animated:YES completion:nil];
-            
         } else {
             
             
-            UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your Login or Password is invalid please try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+           
             
-            [alert show];
+            
+            loginField.textAlignment = NSTextAlignmentCenter;
+            passwordField.textAlignment = NSTextAlignmentCenter;
+            
+            
+            NSString*loginString= loginField.text;
+            NSString*passwordString= passwordField.text;
+            
+            
+            
+            NSString*urlLoginString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", loginString,passwordString];
+            
+            
+            NSURL *urlLogin = [[NSURL alloc] initWithString:urlLoginString];
+            NSLog(@"URLLOGIN: %@",urlLogin);
+            NSError *error = nil;
+            NSData *data = [NSData dataWithContentsOfURL:urlLogin];
+            
+            
+            //parse Array from web
+            NSArray *loginArray = [NSJSONSerialization
+                                   JSONObjectWithData:data
+                                   options:NSJSONReadingAllowFragments
+                                   error: &error];
+            
+            
+            
+            [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+                
+                NSLog(@"%@", object);
+                NSLog(@"loginArray %@",loginArray);
+                
+                
+                firstNameString = [loginArray valueForKey:@"FirstName"];
+                lastNameString = [loginArray valueForKey:@"LastName"];
+                locationIDArray = [loginArray valueForKey:@"LocationID"];
+                locationNameString = [loginArray valueForKey:@"LocationName"];
+                locationNumberString = [loginArray valueForKey:@"LocationNumber"];
+                //errorMessageString = [loginArray valueForKey:@"ErrorMessage"];
+                
+                NSArray*accessArray = [loginArray valueForKey:@"AccessStatus"];
+                accessString = [accessArray objectAtIndex:0];
+                
+                
+                NSArray*userIDArray = [loginArray valueForKey:@"UserID"];
+                userIDString = [userIDArray objectAtIndex:0];
+                NSLog(@"userIDString %@",userIDString);
+                
+                
+                
+                
+                
+                
+            }];
+            
+            if ([accessString isEqualToString:@"YES"]) {
+                
+                
+                //NSString *userIDToSave = locationIDString;
+                [[NSUserDefaults standardUserDefaults] setObject:userIDString forKey:@"userID"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                locationIDString = [locationIDArray objectAtIndex:0];
+                NSLog(@"locationIDString %@",locationIDString);
+                NSString *valueToSave = locationIDString;
+                [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"locationID"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                [self performSegueWithIdentifier:@"HomeSegue" sender:sender];
+                
+                UIStoryboard *storyboard = self.storyboard;
+                ViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+                [self presentViewController:svc animated:YES completion:nil];
 
-            
             
         }
         
