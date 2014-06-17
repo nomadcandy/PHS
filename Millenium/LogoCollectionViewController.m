@@ -1711,11 +1711,27 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
         sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
         
+        
+        if (sellerString==NULL)
+        {
+            
+            matIDAddFavString= @"No Seller Provided";
+            
+        }
+        
     }
     
     if (indexPathSend <artworkCompanyArray.count){
         
         companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
+        
+        if (companyString==NULL)
+        {
+            
+            matIDAddFavString= @"No Company Provided";
+            
+        }
+
     }
     
      if (indexPathSend <artworkIDArray.count){
@@ -1728,11 +1744,20 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
         
+        if (sizeString==NULL)
+        {
+            
+            sizeString= @"4'x6'";
+            
+        }
+        
     }
     
     if (indexPathSend <artworkColorArray.count){
     
         logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+        
+        
         
         
     }
