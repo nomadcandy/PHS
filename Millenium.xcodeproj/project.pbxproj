@@ -176,6 +176,9 @@
 		42849B9218EA02BE00E5B3FB /* whitepad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9018EA02BE00E5B3FB /* whitepad.png */; };
 		42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */; };
 		42849B9518EA04AB00E5B3FB /* logothumbnailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */; };
+		4288F1AB1950A03500975FB6 /* LoginIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AA1950A03500975FB6 /* LoginIcon1.png */; };
+		4288F1AD1950A7C500975FB6 /* PDFIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AC1950A7C500975FB6 /* PDFIcon1.png */; };
+		4288F1AF1950A7CF00975FB6 /* MovieIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */; };
 		4297E04E1923C5E800E43779 /* MaskWhiteSquare7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */; };
 		4297E0501923C74D00E43779 /* MaskWhiteSquare8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E04F1923C74D00E43779 /* MaskWhiteSquare8.png */; };
 		4297E0521923C95200E43779 /* MaskGreySquare8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E0511923C95200E43779 /* MaskGreySquare8.png */; };
@@ -515,6 +518,9 @@
 		42849B8D18EA027800E5B3FB /* gradietebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradietebg.png; sourceTree = "<group>"; };
 		42849B9018EA02BE00E5B3FB /* whitepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitepad.png; sourceTree = "<group>"; };
 		42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logothumbnailbg.png; sourceTree = "<group>"; };
+		4288F1AA1950A03500975FB6 /* LoginIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginIcon1.png; sourceTree = "<group>"; };
+		4288F1AC1950A7C500975FB6 /* PDFIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFIcon1.png; sourceTree = "<group>"; };
+		4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MovieIcon1.png; sourceTree = "<group>"; };
 		4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare7.png; sourceTree = "<group>"; };
 		4297E04F1923C74D00E43779 /* MaskWhiteSquare8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare8.png; sourceTree = "<group>"; };
 		4297E0511923C95200E43779 /* MaskGreySquare8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare8.png; sourceTree = "<group>"; };
@@ -996,6 +1002,14 @@
 			name = ImagesTestOnly;
 			sourceTree = "<group>";
 		};
+		4288F1A91950A00000975FB6 /* ImagesLogin */ = {
+			isa = PBXGroup;
+			children = (
+				4288F1AA1950A03500975FB6 /* LoginIcon1.png */,
+			);
+			name = ImagesLogin;
+			sourceTree = "<group>";
+		};
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1124,6 +1138,8 @@
 		42B0157618E342550068019C /* ImagesFliers */ = {
 			isa = PBXGroup;
 			children = (
+				4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */,
+				4288F1AC1950A7C500975FB6 /* PDFIcon1.png */,
 				42081FE41947B3B200412486 /* EcoGuardPDF.png */,
 				42081FE21947B34400412486 /* UltraGuardPDF.png */,
 				42081FDE1947B15A00412486 /* WalkOffPhoenixPDF.png */,
@@ -1243,6 +1259,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				4288F1A91950A00000975FB6 /* ImagesLogin */,
 				42081FE61948A33800412486 /* ImagesNewHome */,
 				427DF92D19423CD200DBF91D /* ThumbNailMovies */,
 				422A692219101E5E001CAB8D /* CoreData */,
@@ -1541,6 +1558,7 @@
 				42081FCF1947B04700412486 /* SoftStepPDF.png in Resources */,
 				42A24BF819181FB800568305 /* Interactive3by10Button.png in Resources */,
 				4297E05A1923CFE700E43779 /* MaskWhiteSquare13.png in Resources */,
+				4288F1AB1950A03500975FB6 /* LoginIcon1.png in Resources */,
 				42F399D8194669F200C84189 /* FreeFlowComfortM.png in Resources */,
 				42081FBF1947AC4700412486 /* GoldenSeriesPDF.png in Resources */,
 				42F399C81946675B00C84189 /* WaterGuardDiamondM.png in Resources */,
@@ -1599,6 +1617,7 @@
 				4297E09319250F8100E43779 /* Turquoise_104.jpg in Resources */,
 				426206621907004900FE7066 /* mask.png in Resources */,
 				42081FE31947B34400412486 /* UltraGuardPDF.png in Resources */,
+				4288F1AF1950A7CF00975FB6 /* MovieIcon1.png in Resources */,
 				4297E0561923CB6A00E43779 /* MaskWhiteSquare10.png in Resources */,
 				42F399C51946675B00C84189 /* SafeStepM.png in Resources */,
 				42F399D31946675B00C84189 /* UltraGuardLogoInlayM.png in Resources */,
@@ -1650,6 +1669,7 @@
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
 				4297E0521923C95200E43779 /* MaskGreySquare8.png in Resources */,
 				4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */,
+				4288F1AD1950A7C500975FB6 /* PDFIcon1.png in Resources */,
 				428085CA18FC4B4200389C9C /* MatCintasCenter.png in Resources */,
 				42849B8E18EA027800E5B3FB /* gradietebg.png in Resources */,
 				42081FE11947B29600412486 /* WaterGuard.pdf in Resources */,

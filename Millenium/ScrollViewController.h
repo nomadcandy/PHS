@@ -13,6 +13,8 @@
 #import "iCarousel.h"
 #import "MarketingViewController.h"
 #import "ViewController.h"
+#import "PDFViewController.h"
+
 
 @interface
 ScrollViewController : UIViewController<UIScrollViewDelegate>{
@@ -27,6 +29,7 @@ ScrollViewController : UIViewController<UIScrollViewDelegate>{
 
 
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender;
+- (IBAction)goPDFViewController:(UIButton *)sender;
 
 
 

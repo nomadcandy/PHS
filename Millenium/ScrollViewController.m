@@ -58,6 +58,16 @@
     
 }
 
+
+- (IBAction)goPDFViewController:(UIButton *)sender {
+    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"PDFStoryboard"];
+    [self presentViewController:vc animated:YES completion:nil];
+    
+}
+
+
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender {
     
     

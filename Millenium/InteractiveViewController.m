@@ -507,6 +507,7 @@
     
     if([interactiveHeaderString isEqualToString:@"Logo Picked"]){
         
+         matView1.hidden= YES;
         
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath =  [directoryPath objectAtIndex:0];
@@ -572,7 +573,7 @@
     
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
-        
+        matView1.hidden= NO;
         matBGLogoView.hidden= YES;
         
         NSLog(@"sizeStringHere %@",sizeString);
@@ -1487,7 +1488,7 @@
     
     {
         
-        
+        matView1.hidden= NO;
         matBGLogoView.hidden= NO;
         
         //sizeString = @"3 X 5";
