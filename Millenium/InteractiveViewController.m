@@ -3347,7 +3347,7 @@ else
     
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+/*- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     UITextField * alertTextField = [alertView textFieldAtIndex:0];
     NSLog(@"alerttextfiled - %@",alertTextField.text);
@@ -3360,7 +3360,7 @@ else
     
    
     
-}
+}*/
 
 
 -(IBAction)addNote:(id)sender{
