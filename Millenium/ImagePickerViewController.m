@@ -213,113 +213,12 @@
     //[self showOverlayWithFrame:chosenImageView.frame];
 }
 
--(void) handleLongPress2:(UITapGestureRecognizer*) sender{
 
-    NSURL*urlRequest = [googleWebView.request URL];
-    NSLog(@"URL recieved: %@", urlRequest);
-            //NSLog(@"URL recieved: %@", urlRequest.URL);
-            NSLog(@"Downloading...");
-
- // Get an image from the URL below
- NSURLSession *session = [NSURLSession sharedSession];
- NSURLRequest*urlRequestDownload;
- NSURLSessionDataTask *downloadTask = [session dataTaskWithRequest:urlRequestDownload
-                                           completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                              
-                                              NSLog(@"...download completed.");
-                                              
-                                               UIImage *image = [[UIImage alloc] initWithData:data];
-                                               NSLog(@"%f,%f", image.size.width, image.size.height);
-                                              
-                                              // Set the image on the image view
-                                              
-                                              // This completion block will keep a strong reference to this image view until the
-                                              // download complete. This could be a problem if the image view is in a table view
-                                              // cell and the cell gets recycled through the usual dequeue process
-                                              
-                                               chosenImageView.image = image;
-                                              
-                                               // `image.size` should be changed to whatever CGSize / CGRect you want to scale the image to
-                                               UIGraphicsBeginImageContextWithOptions(image.size, NO, [[UIScreen mainScreen] scale]);
-                                               [image drawInRect:CGRectMake(0.0, 0.0, image.size.width, image.size.height)];
-                                              
-                                               UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
-                                               UIGraphicsEndImageContext();
-                                              
-                                               // Get a file URL (file://) for saving the image to the app's Documents folder on
-                                              // disk. Similar to the path-style code that was here before, but Apple is
-                                               // encouraging using URLs as of 10.7 / iOS 5
-                                              
-                                              NSError *localFilesystemError = nil;
-                                               NSURL *imageResourceLocation = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
-                                                                                                                                      inDomain:NSUserDomainMask
-                                                                                                                                      appropriateForURL:nil
-                                                                                                                                      create:NO
-                                                                                                                                       error:&localFilesystemError];
-                                              
-                                              NSAssert(imageResourceLocation, @"Crashing the app because error finding the Documents folder:\n%@", localFilesystemError);
-                                              imageResourceLocation = [imageResourceLocation URLByAppendingPathComponent:@"logo-image.png"];
-                                              
-                                              NSData *resizedImageData = UIImagePNGRepresentation(newImg);
-                                              [resizedImageData writeToURL:imageResourceLocation atomically:YES];
-                                              }];
-                                        [downloadTask resume];
-
-}
-
-
-//crashing here supposed to save to photos
--(void) handleLongPress1:(UITapGestureRecognizer*) sender{
-    
-    
-    
-    
-    
-    NSURL*url = [googleWebView.request URL];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url
-                                             cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                         timeoutInterval:60.0];
-    
-    NSURLConnection *conn = [NSURLConnection connectionWithRequest:request
-                                                          delegate:self];
-
-    /*NSMutableURLRequest*request=[NSMutableURLRequest requestWithURL:url];
-    request.cachePolicy=NSURLRequestReloadIgnoringCacheData;*/
-    UITextField*urlField;
-    urlField.text = [url absoluteString];
-    
-    //url = [googleWebView request:URL];
-    NSLog(@"url recieved: %@", url);
-    NSLog(@"Downloading...");
-    // Get an image from the URL below
-    imageDownloaded = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
-    //UIImage *image = [[UIImage alloc] init];
-    NSLog(@"%f,%f",imageDownloaded.size.width,imageDownloaded.size.height);
-    
-    chosenImageView.image=imageDownloaded;
-    UIGraphicsBeginImageContext(imageDownloaded.size);
-    [imageDownloaded drawAtPoint:CGPointZero];
-    
-    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    //return [UIImage imageWithCGImage:myColorMaskedImage];
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
-    
-    
-    
-}
 
 -(void) handleLongPress:(UITapGestureRecognizer*) sender{
     
     
-   // NSString *londonWeatherUrl =
-   // @"http://api.openweathermap.org/data/2.5/weather?q=London,uk";
-    
-    
-    //NSString *londonWeatherUrl =[googleWebView.request URL];
+   
     
     NSURL*url = [googleWebView.request URL];
     
@@ -366,71 +265,6 @@
 }
 
 
-/*-(void) handleLongPress:(UITapGestureRecognizer*) sender{
-    
-    NSURL*url = [googleWebView.request URL];
-    UITextField*urlField;
-    urlField.text = [url absoluteString];
-    
-    //url = [googleWebView request:URL];
-    NSLog(@"url recieved: %@", url);
-    NSLog(@"Downloading...");
-    // Get an image from the URL below
-    UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
-    //UIImage *image = [[UIImage alloc] init];
-    NSLog(@"%f,%f",image.size.width,image.size.height);
-    // Let's save the file into Document folder.
-    // You can also change this to your desktop for testing. (e.g. /Users/kiichi/Desktop/)
-    NSString *deskTopDir = @"/Users/jamisuebecker/Desktop";
-    //NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    // If you go to the folder below, you will find those pictures
-    NSLog(@"%@",deskTopDir);
-    NSLog(@"saving png");
-    NSString *pngFilePath = [NSString stringWithFormat:@"%@/jpg.png",deskTopDir];
-    NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(image)];
-    [data1 writeToFile:pngFilePath atomically:YES];
-    NSLog(@"saving jpeg");
-    NSString *jpegFilePath = [NSString stringWithFormat:@"%@/jpg.jpeg",deskTopDir];
-    NSData *data2 = [NSData dataWithData:UIImageJPEGRepresentation(image, 1.0f)];
-    [data2 writeToFile:jpegFilePath atomically:YES];
-    NSLog(@"saving image done");
-    //[image release];
-    
-    
-    
-}*/
-
-
-/*- (void)handleLongPress:(UILongPressGestureRecognizer*)gestureRecognizer{
-    if (gestureRecognizer.state == UIGestureRecognizerStateBegan){
-        //get the image view that the user selected and save it as your selectedImageView property
-        UIImageView *pressedImageView = (UIImageView *)gestureRecognizer.view;
-        self->googleWebView = pressedImageView;
-        
-        NSLog(@"TAPPED");
-        //Touch gestures below top bar should not make the page turn.
-        //EDITED Check for only Tap here instead.
-        CGPoint touchPoint = [touch locationInView:self.view];
-        
-        NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-        bool pageFlag = [userDefaults boolForKey:@"pageDirectionRTLFlag"];
-        NSLog(@"pageFlag tapbtnRight %d", pageFlag);
-        
-        NSString *imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
-        NSString *urlToSave = [googleWebView stringByEvaluatingJavaScriptFromString:imgURL];
-        NSLog(@"urlToSave :%@",urlToSave);
-        NSURL * imageURL = [NSURL URLWithString:urlToSave];
-        NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-        UIImage * image = [UIImage imageWithData:imageData];
-        selectedImage = image;//imgView is the reference of UIImageView
-        
-        UIImageWriteToSavedPhotosAlbum(image,
-                                       self,
-                                       @selector(savedPhotoImage:didFinishSavingWithError:contextInfo:),
-                                       NULL);
-        
-        
-    }}*/
 
 
 //works to autoload imagePicker
@@ -606,23 +440,6 @@
     }
 
 }
-
-/*-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-    
-    if ([segue.identifier isEqualToString:@"imagePickedSegue"]) {
-        
-        InteractiveViewController *destViewController = segue.destinationViewController;
-        //destViewController.indexPath = sender;
-        destViewController.chosenImage = chosenImage;
-        
-        
-               
-    }
-
-    
-}*/
 
 
 
