@@ -487,32 +487,7 @@
     
     NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
     
-    //Session Stuff
-        
-        //NSURL*url = [googleWebView.request URL];
-        
-        /*NSURLRequest *request = [NSURLRequest requestWithURL:
-                                 url];
-        
-        [NSURLConnection sendAsynchronousRequest:request
-                                           queue:[NSOperationQueue mainQueue]
-                               completionHandler:^(NSURLResponse *response,
-                                                   NSData *data,
-                                                   NSError *connectionError) {
-                                   // handle response
-                               }];
-        
-       /* NSURLSession *session = [NSURLSession sharedSession];
-        [[session dataTaskWithURL:url
-                completionHandler:^(NSData *data,
-                                    NSURLResponse *response,
-                                    NSError *error) {
-                    // handle response
-                    
-                }] resume];
-  
-        
-    //Session Stuff End*/
+
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -597,27 +572,12 @@
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
         
         
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        
-        
-        
-        
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
         artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
-               
         artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
-        
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
 
         
@@ -636,14 +596,7 @@
         NSLog(@"artWorkNameArray: %@", matNameArray);
         
         
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
+        
         
         
         matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
