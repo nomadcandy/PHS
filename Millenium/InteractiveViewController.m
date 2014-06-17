@@ -229,43 +229,7 @@
     
     textOrientField.hidden= YES;
     
-    /*UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-    
-    UICollisionBehavior *collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.steelBlueButton]];
-    // Creates collision boundaries from the bounds of the dynamic animator's
-    // reference view (self.view).
-    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
-    [animator addBehavior: collisionBehavior];
-    
-    CGPoint squareCenterPoint = CGPointMake(self.steelBlueButton.center.x, self.steelBlueButton.center.y - 110.0);
-    UIOffset attachmentPoint = UIOffsetMake(-25.0, -25.0);*/
-    // By default, an attachment behavior uses the center of a view. By using a
-    // small offset, we get a more interesting effect which will cause the view
-    // to have rotation movement when dragging the attachment.
-   /* UIAttachmentBehavior *attachmentBehavior = [[UIAttachmentBehavior alloc] initWithItem:self.steelBlueButton offsetFromCenter:attachmentPoint attachedToAnchor:squareCenterPoint];
-    [animator addBehavior:attachmentBehavior];
-    self.attachmentBehavior = attachmentBehavior;*/
-    
-    // Visually show the attachment points
-    /*self.attachmentView.center = attachmentBehavior.anchorPoint;
-    self.attachmentView.tintColor = [UIColor redColor];
-    self.attachmentView.image = [self.attachmentView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
-    self.square1AttachmentView.center = CGPointMake(25.0, 25.0);
-    self.square1AttachmentView.tintColor = [UIColor blueColor];
-    self.square1AttachmentView.image = [self.square1AttachmentView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    
-    // Visually show the connection between the attachment points.
-    [(APLDecorationView*)self.view trackAndDrawAttachmentFromView:self.attachmentView toView:self.square1 withAttachmentOffset:CGPointMake(-25.0, -25.0)];*/
-    
-    //self.animator = animator;
-
-    
-    //CGRect image_rect1 = CGRectMake(_steelBlueButton.position.x,blueSteelButton.position.y,35,35);
-    
-    //For img_view2 rect
-    //parameters are x,y,width,height
-    //CGRect image_rect2 = CGRectMake(img_view2.position.x,img_view2.position.y,100,100);
+   
     
     
     
@@ -655,6 +619,7 @@
         matView.frame=myMatRect;
         matView.ContentMode=  UIViewContentModeScaleAspectFit;
         
+        [self.view addSubview:snapshotView];
         [self.view addSubview:matView];
         
         
@@ -3245,42 +3210,43 @@ else
         NSLog(@"nameFieldText %@",nameHideField.text);
     
     
-        urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
+        NSString*urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
 
-        matUrlAddFavString = urlMatStringAppend;
+        NSString*matUrlAddFavString = urlMatStringAppend;
         NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
-        matNameAddFavString =nameField.text;
-        matSellerAddFavString =sellerField.text;
-        matCompanyAddFavString =companyField.text;
-        matIDAddFavString =numberField.text;
-        matLocationIDAddFavString =locationIDString;
-        matColorAddFavString =_matColorString;
-        matBGColorAddFavString =matBGColorString;
-        matSizeAddFavString =matSizeString;
+        NSString*matNameAddFavString =nameField.text;
+        NSString*matSellerAddFavString =sellerField.text;
+        NSString*matCompanyAddFavString =companyField.text;
+        NSString*matIDAddFavString =numberField.text;
+        NSString*matLocationIDAddFavString =locationIDString;
+        NSString*matColorAddFavString =_matColorString;
+        NSString*matBGColorAddFavString =matBGColorString;
+        NSString*matSizeAddFavString =matSizeString;
     
     
     
    //TODO FIX HERE
     
 //if([NSNull null] != matUrlAddFavString)
-  /*if (nameHideField.text == NULL)
-   //if (matUrlAddFavString==nil)
+  /*if (nameHideField.text == NULL)*/
+     NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    if (matUrlAddFavString==NULL)
       
     {
         
-        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        /*UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         
         alert.tag = 2;
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         
-        [alert show];
+        [alert show];*/
 
         
        
         
         matUrlAddFavString= @"No Image Is Available";
         
-    }*/
+    }
     
     if (matNameAddFavString==NULL)
     {
@@ -3355,7 +3321,7 @@ else
     
     
     
-    
+        NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
         [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
         [newMatFavorite setValue:companyField.text forKey:@"company"];
@@ -3743,7 +3709,6 @@ else
             NSLog(@"matNameSellerArrayCount: %d", matSellerArray.count);
         
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
-            //NSLog(@"idString %@",idString);
             matColorArray = [searchMatArray valueForKey:@"Color"];
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         

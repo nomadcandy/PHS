@@ -37,9 +37,10 @@
                                 <rect key="frame" x="423" y="122" width="607" height="457"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ms-IS-vla">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ms-IS-vla">
                                         <rect key="frame" x="152" y="214" width="200" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -5086,6 +5087,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="wpq-PH-bdK"/>
         <segue reference="qOq-Ne-VbY"/>
-        <segue reference="QQh-is-hk2"/>
+        <segue reference="gYW-Ou-qn0"/>
     </inferredMetricsTieBreakers>
 </document>
