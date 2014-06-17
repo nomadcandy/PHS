@@ -108,6 +108,20 @@
 @synthesize matBGTextColorString;
 
 @synthesize matUrlAddFavString;
+@synthesize matNameAddFavString;
+@synthesize matSellerAddFavString;
+@synthesize matCompanyAddFavString;
+@synthesize matIDAddFavString;
+@synthesize matLocationIDAddFavString;
+
+
+@synthesize matColorAddFavString;
+@synthesize matBGColorAddFavString;
+@synthesize matSizeAddFavString;
+
+
+
+
 @synthesize matUseBGColorString;
 @synthesize matBGColorString;
 @synthesize logoBGColorString;
@@ -2883,7 +2897,7 @@ else
     if ((long)sender.tag==121){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Steel Blue_121.jpg"];
+        myBGColor = [UIImage imageNamed:@"Steel Blue_121.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setImage:myBGColor forState:UIControlStateSelected];
@@ -2901,7 +2915,7 @@ else
     else if ((long)sender.tag==123){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
+        myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
@@ -2912,7 +2926,7 @@ else
     else if ((long)sender.tag==140){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"White_140.jpg"];
+        myBGColor = [UIImage imageNamed:@"White_140.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -2922,7 +2936,7 @@ else
     else if ((long)sender.tag==119){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
+        myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -2932,7 +2946,7 @@ else
     else if ((long)sender.tag==107){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
+        myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -2942,7 +2956,7 @@ else
     else if ((long)sender.tag==120){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
+        myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -2952,7 +2966,7 @@ else
     else if ((long)sender.tag==116){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
+        myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -2962,7 +2976,7 @@ else
     if ((long)sender.tag==127){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Orange_127.jpg"];
+        myBGColor = [UIImage imageNamed:@"Orange_127.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -2972,7 +2986,7 @@ else
     if ((long)sender.tag==105){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Purple_105.jpg"];
+        myBGColor = [UIImage imageNamed:@"Purple_105.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -2981,7 +2995,7 @@ else
     if ((long)sender.tag==112){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Red_112.jpg"];
+        myBGColor = [UIImage imageNamed:@"Red_112.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -2991,7 +3005,7 @@ else
     if ((long)sender.tag==109){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Gold_109.jpg"];
+        myBGColor = [UIImage imageNamed:@"Gold_109.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3002,7 +3016,7 @@ else
     if ((long)sender.tag==115){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Grey_115.jpg"];
+        myBGColor = [UIImage imageNamed:@"Grey_115.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3012,7 +3026,7 @@ else
     if ((long)sender.tag==106){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Light Blue_106.jpg"];
+        myBGColor = [UIImage imageNamed:@"Light Blue_106.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3022,7 +3036,7 @@ else
     if ((long)sender.tag==118){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Navy_118.jpg"];
+        myBGColor = [UIImage imageNamed:@"Navy_118.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3032,7 +3046,7 @@ else
     if ((long)sender.tag==110){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Emerald Green_110.jpg"];
+        myBGColor = [UIImage imageNamed:@"Emerald Green_110.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3042,7 +3056,7 @@ else
     if ((long)sender.tag==117){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Forest Green_117.jpg"];
+        myBGColor = [UIImage imageNamed:@"Forest Green_117.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3053,7 +3067,7 @@ else
     if ((long)sender.tag==114){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Cranberry_114.jpg"];
+        myBGColor = [UIImage imageNamed:@"Cranberry_114.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3064,7 +3078,7 @@ else
     if ((long)sender.tag==103){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Dark Gold_103.jpg"];
+        myBGColor = [UIImage imageNamed:@"Dark Gold_103.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3074,7 +3088,7 @@ else
     if ((long)sender.tag==101){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Charcoal_101.jpg"];
+        myBGColor = [UIImage imageNamed:@"Charcoal_101.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3084,7 +3098,7 @@ else
     if ((long)sender.tag==111){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Chocolate_111.jpg"];
+        myBGColor = [UIImage imageNamed:@"Chocolate_111.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3104,7 +3118,7 @@ else
     if ((long)sender.tag==108){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Black_108.jpg"];
+        myBGColor = [UIImage imageNamed:@"Black_108.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3114,7 +3128,7 @@ else
     if ((long)sender.tag==102){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Brown_102.jpg"];
+        myBGColor = [UIImage imageNamed:@"Brown_102.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3124,7 +3138,7 @@ else
     if ((long)sender.tag==100){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Burgundy_100.jpg"];
+        myBGColor = [UIImage imageNamed:@"Burgundy_100.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3134,7 +3148,7 @@ else
     if ((long)sender.tag==130){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Aquamarine_130.jpg"];
+        myBGColor = [UIImage imageNamed:@"Aquamarine_130.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3144,7 +3158,7 @@ else
     if ((long)sender.tag==104){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Turquoise_104.jpg"];
+        myBGColor = [UIImage imageNamed:@"Turquoise_104.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3155,7 +3169,7 @@ else
     if ((long)sender.tag==128){
         
         //create an image
-        UIImage *myBGColor = [UIImage imageNamed:@"Yellow_128.jpg"];
+        myBGColor = [UIImage imageNamed:@"Yellow_128.jpg"];
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setImage:nil forState:UIControlStateNormal];
         [bgColorButton setBackgroundImage:nil forState:UIControlStateNormal];
@@ -3181,125 +3195,77 @@ else
 
 -(IBAction)addMatFavorite:(id)sender{
     
-    nameHideField= nameField;
-   //snapshot picture on screen
-    //UIGraphicsBeginImageContext(matBGLogoView.size);
     
-    
-    //
-    // Get size of current image
-    
-     //CGSize size = [myBGColor size];
-    
-    //CGRect screenRect2 = [myBGColor size];
-    
-    //CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
-    CGRect screenRect2 = CGRectMake(723,342,600,490);
-
-    
-    
-    UIGraphicsBeginImageContext(screenRect2.size);
-    //UIGraphicsBeginImageContext(interactiveMatView.size);
-    
-    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx1, screenRect2);
-    
-    //[self.matBGLogoView.layer renderInContext:ctx1];
-    
-    [self.snapshotView.layer renderInContext:ctx1];
-    
-    //[self.view.layer renderInContext:ctx1];
-    
-    matImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameHideField.text]];
-    
-    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
-    
-    //cut smalller image out
-    
-   /* UIGraphicsBeginImageContextWithOptions(CGSizeMake(600, 400), NO, [UIScreen mainScreen].scale);
-    [self.testView drawViewHierarchyInRect:CGRectMake(-50, -50, self.testView.bounds.size.width, self.testView.bounds.size.height) afterScreenUpdates:YES];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();*/
-    
-    
-  
-    //save image to documents
-   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.jpg",nameField.text]];*/
-    
-   /* [UIImageJPEGRepresentation(matImage, 1.0) writeToFile:imagePath atomically:YES];
-    [snapShotTestImageView  setImage:matImage];*/
-    
-    
-    //save as blank something then call again and resave with nameField
-    /*if (nameField.text!= NULL){
-    
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameField.text]];
-    
-        [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];}
-    
-    else{
+    if (nameField.text==NULL)
         
+    {
         UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         
-        alert.tag = 2;
-        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        /*alert.tag = 2;
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;*/
         
         [alert show];
 
-    }*/
+        
+    } else {
     
-    
-   // [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
-    
-    
-    
-   // NSLog(@"chosenImage %@",selectedImage);
-    
-    //get snapshot string to save as URL.
-    
-    //[self.view.layer renderInContext:ctx1];
-    // [self.view.layer renderInContext:(__bridge CGContextRef)(self)];
-    
-    //[self.view reloadInputViews];
-    
-    [self.view addSubview:snapshotView];
-
-
-    NSString*matUrlAppendAddFavString= nameField.text;
-    NSString*pngString= @".png";
-    NSLog(@"nameFieldText %@",nameField.text);
-    
-    
-    urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
-
+        nameHideField.text= nameField.text;
+        // Get size of current image
+        //CGSize size = [myBGColor size];
     
    
+        CGRect screenRect2 = CGRectMake(723,342,600,490);
+        UIGraphicsBeginImageContext(screenRect2.size);
+   
     
-    NSString*matUrlAddFavString = urlMatStringAppend;
-    NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
-    NSString*matNameAddFavString =nameField.text;
-    NSString*matSellerAddFavString =sellerField.text;
-    NSString*matCompanyAddFavString =companyField.text;
-    NSString*matIDAddFavString =numberField.text;
-    NSString*matLocationIDAddFavString =locationIDString;
+        CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+        [[UIColor whiteColor] set];
+        CGContextFillRect(ctx1, screenRect2);
+    
+        [self.snapshotView.layer renderInContext:ctx1];
     
     
-    NSString*matColorAddFavString =_matColorString;
-    NSString*matBGColorAddFavString =matBGColorString;
-    NSString*matSizeAddFavString =matSizeString;
+        matImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+        UIGraphicsEndImageContext();
+    
+    
+        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameHideField.text]];
+    
+        [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
+    
+    
+    
+        [self.view addSubview:snapshotView];
+
+
+        NSString*matUrlAppendAddFavString= nameHideField.text;
+        NSString*pngString= @".png";
+        NSLog(@"nameFieldText %@",nameField.text);
+        NSLog(@"nameFieldText %@",nameHideField.text);
+    
+    
+        urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
+
+        matUrlAddFavString = urlMatStringAppend;
+        NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+        matNameAddFavString =nameField.text;
+        matSellerAddFavString =sellerField.text;
+        matCompanyAddFavString =companyField.text;
+        matIDAddFavString =numberField.text;
+        matLocationIDAddFavString =locationIDString;
+        matColorAddFavString =_matColorString;
+        matBGColorAddFavString =matBGColorString;
+        matSizeAddFavString =matSizeString;
     
     
     
    //TODO FIX HERE
     
-     //if([NSNull null] != matUrlAddFavString)
-  if (matUrlAddFavString == NULL)
+//if([NSNull null] != matUrlAddFavString)
+  /*if (nameHideField.text == NULL)
+   //if (matUrlAddFavString==nil)
+      
     {
         
         UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
@@ -3314,7 +3280,7 @@ else
         
         matUrlAddFavString= @"No Image Is Available";
         
-    }
+    }*/
     
     if (matNameAddFavString==NULL)
     {
@@ -3382,31 +3348,31 @@ else
      NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
     
     
-    NSManagedObjectContext *context = [self managedObjectContext];
+        NSManagedObjectContext *context = [self managedObjectContext];
     
     // Create a new managed object
-    NSManagedObject *newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
+        NSManagedObject *newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
     
     
     
     
-    [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
-    [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
-    [newMatFavorite setValue:companyField.text forKey:@"company"];
-    [newMatFavorite setValue:sellerField.text forKey:@"seller"];
-    [newMatFavorite setValue:numberField.text forKey:@"productID"];
-    [newMatFavorite setValue:locationIDString forKey:@"locationID"];
-    [newMatFavorite setValue:_matColorString forKey:@"color"];
-    [newMatFavorite setValue:matUseBGColorString forKey:@"bgColor"];
-    [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
+        [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
+        [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
+        [newMatFavorite setValue:companyField.text forKey:@"company"];
+        [newMatFavorite setValue:sellerField.text forKey:@"seller"];
+        [newMatFavorite setValue:numberField.text forKey:@"productID"];
+        [newMatFavorite setValue:locationIDString forKey:@"locationID"];
+        [newMatFavorite setValue:_matColorString forKey:@"color"];
+        [newMatFavorite setValue:matUseBGColorString forKey:@"bgColor"];
+        [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
     
     
     
-    NSError *error = nil;
+        NSError *error = nil;
     // Save the object to persistent store
-    if (![context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-    }
+        if (![context save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
     //Fetch Data entered to test
   /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
@@ -3415,6 +3381,8 @@ else
     
     
     //NSLog(@"favoritesMatArray %@",favoritesMatArray);
+    
+    }
     
 }
 

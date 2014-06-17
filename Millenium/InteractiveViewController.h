@@ -258,7 +258,18 @@
 @property (nonatomic, strong) NSString *matColorUseString;
 @property (nonatomic, strong) NSString *matSizeUseString;
 
-@property (nonatomic, strong) NSString *matUrlAddFavString;
+@property (nonatomic, strong) NSString*matUrlAddFavString;
+@property (nonatomic, strong) NSString*matNameAddFavString;
+@property (nonatomic, strong) NSString*matSellerAddFavString;
+@property (nonatomic, strong) NSString*matCompanyAddFavString;
+@property (nonatomic, strong) NSString*matIDAddFavString;
+@property (nonatomic, strong) NSString*matLocationIDAddFavString;
+
+
+@property (nonatomic, strong) NSString*matColorAddFavString;
+@property (nonatomic, strong) NSString*matBGColorAddFavString;
+@property (nonatomic, strong) NSString*matSizeAddFavString;
+
 
 @property (nonatomic, strong) NSString *nameString;
 @property (nonatomic, strong) NSString *sellerString;
