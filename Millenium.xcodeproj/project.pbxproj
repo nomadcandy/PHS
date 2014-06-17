@@ -177,8 +177,8 @@
 		42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */; };
 		42849B9518EA04AB00E5B3FB /* logothumbnailbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */; };
 		4288F1AB1950A03500975FB6 /* LoginIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AA1950A03500975FB6 /* LoginIcon1.png */; };
-		4288F1AD1950A7C500975FB6 /* PDFIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AC1950A7C500975FB6 /* PDFIcon1.png */; };
 		4288F1AF1950A7CF00975FB6 /* MovieIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */; };
+		4288F1B11950ACB800975FB6 /* PDFIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B01950ACB800975FB6 /* PDFIcon2.png */; };
 		4297E04E1923C5E800E43779 /* MaskWhiteSquare7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */; };
 		4297E0501923C74D00E43779 /* MaskWhiteSquare8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E04F1923C74D00E43779 /* MaskWhiteSquare8.png */; };
 		4297E0521923C95200E43779 /* MaskGreySquare8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E0511923C95200E43779 /* MaskGreySquare8.png */; };
@@ -519,8 +519,8 @@
 		42849B9018EA02BE00E5B3FB /* whitepad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whitepad.png; sourceTree = "<group>"; };
 		42849B9318EA04AB00E5B3FB /* logothumbnailbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logothumbnailbg.png; sourceTree = "<group>"; };
 		4288F1AA1950A03500975FB6 /* LoginIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginIcon1.png; sourceTree = "<group>"; };
-		4288F1AC1950A7C500975FB6 /* PDFIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFIcon1.png; sourceTree = "<group>"; };
 		4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MovieIcon1.png; sourceTree = "<group>"; };
+		4288F1B01950ACB800975FB6 /* PDFIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFIcon2.png; sourceTree = "<group>"; };
 		4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare7.png; sourceTree = "<group>"; };
 		4297E04F1923C74D00E43779 /* MaskWhiteSquare8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare8.png; sourceTree = "<group>"; };
 		4297E0511923C95200E43779 /* MaskGreySquare8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare8.png; sourceTree = "<group>"; };
@@ -1138,8 +1138,8 @@
 		42B0157618E342550068019C /* ImagesFliers */ = {
 			isa = PBXGroup;
 			children = (
+				4288F1B01950ACB800975FB6 /* PDFIcon2.png */,
 				4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */,
-				4288F1AC1950A7C500975FB6 /* PDFIcon1.png */,
 				42081FE41947B3B200412486 /* EcoGuardPDF.png */,
 				42081FE21947B34400412486 /* UltraGuardPDF.png */,
 				42081FDE1947B15A00412486 /* WalkOffPhoenixPDF.png */,
@@ -1570,6 +1570,7 @@
 				42081FFC1948AB3800412486 /* SearchBoxSimple3.png in Resources */,
 				42081FD21947B04700412486 /* SpringStepPDF.png in Resources */,
 				421EE34F1919788F008A5CAB /* WebPadBig.png in Resources */,
+				4288F1B11950ACB800975FB6 /* PDFIcon2.png in Resources */,
 				42F399C01946675B00C84189 /* TripleFlexFlowM.png in Resources */,
 				4297E07A19250F8100E43779 /* Steel Blue_121.jpg in Resources */,
 				42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */,
@@ -1669,7 +1670,6 @@
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
 				4297E0521923C95200E43779 /* MaskGreySquare8.png in Resources */,
 				4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */,
-				4288F1AD1950A7C500975FB6 /* PDFIcon1.png in Resources */,
 				428085CA18FC4B4200389C9C /* MatCintasCenter.png in Resources */,
 				42849B8E18EA027800E5B3FB /* gradietebg.png in Resources */,
 				42081FE11947B29600412486 /* WaterGuard.pdf in Resources */,

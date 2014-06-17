@@ -29,7 +29,7 @@
 
 - (void)viewDidLoad
 {
-    [pdfScrollView setContentSize:CGSizeMake(958, 6000)];
+    [pdfScrollView setContentSize:CGSizeMake(958, 7000)];
     
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, 100, 0.0);
     pdfScrollView.contentInset = contentInsets;
@@ -42,7 +42,7 @@
 }
 
 - (void)viewDidLayoutSubviews {
-    [pdfScrollView setContentSize:CGSizeMake(958, 6000)];
+    [pdfScrollView setContentSize:CGSizeMake(958, 7000)];
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, 100, 0.0);
     pdfScrollView.contentInset = contentInsets;
 
