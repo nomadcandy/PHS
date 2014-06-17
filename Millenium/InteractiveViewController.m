@@ -214,7 +214,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    matView1.hidden= YES;
    
     searchField.textAlignment = NSTextAlignmentCenter;
     
@@ -1488,7 +1488,7 @@
     
     {
         
-        matView1.hidden= NO;
+        matView1.hidden= YES;
         matBGLogoView.hidden= NO;
         
         //sizeString = @"3 X 5";

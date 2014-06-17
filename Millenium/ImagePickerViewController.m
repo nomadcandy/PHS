@@ -405,7 +405,11 @@
         InteractiveViewController *goingController = segue.destinationViewController;
         goingController.selectedImage=chosenImageView.image;
         NSLog(@"chosenImage %@",chosenImageView.image);
-        goingController.interactiveHeaderString=interactiveHeaderString;
+        //goingController.interactiveHeaderString=interactiveHeaderString;
+        goingController.interactiveHeaderString=@"Create Mat";
+        
+
+
         goingController.logoColorString=@" ";
         
         
@@ -483,22 +487,60 @@
     
     NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
     
-    
+    //Session Stuff
+        
+        //NSURL*url = [googleWebView.request URL];
+        
+        /*NSURLRequest *request = [NSURLRequest requestWithURL:
+                                 url];
+        
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response,
+                                                   NSData *data,
+                                                   NSError *connectionError) {
+                                   // handle response
+                               }];
+        
+       /* NSURLSession *session = [NSURLSession sharedSession];
+        [[session dataTaskWithURL:url
+                completionHandler:^(NSData *data,
+                                    NSURLResponse *response,
+                                    NSError *error) {
+                    // handle response
+                    
+                }] resume];
+  
+        
+    //Session Stuff End*/
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
+    NSURLRequest *request = [NSURLRequest requestWithURL:
+                                 urlSearch];
 
-    
     
     NSLog(@"URLLOGIN: %@",urlSearch);
     
-    
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response,
+                                                   NSData *data,
+                                                   NSError *connectionError) {
+                                   // handle response
+                               }];
+        
+        NSURLSession *session = [NSURLSession sharedSession];
+        [[session dataTaskWithURL:urlSearch
+                completionHandler:^(NSData *data,
+                                    NSURLResponse *response,
+                                    NSError *error) {
+                    // handle response
+                    
+                }] resume];
+
     
     NSError *error = nil;
-    
-    
-    
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
     
     
@@ -1103,8 +1145,8 @@
 
 - (IBAction)goInteractive:(UIButton *)sender {
     
-    
-    interactiveHeaderString= @"Logo Picked";
+     interactiveHeaderString = @"Create Mat";
+    //interactiveHeaderString= @"Logo Picked";
     
     [self performSegueWithIdentifier:@"ImagePickedSegue" sender:sender];
     
@@ -1174,7 +1216,7 @@
 {
     [super didReceiveMemoryWarning];
     
-        
+    
 }
 
 - (void)dealloc {
