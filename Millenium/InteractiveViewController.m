@@ -3577,39 +3577,92 @@ else
     NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
 
        
-    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    NSLog(@"URLLOGIN: %@",urlSearch);
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-        //parse Array from web
-    NSArray *searchLogoArray = [NSJSONSerialization
-                                JSONObjectWithData:data
-                                options:NSJSONReadingAllowFragments
-                                error: &error];
-    
-    
-    NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
-    
+       NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+       NSURLRequest *request = [NSURLRequest requestWithURL:
+                                urlSearch];
+       
+       
+       NSLog(@"URLLOGIN: %@",urlSearch);
+       
+       [NSURLConnection sendAsynchronousRequest:request
+                                          queue:[NSOperationQueue mainQueue]
+                              completionHandler:^(NSURLResponse *response,
+                                                  NSData *data,
+                                                  NSError *connectionError) {
+                                  // handle response
+                              }];
+       
+       NSURLSession *session = [NSURLSession sharedSession];
+       [[session dataTaskWithURL:urlSearch
+               completionHandler:^(NSData *data,
+                                   NSURLResponse *response,
+                                   NSError *error) {
+                   // handle response
+                   
+               }] resume];
+       
+       
+       NSError *error = nil;
+       NSData *data = [NSData dataWithContentsOfURL:urlSearch];
+       //parse Array from web
+       NSArray *searchLogoArray = [NSJSONSerialization
+                                   JSONObjectWithData:data
+                                   options:NSJSONReadingAllowFragments
+                                   error: &error];
+       
+       
+       
+       
+       
+       
+       artworkCount= searchLogoArray.count;
+
     
     NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
     
+       NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+       NSURLRequest *requestMat = [NSURLRequest requestWithURL:
+                                   urlSearchMat];
+       
+       
+       // NSLog(@"URLSearchMat: %@",urlSearchMat);
+       NSError *errorMat = nil;
+       NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
+       
+       NSLog(@"URLLOGIN: %@",urlSearch);
+       
+       [NSURLConnection sendAsynchronousRequest:request
+                                          queue:[NSOperationQueue mainQueue]
+                              completionHandler:^(NSURLResponse *response,
+                                                  NSData *dataMat,
+                                                  NSError *connectionError) {
+                                  // handle response
+                              }];
+       
+       NSURLSession *sessionMat = [NSURLSession sharedSession];
+       [[sessionMat dataTaskWithURL:urlSearch
+                  completionHandler:^(NSData *dataMat,
+                                      NSURLResponse *response,
+                                      NSError *errorMat) {
+                      // handle response
+                      
+                  }] resume];
+       
+       
+       //NSError *errorMat = nil;
+       //NSData *dataMat = [NSData dataWithContentsOfURL:urlSearch];
+       
+       
+       //parse Array from web
+       NSArray *searchMatArray = [NSJSONSerialization
+                                  JSONObjectWithData:dataMat
+                                  options:NSJSONReadingAllowFragments
+                                  error: &errorMat];
+       
+       
+
     
-    
-    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
-    
-    NSLog(@"URLSearchMat: %@",urlSearchMat);
-    NSError *errorMat = nil;
-    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
-    
-    
-    
-    //parse Array from web
-    NSArray *searchMatArray = [NSJSONSerialization
-                               JSONObjectWithData:dataMat
-                               options:NSJSONReadingAllowFragments
-                               error: &error];
-    
-    
+       
     matCount= searchMatArray.count;
     NSLog(@"%@SearchMatArray",searchMatArray);
        
