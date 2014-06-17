@@ -536,25 +536,53 @@
     
     
     artworkCount= searchLogoArray.count;
-    
+    //Mat Search Begin
     
     NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
     
     
     
+    //NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+        
+        
     NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    NSURLRequest *requestMat = [NSURLRequest requestWithURL:
+                                 urlSearchMat];
     
-    NSLog(@"URLSearchMat: %@",urlSearchMat);
+    
+   // NSLog(@"URLSearchMat: %@",urlSearchMat);
     NSError *errorMat = nil;
-    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
     
-    
+        NSLog(@"URLLOGIN: %@",urlSearch);
+        
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response,
+                                                   NSData *dataMat,
+                                                   NSError *connectionError) {
+                                   // handle response
+                               }];
+        
+        NSURLSession *sessionMat = [NSURLSession sharedSession];
+        [[sessionMat dataTaskWithURL:urlSearch
+                completionHandler:^(NSData *dataMat,
+                                    NSURLResponse *response,
+                                    NSError *errorMat) {
+                    // handle response
+                    
+                }] resume];
+        
+        
+        //NSError *errorMat = nil;
+        //NSData *dataMat = [NSData dataWithContentsOfURL:urlSearch];
+
     
     //parse Array from web
     NSArray *searchMatArray = [NSJSONSerialization
                                JSONObjectWithData:dataMat
                                options:NSJSONReadingAllowFragments
-                               error: &error];
+                               error: &errorMat];
     
     
     
