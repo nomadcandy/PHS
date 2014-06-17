@@ -51,6 +51,7 @@
 @synthesize artworkInfoArray;
 @synthesize artworkCompanyArray;
 @synthesize artworkSellerArray;
+@synthesize artworkColorArray;
 
 @synthesize matNameArray;
 @synthesize matSizeArray;
@@ -428,6 +429,7 @@
         goingController.artworkFullImageArray = artworkFullImageArray;
         goingController.artworkIDArray = artworkIDArray;
         goingController.artworkCount = artworkCount;
+        goingController.artworkColorArray = artworkColorArray;
         
         goingController.matNameArray = matNameArray;
         goingController.matSizeArray = matSizeArray;
@@ -579,6 +581,12 @@
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
+        artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+        
+        artworkCount= artworkNameArray.count;
+
+        
+        //
 
         
         

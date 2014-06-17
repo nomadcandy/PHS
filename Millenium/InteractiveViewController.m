@@ -3560,7 +3560,7 @@ else
 -(IBAction)goSearch:(id)sender{
     
     
-    [activityIndicator startAnimating];
+  [activityIndicator startAnimating];
     
    if( searchField.text!= Nil || [searchField.text length] == 0 ) {
     
@@ -3632,41 +3632,14 @@ else
         
         
         NSLog(@"artWorkNameArray: %@", artworkNameArray);
-        
-        
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        
-        
-        
-        
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
         NSLog(@"artworkSizeArray %@",artworkSizeArray);
-        
-        
-        
-        
         artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
         NSLog(@"artworkFormatString %@",artworkFormatArray);
-        
-        
-        
-        
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
         NSLog(@"fullImageArray %@",artworkFullImageArray);
-        
-        
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
-        //NSLog(@"idString %@",idString);
-        
         artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         
