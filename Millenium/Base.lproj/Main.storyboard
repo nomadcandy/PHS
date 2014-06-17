@@ -37,6 +37,12 @@
                                 <rect key="frame" x="423" y="122" width="607" height="457"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ms-IS-vla">
+                                        <rect key="frame" x="152" y="214" width="200" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mlP-c3-Xyb" userLabel="BGColorMat">
                                         <rect key="frame" x="3" y="19" width="600" height="418"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1264,6 +1270,7 @@
                         <outlet property="matBGImageView" destination="50N-Xd-J20" id="pAo-n1-8Ae"/>
                         <outlet property="matBGLogoView" destination="mlP-c3-Xyb" id="6TG-4a-5Nj"/>
                         <outlet property="nameField" destination="oeY-YL-pre" id="q5B-Ev-oYg"/>
+                        <outlet property="nameHideField" destination="6Ms-IS-vla" id="gVO-Ew-KPe"/>
                         <outlet property="navyButton" destination="gbN-FR-xoE" id="QfP-rB-rPt"/>
                         <outlet property="numberField" destination="S9N-le-kjx" id="cSx-ej-BAc"/>
                         <outlet property="orangeButton" destination="jj4-Wg-ynm" id="Dic-fW-qDY"/>

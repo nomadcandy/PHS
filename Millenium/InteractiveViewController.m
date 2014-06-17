@@ -44,6 +44,8 @@
 @synthesize matColorUseString;
 @synthesize matSizeUseString;
 
+
+@synthesize matImage;
 @synthesize selectedImage;
 @synthesize matButton;
 @synthesize logoButton;
@@ -54,6 +56,8 @@
 
 @synthesize searchButton;
 @synthesize searchField;
+
+@synthesize nameHideField;
 
 @synthesize nameField;
 @synthesize numberField;
@@ -103,6 +107,7 @@
 
 @synthesize matBGTextColorString;
 
+@synthesize matUrlAddFavString;
 @synthesize matUseBGColorString;
 @synthesize matBGColorString;
 @synthesize logoBGColorString;
@@ -3176,7 +3181,7 @@ else
 
 -(IBAction)addMatFavorite:(id)sender{
     
-    
+    nameHideField= nameField;
    //snapshot picture on screen
     //UIGraphicsBeginImageContext(matBGLogoView.size);
     
@@ -3206,9 +3211,14 @@ else
     
     //[self.view.layer renderInContext:ctx1];
     
-    UIImage *matImage = UIGraphicsGetImageFromCurrentImageContext();
+    matImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
+    
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameHideField.text]];
+    
+    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
     
     //cut smalller image out
     
@@ -3225,9 +3235,25 @@ else
    /* [UIImageJPEGRepresentation(matImage, 1.0) writeToFile:imagePath atomically:YES];
     [snapShotTestImageView  setImage:matImage];*/
     
+    
+    //save as blank something then call again and resave with nameField
+    /*if (nameField.text!= NULL){
+    
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameField.text]];
     
-    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
+        [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];}
+    
+    else{
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        alert.tag = 2;
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+        [alert show];
+
+    }*/
+    
     
    // [logoPicButton setBackgroundImage:newImage forState:UIControlStateNormal];
     
@@ -3273,17 +3299,22 @@ else
    //TODO FIX HERE
     
      //if([NSNull null] != matUrlAddFavString)
-   /*if (matUrlAddFavString==nil)
+  if (matUrlAddFavString == NULL)
     {
         
         UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         
+        alert.tag = 2;
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
         [alert show];
 
         
+       
+        
         matUrlAddFavString= @"No Image Is Available";
         
-    }*/
+    }
     
     if (matNameAddFavString==NULL)
     {
@@ -3356,15 +3387,7 @@ else
     // Create a new managed object
     NSManagedObject *newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
     
-    //[newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
-    /*[newMatFavorite setValue:self.matNameAddFavString forKey:@"artworkName"];
-    [newMatFavorite setValue:self.matCompanyAddFavString forKey:@"company"];
-    [newMatFavorite setValue:self.matSellerAddFavString forKey:@"seller"];
-    [newMatFavorite setValue:self.matIDAddFavString forKey:@"productID"];
-    [newMatFavorite setValue:self.matLocationIDAddFavString forKey:@"locationID"];
-    [newMatFavorite setValue:self.matColorAddFavString forKey:@"color"];
-    [newMatFavorite setValue:self.matBGColorAddFavString forKey:@"bgColor"];*/
-    //[newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];
+    
     
     
     [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
@@ -3392,6 +3415,21 @@ else
     
     
     //NSLog(@"favoritesMatArray %@",favoritesMatArray);
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    UITextField * alertTextField = [alertView textFieldAtIndex:0];
+    NSLog(@"alerttextfiled - %@",alertTextField.text);
+    
+    // do whatever you want to do with this UITextField.
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",alertTextField.text]];
+    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
+
+    
+   
     
 }
 

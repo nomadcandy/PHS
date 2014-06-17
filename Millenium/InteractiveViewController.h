@@ -90,6 +90,8 @@
 //@property (nonatomic, weak) id <StringPickerProtocol> delegate;
 //@property (nonatomic, weak) id <StringSetDelegate> delegate;
 
+@property(nonatomic, readonly) NSArray *textFields;
+
 @property (nonatomic, weak) NSString *logoUseStringHere;
 @property (nonatomic, weak) NSString *urlMatStringAppend;
 
@@ -106,7 +108,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *sellerField;
 @property (nonatomic, strong) IBOutlet UITextField *companyField;
 @property (nonatomic,strong) IBOutlet UITextField *nameField;
-//@property (nonatomic, strong) IBOutlet UITextField *nameField;
+@property (nonatomic, strong) IBOutlet UITextField *nameHideField;
 @property (nonatomic, strong) IBOutlet UITextField *numberField;
 
 @property (nonatomic, strong) IBOutlet UITextField *widthField;
@@ -256,6 +258,8 @@
 @property (nonatomic, strong) NSString *matColorUseString;
 @property (nonatomic, strong) NSString *matSizeUseString;
 
+@property (nonatomic, strong) NSString *matUrlAddFavString;
+
 @property (nonatomic, strong) NSString *nameString;
 @property (nonatomic, strong) NSString *sellerString;
 @property (nonatomic, strong) NSString *companyString;
@@ -268,6 +272,8 @@
 
 @property (nonatomic, strong) UIImage *selectedImage;
 @property (nonatomic, strong) UIImage *myBGColor;
+
+@property (nonatomic, strong)UIImage *matImage;
 
 
 @property (nonatomic, strong) IBOutlet iCarousel *carouselSize;
