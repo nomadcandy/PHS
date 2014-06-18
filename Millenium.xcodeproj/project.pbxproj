@@ -179,6 +179,9 @@
 		4288F1AB1950A03500975FB6 /* LoginIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AA1950A03500975FB6 /* LoginIcon1.png */; };
 		4288F1AF1950A7CF00975FB6 /* MovieIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */; };
 		4288F1B11950ACB800975FB6 /* PDFIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B01950ACB800975FB6 /* PDFIcon2.png */; };
+		4288F1B3195130D500975FB6 /* WaterGuardPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B2195130D500975FB6 /* WaterGuardPDF.png */; };
+		4288F1B51951329E00975FB6 /* TripleFlexFlow1PDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B41951329E00975FB6 /* TripleFlexFlow1PDF.png */; };
+		4288F1B71951330300975FB6 /* Waterguard1PDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B61951330300975FB6 /* Waterguard1PDF.png */; };
 		4297E04E1923C5E800E43779 /* MaskWhiteSquare7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */; };
 		4297E0501923C74D00E43779 /* MaskWhiteSquare8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E04F1923C74D00E43779 /* MaskWhiteSquare8.png */; };
 		4297E0521923C95200E43779 /* MaskGreySquare8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E0511923C95200E43779 /* MaskGreySquare8.png */; };
@@ -521,6 +524,9 @@
 		4288F1AA1950A03500975FB6 /* LoginIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginIcon1.png; sourceTree = "<group>"; };
 		4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MovieIcon1.png; sourceTree = "<group>"; };
 		4288F1B01950ACB800975FB6 /* PDFIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFIcon2.png; sourceTree = "<group>"; };
+		4288F1B2195130D500975FB6 /* WaterGuardPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardPDF.png; sourceTree = "<group>"; };
+		4288F1B41951329E00975FB6 /* TripleFlexFlow1PDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TripleFlexFlow1PDF.png; sourceTree = "<group>"; };
+		4288F1B61951330300975FB6 /* Waterguard1PDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Waterguard1PDF.png; sourceTree = "<group>"; };
 		4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare7.png; sourceTree = "<group>"; };
 		4297E04F1923C74D00E43779 /* MaskWhiteSquare8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare8.png; sourceTree = "<group>"; };
 		4297E0511923C95200E43779 /* MaskGreySquare8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare8.png; sourceTree = "<group>"; };
@@ -1138,6 +1144,9 @@
 		42B0157618E342550068019C /* ImagesFliers */ = {
 			isa = PBXGroup;
 			children = (
+				4288F1B61951330300975FB6 /* Waterguard1PDF.png */,
+				4288F1B41951329E00975FB6 /* TripleFlexFlow1PDF.png */,
+				4288F1B2195130D500975FB6 /* WaterGuardPDF.png */,
 				4288F1B01950ACB800975FB6 /* PDFIcon2.png */,
 				4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */,
 				42081FE41947B3B200412486 /* EcoGuardPDF.png */,
@@ -1579,6 +1588,7 @@
 				42081FEE1948A3A200412486 /* BuildMat.png in Resources */,
 				4297E08719250F8100E43779 /* Navy_118.jpg in Resources */,
 				42A24BFC19183F3000568305 /* InteractiveSignHere.png in Resources */,
+				4288F1B51951329E00975FB6 /* TripleFlexFlow1PDF.png in Resources */,
 				42F30DD3192D05500004A019 /* PMSRainbow.png in Resources */,
 				422139A519129097001BD328 /* AssetCheckButton.png in Resources */,
 				42849B6E18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
@@ -1610,6 +1620,7 @@
 				42F399CA1946675B00C84189 /* UltraGuardM.png in Resources */,
 				42B0158318E3428B0068019C /* MotifMatPDF.png in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
+				4288F1B3195130D500975FB6 /* WaterGuardPDF.png in Resources */,
 				426A6A1818ED0CC300255331 /* SampleLogo9.png in Resources */,
 				426A6A2F18EDADBA00255331 /* LookingSerious.png in Resources */,
 				4297E08019250F8100E43779 /* Silver_116.jpg in Resources */,
@@ -1669,6 +1680,7 @@
 				42B0159918E35CF20068019C /* VideosWhite3.png in Resources */,
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
 				4297E0521923C95200E43779 /* MaskGreySquare8.png in Resources */,
+				4288F1B71951330300975FB6 /* Waterguard1PDF.png in Resources */,
 				4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */,
 				428085CA18FC4B4200389C9C /* MatCintasCenter.png in Resources */,
 				42849B8E18EA027800E5B3FB /* gradietebg.png in Resources */,

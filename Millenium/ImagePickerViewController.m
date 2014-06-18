@@ -556,7 +556,7 @@
     
         NSLog(@"URLLOGIN: %@",urlSearch);
         
-        [NSURLConnection sendAsynchronousRequest:request
+        [NSURLConnection sendAsynchronousRequest:requestMat
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse *response,
                                                    NSData *dataMat,
@@ -565,7 +565,7 @@
                                }];
         
         NSURLSession *sessionMat = [NSURLSession sharedSession];
-        [[sessionMat dataTaskWithURL:urlSearch
+        [[sessionMat dataTaskWithURL:urlSearchMat
                 completionHandler:^(NSData *dataMat,
                                     NSURLResponse *response,
                                     NSError *errorMat) {
