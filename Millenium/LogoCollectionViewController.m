@@ -1900,6 +1900,22 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     nameString =[artworkNameArray objectAtIndex:indexPathSend];
     NSLog(@" nameStringLogoSelected %@",nameString);
     
+    if (indexPathSend <artworkFullImageArray.count){
+        
+        logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
+        
+        
+        if (logoUseString==NULL)
+        {
+            
+            logoUseString= @"No Picture is Provided";
+            
+        }
+        
+    }
+
+    
+    
     if (indexPathSend <artworkSellerArray.count){
     
         sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
@@ -1921,7 +1937,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         if (companyString==NULL)
         {
             
-            matIDAddFavString= @"No Company Provided";
+            companyString= @"No Company Provided";
             
         }
 
@@ -1930,6 +1946,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
      if (indexPathSend <artworkIDArray.count){
          
          numberString =[artworkIDArray objectAtIndex:indexPathSend];
+         
+         if (numberString==NULL)
+         {
+             
+             numberString= @"No ID is provided";
+             
+         }
          
      }
     
@@ -1950,7 +1973,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
         logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
         
-        
+        if (logoColorString==NULL)
+        {
+            
+            logoColorString= @"No colors available";
+            
+        }
         
         
     }
@@ -2051,7 +2079,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
-               goingController.logoUseStringHere=logoUseString;
+        goingController.logoUseStringHere=logoUseString;
         
         
         NSLog(@"nameStringSend %@",nameString);

@@ -1582,6 +1582,110 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
     }*/
+    
+    
+    interactiveHeaderString = @"Create Mat";
+    
+    NSLog(@"addButton.tag:%ld",(long)sender.tag);
+    
+    int myInt = (int)sender.tag;
+    indexPathSend = (int)sender.tag;
+    //int indexSend = addButton.tag;
+    
+    NSLog(@"sender %@",sender);
+    NSLog(@"indexPathSend %d",indexPathSend);
+    //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
+    
+    nameString =[artworkNameArray objectAtIndex:indexPathSend];
+    NSLog(@" nameStringLogoSelected %@",nameString);
+    
+    if (indexPathSend <artworkSellerArray.count){
+        
+        sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
+        
+        
+        if (sellerString==NULL)
+        {
+            
+            sellerString= @"No Seller Provided";
+            
+        }
+        
+    }
+    
+    if (indexPathSend <artworkCompanyArray.count){
+        
+        companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
+        
+        if (companyString==NULL)
+        {
+            
+            companyString= @"No Company Provided";
+            
+        }
+        
+    }
+    
+    if (indexPathSend <artworkIDArray.count){
+        
+        numberString =[artworkIDArray objectAtIndex:indexPathSend];
+        
+        if (numberString==NULL)
+        {
+            
+            numberString= @"No Number has been provided";
+            
+        }
+        
+    }
+    
+    if (indexPathSend <artworkSizeArray.count){
+        
+        sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
+        
+        if (sizeString==NULL)
+        {
+            
+            sizeString= @"4'x6'";
+            
+        }
+        
+    }
+    
+    if (indexPathSend <artworkColorArray.count){
+        
+        logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+        
+        
+        if (logoColorString==NULL)
+        {
+            
+            logoColorString= @"No Colors are available";
+            
+        }
+
+        
+    }
+    
+    if (indexPathSend <artworkFullImageArray.count){
+        
+        NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
+        NSString*httpString= @"http://";
+        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+        UIImage * iconImage;
+        iconImage = [UIImage imageWithData:data];
+        NSLog(@"%@iconImage",iconImage);
+        
+        
+        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+        [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
+        
+        
+    }
+    
+    
+
 
     
     
@@ -1656,12 +1760,14 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         InteractiveViewController *goingController = segue.destinationViewController;
         
-        
+        goingController.logoUseStringHere=logoUseString;
+        NSLog(@"logoUseString %@",logoUseString);
         
         NSLog(@"nameStringSend %@",nameString);
         goingController.nameString=nameString;
-        goingController.companyString=companyString;
-        goingController.sellerString=sellerString;
+        //goingController.companyString=companyString;
+        goingController.companyString=@"company";
+        goingController.sellerString=@"seller";
         goingController.numberString=numberString;
         goingController.sizeString=sizeString;
         NSLog(@"nameStringSend %@",nameString);
@@ -1669,6 +1775,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         goingController.matColorString=matColorString;
         goingController.matBGColorString=matBGColorString;
         goingController.interactiveHeaderString=interactiveHeaderString;
+        NSLog(@"interactiveHeaderString %@",interactiveHeaderString);
+
         
         /*goingController.artworkNameArray = artworkNameArray;
         goingController.artworkSizeArray = artworkSizeArray;

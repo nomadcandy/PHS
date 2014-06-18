@@ -250,15 +250,27 @@
     NSLog(@"matColorString %@",_matColorString);
     NSLog(@"logoColorString %@",_logoColorString);
     
-    NSLog(@"nameStringHere %@",nameString);
+   /* NSLog(@"nameStringHere %@",nameString);
     NSLog(@"sellerStringHere %@",sellerString);
     NSLog(@"companyStringHere %@",companyString);
     NSLog(@"numberStringHere %@",numberString);
-    NSLog(@"interactiveHeaderString %@",interactiveHeaderString);
+    NSLog(@"interactiveHeaderString %@",interactiveHeaderString);*/
 
     nameField.text =nameString;
-    sellerField.text =sellerString;
-    companyField.text =companyString;
+    
+        if(sellerString!=NULL){
+        
+            sellerField.text =sellerString;
+        
+            }
+    
+    if(companyString!=NULL){
+        
+        companyField.text =companyString;
+        
+    }
+    
+    
     numberField.text =numberString;
         
     
