@@ -1533,7 +1533,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
     
-    interactiveHeaderString = @"Create Mat";
+    /*interactiveHeaderString = @"Create Mat";
 
     NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
@@ -1547,42 +1547,41 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     nameString =[artworkNameArray objectAtIndex:indexPathSend];
     NSLog(@" nameStringLogoSelected %@",nameString);
     
+    sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
+    NSLog(@" sellerString %@",sellerString);
     
-        sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
-        NSLog(@" sellerString %@",sellerString);
-    
-        companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
-        NSLog(@"companyString %@",companyString);
+    companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
+    NSLog(@"companyString %@",companyString);
     
         numberString =[artworkIDArray objectAtIndex:indexPathSend];
         NSLog(@"numberString %@",numberString);
     
     
-    if (indexPathSend <artworkSizeArray.count){
+        if (indexPathSend <artworkSizeArray.count){
         
-        sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
+            sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
       
-        logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
-         NSLog(@"logoColorString %@",logoColorString);
+            logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+            NSLog(@"logoColorString %@",logoColorString);
         
     }
     
-    if (indexPathSend <artworkFullImageArray.count){
+        if (indexPathSend <artworkFullImageArray.count){
         
-        NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
-        NSString*httpString= @"http://";
-        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-        UIImage * iconImage;
-        iconImage = [UIImage imageWithData:data];
-        NSLog(@"%@iconImage",iconImage);
+            NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
+            NSString*httpString= @"http://";
+            NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+            NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+            UIImage * iconImage;
+            iconImage = [UIImage imageWithData:data];
+            NSLog(@"%@iconImage",iconImage);
     
     
-        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-        [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
+            NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+            [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
         
         
-    }
+    }*/
 
     
     

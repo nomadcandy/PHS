@@ -86,7 +86,7 @@
 }
 
 
-
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
 

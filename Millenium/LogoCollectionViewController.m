@@ -16,6 +16,8 @@
 @implementation LogoCollectionViewController
 
 
+@synthesize activityIndicator;
+
 @synthesize searchingString;
 //@synthesize searchingString;
 
@@ -671,7 +673,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goSearch:(id)sender{
     
         
-    if( searchHereField.text!= Nil || [searchHereField.text length] == 0 ) {
+   /* if( searchHereField.text!= Nil || [searchHereField.text length] == 0 ) {
         
         
         NSString*searchOneString= searchHereField.text;
@@ -774,12 +776,203 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matColorArray=[searchMatArray valueForKey:@"Color"];
             matBGColorArray=[searchMatArray valueForKey:@"BGColor"];
 
+            matCount= matNameArray.count;*/
+    
+    
+    [activityIndicator startAnimating];
+    
+    if( searchHereField.text!= Nil || [searchHereField.text length] == 0 ) {
+        
+        
+        NSString*searchOneString= searchHereField.text;
+        
+        NSInteger nWords = 1;
+        NSRange wordRange = NSMakeRange(0, nWords);
+        NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
+        
+        NSString*searchYeahString= [searchStringArray objectAtIndex:0];
+        
+        
+        //Search Logos
+        
+        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchYeahString];
+        
+        
+        NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+        NSURLRequest *request = [NSURLRequest requestWithURL:
+                                 urlSearch];
+        
+        
+        NSLog(@"URLLOGIN: %@",urlSearch);
+        
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response,
+                                                   NSData *data,
+                                                   NSError *connectionError) {
+                                   // handle response
+                               }];
+        
+        NSURLSession *session = [NSURLSession sharedSession];
+        [[session dataTaskWithURL:urlSearch
+                completionHandler:^(NSData *data,
+                                    NSURLResponse *response,
+                                    NSError *error) {
+                    // handle response
+                    
+                }] resume];
+        
+        
+        NSError *error = nil;
+        NSData *data = [NSData dataWithContentsOfURL:urlSearch];
+        //parse Array from web
+        NSArray *searchLogoArray = [NSJSONSerialization
+                                    JSONObjectWithData:data
+                                    options:NSJSONReadingAllowFragments
+                                    error: &error];
+        
+        
+        
+        
+        
+        
+        artworkCount= searchLogoArray.count;
+        
+        
+        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchYeahString];
+        
+        NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+        NSURLRequest *requestMat = [NSURLRequest requestWithURL:
+                                    urlSearchMat];
+        
+        
+        // NSLog(@"URLSearchMat: %@",urlSearchMat);
+        NSError *errorMat = nil;
+        NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
+        
+        NSLog(@"URLLOGIN: %@",urlSearch);
+        
+        [NSURLConnection sendAsynchronousRequest:requestMat
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response,
+                                                   NSData *dataMat,
+                                                   NSError *connectionError) {
+                                   // handle response
+                               }];
+        
+        NSURLSession *sessionMat = [NSURLSession sharedSession];
+        [[sessionMat dataTaskWithURL:urlSearchMat
+                   completionHandler:^(NSData *dataMat,
+                                       NSURLResponse *response,
+                                       NSError *errorMat) {
+                       // handle response
+                       
+                   }] resume];
+        
+        
+        //NSError *errorMat = nil;
+        //NSData *dataMat = [NSData dataWithContentsOfURL:urlSearch];
+        
+        
+        //parse Array from web
+        NSArray *searchMatArray = [NSJSONSerialization
+                                   JSONObjectWithData:dataMat
+                                   options:NSJSONReadingAllowFragments
+                                   error: &errorMat];
+        
+        
+        
+        
+        
+        matCount= searchMatArray.count;
+        NSLog(@"%@SearchMatArray",searchMatArray);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+            NSLog(@"%@", object);
+            NSLog(@"searchLogoArray %@",searchLogoArray);
+            
+            
+            artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+            artworkCount= artworkNameArray.count;
+            
+            
+            NSLog(@"artWorkNameArray: %@", artworkNameArray);
+            artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
+            NSLog(@"artworkSizeArray %@",artworkSizeArray);
+            artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
+            NSLog(@"artworkFormatString %@",artworkFormatArray);
+            artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+            NSLog(@"fullImageArray %@",artworkFullImageArray);
+            artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
+            artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
+            artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
+            artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
+            
+            
+            
+        }];
+        
+        
+        
+        [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+            NSLog(@"%@", object);
+            NSLog(@"searchMatArray %@",searchMatArray);
+            
+            
+            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
             matCount= matNameArray.count;
+            NSLog(@"matNameArray: %@", matNameArray);
+            NSLog(@"matNameArrayCount: %d", matNameArray.count);
+            
+            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+            NSLog(@"matSizeArray %@",matSizeArray);
+            
+            matFormatArray = [searchMatArray valueForKey:@"Format"];
+            NSLog(@"matFormatString %@",matFormatArray);
+            
+            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+            NSLog(@"fullImageArray %@",matFullImageArray);
+            
+            
+            matIconArray = [searchMatArray valueForKey:@"IconURL"];
+            
+            matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
+            matSellerArray = [searchMatArray valueForKey:@"Seller"];
+            NSLog(@"matNameSellerArrayCount: %d", matSellerArray.count);
+            
+            matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            matColorArray = [searchMatArray valueForKey:@"Color"];
+            matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+            
+            
+            
+            
+        }];
+        
+        
+    } else{
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please enter text in the search field" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+    }
+    
+
         
         [self.collectionView reloadData];
         
         
-    }];
+   
     
     
 
@@ -787,7 +980,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
 }
     
-}
+
 
 
 
