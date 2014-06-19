@@ -813,6 +813,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
             artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
+            artworkColorArray = [searchLogoArray valueForKey:@"Color"];
             
             
             
