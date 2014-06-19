@@ -544,8 +544,11 @@
             
             
             
+            //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+            //[self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+            
             [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
-            [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+            [self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
             
             
             
@@ -1569,15 +1572,23 @@
             
             
             UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
-            [logoPicButton setImage:image forState:UIControlStateNormal];
+            //[logoPicButton setImage:image forState:UIControlStateNormal];
+            
+            [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+            [self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
+
         }
         
         else {
             
             
             
+            //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
+            //[self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+            
             [[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
-            [self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
+            [self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
+
             
             
             
