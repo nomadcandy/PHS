@@ -77,6 +77,8 @@
 
 @synthesize userIDString;
 
+@synthesize activityIndicator;
+
 /*@synthesize managedObjectContext=_managedObjectContext;
 @synthesize managedObjectModel=_managedObjectModel;
 @synthesize persistentStoreCoordinator=_persistentStoreCoordinator;*/
@@ -202,6 +204,7 @@
 
 -(IBAction)goSearch:(id)sender{
     
+    [activityIndicator startAnimating];
     
     if( searchField.text!= Nil || [searchField.text length] == 0 ) {
         
@@ -445,6 +448,8 @@
         
         
     }];
+        
+        [activityIndicator stopAnimating];
         
     } else{
         

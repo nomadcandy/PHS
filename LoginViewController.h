@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *loginField;
 @property (nonatomic, strong) IBOutlet UITextField *passwordField;
 @property (nonatomic, strong) IBOutlet UIButton *goButton;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (nonatomic, copy) NSString *firstNameString;
 @property (nonatomic, copy) NSString *lastNameString;

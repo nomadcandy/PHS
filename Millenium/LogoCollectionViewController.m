@@ -16,7 +16,7 @@
 @implementation LogoCollectionViewController
 
 
-@synthesize activityIndicator;
+
 
 @synthesize searchingString;
 //@synthesize searchingString;
@@ -154,6 +154,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [super viewDidLoad];
     
     [DIYMenu dismiss];
+    
+    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityIndicator.alpha = 1.0;
+    activityIndicator.center = CGPointMake(160, 360);
+    activityIndicator.hidesWhenStopped = NO;
+    [self.view addSubview:activityIndicator];
     
      NSLog(@"locationIDString: %@", locationIDString);
     
@@ -348,6 +355,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goFav:(id)sender{
     
     
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityIndicator.alpha = 1.0;
+    activityIndicator.center = CGPointMake(160, 360);
+    activityIndicator.hidesWhenStopped = NO;
+    [self.view addSubview:activityIndicator];
+    [activityIndicator startAnimating];
     searchingString=@"searchingFavString";
     //TODO load into CoreData anything that is in Favorites.
     
@@ -417,7 +430,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }];
 
-
+     [activityIndicator stopAnimating];
     
     
     //[self.collectionView reloadData];
@@ -435,6 +448,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 
 -(IBAction)goRep:(id)sender{
+    
+    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityIndicator.alpha = 1.0;
+    activityIndicator.center = CGPointMake(160, 360);
+    activityIndicator.hidesWhenStopped = NO;
+    [self.view addSubview:activityIndicator];
+    [activityIndicator startAnimating];
     
     userIDString = [[NSUserDefaults standardUserDefaults]
                         stringForKey:@"userID"];
@@ -531,7 +552,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         }];
         
         [self.collectionView reloadData];
-        
+        [activityIndicator stopAnimating];
     }
     
     else {
@@ -550,6 +571,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goNearMe:(id)sender{
    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityIndicator.alpha = 1.0;
+    activityIndicator.center = CGPointMake(160, 360);
+    activityIndicator.hidesWhenStopped = NO;
+    [self.view addSubview:activityIndicator];
+    [activityIndicator startAnimating];
     
     locationIDString = [[NSUserDefaults standardUserDefaults]
                         stringForKey:@"locationID"];
@@ -648,8 +675,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         }];
     
-     [self.collectionView reloadData];
-        
+        [self.collectionView reloadData];
+        [activityIndicator stopAnimating];
     }
     
     else {
@@ -674,7 +701,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goSearch:(id)sender{
     
-        
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityIndicator.alpha = 1.0;
+    activityIndicator.center = CGPointMake(160, 360);
+    activityIndicator.hidesWhenStopped = NO;
+    [self.view addSubview:activityIndicator];
    
     
     
@@ -868,7 +899,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
         
         [self.collectionView reloadData];
-        
+        [activityIndicator stopAnimating];
         
    
     

@@ -179,6 +179,11 @@
 @property(nonatomic, assign) float length;
 //@property (nonatomic, strong) UIImage *chosenImage;
 @property (nonatomic, strong) UIImage *selectedImage;
+
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+
+
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 - (void)setNeedsDisplay;
 - (void)saveLocally:(NSData *)imgData;

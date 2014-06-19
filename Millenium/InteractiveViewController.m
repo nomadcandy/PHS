@@ -3751,7 +3751,7 @@ else
         
         
         }];
-    
+    [activityIndicator stopAnimating];
 
    } else{
        

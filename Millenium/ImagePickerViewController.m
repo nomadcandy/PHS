@@ -68,6 +68,8 @@
 @synthesize artworkCount;
 @synthesize matCount;
 
+@synthesize activityIndicator;
+
 
 
 
@@ -472,6 +474,7 @@
 
 -(IBAction)goSearch:(id)sender{
     
+    [activityIndicator startAnimating];
     
     if( searchField.text!= Nil || [searchField.text length] == 0 ) {
         
@@ -664,7 +667,7 @@
     
     }
     
-    
+    [activityIndicator stopAnimating];
 }
 
 

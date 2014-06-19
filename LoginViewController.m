@@ -14,7 +14,7 @@
 
 @implementation LoginViewController
 
-@synthesize  firstNameString,lastNameString,locationIDString,locationNameString,locationNumberString,errorMessageString,userIDString,accessString,locationIDArray,loginField,passwordField,goButton;
+@synthesize  firstNameString,lastNameString,locationIDString,locationNameString,locationNumberString,errorMessageString,userIDString,accessString,locationIDArray,loginField,passwordField,goButton,activityIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +35,8 @@
 }
 
 -(IBAction)goLogin:(id)sender{
+    
+    [activityIndicator startAnimating];
     
     NSString*loginFieldString= loginField.text;
     NSString*passwordFieldString= passwordField.text;
@@ -137,7 +139,7 @@
         
     }
     
-    
+    [activityIndicator stopAnimating];
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

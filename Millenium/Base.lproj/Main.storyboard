@@ -1232,8 +1232,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="de4-mm-P8n">
-                                <rect key="frame" x="995" y="738" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="de4-mm-P8n">
+                                <rect key="frame" x="980" y="724" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" background="SearchBoxSimple3.png" disabledBackground="SearchBoxSimple3.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-bS-z4q">
@@ -2212,6 +2212,10 @@
                                     <action selector="presentDirectViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mrC-jl-6PR"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-UF-ZmE">
+                                <rect key="frame" x="982" y="725" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -2225,6 +2229,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="f2h-UF-ZmE" id="QcI-zo-d1M"/>
                         <outlet property="goSearchButton" destination="7AH-ZR-YSA" id="ljF-uH-umg"/>
                         <outlet property="searchField" destination="ahh-66-7xL" id="X36-Rk-91j"/>
                         <segue destination="EOd-lr-Xtf" kind="modal" identifier="InteractiveSegue" id="wpq-PH-bdK"/>
@@ -3194,12 +3199,17 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SbJ-ul-fc1">
+                                <rect key="frame" x="980" y="726" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="SbJ-ul-fc1" id="Qeg-24-Gz7"/>
                         <outlet property="chosenImageLabel" destination="4T2-ef-5CF" id="FNL-IF-nnU"/>
                         <outlet property="chosenImageView" destination="huY-jg-CM5" id="c2O-X4-ws5"/>
                         <outlet property="googleWebView" destination="39j-QV-6iW" id="Lz3-2o-CAD"/>
@@ -4954,19 +4964,19 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" placeholder="Login" minimumFontSize="20" background="SearchBoxSimple3.png" translatesAutoresizingMaskIntoConstraints="NO" id="nQA-fs-qCM">
-                                <rect key="frame" x="347" y="474" width="369" height="81"/>
+                                <rect key="frame" x="329" y="266" width="369" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" placeholder="Password" minimumFontSize="20" background="SearchBoxSimple3.png" translatesAutoresizingMaskIntoConstraints="NO" id="d2d-4g-PCL">
-                                <rect key="frame" x="347" y="554" width="369" height="81"/>
+                                <rect key="frame" x="328" y="334" width="369" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRY-BK-gW4">
-                                <rect key="frame" x="696" y="569" width="44" height="42"/>
+                                <rect key="frame" x="678" y="354" width="44" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="go1Button.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -4976,6 +4986,10 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" identifier="HomeSegue" id="qOq-Ne-VbY"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Fom-bt-WqC">
+                                <rect key="frame" x="984" y="728" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -4989,6 +5003,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Fom-bt-WqC" id="ApW-9d-foW"/>
                         <outlet property="loginField" destination="nQA-fs-qCM" id="gax-ao-zP5"/>
                         <outlet property="passwordField" destination="d2d-4g-PCL" id="ZYb-Cg-0ul"/>
                     </connections>
@@ -5136,8 +5151,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QQh-is-hk2"/>
-        <segue reference="aYA-g1-hsh"/>
-        <segue reference="wpq-PH-bdK"/>
+        <segue reference="qwZ-va-rdB"/>
+        <segue reference="WHu-6x-aPj"/>
+        <segue reference="qOq-Ne-VbY"/>
     </inferredMetricsTieBreakers>
 </document>

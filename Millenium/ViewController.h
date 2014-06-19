@@ -142,6 +142,8 @@
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
 
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 
 -(void)insertNewManagedObject:(NSString *)fileName;
 
