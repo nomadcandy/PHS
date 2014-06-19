@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad
 {
-    
+    [activityIndicator stopAnimating];
     loginField.textAlignment = NSTextAlignmentCenter;
     passwordField.textAlignment = NSTextAlignmentCenter;
     [super viewDidLoad];
