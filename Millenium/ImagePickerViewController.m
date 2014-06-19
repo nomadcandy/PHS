@@ -245,7 +245,7 @@
     
     imageDownloaded = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
     //UIImage *image = [[UIImage alloc] init];
-    NSLog(@"%f,%f",imageDownloaded.size.width,imageDownloaded.size.height);
+    //NSLog(@"%f,%f",imageDownloaded.size.width,imageDownloaded.size.height);
     
     chosenImageView.image=imageDownloaded;
     UIGraphicsBeginImageContext(imageDownloaded.size);
@@ -364,7 +364,7 @@
     //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
     
     chosenImageView.image = chosenImage;
-    NSLog(@"chosenImage %@",chosenImage);
+    //NSLog(@"chosenImage %@",chosenImage);
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
         
@@ -380,7 +380,7 @@
     [UIImagePNGRepresentation(chosenImage) writeToFile:imagePath atomically:YES];
     
     
-    NSLog(@"chosenImage %@",selectedImage);
+    //NSLog(@"chosenImage %@",selectedImage);
     
     
     [UIImagePNGRepresentation(chosenImage) writeToFile:imagePath atomically:YES];
@@ -405,7 +405,7 @@
         
         InteractiveViewController *goingController = segue.destinationViewController;
         goingController.selectedImage=chosenImageView.image;
-        NSLog(@"chosenImage %@",chosenImageView.image);
+        //NSLog(@"chosenImage %@",chosenImageView.image);
         //goingController.interactiveHeaderString=interactiveHeaderString;
         goingController.interactiveHeaderString=@"Create Mat";
         
@@ -538,7 +538,7 @@
     artworkCount= searchLogoArray.count;
     //Mat Search Begin
     
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1", searchString];
     
     
     
@@ -554,7 +554,7 @@
     NSError *errorMat = nil;
     NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
     
-        NSLog(@"URLLOGIN: %@",urlSearch);
+        //NSLog(@"URLLOGIN: %@",urlSearch);
         
         [NSURLConnection sendAsynchronousRequest:requestMat
                                            queue:[NSOperationQueue mainQueue]
@@ -592,14 +592,14 @@
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchLogoArray %@",searchLogoArray);
+        //NSLog(@"%@", object);
+        //NSLog(@"searchLogoArray %@",searchLogoArray);
         
         
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
         
         
-        NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
         
         
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
@@ -624,28 +624,28 @@
     
     [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchMatArray %@",searchMatArray);
+        //NSLog(@"%@", object);
+        //NSLog(@"searchMatArray %@",searchMatArray);
         
         
         matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-        NSLog(@"artWorkNameArray: %@", matNameArray);
+        //NSLog(@"artWorkNameArray: %@", matNameArray);
         
         
         
         
         
         matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-        NSLog(@"matSizeArray %@",matSizeArray);
+        //NSLog(@"matSizeArray %@",matSizeArray);
         
         matFormatArray = [searchMatArray valueForKey:@"Format"];
-        NSLog(@"matFormatString %@",matFormatArray);
+        //NSLog(@"matFormatString %@",matFormatArray);
         
         
         
         
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",matFullImageArray);
+        //NSLog(@"fullImageArray %@",matFullImageArray);
         
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
@@ -768,7 +768,7 @@
     //chosenImageView.image = newImage;
     //chosenImage = newImage;
     
-    NSLog(@"chosenImage %@",selectedImage);
+    //NSLog(@"chosenImage %@",selectedImage);
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
@@ -810,7 +810,7 @@
     chosenImageView.image = newImage;
     //chosenImage = newImage;
     
-    NSLog(@"chosenImage %@",selectedImage);
+    //NSLog(@"chosenImage %@",selectedImage);
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
@@ -857,7 +857,7 @@
     chosenImageView.image = newImage;
     //chosenImage = newImage;
     
-    NSLog(@"chosenImage %@",selectedImage);
+    //NSLog(@"chosenImage %@",selectedImage);
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     //[UIImageJPEGRepresentation(newImage, 1.0) writeToFile:imagePath atomically:YES];
@@ -903,7 +903,7 @@
     chosenImageView.image = newImage;
     //chosenImage = newImage;
     
-    NSLog(@"chosenImage %@",selectedImage);
+    //NSLog(@"chosenImage %@",selectedImage);
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     
@@ -1053,7 +1053,7 @@
     
     UIGraphicsEndImageContext();
     chosenImageView.image = newImage;
-    NSLog(@"chosenImage %@",selectedImage);
+    //NSLog(@"chosenImage %@",selectedImage);
     
     
     

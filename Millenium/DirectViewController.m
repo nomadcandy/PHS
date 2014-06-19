@@ -26,11 +26,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *strURL = @"http://www.google.com";
+    //NSString *strURL = @"http://www.google.com";
+    NSString *strURL = @"http://ipadqa.millmats.com/Commerce/Default.aspx?Id=2";
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self->directWebView loadRequest:urlRequest];
 	// Do any additional setup after loading the view.
+}
+
+
+-(IBAction)goRefresh:(id)sender{
+    
+    
+    NSString *strURL = @"http://ipadqa.millmats.com/Commerce/Default.aspx?Id=1";
+    
+    
+    NSURL *url = [NSURL URLWithString:strURL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self->directWebView loadRequest:urlRequest];
+    
 }
 
 

@@ -27,16 +27,26 @@
 {
     [super viewDidLoad];
     
-    //NSString *strURL = @"http://www.google.com";
-    //NSString *strURL = @"http://cintasqa.millmats.com/Commerce/Default.aspx?id=1";
-   NSString *strURL = @"http://ipadqa.millmats.com/commerce/default.aspx";
+    
+    NSString *strURL = @"http://ipadqa.millmats.com/Commerce/Default.aspx?Id=1";
+    
 
     NSURL *url = [NSURL URLWithString:strURL];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
     [self->rentalWebView loadRequest:urlRequest];
 	// Do any additional setup after loading the view.
 }
-
+-(IBAction)goRefresh:(id)sender{
+    
+    
+    NSString *strURL = @"http://ipadqa.millmats.com/Commerce/Default.aspx?Id=1";
+    
+    
+    NSURL *url = [NSURL URLWithString:strURL];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+    [self->rentalWebView loadRequest:urlRequest];
+    
+}
 -(IBAction)goHome:(id)sender{
     
     

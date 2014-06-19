@@ -101,7 +101,7 @@
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
     {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        //NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         //Don't use abort() in a production environment. It is better to use an UIAlertView
         //and ask users to quick app using the home button.
         abort();
@@ -127,7 +127,7 @@
              
              abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
              */
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            //NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
@@ -136,24 +136,24 @@
 
 - (void)menuMatActivated
 {
-    NSLog(@"Delegate: menuMatActivated");
+    //NSLog(@"Delegate: menuMatActivated");
 }
 
 - (void)menuMatCancelled
 {
-    NSLog(@"Delegate: menuMatCancelled");
+    //NSLog(@"Delegate: menuMatCancelled");
 }
 
     
 
 - (void)menuActivated
 {
-    NSLog(@"Delegate: menuActivated");
+    //NSLog(@"Delegate: menuActivated");
 }
 
 - (void)menuCancelled
 {
-    NSLog(@"Delegate: menuCancelled");
+    //NSLog(@"Delegate: menuCancelled");
 }
 
 							

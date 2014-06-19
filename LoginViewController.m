@@ -38,7 +38,7 @@
     
     NSString*loginFieldString= loginField.text;
     NSString*passwordFieldString= passwordField.text;
-    NSLog(@"loginFieldString %@",loginFieldString);
+    //NSLog(@"loginFieldString %@",loginFieldString);
     if (loginFieldString==NULL|| passwordFieldString==NULL || [loginFieldString length] == 0 || [passwordFieldString length] == 0)
         
         
@@ -155,6 +155,7 @@
         NSLog(@"locationIDString %@",locationIDString);
         goingController.locationNameString = locationNameString;
         goingController.locationNumberString = locationNumberString;
+        goingController.userIDString = userIDString;
         
       
         

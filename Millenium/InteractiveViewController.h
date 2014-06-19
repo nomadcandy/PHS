@@ -245,6 +245,7 @@
 @property (nonatomic, assign) NSDecimalNumber *PercentMat;
 
 @property (nonatomic, strong) NSString *locationIDString;
+@property (nonatomic, strong) NSString *userIDString;
 
 @property (nonatomic, strong) NSString *matBGTextColorString;
 @property (nonatomic, assign) NSString *matBGColorString;

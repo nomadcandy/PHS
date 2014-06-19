@@ -15,5 +15,6 @@
 }
 
 -(IBAction)goHome:(id)sender;
+-(IBAction)goRefresh:(id)sender;
 
 @end

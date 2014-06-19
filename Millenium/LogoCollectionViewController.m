@@ -125,6 +125,8 @@
 @synthesize locationNameString;
 @synthesize locationNumberString;
 
+
+
 @synthesize favoritesMatArray;
 @synthesize favoritesLogoArray;
 
@@ -159,12 +161,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //removeFavLogoLabel.hidden= YES;
     
     NSLog(@"locationIDString %@",locationIDString);
-    NSLog(@"artworkNameDictionary %@",artworkNameDictionary);
-    NSLog(@"artworkNameArray %@",artworkNameArray);
-    NSLog(@"artworkIconArray %@",artworkIconArray);
-    NSLog(@"matNameArray %@",matNameArray);
+    //NSLog(@"artworkNameDictionary %@",artworkNameDictionary);
+    //NSLog(@"artworkNameArray %@",artworkNameArray);
+    //NSLog(@"artworkIconArray %@",artworkIconArray);
+    //NSLog(@"matNameArray %@",matNameArray);
     
-    NSLog(@"matSellerArray %@",matSellerArray);
+    //NSLog(@"matSellerArray %@",matSellerArray);
     
     
     if (locationIDString==nil) {
@@ -369,12 +371,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [favoritesLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchLogoArray %@",favoritesLogoArray);
+        //NSLog(@"%@", object);
+        //NSLog(@"searchLogoArray %@",favoritesLogoArray);
         
         
         artworkNameArray = [favoritesLogoArray valueForKey:@"ArtworkName"];
-        NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
         artworkSizeArray = [favoritesLogoArray valueForKey:@"ArtworkSize"];
         artworkFormatArray = [favoritesLogoArray valueForKey:@"Format"];
         artworkFullImageArray = [favoritesLogoArray valueForKey:@"FullImageURL"];
@@ -392,12 +394,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [favoritesMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchLogoArray %@",favoritesMatArray);
+        //NSLog(@"%@", object);
+        //NSLog(@"searchLogoArray %@",favoritesMatArray);
         
         
         matNameArray = [favoritesMatArray valueForKey:@"ArtworkName"];
-        NSLog(@"matNameArray: %@", matNameArray);
+        //NSLog(@"matNameArray: %@", matNameArray);
         
         matSizeArray = [favoritesMatArray valueForKey:@"ArtworkSize"];
         matFormatArray = [favoritesMatArray valueForKey:@"Format"];
@@ -440,7 +442,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     //Search Logos
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=1&userID=%@",20,userIDString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&userID=%@",20,userIDString];
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -463,7 +465,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     //Search Mats
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=0&userID=%@",20,userIDString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&userID=%@",20,userIDString];
     
     
     
@@ -552,18 +554,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     locationIDString = [[NSUserDefaults standardUserDefaults]
                         stringForKey:@"locationID"];
     
-    NSLog(@"locationIDString: %@", locationIDString);
+    //NSLog(@"locationIDString: %@", locationIDString);
    
     
     
     
     //Search Logos
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=1&locationID=%@",20,locationIDString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=%@",20,locationIDString];
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     
-    NSLog(@"URLLOGIN: %@",urlSearch);
+    //NSLog(@"URLLOGIN: %@",urlSearch);
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
     
@@ -581,7 +583,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     //Search Mats
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=0&locationID=%@",20,locationIDString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=%@",20,locationIDString];
     
     
     
@@ -673,110 +675,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goSearch:(id)sender{
     
         
-   /* if( searchHereField.text!= Nil || [searchHereField.text length] == 0 ) {
-        
-        
-        NSString*searchOneString= searchHereField.text;
-        
-        NSInteger nWords = 1;
-        NSRange wordRange = NSMakeRange(0, nWords);
-        NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
-        
-        NSString*searchYeahString= [searchStringArray objectAtIndex:0];
-    
-    
-    //Search Logos
-    
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchYeahString];
-
-    
-    
-    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
-    NSLog(@"URLLOGIN: %@",urlSearch);
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
    
-    
-    
-    //parse Array from web
-    NSArray *searchLogoArray = [NSJSONSerialization
-                                JSONObjectWithData:data
-                                options:NSJSONReadingAllowFragments
-                                error: &error];
-    
-    
-   
-    
-    //Search Mats
-    
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchYeahString];
-    
-    
-    
-    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
-    
-    NSLog(@"URLLOGIN: %@",urlSearchMat);
-    NSError *errorMat = nil;
-    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
-    
-    
-    
-    
-    //parse Array from web
-    NSArray *searchMatArray = [NSJSONSerialization
-                                JSONObjectWithData:dataMat
-                                options:NSJSONReadingAllowFragments
-                                error: &error];
-    
-    
-    
-   
-    
-    [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-        
-        
-        
-        artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-        artworkCount= artworkNameArray.count;
-        artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-        artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
-        artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
-        artworkColorArray = [searchLogoArray valueForKey:@"Color"];
-        artworkCompanyArray = [searchLogoArray valueForKey:@"Company"];
-        artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
-        
-        artworkCount= artworkNameArray.count;
-        
-        }];
-        
-    [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-            
-        
-            
-            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-            matCount= matNameArray.count;
-            
-        
-        
-            
-                      
-            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-            matFormatArray = [searchMatArray valueForKey:@"Format"];
-            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-            matIconArray = [searchMatArray valueForKey:@"IconURL"];
-            matIDArray = [searchMatArray valueForKey:@"ProductID"];
-            matSellerArray=[searchMatArray valueForKey:@"Seller"];
-            matCompanyArray=[searchMatArray valueForKey:@"Company"];
-            matLocationIDArray=[searchMatArray valueForKey:@"LocationID"];
-        
-            matColorArray=[searchMatArray valueForKey:@"Color"];
-            matBGColorArray=[searchMatArray valueForKey:@"BGColor"];
-
-            matCount= matNameArray.count;*/
     
     
     [activityIndicator startAnimating];
@@ -803,7 +702,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                                  urlSearch];
         
         
-        NSLog(@"URLLOGIN: %@",urlSearch);
+        //NSLog(@"URLLOGIN: %@",urlSearch);
         
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:[NSOperationQueue mainQueue]
@@ -850,7 +749,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         NSError *errorMat = nil;
         NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
         
-        NSLog(@"URLLOGIN: %@",urlSearch);
+        //NSLog(@"URLLOGIN: %@",urlSearch);
         
         [NSURLConnection sendAsynchronousRequest:requestMat
                                            queue:[NSOperationQueue mainQueue]
@@ -865,13 +764,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                    completionHandler:^(NSData *dataMat,
                                        NSURLResponse *response,
                                        NSError *errorMat) {
-                       // handle response
                        
                    }] resume];
         
         
-        //NSError *errorMat = nil;
-        //NSData *dataMat = [NSData dataWithContentsOfURL:urlSearch];
+       
         
         
         //parse Array from web
@@ -885,7 +782,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         matCount= searchMatArray.count;
-        NSLog(@"%@SearchMatArray",searchMatArray);
+        //NSLog(@"%@SearchMatArray",searchMatArray);
         
         
         
@@ -897,21 +794,21 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
             
-            NSLog(@"%@", object);
-            NSLog(@"searchLogoArray %@",searchLogoArray);
+            //NSLog(@"%@", object);
+            //NSLog(@"searchLogoArray %@",searchLogoArray);
             
             
             artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
             artworkCount= artworkNameArray.count;
             
             
-            NSLog(@"artWorkNameArray: %@", artworkNameArray);
+            //NSLog(@"artWorkNameArray: %@", artworkNameArray);
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-            NSLog(@"artworkSizeArray %@",artworkSizeArray);
+            //NSLog(@"artworkSizeArray %@",artworkSizeArray);
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-            NSLog(@"artworkFormatString %@",artworkFormatArray);
+            //NSLog(@"artworkFormatString %@",artworkFormatArray);
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-            NSLog(@"fullImageArray %@",artworkFullImageArray);
+            //NSLog(@"fullImageArray %@",artworkFullImageArray);
             artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
@@ -925,30 +822,30 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
             
-            NSLog(@"%@", object);
-            NSLog(@"searchMatArray %@",searchMatArray);
+            //NSLog(@"%@", object);
+            //NSLog(@"searchMatArray %@",searchMatArray);
             
             
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
             matCount= matNameArray.count;
-            NSLog(@"matNameArray: %@", matNameArray);
-            NSLog(@"matNameArrayCount: %d", matNameArray.count);
+            //NSLog(@"matNameArray: %@", matNameArray);
+            //NSLog(@"matNameArrayCount: %d", matNameArray.count);
             
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-            NSLog(@"matSizeArray %@",matSizeArray);
+            //NSLog(@"matSizeArray %@",matSizeArray);
             
             matFormatArray = [searchMatArray valueForKey:@"Format"];
-            NSLog(@"matFormatString %@",matFormatArray);
+            //NSLog(@"matFormatString %@",matFormatArray);
             
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-            NSLog(@"fullImageArray %@",matFullImageArray);
+            //NSLog(@"fullImageArray %@",matFullImageArray);
             
             
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
             
             matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
             matSellerArray = [searchMatArray valueForKey:@"Seller"];
-            NSLog(@"matNameSellerArrayCount: %d", matSellerArray.count);
+            //NSLog(@"matNameSellerArrayCount: %d", matSellerArray.count);
             
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             matColorArray = [searchMatArray valueForKey:@"Color"];
@@ -1064,9 +961,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)addMatFavorite:(id)sender{
     
-    NSLog(@"matNameArray %@",matNameArray);
-    NSLog(@"matNameArrayCount %d",matNameArray.count);
-    NSLog(@"indexPathSend %d",indexPathSend);
+    //NSLog(@"matNameArray %@",matNameArray);
+    //NSLog(@"matNameArrayCount %d",matNameArray.count);
+    //NSLog(@"indexPathSend %d",indexPathSend);
     
     
     
@@ -1083,8 +980,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
 
-    NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
-    NSLog(@"matFullImageArrayCount %d",matFullImageArray.count);
+    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    //NSLog(@"matFullImageArrayCount %d",matFullImageArray.count);
     
     
     
@@ -1101,8 +998,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     
-    NSLog(@"matNameAddFavString %@",matNameAddFavString);
-    NSLog(@"matNameArrayCount %d",matNameArray.count);
+    //NSLog(@"matNameAddFavString %@",matNameAddFavString);
+    //NSLog(@"matNameArrayCount %d",matNameArray.count);
     
     if([NSNull null] != [matSellerArray objectAtIndex:indexPathSend])
         
@@ -1117,8 +1014,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
 
     
-        NSLog(@" matSellerAddFavString %@",matSellerAddFavString);
-        NSLog(@" matSellerArrayCount %d",matSellerArray.count);
+        //NSLog(@" matSellerAddFavString %@",matSellerAddFavString);
+        //NSLog(@" matSellerArrayCount %d",matSellerArray.count);
     
     
     if([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend])
@@ -1134,8 +1031,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
     }
-    NSLog(@"matCompanyAddFavString %@",matCompanyAddFavString);
-    NSLog(@"matCompanyArrayCount %d",matCompanyArray.count);
+    //NSLog(@"matCompanyAddFavString %@",matCompanyAddFavString);
+    //NSLog(@"matCompanyArrayCount %d",matCompanyArray.count);
     
     
     if([NSNull null] != [matIDArray objectAtIndex:indexPathSend])
@@ -1152,8 +1049,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
 
     
-    NSLog(@" matIDAddFavString %@",matIDAddFavString);
-    NSLog(@" matIDArrayCount %d",matIDArray.count);
+    //NSLog(@" matIDAddFavString %@",matIDAddFavString);
+    //NSLog(@" matIDArrayCount %d",matIDArray.count);
     
     if([NSNull null] != [matLocationIDArray objectAtIndex:indexPathSend])
         
@@ -1167,7 +1064,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     
-    NSLog(@" matLocationIDAddFavString %@",matLocationIDAddFavString);
+   // NSLog(@" matLocationIDAddFavString %@",matLocationIDAddFavString);
     
     if([NSNull null] != [matColorArray objectAtIndex:indexPathSend])
         
@@ -1180,7 +1077,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
     }
-        NSLog(@" matColorAddFavString %@",matColorAddFavString);
+        //NSLog(@" matColorAddFavString %@",matColorAddFavString);
     
     if([NSNull null] != [matBGColorArray objectAtIndex:indexPathSend])
         
@@ -1194,7 +1091,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
     
-    NSLog(@" matBGColorAddFavString %@",matBGColorAddFavString);
+    //NSLog(@" matBGColorAddFavString %@",matBGColorAddFavString);
     
     
     if([NSNull null] != [matSizeArray objectAtIndex:indexPathSend])
@@ -1211,7 +1108,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     
-    NSLog(@" matSizeAddFavString %@",matSizeAddFavString);
+    //NSLog(@" matSizeAddFavString %@",matSizeAddFavString);
     
     
    
@@ -1290,8 +1187,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }*/
 
     
-    NSLog(@"urlFavString %@",matUrlAddFavString);
-    NSLog(@"urlFavString %@",matNameAddFavString);
+    //NSLog(@"urlFavString %@",matUrlAddFavString);
+    //NSLog(@"urlFavString %@",matNameAddFavString);
     /*NSString*artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
      NSString*artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
      NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
@@ -1317,7 +1214,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSError *error = nil;
     // Save the object to persistent store
     if (![context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
     //Fetch Data entered to test
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
@@ -1326,7 +1223,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
-    NSLog(@"favoritesMatArray %@",favoritesMatArray);
+   // NSLog(@"favoritesMatArray %@",favoritesMatArray);
     
 }
 
@@ -1368,7 +1265,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
-    NSLog(@"favoritesArray %@",_favoritesArray);
+    //NSLog(@"favoritesArray %@",_favoritesArray);
     
     
     
@@ -1381,7 +1278,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)addLogoFavorite:(id)sender{
     
     
-    NSLog(@"indexPathSend %d",indexPathSend);
+    //NSLog(@"indexPathSend %d",indexPathSend);
     
     
     if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPathSend])
@@ -1480,8 +1377,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
        
     
-    NSLog(@"urlFavString %@",urlFavString);
-    NSLog(@"urlFavString %@",artworkNameAddFavString);
+    //NSLog(@"urlFavString %@",urlFavString);
+    //NSLog(@"urlFavString %@",artworkNameAddFavString);
     
     
    /* NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
@@ -1507,7 +1404,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSError *error = nil;
     // Save the object to persistent store
     if (![context save:&error]) {
-        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
     //Fetch Data entered to test
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
@@ -1516,7 +1413,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
-    NSLog(@"favoritesArray %@",_favoritesArray);
+    //NSLog(@"favoritesArray %@",_favoritesArray);
     
 }
 
@@ -1529,7 +1426,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
     
     
-    NSLog(@"indexPathSend %d",indexPathSend);
+    //NSLog(@"indexPathSend %d",indexPathSend);
     
     urlUnFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
     artworkNameUnFavString =[artworkNameArray objectAtIndex:indexPathSend];
@@ -1559,7 +1456,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
-    NSLog(@"favoritesArray %@",_favoritesArray);
+    //NSLog(@"favoritesArray %@",_favoritesArray);
 
     
     
@@ -1596,12 +1493,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         if (artworkNameArray.count < matNameArray.count){
             
             return matNameArray.count;
-            NSLog(@"matCount %i",matNameArray.count);
+            //NSLog(@"matCount %i",matNameArray.count);
             
         }else{
             
             return artworkNameArray.count;
-            NSLog(@"logoCount %i",artworkNameArray.count);
+            //NSLog(@"logoCount %i",artworkNameArray.count);
             
         }
         
@@ -1803,7 +1700,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         if ( indexPath.item < matNameArray.count){
             NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
-            NSLog(@"matNameArray:%@",matNameArray);
+            //NSLog(@"matNameArray:%@",matNameArray);
             logoCell.matLabel.text =matLabelString;
         }
         
@@ -1821,7 +1718,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             NSString *urlMatStringAppend = [httpString stringByAppendingString:urlMatString];
             
-            NSLog(@"%@ urlStringAppend",urlMatStringAppend);
+            //NSLog(@"%@ urlStringAppend",urlMatStringAppend);
             
             NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
             
@@ -1850,11 +1747,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             selectedIndex=[indexPath row];
             _matChooseButton.tag=[indexPath row];
-            NSLog(@"addButton.tag:%ld",(long)_matChooseButton.tag);
-            NSLog(@"indexPathSender1:%@",indexPath);
-            NSLog(@"rowSelectedHere %i",rowSelectedHere);
+            //NSLog(@"addButton.tag:%ld",(long)_matChooseButton.tag);
+            //NSLog(@"indexPathSender1:%@",indexPath);
+            //NSLog(@"rowSelectedHere %i",rowSelectedHere);
             
-            NSLog(@"indexPathSender:%ld",(long)logoCell.tag);
+            //NSLog(@"indexPathSender:%ld",(long)logoCell.tag);
             
             UIButton*button = [logoCell matChooseButton];
             button.tag = selectedIndex;
@@ -1889,18 +1786,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     interactiveHeaderString = @"Create Mat";
 
-    NSLog(@"addButton.tag:%ld",(long)sender.tag);
+    //NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
     int myInt = (int)sender.tag;
     indexPathSend = (int)sender.tag;
     //int indexSend = addButton.tag;
     
-    NSLog(@"sender %@",sender);
-    NSLog(@"indexPathSend %d",indexPathSend);
+    //NSLog(@"sender %@",sender);
+    //NSLog(@"indexPathSend %d",indexPathSend);
     //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     
     nameString =[artworkNameArray objectAtIndex:indexPathSend];
-    NSLog(@" nameStringLogoSelected %@",nameString);
+    //NSLog(@" nameStringLogoSelected %@",nameString);
     
     if (indexPathSend <artworkFullImageArray.count){
         
@@ -1993,7 +1890,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     UIImage * iconImage;
     iconImage = [UIImage imageWithData:data];
-    NSLog(@"%@iconImage",iconImage);
+    //NSLog(@"%@iconImage",iconImage);
     
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
@@ -2013,27 +1910,27 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)matSelected:(UIButton*)sender event:(id)event {
     
     interactiveHeaderString = @"Edit Mat";
-    NSLog(@"addButton.tag:%ld",(long)sender.tag);
+    //NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
     int myInt = (int)sender.tag;
     indexPathSend = (int)sender.tag;
     //int indexSend = addButton.tag;
     
-    NSLog(@"sender %@",sender);
-    NSLog(@"indexPathSend %d",indexPathSend);
+    //NSLog(@"sender %@",sender);
+    //NSLog(@"indexPathSend %d",indexPathSend);
     //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     
     nameString =[matNameArray objectAtIndex:indexPathSend];
-    NSLog(@" nameStringLogoSelected %@",nameString);
+    //NSLog(@" nameStringLogoSelected %@",nameString);
     
     sellerString =[matSellerArray objectAtIndex:indexPathSend];
     companyString =[matCompanyArray objectAtIndex:indexPathSend];
     numberString =[matIDArray objectAtIndex:indexPathSend];
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
     matColorString =[matColorArray objectAtIndex:indexPathSend];
-    NSLog(@"matColorString %@",matColorString);
+    //NSLog(@"matColorString %@",matColorString);
     matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
-    NSLog(@"matBGColorString %@",matBGColorString);
+    //NSLog(@"matBGColorString %@",matBGColorString);
     //interactiveHeaderString = @"Edit Mat";
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
@@ -2051,7 +1948,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     iconImage = [UIImage imageWithData:data];
     
-    NSLog(@"%@iconImage",iconImage);
+    //NSLog(@"%@iconImage",iconImage);
     
     
     
@@ -2084,7 +1981,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         goingController.logoUseStringHere=logoUseString;
         
         
-        NSLog(@"nameStringSend %@",nameString);
+        //NSLog(@"nameStringSend %@",nameString);
         goingController.nameString=nameString;
         goingController.companyString=companyString;
         goingController.sellerString=sellerString;
@@ -2148,7 +2045,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
    
     searchHereString=searchHereField.text;
-     NSLog(@"searchHereField %@",searchHereString);
+     //NSLog(@"searchHereField %@",searchHereString);
 }
 
 //- (void)didSetSearchString:(InteractiveViewController *)controller{

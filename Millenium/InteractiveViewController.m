@@ -22,6 +22,7 @@
 
 @synthesize urlMatStringAppend;
 @synthesize locationIDString;
+@synthesize userIDString;
 
 @synthesize activityIndicator;
 
@@ -247,8 +248,8 @@
     matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
 
     
-    NSLog(@"matColorString %@",_matColorString);
-    NSLog(@"logoColorString %@",_logoColorString);
+    //NSLog(@"matColorString %@",_matColorString);
+    //NSLog(@"logoColorString %@",_logoColorString);
     
    /* NSLog(@"nameStringHere %@",nameString);
     NSLog(@"sellerStringHere %@",sellerString);
@@ -530,7 +531,7 @@
         UIImage *logoImage = [UIImage imageWithData:data];
         
         //[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
-        NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
+        //NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
         
         if (imagePath == Nil){
             
@@ -588,16 +589,16 @@
         matView1.hidden= NO;
         matBGLogoView.hidden= YES;
         
-        NSLog(@"sizeStringHere %@",sizeString);
+        //NSLog(@"sizeStringHere %@",sizeString);
         
         NSString *sizeGetMatString = sizeString;
         NSRange range = [sizeGetMatString rangeOfString:@"x"];
         
         NSString *widthMatString = [sizeGetMatString substringToIndex:range.location];
-        NSLog(@"%@",widthMatString);
+        //NSLog(@"%@",widthMatString);
         
         NSString *heightMatString = [sizeGetMatString substringFromIndex:range.location];
-        NSLog(@"%@",heightMatString);
+        //NSLog(@"%@",heightMatString);
         
         
         NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
@@ -646,7 +647,7 @@
             matColorArray = [[NSMutableArray alloc] init];
         }
         
-        NSLog(@"matColorArray %@",matColorArray);
+        //NSLog(@"matColorArray %@",matColorArray);
         
         
         if (matColorNumberArray == nil)
@@ -660,12 +661,12 @@
         
         NSString *string = _matColorString;
         if ([string rangeOfString:@"108-Black"].location == NSNotFound) {
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
             
             
         } else {
-            NSLog(@"black Found!");
+            //NSLog(@"black Found!");
             
             [matColorArray addObject:@"Black_108.jpg"];
             [matColorNumberArray addObject:@"108"];
@@ -675,7 +676,7 @@
         
         if ([string rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -688,7 +689,7 @@
         
         if ([string rangeOfString:@"123-Suede"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -713,7 +714,7 @@
         
         if ([string rangeOfString:@"119-Rose"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -726,7 +727,7 @@
         
         if ([string rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -739,7 +740,7 @@
         
         if ([string rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -752,7 +753,7 @@
         
         if ([string rangeOfString:@"116-Silver"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -765,7 +766,7 @@
         
         if ([string rangeOfString:@"127-Orange"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -778,7 +779,7 @@
         
         if ([string rangeOfString:@"105-Purple"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -792,7 +793,7 @@
         
         if ([string rangeOfString:@"112-Red"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -805,7 +806,7 @@
         
         if ([string rangeOfString:@"109-Gold"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -818,7 +819,7 @@
         
         if ([string rangeOfString:@"115-Grey"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -829,7 +830,7 @@
         
         if ([string rangeOfString:@"106-Light Blue"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -842,7 +843,7 @@
         
         if ([string rangeOfString:@"118-Navy"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -854,7 +855,7 @@
         
         if ([string rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -865,7 +866,7 @@
         
         if ([string rangeOfString:@"117-Forest Green"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -876,7 +877,7 @@
         
         if ([string rangeOfString:@"114-Cranberry"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -888,7 +889,7 @@
         
         if ([string rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -900,7 +901,7 @@
         
         if ([string rangeOfString:@"101-Charcoal"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -912,7 +913,7 @@
         
         if ([string rangeOfString:@"111-Chocolate"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -924,7 +925,7 @@
         
         if ([string rangeOfString:@"126-Clay"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -936,7 +937,7 @@
         
         if ([string rangeOfString:@"102-Brown"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -948,7 +949,7 @@
         
         if ([string rangeOfString:@"100-Burgundy"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -960,7 +961,7 @@
         
         if ([string rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -972,7 +973,7 @@
         
         if ([string rangeOfString:@"104-Turquoise"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -985,7 +986,7 @@
         
         if ([string rangeOfString:@"128-Yellow"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -997,15 +998,15 @@
         }
         
         
-        NSLog(@"%@ matBGColorString", matBGColorString);
+        //NSLog(@"%@ matBGColorString", matBGColorString);
         NSString *BGString = matBGColorString;
         if ([BGString rangeOfString:@"108-Black"].location == NSNotFound) {
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
             
             
         } else {
-            NSLog(@"black Found!");
+            //NSLog(@"black Found!");
             
             matUseBGColorString = @"Black_108.jpg";
             matBGTextColorString=@"108";
@@ -1015,7 +1016,7 @@
         
         if ([BGString rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1028,7 +1029,7 @@
         
         if ([BGString rangeOfString:@"123-Suede"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1040,7 +1041,7 @@
         
         if ([BGString rangeOfString:@"140-White"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1053,7 +1054,7 @@
         
         if ([BGString rangeOfString:@"119-Rose"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1066,7 +1067,7 @@
         
         if ([BGString rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1079,7 +1080,7 @@
         
         if ([BGString rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1092,7 +1093,7 @@
         
         if ([BGString rangeOfString:@"116-Silver"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1105,7 +1106,7 @@
         
         if ([BGString rangeOfString:@"127-Orange"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1118,7 +1119,7 @@
         
         if ([BGString rangeOfString:@"105-Purple"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1132,7 +1133,7 @@
         
         if ([BGString rangeOfString:@"112-Red"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1145,7 +1146,7 @@
         
         if ([BGString rangeOfString:@"109-Gold"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1158,7 +1159,7 @@
         
         if ([BGString rangeOfString:@"115-Grey"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1169,7 +1170,7 @@
         
         if ([BGString rangeOfString:@"106-Light Blue"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1182,7 +1183,7 @@
         
         if ([BGString rangeOfString:@"118-Navy"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1194,7 +1195,7 @@
         
         if ([BGString rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1205,7 +1206,7 @@
         
         if ([BGString rangeOfString:@"117-Forest Green"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1216,7 +1217,7 @@
         
         if ([BGString rangeOfString:@"114-Cranberry"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1228,7 +1229,7 @@
         
         if ([BGString rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1240,7 +1241,7 @@
         
         if ([BGString rangeOfString:@"101-Charcoal"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1252,7 +1253,7 @@
         
         if ([BGString rangeOfString:@"111-Chocolate"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1264,7 +1265,7 @@
         
         if ([BGString rangeOfString:@"126-Clay"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1276,7 +1277,7 @@
         
         if ([BGString rangeOfString:@"102-Brown"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1288,7 +1289,7 @@
         
         if ([BGString rangeOfString:@"100-Burgundy"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1300,7 +1301,7 @@
         
         if ([BGString rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1312,7 +1313,7 @@
         
         if ([BGString rangeOfString:@"104-Turquoise"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1325,7 +1326,7 @@
         
         if ([BGString rangeOfString:@"128-Yellow"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1348,11 +1349,11 @@
 
         
         [self.bgColorButton reloadInputViews];
-        NSLog(@"matUseBGColorString %@",matUseBGColorString);
-        NSLog(@"matColorNumberArray %@",matColorNumberArray);
-        NSLog(@"matColorArray %@",matColorArray);
+        //NSLog(@"matUseBGColorString %@",matUseBGColorString);
+        //NSLog(@"matColorNumberArray %@",matColorNumberArray);
+        //NSLog(@"matColorArray %@",matColorArray);
         int matColorCount= matColorArray.count;
-        NSLog(@"matColorCount %i",matColorCount);
+        //NSLog(@"matColorCount %i",matColorCount);
         
         
        /* if (0 == matColorCount){
@@ -1507,16 +1508,16 @@
         if (sizeString!=nil){
        
             
-            NSLog(@"sizeStringHere %@",sizeString);
+            //NSLog(@"sizeStringHere %@",sizeString);
         
             NSString *sizeGetMatLogoString = sizeString;
             NSRange range = [sizeGetMatLogoString rangeOfString:@"x"];
         
             NSString *widthLogoMatString = [sizeGetMatLogoString substringToIndex:range.location];
-            NSLog(@"%@",widthLogoMatString);
+            //NSLog(@"%@",widthLogoMatString);
         
             NSString *heightLogoMatString = [sizeGetMatLogoString substringFromIndex:range.location];
-            NSLog(@"%@",heightLogoMatString);
+            //NSLog(@"%@",heightLogoMatString);
         
         
             NSCharacterSet *charSet = [NSCharacterSet characterSetWithCharactersInString:@"x ,X"];
@@ -1642,7 +1643,7 @@
         
         if ([string rangeOfString:@"140-White"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1655,7 +1656,7 @@
         
         if ([string rangeOfString:@"119-Rose"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1668,7 +1669,7 @@
         
         if ([string rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1681,7 +1682,7 @@
         
         if ([string rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1694,7 +1695,7 @@
         
         if ([string rangeOfString:@"116-Silver"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1707,7 +1708,7 @@
         
         if ([string rangeOfString:@"127-Orange"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1720,7 +1721,7 @@
         
         if ([string rangeOfString:@"105-Purple"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1734,7 +1735,7 @@
         
         if ([string rangeOfString:@"112-Red"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1760,7 +1761,7 @@
         
         if ([string rangeOfString:@"115-Grey"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1771,7 +1772,7 @@
         
         if ([string rangeOfString:@"106-Light Blue"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1784,7 +1785,7 @@
         
         if ([string rangeOfString:@"118-Navy"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1796,7 +1797,7 @@
         
         if ([string rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1807,7 +1808,7 @@
         
         if ([string rangeOfString:@"117-Forest Green"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1818,7 +1819,7 @@
         
         if ([string rangeOfString:@"114-Cranberry"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1830,7 +1831,7 @@
         
         if ([string rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1842,7 +1843,7 @@
         
         if ([string rangeOfString:@"101-Charcoal"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1854,7 +1855,7 @@
         
         if ([string rangeOfString:@"111-Chocolate"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1866,7 +1867,7 @@
         
         if ([string rangeOfString:@"126-Clay"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1878,7 +1879,7 @@
         
         if ([string rangeOfString:@"102-Brown"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1890,7 +1891,7 @@
         
         if ([string rangeOfString:@"100-Burgundy"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1902,7 +1903,7 @@
         
         if ([string rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1914,7 +1915,7 @@
         
         if ([string rangeOfString:@"104-Turquoise"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1927,7 +1928,7 @@
         
         if ([string rangeOfString:@"128-Yellow"].location == NSNotFound) {
             
-            NSLog(@"string does not contain bla");
+            //NSLog(@"string does not contain bla");
             
         } else {
             
@@ -1945,10 +1946,10 @@
 
 
 
-        NSLog(@"logoColorNumberArray %@",logoColorNumberArray);
-        NSLog(@"logoColorArray %@",logoColorArray);
+        //NSLog(@"logoColorNumberArray %@",logoColorNumberArray);
+        //NSLog(@"logoColorArray %@",logoColorArray);
         int logoColorCount= logoColorArray.count;
-        NSLog(@"logoColorCount %i",logoColorCount);
+        //NSLog(@"logoColorCount %i",logoColorCount);
         
         
         
@@ -2255,8 +2256,8 @@
 //hits this
 - (void)menuActivated
 {
-    NSLog(@"Delegate: menuActivated");
-    NSLog(@"%@",_actionSelectedString);
+    //NSLog(@"Delegate: menuActivated");
+    //NSLog(@"%@",_actionSelectedString);
     
     if ([_actionSelectedString isEqualToString:@"pics"]){
         
@@ -2869,10 +2870,10 @@ else
     
     interactiveHeaderString = @"Create Mat";
     
-    NSLog(@"addButton.tag:%ld",(long)sender.tag);
+    //NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
     int myInt = (int)sender.tag;
-    NSLog(@"sender %@",sender);
+    //NSLog(@"sender %@",sender);
     
     
     if ((long)sender.tag==121){
@@ -3224,14 +3225,14 @@ else
 
         NSString*matUrlAppendAddFavString= nameHideField.text;
         NSString*pngString= @".png";
-        NSLog(@"nameFieldText %@",nameField.text);
-        NSLog(@"nameFieldText %@",nameHideField.text);
+        //NSLog(@"nameFieldText %@",nameField.text);
+        //NSLog(@"nameFieldText %@",nameHideField.text);
     
     
         NSString*urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
 
         NSString*matUrlAddFavString = urlMatStringAppend;
-        NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+        //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         NSString*matNameAddFavString =nameField.text;
         NSString*matSellerAddFavString =sellerField.text;
         NSString*matCompanyAddFavString =companyField.text;
@@ -3246,7 +3247,7 @@ else
    
     
 
-    NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
     if (matUrlAddFavString==NULL)
       
     {
@@ -3328,7 +3329,7 @@ else
     
     
     
-        NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+        //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
         [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
         [newMatFavorite setValue:companyField.text forKey:@"company"];
@@ -3344,7 +3345,7 @@ else
         NSError *error = nil;
     // Save the object to persistent store
         if (![context save:&error]) {
-            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+            //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
         }
     //Fetch Data entered to test
   /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
@@ -3383,7 +3384,7 @@ else
     textNoteField.textColor = [UIColor redColor];
     textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textNoteField.backgroundColor=[UIColor whiteColor];
-    textNoteField.text=@"DESIGN TEXT";
+    textNoteField.text=@"ADD PRODUCTION NOTES";
     [self.view addSubview:textNoteField];
     
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
@@ -3405,7 +3406,7 @@ else
     textDecField.textColor = [UIColor whiteColor];
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textDecField.backgroundColor=[UIColor clearColor];
-    textDecField.text=@"NOTES";
+    textDecField.text=@"TEXT";
     [self.view addSubview:textDecField];
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
@@ -3561,9 +3562,9 @@ else
     
     [self presentViewController:mc animated:YES completion:NULL];
     
-    UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your mat has been sent" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+   /* UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your mat has been sent" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
      
-     [alert show];
+     [alert show];*/
     
     
 }
@@ -3594,7 +3595,7 @@ else
                                 urlSearch];
        
        
-       NSLog(@"URLLOGIN: %@",urlSearch);
+       //NSLog(@"URLLOGIN: %@",urlSearch);
        
        [NSURLConnection sendAsynchronousRequest:request
                                           queue:[NSOperationQueue mainQueue]
@@ -3641,7 +3642,7 @@ else
        NSError *errorMat = nil;
        NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
        
-       NSLog(@"URLLOGIN: %@",urlSearch);
+       //NSLog(@"URLLOGIN: %@",urlSearch);
        
        [NSURLConnection sendAsynchronousRequest:requestMat
                                           queue:[NSOperationQueue mainQueue]
@@ -3676,7 +3677,7 @@ else
     
        
     matCount= searchMatArray.count;
-    NSLog(@"%@SearchMatArray",searchMatArray);
+    //NSLog(@"%@SearchMatArray",searchMatArray);
        
        
        
@@ -3688,25 +3689,26 @@ else
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchLogoArray %@",searchLogoArray);
+        //NSLog(@"%@", object);
+        //NSLog(@"searchLogoArray %@",searchLogoArray);
         
         
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
         artworkCount= artworkNameArray.count;
         
         
-        NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-        NSLog(@"artworkSizeArray %@",artworkSizeArray);
+        //NSLog(@"artworkSizeArray %@",artworkSizeArray);
         artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        NSLog(@"artworkFormatString %@",artworkFormatArray);
+        //NSLog(@"artworkFormatString %@",artworkFormatArray);
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",artworkFullImageArray);
+        //NSLog(@"fullImageArray %@",artworkFullImageArray);
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
+        artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         
         
         
@@ -3716,30 +3718,30 @@ else
     
     [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-            NSLog(@"%@", object);
-            NSLog(@"searchMatArray %@",searchMatArray);
+            //NSLog(@"%@", object);
+            //NSLog(@"searchMatArray %@",searchMatArray);
         
         
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
             matCount= matNameArray.count;
-            NSLog(@"matNameArray: %@", matNameArray);
-            NSLog(@"matNameArrayCount: %d", matNameArray.count);
+            //NSLog(@"matNameArray: %@", matNameArray);
+            //NSLog(@"matNameArrayCount: %d", matNameArray.count);
         
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-            NSLog(@"matSizeArray %@",matSizeArray);
+            //NSLog(@"matSizeArray %@",matSizeArray);
         
             matFormatArray = [searchMatArray valueForKey:@"Format"];
-            NSLog(@"matFormatString %@",matFormatArray);
+            //NSLog(@"matFormatString %@",matFormatArray);
         
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-            NSLog(@"fullImageArray %@",matFullImageArray);
+            //NSLog(@"fullImageArray %@",matFullImageArray);
         
         
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
         
             matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
             matSellerArray = [searchMatArray valueForKey:@"Seller"];
-            NSLog(@"matNameSellerArrayCount: %d", matSellerArray.count);
+            //NSLog(@"matNameSellerArrayCount: %d", matSellerArray.count);
         
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             matColorArray = [searchMatArray valueForKey:@"Color"];
@@ -3874,7 +3876,7 @@ else
     
     
     
-    NSLog(@"chosenImage %@",selectedImage);
+    //NSLog(@"chosenImage %@",selectedImage);
     
     
     //_actionSelectedString=action;
@@ -4406,7 +4408,7 @@ else
         
         InteractiveViewController *goingController = segue.destinationViewController;
         //[self presentViewController:destViewController animated:YES completion:nil];
-        NSLog(@"locationIDString %@",locationIDString);
+        //NSLog(@"locationIDString %@",locationIDString);
         goingController.locationIDString = locationIDString;
         
         
@@ -4430,7 +4432,7 @@ else
         
         LogoCollectionViewController *goingController = segue.destinationViewController;
         
-        NSLog(@"locationIDString %@",locationIDString);
+        //NSLog(@"locationIDString %@",locationIDString);
         
         goingController.locationIDString = locationIDString;
         
@@ -4443,6 +4445,7 @@ else
         goingController.artworkIDArray = artworkIDArray;
         goingController.artworkSellerArray = artworkSellerArray;
         goingController.artworkCompanyArray = artworkCompanyArray;
+        goingController.artworkColorArray = artworkColorArray;
         
         goingController.matCount = matCount;
         goingController.matNameArray = matNameArray;

@@ -96,6 +96,8 @@
 @property (nonatomic, copy) NSString *locationNameString;
 @property (nonatomic, copy) NSString *locationNumberString;
 
+@property (nonatomic, copy) NSString *userIDString;
+
 
 
 @property (nonatomic, copy) NSMutableArray *favoritesArray;

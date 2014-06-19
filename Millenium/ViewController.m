@@ -75,6 +75,8 @@
 @synthesize fetchedResultsController;
 @synthesize managedObjectContext;
 
+@synthesize userIDString;
+
 /*@synthesize managedObjectContext=_managedObjectContext;
 @synthesize managedObjectModel=_managedObjectModel;
 @synthesize persistentStoreCoordinator=_persistentStoreCoordinator;*/
@@ -329,21 +331,21 @@
     
     
     
-    NSLog(@"%@SearchMatArray",searchMatArray);
+   // NSLog(@"%@SearchMatArray",searchMatArray);
     
     matCount=searchMatArray.count;
 
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        NSLog(@"%@", object);
-        NSLog(@"searchLogoArray %@",searchLogoArray);
+        //NSLog(@"%@", object);
+        //NSLog(@"searchLogoArray %@",searchLogoArray);
        
        
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
         artworkCount= artworkNameArray.count;
         
-        NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
         
         
         //adding an array to COREDATA
@@ -364,13 +366,13 @@
        
         
        artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        NSLog(@"artworkFormatString %@",artworkFormatArray);
+        //NSLog(@"artworkFormatString %@",artworkFormatArray);
         
         
         
         
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",artworkFullImageArray);
+        //NSLog(@"fullImageArray %@",artworkFullImageArray);
         
         
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
@@ -384,9 +386,9 @@
         artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
         
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
-        NSLog(@"artworkColorArray %@",artworkColorArray);
+        //NSLog(@"artworkColorArray %@",artworkColorArray);
         
-        NSLog(@"locationIDString %@",locationIDString);
+        //NSLog(@"locationIDString %@",locationIDString);
         
         
         
@@ -423,18 +425,18 @@
         
         matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
         matFormatArray = [searchMatArray valueForKey:@"Format"];
-        NSLog(@"matFormatString %@",matFormatArray);
+        //NSLog(@"matFormatString %@",matFormatArray);
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-        NSLog(@"fullImageArray %@",matFullImageArray);
+        //NSLog(@"fullImageArray %@",matFullImageArray);
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
         matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
         matSellerArray = [searchMatArray valueForKey:@"Seller"];
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         //NSLog(@"idString %@",idString);
         matColorArray = [searchMatArray valueForKey:@"Color"];
-        NSLog(@"matColorArray %@",matColorArray);
+        //NSLog(@"matColorArray %@",matColorArray);
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
-        NSLog(@"matBGColorArray %@",matBGColorArray);
+        //NSLog(@"matBGColorArray %@",matBGColorArray);
 
 
         
@@ -447,7 +449,7 @@
     } else{
         
         
-        NSLog(@"Button was clicked, lets display our alert view");
+        //NSLog(@"Button was clicked, lets display our alert view");
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Search Field Empty"
                                                             message:@"You need to enter a valued in the search Field"
                                                            delegate:self
@@ -486,52 +488,7 @@
             
                }*/
     
-   /* for (int i=0;i<jsonLogoCount;i++) {
-        //delete existing data
-        
-        
-        
-        
-            
-            
-        
-        
-        // loops to add values
-        artworkNameAddString =[artworkNameArray objectAtIndex:i];
-        NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-        
-        artworkFullImageString =[artworkFullImageArray objectAtIndex:i];
-        NSLog(@"artworkFullImageString = %@", artworkFullImageString );
-        
-        NSManagedObjectContext *context = [self managedObjectContext];
        
-        // Create a new managed object
-        NSManagedObject *newLogoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch" inManagedObjectContext:context];
-        
-        // Delete object from database
-        //[context deleteObject:[self.LogoSearch objectAtIndex:indexPath.row]];
-        
-        [newLogoSearch setValue:self.artworkNameAddString forKey:@"artworkName"];
-        [newLogoSearch setValue:self.artworkFullImageString forKey:@"fullImageURL"];
-        //[newDevice setValue:self.companyTextField.text forKey:@"company"];
-        
-        NSError *error = nil;
-        // Save the object to persistent store
-        if (![context save:&error]) {
-            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-        }
-        //Fetch Data entered to test
-        NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoSearch"];
-        self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-        //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-        
-        
-        NSLog(@"favoritesArray %@",favoritesArray);
-
-        
-    }*/
-    
     
     
 }
@@ -545,7 +502,7 @@
         
         
         
-        NSLog(@"locationIDString: %@", locationIDString);
+        //NSLog(@"locationIDString: %@", locationIDString);
         
         
        /* NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
@@ -555,13 +512,13 @@
         //int locationINT = [locationIDString integerValue];
         
         //Search Logos
-        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=1&locationID=%@",20,locationIDString];
+        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=%@",20,locationIDString];
         
-         NSLog(@"URLSearchString: %@",urlSearchString);
+         //NSLog(@"URLSearchString: %@",urlSearchString);
         
         NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
         
-        NSLog(@"URLSearchNearMe: %@",urlSearch);
+        //NSLog(@"URLSearchNearMe: %@",urlSearch);
         NSError *error = nil;
         NSData *data = [NSData dataWithContentsOfURL:urlSearch];
         
@@ -579,13 +536,13 @@
         
         
         //Search Mats
-        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=0&locationID=%@",20,locationIDString];
+        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=%@",20,locationIDString];
         
         
         
         NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
         
-        NSLog(@"URLLOGIN: %@",urlSearchMat);
+        //NSLog(@"URLLOGIN: %@",urlSearchMat);
         NSError *errorMat = nil;
         NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
         
@@ -650,7 +607,7 @@
     } else{
         
         
-        NSLog(@"Button was clicked, lets display our alert view");
+        //NSLog(@"Button was clicked, lets display our alert view");
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Search Field Empty"
                                                             message:@"You need to enter a valued in the search Field"
                                                            delegate:self
@@ -671,7 +628,7 @@
     NSString *root = [[NSBundle mainBundle] bundlePath];
     NSString *filePath = [[NSString alloc] initWithString:[root stringByAppendingString:[@"/"stringByAppendingString:fileName]]];
     
-    NSLog(@"%@",filePath);
+    //NSLog(@"%@",filePath);
     
     NSData *logoData = [[NSData alloc] initWithContentsOfFile:filePath];
     return logoData;
@@ -714,7 +671,7 @@
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
-    NSLog(@"favoritesArray %@",favoritesArray);
+    //NSLog(@"favoritesArray %@",favoritesArray);
 
     
 
@@ -1083,6 +1040,7 @@ else{
         
         NSLog(@"locationIDString %@",locationIDString);
         goingController.locationIDString = locationIDString;
+        goingController.userIDString = userIDString;
         
         
         
@@ -1126,6 +1084,8 @@ else{
          NSLog(@"locationIDString %@",locationIDString);
         goingController.locationNameString = locationNameString;
         goingController.locationNumberString = locationNumberString;
+        
+        goingController.userIDString = userIDString;
         
         
         

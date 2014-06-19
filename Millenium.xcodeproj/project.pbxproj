@@ -35,6 +35,13 @@
 		42081FF21948A3A200412486 /* Homepage.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FEC1948A3A200412486 /* Homepage.png */; };
 		42081FFC1948AB3800412486 /* SearchBoxSimple3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FFB1948AB3800412486 /* SearchBoxSimple3.png */; };
 		42081FFE1948AB9C00412486 /* Mag.png in Resources */ = {isa = PBXBuildFile; fileRef = 42081FFD1948AB9C00412486 /* Mag.png */; };
+		420A8F0119530513005FB1D8 /* GoWeb.png in Resources */ = {isa = PBXBuildFile; fileRef = 420A8F0019530513005FB1D8 /* GoWeb.png */; };
+		420A8F0319530579005FB1D8 /* GoWeb1.png in Resources */ = {isa = PBXBuildFile; fileRef = 420A8F0219530579005FB1D8 /* GoWeb1.png */; };
+		420A8F0519530825005FB1D8 /* sketches1.png in Resources */ = {isa = PBXBuildFile; fileRef = 420A8F0419530825005FB1D8 /* sketches1.png */; };
+		420A8F07195308A9005FB1D8 /* SketchesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 420A8F06195308A9005FB1D8 /* SketchesIcon.png */; };
+		420A8F09195308ED005FB1D8 /* SketchesIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 420A8F08195308ED005FB1D8 /* SketchesIcon1.png */; };
+		420A8F0C19532B10005FB1D8 /* RefreshIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 420A8F0B19532B10005FB1D8 /* RefreshIcon.png */; };
+		420A8F0D19532B10005FB1D8 /* RefreshIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 420A8F0B19532B10005FB1D8 /* RefreshIcon.png */; };
 		420BEF9619192E04003DCEB0 /* MaskWhiteSquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */; };
 		420BEF98191935C7003DCEB0 /* MaskGreySquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF97191935C7003DCEB0 /* MaskGreySquare2.png */; };
 		420BEF9A191937C7003DCEB0 /* MaskGreySquare4.png in Resources */ = {isa = PBXBuildFile; fileRef = 420BEF99191937C7003DCEB0 /* MaskGreySquare4.png */; };
@@ -392,6 +399,12 @@
 		42081FEC1948A3A200412486 /* Homepage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Homepage.png; sourceTree = "<group>"; };
 		42081FFB1948AB3800412486 /* SearchBoxSimple3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchBoxSimple3.png; sourceTree = "<group>"; };
 		42081FFD1948AB9C00412486 /* Mag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mag.png; sourceTree = "<group>"; };
+		420A8F0019530513005FB1D8 /* GoWeb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoWeb.png; sourceTree = "<group>"; };
+		420A8F0219530579005FB1D8 /* GoWeb1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoWeb1.png; sourceTree = "<group>"; };
+		420A8F0419530825005FB1D8 /* sketches1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sketches1.png; sourceTree = "<group>"; };
+		420A8F06195308A9005FB1D8 /* SketchesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SketchesIcon.png; sourceTree = "<group>"; };
+		420A8F08195308ED005FB1D8 /* SketchesIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SketchesIcon1.png; sourceTree = "<group>"; };
+		420A8F0B19532B10005FB1D8 /* RefreshIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RefreshIcon.png; sourceTree = "<group>"; };
 		420BEF9519192E04003DCEB0 /* MaskWhiteSquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare2.png; sourceTree = "<group>"; };
 		420BEF97191935C7003DCEB0 /* MaskGreySquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare2.png; sourceTree = "<group>"; };
 		420BEF99191937C7003DCEB0 /* MaskGreySquare4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare4.png; sourceTree = "<group>"; };
@@ -744,6 +757,14 @@
 			name = ImagesNewHome;
 			sourceTree = "<group>";
 		};
+		420A8F0A19532B00005FB1D8 /* ImagesDirect */ = {
+			isa = PBXGroup;
+			children = (
+				420A8F0B19532B10005FB1D8 /* RefreshIcon.png */,
+			);
+			name = ImagesDirect;
+			sourceTree = "<group>";
+		};
 		422A691B19100939001CAB8D /* ImagesAssets */ = {
 			isa = PBXGroup;
 			children = (
@@ -795,6 +816,7 @@
 				424756E518D38ADB000AAF7C /* LogoCollectionViewController.h */,
 				425B8B2A193D038A00DF40C6 /* FavCollectionViewController.h */,
 				424756E618D38ADB000AAF7C /* LogoCollectionViewController.m */,
+				420A8F0019530513005FB1D8 /* GoWeb.png */,
 				425B8B2B193D039600DF40C6 /* FavCollectionViewController.m */,
 				424756E918D38B2C000AAF7C /* LogoCell.h */,
 				425B8B2D193D04E000DF40C6 /* FavCell.h */,
@@ -1019,6 +1041,10 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				420A8F08195308ED005FB1D8 /* SketchesIcon1.png */,
+				420A8F06195308A9005FB1D8 /* SketchesIcon.png */,
+				420A8F0419530825005FB1D8 /* sketches1.png */,
+				420A8F0219530579005FB1D8 /* GoWeb1.png */,
 				42F30DD2192D05500004A019 /* PMSRainbow.png */,
 				429C4AB1192566D900AF8050 /* addNote.png */,
 				429C4AB2192566D900AF8050 /* textButton.png */,
@@ -1268,6 +1294,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				420A8F0A19532B00005FB1D8 /* ImagesDirect */,
 				4288F1A91950A00000975FB6 /* ImagesLogin */,
 				42081FE61948A33800412486 /* ImagesNewHome */,
 				427DF92D19423CD200DBF91D /* ThumbNailMovies */,
@@ -1490,6 +1517,7 @@
 				42F399C11946675B00C84189 /* SafetyChefM.png in Resources */,
 				426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */,
 				42E9AC2618FF5A6C000E226D /* Clean3Button.png in Resources */,
+				420A8F0319530579005FB1D8 /* GoWeb1.png in Resources */,
 				426A6A1A18ED0CC300255331 /* SampleLogo7.png in Resources */,
 				422139921912883A001BD328 /* AssetsCompassButton.png in Resources */,
 				429C4AB01925656900AF8050 /* SearchBoxB.png in Resources */,
@@ -1569,6 +1597,7 @@
 				4297E05A1923CFE700E43779 /* MaskWhiteSquare13.png in Resources */,
 				4288F1AB1950A03500975FB6 /* LoginIcon1.png in Resources */,
 				42F399D8194669F200C84189 /* FreeFlowComfortM.png in Resources */,
+				420A8F07195308A9005FB1D8 /* SketchesIcon.png in Resources */,
 				42081FBF1947AC4700412486 /* GoldenSeriesPDF.png in Resources */,
 				42F399C81946675B00C84189 /* WaterGuardDiamondM.png in Resources */,
 				426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */,
@@ -1631,6 +1660,7 @@
 				42081FE31947B34400412486 /* UltraGuardPDF.png in Resources */,
 				4288F1AF1950A7CF00975FB6 /* MovieIcon1.png in Resources */,
 				4297E0561923CB6A00E43779 /* MaskWhiteSquare10.png in Resources */,
+				420A8F0119530513005FB1D8 /* GoWeb.png in Resources */,
 				42F399C51946675B00C84189 /* SafeStepM.png in Resources */,
 				42F399D31946675B00C84189 /* UltraGuardLogoInlayM.png in Resources */,
 				42F399D61946675B00C84189 /* ThumbWalkOffLogoMatM.png in Resources */,
@@ -1642,6 +1672,7 @@
 				42849B9118EA02BE00E5B3FB /* whitepad.png in Resources */,
 				420BEF9E1919395F003DCEB0 /* MaskWhiteSquare5.png in Resources */,
 				42E9AC0D18FF58D3000E226D /* Clean1Button.png in Resources */,
+				420A8F0519530825005FB1D8 /* sketches1.png in Resources */,
 				4297E05C1923D08100E43779 /* MaskWhiteSquare14.png in Resources */,
 				426206661909634500FE7066 /* MaskWhiteSquare1.png in Resources */,
 				42849B8B18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
@@ -1659,10 +1690,12 @@
 				42E9AC1A18FF59E2000E226D /* Pro2Button.png in Resources */,
 				42849B7C18E9FE6000E5B3FB /* whitecirclerugsample2.png in Resources */,
 				42F399CE1946675B00C84189 /* BrushTipScraperM.png in Resources */,
+				420A8F09195308ED005FB1D8 /* SketchesIcon1.png in Resources */,
 				42B0158718E3428B0068019C /* WalkOffLogoMatPDF.png in Resources */,
 				42849B7F18E9FF7F00E5B3FB /* whitecirclematsize1.png in Resources */,
 				42081FE51947B3B300412486 /* EcoGuardPDF.png in Resources */,
 				4297E08219250F8100E43779 /* Purple_105.jpg in Resources */,
+				420A8F0C19532B10005FB1D8 /* RefreshIcon.png in Resources */,
 				426A6A3118EDADBA00255331 /* OrganizedButton.png in Resources */,
 				42849B8518EA00CD00E5B3FB /* alllogobuttons2.png in Resources */,
 				4297E04E1923C5E800E43779 /* MaskWhiteSquare7.png in Resources */,
@@ -1743,6 +1776,7 @@
 				42849B8318EA004100E5B3FB /* rugsamplea.png in Resources */,
 				422139A319128F8B001BD328 /* AssetsRemFavButtons.png in Resources */,
 				42FF7A3E18CDE92A00C72695 /* InfoPlist.strings in Resources */,
+				420A8F0D19532B10005FB1D8 /* RefreshIcon.png in Resources */,
 				42849B8C18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0150218DF46970068019C /* WebViewBG1.png in Resources */,
 				42E9AC2518FF5A6C000E226D /* Fresh3Button.png in Resources */,

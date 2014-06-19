@@ -242,28 +242,32 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvk-db-kfJ">
-                                <rect key="frame" x="501" y="681" width="193" height="49"/>
+                                <rect key="frame" x="614" y="679" width="112" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
-                                <state key="normal" title="MY SKETCHES">
+                                <state key="normal" backgroundImage="SketchesIcon1.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="selected" backgroundImage="SketchesIcon1.png"/>
+                                <state key="highlighted" backgroundImage="SketchesIcon1.png"/>
                                 <connections>
                                     <action selector="goSketches:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Mzh-M1-qaF"/>
                                     <segue destination="l8u-Ww-K06" kind="modal" identifier="SearchSegue" id="gYW-Ou-qn0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEW-Zo-R2b">
-                                <rect key="frame" x="727" y="681" width="241" height="49"/>
+                                <rect key="frame" x="759" y="676" width="52" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
-                                <state key="normal" title="SKETCH SEARCH">
+                                <state key="normal" backgroundImage="GoWeb1.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="GoWeb1.png"/>
+                                <state key="highlighted" backgroundImage="GoWeb1.png"/>
                                 <connections>
                                     <action selector="goAcquireSketches:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="rZc-7y-DpG"/>
                                 </connections>
@@ -3435,18 +3439,23 @@
                                 </connections>
                             </button>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cGV-ir-S7v">
-                                <rect key="frame" x="41" y="119" width="957" height="590"/>
+                                <rect key="frame" x="14" y="119" width="997" height="590"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACn-6G-H5N">
-                                <rect key="frame" x="942" y="81" width="53" height="30"/>
+                                <rect key="frame" x="954" y="68" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Refresh">
+                                <state key="normal" backgroundImage="RefreshIcon.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="RefreshIcon.png"/>
+                                <state key="highlighted" backgroundImage="RefreshIcon.png"/>
+                                <connections>
+                                    <action selector="goRefresh:" destination="xrg-i9-oxH" eventType="touchUpInside" id="AI3-uq-BkL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DIRECT CATALOGUE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVu-s2-OF0">
                                 <rect key="frame" x="402" y="75" width="221" height="31"/>
@@ -3460,6 +3469,9 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="directWebView" destination="cGV-ir-S7v" id="pFD-OY-X6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gfr-P2-kVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3482,13 +3494,18 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1E-ro-evu">
-                                <rect key="frame" x="935" y="92" width="53" height="30"/>
+                                <rect key="frame" x="969" y="69" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Refresh">
+                                <state key="normal" backgroundImage="RefreshIcon.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="RefreshIcon.png"/>
+                                <state key="highlighted" backgroundImage="RefreshIcon.png"/>
+                                <connections>
+                                    <action selector="goRefresh:" destination="PTc-ti-tni" eventType="touchUpInside" id="ex1-ly-TA8"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iGP-Ty-UL8">
                                 <rect key="frame" x="0.0" y="0.0" width="1049" height="67"/>
@@ -5020,6 +5037,7 @@
         <image name="Forest Green_117.jpg" width="800" height="514"/>
         <image name="FreeFlowComfortM.png" width="640" height="354"/>
         <image name="FreeFlowComfortPDF.png" width="612" height="792"/>
+        <image name="GoWeb1.png" width="84" height="79"/>
         <image name="Gold_109.jpg" width="800" height="514"/>
         <image name="GoldenSeriesM.png" width="640" height="354"/>
         <image name="GoldenSeriesPDF.png" width="612" height="792"/>
@@ -5060,6 +5078,7 @@
         <image name="PrintedMessageM.png" width="640" height="354"/>
         <image name="Purple_105.jpg" width="800" height="514"/>
         <image name="Red_112.jpg" width="800" height="514"/>
+        <image name="RefreshIcon.png" width="1000" height="1000"/>
         <image name="RentalButton.png" width="518" height="238"/>
         <image name="Rose_119.jpg" width="800" height="514"/>
         <image name="Royal Blue_107.jpg" width="800" height="514"/>
@@ -5072,6 +5091,7 @@
         <image name="SilverSeriesM.png" width="640" height="354"/>
         <image name="SilverSeriesPDF.png" width="612" height="792"/>
         <image name="Silver_116.jpg" width="800" height="514"/>
+        <image name="SketchesIcon1.png" width="196" height="67"/>
         <image name="SoftStepM.png" width="640" height="354"/>
         <image name="SoftStepPDF.png" width="612" height="792"/>
         <image name="SpringStepM.png" width="640" height="354"/>
@@ -5116,8 +5136,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gYW-Ou-qn0"/>
-        <segue reference="wpq-PH-bdK"/>
+        <segue reference="QQh-is-hk2"/>
         <segue reference="aYA-g1-hsh"/>
+        <segue reference="wpq-PH-bdK"/>
     </inferredMetricsTieBreakers>
 </document>
