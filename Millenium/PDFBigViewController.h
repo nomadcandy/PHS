@@ -21,6 +21,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView*pdfImageView;
 
 - (IBAction)goHome:(UIButton *)sender;
+- (IBAction)goPDFViewController:(UIButton *)sender;
 
 
 @end
