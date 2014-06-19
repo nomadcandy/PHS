@@ -3586,7 +3586,7 @@ else
     NSString*searchString= [searchStringArray objectAtIndex:0];
     
        
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchString];
 
        
        NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -3630,7 +3630,7 @@ else
        artworkCount= searchLogoArray.count;
 
     
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1", searchString];
     
        NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
        NSURLRequest *requestMat = [NSURLRequest requestWithURL:
@@ -4039,7 +4039,8 @@ else
     //((x >= 5) && (y < 10))
     else if ((_doubleMat >=.0)&&(_doubleMat <=.10)){
         
-        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 50.0f);
+        //CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 50.0f);
+        CGRect myLogoMatRect = CGRectMake( 52.0f, 165.0f, 500.0f, 50.0f);
         
         matBGLogoView.frame=myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
@@ -4048,7 +4049,8 @@ else
     else if ((_doubleMat >=.10)&&(_doubleMat <=.20)){
     //else if (_doubleMat ==.20){
         
-        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 100.0f);
+        //CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 100.0f);
+         CGRect myLogoMatRect = CGRectMake( 52.0f, 155.0f, 500.0f, 100.0f);
         
         matBGLogoView.frame=myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
@@ -4058,7 +4060,8 @@ else
     else if ((_doubleMat >=.20)&&(_doubleMat <=.33)){
     //else if (_doubleMat ==.33){
         
-        CGRect myLogoMatRect = CGRectMake( 476.0f, 2681.0f, 500.0f, 165.0f);
+        //CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 165.0f);
+        CGRect myLogoMatRect = CGRectMake( 52.0f, 125.0f, 500.0f, 165.0f);
         
         matBGLogoView.frame=myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
@@ -4067,7 +4070,8 @@ else
     else if ((_doubleMat >=.33)&&(_doubleMat <=.40)){
     //else if (_doubleMat==.40){
         
-        CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 200.0f);
+        //CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 200.0f);
+        CGRect myLogoMatRect = CGRectMake( 52.0f, 85.0f, 500.0f, 200.0f);
         
         matBGLogoView.frame=myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
@@ -4076,7 +4080,8 @@ else
     else if ((_doubleMat >=.40)&&(_doubleMat <=.50)){
     //else if (_doubleMat == .50){
         
-        CGRect myLogoMatRect = CGRectMake( 476.0f, 195.0f, 500.0f, 250.0f);
+        //CGRect myLogoMatRect = CGRectMake( 476.0f, 195.0f, 500.0f, 250.0f);
+        CGRect myLogoMatRect = CGRectMake( 52.0f, 85.0f, 500.0f, 250.0f);
         
         matBGLogoView.frame=myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;

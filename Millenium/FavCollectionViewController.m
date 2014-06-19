@@ -195,17 +195,17 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         //NSLog(@"searchLogoArray %@",favoritesLogoArray);
         
         
-        artworkNameArray = [favoritesLogoArray valueForKey:@"ArtworkName"];
+        artworkNameArray = [favoritesLogoArray valueForKey:@"artworkName"];
         //NSLog(@"artWorkNameArray: %@", artworkNameArray);
-        artworkSizeArray = [favoritesLogoArray valueForKey:@"ArtworkSize"];
-        artworkFormatArray = [favoritesLogoArray valueForKey:@"Format"];
-        artworkFullImageArray = [favoritesLogoArray valueForKey:@"FullImageURL"];
-        artworkIconArray = [favoritesLogoArray valueForKey:@"IconURL"];
-        artworkIDArray = [favoritesLogoArray valueForKey:@"ProductID"];
-        artworkLocationIDArray = [favoritesLogoArray valueForKey:@"LocationID"];
-        artworkSellerArray = [favoritesLogoArray valueForKey:@"Seller"];
-        artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
-        artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
+        artworkSizeArray = [favoritesLogoArray valueForKey:@"artworkSize"];
+        artworkFormatArray = [favoritesLogoArray valueForKey:@"format"];
+        artworkFullImageArray = [favoritesLogoArray valueForKey:@"fullImageURL"];
+        artworkIconArray = [favoritesLogoArray valueForKey:@"iconURL"];
+        artworkIDArray = [favoritesLogoArray valueForKey:@"productID"];
+        artworkLocationIDArray = [favoritesLogoArray valueForKey:@"locationID"];
+        artworkSellerArray = [favoritesLogoArray valueForKey:@"seller"];
+        artworkColorArray = [favoritesLogoArray valueForKey:@"color"];
+        artworkCompanyArray = [favoritesLogoArray valueForKey:@"company"];
         //NSLog(@"artworkCompanyArray %@",artworkCompanyArray);
         artworkCount = artworkNameArray.count;
         
@@ -218,18 +218,18 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         //NSLog(@"favMatArray %@",favoritesMatArray);
         
         
-        matNameArray = [favoritesMatArray valueForKey:@"ArtworkName"];
-        //NSLog(@"matNameArray: %@", matNameArray);
+        matNameArray = [favoritesMatArray valueForKey:@"artworkName"];
+        NSLog(@"matNameArray: %@", matNameArray);
         
-        matSizeArray = [favoritesMatArray valueForKey:@"ArtworkSize"];
-        matFormatArray = [favoritesMatArray valueForKey:@"Format"];
-        matFullImageArray = [favoritesMatArray valueForKey:@"FullImageURL"];
-        matIconArray = [favoritesMatArray valueForKey:@"IconURL"];
-        matIDArray = [favoritesMatArray valueForKey:@"ProductID"];
-        matLocationIDArray = [favoritesMatArray valueForKey:@"LocationID"];
-        matSellerArray = [favoritesMatArray valueForKey:@"Seller"];
-        matCompanyArray = [favoritesMatArray valueForKey:@"Company"];
-        matColorArray = [favoritesMatArray valueForKey:@"Color"];
+        matSizeArray = [favoritesMatArray valueForKey:@"artworkSize"];
+        matFormatArray = [favoritesMatArray valueForKey:@"format"];
+        matFullImageArray = [favoritesMatArray valueForKey:@"fullImageURL"];
+        matIconArray = [favoritesMatArray valueForKey:@"iconURL"];
+        matIDArray = [favoritesMatArray valueForKey:@"productID"];
+        matLocationIDArray = [favoritesMatArray valueForKey:@"locationID"];
+        matSellerArray = [favoritesMatArray valueForKey:@"seller"];
+        matCompanyArray = [favoritesMatArray valueForKey:@"company"];
+        matColorArray = [favoritesMatArray valueForKey:@"color"];
         //matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
         
         matCount = matNameArray.count;
@@ -450,7 +450,25 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         //NSLog(@"searchLogoArray %@",favoritesLogoArray);
         
         
-        artworkNameArray = [favoritesLogoArray valueForKey:@"ArtworkName"];
+        
+        
+        artworkNameArray = [favoritesLogoArray valueForKey:@"artworkName"];
+        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
+        artworkSizeArray = [favoritesLogoArray valueForKey:@"artworkSize"];
+        artworkFormatArray = [favoritesLogoArray valueForKey:@"format"];
+        artworkFullImageArray = [favoritesLogoArray valueForKey:@"fullImageURL"];
+        artworkIconArray = [favoritesLogoArray valueForKey:@"iconURL"];
+        artworkIDArray = [favoritesLogoArray valueForKey:@"productID"];
+        artworkLocationIDArray = [favoritesLogoArray valueForKey:@"locationID"];
+        artworkSellerArray = [favoritesLogoArray valueForKey:@"seller"];
+        artworkColorArray = [favoritesLogoArray valueForKey:@"color"];
+        artworkCompanyArray = [favoritesLogoArray valueForKey:@"company"];
+        //NSLog(@"artworkCompanyArray %@",artworkCompanyArray);
+        artworkCount = artworkNameArray.count;
+
+        
+        
+       /* artworkNameArray = [favoritesLogoArray valueForKey:@"ArtworkName"];
         //NSLog(@"artWorkNameArray: %@", artworkNameArray);
         artworkSizeArray = [favoritesLogoArray valueForKey:@"ArtworkSize"];
         //NSLog(@"artWorkSizeArray: %@", artworkSizeArray);
@@ -461,10 +479,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkLocationIDArray = [favoritesLogoArray valueForKey:@"LocationID"];
         artworkSellerArray = [favoritesLogoArray valueForKey:@"Seller"];
         artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
-        artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
+        artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];*/
         
         artworkCount = artworkNameArray.count;
-        
         favLogoCount=favoritesLogoArray.count;
         
         
@@ -476,7 +493,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         //NSLog(@"searchLogoArray %@",favoritesMatArray);
         
         
-        matNameArray = [favoritesMatArray valueForKey:@"ArtworkName"];
+        /*matNameArray = [favoritesMatArray valueForKey:@"ArtworkName"];
         //NSLog(@"matNameArray: %@", matNameArray);
         
         matSizeArray = [favoritesMatArray valueForKey:@"ArtworkSize"];
@@ -488,7 +505,22 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matSellerArray = [favoritesMatArray valueForKey:@"Seller"];
         matCompanyArray = [favoritesMatArray valueForKey:@"Company"];
         matColorArray = [favoritesMatArray valueForKey:@"Color"];
-        //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
+        //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];*/
+        
+        
+        matNameArray = [favoritesMatArray valueForKey:@"artworkName"];
+        NSLog(@"matNameArray: %@", matNameArray);
+        
+        matSizeArray = [favoritesMatArray valueForKey:@"artworkSize"];
+        matFormatArray = [favoritesMatArray valueForKey:@"format"];
+        matFullImageArray = [favoritesMatArray valueForKey:@"fullImageURL"];
+        matIconArray = [favoritesMatArray valueForKey:@"iconURL"];
+        matIDArray = [favoritesMatArray valueForKey:@"productID"];
+        matLocationIDArray = [favoritesMatArray valueForKey:@"locationID"];
+        matSellerArray = [favoritesMatArray valueForKey:@"seller"];
+        matCompanyArray = [favoritesMatArray valueForKey:@"company"];
+        matColorArray = [favoritesMatArray valueForKey:@"color"];
+        //matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
         
         matCount = matNameArray.count;
         
@@ -973,7 +1005,11 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     //NSLog(@"indexPathSend %d",indexPathSend);
     
+    
+    
     matUrlAddFavString =[matFullImageArray objectAtIndex:indexPathSend];
+    
+    
     matNameAddFavString =[matNameArray objectAtIndex:indexPathSend];
     matSellerAddFavString =[matSellerArray objectAtIndex:indexPathSend];
     matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
@@ -1092,15 +1128,85 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     //NSLog(@"indexPathSend %d",indexPathSend);
     
     urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
+    
+    if (urlFavString!=nil){
+        
+        
+        urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
+        
+    }else{ 
+        
+        urlFavString= @"Name";
+        
+    }
+    
     artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
+    
+    if (artworkNameAddFavString!=nil){
+        
+        
+        artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
+        
+    }else{
+        
+        artworkNameAddFavString= @"Name";
+        
+    }
+    
     artworkColorAddFavString =[artworkColorArray objectAtIndex:indexPathSend];
+    
+    if (artworkColorAddFavString!=nil){
+        
+        
+        artworkColorAddFavString =[artworkColorArray objectAtIndex:indexPathSend];
+        
+    }else{
+        
+        artworkColorAddFavString= @"Color";
+        
+    }
+
+    
     artworkSizeAddFavString =[artworkSizeArray objectAtIndex:indexPathSend];
+    
+    if (artworkSizeAddFavString!=nil){
+        
+        
+        artworkSizeAddFavString =[artworkSizeArray objectAtIndex:indexPathSend];
+        
+    }else{
+        
+        artworkSizeAddFavString= @"Size";
+        
+    }
     
     //NSLog(@"urlFavString %@",urlFavString);
     //NSLog(@"urlFavString %@",artworkNameAddFavString);
     
     artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+    
+    if (artworkCompanyAddFavString!=nil){
+        
+        
+        artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+        
+    }else{
+        
+        artworkCompanyAddFavString= @"Company";
+    
+    }
+    
     artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+    
+    if (artworkSellerAddFavString!=nil){
+        
+        
+        artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+    }else{
+        
+        artworkSellerAddFavString= @"Seller";
+        
+    }
    /* NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
     
     
@@ -1612,7 +1718,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         }
         
     }
-    
+    //TODO Check all strings for NULL
     if (indexPathSend <artworkCompanyArray.count){
         
         companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
@@ -1620,7 +1726,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         if (companyString==NULL)
         {
             
-            companyString= @"No Company Provided";
+            companyString= @"Company";
             
         }
         
@@ -1766,8 +1872,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         NSLog(@"nameStringSend %@",nameString);
         goingController.nameString=nameString;
         //goingController.companyString=companyString;
-        goingController.companyString=@"company";
-        goingController.sellerString=@"seller";
+        goingController.companyString=@"Company";
+
+        goingController.sellerString=@"Seller";
         goingController.numberString=numberString;
         goingController.sizeString=sizeString;
         NSLog(@"nameStringSend %@",nameString);

@@ -795,7 +795,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         //Search Logos
         
-        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1", searchYeahString];
+        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchYeahString];
         
         
         NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -839,14 +839,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkCount= searchLogoArray.count;
         
         
-        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=0&locationID=-1", searchYeahString];
+        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1", searchYeahString];
         
         NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
         NSURLRequest *requestMat = [NSURLRequest requestWithURL:
                                     urlSearchMat];
         
         
-        // NSLog(@"URLSearchMat: %@",urlSearchMat);
+       
         NSError *errorMat = nil;
         NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
         
@@ -1111,25 +1111,26 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     } else {
         
-        matSellerAddFavString =@"No Seller Name has been provided";
+        matSellerAddFavString =@"Seller";
         
 
     }
 
     
         NSLog(@" matSellerAddFavString %@",matSellerAddFavString);
-    NSLog(@" matSellerArrayCount %d",matSellerArray.count);
+        NSLog(@" matSellerArrayCount %d",matSellerArray.count);
     
     
     if([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend])
         
-    {
-        matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
+        {
+            matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
         
-    } else {
+         
+        } else {
         
         
-        matCompanyAddFavString =@"No Company Name has been provided";
+                matCompanyAddFavString =@"Company";
         
         
     }
@@ -1442,9 +1443,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
         
+        
     } else {
         
-        artworkCompanyAddFavString =@"no company name has been provided";
+        artworkCompanyAddFavString =@"Company";
         
         
     }
@@ -1458,7 +1460,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     } else {
         
-        artworkSellerAddFavString =@"no company name has been provided";
+        artworkSellerAddFavString =@"Seller";
         
         
     }
@@ -1924,7 +1926,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         if (sellerString==NULL)
         {
             
-            matIDAddFavString= @"No Seller Provided";
+            sellerString= @"No Seller Provided";
             
         }
         
