@@ -215,6 +215,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[activityIndicator stopAnimating];
     matView1.hidden= YES;
    
     searchField.textAlignment = NSTextAlignmentCenter;
@@ -257,13 +258,18 @@
     NSLog(@"numberStringHere %@",numberString);
     NSLog(@"interactiveHeaderString %@",interactiveHeaderString);*/
 
-    nameField.text =nameString;
     
-        if(sellerString!=NULL){
+    if(nameString!=NULL){
+        
+        nameField.text =nameString;
+        
+    }
+    
+    if(sellerString!=NULL){
         
             sellerField.text =sellerString;
         
-            }
+    }
     
     if(companyString!=NULL){
         
@@ -1609,7 +1615,7 @@
         }
 
         
-    
+        if (_logoColorString!=NULL){
 
         
         NSString *string = _logoColorString;
@@ -1952,7 +1958,7 @@
 
 
 
-
+        }
 
 
 
@@ -3598,7 +3604,7 @@ else
     NSString*searchString= [searchStringArray objectAtIndex:0];
     
        
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", searchString];
 
        
        NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -3642,7 +3648,7 @@ else
        artworkCount= searchLogoArray.count;
 
     
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1", searchString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", searchString];
     
        NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
        NSURLRequest *requestMat = [NSURLRequest requestWithURL:

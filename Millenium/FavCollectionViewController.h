@@ -229,6 +229,9 @@
 @property (nonatomic, copy) NSString *sizeString;
 @property (nonatomic, copy) NSString *interactiveHeaderString;
 
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 
 //@property (nonatomic, assign) id <StringSetDelegate> delegateString;
 @property (nonatomic, weak) id <ButtonFavPickerDelegate> delegate;

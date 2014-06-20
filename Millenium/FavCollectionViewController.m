@@ -672,7 +672,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     //Search Logos
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=%@",20,locationIDString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=%@&userID=0",20,locationIDString];
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -695,7 +695,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     //Search Mats
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=%@",20,locationIDString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=%@&userID=0",20,locationIDString];
     
     
     
@@ -810,7 +810,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     //Search Logos
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchYeahString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", searchYeahString];
 
     
     
@@ -834,7 +834,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     //Search Mats
     
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1", searchYeahString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", searchYeahString];
     
     
     
@@ -1805,7 +1805,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
 }
 
-
+//handle NsNull correctly
 -(IBAction)matSelected:(UIButton*)sender event:(id)event {
     
     interactiveHeaderString = @"Edit Mat";
@@ -1818,16 +1818,69 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     //NSLog(@"sender %@",sender);
     //NSLog(@"indexPathSend %d",indexPathSend);
     
+    //
+   nameString = [matNameArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:nameString]) {
+        nameString = nil;
+    }
+    //
+    //nameString =[matNameArray objectAtIndex:indexPathSend];
     
-    nameString =[matNameArray objectAtIndex:indexPathSend];
+    /*if (nameString==nil)
+        
+    {
+        nameString=@"";
+    }*/
+    
+    sellerString = [matSellerArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:sellerString]) {
+        sellerString = nil;
+    }
     //NSLog(@" nameStringLogoSelected %@",nameString);
     
-    sellerString =[matSellerArray objectAtIndex:indexPathSend];
-    companyString =[matCompanyArray objectAtIndex:indexPathSend];
-    numberString =[matIDArray objectAtIndex:indexPathSend];
-    sizeString =[matSizeArray objectAtIndex:indexPathSend];
-    matColorString =[matColorArray objectAtIndex:indexPathSend];
-    matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
+    //sellerString =[matSellerArray objectAtIndex:indexPathSend];
+        
+    companyString = [matCompanyArray objectAtIndex:indexPathSend];
+        if ([[NSNull null] isEqual:companyString]) {
+            companyString = nil;
+            
+        }
+    numberString = [matIDArray objectAtIndex:indexPathSend];
+            if ([[NSNull null] isEqual:numberString]) {
+                numberString = nil;
+                
+            }
+    //companyString =[matCompanyArray objectAtIndex:indexPathSend];
+    //numberString =[matIDArray objectAtIndex:indexPathSend];
+    
+    sizeString = [matSizeArray objectAtIndex:indexPathSend];
+                if ([[NSNull null] isEqual:sizeString]) {
+                    sizeString = @"4'x 6'";
+                    
+                }
+
+                
+    /*sizeString =[matSizeArray objectAtIndex:indexPathSend];
+    if (sizeString!=NULL){
+        
+        
+    }else{
+        
+        sizeString=@"4'x6'";
+    }*/
+    matColorString = [matColorArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:matColorString]) {
+        matColorString = nil;
+        
+    }
+    
+    matBGColorString = [matBGColorArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:matBGColorString]) {
+        matBGColorString = nil;
+        
+    }
+    
+    //matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
     //NSLog(@"matBGColorString %@",matBGColorString);
     interactiveHeaderString = @"Edit Mat";
     
@@ -1871,22 +1924,133 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         InteractiveViewController *goingController = segue.destinationViewController;
         
-        goingController.logoUseStringHere=logoUseString;
+        if(logoUseString!=NULL)
+            
+        {
+           
+            goingController.logoUseStringHere=logoUseString;
+            
+        }else{
+            
+            goingController.logoUseStringHere=@" ";
+            
+        }
+
+        
+        if(nameString!=NULL)
+            
+        {
+            
+            goingController.nameString=nameString;
+            
+        }else{
+            
+            goingController.nameString=@" ";
+            
+        }
+        
         //NSLog(@"logoUseString %@",logoUseString);
         
         //NSLog(@"nameStringSend %@",nameString);
-        goingController.nameString=nameString;
+        //goingController.nameString=nameString;
         //goingController.companyString=companyString;
-        goingController.companyString=@"Company";
+        
+        if(companyString!=NULL)
+            
+        {
+           goingController.companyString=companyString;
+            
+        }else{
+            
+            goingController.companyString=@" ";
+            
+        }
+        
+        if(sellerString!=NULL)
+            
+        {
+            goingController.sellerString=sellerString;
+            
+        }else{
+            
+            goingController.sellerString=@" ";
+            
+        }
+        
+        if(numberString!=NULL)
+            
+        {
+            goingController.numberString=numberString;
+            
+        }else{
+            
+            goingController.numberString=@" ";
+            
+        }
+        
+        if(sizeString!=NULL)
+            
+        {
+            goingController.sizeString=sizeString;
+            
+        }else{
+            
+            goingController.sizeString=@" ";
+            
+        }
+        
+        if(logoColorString!=NULL)
+            
+        {
+            goingController.logoColorString=logoColorString;
+            
+        }else{
+            
+            goingController.logoColorString=@" ";
+            
+        }
+        
+        if(matColorString!=NULL)
+            
+        {
+            goingController.matColorString=matColorString;
+            
+        }else{
+            
+            goingController.matColorString=@" ";
+            
+        }
+        if(matBGColorString!=NULL)
+            
+        {
+            goingController.matBGColorString=matBGColorString;
+            
+        }else{
+            
+            goingController.matBGColorString=@" ";
+            
+        }
+        if(interactiveHeaderString!=NULL)
+            
+        {
+            goingController.interactiveHeaderString=interactiveHeaderString;
+            
+        }else{
+            
+            goingController.interactiveHeaderString=@"Create Mat";
+            
+        }
 
-        goingController.sellerString=@"Seller";
-        goingController.numberString=numberString;
-        goingController.sizeString=sizeString;
+
+
+        
+        //goingController.numberString=numberString;
+        //goingController.sizeString=sizeString;
         //NSLog(@"nameStringSend %@",nameString);
-        goingController.logoColorString=logoColorString;
-        goingController.matColorString=matColorString;
-        goingController.matBGColorString=matBGColorString;
-        goingController.interactiveHeaderString=interactiveHeaderString;
+        //goingController.logoColorString=logoColorString;
+        //goingController.matColorString=matColorString;
+        //goingController.matBGColorString=matBGColorString;
+        //goingController.interactiveHeaderString=interactiveHeaderString;
         //NSLog(@"interactiveHeaderString %@",interactiveHeaderString);
 
         

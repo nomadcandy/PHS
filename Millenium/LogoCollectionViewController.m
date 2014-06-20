@@ -369,10 +369,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
     self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
-    
-   /* NSFetchRequest *fetchRequestMat = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+    NSManagedObjectContext *managedObjectContext1 = [self managedObjectContext];
+    NSFetchRequest *fetchRequestMat = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
     //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequestMat error:nil] mutableCopy];*/
+    self.favoritesMatArray = [[managedObjectContext1 executeFetchRequest:fetchRequestMat error:nil] mutableCopy];
     
     
     
@@ -459,16 +459,22 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     userIDString = [[NSUserDefaults standardUserDefaults]
                         stringForKey:@"userID"];
+    
     NSLog(@"userIDString: %@", userIDString);
     
     
     //Search Logos
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&userID=%@",20,userIDString];
+   /* NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&userID=%@",20,userIDString];*/
+    
+    //http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=0&locationID=-1&userID=%0
+    
+    //Search Logos
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=1&locationID=-1&userID=%@",20,userIDString];
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     
-    NSLog(@"URLLOGIN: %@",urlSearch);
+    NSLog(@"UrlSearch: %@",urlSearch);
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
     
@@ -486,7 +492,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     //Search Mats
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&userID=%@",20,userIDString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=match&interactiveOnly=0&locationID=-1&userID=%@",20,userIDString];
     
     
     
@@ -587,7 +593,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     //Search Logos
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=%@",20,locationIDString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=%@&userID=0",20,locationIDString];
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -610,7 +616,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     //Search Mats
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=%@",20,locationIDString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=%@&userID=0",20,locationIDString];
     
     
     
@@ -725,7 +731,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         //Search Logos
         
-        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1", searchYeahString];
+        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", searchYeahString];
         
         
         NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -769,7 +775,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkCount= searchLogoArray.count;
         
         
-        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1", searchYeahString];
+        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", searchYeahString];
         
         NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
         NSURLRequest *requestMat = [NSURLRequest requestWithURL:
