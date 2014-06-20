@@ -549,6 +549,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     userIDString = [[NSUserDefaults standardUserDefaults]
                     stringForKey:@"userID"];
+    
     NSLog(@"userIDString: %@", userIDString);
     
     
@@ -814,21 +815,38 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
     
     
-    NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
-    //NSLog(@"URLLOGIN: %@",urlSearch);
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
-   
-    
-    
-    //parse Array from web
-    NSArray *searchLogoArray = [NSJSONSerialization
-                                JSONObjectWithData:data
-                                options:NSJSONReadingAllowFragments
-                                error: &error];
-    
+        NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+        NSURLRequest *request = [NSURLRequest requestWithURL:
+                                 urlSearch];
+        
+        
+        //NSLog(@"URLLOGIN: %@",urlSearch);
+        
+        [NSURLConnection sendAsynchronousRequest:request
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response,
+                                                   NSData *data,
+                                                   NSError *connectionError) {
+                                   // handle response
+                               }];
+        
+        NSURLSession *session = [NSURLSession sharedSession];
+        [[session dataTaskWithURL:urlSearch
+                completionHandler:^(NSData *data,
+                                    NSURLResponse *response,
+                                    NSError *error) {
+                    // handle response
+                    
+                }] resume];
+        
+        
+        NSError *error = nil;
+        NSData *data = [NSData dataWithContentsOfURL:urlSearch];
+        //parse Array from web
+        NSArray *searchLogoArray = [NSJSONSerialization
+                                    JSONObjectWithData:data
+                                    options:NSJSONReadingAllowFragments
+                                    error: &error];
     
    
     
@@ -838,20 +856,46 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     
-    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
-    
-    //NSLog(@"URLLOGIN: %@",urlSearchMat);
-    NSError *errorMat = nil;
-    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
-    
-    
-    
-    
-    //parse Array from web
-    NSArray *searchMatArray = [NSJSONSerialization
-                                JSONObjectWithData:dataMat
-                                options:NSJSONReadingAllowFragments
-                                error: &error];
+        NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+        NSURLRequest *requestMat = [NSURLRequest requestWithURL:
+                                    urlSearchMat];
+        
+        
+        
+        NSError *errorMat = nil;
+        NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
+        
+        //NSLog(@"URLLOGIN: %@",urlSearch);
+        
+        [NSURLConnection sendAsynchronousRequest:requestMat
+                                           queue:[NSOperationQueue mainQueue]
+                               completionHandler:^(NSURLResponse *response,
+                                                   NSData *dataMat,
+                                                   NSError *connectionError) {
+                                   // handle response
+                               }];
+        
+        NSURLSession *sessionMat = [NSURLSession sharedSession];
+        [[sessionMat dataTaskWithURL:urlSearchMat
+                   completionHandler:^(NSData *dataMat,
+                                       NSURLResponse *response,
+                                       NSError *errorMat) {
+                       
+                   }] resume];
+        
+        
+        
+        
+        
+        //parse Array from web
+        NSArray *searchMatArray = [NSJSONSerialization
+                                   JSONObjectWithData:dataMat
+                                   options:NSJSONReadingAllowFragments
+                                   error: &errorMat];
+        
+        
+        
+
     
     
     
@@ -1480,13 +1524,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         }
         
         
-        
-        
-        
-       
-        
         if ( indexPath.item < artworkFullImageArray.count){
             
+                        
             NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
             NSString*httpString= @"http://";
             NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
@@ -1496,6 +1536,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
             [favCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
+            
+            
+            //[favCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
 
         }
    

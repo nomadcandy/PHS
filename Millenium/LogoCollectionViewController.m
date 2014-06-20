@@ -672,7 +672,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
-            artworkColorArray = [searchMatArray valueForKey:@"Color"];
+            matColorArray = [searchMatArray valueForKey:@"Color"];
         
             matCount = matNameArray.count;
         
