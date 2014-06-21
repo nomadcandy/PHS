@@ -94,9 +94,12 @@
     UIView *canvas;
     
     CGImageRef masked;
+    CGImageRef imageAlphaMasked;
+    
+    UIImage*temp;
 }
 
-
+-(UIImage *)changeWhiteColorTransparent: (UIImage *)image;
 - (IBAction)presentLogoCollectionViewController:(UIButton *)sender;
 
 - (IBAction)selectPhoto:(UIButton *)sender;
@@ -112,6 +115,8 @@
 - (IBAction)screenShotRect:(UIButton *)sender;
 
 -(IBAction)goSearch:(id)sender;
+
+-(IBAction)goWhite:(id)sender;
 
 @property (nonatomic, copy) UIImage *imageDownloaded;
 

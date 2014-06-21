@@ -453,7 +453,7 @@
 
 
 
-
+//hits this
 #pragma mark
 #pragma mark Mask
 - (UIImage*) maskImage:(UIImage *)selectedImage withMask:(UIImage *)maskImage {
@@ -469,6 +469,267 @@
     masked = CGImageCreateWithMask(imgRef, actualMask);
     return [UIImage imageWithCGImage:masked];
     
+    
+}
+/*- (UIImage*) maskImageAlpha:(UIImage *)selectedImage withMask:(UIImage *)maskImage
+{
+    const float colorMasking[6]={222,255,222,255,222,255};
+    CGImageRef imageRef = CGImageCreateWithMaskingColors(selectedImage.CGImage, colorMasking);
+    /*UIImage* imageB = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return imageB;*/
+    
+    /*masked = (__bridge CGImageRef)([UIImage imageWithCGImage:imageRef]);
+    CGImageRelease(masked);*/
+    //return (__bridge UIImage *)(masked);
+    //return [UIImage imageWithCGImage:masked];
+
+//}
+
+/*- (UIImage*) maskImageAlpha:(UIImage *)selectedImage withMask:(UIImage *)maskImage {
+    
+	CGImageRef imgRef = [selectedImage CGImage];
+    CGImageRef maskRef = [maskImage CGImage];
+    
+    
+    CGImageRef alphaMask = [selectedImage CGImage];
+    
+    const float colorMasking[6] = {0xEE, 0xFF, 0xEE, 0xFF, 0xEE, 0xFF};
+    
+    imageAlphaMasked = CGImageCreateWithMaskingColors(alphaMask, colorMasking);
+    
+ 
+    imageAlphaMasked = CGImageCreateWithMask(imgRef, imageAlphaMasked);
+    return [UIImage imageWithCGImage:masked];
+    
+    
+}*/
+- (UIImage*) replaceColor:(UIColor*)color inImage:(UIImage*)image withTolerance:(float)tolerance {
+    CGImageRef imageRef = [image CGImage];
+    
+    NSUInteger width = CGImageGetWidth(imageRef);
+    NSUInteger height = CGImageGetHeight(imageRef);
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    NSUInteger bytesPerPixel = 4;
+    NSUInteger bytesPerRow = bytesPerPixel * width;
+    NSUInteger bitsPerComponent = 8;
+    NSUInteger bitmapByteCount = bytesPerRow * height;
+    
+    unsigned char *rawData = (unsigned char*) calloc(bitmapByteCount, sizeof(unsigned char));
+    
+    CGContextRef context = CGBitmapContextCreate(rawData, width, height,
+                                                 bitsPerComponent, bytesPerRow, colorSpace,
+                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+    CGColorSpaceRelease(colorSpace);
+    
+    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
+    
+    CGColorRef cgColor = [color CGColor];
+    const CGFloat *components = CGColorGetComponents(cgColor);
+    float r = components[0];
+    float g = components[1];
+    float b = components[2];
+    //float a = components[3]; // not needed
+    
+    r = r * 255.0;
+    g = g * 255.0;
+    b = b * 255.0;
+    
+    const float redRange[2] = {
+        MAX(r - (tolerance / 2.0), 0.0),
+        MIN(r + (tolerance / 2.0), 255.0)
+    };
+    
+    const float greenRange[2] = {
+        MAX(g - (tolerance / 2.0), 0.0),
+        MIN(g + (tolerance / 2.0), 255.0)
+    };
+    
+    const float blueRange[2] = {
+        MAX(b - (tolerance / 2.0), 0.0),
+        MIN(b + (tolerance / 2.0), 255.0)
+    };
+    
+    int byteIndex = 0;
+    
+    while (byteIndex < bitmapByteCount) {
+        unsigned char red   = rawData[byteIndex];
+        unsigned char green = rawData[byteIndex + 1];
+        unsigned char blue  = rawData[byteIndex + 2];
+        
+        if (((red >= redRange[0]) && (red <= redRange[1])) &&
+            ((green >= greenRange[0]) && (green <= greenRange[1])) &&
+            ((blue >= blueRange[0]) && (blue <= blueRange[1]))) {
+            // make the pixel transparent
+            //
+            rawData[byteIndex] = 0;
+            rawData[byteIndex + 1] = 0;
+            rawData[byteIndex + 2] = 0;
+            rawData[byteIndex + 3] = 0;
+        }
+        
+        byteIndex += 4;
+    }
+    
+    UIImage *result = [UIImage imageWithCGImage:CGBitmapContextCreateImage(context)];
+    
+    CGContextRelease(context);
+    free(rawData);
+    
+    return result;
+}
+
+-(void)changeColor
+{
+    UIImage *temp23=[UIImage imageNamed:@"leaf.png"];
+    CGImageRef ref1=[self createMask:temp23];
+    const float colorMasking[6] = {1.0, 2.0, 1.0, 1.0, 1.0, 1.0};
+    CGImageRef New=CGImageCreateWithMaskingColors(ref1, colorMasking);
+    UIImage *resultedimage=[UIImage imageWithCGImage:New];
+}
+
+-(CGImageRef)createMask:(UIImage*)image
+{
+    CGImageRef ref=chosenImageView.image.CGImage;
+    int mWidth=CGImageGetWidth(ref);
+    int mHeight=CGImageGetHeight(ref);
+    int count=mWidth*mHeight*4;
+    void *bufferdata=malloc(count);
+    
+    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
+    CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
+    
+    CGContextRef cgctx = CGBitmapContextCreate (bufferdata,mWidth,mHeight, 8,mWidth*4, colorSpaceRef, kCGImageAlphaPremultipliedFirst);
+    
+    CGRect rect = {0,0,mWidth,mHeight};
+    CGContextDrawImage(cgctx, rect, ref);
+    bufferdata = CGBitmapContextGetData (cgctx);
+    
+    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, bufferdata, mWidth*mHeight*4, NULL);
+    CGImageRef savedimageref = CGImageCreate(mWidth,mHeight, 8, 32, mWidth*4, colorSpaceRef, bitmapInfo,provider , NULL, NO, renderingIntent);
+    CFRelease(colorSpaceRef);
+    return savedimageref;
+    
+    chosenImageView.image = (__bridge UIImage *)(savedimageref);
+}
+//Try this
+-(UIImage *)changeWhiteColorTransparent: (UIImage *)image
+{
+    
+    UIImage*imageTrans;
+    imageTrans=chosenImageView.image;
+    
+    imageTrans = [UIImage imageWithData:UIImageJPEGRepresentation(imageTrans, 1.0)];
+    CGImageRef rawImageRef=imageTrans.CGImage;
+    //RGB color range to mask (make transparent)  R-Low, R-High, G-Low, G-High, B-Low, B-High
+    const float colorMasking[6] = {222, 255, 222, 255, 222, 255};
+    
+    UIGraphicsBeginImageContext(image.size);
+    CGImageRef maskedImageRef=CGImageCreateWithMaskingColors(rawImageRef, colorMasking);
+    
+    //iPhone translation
+    CGContextTranslateCTM(UIGraphicsGetCurrentContext(), 0.0, imageTrans.size.height);
+    CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1.0, -1.0);
+    
+    CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, imageTrans.size.width, imageTrans.size.height), maskedImageRef);
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    CGImageRelease(maskedImageRef);
+    UIGraphicsEndImageContext();
+    return result;
+    
+    chosenImageView.image= result;
+
+}
+
+-(IBAction)goWhite:(id)sender{
+    
+    chosenImageView.image=[self changeWhiteColorTransparent:chosenImageView.image];
+    
+    //chosenImageView.image = [self replaceColor:(UIColor*)color inImage:(UIImage*)image withTolerance:(float)tolerance ];
+    
+    //[self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare13"]];
+    //chosenImageView.image = [self maskImageAlpha:chosenImageView.image withMask:masked];
+    //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
+    
+   /* UIImage*croppedLogoImage = chosenImageView.image;
+    
+    //rewrite image to crop it correctly
+    UIGraphicsBeginImageContext(croppedLogoImage.size);
+    [croppedLogoImage drawAtPoint:CGPointZero];
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();*/
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+   
+    /*NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];*/
+    
+    
+    
+    //[logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
+    
+    //chosenImageView.image = newImg;
+    
+
+    
+  /*  UIImage*dynamicImage= chosenImageView.image;
+    CGImageRef alphaMask = (__bridge CGImageRef)(dynamicImage);
+    
+    const float colorMasking[6] = {0xEE, 0xFF, 0xEE, 0xFF, 0xEE, 0xFF};
+    
+    CGImageRef imageMasked = CGImageCreateWithMaskingColors(alphaMask, colorMasking);
+
+    
+    chosenImageView.image = [self maskImageAlpha:chosenImageView.image withMask:(__bridge UIImage *)(imageMasked)];*/
+
+    
+    
+   /* NSString  *imagePathDyn = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/dynamicMaskImage.png"]];
+    
+    [UIImagePNGRepresentation(dynamicImage) writeToFile:imagePathDyn atomically:YES];
+    
+    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+   imagePathDyn =  [directoryPath objectAtIndex:0];
+   imagePathDyn= [imagePathDyn stringByAppendingPathComponent:@"dynamicMaskImage.png"];
+    
+    
+    NSData *dataMat = [NSData dataWithContentsOfFile:imagePathDyn];
+    UIImage *matImage = [UIImage imageWithData:dataMat];*/
+    
+    
+    //UIImage * image = [UIImage imageNamed:@"image.png"];
+    
+    
+    /*CGImageRef alphaMask = (__bridge CGImageRef)(dynamicImage);
+    
+    const float colorMasking[6] = {0xEE, 0xFF, 0xEE, 0xFF, 0xEE, 0xFF};
+    
+    CGImageRef imageMasked = CGImageCreateWithMaskingColors(alphaMask, colorMasking);*/
+    
+    
+    //return [UIImage imageWithCGImage:imageMasked];
+   /* const float colorMasking[6] = {255.0, 255.0, 255.0, 255.0, 255.0, 255.0};
+    matImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(matImage.CGImage, colorMasking)];*/
+    
+    //chosenImageView.image = matImage;
+
+    
+    //Another sample
+    /*UIImage *image = [UIImage imageNamed:@"image1.jpg"];
+    UIImage *inputImage = [UIImage imageWithData:UIImageJPEGRepresentation(image, 1.0)];
+    
+    const float colorMasking[6] = {225.0, 255.0, 225.0, 255.0, 225.0, 255.0};
+    CGImageRef imageRef = CGImageCreateWithMaskingColors(inputImage.CGImage, colorMasking);
+    
+    UIImage *img2 = [UIImage imageWithCGImage:imageRef];*/
+    
+    //UIImage *temp23=[UIImage imageNamed:@"leaf.png"];
+   /* CGImageRef ref1=[selectedImage CGImage];
+    const float colorMasking[6] = {1.0, 2.0, 1.0, 1.0, 1.0, 1.0};
+    CGImageRef New=CGImageCreateWithMaskingColors(ref1, colorMasking);
+    UIImage *resultedimage=[UIImage imageWithCGImage:New];*/
     
 }
 
@@ -683,7 +944,7 @@
     
 }
 
-
+//hits this
 - (IBAction)maskButtonClicked:(id)sender
 {
     chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare13"]];
