@@ -640,6 +640,16 @@
     return result;
     
     chosenImageView.image= result;
+    
+    selectedImage=result;
+    UIImage*transImage = chosenImageView.image;
+    
+    UIImage*trans1Image = transImage;
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImageJPEGRepresentation(chosenImage, 1.0) writeToFile:imagePath atomically:YES];
+    
+    [UIImagePNGRepresentation(trans1Image) writeToFile:imagePath atomically:YES];
 
 }
 
