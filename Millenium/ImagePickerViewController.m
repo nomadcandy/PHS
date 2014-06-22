@@ -14,7 +14,7 @@
 
 @implementation ImagePickerViewController
 //@synthesize chosenImage;
-
+@synthesize result;
 @synthesize imageDownloaded;
 
 @synthesize interactiveHeaderString;
@@ -628,7 +628,7 @@
     //RGB color range to mask (make transparent)  R-Low, R-High, G-Low, G-High, B-Low, B-High
     const float colorMasking[6] = {222, 255, 222, 255, 222, 255};
     
-    UIGraphicsBeginImageContext(image.size);
+    UIGraphicsBeginImageContext(imageTrans.size);
     CGImageRef maskedImageRef=CGImageCreateWithMaskingColors(rawImageRef, colorMasking);
     
     //iPhone translation
@@ -639,49 +639,37 @@
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     CGImageRelease(maskedImageRef);
     UIGraphicsEndImageContext();
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(result) writeToFile:imagePath atomically:NO];
+    
     return result;
     
   
-    //
+    //does not hit anything after this...
     
     [[UIColor clearColor] set];
     
-    /*CGRect screenRect = CGRectMake(180.0f, 290.0f, 228.0f, 228.0f);
-    
-    
-    CGContextFillRect(maskedImageRef, screenRect);*/
-    //
     
     
     [chosenImageView setOpaque:NO];
     [chosenImageView setOpaque:NO];
     [chosenImageView setBackgroundColor:[UIColor clearColor]];
     
-    chosenImageView.image= result;
+    //chosenImageView.image= result;
     
-    UIImage *image1 = UIGraphicsGetImageFromCurrentImageContext();
+   
+    UIImage*transLogoImage = result;
+    
+    //rewrite image to crop it correctly
+    UIGraphicsBeginImageContext(transLogoImage.size);
+    [transLogoImage drawAtPoint:CGPointZero];
+    UIImage *clearImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+   
 
-    
-    selectedImage=result;
-    UIImage*transImage = chosenImageView.image;
-    
-    testTransImageView.image=transImage;
-    
-    //UIImage*trans1Image = transImage;
-    
-    
-   /* UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();*/
-    
-    //return [UIImage imageWithCGImage:myColorMaskedImage];
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(image1) writeToFile:imagePath atomically:NO];
-    
-    
-   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    //[UIImageJPEGRepresentation(chosenImage, 1.0) writeToFile:imagePath atomically:YES];
-    
-    [UIImagePNGRepresentation(trans1Image) writeToFile:imagePath atomically:YES];*/
 
 }
 
@@ -1359,6 +1347,8 @@
 - (IBAction)goInteractive:(UIButton *)sender {
     
      interactiveHeaderString = @"Create Mat";
+    
+    
     //interactiveHeaderString= @"Logo Picked";
     
     [self performSegueWithIdentifier:@"ImagePickedSegue" sender:sender];

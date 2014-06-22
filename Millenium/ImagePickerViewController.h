@@ -119,6 +119,7 @@
 -(IBAction)goWhite:(id)sender;
 
 @property (nonatomic, copy) UIImage *imageDownloaded;
+@property (nonatomic, copy) UIImage *result;
 
 
 @property (nonatomic, copy) NSMutableArray *artworkNameArray;
