@@ -504,7 +504,7 @@
     
     
 }*/
-- (UIImage*) replaceColor:(UIColor*)color inImage:(UIImage*)image withTolerance:(float)tolerance {
+/*- (UIImage*) replaceColor:(UIColor*)color inImage:(UIImage*)image withTolerance:(float)tolerance {
     CGImageRef imageRef = [image CGImage];
     
     NSUInteger width = CGImageGetWidth(imageRef);
@@ -578,18 +578,18 @@
     free(rawData);
     
     return result;
-}
+}*/
 
--(void)changeColor
+/*-(void)changeColor
 {
     UIImage *temp23=[UIImage imageNamed:@"leaf.png"];
     CGImageRef ref1=[self createMask:temp23];
     const float colorMasking[6] = {1.0, 2.0, 1.0, 1.0, 1.0, 1.0};
     CGImageRef New=CGImageCreateWithMaskingColors(ref1, colorMasking);
     UIImage *resultedimage=[UIImage imageWithCGImage:New];
-}
+}*/
 
--(CGImageRef)createMask:(UIImage*)image
+/*-(CGImageRef)createMask:(UIImage*)image
 {
     CGImageRef ref=chosenImageView.image.CGImage;
     int mWidth=CGImageGetWidth(ref);
@@ -613,8 +613,8 @@
     return savedimageref;
     
     chosenImageView.image = (__bridge UIImage *)(savedimageref);
-}
-//Try this
+}*/
+//Try this-it works
 -(UIImage *)changeWhiteColorTransparent: (UIImage *)image
 {
     
@@ -654,7 +654,7 @@
 }
 
 -(IBAction)goWhite:(id)sender{
-    
+    //calls UImage function change White...
     chosenImageView.image=[self changeWhiteColorTransparent:chosenImageView.image];
     
     //chosenImageView.image = [self replaceColor:(UIColor*)color inImage:(UIImage*)image withTolerance:(float)tolerance ];
