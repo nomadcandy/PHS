@@ -649,24 +649,24 @@
   
     //does not hit anything after this...
     
-    [[UIColor clearColor] set];
+    /*[[UIColor clearColor] set];
     
     
     
     [chosenImageView setOpaque:NO];
     [chosenImageView setOpaque:NO];
-    [chosenImageView setBackgroundColor:[UIColor clearColor]];
+    [chosenImageView setBackgroundColor:[UIColor clearColor]];*/
     
     //chosenImageView.image= result;
     
    
-    UIImage*transLogoImage = result;
+   // UIImage*transLogoImage = result;
     
     //rewrite image to crop it correctly
-    UIGraphicsBeginImageContext(transLogoImage.size);
+   /* UIGraphicsBeginImageContext(transLogoImage.size);
     [transLogoImage drawAtPoint:CGPointZero];
     UIImage *clearImg = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    UIGraphicsEndImageContext();*/
     
    
 
