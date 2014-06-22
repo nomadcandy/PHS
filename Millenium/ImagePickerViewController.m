@@ -26,6 +26,8 @@
 @synthesize maskSquareImageView;
 @synthesize maskCircleButton;
 @synthesize maskCircleImageView;
+
+@synthesize testTransImageView;
 @synthesize searchField;
 
 @synthesize sellerField;
@@ -639,17 +641,47 @@
     UIGraphicsEndImageContext();
     return result;
     
+  
+    //
+    
+    [[UIColor clearColor] set];
+    
+    /*CGRect screenRect = CGRectMake(180.0f, 290.0f, 228.0f, 228.0f);
+    
+    
+    CGContextFillRect(maskedImageRef, screenRect);*/
+    //
+    
+    
+    [chosenImageView setOpaque:NO];
+    [chosenImageView setOpaque:NO];
+    [chosenImageView setBackgroundColor:[UIColor clearColor]];
+    
     chosenImageView.image= result;
+    
+    UIImage *image1 = UIGraphicsGetImageFromCurrentImageContext();
+
     
     selectedImage=result;
     UIImage*transImage = chosenImageView.image;
     
-    UIImage*trans1Image = transImage;
+    testTransImageView.image=transImage;
     
+    //UIImage*trans1Image = transImage;
+    
+    
+   /* UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();*/
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(image1) writeToFile:imagePath atomically:NO];
+    
+    
+   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     //[UIImageJPEGRepresentation(chosenImage, 1.0) writeToFile:imagePath atomically:YES];
     
-    [UIImagePNGRepresentation(trans1Image) writeToFile:imagePath atomically:YES];
+    [UIImagePNGRepresentation(trans1Image) writeToFile:imagePath atomically:YES];*/
 
 }
 
@@ -657,89 +689,7 @@
     //calls UImage function change White...
     chosenImageView.image=[self changeWhiteColorTransparent:chosenImageView.image];
     
-    //chosenImageView.image = [self replaceColor:(UIColor*)color inImage:(UIImage*)image withTolerance:(float)tolerance ];
-    
-    //[self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare13"]];
-    //chosenImageView.image = [self maskImageAlpha:chosenImageView.image withMask:masked];
-    //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
-    
-   /* UIImage*croppedLogoImage = chosenImageView.image;
-    
-    //rewrite image to crop it correctly
-    UIGraphicsBeginImageContext(croppedLogoImage.size);
-    [croppedLogoImage drawAtPoint:CGPointZero];
-    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();*/
-    
-    //return [UIImage imageWithCGImage:myColorMaskedImage];
    
-    /*NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];*/
-    
-    
-    
-    //[logoPicButton setBackgroundImage:croppedLogoImage forState:UIControlStateNormal];
-    
-    //chosenImageView.image = newImg;
-    
-
-    
-  /*  UIImage*dynamicImage= chosenImageView.image;
-    CGImageRef alphaMask = (__bridge CGImageRef)(dynamicImage);
-    
-    const float colorMasking[6] = {0xEE, 0xFF, 0xEE, 0xFF, 0xEE, 0xFF};
-    
-    CGImageRef imageMasked = CGImageCreateWithMaskingColors(alphaMask, colorMasking);
-
-    
-    chosenImageView.image = [self maskImageAlpha:chosenImageView.image withMask:(__bridge UIImage *)(imageMasked)];*/
-
-    
-    
-   /* NSString  *imagePathDyn = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/dynamicMaskImage.png"]];
-    
-    [UIImagePNGRepresentation(dynamicImage) writeToFile:imagePathDyn atomically:YES];
-    
-    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-   imagePathDyn =  [directoryPath objectAtIndex:0];
-   imagePathDyn= [imagePathDyn stringByAppendingPathComponent:@"dynamicMaskImage.png"];
-    
-    
-    NSData *dataMat = [NSData dataWithContentsOfFile:imagePathDyn];
-    UIImage *matImage = [UIImage imageWithData:dataMat];*/
-    
-    
-    //UIImage * image = [UIImage imageNamed:@"image.png"];
-    
-    
-    /*CGImageRef alphaMask = (__bridge CGImageRef)(dynamicImage);
-    
-    const float colorMasking[6] = {0xEE, 0xFF, 0xEE, 0xFF, 0xEE, 0xFF};
-    
-    CGImageRef imageMasked = CGImageCreateWithMaskingColors(alphaMask, colorMasking);*/
-    
-    
-    //return [UIImage imageWithCGImage:imageMasked];
-   /* const float colorMasking[6] = {255.0, 255.0, 255.0, 255.0, 255.0, 255.0};
-    matImage = [UIImage imageWithCGImage: CGImageCreateWithMaskingColors(matImage.CGImage, colorMasking)];*/
-    
-    //chosenImageView.image = matImage;
-
-    
-    //Another sample
-    /*UIImage *image = [UIImage imageNamed:@"image1.jpg"];
-    UIImage *inputImage = [UIImage imageWithData:UIImageJPEGRepresentation(image, 1.0)];
-    
-    const float colorMasking[6] = {225.0, 255.0, 225.0, 255.0, 225.0, 255.0};
-    CGImageRef imageRef = CGImageCreateWithMaskingColors(inputImage.CGImage, colorMasking);
-    
-    UIImage *img2 = [UIImage imageWithCGImage:imageRef];*/
-    
-    //UIImage *temp23=[UIImage imageNamed:@"leaf.png"];
-   /* CGImageRef ref1=[selectedImage CGImage];
-    const float colorMasking[6] = {1.0, 2.0, 1.0, 1.0, 1.0, 1.0};
-    CGImageRef New=CGImageCreateWithMaskingColors(ref1, colorMasking);
-    UIImage *resultedimage=[UIImage imageWithCGImage:New];*/
     
 }
 

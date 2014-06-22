@@ -3214,6 +3214,10 @@
                                     <action selector="goWhite:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="WEn-Wh-LCg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbz-zN-orz" userLabel="testImage">
+                                <rect key="frame" x="112" y="504" width="149" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -3226,6 +3230,7 @@
                         <outlet property="googleWebView" destination="39j-QV-6iW" id="Lz3-2o-CAD"/>
                         <outlet property="maskSquareImageView" destination="zrz-ou-XL2" id="iNI-0v-Jg5"/>
                         <outlet property="searchField" destination="ksh-rg-ieo" id="eSq-Mi-iYW"/>
+                        <outlet property="testTransImageView" destination="fbz-zN-orz" id="VAp-R2-vT4"/>
                         <segue destination="EOd-lr-Xtf" kind="modal" identifier="imagePickedSegue" id="WHu-6x-aPj"/>
                     </connections>
                 </viewController>

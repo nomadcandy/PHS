@@ -186,10 +186,10 @@
 @property (nonatomic, strong) UIImage *selectedImage;
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
-
-
-
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
+@property (nonatomic, strong) IBOutlet UIImageView *testTransImageView;
+
+
 - (void)setNeedsDisplay;
 - (void)saveLocally:(NSData *)imgData;
 //- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage;
