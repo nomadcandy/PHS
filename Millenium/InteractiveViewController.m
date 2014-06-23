@@ -28,6 +28,8 @@
 
 @synthesize textNoteField;
 @synthesize textDecField;
+@synthesize textPMSField;
+
 @synthesize hexField;
 @synthesize myBGColor;
 @synthesize bgColorButton;
@@ -3410,7 +3412,9 @@ else
     textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textNoteField.backgroundColor=[UIColor whiteColor];
     textNoteField.text=@"ADD PRODUCTION NOTES";
+    textNoteField.tag = 1;
     [self.view addSubview:textNoteField];
+    
     
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
@@ -3433,6 +3437,7 @@ else
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textDecField.backgroundColor=[UIColor clearColor];
     textDecField.text=@"TEXT";
+    textDecField.tag = 2;
     [self.view addSubview:textDecField];
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
@@ -3452,6 +3457,8 @@ else
     textDecField.backgroundColor=[UIColor darkGrayColor];
     //textDecField.text=@" ";
     textDecField.textAlignment= NSTextAlignmentCenter;
+    textDecField.tag = 3;
+    
     
     [self.view addSubview:textDecField];
     
@@ -3467,6 +3474,7 @@ else
 -(IBAction)hideNotes:(id)sender{
     
     textNoteField.hidden = YES;
+    //textField.hidden= YES;
 }
 
 -(IBAction)showNotes:(id)sender{
