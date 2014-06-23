@@ -402,43 +402,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.68831712369999998" green="0.68831712369999998" blue="0.68831712369999998" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0x1-AE-3V1">
-                                <rect key="frame" x="83" y="219" width="114" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Interactive4by6Button.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="LANDSCAPE">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="12" name="Avenir-Light"/>
-                                                <font key="NSOriginalFont" size="15" name="HelveticaNeue-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="Landscape:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="g3V-KU-PCz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-j3-n9x">
-                                <rect key="frame" x="235" y="209" width="83" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Interactive4by6Button.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="PORTRAIT">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="12" name="Avenir-Light"/>
-                                                <font key="NSOriginalFont" size="12" name="Avenir-Light"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="Portrait:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="twN-1u-3XF"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="W" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I35-5a-Z7R">
                                 <rect key="frame" x="23" y="291" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1171,6 +1134,53 @@
                                 <rect key="frame" x="980" y="724" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ur8-vq-2gG" userLabel="portraitShad">
+                                <rect key="frame" x="238" y="211" width="77" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNz-JA-86T" userLabel="landShadow">
+                                <rect key="frame" x="88" y="220" width="106" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0x1-AE-3V1">
+                                <rect key="frame" x="83" y="219" width="114" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Interactive4by6Button.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="LANDSCAPE">
+                                            <attributes>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="12" name="Avenir-Light"/>
+                                                <font key="NSOriginalFont" size="15" name="HelveticaNeue-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="Landscape:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="g3V-KU-PCz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKK-j3-n9x">
+                                <rect key="frame" x="235" y="209" width="83" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Interactive4by6Button.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="PORTRAIT">
+                                            <attributes>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="12" name="Avenir-Light"/>
+                                                <font key="NSOriginalFont" size="12" name="Avenir-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="Portrait:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="twN-1u-3XF"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" background="SearchBoxSimple3.png" disabledBackground="SearchBoxSimple3.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-bS-z4q">
                                 <rect key="frame" x="654" y="716" width="259" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1292,6 +1302,7 @@
                         <outlet property="heightField" destination="9dE-J0-hWO" id="K0z-iq-lAG"/>
                         <outlet property="homeButton" destination="EYB-Me-8Vk" id="Fp5-Km-pWB"/>
                         <outlet property="interactiveMatView" destination="B61-WR-Lik" id="U1I-DP-m09"/>
+                        <outlet property="landscapeImageView" destination="tNz-JA-86T" id="yBK-7I-pDz"/>
                         <outlet property="lightBlueButton" destination="FsE-zG-GQy" id="e8C-fT-BZ4"/>
                         <outlet property="logoColorButton1" destination="TCc-eT-dr1" id="n4r-DI-3zq"/>
                         <outlet property="logoColorButton2" destination="riq-ZZ-dct" id="Re2-yK-AEO"/>
@@ -1309,6 +1320,7 @@
                         <outlet property="navyButton" destination="gbN-FR-xoE" id="QfP-rB-rPt"/>
                         <outlet property="numberField" destination="S9N-le-kjx" id="cSx-ej-BAc"/>
                         <outlet property="orangeButton" destination="jj4-Wg-ynm" id="Dic-fW-qDY"/>
+                        <outlet property="portraitImageView" destination="Ur8-vq-2gG" id="nAz-bD-hvU"/>
                         <outlet property="purpleButton" destination="SET-ap-KYP" id="BrK-zf-A2H"/>
                         <outlet property="redButton" destination="1s6-so-Gob" id="kv9-FW-ZbS"/>
                         <outlet property="roseButton" destination="61Y-mW-2Pl" id="GaC-eR-gT9"/>

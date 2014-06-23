@@ -144,6 +144,9 @@
 @synthesize size4by6View;
 @synthesize size3by10View;
 
+@synthesize landscapeImageView;
+@synthesize portraitImageView;
+
 
 //@synthesize logoUseStringHere;
 
@@ -222,6 +225,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if([orientString isEqualToString:@"landscape"])
+    {
+        portraitImageView.hidden=YES;
+        landscapeImageView.hidden=NO;
+        
+    }
+    
+    if([orientString isEqualToString:@"portrait"])
+    {
+        portraitImageView.hidden=NO;
+        landscapeImageView.hidden=YES;
+
+        
+    } else {
+        portraitImageView.hidden=YES;
+        landscapeImageView.hidden=YES;
+    }
     
     if ([sizeString isEqualToString:@"2'x3'"])
     {
@@ -639,6 +660,30 @@
 
     
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
+        
+        
+        
+        if([orientString isEqualToString:@"landscape"])
+        {
+            portraitImageView.hidden=YES;
+            landscapeImageView.hidden=NO;
+            
+        }
+        
+        if([orientString isEqualToString:@"portrait"])
+        {
+            portraitImageView.hidden=NO;
+            landscapeImageView.hidden=YES;
+            
+        }
+        
+        else {
+            
+            portraitImageView.hidden=YES;
+            landscapeImageView.hidden=YES;
+            
+        }
+
         
         matView1.hidden= NO;
         matBGLogoView.hidden= YES;
@@ -1559,6 +1604,30 @@
     
     {
         
+        
+        
+        
+        if([orientString isEqualToString:@"landscape"])
+        {
+            portraitImageView.hidden=YES;
+            landscapeImageView.hidden=NO;
+            
+        }
+        
+        if([orientString isEqualToString:@"portrait"])
+        {
+            portraitImageView.hidden=NO;
+            landscapeImageView.hidden=YES;
+            
+        }
+        
+        else {
+            
+            portraitImageView.hidden=YES;
+            landscapeImageView.hidden=YES;
+            
+        }
+
         matView1.hidden= YES;
         matBGLogoView.hidden= NO;
         
@@ -2831,17 +2900,30 @@ else
 
 -(void)scale:(id)sender {
     
+    
+    float x,y;
+    //float a,b;
+    x = matBGLogoView.frame.size.width;
+    y = matBGLogoView.frame.size.height;
+    
+    NSLog(@"image after aspect fit: width=%f height=%f",x,y);
+   
+    
+    /* a = im.size.width;
+    b = im.size.height;*/
+
+    
+    
+    
     if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
         _lastScale = 1.0;
+        
     }
     
     
     CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
-   /* CGAffineTransform currentTransform = chosenImageView.transform;
-    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
-    
-    [chosenImageView setTransform:newTransform];*/
+ 
     
     
     CGAffineTransform currentTransformLogo = logoPicButton.transform;
@@ -2850,96 +2932,32 @@ else
     [logoPicButton setTransform:newTransformLogo];
     
     
-    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
+   _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
+    
+    CGAffineTransform currentTransformMat = matBGLogoView.transform;
+    //CGAffineTransform newTransformMat = CGAffineTransformScale(currentTransformMat, scale, scale);
+    
+    [matBGLogoView setTransform:currentTransformMat];
+    
+
+    /*matBGLogoView.frame.size.width==x;
+    matBGLogoView.frame.size.height==y;
+    
+    if ([sizeString isEqualToString:@"4'x6'" ]||[sizeString isEqualToString:@"4x6" ])
+    {
+        [self fourBySix:(id)sender];
+        
+    }
+    
+    if ([sizeString isEqualToString:@"3'X10'"] ||[sizeString isEqualToString:@"3X10"] )
+    {
+       [self threeByTen:(id)sender];
+        
+    }*/
 }
 
 
-/*-(void)scaleDec:(id)sender {
-    
-    if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
-        _lastScale = 1.0;
-    }
-    
-    
-    CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
-    
-   
-    
-    
-    CGAffineTransform currentTransform = textDecField.transform;
-    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
-    
-    [textDecField setTransform:newTransform];
-    
-    
-    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
-    
-}*/
-
-/*-(void)scaleNote:(id)sender {
-    
-    if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
-        _lastScale = 1.0;
-    }
-    
-    
-    CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
-    
-    
-    
-    CGAffineTransform currentTransform = textNoteField.transform;
-    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
-    
-    [textNoteField setTransform:newTransform];
-    
-    
-    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
-   
-}*/
-
-/*-(IBAction)addHexColor:(id)sender{
-    
-
-    NSString*hexString=hexField.text;
-    NSString *cleanString = [hexString stringByReplacingOccurrencesOfString:@"#" withString:@""];
-    if([cleanString length] == 3) {
-        cleanString = [NSString stringWithFormat:@"%@%@%@%@%@%@",
-                       [cleanString substringWithRange:NSMakeRange(0, 1)],[cleanString substringWithRange:NSMakeRange(0, 1)],
-                       [cleanString substringWithRange:NSMakeRange(1, 1)],[cleanString substringWithRange:NSMakeRange(1, 1)],
-                       [cleanString substringWithRange:NSMakeRange(2, 1)],[cleanString substringWithRange:NSMakeRange(2, 1)]];
-    }
-    if([cleanString length] == 6) {
-        cleanString = [cleanString stringByAppendingString:@"ff"];
-    }
-    
-    unsigned int baseValue;
-    [[NSScanner scannerWithString:cleanString] scanHexInt:&baseValue];
-    
-    if (red) {*red = ((baseValue >> 24) & 0xFF)/255.0f; }
-    if (green) { *green = ((baseValue >> 16) & 0xFF)/255.0f; }
-    if (blue) { *blue = ((baseValue >> 8) & 0xFF)/255.0f; }
-    if (alpha) { *alpha = ((baseValue >> 0) & 0xFF)/255.0f; }
-    
-    
-    UIColor * SKColorFromHexString(NSString * hexString) {
-        float red, green, blue, alpha;
-        SKScanHexColor(hexString, &red, &green, &blue, &alpha);
-        
-        return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
-    }
-    
-    
-    UIButton *colorButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [colorButton addTarget:self action:@selector(myCustomFunction:) forControlEvents:UIControlEventTouchUpInside];
-    /*[myButton setBackgroundImage:[UIImage imageNamed:@"yourImageName.png"] forState:UIControlStateNormal];*/
-
-    /*[myButton setColor:[UIColor colorWithRed:red green:green blue:blue alpha:alpha];
-    colorButton.frame = CGRectMake(304.0, 300.0, 44.0, 44.0);
-    
-    [self addSubview:myButton];
-    
-}*/
 
 #pragma bgColorSelected
 
@@ -4313,6 +4331,9 @@ enum {
 
 -(IBAction) Portrait:(id)sender{
     
+    portraitImageView.hidden=NO;
+    landscapeImageView.hidden=YES;
+    
     textOrientField.hidden= NO;
     
     
@@ -4380,6 +4401,9 @@ enum {
 //}
 
 -(IBAction)Landscape:(id)sender{
+    
+    portraitImageView.hidden=YES;
+    landscapeImageView.hidden=NO;
     
     textOrientField.hidden= NO;
     textOrientField.textColor = [UIColor redColor];

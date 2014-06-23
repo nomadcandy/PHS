@@ -70,6 +70,8 @@
 	CGFloat _firstX;
 	CGFloat _firstY;
     
+    CGFloat matScale;
+    
     UIView *canvas;
     
     int artworkCount;
@@ -156,6 +158,9 @@
 @property (nonatomic, strong) IBOutlet UIImageView *size3by5View;
 @property (nonatomic, strong) IBOutlet UIImageView *size4by6View;
 @property (nonatomic, strong) IBOutlet UIImageView *size3by10View;
+
+@property (nonatomic, strong) IBOutlet UIImageView *landscapeImageView;
+@property (nonatomic, strong) IBOutlet UIImageView *portraitImageView;
 
 
 
