@@ -4156,7 +4156,10 @@ enum {
     if (wMat == hMat){
         
         
-        
+        size2by3View.hidden=YES;
+        size3by5View.hidden=YES;
+        size4by6View.hidden=YES;
+        size3by10View.hidden=YES;
         
         CGRect myLogoMatRect = CGRectMake( 476.0f, 96.0f, 500.0f, 500.0f);
         
@@ -4168,7 +4171,12 @@ enum {
     //((x >= 5) && (y < 10))
     else if ((_doubleMat >=.0)&&(_doubleMat <=.10)){
         
-        //CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 50.0f);
+        size2by3View.hidden=YES;
+        size3by5View.hidden=YES;
+        size4by6View.hidden=YES;
+        size3by10View.hidden=YES;
+        
+        
         CGRect myLogoMatRect = CGRectMake( 52.0f, 165.0f, 500.0f, 50.0f);
         
         matBGLogoView.frame=myLogoMatRect;
@@ -4176,9 +4184,8 @@ enum {
         
     }
     else if ((_doubleMat >=.10)&&(_doubleMat <=.20)){
-    //else if (_doubleMat ==.20){
         
-        //CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 100.0f);
+       
          CGRect myLogoMatRect = CGRectMake( 52.0f, 155.0f, 500.0f, 100.0f);
         
         matBGLogoView.frame=myLogoMatRect;
@@ -4189,7 +4196,12 @@ enum {
     else if ((_doubleMat >=.20)&&(_doubleMat <=.33)){
     //else if (_doubleMat ==.33){
         
-        //CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 165.0f);
+        size2by3View.hidden=YES;
+        size3by5View.hidden=YES;
+        size4by6View.hidden=YES;
+        size3by10View.hidden=YES;
+        
+        
         CGRect myLogoMatRect = CGRectMake( 52.0f, 125.0f, 500.0f, 165.0f);
         
         matBGLogoView.frame=myLogoMatRect;
@@ -4197,9 +4209,14 @@ enum {
         
     }
     else if ((_doubleMat >=.33)&&(_doubleMat <=.40)){
-    //else if (_doubleMat==.40){
+   
         
-        //CGRect myLogoMatRect = CGRectMake( 476.0f, 281.0f, 500.0f, 200.0f);
+        
+        size2by3View.hidden=YES;
+        size3by5View.hidden=YES;
+        size4by6View.hidden=YES;
+        size3by10View.hidden=YES;
+        
         CGRect myLogoMatRect = CGRectMake( 52.0f, 85.0f, 500.0f, 200.0f);
         
         matBGLogoView.frame=myLogoMatRect;
@@ -4207,9 +4224,9 @@ enum {
         
     }
     else if ((_doubleMat >=.40)&&(_doubleMat <=.50)){
-    //else if (_doubleMat == .50){
+   
         
-        //CGRect myLogoMatRect = CGRectMake( 476.0f, 195.0f, 500.0f, 250.0f);
+       
         CGRect myLogoMatRect = CGRectMake( 52.0f, 85.0f, 500.0f, 250.0f);
         
         matBGLogoView.frame=myLogoMatRect;
