@@ -139,6 +139,11 @@
 
 @synthesize interactiveHeaderString;
 
+@synthesize size2by3View;
+@synthesize size3by5View;
+@synthesize size4by6View;
+@synthesize size3by10View;
+
 
 //@synthesize logoUseStringHere;
 
@@ -217,6 +222,47 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if ([sizeString isEqualToString:@"2'x3'"])
+    {
+        size2by3View.hidden=NO;
+        size3by5View.hidden=YES;
+        size4by6View.hidden=YES;
+        size3by10View.hidden=YES;
+    }
+    
+    if ([sizeString isEqualToString:@"3'x5'"])
+    {
+        size2by3View.hidden=YES;
+        size3by5View.hidden=NO;
+        size4by6View.hidden=YES;
+        size3by10View.hidden=YES;
+    }
+    if ([sizeString isEqualToString:@"4'x6'"])
+    {
+        size2by3View.hidden=YES;
+        size3by5View.hidden=YES;
+        size4by6View.hidden=NO;
+        size3by10View.hidden=YES;
+    }
+    
+    if ([sizeString isEqualToString:@"3'x10'"])
+    {
+        size2by3View.hidden=YES;
+        size3by5View.hidden=YES;
+        size4by6View.hidden=YES;
+        size3by10View.hidden=NO;
+    }
+    else {
+        
+        size2by3View.hidden=YES;
+        size3by5View.hidden=YES;
+        size4by6View.hidden=YES;
+        size3by10View.hidden=YES;
+        
+    }
+
+    
     //[activityIndicator stopAnimating];
     matView1.hidden= YES;
    
@@ -600,6 +646,10 @@
         //NSLog(@"sizeStringHere %@",sizeString);
         
         NSString *sizeGetMatString = sizeString;
+        
+        
+                
+        
         NSRange range = [sizeGetMatString rangeOfString:@"x"];
         
         NSString *widthMatString = [sizeGetMatString substringToIndex:range.location];
@@ -3448,6 +3498,11 @@ else
     
 }
 
+enum {
+    textDecFieldTag = 2,
+    textNoteFieldTag=1
+};
+
 -(IBAction)addPMS:(id)sender{
     
     
@@ -3472,16 +3527,52 @@ else
 
 
 -(IBAction)hideNotes:(id)sender{
+   
     
-    textNoteField.hidden = YES;
+    switch (textDecField.tag) {
+     //textDecField.tag=2;
+      textDecField.hidden = YES;
+            
+    }
     //textField.hidden= YES;
 }
 
 -(IBAction)showNotes:(id)sender{
     
-    textNoteField.hidden = NO;
+    
+    
+    textDecField.hidden = NO;
     
 }
+
+
+/*-(IBAction)hideNotes:(UITextField*)textField{
+    //if (textDecField.tag==2){
+        
+   /* if (textField.tag==2){
+ 
+        textField.hidden = YES;
+    
+    }*/
+   /* [textField  resignFirstResponder];
+    if (textField){
+        
+        textDecField.hidden = YES;
+        
+    }*/
+    
+//}
+/*-(IBAction)showNotes:(UITextField*)textField{
+    
+    
+        
+        textField.hidden = NO;
+        
+ 
+    
+    
+}*/
+
 
 
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
@@ -4343,6 +4434,12 @@ else
 
 -(IBAction) twoByTwo:(id)sender{
     
+    sizeString=@"2' x 3'";
+    size2by3View.hidden=NO;
+    size3by5View.hidden=YES;
+    size4by6View.hidden=YES;
+    size3by10View.hidden=YES;
+    
     _widthField.text = @"2'";
     _widthCircleField.text = @"2'";
     
@@ -4358,8 +4455,15 @@ else
 
     
 }
-
+//3by5
 -(IBAction) threeByFive:(id)sender{
+    
+    sizeString=@"3' x 5'";
+
+    size3by5View.hidden=NO;
+    size2by3View.hidden=YES;
+    size4by6View.hidden=YES;
+    size3by10View.hidden=YES;
     
     _widthField.text = @"3'";
     _widthCircleField.text = @"3'";
@@ -4382,6 +4486,13 @@ else
 
 -(IBAction) fourBySix:(id)sender{
     
+    
+    sizeString=@"4' x 6'";
+    
+    size3by5View.hidden=YES;
+    size2by3View.hidden=YES;
+    size4by6View.hidden=NO;
+    size3by10View.hidden=YES;
    
     _widthField.text = @"4'";
     _widthCircleField.text = @"4'";
@@ -4398,6 +4509,14 @@ else
 }
 
 -(IBAction) threeByTen:(id)sender{
+    
+    
+    sizeString=@"3' x 10'";
+    
+    size3by5View.hidden=YES;
+    size2by3View.hidden=YES;
+    size4by6View.hidden=YES;
+    size3by10View.hidden=NO;
     
     _widthField.text = @"3'";
     _widthCircleField.text = @"3'";

@@ -152,6 +152,10 @@
 @property (nonatomic, strong) IBOutlet UIButton *size3by5;
 @property (nonatomic, strong) IBOutlet UIButton *size4by6;
 @property (nonatomic, strong) IBOutlet UIButton *size3by10;
+@property (nonatomic, strong) IBOutlet UIImageView *size2by3View;
+@property (nonatomic, strong) IBOutlet UIImageView *size3by5View;
+@property (nonatomic, strong) IBOutlet UIImageView *size4by6View;
+@property (nonatomic, strong) IBOutlet UIImageView *size3by10View;
 
 
 
@@ -316,6 +320,8 @@
 -(IBAction) threeByFive:(id)sender;
 -(IBAction) fourBySix:(id)sender;
 -(IBAction) threeByTen:(id)sender;
+
+-(IBAction)hideNotes:(UITextField*)textField;
 
 
 

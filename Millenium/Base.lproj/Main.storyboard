@@ -439,71 +439,6 @@
                                     <action selector="Portrait:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="twN-1u-3XF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qbs-dU-PPf">
-                                <rect key="frame" x="110" y="299" width="75" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Interactive3by5.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="3x5">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="22" name="Avenir-Light"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="threeByFive:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="V6e-nV-UcN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tim-sD-0tN">
-                                <rect key="frame" x="66" y="307" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Interactive2by2Button.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="2x3">
-                                            <attributes>
-                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                <font key="NSFont" size="20" name="Avenir-Light"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="twoByTwo:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="BTq-zE-5pe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mm-JB-o6A">
-                                <rect key="frame" x="179" y="292" width="90" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
-                                <state key="normal" title="4x6" backgroundImage="Interactive4by6Button.png">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="fourBySix:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="dqs-5J-f2d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSa-8b-rSQ">
-                                <rect key="frame" x="264" y="286" width="140" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Interactive3by10Button.png">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="3x10">
-                                            <attributes>
-                                                <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="22" name="Avenir-Light"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="threeByTen:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="e4r-aV-gyi"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="W" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I35-5a-Z7R">
                                 <rect key="frame" x="23" y="291" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1242,6 +1177,91 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cs0-BO-RlE" userLabel="3X5shad">
+                                <rect key="frame" x="114" y="300" width="68" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qbs-dU-PPf">
+                                <rect key="frame" x="112" y="297" width="72" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Interactive3by5.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="3x5">
+                                            <attributes>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="22" name="Avenir-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="threeByFive:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="V6e-nV-UcN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUs-qb-esi" userLabel="2x3shad">
+                                <rect key="frame" x="70" y="307" width="41" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tim-sD-0tN">
+                                <rect key="frame" x="67" y="307" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Interactive2by2Button.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="2x3">
+                                            <attributes>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="20" name="Avenir-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="twoByTwo:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="BTq-zE-5pe"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgo-T7-fGe" userLabel="4x6shad">
+                                <rect key="frame" x="183" y="293" width="85" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mm-JB-o6A">
+                                <rect key="frame" x="179" y="292" width="90" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="4x6" backgroundImage="Interactive4by6Button.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fourBySix:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="dqs-5J-f2d"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xyg-K9-tvd" userLabel="3x10shad">
+                                <rect key="frame" x="270" y="291" width="132" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSa-8b-rSQ">
+                                <rect key="frame" x="264" y="286" width="140" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Interactive3by10Button.png">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="3x10">
+                                            <attributes>
+                                                <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="22" name="Avenir-Light"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="threeByTen:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="e4r-aV-gyi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1298,6 +1318,10 @@
                         <outlet property="searchField" destination="LYz-bS-z4q" id="Ky2-AE-Jqa"/>
                         <outlet property="sellerField" destination="gg9-EA-31R" id="ClZ-Pg-GlW"/>
                         <outlet property="silverButton" destination="czk-Kk-atJ" id="O8p-Uk-YXA"/>
+                        <outlet property="size2by3View" destination="aUs-qb-esi" id="iSF-98-frN"/>
+                        <outlet property="size3by10View" destination="Xyg-K9-tvd" id="Noo-jQ-Kvu"/>
+                        <outlet property="size3by5View" destination="Cs0-BO-RlE" id="gQ0-xX-I0Q"/>
+                        <outlet property="size4by6View" destination="lgo-T7-fGe" id="Csz-t7-osT"/>
                         <outlet property="snapShotTestImageView" destination="JEo-KD-ZmM" id="Mqu-xR-15R"/>
                         <outlet property="snapshotView" destination="YvJ-Xo-UFd" id="aK7-Tx-xqR"/>
                         <outlet property="steelBlueButton" destination="TuV-5b-4aV" id="iWY-ed-lVl"/>
