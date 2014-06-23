@@ -2690,9 +2690,7 @@ else
 
 
 - (void)touchDownRepeat:(UITextField*)textField{
-    //worked
-    
-    //if (textNoteField){
+   
         
         [textField  resignFirstResponder];
         textField.hidden= YES;
@@ -2700,28 +2698,7 @@ else
         textField.returnKeyType = UIReturnKeyDefault;
         [textField isFirstResponder];
        
-        /*if ( [textNoteField isFirstResponder]) {
-            
-            
-        }*/
-       // textNoteField.delegate = self;
-       // textNoteField.returnKeyType = UIReturnKeyDefault;
-        
-        
-        
-
-        
-   /* }
-    
-    if (textDecField){
-        
-        textDecField.hidden= YES;
-        textDecField.delegate = self;
-        textDecField.returnKeyType = UIReturnKeyDefault;
-
-    }*/
-
-  
+         
     
     
     
