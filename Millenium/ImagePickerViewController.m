@@ -14,7 +14,7 @@
 
 @implementation ImagePickerViewController
 //@synthesize chosenImage;
-@synthesize result;
+//@synthesize result;
 @synthesize imageDownloaded;
 
 @synthesize interactiveHeaderString;
@@ -626,6 +626,7 @@
     imageTrans = [UIImage imageWithData:UIImageJPEGRepresentation(imageTrans, 1.0)];
     CGImageRef rawImageRef=imageTrans.CGImage;
     //RGB color range to mask (make transparent)  R-Low, R-High, G-Low, G-High, B-Low, B-High
+    //255 is for white only
     const float colorMasking[6] = {222, 255, 222, 255, 222, 255};
     
     UIGraphicsBeginImageContext(imageTrans.size);
