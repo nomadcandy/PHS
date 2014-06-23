@@ -232,9 +232,6 @@
     
     textOrientField.hidden= YES;
     
-   
-    
-    
     
     _widthField.text = @"3'";
     _widthCircleField.text = @"3'";
@@ -2691,12 +2688,53 @@ else
     
 }
 
-- (void)touchDownRepeat:(UIButton *)blackButton {
+
+- (void)touchDownRepeat:(UITextField*)textField{
+    //worked
+    
+    //if (textNoteField){
+        
+        [textField  resignFirstResponder];
+        textField.hidden= YES;
+        textField.delegate = self;
+        textField.returnKeyType = UIReturnKeyDefault;
+        [textField isFirstResponder];
+       
+        /*if ( [textNoteField isFirstResponder]) {
+            
+            
+        }*/
+       // textNoteField.delegate = self;
+       // textNoteField.returnKeyType = UIReturnKeyDefault;
+        
+        
+        
+
+        
+   /* }
+    
+    if (textDecField){
+        
+        textDecField.hidden= YES;
+        textDecField.delegate = self;
+        textDecField.returnKeyType = UIReturnKeyDefault;
+
+    }*/
+
+  
+    
+    
+    
+    
+}
+
+
+/*- (void)touchDownRepeat:(UIButton *)blackButton {
     //worked
     blackButton.hidden = YES;
     
     
-}
+}*/
 
 #pragma mark -
 #pragma mark Button tap event
@@ -2788,7 +2826,7 @@ else
 }
 
 
--(void)scaleDec:(id)sender {
+/*-(void)scaleDec:(id)sender {
     
     if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
         _lastScale = 1.0;
@@ -2797,10 +2835,7 @@ else
     
     CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
-    /* CGAffineTransform currentTransform = chosenImageView.transform;
-     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
-     
-     [chosenImageView setTransform:newTransform];*/
+   
     
     
     CGAffineTransform currentTransform = textDecField.transform;
@@ -2810,10 +2845,10 @@ else
     
     
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
-    //[self showOverlayWithFrame:chosenImageView.frame];
-}
+    
+}*/
 
--(void)scaleNote:(id)sender {
+/*-(void)scaleNote:(id)sender {
     
     if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
         _lastScale = 1.0;
@@ -2822,10 +2857,6 @@ else
     
     CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
-    /* CGAffineTransform currentTransform = chosenImageView.transform;
-     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
-     
-     [chosenImageView setTransform:newTransform];*/
     
     
     CGAffineTransform currentTransform = textNoteField.transform;
@@ -2835,8 +2866,8 @@ else
     
     
     _lastScale = [(UIPinchGestureRecognizer*)sender scale];
-    //[self showOverlayWithFrame:chosenImageView.frame];
-}
+   
+}*/
 
 /*-(IBAction)addHexColor:(id)sender{
     
@@ -3396,7 +3427,7 @@ else
 -(IBAction)addNote:(id)sender{
     
     
-    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(445, 300, 300, 60)];
+    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(445, 50, 300, 60)];
     //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
     textNoteField.textColor = [UIColor redColor];
     textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
@@ -3407,6 +3438,7 @@ else
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     
+    [textNoteField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
     /*UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scaleNote:)] ;
 	[pinchRecognizer setDelegate:self];
@@ -3419,7 +3451,7 @@ else
 -(IBAction)addText:(id)sender{
     
     
-    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 200, 300, 60)];
+    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 100, 300, 60)];
     textDecField.textColor = [UIColor whiteColor];
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textDecField.backgroundColor=[UIColor clearColor];
@@ -3428,6 +3460,7 @@ else
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [textDecField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
 
     
@@ -3447,6 +3480,7 @@ else
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [textDecField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
     
     
