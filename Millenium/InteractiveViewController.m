@@ -284,7 +284,7 @@
     }
 
     
-    //[activityIndicator stopAnimating];
+    [activityIndicator stopAnimating];
     matView1.hidden= YES;
    
     searchField.textAlignment = NSTextAlignmentCenter;
@@ -3892,12 +3892,12 @@ enum {
             matColorArray = [searchMatArray valueForKey:@"Color"];
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         
-        
+        [activityIndicator stopAnimating];
+
         
         
         }];
-    [activityIndicator stopAnimating];
-
+    
    } else{
        
        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please enter text in the search field" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];

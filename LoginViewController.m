@@ -139,13 +139,13 @@
         
     }
     
-    [activityIndicator stopAnimating];
-}
+    }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    
+    [activityIndicator stopAnimating];
+
     
     if ([segue.identifier isEqualToString:@"HomeSegue"]) {
         

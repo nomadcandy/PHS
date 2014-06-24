@@ -441,7 +441,7 @@
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         //NSLog(@"matBGColorArray %@",matBGColorArray);
 
-
+         [activityIndicator stopAnimating];
         
         
         
@@ -449,7 +449,7 @@
         
     }];
         
-        [activityIndicator stopAnimating];
+        
         
     } else{
         

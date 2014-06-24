@@ -684,7 +684,7 @@
 
 -(IBAction)goSearch:(id)sender{
     
-    [activityIndicator startAnimating];
+   [activityIndicator startAnimating];
     
     if( searchField.text!= Nil || [searchField.text length] == 0 ) {
         
@@ -700,7 +700,7 @@
         
     
     
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=match&interactiveOnly=1&locationID=-1&userID=0", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", searchString];
     
 
     
@@ -869,7 +869,7 @@
         matSellerArray = [searchMatArray valueForKey:@"Seller"];
         
         
-        
+        [activityIndicator stopAnimating];
         
         
     }];
@@ -877,7 +877,7 @@
     
     }
     
-    [activityIndicator stopAnimating];
+    
 }
 
 
