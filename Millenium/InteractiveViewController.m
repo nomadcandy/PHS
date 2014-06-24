@@ -2935,10 +2935,10 @@ else
    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
     //[self showOverlayWithFrame:chosenImageView.frame];
     
-    CGAffineTransform currentTransformMat = matBGLogoView.transform;
+    //CGAffineTransform currentTransformMat = matBGLogoView.transform;
     //CGAffineTransform newTransformMat = CGAffineTransformScale(currentTransformMat, scale, scale);
     
-    [matBGLogoView setTransform:currentTransformMat];
+    //[matBGLogoView setTransform:currentTransformMat];
     
 
     /*matBGLogoView.frame.size.width==x;
