@@ -558,20 +558,42 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:
+                             urlSearch];
     
-    //NSLog(@"URLLOGIN: %@",urlSearch);
+    
+    
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *data,
+                                               NSError *connectionError) {
+                               // handle response
+                           }];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:urlSearch
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error) {
+                // handle response
+                
+            }] resume];
+    
+    
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
-    
-    
-    
     //parse Array from web
     NSArray *searchLogoArray = [NSJSONSerialization
                                 JSONObjectWithData:data
                                 options:NSJSONReadingAllowFragments
                                 error: &error];
     
+    
+    
+    
+    artworkCount= searchLogoArray.count;
     
     
     
@@ -582,10 +604,32 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    NSURLRequest *requestMat = [NSURLRequest requestWithURL:
+                                urlSearchMat];
     
-    //NSLog(@"URLLOGIN: %@",urlSearchMat);
+    
+    
     NSError *errorMat = nil;
-    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
+    
+    //NSLog(@"URLLOGIN: %@",urlSearch);
+    
+    [NSURLConnection sendAsynchronousRequest:requestMat
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *dataMat,
+                                               NSError *connectionError) {
+                               // handle response
+                           }];
+    
+    NSURLSession *sessionMat = [NSURLSession sharedSession];
+    [[sessionMat dataTaskWithURL:urlSearchMat
+               completionHandler:^(NSData *dataMat,
+                                   NSURLResponse *response,
+                                   NSError *errorMat) {
+                   
+               }] resume];
+    
     
     
     
@@ -594,8 +638,13 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     NSArray *searchMatArray = [NSJSONSerialization
                                JSONObjectWithData:dataMat
                                options:NSJSONReadingAllowFragments
-                               error: &error];
+                               error: &errorMat];
     
+    
+    
+    
+    
+    matCount= searchMatArray.count;
     
     if(data!=nil)
         
@@ -677,14 +726,32 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:
+                             urlSearch];
     
-    //NSLog(@"URLLOGIN: %@",urlSearch);
+    
+    
+    
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *data,
+                                               NSError *connectionError) {
+                               // handle response
+                           }];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:urlSearch
+            completionHandler:^(NSData *data,
+                                NSURLResponse *response,
+                                NSError *error) {
+                // handle response
+                
+            }] resume];
+    
+    
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
-    
-    
-    
     //parse Array from web
     NSArray *searchLogoArray = [NSJSONSerialization
                                 JSONObjectWithData:data
@@ -694,17 +761,44 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     
+    artworkCount= searchLogoArray.count;
+    
+    
     
     //Search Mats
     NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=%@&userID=0",20,locationIDString];
     
     
     
-    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
     
-    //NSLog(@"URLLOGIN: %@",urlSearchMat);
+    
+    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    NSURLRequest *requestMat = [NSURLRequest requestWithURL:
+                                urlSearchMat];
+    
+    
+    
     NSError *errorMat = nil;
-    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
+    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
+    
+    //NSLog(@"URLLOGIN: %@",urlSearch);
+    
+    [NSURLConnection sendAsynchronousRequest:requestMat
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:^(NSURLResponse *response,
+                                               NSData *dataMat,
+                                               NSError *connectionError) {
+                               // handle response
+                           }];
+    
+    NSURLSession *sessionMat = [NSURLSession sharedSession];
+    [[sessionMat dataTaskWithURL:urlSearchMat
+               completionHandler:^(NSData *dataMat,
+                                   NSURLResponse *response,
+                                   NSError *errorMat) {
+                   
+               }] resume];
+    
     
     
     
@@ -713,7 +807,19 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     NSArray *searchMatArray = [NSJSONSerialization
                                JSONObjectWithData:dataMat
                                options:NSJSONReadingAllowFragments
-                               error: &error];
+                               error: &errorMat];
+    
+    
+    
+    
+    
+    matCount= searchMatArray.count;
+    
+
+    
+    
+    
+    
     
     
     

@@ -679,7 +679,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                              urlSearch];
     
     
-    //NSLog(@"URLLOGIN: %@",urlSearch);
+   
     
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
