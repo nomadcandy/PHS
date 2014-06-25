@@ -229,6 +229,10 @@
 @property (nonatomic, copy) NSString *sizeString;
 @property (nonatomic, copy) NSString *interactiveHeaderString;
 
+@property (nonatomic, copy) NSString *urlString;
+
+
+
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

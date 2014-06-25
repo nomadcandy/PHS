@@ -405,6 +405,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkCount = artworkNameArray.count;
         
         
+        NSLog(@"artworkFullImageArray %@",artworkFullImageArray);
+        
     }];
     
     [favoritesMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {

@@ -51,6 +51,7 @@
 @synthesize artworkSizeAddFavString;
 
 @synthesize urlMatString;
+@synthesize urlString;
 
 
 @synthesize matUrlAddFavString;
@@ -1630,7 +1631,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         }
         
         
-        if ( indexPath.item < artworkFullImageArray.count){
+        /*if ( indexPath.item < artworkFullImageArray.count){
             
                         
             NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
@@ -1646,8 +1647,53 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             //[favCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
 
+        }*/
+        if ( indexPath.item <artworkFullImageArray.count){
+            
+            
+           urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+            //NSLog(@"urlMatString:%@",urlMatString);
+            
+            //if ([string rangeOfString:@"102-Brown"].location == NSNotFound)
+            if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
+                
+            {
+                
+                
+                
+                
+                //not working
+                NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+                NSString *imagePath =  [directoryPath objectAtIndex:0];
+                //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+                imagePath= [imagePath stringByAppendingPathComponent:urlString];
+                //NSLog(@"urlMatStringInMethod:%@",urlMatString);
+                
+                NSData *data = [NSData dataWithContentsOfFile:imagePath];
+                //no data here
+                UIImage *logoImage = [UIImage imageWithData:data];
+                [favCell.logoChooseButton setImage:logoImage forState:UIControlStateNormal];
+                
+                
+                
+            }else {
+                
+                NSString*httpString= @"http://";
+                NSString *urlLogoStringAppend = [httpString stringByAppendingString:urlString];
+                
+                NSLog(@"%@ urlStringAppend",urlLogoStringAppend);
+                
+                NSData * dataLogo = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlLogoStringAppend]];
+                
+                UIImage * iconLogoImage;
+                
+                iconLogoImage = [UIImage imageWithData:dataLogo];
+                [favCell.logoChooseButton setImage:iconLogoImage forState:UIControlStateNormal];
+                
+            }
+            
         }
-   
+
         
         
         
