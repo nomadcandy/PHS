@@ -229,6 +229,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     UIImage*favHereImage = [UIImage imageNamed:@"AssetsFavButton.png"];
     [favHereButton setBackgroundImage:favHereImage forState:UIControlStateNormal];
+    [favHereButton setBackgroundImage:favHereImage forState:UIControlStateSelected];
+     [favHereButton setBackgroundImage:favHereImage forState:UIControlStateHighlighted];
     //[favHereButton setImage:favHereImage forState:UIControlStateSelected];
     favHereButton.frame = CGRectMake(90.0, 33.0, 50.0, 50.0);
     [self.view addSubview:favHereButton];
