@@ -183,19 +183,21 @@
 
 @property(nonatomic, strong) NSMutableData *imageData;
 @property(nonatomic, assign) float length;
-//@property (nonatomic, strong) UIImage *chosenImage;
+@property (nonatomic, strong) UIImage *logoImage;
 @property (nonatomic, strong) UIImage *selectedImage;
 
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *testTransImageView;
+@property (nonatomic, strong) IBOutlet UIView *snapshotView;
 
 
 - (void)setNeedsDisplay;
 - (void)saveLocally:(NSData *)imgData;
 //- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage;
-- (IBAction)maskButtonClicked:(id)sender;
-- (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
+-(IBAction)maskButtonClicked:(id)sender;
+-(IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event;
+-(IBAction)addLogoFavorite:(id)sender;
 
 
 @end

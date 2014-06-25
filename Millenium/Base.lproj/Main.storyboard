@@ -3086,7 +3086,7 @@
                                 </state>
                                 <state key="highlighted" backgroundImage="AssetsAddButton.png"/>
                                 <connections>
-                                    <action selector="goInteractive:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="76v-ZF-qPk"/>
+                                    <action selector="addLogoFavorite:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="CDm-Lj-bKJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bv-SI-pwO">
