@@ -570,7 +570,7 @@
     //CGSize size = [myBGColor size];
     
     
-    CGRect screenRect2 = CGRectMake(196,302,281,239);
+   /* CGRect screenRect2 = CGRectMake(196,302,281,239);
     UIGraphicsBeginImageContext(screenRect2.size);
     
     
@@ -582,9 +582,11 @@
     [self.snapshotView.layer renderInContext:ctx1];
        
     
-    logoImage = UIGraphicsGetImageFromCurrentImageContext();
+    logoImage = UIGraphicsGetImageFromCurrentImageContext();*/
     
-    UIGraphicsEndImageContext();
+    logoImage = chosenImageView.image;
+    
+    //UIGraphicsEndImageContext();
     
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",alertNameField.text]];
