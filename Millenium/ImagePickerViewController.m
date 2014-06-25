@@ -562,33 +562,10 @@
     //if (alertView.tag == 1) {  //First Dialog
     
     UITextField * alertNameField = [alertView textFieldAtIndex:0];
-    NSLog(@"alertNameField - %@",alertNameField.text);
-    
-    
-    //nameHideField.text= nameField.text;
-    // Get size of current image
-    //CGSize size = [myBGColor size];
-    
-    
-   /* CGRect screenRect2 = CGRectMake(196,302,281,239);
-    UIGraphicsBeginImageContext(screenRect2.size);
-    
-    
-    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx1, screenRect2);
-    
-    
-    [self.snapshotView.layer renderInContext:ctx1];
-       
-    
-    logoImage = UIGraphicsGetImageFromCurrentImageContext();*/
-    
+    //NSLog(@"alertNameField - %@",alertNameField.text);
     logoImage = chosenImageView.image;
     
-    //UIGraphicsEndImageContext();
-    
-    
+        
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",alertNameField.text]];
     
     [UIImagePNGRepresentation(logoImage) writeToFile:imagePath atomically:YES];
