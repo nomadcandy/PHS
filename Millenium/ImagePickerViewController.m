@@ -40,6 +40,16 @@
 @synthesize companyString;
 @synthesize numberString;
 
+@synthesize urlFavString;
+@synthesize artworkNameAddFavString;
+@synthesize artworkCompanyAddFavString;
+@synthesize artworkSellerAddFavString;
+@synthesize artworkIDAddFavString;
+@synthesize artworkLocationIDAddFavString;
+@synthesize artworkColorAddFavString;
+@synthesize artworkSizeAddFavString;
+@synthesize artworkFormatAddFavString;
+
 
 
 
@@ -476,149 +486,6 @@
     
     
 }
-/*- (UIImage*) maskImageAlpha:(UIImage *)selectedImage withMask:(UIImage *)maskImage
-{
-    const float colorMasking[6]={222,255,222,255,222,255};
-    CGImageRef imageRef = CGImageCreateWithMaskingColors(selectedImage.CGImage, colorMasking);
-    /*UIImage* imageB = [UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);
-    return imageB;*/
-    
-    /*masked = (__bridge CGImageRef)([UIImage imageWithCGImage:imageRef]);
-    CGImageRelease(masked);*/
-    //return (__bridge UIImage *)(masked);
-    //return [UIImage imageWithCGImage:masked];
-
-//}
-
-/*- (UIImage*) maskImageAlpha:(UIImage *)selectedImage withMask:(UIImage *)maskImage {
-    
-	CGImageRef imgRef = [selectedImage CGImage];
-    CGImageRef maskRef = [maskImage CGImage];
-    
-    
-    CGImageRef alphaMask = [selectedImage CGImage];
-    
-    const float colorMasking[6] = {0xEE, 0xFF, 0xEE, 0xFF, 0xEE, 0xFF};
-    
-    imageAlphaMasked = CGImageCreateWithMaskingColors(alphaMask, colorMasking);
-    
- 
-    imageAlphaMasked = CGImageCreateWithMask(imgRef, imageAlphaMasked);
-    return [UIImage imageWithCGImage:masked];
-    
-    
-}*/
-/*- (UIImage*) replaceColor:(UIColor*)color inImage:(UIImage*)image withTolerance:(float)tolerance {
-    CGImageRef imageRef = [image CGImage];
-    
-    NSUInteger width = CGImageGetWidth(imageRef);
-    NSUInteger height = CGImageGetHeight(imageRef);
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    
-    NSUInteger bytesPerPixel = 4;
-    NSUInteger bytesPerRow = bytesPerPixel * width;
-    NSUInteger bitsPerComponent = 8;
-    NSUInteger bitmapByteCount = bytesPerRow * height;
-    
-    unsigned char *rawData = (unsigned char*) calloc(bitmapByteCount, sizeof(unsigned char));
-    
-    CGContextRef context = CGBitmapContextCreate(rawData, width, height,
-                                                 bitsPerComponent, bytesPerRow, colorSpace,
-                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-    CGColorSpaceRelease(colorSpace);
-    
-    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
-    
-    CGColorRef cgColor = [color CGColor];
-    const CGFloat *components = CGColorGetComponents(cgColor);
-    float r = components[0];
-    float g = components[1];
-    float b = components[2];
-    //float a = components[3]; // not needed
-    
-    r = r * 255.0;
-    g = g * 255.0;
-    b = b * 255.0;
-    
-    const float redRange[2] = {
-        MAX(r - (tolerance / 2.0), 0.0),
-        MIN(r + (tolerance / 2.0), 255.0)
-    };
-    
-    const float greenRange[2] = {
-        MAX(g - (tolerance / 2.0), 0.0),
-        MIN(g + (tolerance / 2.0), 255.0)
-    };
-    
-    const float blueRange[2] = {
-        MAX(b - (tolerance / 2.0), 0.0),
-        MIN(b + (tolerance / 2.0), 255.0)
-    };
-    
-    int byteIndex = 0;
-    
-    while (byteIndex < bitmapByteCount) {
-        unsigned char red   = rawData[byteIndex];
-        unsigned char green = rawData[byteIndex + 1];
-        unsigned char blue  = rawData[byteIndex + 2];
-        
-        if (((red >= redRange[0]) && (red <= redRange[1])) &&
-            ((green >= greenRange[0]) && (green <= greenRange[1])) &&
-            ((blue >= blueRange[0]) && (blue <= blueRange[1]))) {
-            // make the pixel transparent
-            //
-            rawData[byteIndex] = 0;
-            rawData[byteIndex + 1] = 0;
-            rawData[byteIndex + 2] = 0;
-            rawData[byteIndex + 3] = 0;
-        }
-        
-        byteIndex += 4;
-    }
-    
-    UIImage *result = [UIImage imageWithCGImage:CGBitmapContextCreateImage(context)];
-    
-    CGContextRelease(context);
-    free(rawData);
-    
-    return result;
-}*/
-
-/*-(void)changeColor
-{
-    UIImage *temp23=[UIImage imageNamed:@"leaf.png"];
-    CGImageRef ref1=[self createMask:temp23];
-    const float colorMasking[6] = {1.0, 2.0, 1.0, 1.0, 1.0, 1.0};
-    CGImageRef New=CGImageCreateWithMaskingColors(ref1, colorMasking);
-    UIImage *resultedimage=[UIImage imageWithCGImage:New];
-}*/
-
-/*-(CGImageRef)createMask:(UIImage*)image
-{
-    CGImageRef ref=chosenImageView.image.CGImage;
-    int mWidth=CGImageGetWidth(ref);
-    int mHeight=CGImageGetHeight(ref);
-    int count=mWidth*mHeight*4;
-    void *bufferdata=malloc(count);
-    
-    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
-    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
-    CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
-    
-    CGContextRef cgctx = CGBitmapContextCreate (bufferdata,mWidth,mHeight, 8,mWidth*4, colorSpaceRef, kCGImageAlphaPremultipliedFirst);
-    
-    CGRect rect = {0,0,mWidth,mHeight};
-    CGContextDrawImage(cgctx, rect, ref);
-    bufferdata = CGBitmapContextGetData (cgctx);
-    
-    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, bufferdata, mWidth*mHeight*4, NULL);
-    CGImageRef savedimageref = CGImageCreate(mWidth,mHeight, 8, 32, mWidth*4, colorSpaceRef, bitmapInfo,provider , NULL, NO, renderingIntent);
-    CFRelease(colorSpaceRef);
-    return savedimageref;
-    
-    chosenImageView.image = (__bridge UIImage *)(savedimageref);
-}*/
 //Try this-it works
 -(UIImage *)changeWhiteColorTransparent: (UIImage *)image
 {
@@ -731,19 +598,53 @@
     
     //NOTE- Do not remove local NSString values will break
     
-    NSString*matUrlAppendAddFavString= alertNameField.text;
+    NSString*logoUrlAppendAddFavString= alertNameField.text;
     NSString*pngString= @".png";
     //NSLog(@"nameFieldText %@",nameField.text);
     //NSLog(@"nameFieldText %@",nameHideField.text);
     
     
-    NSString*urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
+    NSString*urlLogoStringAppend = [logoUrlAppendAddFavString stringByAppendingString:pngString];
     
-    NSString*matUrlAddFavString = urlMatStringAppend;
+    urlFavString = urlLogoStringAppend;
     
-   NSLog(@"matUrlAddFavString%@",matUrlAddFavString);
+    NSLog(@"matUrlAddFavString%@",urlFavString);
     
-   NSString*artworkNameAddFavString =alertNameField.text;
+    artworkNameAddFavString =alertNameField.text;
+    artworkColorAddFavString =@"No Color is provided";
+    artworkSizeAddFavString =@"4'x 6'";
+    artworkCompanyAddFavString =@"Company";
+    artworkSellerAddFavString =@"Seller";
+    artworkIDAddFavString =@"no ID has been provided";
+
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
+    
+    
+    
+    
+     [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
+     [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+     [newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
+     [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];
+     [newLogoFavorite setValue:self.artworkColorAddFavString forKey:@"color"];
+     [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
+     [newLogoFavorite setValue:self.artworkIDAddFavString forKey:@"productID"];
+     [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"locationID"];
+     [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"format"];
+    
+    
+    
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+
 
     
     
@@ -785,106 +686,16 @@
     [alert show];
     
     
-    
-    
-    
-   
-    
-    
-    
-    
-    /*if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPathSend])
-        
-    {
-        urlFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
-        
-    } else {
-        
-        urlFavString =@"No Image is provided";
-        
-        
-    }
-    
-    if([NSNull null] != [artworkNameArray objectAtIndex:indexPathSend])
-        
-    {
-        
-        artworkNameAddFavString =[artworkNameArray objectAtIndex:indexPathSend];
-        
-    } else {
-        
-        artworkNameAddFavString =@"No Name is provided";
-        
-        
-    }
-    
-    
-    if([NSNull null] != [artworkColorArray objectAtIndex:indexPathSend])
-        
-    {
-        
-        artworkColorAddFavString =[artworkColorArray objectAtIndex:indexPathSend];
-        
-    } else {
-        
         artworkColorAddFavString =@"No Color is provided";
-        
-        
-    }
-    
-    if([NSNull null] != [artworkSizeArray objectAtIndex:indexPathSend])
-        
-    {
-        
-        artworkSizeAddFavString =[artworkSizeArray objectAtIndex:indexPathSend];
-        
-    } else {
-        
         artworkSizeAddFavString =@"4'x 6'";
-        
-        
-    }
-    
-    if([NSNull null] != [artworkCompanyArray objectAtIndex:indexPathSend])
-        
-    {
-        
-        artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
-        
-        
-    } else {
-        
         artworkCompanyAddFavString =@"Company";
-        
-        
-    }
-    
-    
-    if([NSNull null] != [artworkSellerArray objectAtIndex:indexPathSend])
-        
-    {
-        
-        artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
-        
-    } else {
-        
         artworkSellerAddFavString =@"Seller";
-        
-        
-    }
-    
-    if([NSNull null] != [artworkIDArray objectAtIndex:indexPathSend])
-        
-    {
-        
-        artworkIDAddFavString =[artworkIDArray objectAtIndex:indexPathSend];
-        
-    } else {
-        
         artworkIDAddFavString =@"no ID has been provided";
+        artworkFormatAddFavString =@"landscape";
+        artworkLocationIDAddFavString =@"-1";
         
         
-    }*/
+
     
     
     
@@ -895,10 +706,10 @@
     /* NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
     
     
-    NSManagedObjectContext *context = [self managedObjectContext];
+   /* NSManagedObjectContext *context = [self managedObjectContext];
     
     // Create a new managed object
-    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
+    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];*/
     
     
    /* [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
@@ -912,11 +723,11 @@
     
     
     
-    NSError *error = nil;
+   /* NSError *error = nil;
     // Save the object to persistent store
     if (![context save:&error]) {
         //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-    }
+    }*/
     //Fetch Data entered to test
    /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];

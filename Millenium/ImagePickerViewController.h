@@ -170,6 +170,16 @@
 @property (nonatomic, retain) NSString *companyString;
 @property (nonatomic, retain) NSString *numberString;
 
+@property (nonatomic, copy) NSString*urlFavString;
+@property (nonatomic, copy) NSString*artworkNameAddFavString;
+@property (nonatomic, copy) NSString*artworkCompanyAddFavString;
+@property (nonatomic, copy) NSString*artworkSellerAddFavString;
+@property (nonatomic, copy) NSString*artworkIDAddFavString;
+@property (nonatomic, copy) NSString*artworkLocationIDAddFavString;
+@property (nonatomic, copy) NSString*artworkSizeAddFavString;
+@property (nonatomic, copy) NSString*artworkColorAddFavString;
+@property (nonatomic, copy) NSString*artworkFormatAddFavString;
+
 
 
 @property (nonatomic, retain) IBOutlet UIImageView *maskSquareImageView;
