@@ -2088,14 +2088,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
         NSString*httpString= @"http://";
         NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-    UIImage * iconImage;
-    iconImage = [UIImage imageWithData:data];
-    //NSLog(@"%@iconImage",iconImage);
+        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+        UIImage * iconImage;
+        iconImage = [UIImage imageWithData:data];
+        //NSLog(@"%@iconImage",iconImage);
     
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
+        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+        [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
         
         
     }
