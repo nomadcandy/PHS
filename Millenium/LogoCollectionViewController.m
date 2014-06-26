@@ -1287,7 +1287,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     } else {
         
-        matBGColorAddFavString =@"No BG Colors are provided";
+        matBGColorAddFavString =@"";
         
         
     }
@@ -1915,19 +1915,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             NSString*urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
             
             NSString*httpString= @"http://";
-            
-            
             NSString *urlMatStringAppend = [httpString stringByAppendingString:urlMatString];
-            
             //NSLog(@"%@ urlStringAppend",urlMatStringAppend);
-            
             NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
-            
             UIImage * iconImage;
-            
             iconImage = [UIImage imageWithData:dataMat];
-            
-            
             [logoCell.matChooseButton setImage:iconImage forState:UIControlStateNormal];
             
         }
@@ -2130,7 +2122,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
     matColorString =[matColorArray objectAtIndex:indexPathSend];
     //NSLog(@"matColorString %@",matColorString);
-    matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
+    //matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
     //NSLog(@"matBGColorString %@",matBGColorString);
     //interactiveHeaderString = @"Edit Mat";
     
@@ -2140,11 +2132,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
         
     {
-        
-        
-        
-        
-        
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
         NSString *imagePath =  [directoryPath objectAtIndex:0];
         //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
@@ -2162,15 +2149,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }else {
         
         NSString*httpString= @"http://";
-         NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-         
-         
-         NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-         
-         UIImage * iconImage;
-         
+        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+        UIImage * iconImage;
          iconImage = [UIImage imageWithData:data];
-         
          //NSLog(@"%@iconImage",iconImage);
          NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
          [UIImagePNGRepresentation(iconImage) writeToFile:imagePath1 atomically:YES];
