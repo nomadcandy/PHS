@@ -572,7 +572,7 @@
     
     
     
-    [self.view addSubview:snapshotView];
+    //[self.view addSubview:snapshotView];
     
     
     //NOTE- Do not remove local NSString values will break
@@ -587,7 +587,7 @@
     
     urlFavString = urlLogoStringAppend;
     
-    NSLog(@"matUrlAddFavString%@",urlFavString);
+    NSLog(@"urlFavString%@",urlFavString);
     
     artworkNameAddFavString =alertNameField.text;
     artworkColorAddFavString =@"No Color is provided";
@@ -624,13 +624,6 @@
         //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
 
-
-    
-    
-    
-    
-    
-    
     
     
 }
@@ -659,9 +652,9 @@
     alert.tag = 1;
     //[alert addButtonWithTitle:@"OK"];
     //[alert show];
-    alert.tag = 2;
+    /*alert.tag = 2;
     alert.tag =3;
-    [alert addButtonWithTitle:@"GO"];
+    [alert addButtonWithTitle:@"GO"];*/
     [alert show];
     
     

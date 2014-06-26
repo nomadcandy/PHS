@@ -441,7 +441,10 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
   
-    
+    NSManagedObjectContext *managedObjectContext1 = [self managedObjectContext];
+    NSFetchRequest *fetchRequestMat = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+    self.favoritesMatArray = [[managedObjectContext1 executeFetchRequest:fetchRequestMat error:nil] mutableCopy];
+
     
     
     //NSLog(@"favoritesLogoArray %@",favoritesLogoArray);
@@ -526,7 +529,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matSellerArray = [favoritesMatArray valueForKey:@"seller"];
         matCompanyArray = [favoritesMatArray valueForKey:@"company"];
         matColorArray = [favoritesMatArray valueForKey:@"color"];
-        //matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
+        matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
         
         matCount = matNameArray.count;
         
@@ -676,7 +679,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-            matCount= matNameArray.count;
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
             matFormatArray = [searchMatArray valueForKey:@"Format"];
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
@@ -860,7 +862,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         matCount = matNameArray.count;
         
-       
+        [self.collectionView reloadData];
+
         
         
     }];

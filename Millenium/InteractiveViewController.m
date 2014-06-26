@@ -3270,83 +3270,71 @@ else
 }
 
 
--(IBAction)addMatFavorite:(id)sender{
-    
-    
-    if (nameField.text==NULL)
-        
-    {
-        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your mat and save again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-        
-        /*alert.tag = 2;
-        alert.alertViewStyle = UIAlertViewStylePlainTextInput;*/
-        
-        [alert show];
 
-        
-    } else {
-    
-        nameHideField.text= nameField.text;
-        // Get size of current image
-        //CGSize size = [myBGColor size];
-    
-   
-        CGRect screenRect2 = CGRectMake(723,342,600,490);
-        UIGraphicsBeginImageContext(screenRect2.size);
-   
-    
-        CGContextRef ctx1 = UIGraphicsGetCurrentContext();
-        [[UIColor whiteColor] set];
-        CGContextFillRect(ctx1, screenRect2);
-    
-        [self.snapshotView.layer renderInContext:ctx1];
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     
-        matImage = UIGraphicsGetImageFromCurrentImageContext();
+    //if (alertView.tag == 1) {  //First Dialog
     
-        UIGraphicsEndImageContext();
-    
-    
-        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameHideField.text]];
-    
-        [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
-    
+    UITextField * alertNameField = [alertView textFieldAtIndex:0];
+    nameField.text=alertNameField.text;
+    //NSLog(@"alertNameField - %@",alertNameField.text);
+    CGRect screenRect2 = CGRectMake(723,342,600,490);
+    UIGraphicsBeginImageContext(screenRect2.size);
     
     
-        [self.view addSubview:snapshotView];
-        
-        
-        //NOTE- Do not remove local NSString values will break
-
-        NSString*matUrlAppendAddFavString= nameHideField.text;
-        NSString*pngString= @".png";
-        //NSLog(@"nameFieldText %@",nameField.text);
-        //NSLog(@"nameFieldText %@",nameHideField.text);
+    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx1, screenRect2);
+    
+    [self.snapshotView.layer renderInContext:ctx1];
     
     
-        NSString*urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
-
-        NSString*matUrlAddFavString = urlMatStringAppend;
-        //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
-        NSString*matNameAddFavString =nameField.text;
-        NSString*matSellerAddFavString =sellerField.text;
-        NSString*matCompanyAddFavString =companyField.text;
-        NSString*matIDAddFavString =numberField.text;
-        NSString*matLocationIDAddFavString =locationIDString;
-        NSString*matColorAddFavString =_matColorString;
-        NSString*matBGColorAddFavString =matBGColorString;
-        NSString*matSizeAddFavString =matSizeString;
+    matImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameHideField.text]];
+    
+    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
     
     
     
-   
+    [self.view addSubview:snapshotView];
     
-
+    
+    //NOTE- Do not remove local NSString values will break
+    
+    NSString*matUrlAppendAddFavString= nameHideField.text;
+    NSString*pngString= @".png";
+    //NSLog(@"nameFieldText %@",nameField.text);
+    //NSLog(@"nameFieldText %@",nameHideField.text);
+    
+    
+    urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
+    
+    matUrlAddFavString = urlMatStringAppend;
+    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    NSString*matNameAddFavString =nameField.text;
+    NSString*matSellerAddFavString =sellerField.text;
+    NSString*matCompanyAddFavString =companyField.text;
+    NSString*matIDAddFavString =numberField.text;
+    NSString*matLocationIDAddFavString =locationIDString;
+    NSString*matColorAddFavString =_matColorString;
+    NSString*matBGColorAddFavString =matBGColorString;
+    NSString*matSizeAddFavString =matSizeString;
+    
+    
+    
+    
+    
+    
     //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
     if (matUrlAddFavString==NULL)
-      
+        
     {
-               
+        
         matUrlAddFavString= @"No Image Is Available";
         
     }
@@ -3417,57 +3405,258 @@ else
      NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
     
     
-        NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObjectContext *context = [self managedObjectContext];
     
     // Create a new managed object
-        NSManagedObject *newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
+    NSManagedObject *newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
     
     
     
-        //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
-        [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
-        [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
-        [newMatFavorite setValue:companyField.text forKey:@"company"];
-        [newMatFavorite setValue:sellerField.text forKey:@"seller"];
-        [newMatFavorite setValue:numberField.text forKey:@"productID"];
-        [newMatFavorite setValue:locationIDString forKey:@"locationID"];
-        [newMatFavorite setValue:_matColorString forKey:@"color"];
-        [newMatFavorite setValue:matUseBGColorString forKey:@"bgColor"];
-        [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
+    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
+    [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
+    [newMatFavorite setValue:companyField.text forKey:@"company"];
+    [newMatFavorite setValue:sellerField.text forKey:@"seller"];
+    [newMatFavorite setValue:numberField.text forKey:@"productID"];
+    [newMatFavorite setValue:locationIDString forKey:@"locationID"];
+    [newMatFavorite setValue:_matColorString forKey:@"color"];
+    [newMatFavorite setValue:matUseBGColorString forKey:@"bgColor"];
+    [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
     
     
     
-        NSError *error = nil;
+    NSError *error = nil;
     // Save the object to persistent store
-        if (![context save:&error]) {
-            //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-        }
+    if (![context save:&error]) {
+        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
     //Fetch Data entered to test
-  /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
-    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];*/
+    /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+     self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];*/
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
     //NSLog(@"favoritesMatArray %@",favoritesMatArray);
     
+}
+
+
+
+
+
+-(IBAction)addMatFavorite:(id)sender{
+    
+    
+    NSString*nameStringHere=nameField.text;
+    NSLog(@"nameString %@",nameStringHere);
+
+    if ([nameStringHere isEqualToString:@""]){
+        
+        //nameHideField.text= nameField.text;
+        // Get size of current image
+        //CGSize size = [myBGColor size];
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+        
+        
+        
+        alert.tag = 1;
+        [alert show];
+
+    } else{
+    
+   
+        
+    
+    
+    
+    
+    CGRect screenRect2 = CGRectMake(723,342,600,490);
+    UIGraphicsBeginImageContext(screenRect2.size);
+    
+    
+    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx1, screenRect2);
+    
+    [self.snapshotView.layer renderInContext:ctx1];
+    
+    
+    matImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameHideField.text]];
+    
+    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
+    
+    
+    
+    [self.view addSubview:snapshotView];
+    
+    
+    //NOTE- Do not remove local NSString values will break
+    
+    NSString*matUrlAppendAddFavString= nameHideField.text;
+    NSString*pngString= @".png";
+    //NSLog(@"nameFieldText %@",nameField.text);
+    //NSLog(@"nameFieldText %@",nameHideField.text);
+    
+    
+    urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
+    
+    NSString*matUrlAddFavString = urlMatStringAppend;
+    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    NSString*matNameAddFavString =nameField.text;
+    NSString*matSellerAddFavString =sellerField.text;
+    NSString*matCompanyAddFavString =companyField.text;
+    NSString*matIDAddFavString =numberField.text;
+    NSString*matLocationIDAddFavString =locationIDString;
+    NSString*matColorAddFavString =_matColorString;
+    NSString*matBGColorAddFavString =matBGColorString;
+    NSString*matSizeAddFavString =matSizeString;
+    
+    
+    
+    
+    
+    
+    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    if (matUrlAddFavString==NULL)
+        
+    {
+        
+        matUrlAddFavString= @"No Image Is Available";
+        
     }
+    
+    if (matNameAddFavString==NULL)
+    {
+        
+        matNameAddFavString= @"The Artwork has no name";
+        
+    }
+    
+    
+    if (matCompanyAddFavString==NULL)
+    {
+        
+        matCompanyAddFavString= @"No Company Name Is Available";
+        
+    }
+    
+    if (matSellerAddFavString==NULL)
+    {
+        
+        matSellerAddFavString= @"Sales Person Unknown";
+        
+    }
+    
+    
+    if (matIDAddFavString==NULL)
+    {
+        
+        matIDAddFavString= @"No ID Provided";
+        
+    }
+    
+    if (matLocationIDAddFavString==NULL)
+    {
+        
+        matLocationIDAddFavString= @"No Location Provided";
+        
+    }
+    
+    if (matColorAddFavString==NULL)
+    {
+        
+        matColorAddFavString= @"No Colors are provided";
+        
+    }
+    
+    if (matBGColorAddFavString==NULL)
+    {
+        
+        matBGColorAddFavString= @"No Background Color is provided";
+        
+    }
+    
+    if (matSizeAddFavString==NULL)
+    {
+        
+        matSizeAddFavString= @"4' x 6'";
+        
+    }
+    
+    
+    //NSLog(@"urlFavString %@",matUrlAddFavString);
+    //NSLog(@"urlFavString %@",matNameAddFavString);
+    /*NSString*artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
+     NSString*artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
+     NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
+    
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
+    
+    
+    
+    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
+    [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
+    [newMatFavorite setValue:companyField.text forKey:@"company"];
+    [newMatFavorite setValue:sellerField.text forKey:@"seller"];
+    [newMatFavorite setValue:numberField.text forKey:@"productID"];
+    [newMatFavorite setValue:locationIDString forKey:@"locationID"];
+    [newMatFavorite setValue:_matColorString forKey:@"color"];
+    [newMatFavorite setValue:matUseBGColorString forKey:@"bgColor"];
+    [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
+    
+    
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    //Fetch Data entered to test
+    /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+     self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];*/
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    //NSLog(@"favoritesMatArray %@",favoritesMatArray);
     
 }
 
-/*- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+
     
+    }
+
+
+//}
+
+/*- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+ 
     UITextField * alertTextField = [alertView textFieldAtIndex:0];
     NSLog(@"alerttextfiled - %@",alertTextField.text);
-    
+ 
     // do whatever you want to do with this UITextField.
-    
+ 
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",alertTextField.text]];
     [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
 
-    
-   
-    
+ 
+ 
+ 
 }*/
 
 
