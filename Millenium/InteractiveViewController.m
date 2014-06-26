@@ -3278,6 +3278,7 @@ else
     
     UITextField * alertNameField = [alertView textFieldAtIndex:0];
     nameField.text=alertNameField.text;
+    NSString*nameFieldAlertString=alertNameField.text;
     //NSLog(@"alertNameField - %@",alertNameField.text);
     CGRect screenRect2 = CGRectMake(723,342,600,490);
     UIGraphicsBeginImageContext(screenRect2.size);
@@ -3295,7 +3296,7 @@ else
     UIGraphicsEndImageContext();
     
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameHideField.text]];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameFieldAlertString]];
     
     [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
     
@@ -3306,7 +3307,7 @@ else
     
     //NOTE- Do not remove local NSString values will break
     
-    NSString*matUrlAppendAddFavString= nameHideField.text;
+    NSString*matUrlAppendAddFavString= nameFieldAlertString;
     NSString*pngString= @".png";
     //NSLog(@"nameFieldText %@",nameField.text);
     //NSLog(@"nameFieldText %@",nameHideField.text);
@@ -3316,7 +3317,7 @@ else
     
     matUrlAddFavString = urlMatStringAppend;
     //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
-    NSString*matNameAddFavString =nameField.text;
+    NSString*matNameAddFavString =nameFieldAlertString;
     NSString*matSellerAddFavString =sellerField.text;
     NSString*matCompanyAddFavString =companyField.text;
     NSString*matIDAddFavString =numberField.text;
@@ -3491,7 +3492,7 @@ else
     UIGraphicsEndImageContext();
     
     
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameHideField.text]];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameStringHere]];
     
     [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
     
@@ -3502,7 +3503,7 @@ else
     
     //NOTE- Do not remove local NSString values will break
     
-    NSString*matUrlAppendAddFavString= nameHideField.text;
+    NSString*matUrlAppendAddFavString= nameStringHere;
     NSString*pngString= @".png";
     //NSLog(@"nameFieldText %@",nameField.text);
     //NSLog(@"nameFieldText %@",nameHideField.text);
