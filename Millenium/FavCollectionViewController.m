@@ -2013,30 +2013,15 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     indexPathSend = (int)sender.tag;
     
     
-    //NSLog(@"sender %@",sender);
-    //NSLog(@"indexPathSend %d",indexPathSend);
-    
-    //
-   nameString = [matNameArray objectAtIndex:indexPathSend];
+    nameString = [matNameArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:nameString]) {
         nameString = nil;
     }
-    //
-    //nameString =[matNameArray objectAtIndex:indexPathSend];
-    
-    /*if (nameString==nil)
-        
-    {
-        nameString=@"";
-    }*/
-    
-    sellerString = [matSellerArray objectAtIndex:indexPathSend];
+       sellerString = [matSellerArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:sellerString]) {
         sellerString = nil;
     }
-    //NSLog(@" nameStringLogoSelected %@",nameString);
-    
-    //sellerString =[matSellerArray objectAtIndex:indexPathSend];
+   
         
     companyString = [matCompanyArray objectAtIndex:indexPathSend];
         if ([[NSNull null] isEqual:companyString]) {
@@ -2048,8 +2033,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 numberString = nil;
                 
             }
-    //companyString =[matCompanyArray objectAtIndex:indexPathSend];
-    //numberString =[matIDArray objectAtIndex:indexPathSend];
+   
     
     sizeString = [matSizeArray objectAtIndex:indexPathSend];
                 if ([[NSNull null] isEqual:sizeString]) {
@@ -2058,15 +2042,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 }
 
                 
-    /*sizeString =[matSizeArray objectAtIndex:indexPathSend];
-    if (sizeString!=NULL){
-        
-        
-    }else{
-        
-        sizeString=@"4'x6'";
-    }*/
-    matColorString = [matColorArray objectAtIndex:indexPathSend];
+       matColorString = [matColorArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:matColorString]) {
         matColorString = nil;
         
@@ -2083,27 +2059,62 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     interactiveHeaderString = @"Edit Mat";
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
+    //new code
+    if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
+        
+    {
+        
+        
+        
+        
+        
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath =  [directoryPath objectAtIndex:0];
+        //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+        imagePath= [imagePath stringByAppendingPathComponent:urlString];
+        //NSLog(@"urlMatStringInMethod:%@",urlMatString);
+        
+        NSData *data = [NSData dataWithContentsOfFile:imagePath];
+        //no data here
+        UIImage *logoImage = [UIImage imageWithData:data];
+        
+        //NSLog(@"%@iconImage",iconImage);
+        NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
+        [UIImagePNGRepresentation(logoImage) writeToFile:imagePath1 atomically:YES];
+        
+    }else {
+        
+        NSString*httpString= @"http://";
+        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+        
+        
+        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+        
+        UIImage * iconImage;
+        
+        iconImage = [UIImage imageWithData:data];
+        
+        //NSLog(@"%@iconImage",iconImage);
+        NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
+        [UIImagePNGRepresentation(iconImage) writeToFile:imagePath1 atomically:YES];
+        
+        
+    }
     
-    NSString*httpString= @"http://";
+
     
     
-    
+    //end new code
+    //old code
+    /*NSString*httpString= @"http://";
     NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-    
-    
     NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-    
     UIImage * iconImage;
-    
     iconImage = [UIImage imageWithData:data];
     
     //NSLog(@"%@iconImage",iconImage);
-    
-    
-    
-    
     NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
-    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath1 atomically:YES];
+    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath1 atomically:YES];*/
     
     
     

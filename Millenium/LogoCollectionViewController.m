@@ -2135,33 +2135,50 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //interactiveHeaderString = @"Edit Mat";
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
+    //new code
     
-    NSString*httpString= @"http://";
+    if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
+        
+    {
+        
+        
+        
+        
+        
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath =  [directoryPath objectAtIndex:0];
+        //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+        imagePath= [imagePath stringByAppendingPathComponent:urlString];
+        //NSLog(@"urlMatStringInMethod:%@",urlMatString);
+        
+        NSData *data = [NSData dataWithContentsOfFile:imagePath];
+        //no data here
+        UIImage *logoImage = [UIImage imageWithData:data];
+        
+        //NSLog(@"%@iconImage",iconImage);
+        NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
+        [UIImagePNGRepresentation(logoImage) writeToFile:imagePath1 atomically:YES];
+        
+    }else {
+        
+        NSString*httpString= @"http://";
+         NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+         
+         
+         NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+         
+         UIImage * iconImage;
+         
+         iconImage = [UIImage imageWithData:data];
+         
+         //NSLog(@"%@iconImage",iconImage);
+         NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
+         [UIImagePNGRepresentation(iconImage) writeToFile:imagePath1 atomically:YES];
+
+        
+    }
+
     
-    
-    
-    NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-    
-    
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-    
-    UIImage * iconImage;
-    
-    iconImage = [UIImage imageWithData:data];
-    
-    //NSLog(@"%@iconImage",iconImage);
-    
-    
-    
-    
-    NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
-    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath1 atomically:YES];
-    
-    
-    
-    /*UIStoryboard *storyboard = self.storyboard;
-     InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
-     [self presentViewController:svc animated:YES completion:nil];*/
     
     
     
