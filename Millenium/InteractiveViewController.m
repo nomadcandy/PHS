@@ -35,6 +35,8 @@
 @synthesize bgColorButton;
 //@synthesize delegate=_delegate;
 
+@synthesize noteLayerView;
+
 @synthesize interactiveView;
 @synthesize matView1;
 @synthesize matBGLogoView;
@@ -3663,6 +3665,7 @@ else
 
 -(IBAction)addNote:(id)sender{
     
+    noteLayerView.hidden=NO;
     
     textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(445, 50, 300, 60)];
     //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
@@ -3671,7 +3674,8 @@ else
     textNoteField.backgroundColor=[UIColor whiteColor];
     textNoteField.text=@"ADD PRODUCTION NOTES";
     textNoteField.tag = 1;
-    [self.view addSubview:textNoteField];
+   // [self.view addSubview:textNoteField];
+    [self.noteLayerView addSubview:textNoteField];
     
     
     [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
@@ -3737,20 +3741,22 @@ enum {
 -(IBAction)hideNotes:(id)sender{
    
     
-    switch (textDecField.tag) {
+   /* switch (textDecField.tag) {
      //textDecField.tag=2;
       textDecField.hidden = YES;
             
-    }
+    }*/
     //textField.hidden= YES;
+    
+    noteLayerView.hidden =YES;
 }
 
 -(IBAction)showNotes:(id)sender{
     
     
     
-    textDecField.hidden = NO;
-    
+    //textDecField.hidden = NO;
+    noteLayerView.hidden =NO;
 }
 
 

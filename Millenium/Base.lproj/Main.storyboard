@@ -1272,6 +1272,11 @@
                                     <action selector="threeByTen:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="e4r-aV-gyi"/>
                                 </connections>
                             </button>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAO-VE-RJy" userLabel="noteLayerView">
+                                <rect key="frame" x="424" y="91" width="600" height="511"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1318,6 +1323,7 @@
                         <outlet property="nameField" destination="oeY-YL-pre" id="q5B-Ev-oYg"/>
                         <outlet property="nameHideField" destination="6Ms-IS-vla" id="gVO-Ew-KPe"/>
                         <outlet property="navyButton" destination="gbN-FR-xoE" id="QfP-rB-rPt"/>
+                        <outlet property="noteLayerView" destination="QAO-VE-RJy" id="ibA-U1-hA6"/>
                         <outlet property="numberField" destination="S9N-le-kjx" id="cSx-ej-BAc"/>
                         <outlet property="orangeButton" destination="jj4-Wg-ynm" id="Dic-fW-qDY"/>
                         <outlet property="portraitImageView" destination="Ur8-vq-2gG" id="nAz-bD-hvU"/>
