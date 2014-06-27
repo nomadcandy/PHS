@@ -2046,7 +2046,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUl-ep-ejy">
                                             <rect key="frame" x="153" y="329" width="44" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="AssetsAddButton.png">
+                                            <state key="normal" backgroundImage="FavAddIcon.png">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -2082,7 +2082,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Och-Yk-Sfk">
                                             <rect key="frame" x="608" y="329" width="44" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="AssetsAddButton.png">
+                                            <state key="normal" backgroundImage="FavAddIcon.png">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -5228,8 +5228,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
-        <segue reference="gYW-Ou-qn0"/>
-        <segue reference="qOq-Ne-VbY"/>
+        <segue reference="aYA-g1-hsh"/>
+        <segue reference="7Yo-1I-ggJ"/>
+        <segue reference="SGM-ZV-0fv"/>
     </inferredMetricsTieBreakers>
 </document>
