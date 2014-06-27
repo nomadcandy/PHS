@@ -1575,6 +1575,20 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
     }
+    
+    if([NSNull null] != [artworkLocationIDArray objectAtIndex:indexPathSend])
+        
+    {
+        
+        artworkLocationIDAddFavString =[artworkLocationIDArray objectAtIndex:indexPathSend];
+        
+    } else {
+        
+        artworkLocationIDAddFavString =@"-1";
+        
+        
+    }
+
 
        
     
@@ -1590,16 +1604,26 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     // Create a new managed object
     NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
     
-    
-    [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
     [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
     [newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
     [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];
+    [newLogoFavorite setValue:self.artworkIDAddFavString forKey:@"productID"];
+    [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"locationID"];
     [newLogoFavorite setValue:self.artworkColorAddFavString forKey:@"color"];
     [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
-    [newLogoFavorite setValue:self.artworkIDAddFavString forKey:@"productID"];
+    
 
-
+    
+    /*[newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
+    [newMatFavorite setValue:self.matNameAddFavString forKey:@"artworkName"];
+    [newMatFavorite setValue:self.matCompanyAddFavString forKey:@"company"];
+    [newMatFavorite setValue:self.matSellerAddFavString forKey:@"seller"];
+    [newMatFavorite setValue:self.matIDAddFavString forKey:@"productID"];
+    [newMatFavorite setValue:self.matLocationIDAddFavString forKey:@"locationID"];
+    [newMatFavorite setValue:self.matColorAddFavString forKey:@"color"];
+    [newMatFavorite setValue:self.matBGColorAddFavString forKey:@"bgColor"];
+    [newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];*/
     
     
     NSError *error = nil;
@@ -1825,30 +1849,33 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
         
-        
-        
-        
-        if ( indexPath.item < artworkNameArray.count){
-        
-        
-            
-        
-            NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
-            
-            logoCell.logoLabel.text =logoLabelString;
-        }
-        
-        
         if ([searchingString isEqualToString:@"searchingFavString"]){
             
             
             
             logoCell.addFavMatButton.hidden=YES;
             logoCell.addFavMatLabel.hidden=YES;
-           
+            
             
             
         }
+
+        
+        
+        
+        if ( indexPath.item < artworkNameArray.count){
+        
+            
+            NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
+            
+            logoCell.logoLabel.text =logoLabelString;
+            
+        }else{
+            
+            logoCell.logoLabel.text =@"";
+        }
+        
+        
         
         
         
@@ -1868,7 +1895,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             [logoCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
 
+        }else{
+            //SET BLANK IMAGE HERE
+            
+            UIImage*nearHereImage = [UIImage imageNamed:@"AssetsCompassButton.png"];
+            //[nearHereButton setBackgroundImage:nearHereImage forState:UIControlStateNormal];
+            [logoCell.logoChooseButton setImage:nearHereImage forState:UIControlStateNormal];
         }
+    
    
         
         
@@ -1903,7 +1937,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
             //NSLog(@"matNameArray:%@",matNameArray);
             logoCell.matLabel.text =matLabelString;
+        }else{
+            
+            logoCell.matLabel.text =@"";
         }
+
         
         
         
@@ -1922,7 +1960,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             iconImage = [UIImage imageWithData:dataMat];
             [logoCell.matChooseButton setImage:iconImage forState:UIControlStateNormal];
             
+        }else{
+            //SET BLANK IMAGE HERE
+            
+            UIImage*nearHereImage = [UIImage imageNamed:@"AssetsCompassButton.png"];
+            //[nearHereButton setBackgroundImage:nearHereImage forState:UIControlStateNormal];
+            [logoCell.logoChooseButton setImage:nearHereImage forState:UIControlStateNormal];
         }
+
         
 
         
@@ -2174,15 +2219,130 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         InteractiveViewController *goingController = segue.destinationViewController;
-        
-        
-        
         logoUseString=[nearMeImagesArray objectAtIndex:indexPathSend];
         goingController.logoUseStringHere=logoUseString;
         
         
+        if(logoUseString!=NULL)
+            
+        {
+            
+            goingController.logoUseStringHere=logoUseString;
+            
+        }else{
+            
+            goingController.logoUseStringHere=@" ";
+            
+        }
+        
+        
+        if(nameString!=NULL)
+            
+        {
+            
+            goingController.nameString=nameString;
+            
+        }else{
+            
+            goingController.nameString=@" ";
+            
+        }
+        
+        //NSLog(@"logoUseString %@",logoUseString);
+        
         //NSLog(@"nameStringSend %@",nameString);
-        goingController.nameString=nameString;
+        //goingController.nameString=nameString;
+        //goingController.companyString=companyString;
+        
+        if(companyString!=NULL)
+            
+        {
+            goingController.companyString=companyString;
+            
+        }else{
+            
+            goingController.companyString=@" ";
+            
+        }
+        
+        if(sellerString!=NULL)
+            
+        {
+            goingController.sellerString=sellerString;
+            
+        }else{
+            
+            goingController.sellerString=@" ";
+            
+        }
+        
+        if(numberString!=NULL)
+            
+        {
+            goingController.numberString=numberString;
+            
+        }else{
+            
+            goingController.numberString=@" ";
+            
+        }
+        
+        if(sizeString!=NULL)
+            
+        {
+            goingController.sizeString=sizeString;
+            
+        }else{
+            
+            goingController.sizeString=@" ";
+            
+        }
+        
+        if(logoColorString!=NULL)
+            
+        {
+            goingController.logoColorString=logoColorString;
+            
+        }else{
+            
+            goingController.logoColorString=@" ";
+            
+        }
+        
+        if(matColorString!=NULL)
+            
+        {
+            goingController.matColorString=matColorString;
+            
+        }else{
+            
+            goingController.matColorString=@" ";
+            
+        }
+        if(matBGColorString!=NULL)
+            
+        {
+            goingController.matBGColorString=matBGColorString;
+            
+        }else{
+            
+            goingController.matBGColorString=@" ";
+            
+        }
+        if(interactiveHeaderString!=NULL)
+            
+        {
+            goingController.interactiveHeaderString=interactiveHeaderString;
+            
+        }else{
+            
+            goingController.interactiveHeaderString=@"Create Mat";
+            
+        }
+
+        
+        //NSLog(@"nameStringSend %@",nameString);
+        /*goingController.nameString=nameString;
         goingController.companyString=companyString;
         goingController.sellerString=sellerString;
         goingController.numberString=numberString;
@@ -2190,7 +2350,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         goingController.logoColorString=logoColorString;
         goingController.matColorString=matColorString;
         goingController.matBGColorString=matBGColorString;
-        goingController.interactiveHeaderString=interactiveHeaderString;
+        goingController.interactiveHeaderString=interactiveHeaderString;*/
         
         /*goingController.artworkNameArray = artworkNameArray;
         goingController.artworkSizeArray = artworkSizeArray;

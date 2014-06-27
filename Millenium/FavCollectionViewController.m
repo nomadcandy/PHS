@@ -1481,7 +1481,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkSellerAddFavString= @"Seller";
         
     }
-   /* NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
+   
     
     
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -1957,58 +1957,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
     
+    
     /*interactiveHeaderString = @"Create Mat";
-
-    NSLog(@"addButton.tag:%ld",(long)sender.tag);
-    
-    int myInt = (int)sender.tag;
-    indexPathSend = (int)sender.tag;
-    
-    NSLog(@"sender %@",sender);
-    NSLog(@"indexPathSend %d",indexPathSend);
-    //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
-    
-    nameString =[artworkNameArray objectAtIndex:indexPathSend];
-    NSLog(@" nameStringLogoSelected %@",nameString);
-    
-    sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
-    NSLog(@" sellerString %@",sellerString);
-    
-    companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
-    NSLog(@"companyString %@",companyString);
-    
-        numberString =[artworkIDArray objectAtIndex:indexPathSend];
-        NSLog(@"numberString %@",numberString);
-    
-    
-        if (indexPathSend <artworkSizeArray.count){
-        
-            sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
-      
-            logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
-            NSLog(@"logoColorString %@",logoColorString);
-        
-    }
-    
-        if (indexPathSend <artworkFullImageArray.count){
-        
-            NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
-            NSString*httpString= @"http://";
-            NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-            NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-            UIImage * iconImage;
-            iconImage = [UIImage imageWithData:data];
-            NSLog(@"%@iconImage",iconImage);
-    
-    
-            NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-            [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
-        
-        
-    }*/
-    
-    
-    interactiveHeaderString = @"Create Mat";
     
     //NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
@@ -2106,9 +2056,131 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
         
         
+    }*/
+
+
+        
+        interactiveHeaderString = @"Create Mat";
+        
+        //NSLog(@"addButton.tag:%ld",(long)sender.tag);
+        
+        int myInt = (int)sender.tag;
+        indexPathSend = (int)sender.tag;
+        //int indexSend = addButton.tag;
+        
+        //NSLog(@"sender %@",sender);
+        //NSLog(@"indexPathSend %d",indexPathSend);
+        //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
+        
+        nameString =[artworkNameArray objectAtIndex:indexPathSend];
+        //NSLog(@" nameStringLogoSelected %@",nameString);
+        
+        if (indexPathSend <artworkFullImageArray.count){
+            
+            logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
+            
+            
+            if (logoUseString==NULL)
+            {
+                
+                logoUseString= @"No Picture is Provided";
+                
+            }
+            
+        }
+        
+        
+        
+        if (indexPathSend <artworkSellerArray.count){
+            
+            sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
+            
+            
+            if (sellerString==NULL)
+            {
+                
+                sellerString= @"No Seller Provided";
+                
+            }
+            
+        }
+        
+        if (indexPathSend <artworkCompanyArray.count){
+            
+            companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
+            
+            if (companyString==NULL)
+            {
+                
+                companyString= @"No Company Provided";
+                
+            }
+            
+        }
+        
+        if (indexPathSend <artworkIDArray.count){
+            
+            numberString =[artworkIDArray objectAtIndex:indexPathSend];
+            
+            if (numberString==NULL)
+            {
+                
+                numberString= @"No ID is provided";
+                
+            }
+            
+        }
+        
+        if (indexPathSend <artworkSizeArray.count){
+            
+            sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
+            
+            if (sizeString==NULL)
+            {
+                
+                sizeString= @"4'x6'";
+                
+            }
+            
+        }
+        
+        if (indexPathSend <artworkColorArray.count){
+            
+            logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+            
+            if (logoColorString==NULL)
+            {
+                
+                logoColorString= @"No colors available";
+                
+            }
+            
+            
+        }
+        
+        if (indexPathSend <artworkFullImageArray.count){
+            
+            NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
+            NSString*httpString= @"http://";
+            NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+            NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+            UIImage * iconImage;
+            iconImage = [UIImage imageWithData:data];
+            //NSLog(@"%@iconImage",iconImage);
+            
+            
+            NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+            [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
+            
+            
+        }
+        
+        
+        
+        
+        
+        
     }
-    
-    
 
 
     
@@ -2116,7 +2188,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     
-}
+
 
 //handle NsNull correctly
 -(IBAction)matSelected:(UIButton*)sender event:(id)event {
