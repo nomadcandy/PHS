@@ -3873,8 +3873,6 @@ enum {
     
     
     //Display Email Composer
-    
-    
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;
     [mc setSubject:emailTitle];
@@ -3934,6 +3932,8 @@ enum {
     [mailComposer setToRecipients:recipients];
     
     [self presentViewController:mc animated:YES completion:NULL];
+    
+    
     
    /* UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your mat has been sent" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
      
