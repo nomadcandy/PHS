@@ -507,7 +507,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
                                 error: &error];
     
     
-    
+    NSLog(@"searchLogoArray %@",searchLogoArray);
     
     artworkCount= searchLogoArray.count;
 
@@ -607,10 +607,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
             artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+            NSLog(@"artworkNameArray %@",artworkNameArray);
             artworkCount= artworkNameArray.count;
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+            NSLog(@"artworkFullImageArray %@",artworkFullImageArray);
+           
             artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
@@ -628,6 +631,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
             matFormatArray = [searchMatArray valueForKey:@"Format"];
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+            NSLog(@"matFullImageArray %@",matFullImageArray);
+
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];

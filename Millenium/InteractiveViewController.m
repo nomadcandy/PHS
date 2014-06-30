@@ -3792,8 +3792,7 @@ enum {
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
     
     noteLayerView.hidden=YES;
-    //CGRect screenRect2 = self.view.frame;
-    //CGRect screenRect1 = CGRectMake(637.0,357.0,998,580);
+   
     
     CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
     
@@ -3845,7 +3844,7 @@ enum {
     
     
     mailComposer = [[MFMailComposeViewController alloc] init];
-        mailComposer.mailComposeDelegate=self;
+    mailComposer.mailComposeDelegate=self;
     
     NSString *emailTitle = @"Mat Approved";
     
@@ -3894,10 +3893,6 @@ enum {
     
     NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
     //UIImage *imageNote = [UIImage imageWithData:dataNote];
-
-    
-    
-    
     // Determine the file name and extension
     /* NSArray *filepart = [file componentsSeparatedByString:@"."];
      NSString *filename = [filepart objectAtIndex:0];
@@ -3925,25 +3920,24 @@ enum {
     
     // Add attachment
     [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
-    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matNoteImage.jpg"];
-    
-    
-    
     [mailComposer setToRecipients:recipients];
     
     [self presentViewController:mc animated:YES completion:NULL];
     
     
-    
-   /* UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your mat has been sent" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-     
-     [alert show];*/
+    //[self goMail1:sender event:self];
     
     
 }
+
+
+
 -(IBAction)goMail1:(UIButton*)sender event:(id)event {
     
-    /*noteLayerView.hidden=NO;
+    
+    noteLayerView.hidden=NO;
+    
+    
     CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
     
     
@@ -3956,19 +3950,19 @@ enum {
     
     [self.view.layer renderInContext:ctx1];
     
-    UIImage *matImageHere = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
     
     //save image to documents
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImageHere.jpg"]];
+   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImageHere.jpg"]];
     [UIImageJPEGRepresentation(matImageHere, 1.0) writeToFile:imagePath atomically:YES];*/
-    noteLayerView.hidden=YES;
+    //noteLayerView.hidden=YES;
     
     //snapshot withNotes grab image
-    noteLayerView.hidden=NO;
-    CGRect screenRect3 = CGRectMake(0.0,0,1028,720);
+    //noteLayerView.hidden=NO;
+   /* CGRect screenRect3 = CGRectMake(0.0,0,1028,720);
     
     
     UIGraphicsBeginImageContext(screenRect3.size);
@@ -3976,13 +3970,12 @@ enum {
     
     CGContextRef ctx2 = UIGraphicsGetCurrentContext();
     [[UIColor whiteColor] set];
-    CGContextFillRect(ctx2, screenRect3);
-    
-    //[self.noteLayerView.layer renderInContext:ctx1];
+    CGContextFillRect(ctx2, screenRect2);
+
     
     UIImage *matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
     
-    UIGraphicsEndImageContext();
+    UIGraphicsEndImageContext();*/
     
     NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matNoteImage.jpg"]];
     [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
@@ -3998,12 +3991,27 @@ enum {
     
     NSString *emailTitle = @"Mat Approved";
     
+    //NSString*firstNameString= firstNameField.text;
+    //NSString*lastNameString= lastNameField.text;
+    
+    
+    //NSLog(@"%@",lastNameString);
+    
+    //NSString*messageString = [NSString stringWithFormat:@"%@  %@, %@, %@, %@, %@, %@, %@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
     
     NSString*messageString = @"This mat requires your approval";
     
     
     //TODO add string and images to email
     NSString *messageBody = messageString;
+    
+    
+    //add here
+    //[mailComposer setMessageBody:self.messageBody isHTML:YES];
+    
+    
+    //NSArray *toRecipents = [NSArray arrayWithObject:emailString];
+    //NSArray *toRecipents = @"yummy@nomadcandy.com";
     
     
     //Display Email Composer
@@ -4017,21 +4025,17 @@ enum {
     NSMutableArray*recipients=[[NSMutableArray alloc]init];
     
     NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    /*NSString *imagePath1 =  [directoryPath objectAtIndex:0];
-    imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];
+   /* NSString *imagePath1 =  [directoryPath objectAtIndex:0];
+    imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];*/
     
-    NSData *data = [NSData dataWithContentsOfFile:imagePath1];*/
+    NSData *data = [NSData dataWithContentsOfFile:imagePath2];
     //UIImage *image = [UIImage imageWithData:data];
     
-    imagePath2 =  [directoryPath objectAtIndex:0];
-    NSString *imagePath5= [imagePath2 stringByAppendingPathComponent:@"matNoteImage.jpg"];
+    NSString *imagePath3 =  [directoryPath objectAtIndex:0];
+    imagePath2= [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
     
-    NSData *data = [NSData dataWithContentsOfFile:imagePath5];
+    NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
     //UIImage *imageNote = [UIImage imageWithData:dataNote];
-    
-    
-    
-    
     // Determine the file name and extension
     /* NSArray *filepart = [file componentsSeparatedByString:@"."];
      NSString *filename = [filepart objectAtIndex:0];
@@ -4067,9 +4071,6 @@ enum {
     
     [self presentViewController:mc animated:YES completion:NULL];
     
-    /* UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your mat has been sent" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-     
-     [alert show];*/
     
     
 }
