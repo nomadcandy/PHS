@@ -3791,8 +3791,10 @@ enum {
 
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
     
+    noteLayerView.hidden=YES;
     //CGRect screenRect2 = self.view.frame;
     //CGRect screenRect1 = CGRectMake(637.0,357.0,998,580);
+    
     CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
     
     
@@ -3814,7 +3816,28 @@ enum {
     
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.jpg"]];
     [UIImageJPEGRepresentation(matImage, 1.0) writeToFile:imagePath atomically:YES];
+    noteLayerView.hidden=YES;
     
+    //snapshot withNotes grab image
+    //noteLayerView.hidden=NO;
+    CGRect screenRect3 = CGRectMake(0.0,0,1028,720);
+    
+    
+    UIGraphicsBeginImageContext(screenRect3.size);
+    //UIGraphicsBeginImageContext(interactiveMatView.size);
+    
+    CGContextRef ctx2 = UIGraphicsGetCurrentContext();
+    [[UIColor whiteColor] set];
+    CGContextFillRect(ctx2, screenRect2);
+    
+    //[self.noteLayerView.layer renderInContext:ctx1];
+    
+    UIImage *matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+
+    NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matNoteImage.jpg"]];
+    [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
     
     
     MFMailComposeViewController*mailComposer;
@@ -3868,6 +3891,13 @@ enum {
     NSData *data = [NSData dataWithContentsOfFile:imagePath1];
     UIImage *image = [UIImage imageWithData:data];
     
+    NSString *imagePath3 =  [directoryPath objectAtIndex:0];
+    imagePath1= [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
+    
+    NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
+    UIImage *imageNote = [UIImage imageWithData:dataNote];
+
+    
     
     
     // Determine the file name and extension
@@ -3897,6 +3927,8 @@ enum {
     
     // Add attachment
     [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
+    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matNoteImage.jpg"];
+    
     
     
     [mailComposer setToRecipients:recipients];
@@ -4917,7 +4949,10 @@ enum {
     
 }
 
-
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+    
+}
 
 
 // The mail compose view controller delegate method
