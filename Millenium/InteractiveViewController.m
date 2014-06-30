@@ -1675,6 +1675,10 @@
             matBGLogoView.frame=myLogoMatRect;
             matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
             //UIViewContentModeScaleAspectFit
+            
+            UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
+            [pinchRecognizer setDelegate:self];
+            [self.logoPicButton addGestureRecognizer:pinchRecognizer];
         
         }
         
@@ -2903,12 +2907,12 @@ else
 -(void)scale:(id)sender {
     
     
-    float x,y;
+    /*float x,y;
     //float a,b;
     x = matBGLogoView.frame.size.width;
     y = matBGLogoView.frame.size.height;
     
-    NSLog(@"image after aspect fit: width=%f height=%f",x,y);
+    NSLog(@"image after aspect fit: width=%f height=%f",x,y);*/
    
     
     /* a = im.size.width;
@@ -2919,6 +2923,7 @@ else
     
     if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
         _lastScale = 1.0;
+        //_keepScale=1.0;
         
     }
     
@@ -2935,6 +2940,9 @@ else
     
     
    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
+    //matBGLogoView =[(UIPinchGestureRecognizer*)sender state];
+    
+    
     //[self showOverlayWithFrame:chosenImageView.frame];
     
     //CGAffineTransform currentTransformMat = matBGLogoView.transform;
@@ -4304,37 +4312,6 @@ enum {
     
     
 
-/*- (IBAction)screenShot:(UIButton *)sender{
-    
-    
-    
-    //begin capture entire webview
-    CGRect screenRect = self.view.frame;
-    
-    UIGraphicsBeginImageContext(screenRect.size);
-    
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx, screenRect);
-    
-    [self.view.layer renderInContext:ctx];
-    
-    UIImage *orderImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    //TODO pass save  orderImage to device and pass to SignOffScreen
-    
-    //chosenImageView.image = orderImage;
-    //chosenImage = newImage;
-    
-    
-    
-    NSLog(@"chosenImage %@",selectedImage);
-    
-    
-    
-}*/
 
 
 #pragma mark - Drop Down Animated Menus

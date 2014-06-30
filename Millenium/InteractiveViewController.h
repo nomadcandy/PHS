@@ -65,6 +65,7 @@
     AppDelegate *appdelegate;
     UIImage *selectedImage;
     
+    //CGFloat _keepScale;
     CGFloat _lastScale;
 	CGFloat _lastRotation;
 	CGFloat _firstX;
