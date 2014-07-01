@@ -421,6 +421,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matSizeArray = [favoritesMatArray valueForKey:@"ArtworkSize"];
         matFormatArray = [favoritesMatArray valueForKey:@"Format"];
         matFullImageArray = [favoritesMatArray valueForKey:@"FullImageURL"];
+        NSLog(@"matFullImageArray: %@", matFullImageArray);
         matIconArray = [favoritesMatArray valueForKey:@"IconURL"];
         matIDArray = [favoritesMatArray valueForKey:@"ProductID"];
         matLocationIDArray = [favoritesMatArray valueForKey:@"LocationID"];
