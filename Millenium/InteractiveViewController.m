@@ -3513,7 +3513,6 @@ else
     
     CGRect screenRect2 = CGRectMake(723,342,600,490);
         
-        
     UIGraphicsBeginImageContext(screenRect2.size);
     
     
@@ -3521,9 +3520,13 @@ else
     [[UIColor whiteColor] set];
     CGContextFillRect(ctx1, screenRect2);
     
-    //[self.snapshotView addSubview:logoPicButton];
+    
     [self.snapshotView.layer renderInContext:ctx1];
+        
+    //only moves the button in its original view not for the picture
+    //logoPicButton.frame = CGRectMake(180, 180, x, y);
     [self.logoPicButton.layer renderInContext:ctx1];
+    //[logoPicButton center];
     
     
     matImage = UIGraphicsGetImageFromCurrentImageContext();

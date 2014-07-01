@@ -922,10 +922,38 @@
     
     
 }
-
-//hits this
+- (IBAction)undoMaskClicked:(id)sender{
+    
+    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *imagePathUndo =  [directoryPath objectAtIndex:0];
+    imagePathUndo= [imagePathUndo stringByAppendingPathComponent:@"undoLogoImage.png"];
+    
+    
+    NSData *data = [NSData dataWithContentsOfFile:imagePathUndo];
+    UIImage *logoImageUndo = [UIImage imageWithData:data];
+    chosenImageView.image=logoImageUndo;
+    
+    //write new Image for use on logo
+    UIImage*croppedLogoImage = chosenImageView.image;
+    
+    //rewrite image to crop it correctly
+    UIGraphicsBeginImageContext(croppedLogoImage.size);
+    [croppedLogoImage drawAtPoint:CGPointZero];
+    UIImage *newImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
+    
+    
+    
+}
+//hits this on crop not on draw mask???
 - (IBAction)maskButtonClicked:(id)sender
 {
+    
+    
     chosenImageView.image = [self maskImage:chosenImageView.image withMask:[UIImage imageNamed:@"MaskWhiteSquare13"]];
     //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
     
@@ -947,7 +975,7 @@
     
     chosenImageView.image = newImg;
 
-    
+    maskSquareImageView.hidden= YES;
     
     
     
@@ -957,6 +985,12 @@
 
 - (IBAction)maskSquareButton:(id)sender{
     
+    
+    //save existing image for possible undo
+    UIImage*undoLogoImage = chosenImageView.image;
+    NSString  *imagePathUndo = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/undoLogoImage.png"]];
+    [UIImagePNGRepresentation(undoLogoImage) writeToFile:imagePathUndo atomically:NO];
+    //end undo code
     maskSquareImageView.hidden= NO;
 }
 
@@ -1160,7 +1194,8 @@
     
 }
 
-- (IBAction)drawCircle:(UIButton*)sender{
+//Not Used
+/*- (IBAction)drawCircle:(UIButton*)sender{
     
     //elipseImageView.hidden = NO;
     ///elipseImageView.image=shapeImage;
@@ -1182,7 +1217,7 @@
     CGContextRestoreGState(context);
 
     
-}
+}*/
 
 
 
@@ -1310,7 +1345,7 @@
     
     
     [chosenImageView setOpaque:NO];
-    [chosenImageView setOpaque:NO];
+   
     [chosenImageView setBackgroundColor:[UIColor clearColor]];
     
     
