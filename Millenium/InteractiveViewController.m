@@ -2907,12 +2907,17 @@ else
 -(void)scale:(id)sender {
     
     
-    /*float x,y;
-    //float a,b;
+    float x,y;
+    float a,b;
     x = matBGLogoView.frame.size.width;
     y = matBGLogoView.frame.size.height;
+    a=matBGLogoView.frame.origin.x;
+    b=matBGLogoView.frame.origin.y;
     
-    NSLog(@"image after aspect fit: width=%f height=%f",x,y);*/
+    /*matBGLogoView.frame = CGRectMake(matBGLogoView.frame.origin.x,
+                                 matBGLogoView.frame.origin.y, matBGLogoView.width, matBGLogoView.height);*/
+    
+    NSLog(@"image after aspect fit: width=%f height=%f",x,y);
    
     
     /* a = im.size.width;
@@ -2923,10 +2928,10 @@ else
     
     if([(UIPinchGestureRecognizer*)sender state] == UIGestureRecognizerStateBegan) {
         _lastScale = 1.0;
-        //_keepScale=1.0;
+        
         
     }
-    
+    _keepScale=_lastScale;
     
     CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
     
@@ -2940,7 +2945,7 @@ else
     
     
    _lastScale = [(UIPinchGestureRecognizer*)sender scale];
-    //matBGLogoView =[(UIPinchGestureRecognizer*)sender state];
+    matBGLogoView.frame = CGRectMake(a, b, x, y);
     
     
     //[self showOverlayWithFrame:chosenImageView.frame];
