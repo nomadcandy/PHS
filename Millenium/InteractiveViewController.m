@@ -3518,16 +3518,17 @@ else
     
     //NOTE- Do not remove local NSString values will break
     
-    NSString*matUrlAppendAddFavString= nameStringHere;
+    NSString*matUrlAppendAddFavString= nameField.text;
+    NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
     NSString*pngString= @".png";
     //NSLog(@"nameFieldText %@",nameField.text);
     //NSLog(@"nameFieldText %@",nameHideField.text);
     
     
-    urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
+    NSString*urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
     
     NSString*matUrlAddFavString = urlMatStringAppend;
-    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
     NSString*matNameAddFavString =nameField.text;
     NSString*matSellerAddFavString =sellerField.text;
     NSString*matCompanyAddFavString =companyField.text;
