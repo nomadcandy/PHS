@@ -3486,12 +3486,34 @@ else
     } else{
     
    
+    //temporarily add button to subview to snap picture of mat
         
+        
+        float x,y;
+        float a,b;
+        float c,d;
+        x = logoPicButton.frame.size.width;
+        y = logoPicButton.frame.size.height;
+        a= logoPicButton.frame.origin.x;
+        b=logoPicButton.frame.origin.y;
     
+        c=a+50;
+        d=b+50;
+        
+        //not doing anything
+        /*logoPicButton.frame = CGRectMake(a-100, b, x, y);
+         [self.snapshotView addSubview:logoPicButton];*/
 
     
     
+    
+    
+    //logoPicButton.frame = CGRectMake(snapshotView.frame.origin., d, x, y);
+    
+    
     CGRect screenRect2 = CGRectMake(723,342,600,490);
+        
+        
     UIGraphicsBeginImageContext(screenRect2.size);
     
     
@@ -3499,7 +3521,9 @@ else
     [[UIColor whiteColor] set];
     CGContextFillRect(ctx1, screenRect2);
     
+    //[self.snapshotView addSubview:logoPicButton];
     [self.snapshotView.layer renderInContext:ctx1];
+    [self.logoPicButton.layer renderInContext:ctx1];
     
     
     matImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -3512,8 +3536,9 @@ else
     [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
     
     
-    
-    [self.view addSubview:snapshotView];
+    //hides logoButton
+    //[self.view addSubview:snapshotView];
+    //[self.view addSubview:logoPicButton];
     
     
     //NOTE- Do not remove local NSString values will break
