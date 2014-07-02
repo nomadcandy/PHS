@@ -249,8 +249,9 @@
 
 @property (nonatomic, strong) NSMutableArray *favoritesMatArray;
 
-@property (nonatomic, retain) NSArray *familyNames;
-@property (nonatomic, retain) NSMutableArray *colorNames;
+@property (nonatomic, retain) NSArray *familyNamesArray;
+@property (nonatomic, retain) NSMutableArray *colorNamesArray;
+@property (nonatomic, retain) NSArray *colorNamesImagesArray;
 
 
 @property (nonatomic, assign) int artworkCount;
