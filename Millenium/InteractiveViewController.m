@@ -149,6 +149,14 @@
 @synthesize landscapeImageView;
 @synthesize portraitImageView;
 
+@synthesize pickerViewColorArray;
+@synthesize pickerViewFontArray;
+
+@synthesize familyNames;
+
+@synthesize colorPicker;
+@synthesize fontPicker;
+
 
 //@synthesize logoUseStringHere;
 
@@ -227,6 +235,71 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[self.fontPicker removeFromSuperview];
+    //fontPicker.hidden= YES;
+    
+    
+    // List all fonts on iPhone
+    familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
+    NSArray *fontNames;
+    NSInteger indFamily, indFont;
+    for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
+    {
+        NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
+        fontNames = [[NSArray alloc] initWithArray:
+                     [UIFont fontNamesForFamilyName:
+                      [familyNames objectAtIndex:indFamily]]];
+        for (indFont=0; indFont<[fontNames count]; ++indFont)
+        {
+            NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
+        }
+        //[fontNames release];
+        
+        
+       
+    }
+    //[familyNames release];
+    
+
+    
+    //pickerViewFontArray = [[NSArray alloc] init];
+    
+    pickerViewFontArray=fontNames;
+    
+    
+    // Add some data for demo purposes.
+   /* [pickerViewFontArray addObject:@"AmericanTypewriter"];
+    [pickerViewFontArray addObject:@"Two"];
+    [pickerViewFontArray addObject:@"Three"];
+    [pickerViewFontArray addObject:@"Four"];
+    [pickerViewFontArray addObject:@"Five"];*/
+    
+    
+    
+    
+    /*textEditor.fontPicker.fontList = @[ @"AmericanTypewriter", @"Baskerville",
+                                        @"Copperplate", @"Didot", @"EuphemiaUCAS", @"Futura-Medium", @"GillSans",
+                                        @"Helvetica", @"Marion-Regular", @"Optima-Regular", @"Palatino-Roman",
+                                        @"TimesNewRomanPSMT", @"Verdana"];*/
+    
+    //crashes code
+    //[fontPicker setDataSource: self];
+    
+    
+    // Set the picker's frame. We set the y coordinate to 50px.
+    //[pickerView setFrame: CGRectMake(xPoint, 50.0f, pickerWidth, 200.0f)];
+    
+    // Before we add the picker view to our view, let's do a couple more
+    // things. First, let the selection indicator (that line inside the
+    // picker view that highlights your selection) to be shown.
+    fontPicker.showsSelectionIndicator = YES;
+    
+    //fontPicker.hidden=YES;
+    //_colorPicker.hidden=YES;
+    
+    
+    
+    
     
     if([orientString isEqualToString:@"landscape"])
     {
@@ -4946,6 +5019,85 @@ enum {
 
     
 }
+-(IBAction) goFontPicker:(id)sender{
+    
+    [self.view addSubview:fontPicker];
+    //[self.fontPicker removeFromSuperview];
+}
+
+
+-(IBAction) goColorPicker:(id)sender{
+    
+     colorPicker.hidden=NO;
+    
+}
+
+
+/*- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    //UILabel* lbl = (UILabel*)view;
+    // Customise Font
+    if (textDecField == nil) {
+        //label size
+        CGRect frame = CGRectMake(0.0, 0.0, 70, 30);
+        
+        textDecField = [[UILabel alloc] initWithFrame:frame];
+        
+        [textDecField setTextAlignment:UITextAlignmentLeft];
+        
+        [textDecField setBackgroundColor:[UIColor clearColor]];
+        //textDecField.numberOfLines=3;
+        //here you can play with fonts
+        [textDecField setFont:[UIFont fontWithName:@"Times New Roman" size:14.0]];
+        
+    }
+    //picker view array is the datasource
+    [textDecField setText:[pickerViewFontArray objectAtIndex:row]];
+    
+    
+    return textDecField;
+}*/
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)fontPicker{
+    return 1;
+}
+
+
+- (NSInteger)pickerView:(UIPickerView *)fontPicker
+numberOfRowsInComponent:(NSInteger)component
+{
+    return familyNames.count;
+}
+
+- (NSString *)pickerView:(UIPickerView *)fontPicker
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component
+{
+    //return familyNames[row];
+    //return [familyNames objectAtIndex:row];
+    
+    if (familyNames!=nil) {
+        return [familyNames objectAtIndex:row];//assuming the array contains strings..
+    }
+    return @"";//
+}
+
+
+
+
+/*- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel* tView = (UILabel*)view;
+    if (!tView)
+    {
+        tView = [[UILabel alloc] init];
+        [tView setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+        //[tView setTextAlignment:UITextAlignmentLeft];
+        tView.numberOfLines=3;
+    }
+    // Fill the label text here
+    tView.text=[wishvalues objectAtIndex:row];
+    return tView;
+}*/
 
 
 /*-(BOOL)viewsDoCollide:(UIView *)view1 :(UIView *)view2{

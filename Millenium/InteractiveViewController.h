@@ -42,7 +42,7 @@
 
 
 
-@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,UIGestureRecognizerDelegate,UITextFieldDelegate>{
+@interface InteractiveViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,  iCarouselDataSource,iCarouselDataSource,DIYMenuDelegate,UIGestureRecognizerDelegate,UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>{
     
     NSURLRequest * request;
         
@@ -246,6 +246,8 @@
 
 @property (nonatomic, strong) NSMutableArray *favoritesMatArray;
 
+@property (nonatomic, retain) NSArray *familyNames;
+
 
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
@@ -301,9 +303,16 @@
 @property (nonatomic, strong)UIImage *matImage;
 
 
+@property (nonatomic, strong) IBOutlet UIPickerView *fontPicker;
+@property (nonatomic, strong) IBOutlet UIPickerView *colorPicker;
+
 @property (nonatomic, strong) IBOutlet iCarousel *carouselSize;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselColor;
 @property (nonatomic, strong) IBOutlet iCarousel *carouselLogo;
+
+
+@property (nonatomic, retain) NSArray *pickerViewFontArray;
+@property (nonatomic, retain) NSArray *pickerViewColorArray;
 
 @property (nonatomic, strong) UIAttachmentBehavior *attachmentBehavior;
 @property (nonatomic, strong) UIDynamicAnimator *animator;
