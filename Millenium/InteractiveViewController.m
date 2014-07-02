@@ -19,6 +19,7 @@
 
 @synthesize snapshotView;
 @synthesize snapShotTestImageView;
+@synthesize tempPickerImageView;
 
 @synthesize urlMatStringAppend;
 @synthesize locationIDString;
@@ -50,6 +51,7 @@
 @synthesize matColorUseString;
 @synthesize matSizeUseString;
 
+@synthesize pickerImage;
 
 @synthesize matImage;
 @synthesize selectedImage;
@@ -75,6 +77,8 @@
 
 @synthesize titleLabel;
 @synthesize headerLabel;
+
+@synthesize myIconImageView;
 
 @synthesize chosenImageView;
 
@@ -153,6 +157,7 @@
 @synthesize pickerViewFontArray;
 
 @synthesize familyNames;
+@synthesize colorNames;
 
 @synthesize colorPicker;
 @synthesize fontPicker;
@@ -253,18 +258,87 @@
         {
             NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
         }
-        //[fontNames release];
+        
         
         
        
     }
-    //[familyNames release];
+    
+    
+    pickerViewFontArray=fontNames;
+    
+    
+    
+    /*[[NSMutableArray alloc] initWithObjects:
+     [UIImage imageNamed:@"one.jpg"],
+     [UIImage imageNamed:@"two.jpg"],
+     [UIImage imageNamed:@"three.jpg"],
+     [UIImage imageNamed:@"four.jpg"],
+     [UIImage imageNamed:@"five.jpg"], nil];*/
+    /*colorNames =[NSArray arrayWithObjects:[UIImage imageNamed:@"Steel Blue_121.jpg"],
+                             [UIImage imageNamed:@"Suede_123.jpg"],
+                             [UIImage imageNamed:@"White_140.jpg"],
+                             [UIImage imageNamed:@"Rose_119.jpg"],
+                             [UIImage imageNamed:@"Royal Blue_107.jpg"],
+                             [UIImage imageNamed:@"Sandalwood_120.jpg"],
+                             [UIImage imageNamed:@"Silver_116"],
+                             [UIImage imageNamed:@"Orange_127.jpg"],
+                             [UIImage imageNamed:@"Purple_105.jpg"],
+                             [UIImage imageNamed:@"Red_112.jpg"],
+                             [UIImage imageNamed:@"Gold_109.jpg"],
+                             [UIImage imageNamed:@"Grey_115.jpg"],
+                             [UIImage imageNamed:@"Light Blue_106.jpg"],
+                             [UIImage imageNamed:@"Navy_118.jpg"],
+                             [UIImage imageNamed:@"Emerald Green_110.jpg"],
+                             [UIImage imageNamed:@"Forest Green_117.jpg"],
+                             [UIImage imageNamed:@"Cranberry_114.jpg"],
+                             [UIImage imageNamed:@"Dark Gold_103.jpg"],
+                             [UIImage imageNamed:@"Charcoal_101.jpg"],
+                             [UIImage imageNamed:@"Chocolate_111.jpg"],
+                             [UIImage imageNamed:@"Clay_126.jpg"],
+                             [UIImage imageNamed:@"Black_108.jpg"],
+                             [UIImage imageNamed:@"Brown_102.jpg"],
+                             [UIImage imageNamed:@"Burgundy_100.jpg"],
+                             [UIImage imageNamed:@"Aquamarine_130.jpg"],
+                             [UIImage imageNamed:@"Turquoise_104.jpg"],
+                             [UIImage imageNamed:@"Yellow_128.jpg"]
+                             ,nil];*/
+    
+    
+    colorNames =[[NSMutableArray alloc]init];
+                 [colorNames addObject:@"Steel Blue_121.jpg"],
+                 [colorNames addObject:@"Suede_123.jpg"],
+                 [colorNames addObject:@"White_140.jpg"],
+                 [colorNames addObject:@"Rose_119.jpg"],
+                 [colorNames addObject:@"Royal Blue_107.jpg"],
+                 [colorNames addObject:@"Sandalwood_120.jpg"],
+                 [colorNames addObject:@"Silver_116"],
+                 [colorNames addObject:@"Orange_127.jpg"],
+                 [colorNames addObject:@"Purple_105.jpg"],
+                 [colorNames addObject:@"Red_112.jpg"],
+                 [colorNames addObject:@"Gold_109.jpg"],
+                 [colorNames addObject:@"Grey_115.jpg"],
+                 [colorNames addObject:@"Light Blue_106.jpg"],
+                 [colorNames addObject:@"Navy_118.jpg"],
+                 [colorNames addObject:@"Emerald Green_110.jpg"],
+                 [colorNames addObject:@"Forest Green_117.jpg"],
+                 [colorNames addObject:@"Cranberry_114.jpg"],
+                 [colorNames addObject:@"Dark Gold_103.jpg"],
+                 [colorNames addObject:@"Charcoal_101.jpg"],
+                 [colorNames addObject:@"Chocolate_111.jpg"],
+                 [colorNames addObject:@"Clay_126.jpg"],
+                 [colorNames addObject:@"Black_108.jpg"],
+                 [colorNames addObject:@"Brown_102.jpg"],
+                 [colorNames addObject:@"Burgundy_100.jpg"],
+                 [colorNames addObject:@"Aquamarine_130.jpg"],
+                 [colorNames addObject:@"Turquoise_104.jpg"],
+                [colorNames addObject:@"Yellow_128.jpg"];
     
 
     
-    //pickerViewFontArray = [[NSArray alloc] init];
     
-    pickerViewFontArray=fontNames;
+    
+    //Declare colorPicker Array
     
     
     // Add some data for demo purposes.
@@ -3856,12 +3930,7 @@ enum {
 -(IBAction)hideNotes:(id)sender{
    
     
-   /* switch (textDecField.tag) {
-     //textDecField.tag=2;
-      textDecField.hidden = YES;
-            
-    }*/
-    //textField.hidden= YES;
+  
     
     noteLayerView.hidden =YES;
 }
@@ -3875,32 +3944,7 @@ enum {
 }
 
 
-/*-(IBAction)hideNotes:(UITextField*)textField{
-    //if (textDecField.tag==2){
-        
-   /* if (textField.tag==2){
- 
-        textField.hidden = YES;
-    
-    }*/
-   /* [textField  resignFirstResponder];
-    if (textField){
-        
-        textDecField.hidden = YES;
-        
-    }*/
-    
-//}
-/*-(IBAction)showNotes:(UITextField*)textField{
-    
-    
-        
-        textField.hidden = NO;
-        
- 
-    
-    
-}*/
+
 
 
 
@@ -5071,7 +5115,7 @@ numberOfRowsInComponent:(NSInteger)component
     return familyNames.count;
 }else{
     
-    return familyNames.count;
+    return colorNames.count;
     //return 27;
    
 }
@@ -5087,20 +5131,82 @@ numberOfRowsInComponent:(NSInteger)component
     //return familyNames[row];
     //return [familyNames objectAtIndex:row];
     
-    if (familyNames!=nil) {
-        return [familyNames objectAtIndex:row];//assuming the array contains strings..
-    }
-    return @"";//
-        
-    }else{
-        
         if (familyNames!=nil) {
-            return [familyNames objectAtIndex:row];//assuming the array contains strings..
-        }
-        return @"";//
+           return [familyNames objectAtIndex:row];//assuming the array contains strings..
+            }
+            return @"";//
         
-    }
+    
+    
+    }else  /*(component==2)*/{
+        
+        
+         if (colorNames!=nil) {
+             
+             
+             for (NSString* imageFileName in colorNames)
+             {
+                 // The rest as per your code
+                 return [colorNames objectAtIndex:row];
+             }
+
+            //return [colorNames objectAtIndex:row];//assuming the array contains strings..
+             //NSString*myIconString=[colorNames objectAtIndex:row];
+            /* UIImage*myImage;*/
+            //return [colorNames objectAtIndex:row];
+             
+             //pickerImage = [UIImage imageNamed:myIconString];
+            //pickerImage = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", (long)row]];
+             
+            //myIconImageView = [[UIImageView alloc] initWithImage:pickerImage];
+             
+             //UIImageView *myIconView=myIconImage;
+             //[myIcon setFrame:CGRectMake(0, 0, 50, 50)];
+             
+             
+
+             
+         }
+    
+        /*UIImageView *imageView = [[UIImageView alloc] initWithImage:[colorNames objectAtIndex:row]];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.clipsToBounds = YES;
+        
+        imageView.frame = CGRectMake(50, 0, 50, 50);*/
+        //return pickerImage;
+         //return tempPickerImageView;
+        return @"";
+        
+       //return myIconImageView;
+        /*UIImageView *myIconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+        return myIconImageView;
+        /*UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", (long)row]];
+        
+        tempPickerImageView = [[UIImageView alloc] initWithImage:img];
+        tempPickerImageView.frame = CGRectMake(-70, 10, 60, 40);*/
+         //return @" "imageView;//
+        
+        
+        /*if (colorNames!=nil) {
+           for ( UIImage *image in colorNames )
+        {*/
+        //NSString*myImageString=@"";
+        //return @"";
+        //UIImageView *myIcon = [[UIImageView alloc] initWithImage:myImage];
+        //NSString*myIconString=@"";
+        //UIImageView *myIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:myIconString]];
+         //UIImageView *myIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+        //[myIcon setFrame:CGRectMake(0, 0, 50, 50)];
+        //return myIcon;
+        
+    
+        }
+        
+   
+    
 }
+//}
+
 
 
 
@@ -5130,13 +5236,13 @@ numberOfRowsInComponent:(NSInteger)component
 }*/
 
 
--(BOOL)viewsDoCollide:(UIImageView *)_matBGImageView :(UIButton *)_steelBlueButton{
+/*-(BOOL)viewsDoCollide:(UIImageView *)_matBGImageView :(UIButton *)_steelBlueButton{
     if(CGRectIntersectsRect(_matBGImageView.frame, _steelBlueButton.frame))
     {
         return YES;
     }
     return NO;
-}
+}*/
 
 //Not Used
 #pragma mark-

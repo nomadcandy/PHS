@@ -147,6 +147,9 @@
 @property (nonatomic, strong) IBOutlet UIImageView *matBGImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *matBGLogoView;
 @property (nonatomic, strong) IBOutlet UIImageView *steelBlueImageView;
+@property (nonatomic, strong) IBOutlet UIImageView *tempPickerImageView;
+
+@property (nonatomic, strong) IBOutlet UIImageView *myIconImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *titleBar;
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
@@ -247,6 +250,7 @@
 @property (nonatomic, strong) NSMutableArray *favoritesMatArray;
 
 @property (nonatomic, retain) NSArray *familyNames;
+@property (nonatomic, retain) NSMutableArray *colorNames;
 
 
 @property (nonatomic, assign) int artworkCount;
@@ -300,7 +304,8 @@
 @property (nonatomic, strong) UIImage *selectedImage;
 @property (nonatomic, strong) UIImage *myBGColor;
 
-@property (nonatomic, strong)UIImage *matImage;
+@property (nonatomic, strong) UIImage *matImage;
+@property (nonatomic, strong) UIImage *pickerImage;
 
 
 @property (nonatomic, strong) IBOutlet UIPickerView *fontPicker;
