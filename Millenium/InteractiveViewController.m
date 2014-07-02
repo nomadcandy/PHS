@@ -235,8 +235,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self.fontPicker removeFromSuperview];
-    //fontPicker.hidden= YES;
+    [self.fontPicker removeFromSuperview];
+    
     
     
     // List all fonts on iPhone
