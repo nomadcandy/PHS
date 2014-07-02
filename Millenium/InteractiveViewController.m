@@ -5058,20 +5058,32 @@ enum {
 }*/
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)fontPicker{
-    return 1;
+    return 2;
 }
 
 
 - (NSInteger)pickerView:(UIPickerView *)fontPicker
 numberOfRowsInComponent:(NSInteger)component
 {
+    
+    if (component==1){
+     
     return familyNames.count;
+}else{
+    
+    return familyNames.count;
+    //return 27;
+   
+}
+    
 }
 
 - (NSString *)pickerView:(UIPickerView *)fontPicker
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
+    if (component==1){
+    
     //return familyNames[row];
     //return [familyNames objectAtIndex:row];
     
@@ -5079,6 +5091,15 @@ numberOfRowsInComponent:(NSInteger)component
         return [familyNames objectAtIndex:row];//assuming the array contains strings..
     }
     return @"";//
+        
+    }else{
+        
+        if (familyNames!=nil) {
+            return [familyNames objectAtIndex:row];//assuming the array contains strings..
+        }
+        return @"";//
+        
+    }
 }
 
 
