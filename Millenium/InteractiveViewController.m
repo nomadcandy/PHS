@@ -3829,6 +3829,7 @@ else
     //only moves the button in its original view not for the picture
     //logoPicButton.frame = CGRectMake(180, 180, x, y);
     [self.logoPicButton.layer renderInContext:ctx1];
+    [self.textDecField.layer  renderInContext:ctx1];
     //[logoPicButton center];
     
     
