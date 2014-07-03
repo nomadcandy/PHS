@@ -276,7 +276,7 @@
      [UIImage imageNamed:@"three.jpg"],
      [UIImage imageNamed:@"four.jpg"],
      [UIImage imageNamed:@"five.jpg"], nil];*/
-     /*colorNamesImagesArray =@[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Steel Blue_121.jpg"]],
+     colorNamesImagesArray =@[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Steel Blue_121.jpg"]],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Suede_123.jpg"]],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"White_140.jpg"]],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Rose_119.jpg"]],
@@ -302,7 +302,7 @@
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Burgundy_100.jpg"] ],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Aquamarine_130.jpg"] ],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Turquoise_104.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Yellow_128.jpg"]]];*/
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Yellow_128.jpg"]]];
                   
     
     
@@ -5152,33 +5152,50 @@ numberOfRowsInComponent:(NSInteger)component
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row
           forComponent:(NSInteger)component reusingView:(UIView *)view
 {
-    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 60, 32)];
-    firstLabel.text = [familyNamesArray objectAtIndex:row];
-    firstLabel.textAlignment = UITextAlignmentCenter;
-    firstLabel.backgroundColor = [UIColor clearColor];
+    if (component==1){
+    
+        UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 60, 32)];
+        firstLabel.text = [familyNamesArray objectAtIndex:row];
+        firstLabel.textAlignment = NSTextAlignmentCenter;
+        firstLabel.backgroundColor = [UIColor clearColor];
+        
+        return firstLabel;
+        
+    }else{
     
     /*UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(165, 0, 60, 32)];
     secondLabel.text = [array2 objectAtIndex:row];
     secondLabel.textAlignment = UITextAlignmentLeft;
     secondLabel.backgroundColor = [UIColor clearColor];*/
     
-    UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[colorNamesImagesArray objectAtIndex:row]]];
+   /* UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%@",[colorNamesImagesArray objectAtIndex:row]]];*/
     
-    UIImageView *icon = [[UIImageView alloc] initWithImage:img];
+    //UIImage *img= [colorNamesImagesArray objectAtIndex:row];
+    
+    //UIImageView *icon = [[UIImageView alloc] initWithImage:img];
     //temp.frame = CGRectMake(170, 0, 30, 30);
+        
+    UIImageView *icon = [colorNamesImagesArray objectAtIndex:row];
+    icon.frame = CGRectMake(170, 0, 50, 50);
+        
+    return icon;
+        
+        
+       /* UIView *tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 400, 32) ];
+        [tmpView insertSubview:icon atIndex:1];
+        [tmpView insertSubview:firstLabel atIndex:0];
+        //[tmpView insertSubview:secondLabel atIndex:0];
+        [tmpView setUserInteractionEnabled:NO];
+        [tmpView setTag:row];
+        //[channelLabel release];
+        //[temp release];
+        return tmpView;*/
+    }
     
     
     
     
-    UIView *tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 32) ];
-    [tmpView insertSubview:icon atIndex:0];
-    [tmpView insertSubview:firstLabel atIndex:0];
-    //[tmpView insertSubview:secondLabel atIndex:0];
-    [tmpView setUserInteractionEnabled:NO];
-    [tmpView setTag:row];
-    //[channelLabel release];
-    //[temp release];
-    return tmpView;
+   
     
     
 }
