@@ -5164,7 +5164,7 @@ numberOfRowsInComponent:(NSInteger)component
         return firstLabel;
         
     }else{
-    
+    //add number labels here
     /*UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(165, 0, 60, 32)];
     secondLabel.text = [array2 objectAtIndex:row];
     secondLabel.textAlignment = UITextAlignmentLeft;
@@ -5194,12 +5194,29 @@ numberOfRowsInComponent:(NSInteger)component
         return tmpView;*/
     }
     
+  
     
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
+    /*ViewController*InteractiveViewController;
+    InteractiveViewController=(ViewController*)self.delegate;*/
     
-   
+    /*ViewController*initialView;
+    initialView=(ViewController*)self.delegate;*/
     
-    
+    if(component==0)
+    {
+        int chosenFont=[pickerView selectedRowInComponent:0];
+        //[textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
+        [textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:14.0]];
+        
+    }else{
+        
+       int chosenColor=[pickerView selectedRowInComponent:1];
+        
+    }
 }
 
 -(CGFloat)pickerView:(UIPickerView *)fontPicker rowHeightForComponent:(NSInteger)component{
