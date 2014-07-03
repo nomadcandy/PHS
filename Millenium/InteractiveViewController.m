@@ -5157,7 +5157,8 @@ numberOfRowsInComponent:(NSInteger)component
         UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 400, 32)];
         firstLabel.text = [familyNamesArray objectAtIndex:row];
         firstLabel.textAlignment = NSTextAlignmentCenter;
-        [firstLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:10.0]];
+        //[firstLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:10.0]];
+        [firstLabel setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:11.0]];
         firstLabel.backgroundColor = [UIColor clearColor];
         
         return firstLabel;
