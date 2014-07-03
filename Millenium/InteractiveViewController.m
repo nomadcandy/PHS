@@ -3935,7 +3935,7 @@ else
 -(IBAction)addText:(id)sender{
     
     
-    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 100, 300, 60)];
+    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 100, 600, 100)];
     textDecField.textColor = [UIColor whiteColor];
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textDecField.backgroundColor=[UIColor clearColor];
@@ -5279,7 +5279,8 @@ numberOfRowsInComponent:(NSInteger)component
         int chosenFont=[pickerView selectedRowInComponent:0];
         //[textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
         chosenFontString=[familyNamesArray objectAtIndex:chosenFont];
-        [textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:14.0]];
+        [textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:chosenFontSize]];
+        [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
         
     }else if (component==1) {
     
@@ -5288,7 +5289,9 @@ numberOfRowsInComponent:(NSInteger)component
         
     }else{
      
-        chosenFontSize=[pickerView selectedRowInComponent:2];
+        int chosenFontSize1=[pickerView selectedRowInComponent:2];
+        chosenFontSize= chosenFontSize1 * 10;
+        
         //chosenFontSize=[fontSizeArray objectAtIndex:chosenFontSize];
         [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
         
