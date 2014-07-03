@@ -159,6 +159,10 @@
 @synthesize familyNamesArray;
 @synthesize colorNamesArray;
 @synthesize colorNamesImagesArray;
+@synthesize colorNumbersArray;
+@synthesize fontSizeArray;
+
+
 
 @synthesize colorPicker;
 @synthesize fontPicker;
@@ -335,6 +339,47 @@
                  [colorNamesArray addObject:@"Turquoise_104.jpg"],
                 [colorNamesArray addObject:@"Yellow_128.jpg"];
     
+    
+    colorNumbersArray =[[NSMutableArray alloc]init];
+    [colorNumbersArray addObject:@"121"],
+    [colorNumbersArray addObject:@"123"],
+    [colorNumbersArray addObject:@"140"],
+    [colorNumbersArray addObject:@"119"],
+    [colorNumbersArray addObject:@"107"],
+    [colorNumbersArray addObject:@"120"],
+    [colorNumbersArray addObject:@"116"],
+    [colorNumbersArray addObject:@"127"],
+    [colorNumbersArray addObject:@"105"],
+    [colorNumbersArray addObject:@"112"],
+    [colorNumbersArray addObject:@"109"],
+    [colorNumbersArray addObject:@"115"],
+    [colorNumbersArray addObject:@"106"],
+    [colorNumbersArray addObject:@"118"],
+    [colorNumbersArray addObject:@"110"],
+    [colorNumbersArray addObject:@"117"],
+    [colorNumbersArray addObject:@"114"],
+    [colorNumbersArray addObject:@"103"],
+    [colorNumbersArray addObject:@"101"],
+    [colorNumbersArray addObject:@"111"],
+    [colorNumbersArray addObject:@"126"],
+    [colorNumbersArray addObject:@"108"],
+    [colorNumbersArray addObject:@"102"],
+    [colorNumbersArray addObject:@"100"],
+    [colorNumbersArray addObject:@"130"],
+    [colorNumbersArray addObject:@"104"],
+    [colorNumbersArray addObject:@"128"];
+
+    
+    fontSizeArray =[[NSMutableArray alloc]init];
+    [fontSizeArray addObject:@"12"],
+    [fontSizeArray addObject:@"14"],
+    [fontSizeArray addObject:@"16"],
+    [fontSizeArray addObject:@"18"],
+    [fontSizeArray addObject:@"24"],
+    [fontSizeArray addObject:@"36"],
+    [fontSizeArray addObject:@"75"],
+    [fontSizeArray addObject:@"110"],
+    [fontSizeArray addObject:@"130"];
 
     
     
