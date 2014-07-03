@@ -272,6 +272,11 @@
 
 
 
+@property (nonatomic, assign) int redValue;
+@property (nonatomic, assign) int greenValue;
+@property (nonatomic, assign) int blueValue;
+
+
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
 

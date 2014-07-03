@@ -1328,9 +1328,12 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="hideFontPicker:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="ndT-DT-PLz"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ivJ-Mu-hup">
-                                <rect key="frame" x="387" y="276" width="650" height="216"/>
+                                <rect key="frame" x="-115" y="276" width="650" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">

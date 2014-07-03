@@ -169,6 +169,10 @@
 @synthesize greenInt;
 @synthesize blueInt;
 
+@synthesize redValue;
+@synthesize greenValue;
+@synthesize blueValue;
+
 
 @synthesize chosenFontString;
 @synthesize chosenColorInt;
@@ -5226,12 +5230,13 @@ enum {
     //[self.fontPicker removeFromSuperview];
 }
 
-
--(IBAction) goColorPicker:(id)sender{
+-(IBAction) hideFontPicker:(id)sender{
     
-     colorPicker.hidden=NO;
-    
+    [self.fontPicker removeFromSuperview];
 }
+
+
+
 
 
 /*- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
@@ -5387,7 +5392,7 @@ numberOfRowsInComponent:(NSInteger)component
         [textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:chosenFontSize]];
         [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
         
-        
+         textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
         
         
         
@@ -5403,9 +5408,9 @@ numberOfRowsInComponent:(NSInteger)component
         greenInt=[greenArray objectAtIndex:chosenColorInt];
         blueInt=[blueArray objectAtIndex:chosenColorInt];
         
-        int redValue = [redInt intValue];
-        int greenValue = [greenInt intValue];
-        int blueValue = [blueInt intValue];
+        redValue = [redInt intValue];
+        greenValue = [greenInt intValue];
+        blueValue = [blueInt intValue];
         //convertStringTo an Integer
         
         textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
@@ -5423,6 +5428,8 @@ numberOfRowsInComponent:(NSInteger)component
         
         //chosenFontSize=[fontSizeArray objectAtIndex:chosenFontSize];
         [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
+        
+         textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
           }
 }
 
