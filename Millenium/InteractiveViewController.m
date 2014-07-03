@@ -5154,11 +5154,11 @@ numberOfRowsInComponent:(NSInteger)component
 {
     if (component==0){
     
-        UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 400, 32)];
+        UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 50)];
         firstLabel.text = [familyNamesArray objectAtIndex:row];
         firstLabel.textAlignment = NSTextAlignmentCenter;
         //[firstLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:10.0]];
-        [firstLabel setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:11.0]];
+        [firstLabel setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
         firstLabel.backgroundColor = [UIColor clearColor];
         
         return firstLabel;
@@ -5178,7 +5178,7 @@ numberOfRowsInComponent:(NSInteger)component
     //temp.frame = CGRectMake(170, 0, 30, 30);
         
     UIImageView *icon = [colorNamesImagesArray objectAtIndex:row];
-    icon.frame = CGRectMake(170, 0, 50, 50);
+    icon.frame = CGRectMake(200, 0, 50, 50);
         
     return icon;
         
@@ -5211,11 +5211,11 @@ numberOfRowsInComponent:(NSInteger)component
 -(CGFloat)pickerView:(UIPickerView *)fontPicker rowWidthForComponent:(NSInteger)component{
     if (component==0){
     
-        return 400.0;
+        return 500.0;
         
     }else{
         
-        return 200.0;
+        return 300.0;
     }
 }
 
