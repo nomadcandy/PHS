@@ -396,55 +396,55 @@
     [greenArray addObject:@"119"],
     [greenArray addObject:@"209"],
     [greenArray addObject:@"198"],
+    [greenArray addObject:@"105"],
+    [greenArray addObject:@"50"],
+    [greenArray addObject:@"76"],
+    [greenArray addObject:@"219"],
+    [greenArray addObject:@"198"],
     [greenArray addObject:@"214"],
     [greenArray addObject:@"47"],
-    [greenArray addObject:@"Red_112.jpg"],
-    [greenArray addObject:@"Gold_109.jpg"],
-    [greenArray addObject:@"Grey_115.jpg"],
-    [greenArray addObject:@"Light Blue_106.jpg"],
-    [greenArray addObject:@"Navy_118.jpg"],
-    [greenArray addObject:@"Emerald Green_110.jpg"],
-    [greenArray addObject:@"Forest Green_117.jpg"],
-    [greenArray addObject:@"Cranberry_114.jpg"],
-    [greenArray addObject:@"Dark Gold_103.jpg"],
-    [greenArray addObject:@"Charcoal_101.jpg"],
-    [greenArray addObject:@"Chocolate_111.jpg"],
-    [greenArray addObject:@"Clay_126.jpg"],
-    [greenArray addObject:@"Black_108.jpg"],
-    [greenArray addObject:@"Brown_102.jpg"],
-    [greenArray addObject:@"Burgundy_100.jpg"],
-    [greenArray addObject:@"Aquamarine_130.jpg"],
-    [greenArray addObject:@"Turquoise_104.jpg"],
-    [greenArray addObject:@"Yellow_128.jpg"];
+    [greenArray addObject:@"171"],
+    [greenArray addObject:@"114"],
+    [greenArray addObject:@"39"],
+    [greenArray addObject:@"174"],
+    [greenArray addObject:@"120"],
+    [greenArray addObject:@"128"],
+    [greenArray addObject:@"76"],
+    [greenArray addObject:@"0"],
+    [greenArray addObject:@"73"],
+    [greenArray addObject:@"52"],
+    [greenArray addObject:@"231"],
+    [greenArray addObject:@"142"],
+    [greenArray addObject:@"218"];
     
     blueArray =[[NSMutableArray alloc]init];
-    [blueArray addObject:@"Steel Blue_121.jpg"],
-    [blueArray addObject:@"Suede_123.jpg"],
-    [blueArray addObject:@"White_140.jpg"],
-    [blueArray addObject:@"Rose_119.jpg"],
-    [blueArray addObject:@"Royal Blue_107.jpg"],
-    [blueArray addObject:@"Sandalwood_120.jpg"],
-    [blueArray addObject:@"Silver_116"],
-    [blueArray addObject:@"Orange_127.jpg"],
-    [blueArray addObject:@"Purple_105.jpg"],
-    [blueArray addObject:@"Red_112.jpg"],
-    [blueArray addObject:@"Gold_109.jpg"],
-    [blueArray addObject:@"Grey_115.jpg"],
-    [blueArray addObject:@"Light Blue_106.jpg"],
-    [blueArray addObject:@"Navy_118.jpg"],
-    [blueArray addObject:@"Emerald Green_110.jpg"],
-    [blueArray addObject:@"Forest Green_117.jpg"],
-    [blueArray addObject:@"Cranberry_114.jpg"],
-    [blueArray addObject:@"Dark Gold_103.jpg"],
-    [blueArray addObject:@"Charcoal_101.jpg"],
-    [blueArray addObject:@"Chocolate_111.jpg"],
-    [blueArray addObject:@"Clay_126.jpg"],
-    [blueArray addObject:@"Black_108.jpg"],
-    [blueArray addObject:@"Brown_102.jpg"],
-    [blueArray addObject:@"Burgundy_100.jpg"],
-    [blueArray addObject:@"Aquamarine_130.jpg"],
-    [blueArray addObject:@"Turquoise_104.jpg"],
-    [blueArray addObject:@"Yellow_128.jpg"];
+    [blueArray addObject:@"106"],
+    [blueArray addObject:@"136"],
+    [blueArray addObject:@"255"],
+    [blueArray addObject:@"181"],
+    [blueArray addObject:@"200"],
+    [blueArray addObject:@"167"],
+    [blueArray addObject:@"200"],
+    [blueArray addObject:@"0"],
+    [blueArray addObject:@"142"],
+    [blueArray addObject:@"2"],
+    [blueArray addObject:@"178"],
+    [blueArray addObject:@"200"],
+    [blueArray addObject:@"230"],
+    [blueArray addObject:@"108"],
+    [blueArray addObject:@"132"],
+    [blueArray addObject:@"79"],
+    [blueArray addObject:@"47"],
+    [blueArray addObject:@"98"],
+    [blueArray addObject:@"123"],
+    [blueArray addObject:@"102"],
+    [blueArray addObject:@"54"],
+    [blueArray addObject:@"0"],
+    [blueArray addObject:@"49"],
+    [blueArray addObject:@"58"],
+    [blueArray addObject:@"215"],
+    [blueArray addObject:@"170"],
+    [blueArray addObject:@"36"];
 
 
 
@@ -5386,10 +5386,34 @@ numberOfRowsInComponent:(NSInteger)component
         [textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:chosenFontSize]];
         [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
         
+        
+        
+        
+        
     }else if (component==1) {
     
-       chosenColorInt=[pickerView selectedRowInComponent:1];
+        
        int chosenColor=[pickerView selectedRowInComponent:1];
+       chosenColorInt=[pickerView selectedRowInComponent:1];
+        NSLog(@"%i",chosenColorInt);
+        
+        redInt=[redArray objectAtIndex:chosenColorInt];
+         NSLog(@"%i",chosenColorInt);
+        greenInt=[greenArray objectAtIndex:chosenColorInt];
+        blueInt=[blueArray objectAtIndex:chosenColorInt];
+        
+        int redValue = [redInt intValue];
+        int greenValue = [greenInt intValue];
+        int blueValue = [blueInt intValue];
+        //convertStringTo an Integer
+        
+        textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
+        
+        
+        //textDecField.textColor= [UIColor colorWithRed:40/225.0f green:75/225.0f  blue:230/225.0f alpha:1];
+
+       
+       
         
     }else{
      
@@ -5398,8 +5422,7 @@ numberOfRowsInComponent:(NSInteger)component
         
         //chosenFontSize=[fontSizeArray objectAtIndex:chosenFontSize];
         [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
-        
-    }
+          }
 }
 
 -(CGFloat)pickerView:(UIPickerView *)fontPicker rowHeightForComponent:(NSInteger)component{

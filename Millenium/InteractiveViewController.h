@@ -264,9 +264,9 @@
 @property (nonatomic, assign) int chosenColorInt;
 @property (nonatomic, assign) int chosenFontSize;
 
-@property (nonatomic, assign) int redInt;
-@property (nonatomic, assign) int greenInt;
-@property (nonatomic, assign) int blueInt;
+@property (nonatomic, retain) NSString *redInt;
+@property (nonatomic, retain) NSString *greenInt;
+@property (nonatomic, retain) NSString *blueInt;
 
 @property (nonatomic, retain) UITextField*  selectedDecTextField;
 
