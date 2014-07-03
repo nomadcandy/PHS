@@ -5116,7 +5116,7 @@ numberOfRowsInComponent:(NSInteger)component
     return familyNamesArray.count;
 }else{
     
-    return colorNamesArray.count;
+    return colorNamesImagesArray.count;
     //return 27;
    
 }
@@ -5213,7 +5213,7 @@ numberOfRowsInComponent:(NSInteger)component
         
     }else{
         
-        return 55.0;
+        return 200.0;
     }
 }
 
