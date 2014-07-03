@@ -255,10 +255,18 @@
 @property (nonatomic, retain) NSMutableArray *colorNamesImagesArray;
 @property (nonatomic, retain) NSMutableArray *colorNumbersArray;
 
+@property (nonatomic, retain) NSMutableArray *redArray;
+@property (nonatomic, retain) NSMutableArray *greenArray;
+@property (nonatomic, retain) NSMutableArray *blueArray;
+
 
 @property (nonatomic, retain) NSString* chosenFontString;
 @property (nonatomic, assign) int chosenColorInt;
 @property (nonatomic, assign) int chosenFontSize;
+
+@property (nonatomic, assign) int redInt;
+@property (nonatomic, assign) int greenInt;
+@property (nonatomic, assign) int blueInt;
 
 @property (nonatomic, retain) UITextField*  selectedDecTextField;
 

@@ -161,6 +161,13 @@
 @synthesize colorNamesImagesArray;
 @synthesize colorNumbersArray;
 @synthesize fontSizeArray;
+@synthesize redArray;
+@synthesize greenArray;
+@synthesize blueArray;
+
+@synthesize redInt;
+@synthesize greenInt;
+@synthesize blueInt;
 
 
 @synthesize chosenFontString;
@@ -286,6 +293,11 @@
      [UIImage imageNamed:@"three.jpg"],
      [UIImage imageNamed:@"four.jpg"],
      [UIImage imageNamed:@"five.jpg"], nil];*/
+    
+    
+    
+    
+    
      colorNamesImagesArray =@[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Steel Blue_121.jpg"]],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Suede_123.jpg"]],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"White_140.jpg"]],
@@ -344,6 +356,98 @@
                  [colorNamesArray addObject:@"Aquamarine_130.jpg"],
                  [colorNamesArray addObject:@"Turquoise_104.jpg"],
                 [colorNamesArray addObject:@"Yellow_128.jpg"];
+    
+    
+    redArray =[[NSMutableArray alloc]init];
+    [redArray addObject:@"99"],
+    [redArray addObject:@"166"],
+    [redArray addObject:@"255"],
+    [redArray addObject:@"255"],
+    [redArray addObject:@"0"],
+    [redArray addObject:@"223"],
+    [redArray addObject:@"193"],
+    [redArray addObject:@"255"],
+    [redArray addObject:@"147"],
+    [redArray addObject:@"252"],
+    [redArray addObject:@"255"],
+    [redArray addObject:@"193"],
+    [redArray addObject:@"89"],
+    [redArray addObject:@"0"],
+    [redArray addObject:@"0"],
+    [redArray addObject:@"40"],
+    [redArray addObject:@"175"],
+    [redArray addObject:@"255"],
+    [redArray addObject:@"117"],
+    [redArray addObject:@"170"],
+    [redArray addObject:@"192"],
+    [redArray addObject:@"0"],
+    [redArray addObject:@"123"],
+    [redArray addObject:@"164"],
+    [redArray addObject:@"157"],
+    [redArray addObject:@"0"],
+    [redArray addObject:@"234"];
+    
+    
+    greenArray =[[NSMutableArray alloc]init];
+    [greenArray addObject:@"102"],
+    [greenArray addObject:@"159"],
+    [greenArray addObject:@"255"],
+    [greenArray addObject:@"163"],
+    [greenArray addObject:@"119"],
+    [greenArray addObject:@"209"],
+    [greenArray addObject:@"198"],
+    [greenArray addObject:@"214"],
+    [greenArray addObject:@"47"],
+    [greenArray addObject:@"Red_112.jpg"],
+    [greenArray addObject:@"Gold_109.jpg"],
+    [greenArray addObject:@"Grey_115.jpg"],
+    [greenArray addObject:@"Light Blue_106.jpg"],
+    [greenArray addObject:@"Navy_118.jpg"],
+    [greenArray addObject:@"Emerald Green_110.jpg"],
+    [greenArray addObject:@"Forest Green_117.jpg"],
+    [greenArray addObject:@"Cranberry_114.jpg"],
+    [greenArray addObject:@"Dark Gold_103.jpg"],
+    [greenArray addObject:@"Charcoal_101.jpg"],
+    [greenArray addObject:@"Chocolate_111.jpg"],
+    [greenArray addObject:@"Clay_126.jpg"],
+    [greenArray addObject:@"Black_108.jpg"],
+    [greenArray addObject:@"Brown_102.jpg"],
+    [greenArray addObject:@"Burgundy_100.jpg"],
+    [greenArray addObject:@"Aquamarine_130.jpg"],
+    [greenArray addObject:@"Turquoise_104.jpg"],
+    [greenArray addObject:@"Yellow_128.jpg"];
+    
+    blueArray =[[NSMutableArray alloc]init];
+    [blueArray addObject:@"Steel Blue_121.jpg"],
+    [blueArray addObject:@"Suede_123.jpg"],
+    [blueArray addObject:@"White_140.jpg"],
+    [blueArray addObject:@"Rose_119.jpg"],
+    [blueArray addObject:@"Royal Blue_107.jpg"],
+    [blueArray addObject:@"Sandalwood_120.jpg"],
+    [blueArray addObject:@"Silver_116"],
+    [blueArray addObject:@"Orange_127.jpg"],
+    [blueArray addObject:@"Purple_105.jpg"],
+    [blueArray addObject:@"Red_112.jpg"],
+    [blueArray addObject:@"Gold_109.jpg"],
+    [blueArray addObject:@"Grey_115.jpg"],
+    [blueArray addObject:@"Light Blue_106.jpg"],
+    [blueArray addObject:@"Navy_118.jpg"],
+    [blueArray addObject:@"Emerald Green_110.jpg"],
+    [blueArray addObject:@"Forest Green_117.jpg"],
+    [blueArray addObject:@"Cranberry_114.jpg"],
+    [blueArray addObject:@"Dark Gold_103.jpg"],
+    [blueArray addObject:@"Charcoal_101.jpg"],
+    [blueArray addObject:@"Chocolate_111.jpg"],
+    [blueArray addObject:@"Clay_126.jpg"],
+    [blueArray addObject:@"Black_108.jpg"],
+    [blueArray addObject:@"Brown_102.jpg"],
+    [blueArray addObject:@"Burgundy_100.jpg"],
+    [blueArray addObject:@"Aquamarine_130.jpg"],
+    [blueArray addObject:@"Turquoise_104.jpg"],
+    [blueArray addObject:@"Yellow_128.jpg"];
+
+
+
     
     
     colorNumbersArray =[[NSMutableArray alloc]init];
