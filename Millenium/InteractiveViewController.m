@@ -5111,7 +5111,7 @@ enum {
 numberOfRowsInComponent:(NSInteger)component
 {
     
-    if (component==1){
+    if (component==0){
      
     return familyNamesArray.count;
 }else{
@@ -5152,7 +5152,7 @@ numberOfRowsInComponent:(NSInteger)component
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row
           forComponent:(NSInteger)component reusingView:(UIView *)view
 {
-    if (component==1){
+    if (component==0){
     
         UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 60, 32)];
         firstLabel.text = [familyNamesArray objectAtIndex:row];
@@ -5207,9 +5207,9 @@ numberOfRowsInComponent:(NSInteger)component
 
 
 -(CGFloat)pickerView:(UIPickerView *)fontPicker rowWidthForComponent:(NSInteger)component{
-    if (component==1){
+    if (component==0){
     
-        return 200.0;
+        return 400.0;
         
     }else{
         
