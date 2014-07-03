@@ -163,6 +163,12 @@
 @synthesize fontSizeArray;
 
 
+@synthesize chosenFontString;
+@synthesize chosenColorInt;
+@synthesize chosenFontSize;
+
+@synthesize selectedDecTextField;
+
 
 @synthesize colorPicker;
 @synthesize fontPicker;
@@ -371,15 +377,15 @@
 
     
     fontSizeArray =[[NSMutableArray alloc]init];
-    [fontSizeArray addObject:@"12"],
-    [fontSizeArray addObject:@"14"],
-    [fontSizeArray addObject:@"16"],
-    [fontSizeArray addObject:@"18"],
-    [fontSizeArray addObject:@"24"],
-    [fontSizeArray addObject:@"36"],
-    [fontSizeArray addObject:@"75"],
-    [fontSizeArray addObject:@"110"],
-    [fontSizeArray addObject:@"130"];
+    [fontSizeArray addObject:@"12.0"],
+    [fontSizeArray addObject:@"14.0"],
+    [fontSizeArray addObject:@"16.0"],
+    [fontSizeArray addObject:@"18.0"],
+    [fontSizeArray addObject:@"24.0"],
+    [fontSizeArray addObject:@"36.0"],
+    [fontSizeArray addObject:@"75.0"],
+    [fontSizeArray addObject:@"110.0"],
+    [fontSizeArray addObject:@"430.0"];
 
     
     
@@ -5148,7 +5154,7 @@ enum {
 }*/
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)fontPicker{
-    return 2;
+    return 3;
 }
 
 
@@ -5158,12 +5164,17 @@ numberOfRowsInComponent:(NSInteger)component
     
     if (component==0){
      
-    return familyNamesArray.count;
-}else{
+        return familyNamesArray.count;
+        
+    }else if(component==1){
     
-    return colorNamesImagesArray.count;
+        return colorNamesImagesArray.count;
     //return 27;
    
+    }else{
+    
+        return fontSizeArray.count;
+    
 }
     
 }
@@ -5208,12 +5219,12 @@ numberOfRowsInComponent:(NSInteger)component
         
         return firstLabel;
         
-    }else{
+    }else if (component==1){
     //add number labels here
-    /*UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(165, 0, 60, 32)];
-    secondLabel.text = [array2 objectAtIndex:row];
+    UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 0, 50, 50)];
+    secondLabel.text = [colorNumbersArray objectAtIndex:row];
     secondLabel.textAlignment = UITextAlignmentLeft;
-    secondLabel.backgroundColor = [UIColor clearColor];*/
+    secondLabel.backgroundColor = [UIColor clearColor];
     
    /* UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%@",[colorNamesImagesArray objectAtIndex:row]]];*/
     
@@ -5224,8 +5235,10 @@ numberOfRowsInComponent:(NSInteger)component
         
     UIImageView *icon = [colorNamesImagesArray objectAtIndex:row];
     icon.frame = CGRectMake(200, 0, 50, 50);
-        
+    
+    
     return icon;
+    return secondLabel;
         
         
        /* UIView *tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 400, 32) ];
@@ -5237,6 +5250,16 @@ numberOfRowsInComponent:(NSInteger)component
         //[channelLabel release];
         //[temp release];
         return tmpView;*/
+    }else{
+        
+        UILabel *thirdLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 50)];
+        thirdLabel.text = [fontSizeArray objectAtIndex:row];
+        thirdLabel.textAlignment = NSTextAlignmentCenter;
+        //[firstLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:10.0]];
+        [thirdLabel setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
+        thirdLabel.backgroundColor = [UIColor clearColor];
+        return thirdLabel;
+
     }
     
   
@@ -5255,11 +5278,19 @@ numberOfRowsInComponent:(NSInteger)component
     {
         int chosenFont=[pickerView selectedRowInComponent:0];
         //[textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
+        chosenFontString=[familyNamesArray objectAtIndex:chosenFont];
         [textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:14.0]];
         
-    }else{
-        
+    }else if (component==1) {
+    
+       chosenColorInt=[pickerView selectedRowInComponent:1];
        int chosenColor=[pickerView selectedRowInComponent:1];
+        
+    }else{
+     
+        chosenFontSize=[pickerView selectedRowInComponent:2];
+        //chosenFontSize=[fontSizeArray objectAtIndex:chosenFontSize];
+        [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
         
     }
 }
@@ -5275,10 +5306,16 @@ numberOfRowsInComponent:(NSInteger)component
     
         return 500.0;
         
+    }else if (component==1){
+        
+        return 300.0;
+        
     }else{
         
         return 300.0;
+        
     }
+    
 }
 
 //}

@@ -256,6 +256,14 @@
 @property (nonatomic, retain) NSMutableArray *colorNumbersArray;
 
 
+@property (nonatomic, retain) NSString* chosenFontString;
+@property (nonatomic, assign) int chosenColorInt;
+@property (nonatomic, assign) int chosenFontSize;
+
+@property (nonatomic, retain) UITextField*  selectedDecTextField;
+
+
+
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
 
