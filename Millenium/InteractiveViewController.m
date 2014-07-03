@@ -5123,77 +5123,73 @@ numberOfRowsInComponent:(NSInteger)component
     
 }
 
-- (NSString *)pickerView:(UIPickerView *)fontPicker
+/*- (UIView *)pickerView:(UIPickerView *)fontPicker
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
-             //reusingView:(UIView*)view
+             reusingView:(UIView*)view
 {
     if (component==1){
     
-    //return familyNames[row];
-    //return [familyNames objectAtIndex:row];
     
-        if (familyNamesArray!=nil) {
-           return [familyNamesArray objectAtIndex:row];//assuming the array contains strings..
-            }
-            return @"";//
+            UILabel*fontLabel;
+            fontLabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0,120,32)];
+            fontLabel.text=[familyNamesArray objectAtIndex:row];
+        
+            return fontLabel;
         
        }else {
         
         
-        //return colorNames[row];
-        return [colorNamesArray objectAtIndex:row];
-        //return [colorNames objectAtIndex:row];
-         // tempPickerImageView=@"";
+        
+        return [colorNamesImagesArray objectAtIndex:row];
+           
+    
        }
-    
-        return@"";
-    
-        }
-    
-        /*UIImageView *imageView = [[UIImageView alloc] initWithImage:[colorNames objectAtIndex:row]];
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        imageView.clipsToBounds = YES;
         
-        imageView.frame = CGRectMake(50, 0, 50, 50);*/
-        //return pickerImage;
-         //return tempPickerImageView;
-        //return @"";
-        //tempPickerImageView=@"";
-       //return myIconImageView;
-        /*UIImageView *myIconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
-        return myIconImageView;
-        /*UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%ld", (long)row]];
-        
-        tempPickerImageView = [[UIImageView alloc] initWithImage:img];
-        tempPickerImageView.frame = CGRectMake(-70, 10, 60, 40);*/
-         //return @" "imageView;//
-        
-        
-        /*if (colorNames!=nil) {
-           for ( UIImage *image in colorNames )
-        {*/
-        //NSString*myImageString=@"";
-        //return @"";
-        //UIImageView *myIcon = [[UIImageView alloc] initWithImage:myImage];
-        //NSString*myIconString=@"";
-        //UIImageView *myIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:myIconString]];
-         //UIImageView *myIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
-        //[myIcon setFrame:CGRectMake(0, 0, 50, 50)];
-        //return myIcon;
-        
-    
-       // }
-        
-//}
+}*/
 
--(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row
+          forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 60, 32)];
+    firstLabel.text = [familyNamesArray objectAtIndex:row];
+    firstLabel.textAlignment = UITextAlignmentCenter;
+    firstLabel.backgroundColor = [UIColor clearColor];
+    
+    /*UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(165, 0, 60, 32)];
+    secondLabel.text = [array2 objectAtIndex:row];
+    secondLabel.textAlignment = UITextAlignmentLeft;
+    secondLabel.backgroundColor = [UIColor clearColor];*/
+    
+    UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[colorNamesImagesArray objectAtIndex:row]]];
+    
+    UIImageView *icon = [[UIImageView alloc] initWithImage:img];
+    //temp.frame = CGRectMake(170, 0, 30, 30);
+    
+    
+    
+    
+    UIView *tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 290, 32) ];
+    [tmpView insertSubview:icon atIndex:0];
+    [tmpView insertSubview:firstLabel atIndex:0];
+    //[tmpView insertSubview:secondLabel atIndex:0];
+    [tmpView setUserInteractionEnabled:NO];
+    [tmpView setTag:row];
+    //[channelLabel release];
+    //[temp release];
+    return tmpView;
+    
+    
+}
+
+-(CGFloat)pickerView:(UIPickerView *)fontPicker rowHeightForComponent:(NSInteger)component{
     
     return 75.0;
 }
 
 
--(CGFloat)pickerView:(UIPickerView *)pickerView rowWidthForComponent:(NSInteger)component{
+-(CGFloat)pickerView:(UIPickerView *)fontPicker rowWidthForComponent:(NSInteger)component{
     if (component==1){
     
         return 200.0;
