@@ -278,6 +278,7 @@
 		42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
 		42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
 		42B70D2118F3D45900CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
+		42C2B879196A26260057D583 /* matMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C2B878196A26260057D583 /* matMask.png */; };
 		42CEE8C9194907CB00405489 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CEE8C8194907CB00405489 /* LoginViewController.m */; };
 		42D35011193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */; };
 		42D35013193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42D35012193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v */; };
@@ -618,6 +619,7 @@
 		42B0159818E35CF20068019C /* VideosWhite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite3.png; sourceTree = "<group>"; };
 		42B70D1E18F3D45800CF0C97 /* SketchRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchRequestViewController.h; sourceTree = "<group>"; };
 		42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchRequestViewController.m; sourceTree = "<group>"; };
+		42C2B878196A26260057D583 /* matMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matMask.png; sourceTree = "<group>"; };
 		42CEE8C7194907CB00405489 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		42CEE8C8194907CB00405489 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMediumMob.m4v; sourceTree = "<group>"; };
@@ -1045,6 +1047,7 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				42C2B878196A26260057D583 /* matMask.png */,
 				425ECB0B195C63EE009A0AA9 /* FavAddIcon.png */,
 				420A8F08195308ED005FB1D8 /* SketchesIcon1.png */,
 				420A8F06195308A9005FB1D8 /* SketchesIcon.png */,
@@ -1708,6 +1711,7 @@
 				42849B8518EA00CD00E5B3FB /* alllogobuttons2.png in Resources */,
 				4297E04E1923C5E800E43779 /* MaskWhiteSquare7.png in Resources */,
 				42E9AC2218FF5A6C000E226D /* Friendly3Button.png in Resources */,
+				42C2B879196A26260057D583 /* matMask.png in Resources */,
 				42F399C31946675B00C84189 /* SoftStepM.png in Resources */,
 				426A6A3518EDADBA00255331 /* FreshButton.png in Resources */,
 				42081FDC1947B04700412486 /* TreadLockPDF.png in Resources */,

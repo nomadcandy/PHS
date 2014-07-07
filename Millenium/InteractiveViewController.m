@@ -129,6 +129,8 @@
 @synthesize matBGColorAddFavString;
 @synthesize matSizeAddFavString;
 
+@synthesize croppedImageView;
+
 
 
 
@@ -3764,7 +3766,24 @@ else
     
 }
 
-
+//hits this
+#pragma mark
+#pragma mark Mask
+- (UIImage*) maskImage:(UIImage *)selectedImage withMask:(UIImage *)maskImage {
+    
+	CGImageRef imgRef = [selectedImage CGImage];
+    CGImageRef maskRef = [maskImage CGImage];
+    CGImageRef actualMask = CGImageMaskCreate(CGImageGetWidth(maskRef),
+                                              CGImageGetHeight(maskRef),
+                                              CGImageGetBitsPerComponent(maskRef),
+                                              CGImageGetBitsPerPixel(maskRef),
+                                              CGImageGetBytesPerRow(maskRef),
+                                              CGImageGetDataProvider(maskRef), NULL, false);
+    masked = CGImageCreateWithMask(imgRef, actualMask);
+    return [UIImage imageWithCGImage:masked];
+    
+    
+}
 
 
 
@@ -3818,7 +3837,7 @@ else
     //logoPicButton.frame = CGRectMake(snapshotView.frame.origin., d, x, y);
     
     
-    CGRect screenRect2 = CGRectMake(723,342,600,490);
+    /*CGRect screenRect2 = CGRectMake(723,342,600,490);
         
     UIGraphicsBeginImageContext(screenRect2.size);
     
@@ -3828,29 +3847,125 @@ else
     CGContextFillRect(ctx1, screenRect2);
     
     
-    [self.snapshotView.layer renderInContext:ctx1];
+    [self.snapshotView.layer renderInContext:ctx1];*/
         
-    //only moves the button in its original view not for the picture
-    //logoPicButton.frame = CGRectMake(180, 180, x, y);
-    [self.logoPicButton.layer renderInContext:ctx1];
-    [self.textDecField.layer  renderInContext:ctx1];
+    /* [self.logoPicButton.layer renderInContext:ctx1];
+    [self.textDecField.layer  renderInContext:ctx1];*/
     //[logoPicButton center];
+        
+     //paste here
+        
+        noteLayerView.hidden=YES;
+        
+        
+        CGRect screenRect2 = CGRectMake(0,0,1024,768);
+        
+        
+        UIGraphicsBeginImageContext(screenRect2.size);
+        //UIGraphicsBeginImageContext(interactiveMatView.size);
+        
+        CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+        [[UIColor whiteColor] set];
+        CGContextFillRect(ctx1, screenRect2);
+        
+        [self.view.layer renderInContext:ctx1];
+         //[self.snapshotView.layer renderInContext:ctx1];
+        UIImage *matImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        
+    
+        UIGraphicsEndImageContext();
+        
+        
+        
+        //try to only crop the image
+        
+        // Create the image from a png file
+        //UIImage *image = [UIImage imageNamed:@"prgBinary.jpg"];
+        croppedImageView = [[UIImageView alloc] initWithImage:matImage];
+        
+        // Get size of current image
+        CGSize size = [matImage size];
+        
+        // Frame location in view to show original image
+        [croppedImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
+        //[[self view] addSubview:imageView];
+        //[imageView release];
+        
+        // Create rectangle that represents a cropped image
+        // from the middle of the existing image
+        CGRect rect = CGRectMake(size.width / 4, size.height / 4 ,
+                                 (size.width / 2), (size.height / 2));
+        
+        // Create bitmap image from original image data,
+        // using rectangle to specify desired crop area
+        CGImageRef imageRef = CGImageCreateWithImageInRect([matImage CGImage], rect);
+        UIImage *img = [UIImage imageWithCGImage:imageRef];
+        CGImageRelease(imageRef);
+        
+        // Create and show the new image from bitmap data
+        croppedImageView = [[UIImageView alloc] initWithImage:img];
+        [croppedImageView setFrame:CGRectMake(0, 200, (size.width / 2), (size.height / 2))];
+       // [[self view] addSubview:croppedImageView];
+        //[imageView release];
+        
+        //end try to crop it
     
     
-    matImage = UIGraphicsGetImageFromCurrentImageContext();
+   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameStringHere]];
     
-    UIGraphicsEndImageContext();
+    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];*/
     
-    
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameStringHere]];
-    
-    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
-    
-    
+        
+    //Begin Mask
+        
+        
+      /* UIImage* matCutImage = [self maskImage:matImage withMask:[UIImage imageNamed:@"matMask"]];
+        //UIImage*croppedLogoImage = [UIImage imageWithCGImage:masked];
+        
+        UIImage*croppedMat = matCutImage;
+        
+        //rewrite image to crop it correctly
+        UIGraphicsBeginImageContext(croppedMat.size);
+        [croppedMat drawAtPoint:CGPointZero];
+        UIImage *croppedImg = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();*/
+    //End Mask
+        
     //hides logoButton
     //[self.view addSubview:snapshotView];
     //[self.view addSubview:logoPicButton];
-    
+        
+    //copy cropped image to new imageView
+        
+    //croppedImageView.image=croppedImg;
+    //save new imageView to FAV
+       
+        CGRect screenRect3 = CGRectMake(0,0,1024,768);
+        
+        
+        UIGraphicsBeginImageContext(screenRect3.size);
+        //UIGraphicsBeginImageContext(interactiveMatView.size);
+        
+        CGContextRef ctx2 = UIGraphicsGetCurrentContext();
+        [[UIColor whiteColor] set];
+        CGContextFillRect(ctx2, screenRect3);
+        
+        [self.croppedImageView.layer renderInContext:ctx2];
+        //[self.snapshotView.layer renderInContext:ctx1];
+        UIImage *matCroppedImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        
+        
+        UIGraphicsEndImageContext();
+
+        
+        
+        //
+        
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameStringHere]];
+        
+    [UIImagePNGRepresentation(matCroppedImage) writeToFile:imagePath atomically:YES];
     
     //NOTE- Do not remove local NSString values will break
     

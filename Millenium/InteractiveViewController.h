@@ -49,6 +49,8 @@
     IBOutlet UIView *interactiveView;
     IBOutlet UIImageView *interactiveMatView;
     
+    IBOutlet UIImageView *croppedImageView;
+    
     MyDraggableImage*MyDragRect;
     IBOutlet UIButton*logoButton;
     
@@ -77,6 +79,8 @@
     
     int artworkCount;
     int matCount;
+    
+    CGImageRef masked;
     
     //NSString*sellerString;
     //NSString*nameString;
@@ -148,6 +152,8 @@
 @property (nonatomic, strong) IBOutlet UIImageView *matBGLogoView;
 @property (nonatomic, strong) IBOutlet UIImageView *steelBlueImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *tempPickerImageView;
+
+@property (nonatomic, strong) IBOutlet UIImageView *croppedImageView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *myIconImageView;
 
