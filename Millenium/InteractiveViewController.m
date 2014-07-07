@@ -3897,7 +3897,7 @@ else
         /*CGRect rect = CGRectMake(size.width / 4, size.height / 4 ,
                                  (size.width / 2), (size.height / 2));*/
         
-        CGRect rect = CGRectMake(424,140,600, 416);
+        CGRect rect = CGRectMake(425,142,600, 416);
         
         // Create bitmap image from original image data,
         // using rectangle to specify desired crop area
@@ -3943,7 +3943,7 @@ else
     //croppedImageView.image=croppedImg;
     //save new imageView to FAV
        
-        CGRect screenRect3 = CGRectMake(424,140,600, 416);
+        CGRect screenRect3 = CGRectMake(425,142,600, 416);
         
         
         UIGraphicsBeginImageContext(screenRect3.size);
