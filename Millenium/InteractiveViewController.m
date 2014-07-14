@@ -17,6 +17,9 @@
 
 @implementation InteractiveViewController
 
+//@synthesize center;
+//@synthesize control;
+
 @synthesize snapshotView;
 @synthesize snapShotTestImageView;
 @synthesize tempPickerImageView;
@@ -682,8 +685,17 @@
 	[pinchRecognizerDec setDelegate:self];
 	[self.textDecField addGestureRecognizer:pinchRecognizerDec];
     
+   
+    
     [_steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [_steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    
+    UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    _steelBlueButton.userInteractionEnabled = YES;
+    gestureRecognizer.minimumPressDuration = 0.3;
+    gestureRecognizer.delegate = self;
+    gestureRecognizer.numberOfTouchesRequired = 1;
+    [_steelBlueButton addGestureRecognizer:gestureRecognizer];
     
     _steelBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
     _steelBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
@@ -4142,8 +4154,8 @@ else
     [self.noteLayerView addSubview:textNoteField];
     
     
-    [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [textNoteField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textNoteField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     
     [textNoteField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
@@ -4166,8 +4178,8 @@ else
     textDecField.tag = 2;
     [self.view addSubview:textDecField];
     
-    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [textDecField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textDecField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     [textDecField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
 
@@ -4193,8 +4205,8 @@ enum {
     
     [self.view addSubview:textDecField];
     
-    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [textDecField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textDecField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     [textDecField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
     
@@ -4389,27 +4401,6 @@ enum {
     UIGraphicsEndImageContext();
     
     
-    //save image to documents
-   /* NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImageHere.jpg"]];
-    [UIImageJPEGRepresentation(matImageHere, 1.0) writeToFile:imagePath atomically:YES];*/
-    //noteLayerView.hidden=YES;
-    
-    //snapshot withNotes grab image
-    //noteLayerView.hidden=NO;
-   /* CGRect screenRect3 = CGRectMake(0.0,0,1028,720);
-    
-    
-    UIGraphicsBeginImageContext(screenRect3.size);
-    //UIGraphicsBeginImageContext(interactiveMatView.size);
-    
-    CGContextRef ctx2 = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx2, screenRect2);
-
-    
-    UIImage *matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();*/
     
     NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matNoteImage.jpg"]];
     [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
@@ -4709,6 +4700,7 @@ enum {
 
 
 //moves logo around
+//moves bg colors around
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
 {
     
@@ -4716,11 +4708,66 @@ enum {
     UIControl *control = sender;
     CGPoint center = control.center;
     
+    
     CGPoint pPrev = [t previousLocationInView:control];
     CGPoint p = [t locationInView:control];
     center.x += p.x - pPrev.x;
     center.y += p.y - pPrev.y;
     control.center = center;
+    
+    if (CGRectIntersectsRect(control.frame, _logoColorButton1.frame)) {
+        
+        control.frame=_logoColorButton1.frame;
+        
+    }else if (CGRectIntersectsRect(control.frame, _logoColorButton2.frame)){
+        
+        control.frame=_logoColorButton2.frame;
+        
+    }else if (CGRectIntersectsRect(control.frame, _logoColorButton3.frame)){
+        
+        control.frame=_logoColorButton3.frame;
+        
+    }else if (CGRectIntersectsRect(control.frame, _logoColorButton4.frame)) {
+        
+        control.frame=_logoColorButton4.frame;
+        
+    }else if (CGRectIntersectsRect(control.frame, _logoColorButton5.frame)){
+        
+        control.frame=_logoColorButton5.frame;
+        
+    } else if (CGRectIntersectsRect(control.frame, _logoColorButton5.frame)){
+        
+        control.frame=_logoColorButton5.frame;
+        
+    }
+
+
+    
+    
+    [self ifButtonCollides];
+    
+    
+    
+}
+
+
+//moves logo around
+//moves bg colors around
+- (IBAction) imageMoved1:(id) sender withEvent:(UIEvent *) event
+{
+    
+    UITouch *t = [[event allTouches] anyObject];
+    UIControl *control = sender;
+    CGPoint center = control.center;
+    
+    
+    CGPoint pPrev = [t previousLocationInView:control];
+    CGPoint p = [t locationInView:control];
+    center.x += p.x - pPrev.x;
+    center.y += p.y - pPrev.y;
+    control.center = center;
+    
+    
     
     
     
@@ -5753,7 +5800,34 @@ numberOfRowsInComponent:(NSInteger)component
     [self dismissViewControllerAnimated:YES
                              completion:nil];
 }
+-(void) handleLongPress:(UITapGestureRecognizer*) sender{
+    
+    if(_steelBlueButton){
+        
+        _steelBlueButton.frame = CGRectMake(37,613,38,38);
+    }
+}
 
+-(void)ifButtonCollides{
+    
+    
+    
+
+    
+   /* if (CGRectIntersectsRect(bgColorButton.frame, _logoColorButton1.frame)) {
+       
+        bgColorButton.frame=_logoColorButton1.frame;
+        
+    }else if (CGRectIntersectsRect(bgColorButton.frame, _logoColorButton2.frame)){
+        
+        bgColorButton.frame=_logoColorButton2.frame;
+    
+    } else if (CGRectIntersectsRect(bgColorButton.frame, _logoColorButton3.frame)){
+        
+        bgColorButton.frame=_logoColorButton3.frame;
+        
+    }*/
+}
 
 - (void)didReceiveMemoryWarning
 {

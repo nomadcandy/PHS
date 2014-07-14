@@ -73,7 +73,11 @@
 	CGFloat _firstX;
 	CGFloat _firstY;
     
+  
+    
     CGFloat matScale;
+    
+    //CGPoint center;
     
     UIView *canvas;
     
@@ -287,6 +291,9 @@
 @property (nonatomic, assign) int matCount;
 
 @property (nonatomic, assign) float x;
+//@property (nonatomic, assign) CGPoint center;
+//@property (nonatomic, assign) UIControl *control;
+
 
 @property (nonatomic, assign) double doubleMat;
 
@@ -373,6 +380,9 @@
 -(IBAction) threeByTen:(id)sender;
 
 -(IBAction)hideNotes:(UITextField*)textField;
+
+
+-(void)ifButtonCollides;
 
 
 

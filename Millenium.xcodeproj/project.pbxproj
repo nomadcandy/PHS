@@ -1478,6 +1478,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Jami Sue Becker";
 				TargetAttributes = {
+					42FF7A1018CDE92A00C72695 = {
+						DevelopmentTeam = QZ5N4RRHV5;
+					};
 					42FF7A3118CDE92A00C72695 = {
 						TestTargetID = 42FF7A1018CDE92A00C72695;
 					};
@@ -1989,10 +1992,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Millenium/Millenium-Prefix.pch";
 				INFOPLIST_FILE = "Millenium/Millenium-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2003,10 +2009,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Millenium/Millenium-Prefix.pch";
 				INFOPLIST_FILE = "Millenium/Millenium-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
