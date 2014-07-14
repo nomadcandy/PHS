@@ -40,7 +40,7 @@
 @synthesize myBGColor;
 @synthesize bgColorButton;
 //@synthesize delegate=_delegate;
-
+@synthesize decTextLayerView;
 @synthesize noteLayerView;
 
 @synthesize interactiveView;
@@ -270,7 +270,7 @@
 {
     [super viewDidLoad];
     [self.fontPicker removeFromSuperview];
-    
+    //self.tapGestureRecognizer.delegate = self;
     
     
     // List all fonts on iPhone
@@ -692,12 +692,12 @@
     [steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     
-    UILongPressGestureRecognizer *gestureRecognizer1 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress1:)];
+   /* UILongPressGestureRecognizer *gestureRecognizer1 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress1:)];
     steelBlueButton.userInteractionEnabled = YES;
     gestureRecognizer1.minimumPressDuration = 0.3;
     gestureRecognizer1.delegate = self;
     gestureRecognizer1.numberOfTouchesRequired = 1;
-    [steelBlueButton addGestureRecognizer:gestureRecognizer1];
+    [steelBlueButton addGestureRecognizer:gestureRecognizer1];*/
     
     steelBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
     steelBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
@@ -3848,7 +3848,7 @@ else
 
 -(IBAction)addMatFavorite:(id)sender{
     
-    
+    decTextLayerView.hidden=NO;
     NSString*nameStringHere=nameField.text;
     NSLog(@"nameString %@",nameStringHere);
 
@@ -4145,10 +4145,10 @@ else
     
     noteLayerView.hidden=NO;
     
-    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(445, 50, 300, 60)];
+    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(425, 50, 300, 60)];
     //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
     textNoteField.textColor = [UIColor redColor];
-    textNoteField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    textNoteField.font = [UIFont fontWithName:@"Avenir-Bold" size:14];
     textNoteField.backgroundColor=[UIColor whiteColor];
     textNoteField.text=@"ADD PRODUCTION NOTES";
     textNoteField.tag = 1;
@@ -4156,8 +4156,8 @@ else
     [self.noteLayerView addSubview:textNoteField];
     
     
-    [textNoteField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [textNoteField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textNoteField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     
     [textNoteField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
@@ -4170,7 +4170,7 @@ else
 }
 
 -(IBAction)addText:(id)sender{
-    
+    decTextLayerView.hidden=NO;
     
     textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 100, 600, 100)];
     textDecField.textColor = [UIColor whiteColor];
@@ -4178,10 +4178,11 @@ else
     textDecField.backgroundColor=[UIColor clearColor];
     textDecField.text=@"TEXT";
     textDecField.tag = 2;
-    [self.view addSubview:textDecField];
+    //[self.view addSubview:textDecField];
+    [self.decTextLayerView addSubview:textDecField];
     
-    [textDecField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [textDecField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     [textDecField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
 
@@ -4195,6 +4196,7 @@ enum {
 
 -(IBAction)addPMS:(id)sender{
     
+    decTextLayerView.hidden=NO;
     
     textDecField = [[UITextField alloc] initWithFrame:CGRectMake(145, 400, 38, 38)];
     textDecField.textColor = [UIColor whiteColor];
@@ -4204,11 +4206,11 @@ enum {
     textDecField.textAlignment= NSTextAlignmentCenter;
     textDecField.tag = 3;
     
+    [self.decTextLayerView addSubview:textDecField];
+    //[self.view addSubview:textDecField];
     
-    [self.view addSubview:textDecField];
-    
-    [textDecField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [textDecField addTarget:self action:@selector(imageMoved1:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     [textDecField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
     
     
@@ -4217,9 +4219,6 @@ enum {
 
 
 -(IBAction)hideNotes:(id)sender{
-   
-    
-  
     
     noteLayerView.hidden =YES;
 }
@@ -4232,6 +4231,19 @@ enum {
     noteLayerView.hidden =NO;
 }
 
+-(IBAction)hideText:(id)sender{
+    
+    decTextLayerView.hidden =YES;
+}
+
+-(IBAction)showText:(id)sender{
+    
+    
+    
+    //textDecField.hidden = NO;
+    decTextLayerView.hidden =NO;
+}
+
 
 
 
@@ -4240,7 +4252,7 @@ enum {
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
     
     noteLayerView.hidden=YES;
-   
+    decTextLayerView.hidden =NO;
     
     CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
     
@@ -4382,7 +4394,7 @@ enum {
 
 -(IBAction)goMail1:(UIButton*)sender event:(id)event {
     
-    
+    decTextLayerView.hidden=NO;
     noteLayerView.hidden=NO;
     
     
@@ -4737,9 +4749,9 @@ enum {
         
         control.frame=_logoColorButton5.frame;
         
-    } else if (CGRectIntersectsRect(control.frame, _logoColorButton5.frame)){
+    } else if (CGRectIntersectsRect(control.frame, _logoColorButton6.frame)){
         
-        control.frame=_logoColorButton5.frame;
+        control.frame=_logoColorButton6.frame;
         
     }
 
@@ -5829,6 +5841,18 @@ numberOfRowsInComponent:(NSInteger)component
         bgColorButton.frame=_logoColorButton3.frame;
         
     }*/
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    // Determine if the touch is inside the custom subview
+    if ([touch view] == self.view){
+        
+        
+        // If it is, prevent all of the delegate's gesture recognizers
+        // from receiving the touch
+        return YES;
+    }
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning
