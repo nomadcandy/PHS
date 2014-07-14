@@ -3605,31 +3605,6 @@ else
     NSString*nameFieldAlertString=alertNameField.text;
     
     
-    //start amending here
-    //NSLog(@"alertNameField - %@",alertNameField.text);
-   /* CGRect screenRect2 = CGRectMake(723,342,600,490);
-    UIGraphicsBeginImageContext(screenRect2.size);
-    
-    //need to amend this to save image as above
-    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx1, screenRect2);
-    
-    [self.snapshotView.layer renderInContext:ctx1];
-    
-    
-    matImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameFieldAlertString]];
-    
-    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
-    
-    
-    
-    [self.view addSubview:snapshotView];*/
     
     
     noteLayerView.hidden=YES;
