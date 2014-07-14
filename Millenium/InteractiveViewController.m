@@ -20,6 +20,8 @@
 //@synthesize center;
 //@synthesize control;
 
+@synthesize steelBlueButton;
+
 @synthesize snapshotView;
 @synthesize snapShotTestImageView;
 @synthesize tempPickerImageView;
@@ -687,20 +689,20 @@
     
    
     
-    [_steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [_steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+    [steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+    [steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
     
-    UILongPressGestureRecognizer *gestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    _steelBlueButton.userInteractionEnabled = YES;
-    gestureRecognizer.minimumPressDuration = 0.3;
-    gestureRecognizer.delegate = self;
-    gestureRecognizer.numberOfTouchesRequired = 1;
-    [_steelBlueButton addGestureRecognizer:gestureRecognizer];
+    UILongPressGestureRecognizer *gestureRecognizer1 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress1:)];
+    steelBlueButton.userInteractionEnabled = YES;
+    gestureRecognizer1.minimumPressDuration = 0.3;
+    gestureRecognizer1.delegate = self;
+    gestureRecognizer1.numberOfTouchesRequired = 1;
+    [steelBlueButton addGestureRecognizer:gestureRecognizer1];
     
-    _steelBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
-    _steelBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
-    _steelBlueButton.layer.shadowOpacity = 1.00f;
-    _steelBlueButton.layer.shadowRadius = 3.0f;
+    steelBlueButton.layer.shadowColor = [[UIColor darkGrayColor] CGColor];
+    steelBlueButton.layer.shadowOffset = CGSizeMake(1.00f, 1.00f);
+    steelBlueButton.layer.shadowOpacity = 1.00f;
+    steelBlueButton.layer.shadowRadius = 3.0f;
     
     
     [_suedeButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
@@ -5800,11 +5802,11 @@ numberOfRowsInComponent:(NSInteger)component
     [self dismissViewControllerAnimated:YES
                              completion:nil];
 }
--(void) handleLongPress:(UITapGestureRecognizer*) sender{
+-(void) handleLongPress1:(UITapGestureRecognizer*) sender{
     
-    if(_steelBlueButton){
+    if(steelBlueButton){
         
-        _steelBlueButton.frame = CGRectMake(37,613,38,38);
+        steelBlueButton.frame = CGRectMake(37,613,38,38);
     }
 }
 
