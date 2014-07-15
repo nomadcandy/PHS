@@ -4139,7 +4139,10 @@ else
  
  
 }*/
-
+-(IBAction)refreshLogoColors:(id)sender{
+    
+    [self.view addSubview:noteLayerView];
+}
 
 -(IBAction)addNote:(id)sender{
     
@@ -4250,6 +4253,8 @@ enum {
 
 
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
+    
+     [self.fontPicker removeFromSuperview];
     
     noteLayerView.hidden=YES;
     decTextLayerView.hidden =NO;
@@ -4393,6 +4398,8 @@ enum {
 
 
 -(IBAction)goMail1:(UIButton*)sender event:(id)event {
+    
+     [self.fontPicker removeFromSuperview];
     
     decTextLayerView.hidden=NO;
     noteLayerView.hidden=NO;
@@ -5843,7 +5850,7 @@ numberOfRowsInComponent:(NSInteger)component
     }*/
 }
 
--(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+/*-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
     // Determine if the touch is inside the custom subview
     if ([touch view] == self.view){
         
@@ -5853,7 +5860,7 @@ numberOfRowsInComponent:(NSInteger)component
         return YES;
     }
     return YES;
-}
+}*/
 
 - (void)didReceiveMemoryWarning
 {
