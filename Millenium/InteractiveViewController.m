@@ -4760,12 +4760,20 @@ enum {
         
         control.frame=_logoColorButton6.frame;
         
+    }else if(CGRectIntersectsRect(control.frame, _logoColorButton7.frame)){
+        
+        control.frame=_logoColorButton7.frame;
+
+
+    }else if(CGRectIntersectsRect(control.frame, bgColorButton.frame)){
+        
+        control.frame=bgColorButton.frame;
+        
+        
     }
 
-
     
-    
-    [self ifButtonCollides];
+    //[self ifButtonCollides];
     
     
     
