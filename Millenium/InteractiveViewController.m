@@ -5189,57 +5189,52 @@ enum {
     [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
 
-    /*orientString=@"portrait";
+    //start here
     
-    if ([orientString isEqualToString:@"portrait"])
+    float x,y;
+    float a,b;
+    float c,d;
+    
+    x=  matBGLogoView.frame.origin.x;
+    y=  matBGLogoView.frame.origin.y;
+    
+    a = matBGLogoView.frame.size.width;
+    b = matBGLogoView.frame.size.height;
+    
+    
+    float difference;
+    float divide;
+    float xUse;
+    
+    float yUse;
+    
+    
+    
+    if(a > b){
         
-    {
         
+        difference=a-b/2;
+        divide=difference/2;
         
-    
-    
-    //_widthField.text = _widthField.text;
-    _widthCircleField.text =_widthField.text;
-    
-    //_heightField.text =_heightField.text;
-    _heightCircleField.text = _heightField.text;
-    
-    
-    int wMat = [_widthField.text intValue];
-    int hMat = [_heightField.text intValue];
-    
-    int wMatHundred = wMat*85;
-    int hMatHundred = hMat*85;
-    
-    int wMatHundredDivide = wMatHundred/2;
-    int hMatHundredDivide = hMatHundred/2;
-    
-    
-    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, wMatHundred, hMatHundred);
-    
-    //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
-    
-    matBGLogoView.frame=myLogoMatRect;
-    //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
-    //matBGLogoView.ContentMode=  UIViewContentModeCenter;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
+        matBGLogoView.frame = CGRectMake (x+divide, y-divide, b , a);
+        //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+    } else{
         
-    
-    
-    /*_widthField.text = @"5'";
-    _widthCircleField.text = @"3'";
-    
-    _heightField.text = @"5'";
-    _heightCircleField.text = @"3'";
-    
-    CGRect myLogoMatRect = CGRectMake(426.0f, 121.0f, 300.0f, 500.0f);
-    
-    matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;*/
+        difference=b-a;
+        divide=difference/2;
         
+        xUse= x-divide;
+        
+        matBGLogoView.frame = CGRectMake (x-divide, y+divide, b , a);
+        //matBGLogoView.frame = CGRectMake (xUse, y+divide, b*100 , a*100);
+        
+        //matBGLogoView.frame = CGRectMake (matBGLogoView.frame.origin.x, matBGLogoView.frame.origin.y, b , a);
     }
     
-//}
+        
+   
+    
+}
 
 -(IBAction)Landscape:(id)sender{
     

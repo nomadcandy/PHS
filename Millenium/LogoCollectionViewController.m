@@ -371,7 +371,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
-   // NSArray*favoritesLogoFetchArray
+    //NSArray*favoritesLogoFetchArray;
     self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     NSManagedObjectContext *managedObjectContext1 = [self managedObjectContext];
@@ -395,8 +395,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     //favoritesLogoArray= [favoritesMutArray copy];
     
-    favoritesLogoArray = uniqueFavLogosSet;
-
+    favoritesLogoArray = [uniqueFavLogosSet copy];
+    NSLog(@"favoritesLogoArray %@",favoritesLogoArray);
     
     
     
