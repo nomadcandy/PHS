@@ -1376,13 +1376,16 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                                
                                fetch.sortDescriptors =sortDescriptors;
     
-   [fetch setEntity:matFavoriteEntity];
+   
     
     
     
-  /* NSPredicate *p=[NSPredicate predicateWithFormat:@"artworkName == %@",nameString];
-   [fetch setPredicate:p];*/
+   NSPredicate *p=[NSPredicate predicateWithFormat:@"artworkName == %@",nameString];
+   [fetch setPredicate:p];
     //... add sorts if you want them
+    
+    [fetch setEntity:matFavoriteEntity];
+    
     NSError *fetchError;
     //NSError *fetchError=nil;
     NSArray *fetchedFavoritesArray=[self.managedObjectContext executeFetchRequest:fetch error:&fetchError];
