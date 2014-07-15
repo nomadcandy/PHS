@@ -5193,7 +5193,7 @@ enum {
     
     float x,y;
     float a,b;
-    float c,d;
+    //float c,d;
     
     x=  matBGLogoView.frame.origin.x;
     y=  matBGLogoView.frame.origin.y;
@@ -5216,16 +5216,27 @@ enum {
         difference=a-b/2;
         divide=difference/2;
         
-        matBGLogoView.frame = CGRectMake (x+divide, y-divide, b , a);
+        //matBGLogoView.frame = CGRectMake (x+divide, y-divide, b , a);
+        
+        matBGLogoView.frame = CGRectMake (x+divide/2, y-divide/2, b , a);
+        
+        
+        
+        
+       //matBGLogoView.center=interactiveMatView.center;
+        
+            //control.frame=_logoColorButton1.frame;
+        
+        
         //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     } else{
         
-        difference=b-a;
+        difference=b-a/2;
         divide=difference/2;
         
         xUse= x-divide;
         
-        matBGLogoView.frame = CGRectMake (x-divide, y+divide, b , a);
+        matBGLogoView.frame = CGRectMake (x-divide/2, y+divide/2, b , a);
         //matBGLogoView.frame = CGRectMake (xUse, y+divide, b*100 , a*100);
         
         //matBGLogoView.frame = CGRectMake (matBGLogoView.frame.origin.x, matBGLogoView.frame.origin.y, b , a);
