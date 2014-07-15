@@ -368,7 +368,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     // Fetch the devices from persistent data store
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
+   // NSArray*favoritesLogoFetchArray
     self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     NSManagedObjectContext *managedObjectContext1 = [self managedObjectContext];
@@ -376,11 +379,25 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     self.favoritesMatArray = [[managedObjectContext1 executeFetchRequest:fetchRequestMat error:nil] mutableCopy];
     
+    //NSArray *uniqueFavLogosSetArray = [NSSet setWithArray:favoritesLogoArray];
     
-    
+    NSSet *uniqueFavLogosSet = [NSSet setWithArray:favoritesLogoArray];
+    NSSet *uniqueFavMatsSet = [NSSet setWithArray:favoritesMatArray];
+    NSLog(@"uniqueLogos %@",uniqueFavLogosSet);
+    NSLog(@"uniqueMats %@",uniqueFavMatsSet);
     NSLog(@"favoritesLogoArray %@",favoritesLogoArray);
     NSLog(@"favoritesMatArray %@",favoritesMatArray);
     // NSLog(@"logoSearch %@",logoSearch);
+    
+   
+    
+    //NSMutableArray*favoritesMutArray = uniqueFavLogosSet;
+    
+    //favoritesLogoArray= [favoritesMutArray copy];
+    
+    favoritesLogoArray = uniqueFavLogosSet;
+
+    
     
     
     
