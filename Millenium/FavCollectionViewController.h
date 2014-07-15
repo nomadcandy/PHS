@@ -17,6 +17,7 @@
 #import "Logo.h"
 #import "LogoSearch.h"
 #import "LogoFavorite.h"
+#import "MatFavorite.h"
 
 
 @protocol ButtonFavPickerDelegate <NSObject>
@@ -41,7 +42,7 @@
     NSString*numberString;*/
     
    
-   
+    MatFavorite*matFavorite;
     
     NSString*artworkNameAddFavString;
     NSString*urlFavString;

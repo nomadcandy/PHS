@@ -1354,35 +1354,58 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     /*Millenium[14492:90b] indexPathSend 0
      2014-04-30 17:18:37.290 Millenium[14492:90b] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'keypath pid not found in entity <NSSQLEntity LogoFavorite id=1>'*/
     
-    
-    
-    //NSLog(@"indexPathSend %d",indexPathSend);
-    
     //urlUnFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
-    artworkNameUnFavString =[artworkNameArray objectAtIndex:indexPathSend];
-    NSManagedObjectContext *context = [self managedObjectContext];
+    //artworkNameUnFavString =[artworkNameArray objectAtIndex:indexPathSend];
+    
     //NSNumber *soughtPid=[NSNumber numberWithInt:53];
     //NSEntityDescription *artworkNameEntity=[NSEntityDescription entityForName:@"LogoFavorite" inManagedObjectContext:context];
     
-    NSEntityDescription *logoFavoriteEntity=[NSEntityDescription entityForName:@"MatFavorite" inManagedObjectContext:context];
+    //NSLog(@"indexPathSend %d",indexPathSend);
+    
+     NSLog(@"nameString %@",nameString);
+    
+   
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    
     NSFetchRequest *fetch=[[NSFetchRequest alloc] init];
-    [fetch setEntity:logoFavoriteEntity];
-    NSPredicate *p=[NSPredicate predicateWithFormat:@"pid == %@", artworkNameUnFavString];
-    [fetch setPredicate:p];
+    NSEntityDescription *matFavoriteEntity=[NSEntityDescription entityForName:@"MatFavorite" inManagedObjectContext:managedObjectContext];
+    
+    NSSortDescriptor*nameSort=[[NSSortDescriptor alloc]initWithKey:@"artworkName" ascending:YES];
+    
+    NSArray*sortDescriptors = [[NSArray alloc]initWithObjects:nameSort, nil];
+                               
+                               fetch.sortDescriptors =sortDescriptors;
+    
+   [fetch setEntity:matFavoriteEntity];
+    
+    
+    
+  /* NSPredicate *p=[NSPredicate predicateWithFormat:@"artworkName == %@",nameString];
+   [fetch setPredicate:p];*/
     //... add sorts if you want them
     NSError *fetchError;
-    NSArray *fetchedFavorites=[self.managedObjectContext executeFetchRequest:fetch error:&fetchError];
+    //NSError *fetchError=nil;
+    NSArray *fetchedFavoritesArray=[self.managedObjectContext executeFetchRequest:fetch error:&fetchError];
     // handle error
     
+    NSLog(@"fetchedFavoritesArray %@",fetchedFavoritesArray);
     
-    for (NSManagedObject *favorite in fetchedFavorites) {
-        [context deleteObject:favorite];
+    for (MatFavorite*matFavoriteDelete in fetchedFavoritesArray) {
+        
+        NSLog(@"artworkName %@",matFavoriteDelete.artworkName);
+        [managedObjectContext deleteObject:matFavoriteDelete];
     }
     
     //Fetch Data entered to test
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
-    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    //NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+    //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    /*if([fetchedFavoritesArray count] > 0){
+        
+        matFavoriteEntity*lastMatFavorite= [fetchedFavoritesArray lastObject];
+        
+    }*/
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
