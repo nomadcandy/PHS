@@ -19,6 +19,7 @@
 
 //@synthesize center;
 //@synthesize control;
+@synthesize colorButtonHideView;
 
 @synthesize steelBlueButton;
 
@@ -271,7 +272,7 @@
     [super viewDidLoad];
     [self.fontPicker removeFromSuperview];
     //self.tapGestureRecognizer.delegate = self;
-    
+    colorButtonHideView.hidden=YES;
     
     // List all fonts on iPhone
     familyNamesArray = [[NSArray alloc] initWithArray:[UIFont familyNames]];
@@ -986,7 +987,7 @@
     
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
-        
+        colorButtonHideView.hidden=NO;
         
         if([orientString isEqualToString:@"landscape"])
         {
@@ -1928,7 +1929,7 @@
     if ([interactiveHeaderString isEqualToString:@"Create Mat"])
     
     {
-        
+        colorButtonHideView.hidden=YES;
         
         
         

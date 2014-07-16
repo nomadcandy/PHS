@@ -165,7 +165,7 @@
                                 <rect key="frame" x="6" y="389" width="414" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveColorPickGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="zyq-IV-gch">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveColorPickGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="zyq-IV-gch" userLabel="bgColors">
                                 <rect key="frame" x="6" y="585" width="414" height="143"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1399,6 +1399,10 @@
                                     <action selector="refreshLogoColors:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="7Yb-l8-C5b"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveColorPickGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="kIs-8v-hEo" userLabel="killButtons">
+                                <rect key="frame" x="6" y="585" width="414" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1418,6 +1422,7 @@
                         <outlet property="chocolateButton" destination="ZpO-QQ-s2Q" id="vgd-vw-FA0"/>
                         <outlet property="chosenImageView" destination="0zU-6P-ULj" id="5Q5-J0-hY9"/>
                         <outlet property="clayButton" destination="CUY-LO-Uwi" id="0yp-GT-CX7"/>
+                        <outlet property="colorButtonHideView" destination="kIs-8v-hEo" id="q1T-eM-9b5"/>
                         <outlet property="companyField" destination="MgX-o2-3kf" id="OVx-Kp-ugi"/>
                         <outlet property="cranberryButton" destination="RNa-ET-uaV" id="TQZ-En-GQB"/>
                         <outlet property="croppedImageView" destination="aHz-Ex-mPp" id="cU5-E0-Y4Y"/>

@@ -21,6 +21,7 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "LogoSearch.h"
 #import "AppDelegate.h"
+#import "Reachability.h"
 
 
 @protocol ArrayDelegate <NSObject>

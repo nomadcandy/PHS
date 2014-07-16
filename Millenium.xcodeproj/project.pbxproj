@@ -191,6 +191,7 @@
 		4288F1B3195130D500975FB6 /* WaterGuardPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B2195130D500975FB6 /* WaterGuardPDF.png */; };
 		4288F1B51951329E00975FB6 /* TripleFlexFlow1PDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B41951329E00975FB6 /* TripleFlexFlow1PDF.png */; };
 		4288F1B71951330300975FB6 /* Waterguard1PDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B61951330300975FB6 /* Waterguard1PDF.png */; };
+		4295213E1976F081002B51C7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4295213D1976F081002B51C7 /* Reachability.m */; };
 		4297E04E1923C5E800E43779 /* MaskWhiteSquare7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */; };
 		4297E0501923C74D00E43779 /* MaskWhiteSquare8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E04F1923C74D00E43779 /* MaskWhiteSquare8.png */; };
 		4297E0521923C95200E43779 /* MaskGreySquare8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4297E0511923C95200E43779 /* MaskGreySquare8.png */; };
@@ -545,6 +546,8 @@
 		4288F1B2195130D500975FB6 /* WaterGuardPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardPDF.png; sourceTree = "<group>"; };
 		4288F1B41951329E00975FB6 /* TripleFlexFlow1PDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TripleFlexFlow1PDF.png; sourceTree = "<group>"; };
 		4288F1B61951330300975FB6 /* Waterguard1PDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Waterguard1PDF.png; sourceTree = "<group>"; };
+		4295213C1976F081002B51C7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4295213D1976F081002B51C7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare7.png; sourceTree = "<group>"; };
 		4297E04F1923C74D00E43779 /* MaskWhiteSquare8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare8.png; sourceTree = "<group>"; };
 		4297E0511923C95200E43779 /* MaskGreySquare8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskGreySquare8.png; sourceTree = "<group>"; };
@@ -1044,6 +1047,15 @@
 			name = ImagesLogin;
 			sourceTree = "<group>";
 		};
+		4295213B1976F05C002B51C7 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				4295213C1976F081002B51C7 /* Reachability.h */,
+				4295213D1976F081002B51C7 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1359,6 +1371,7 @@
 		42FF7A1A18CDE92A00C72695 /* Millenium */ = {
 			isa = PBXGroup;
 			children = (
+				4295213B1976F05C002B51C7 /* Reachability */,
 				42CEE8C6194907AE00405489 /* LoginViewController */,
 				42081FBA194760E400412486 /* PDFBigViewController */,
 				425010D2194622680040B9A9 /* PDFViewController */,
@@ -1818,6 +1831,7 @@
 				42FF7A5018CDF09B00C72695 /* iCarousel.m in Sources */,
 				42EB3EFA18D3456E00FAD7FD /* DIYMenu.m in Sources */,
 				427CE63218F072F400865291 /* SignOffViewController.m in Sources */,
+				4295213E1976F081002B51C7 /* Reachability.m in Sources */,
 				42B0151A18E1F0520068019C /* ClipView.m in Sources */,
 				425B8B2F193D04EE00DF40C6 /* FavCell.m in Sources */,
 				42EC7E3918DC9609003B49A3 /* ImagePickerViewController.m in Sources */,

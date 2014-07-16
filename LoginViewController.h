@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "Reachability.h"
 
 @interface LoginViewController : UIViewController
 

@@ -120,7 +120,7 @@
 
 @property (nonatomic, strong) IBOutlet UITextField *sellerField;
 @property (nonatomic, strong) IBOutlet UITextField *companyField;
-@property (nonatomic,strong) IBOutlet UITextField *nameField;
+@property (nonatomic,strong)  IBOutlet UITextField *nameField;
 @property (nonatomic, strong) IBOutlet UITextField *nameHideField;
 @property (nonatomic, strong) IBOutlet UITextField *numberField;
 
@@ -153,6 +153,8 @@
 
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *snapShotTestImageView;
+
+@property (nonatomic, strong) IBOutlet UIImageView *colorButtonHideView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *matView1;
 @property (nonatomic, strong) IBOutlet UIImageView *matBGImageView;
