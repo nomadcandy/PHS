@@ -4451,6 +4451,7 @@
                                     <outlet property="goBack" destination="gCC-Br-Aki" id="aQr-YZ-5V9"/>
                                     <outlet property="goBackLogo" destination="nDP-hG-Jdm" id="PcD-fm-y6Q"/>
                                     <outlet property="goBackLogoLabel" destination="xgF-0b-q5i" id="sMd-gQ-PZ8"/>
+                                    <outlet property="goBackMatLabel" destination="PzJ-5h-aHP" id="NJC-O2-yAN"/>
                                     <outlet property="logoChooseButton" destination="dM1-bm-huB" id="hB5-kc-pSL"/>
                                     <outlet property="logoLabel" destination="dfr-Ra-ajW" id="8T0-sB-gG4"/>
                                     <outlet property="matChooseButton" destination="MXD-B2-aEM" id="SY1-rL-HMS"/>
