@@ -4148,7 +4148,7 @@ else
     
     noteLayerView.hidden=NO;
     
-    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(425, 50, 300, 60)];
+    textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(325, 50, 300, 60)];
     //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
     textNoteField.textColor = [UIColor redColor];
     textNoteField.font = [UIFont fontWithName:@"Avenir-Bold" size:14];
@@ -5251,7 +5251,7 @@ enum {
 -(IBAction)Landscape:(id)sender{
     
     portraitImageView.hidden=YES;
-    landscapeImageView.hidden=NO;
+    landscapeImageView.hidden=YES;
     
     textOrientField.hidden= NO;
     textOrientField.textColor = [UIColor redColor];
@@ -5301,10 +5301,30 @@ enum {
         //newYOrigin=dividedHeight;
         matBGLogoView.frame = CGRectMake (newXOrigin, dividedHeight, b , a);
         
-        //matBGLogoView.frame = CGRectMake (0, 0, b , a);
         
         //matBGLogoView.center = self.view.center;
        // matBGLogoView.center = interactiveMatView.center;
+        
+       //put logo back
+        float x,y;
+        float a,b;
+        x = logoPicButton.frame.size.width;
+        y = logoPicButton.frame.size.height;
+        a=logoPicButton.frame.origin.x;
+        b=logoPicButton.frame.origin.y;
+        
+        /*matBGLogoView.frame = CGRectMake(matBGLogoView.frame.origin.x,
+         matBGLogoView.frame.origin.y, matBGLogoView.width, matBGLogoView.height);*/
+        
+        NSLog(@"image after aspect fit: width=%f height=%f",x,y);
+        
+        
+        
+        
+        
+       
+        logoPicButton.frame = CGRectMake(a, b, x, y);
+        
        
     } else{
         
