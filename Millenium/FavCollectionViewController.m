@@ -1821,11 +1821,17 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if ( indexPath.item < matNameArray.count){
-            NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
-            //NSLog(@"matNameArray:%@",matNameArray);
-            favCell.matLabel.text =matLabelString;
+        if (indexPath.item > matFullImageArray.count-1){
+            
+            favCell.matChooseButton.hidden=YES;
+            favCell.removeFavMatButton.hidden=YES;
+            favCell.removeFavMatLabel.hidden=YES;
+            favCell.matLabel.hidden=YES;
+            favCell.goBackMatLabel.hidden=YES;
+            favCell.goBack.hidden=YES;
+            
         }
+
         
         
         
@@ -1836,10 +1842,16 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         NSRange prefixRange = [urlMatString rangeOfString:searchString
                                                 options:(NSAnchoredSearch | NSCaseInsensitiveSearch)];*/
      
-        if ( indexPath.item < matFullImageArray.count){
+        else if ( indexPath.item <= matFullImageArray.count){
         
            
-            
+            favCell.matChooseButton.hidden=NO;
+            favCell.removeFavMatButton.hidden=NO;
+            favCell.removeFavMatLabel.hidden=NO;
+            favCell.matLabel.hidden=NO;
+            favCell.goBackMatLabel.hidden=NO;
+            favCell.goBack.hidden=NO;
+
             urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
             //NSLog(@"urlMatString:%@",urlMatString);
             

@@ -4458,6 +4458,8 @@
                                     <outlet property="matLabel" destination="dhQ-O0-rVE" id="7Pw-ri-fTy"/>
                                     <outlet property="removeFavLogoButton" destination="0i0-RT-6jg" id="Uh1-I5-BOO"/>
                                     <outlet property="removeFavLogoLabel" destination="3X3-R8-0dl" id="BdK-ej-F1t"/>
+                                    <outlet property="removeFavMatButton" destination="TNa-GR-k0J" id="fb1-7Y-22X"/>
+                                    <outlet property="removeFavMatLabel" destination="lvu-Nd-NVw" id="og7-hm-lYt"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
