@@ -422,7 +422,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
         artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
         
-        artworkCount = artworkNameArray.count;
+        //artworkCount = artworkNameArray.count;
+        artworkCount = favoritesLogoArray.count;
+
         
         
         NSLog(@"artworkFullImageArray %@",artworkFullImageArray);
@@ -450,7 +452,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matColorArray = [favoritesMatArray valueForKey:@"Color"];
         //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
         
-        matCount = matNameArray.count;
+        matCount = favoritesMatArray.count;
+        //matCount = matNameArray.count;
         [activityIndicator stopAnimating];
         
         

@@ -66,6 +66,8 @@
     int artworkCount;
     int matCount;
     
+    int higherCount;
+    
     //int jsonLogoCount;
     
     /*NSMutableArray *artworkNameArray;
@@ -101,6 +103,8 @@
 
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
+@property (nonatomic, assign) int higherCount;
+
 
 @property (nonatomic, assign) int favLogoCount;
 @property (nonatomic, assign) int favMatCount;

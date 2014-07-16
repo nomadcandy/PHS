@@ -27,6 +27,8 @@
 
 @synthesize artworkCount;
 @synthesize matCount;
+@synthesize higherCount;
+
 @synthesize searchField;
 @synthesize searchHereString;
 @synthesize searchHereField;
@@ -213,7 +215,10 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkColorArray = [favoritesLogoArray valueForKey:@"color"];
         artworkCompanyArray = [favoritesLogoArray valueForKey:@"company"];
         //NSLog(@"artworkCompanyArray %@",artworkCompanyArray);
-        artworkCount = artworkNameArray.count;
+        //artworkCount = artworkNameArray.count;
+        
+        artworkCount = favoritesLogoArray.count;
+        NSLog(@"logoCount: %i", favoritesLogoArray.count);
         
         
     }];
@@ -238,8 +243,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matColorArray = [favoritesMatArray valueForKey:@"color"];
         //matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
         
-        matCount = matNameArray.count;
-        
+        //matCount = matNameArray.count;
+        matCount = favoritesMatArray.count;
+        NSLog(@"matCount: %i", favoritesMatArray.count);
         
     }];
     
@@ -473,26 +479,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkColorArray = [favoritesLogoArray valueForKey:@"color"];
         artworkCompanyArray = [favoritesLogoArray valueForKey:@"company"];
         //NSLog(@"artworkCompanyArray %@",artworkCompanyArray);
-        artworkCount = artworkNameArray.count;
-
         
         
-       /* artworkNameArray = [favoritesLogoArray valueForKey:@"ArtworkName"];
-        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
-        artworkSizeArray = [favoritesLogoArray valueForKey:@"ArtworkSize"];
-        //NSLog(@"artWorkSizeArray: %@", artworkSizeArray);
-        artworkFormatArray = [favoritesLogoArray valueForKey:@"Format"];
-        artworkFullImageArray = [favoritesLogoArray valueForKey:@"FullImageURL"];
-        artworkIconArray = [favoritesLogoArray valueForKey:@"IconURL"];
-        artworkIDArray = [favoritesLogoArray valueForKey:@"ProductID"];
-        artworkLocationIDArray = [favoritesLogoArray valueForKey:@"LocationID"];
-        artworkSellerArray = [favoritesLogoArray valueForKey:@"Seller"];
-        artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
-        artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];*/
         
-        artworkCount = artworkNameArray.count;
+        artworkCount = favoritesLogoArray.count;
         favLogoCount=favoritesLogoArray.count;
-        
+         NSLog(@"artworkCount: %i", artworkCount);
         
     }];
     
@@ -501,20 +493,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         //NSLog(@"%@", object);
         //NSLog(@"searchLogoArray %@",favoritesMatArray);
         
-        
-        /*matNameArray = [favoritesMatArray valueForKey:@"ArtworkName"];
-        //NSLog(@"matNameArray: %@", matNameArray);
-        
-        matSizeArray = [favoritesMatArray valueForKey:@"ArtworkSize"];
-        matFormatArray = [favoritesMatArray valueForKey:@"Format"];
-        matFullImageArray = [favoritesMatArray valueForKey:@"FullImageURL"];
-        matIconArray = [favoritesMatArray valueForKey:@"IconURL"];
-        matIDArray = [favoritesMatArray valueForKey:@"ProductID"];
-        matLocationIDArray = [favoritesMatArray valueForKey:@"LocationID"];
-        matSellerArray = [favoritesMatArray valueForKey:@"Seller"];
-        matCompanyArray = [favoritesMatArray valueForKey:@"Company"];
-        matColorArray = [favoritesMatArray valueForKey:@"Color"];
-        //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];*/
         
         
         matNameArray = [favoritesMatArray valueForKey:@"artworkName"];
@@ -531,10 +509,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matColorArray = [favoritesMatArray valueForKey:@"color"];
         matBGColorArray = [favoritesMatArray valueForKey:@"bgColor"];
         
-        matCount = matNameArray.count;
-        
+        matCount = favoritesMatArray.count;
         favMatCount=favoritesMatArray.count;
-        
+        NSLog(@"matCount: %i", matCount);
         
     }];
 
@@ -1585,27 +1562,27 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
     
-   else
-    {
-        
-         //return artworkNameArray.count;
-         //return matNameArray.count;
-        //return matNameArray.count;
-        //return logoNearMeArray.count;
-        //return jsonLogoCount;
-        if (artworkNameArray.count < matNameArray.count){
+   else{
+        NSLog(@"artworkCount %i",artworkCount);
+        NSLog(@"matCount %i",matCount);
+        if (artworkCount< matCount){
             
-            return matNameArray.count;
-            //NSLog(@"matCount %i",matNameArray.count);
-            
-        }else{
-            
-            return artworkNameArray.count;
-            //NSLog(@"logoCount %i",artworkNameArray.count);
-            
+            higherCount=matCount;
         }
         
-}
+            
+        else{
+            
+            //return artworkNameArray.count;
+            //NSLog(@"logoCount %i",artworkNameArray.count);
+            higherCount=artworkCount;
+        }
+        
+        NSLog(@"higherCount %i",higherCount);
+        return higherCount;
+       
+    
+    }
     
 }
 
@@ -1962,105 +1939,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
     
     
-    /*interactiveHeaderString = @"Create Mat";
-    
-    //NSLog(@"addButton.tag:%ld",(long)sender.tag);
-    
-    int myInt = (int)sender.tag;
-    indexPathSend = (int)sender.tag;
-    //int indexSend = addButton.tag;
-    
-    //NSLog(@"sender %@",sender);
-    //NSLog(@"indexPathSend %d",indexPathSend);
-    //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
-    
-    nameString =[artworkNameArray objectAtIndex:indexPathSend];
-    //NSLog(@" nameStringLogoSelected %@",nameString);
-    
-    if (indexPathSend <artworkSellerArray.count){
-        
-        sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
-        
-        
-        if (sellerString==NULL)
-        {
-            
-            sellerString= @"No Seller Provided";
-            
-        }
-        
-    }
-    //TODO Check all strings for NULL
-    if (indexPathSend <artworkCompanyArray.count){
-        
-        companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
-        
-        if (companyString==NULL)
-        {
-            
-            companyString= @"Company";
-            
-        }
-        
-    }
-    
-    if (indexPathSend <artworkIDArray.count){
-        
-        numberString =[artworkIDArray objectAtIndex:indexPathSend];
-        
-        if (numberString==NULL)
-        {
-            
-            numberString= @"No Number has been provided";
-            
-        }
-        
-    }
-    
-    if (indexPathSend <artworkSizeArray.count){
-        
-        sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
-        
-        if (sizeString==NULL)
-        {
-            
-            sizeString= @"4'x6'";
-            
-        }
-        
-    }
-    
-    if (indexPathSend <artworkColorArray.count){
-        
-        logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
-        
-        
-        if (logoColorString==NULL)
-        {
-            
-            logoColorString= @"No Colors are available";
-            
-        }
-
-        
-    }
-    
-    if (indexPathSend <artworkFullImageArray.count){
-        
-        NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
-        NSString*httpString= @"http://";
-        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-        UIImage * iconImage;
-        iconImage = [UIImage imageWithData:data];
-        //NSLog(@"%@iconImage",iconImage);
-        
-        
-        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-        [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
-        
-        
-    }*/
+   
 
 
         
@@ -2068,14 +1947,15 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         //NSLog(@"addButton.tag:%ld",(long)sender.tag);
         
-        int myInt = (int)sender.tag;
+        //int myInt = (int)sender.tag;
         indexPathSend = (int)sender.tag;
-        //int indexSend = addButton.tag;
+    
+    if (indexPathSend>artworkNameArray.count){
         
-        //NSLog(@"sender %@",sender);
-        //NSLog(@"indexPathSend %d",indexPathSend);
-        //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
-        
+        indexPathSend=indexPathSend/artworkNameArray.count;
+
+    }
+    
         nameString =[artworkNameArray objectAtIndex:indexPathSend];
         //NSLog(@" nameStringLogoSelected %@",nameString);
         
@@ -2200,7 +2080,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     interactiveHeaderString = @"Edit Mat";
     //NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
-    int myInt = (int)sender.tag;
+    //int myInt = (int)sender.tag;
     indexPathSend = (int)sender.tag;
     
     
@@ -2233,7 +2113,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 }
 
                 
-       matColorString = [matColorArray objectAtIndex:indexPathSend];
+    matColorString = [matColorArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:matColorString]) {
         matColorString = nil;
         
@@ -2295,17 +2175,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
     
     
-    //end new code
-    //old code
-    /*NSString*httpString= @"http://";
-    NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-    UIImage * iconImage;
-    iconImage = [UIImage imageWithData:data];
     
-    //NSLog(@"%@iconImage",iconImage);
-    NSString  *imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
-    [UIImagePNGRepresentation(iconImage) writeToFile:imagePath1 atomically:YES];*/
     
     
     
@@ -2445,37 +2315,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         //goingController.numberString=numberString;
-        //goingController.sizeString=sizeString;
-        //NSLog(@"nameStringSend %@",nameString);
-        //goingController.logoColorString=logoColorString;
-        //goingController.matColorString=matColorString;
-        //goingController.matBGColorString=matBGColorString;
-        //goingController.interactiveHeaderString=interactiveHeaderString;
-        //NSLog(@"interactiveHeaderString %@",interactiveHeaderString);
-
         
-        /*goingController.artworkNameArray = artworkNameArray;
-        goingController.artworkSizeArray = artworkSizeArray;
-        goingController.artworkFormatArray = artworkFormatArray;
-        goingController.artworkIconArray = artworkIconArray;
-        goingController.artworkFullImageArray = artworkFullImageArray;
-        goingController.artworkIDArray = artworkIDArray;
-        goingController.artworkCompanyArray = artworkCompanyArray;
-        goingController.artworkSellerArray = artworkSellerArray;
-        goingController.artworkColorArray = artworkColorArray;
-        goingController.artworkCount = artworkCount;
-        
-        goingController.matNameArray = matNameArray;
-        goingController.matSizeArray = matSizeArray;
-        goingController.matFormatArray = matFormatArray;
-        goingController.matIconArray = matIconArray;
-        goingController.matFullImageArray = matFullImageArray;
-        goingController.matIDArray = matIDArray;
-        goingController.matCompanyArray = matCompanyArray;
-        goingController.matSellerArray = matSellerArray;
-        goingController.matColorArray = matColorArray;
-        goingController.matCount = matCount;*/
-
         
         
         
