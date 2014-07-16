@@ -68,11 +68,8 @@
 @synthesize matSizeAddFavString;
 
 @synthesize urlFavString;
-//@synthesize jsonLogoCount;
 @synthesize nearMeImagesArray;
 @synthesize nearMeNamesArray;
-//@synthesize button;
-//@synthesize logoChooseButton;
 @synthesize selectedIndex;
 @synthesize delegate=_delegate;
 //@synthesize delegateString=_delegateString;
@@ -1628,9 +1625,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    //NSString *titleSection =@"Media";
-    //UIImage*mediaThumbnail =[UIImage imageNamed:@"MapTestImage.png"];
-    //UIImage*mediaThumbnail = character.mediaThumbnailsArray;
+   
     
     
     
@@ -1730,33 +1725,11 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         }
         
         
-        /*if ( indexPath.item < artworkFullImageArray.count){
-            
-                        
-            NSString*urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
-            NSString*httpString= @"http://";
-            NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
-            NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-            UIImage * iconImage;
-            iconImage = [UIImage imageWithData:data];
-            
-            
-            [favCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
-            
-            
-            //[favCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
-
-        }*/
         
         if (indexPath.item > artworkFullImageArray.count-1){
             
-            /*UIImage * iconLogoImage;
             
-            iconLogoImage = [UIImage imageNamed:@"AssetsGreyBox1.png"];
-            //[favCell.logoChooseButton setImage:iconLogoImage forState:UIControlStateNormal];
-            [favCell.logoChooseButton setImage:iconLogoImage forState:UIControlStateNormal];*/
             favCell.logoChooseButton.hidden=YES;
-            //favCell.logoChooseButton1.hidden=YES;
             favCell.removeFavLogoButton.hidden=YES;
             favCell.removeFavLogoLabel.hidden=YES;
             favCell.logoLabel.hidden=YES;
@@ -2359,16 +2332,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        /*NSLog(@"nameStringSend %@",nameString);
-        goingController.nameString=nameString;
-        goingController.companyString=companyString;
-        goingController.sellerString=sellerString;
-        goingController.numberString=numberString;
-        goingController.sizeString=sizeString;
-        goingController.logoColorString=logoColorString;
-        goingController.matColorString=matColorString;
-        goingController.matBGColorString=matBGColorString;
-        goingController.interactiveHeaderString=interactiveHeaderString;*/
         
          goingController.artworkNameArray = artworkNameArray;
          goingController.artworkSizeArray = artworkSizeArray;
