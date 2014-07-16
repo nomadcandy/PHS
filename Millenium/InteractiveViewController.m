@@ -5334,8 +5334,10 @@ enum {
     _heightCircleField.text = @"3'";
     
     //CGRect myLogoMatRect = CGRectMake( 576.0f, 250.0f, 300.0f, 200.0f);
-    CGRect myLogoMatRect = CGRectMake( 150.0f, 100.0f, 300.0f, 200.0f);
-    
+    //CGRect myLogoMatRect = CGRectMake( 150.0f, 100.0f, 300.0f, 200.0f);
+    //CGRect myLogoMatRect = CGRectMake( 150.0f, 108.0f, 300.0f, 200.0f);
+    CGRect myLogoMatRect = CGRectMake( 120.5f, 88.0f, 360.0f, 240.0f);
+    //601 411
     matBGLogoView.frame=myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
@@ -5387,8 +5389,9 @@ enum {
     _heightField.text = @"6'";
     _heightCircleField.text = @"6'";
     
+    CGRect myLogoMatRect = CGRectMake(75.0f, 58.0f, 450.0f, 300.0f);
+    //CGRect myLogoMatRect = CGRectMake(2.0f, 8.0f, 600.0f, 400.0f);
     
-    CGRect myLogoMatRect = CGRectMake(2.0f, 30.0f, 600.0f, 400.0f);
     
     matBGLogoView.frame=myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
