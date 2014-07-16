@@ -5291,21 +5291,19 @@ enum {
         
         divideWidthFrame=601-b;
         dividedWidth=divideWidthFrame/2;
-        newXOrigin=724-dividedWidth;
+        //newXOrigin=724-dividedWidth;
         newXOrigin=dividedWidth;
         
         divideHeightFrame=416-a;
-        //divideHeightFrame=511-a;
         dividedHeight=divideHeightFrame/2;
         //newYOrigin=346-dividedHeight*2;
         //newYOrigin=dividedHeight;
         matBGLogoView.frame = CGRectMake (newXOrigin, dividedHeight, b , a);
         
-        
         //matBGLogoView.center = self.view.center;
-       // matBGLogoView.center = interactiveMatView.center;
+        //matBGLogoView.center = interactiveMatView.center;
         
-       //put logo back
+       //put logo back where it originally was
         float x,y;
         float a,b;
         x = logoPicButton.frame.size.width;
@@ -5313,22 +5311,38 @@ enum {
         a=logoPicButton.frame.origin.x;
         b=logoPicButton.frame.origin.y;
         
-        /*matBGLogoView.frame = CGRectMake(matBGLogoView.frame.origin.x,
-         matBGLogoView.frame.origin.y, matBGLogoView.width, matBGLogoView.height);*/
-        
         NSLog(@"image after aspect fit: width=%f height=%f",x,y);
-        
-        
-        
-        
-        
-       
         logoPicButton.frame = CGRectMake(a, b, x, y);
         
        
     } else{
         
-       //TODO add else statement
+        divideWidthFrame=601-b;
+        //divideWidthFrame=601-a;
+        dividedWidth=divideWidthFrame/2;
+        
+        //newXOrigin=dividedWidth;
+        
+        divideHeightFrame=416-a;
+        //divideHeightFrame=416-b;
+        dividedHeight=divideHeightFrame/2;
+        //newYOrigin=346-dividedHeight*2;
+        newYOrigin=dividedHeight;
+        matBGLogoView.frame = CGRectMake (dividedWidth, newYOrigin, b , a);
+        
+        //matBGLogoView.center = self.view.center;
+        //matBGLogoView.center = interactiveMatView.center;
+        
+        //put logo back where it originally was
+        float x,y;
+        float a,b;
+        x = logoPicButton.frame.size.width;
+        y = logoPicButton.frame.size.height;
+        a=logoPicButton.frame.origin.x;
+        b=logoPicButton.frame.origin.y;
+        
+        NSLog(@"image after aspect fit: width=%f height=%f",x,y);
+        logoPicButton.frame = CGRectMake(a, b, x, y);
     }
     
 }
