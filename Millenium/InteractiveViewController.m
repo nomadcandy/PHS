@@ -5253,7 +5253,7 @@ enum {
     portraitImageView.hidden=YES;
     landscapeImageView.hidden=YES;
     
-    textOrientField.hidden= NO;
+    textOrientField.hidden= YES;
     textOrientField.textColor = [UIColor redColor];
     textOrientField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
     textOrientField.backgroundColor=[UIColor whiteColor];
@@ -5298,7 +5298,7 @@ enum {
         dividedHeight=divideHeightFrame/2;
         //newYOrigin=346-dividedHeight*2;
         //newYOrigin=dividedHeight;
-        matBGLogoView.frame = CGRectMake (newXOrigin, dividedHeight, b , a);
+        matBGLogoView.frame = CGRectMake (newXOrigin, dividedHeight+10, b , a);
         
         //matBGLogoView.center = self.view.center;
         //matBGLogoView.center = interactiveMatView.center;
@@ -5318,20 +5318,15 @@ enum {
     } else{
         
         divideWidthFrame=601-b;
-        //divideWidthFrame=601-a;
         dividedWidth=divideWidthFrame/2;
         
-        //newXOrigin=dividedWidth;
+        
         
         divideHeightFrame=416-a;
-        //divideHeightFrame=416-b;
         dividedHeight=divideHeightFrame/2;
-        //newYOrigin=346-dividedHeight*2;
         newYOrigin=dividedHeight;
-        matBGLogoView.frame = CGRectMake (dividedWidth, newYOrigin, b , a);
+        matBGLogoView.frame = CGRectMake (dividedWidth, newYOrigin+10, b , a);
         
-        //matBGLogoView.center = self.view.center;
-        //matBGLogoView.center = interactiveMatView.center;
         
         //put logo back where it originally was
         float x,y;

@@ -50,7 +50,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B61-WR-Lik">
-                                <rect key="frame" x="423" y="91" width="601" height="511"/>
+                                <rect key="frame" x="423" y="77" width="601" height="525"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -5378,7 +5378,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="7Yo-1I-ggJ"/>
+        <segue reference="gYW-Ou-qn0"/>
         <segue reference="SGM-ZV-0fv"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
