@@ -5294,7 +5294,8 @@ enum {
         newXOrigin=724-dividedWidth;
         newXOrigin=dividedWidth;
         
-        divideHeightFrame=511-a;
+        divideHeightFrame=416-a;
+        //divideHeightFrame=511-a;
         dividedHeight=divideHeightFrame/2;
         //newYOrigin=346-dividedHeight*2;
         //newYOrigin=dividedHeight;
@@ -5410,7 +5411,10 @@ enum {
     _heightField.text = @"10'";
     _heightCircleField.text = @"10'";
     
-    CGRect myLogoMatRect = CGRectMake( 56.0f, 130.0f, 500.0f, 150.0f);
+    //CGRect myLogoMatRect = CGRectMake( 56.0f, 130.0f, 500.0f, 150.0f);
+    //CGRect myLogoMatRect = CGRectMake( 56.0f, 130.0f, 400.0f, 120.0f);
+    //601 416
+    CGRect myLogoMatRect = CGRectMake( 100.0f, 148.0f, 400.0f, 120.0f);
     
     matBGLogoView.frame=myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
