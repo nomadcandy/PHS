@@ -372,8 +372,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
     //NSArray*favoritesLogoFetchArray;
-    self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
+    // NSSet *uniqueFavLogosSet = [[managedObjectContext executeFetchRequest:fetchRequest   error:nil] mutableCopy];
+
+    self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //setReturnsDistinctResults:YES
     NSManagedObjectContext *managedObjectContext1 = [self managedObjectContext];
     NSFetchRequest *fetchRequestMat = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
     //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
@@ -381,10 +384,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     //NSArray *uniqueFavLogosSetArray = [NSSet setWithArray:favoritesLogoArray];
     
-    NSSet *uniqueFavLogosSet = [NSSet setWithArray:favoritesLogoArray];
-    NSSet *uniqueFavMatsSet = [NSSet setWithArray:favoritesMatArray];
-    NSLog(@"uniqueLogos %@",uniqueFavLogosSet);
-    NSLog(@"uniqueMats %@",uniqueFavMatsSet);
+    //NSSet *uniqueFavLogosSet = [NSSet setWithArray:favoritesLogoArray];
+    //NSSet *uniqueFavMatsSet = [NSSet setWithArray:favoritesMatArray];
+    //NSLog(@"uniqueLogos %@",uniqueFavLogosSet);
+    //NSLog(@"uniqueMats %@",uniqueFavMatsSet);
     NSLog(@"favoritesLogoArray %@",favoritesLogoArray);
     NSLog(@"favoritesMatArray %@",favoritesMatArray);
     // NSLog(@"logoSearch %@",logoSearch);
@@ -395,12 +398,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     //favoritesLogoArray= [favoritesMutArray copy];
     
-    favoritesLogoArray = [uniqueFavLogosSet copy];
+    //favoritesLogoArray = [uniqueFavLogosSet copy];
     NSLog(@"favoritesLogoArray %@",favoritesLogoArray);
     
     
     
-    
+    //[uniqueFavLogosSet enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
     [favoritesLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
         //NSLog(@"%@", object);

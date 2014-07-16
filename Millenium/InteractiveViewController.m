@@ -5216,7 +5216,7 @@ enum {
         difference=a-b/2;
         divide=difference/2;
         
-        //matBGLogoView.frame = CGRectMake (x+divide, y-divide, b , a);
+        //existing width-b
         
         matBGLogoView.frame = CGRectMake (x+divide/2, y-divide/2, b , a);
         
@@ -5235,6 +5235,7 @@ enum {
         divide=difference/2;
         
         xUse= x-divide;
+        
         
         matBGLogoView.frame = CGRectMake (x-divide/2, y+divide/2, b , a);
         //matBGLogoView.frame = CGRectMake (xUse, y+divide, b*100 , a*100);
@@ -5262,55 +5263,52 @@ enum {
     [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
 
-    /*orientString=@"landscape";
+    float x,y;
+    float a,b;
+    //float c,d;
+    
+    x=  matBGLogoView.frame.origin.x;
+    y=  matBGLogoView.frame.origin.y;
+    
+    a = matBGLogoView.frame.size.width;
+    b = matBGLogoView.frame.size.height;
     
     
-    if ([orientString isEqualToString:@"landscape"])
+    float divideWidthFrame;
+    float dividedWidth;
+    float divideHeightFrame;
+    float dividedHeight;
+    
+    float newXOrigin;
+    float newYOrigin;
+    
+    //float yUse;
+    
+    
+    
+    if(a > b){
         
-    {
         
-    
-
-    
-    //_widthField.text = _widthField.text;
-    _widthCircleField.text =_widthField.text;
-    
-    //_heightField.text =_heightField.text;
-    _heightCircleField.text = _heightField.text;
-    
-    
-    int wMat = [_widthField.text intValue];
-    int hMat = [_heightField.text intValue];
-    
-    int wMatHundred = wMat*100;
-    int hMatHundred = hMat*100;
-    
-    //int wMatHundredDivide = wMatHundred/2;
-    //int hMatHundredDivide = hMatHundred/2;
-    
-    
-    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, hMatHundred, wMatHundred);
-    
-    //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
-    
-    matBGLogoView.frame=myLogoMatRect;
-    //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
-    matBGLogoView.ContentMode=  UIViewContentModeCenter;
-    
-    
-   /* _widthField.text = @"3'";
-    _widthCircleField.text = @"5'";
-    
-    _heightField.text = @"3'";
-    _heightCircleField.text = @"5'";
-    
-    
-    CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 500.0f, 300.0f);
-    
-    matBGLogoView.frame=myLogoMatRect;
-    matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;*/
+        divideWidthFrame=601-b;
+        dividedWidth=divideWidthFrame/2;
+        newXOrigin=724-dividedWidth;
+        newXOrigin=dividedWidth;
         
-   // }
+        divideHeightFrame=511-a;
+        dividedHeight=divideHeightFrame/2;
+        //newYOrigin=346-dividedHeight*2;
+        //newYOrigin=dividedHeight;
+        matBGLogoView.frame = CGRectMake (newXOrigin, dividedHeight, b , a);
+        
+        //matBGLogoView.frame = CGRectMake (0, 0, b , a);
+        
+        //matBGLogoView.center = self.view.center;
+       // matBGLogoView.center = interactiveMatView.center;
+       
+    } else{
+        
+        
+    }
     
 }
 
