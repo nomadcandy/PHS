@@ -19,6 +19,10 @@
 @property (strong, nonatomic) IBOutlet UIButton *matChooseButton;
 @property (strong, nonatomic) IBOutlet UIButton *matChoose1Button;
 @property (strong, nonatomic) IBOutlet UIButton *goBack;
+@property (strong, nonatomic) IBOutlet UIButton *goBackLogo;
+
+@property (nonatomic,strong) IBOutlet UILabel *goBackLogoLabel;
+@property (nonatomic,strong) IBOutlet UILabel *goBackMatLabel;
 //@property (strong, nonatomic) IBOutlet UIButton *favButton;
 //@property (strong, nonatomic) IBOutlet UIButton *removeFavButton;
 //@property (strong, nonatomic) IBOutlet UIButton *saveButton;

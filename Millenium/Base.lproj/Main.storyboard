@@ -4449,8 +4449,10 @@
                                 <size key="customSize" width="970" height="543"/>
                                 <connections>
                                     <outlet property="goBack" destination="gCC-Br-Aki" id="aQr-YZ-5V9"/>
-                                    <outlet property="logoChooseButton" destination="dM1-bm-huB" id="qiZ-Dw-7m1"/>
-                                    <outlet property="logoLabel" destination="dfr-Ra-ajW" id="hbc-cd-NgC"/>
+                                    <outlet property="goBackLogo" destination="nDP-hG-Jdm" id="PcD-fm-y6Q"/>
+                                    <outlet property="goBackLogoLabel" destination="xgF-0b-q5i" id="sMd-gQ-PZ8"/>
+                                    <outlet property="logoChooseButton" destination="dM1-bm-huB" id="hB5-kc-pSL"/>
+                                    <outlet property="logoLabel" destination="dfr-Ra-ajW" id="8T0-sB-gG4"/>
                                     <outlet property="matChooseButton" destination="MXD-B2-aEM" id="SY1-rL-HMS"/>
                                     <outlet property="matLabel" destination="dhQ-O0-rVE" id="7Pw-ri-fTy"/>
                                     <outlet property="removeFavLogoButton" destination="0i0-RT-6jg" id="Uh1-I5-BOO"/>
@@ -5373,8 +5375,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
-        <segue reference="gYW-Ou-qn0"/>
+        <segue reference="7Yo-1I-ggJ"/>
+        <segue reference="SGM-ZV-0fv"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>

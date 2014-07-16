@@ -1747,11 +1747,37 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             //[favCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
 
         }*/
-        if ( indexPath.item <artworkFullImageArray.count){
+        
+        if (indexPath.item > artworkFullImageArray.count-1){
             
+            /*UIImage * iconLogoImage;
+            
+            iconLogoImage = [UIImage imageNamed:@"AssetsGreyBox1.png"];
+            //[favCell.logoChooseButton setImage:iconLogoImage forState:UIControlStateNormal];
+            [favCell.logoChooseButton setImage:iconLogoImage forState:UIControlStateNormal];*/
+            favCell.logoChooseButton.hidden=YES;
+            //favCell.logoChooseButton1.hidden=YES;
+            favCell.removeFavLogoButton.hidden=YES;
+            favCell.removeFavLogoLabel.hidden=YES;
+            favCell.logoLabel.hidden=YES;
+            favCell.goBackLogoLabel.hidden=YES;
+            favCell.goBackLogo.hidden=YES;
+        }
+       
+        else if (indexPath.item <= artworkFullImageArray.count){
+            
+            favCell.logoChooseButton.hidden=NO;
+            favCell.removeFavLogoButton.hidden=NO;
+            favCell.removeFavLogoLabel.hidden=NO;
+            favCell.logoLabel.hidden=NO;
+            favCell.goBackLogoLabel.hidden=NO;
+            favCell.goBackLogo.hidden=NO;
             
            urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
             //NSLog(@"urlMatString:%@",urlMatString);
+            
+            NSLog(@"indexPathItem:%i",indexPath.item);
+            
             
             //if ([string rangeOfString:@"102-Brown"].location == NSNotFound)
             if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
