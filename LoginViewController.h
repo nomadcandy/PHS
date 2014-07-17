@@ -13,6 +13,12 @@
 @interface LoginViewController : UIViewController
 
 
+@property (nonatomic) Reachability *hostReachability;
+@property (nonatomic) Reachability *internetReachability;
+@property (nonatomic) Reachability *wifiReachability;
+
+
+@property (nonatomic, strong) IBOutlet UILabel *connectionSummaryLabel;
 
 @property (nonatomic, strong) IBOutlet UITextField *loginField;
 @property (nonatomic, strong) IBOutlet UITextField *passwordField;

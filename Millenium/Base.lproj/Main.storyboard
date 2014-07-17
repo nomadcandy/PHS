@@ -2388,6 +2388,13 @@
                                 <rect key="frame" x="982" y="725" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnr-9O-bT0">
+                                <rect key="frame" x="316" y="130" width="393" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -2402,6 +2409,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="f2h-UF-ZmE" id="QcI-zo-d1M"/>
+                        <outlet property="connectionSummaryLabel" destination="vnr-9O-bT0" id="1Xr-8n-OFV"/>
                         <outlet property="goSearchButton" destination="7AH-ZR-YSA" id="ljF-uH-umg"/>
                         <outlet property="searchField" destination="ahh-66-7xL" id="X36-Rk-91j"/>
                         <segue destination="EOd-lr-Xtf" kind="modal" identifier="InteractiveSegue" id="wpq-PH-bdK"/>
@@ -5220,6 +5228,13 @@
                                 <rect key="frame" x="984" y="728" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygo-bf-37C">
+                                <rect key="frame" x="201" y="118" width="625" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="29"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -5234,6 +5249,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Fom-bt-WqC" id="ApW-9d-foW"/>
+                        <outlet property="connectionSummaryLabel" destination="ygo-bf-37C" id="SyU-Js-Nqn"/>
                         <outlet property="loginField" destination="nQA-fs-qCM" id="gax-ao-zP5"/>
                         <outlet property="passwordField" destination="d2d-4g-PCL" id="ZYb-Cg-0ul"/>
                     </connections>
@@ -5383,8 +5399,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gYW-Ou-qn0"/>
-        <segue reference="SGM-ZV-0fv"/>
-        <segue reference="aYA-g1-hsh"/>
+        <segue reference="QQh-is-hk2"/>
+        <segue reference="qOq-Ne-VbY"/>
+        <segue reference="wpq-PH-bdK"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -75,6 +75,13 @@
 //@property (nonatomic, strong) NSArray *onlyAudioFiles;
 //@property (strong, nonatomic) IBOutlet UIPickerView *audioFileList;
 
+
+@property (nonatomic) Reachability *hostReachability;
+@property (nonatomic) Reachability *internetReachability;
+@property (nonatomic) Reachability *wifiReachability;
+
+@property (nonatomic, strong) IBOutlet UILabel *connectionSummaryLabel;
+
 @property (copy,   nonatomic) NSURL *movieURL;
 @property (strong, nonatomic) MPMoviePlayerController *movieController;
 
