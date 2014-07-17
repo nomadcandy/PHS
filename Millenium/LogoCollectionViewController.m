@@ -156,11 +156,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [DIYMenu dismiss];
     
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     activityIndicator.alpha = 1.0;
-    activityIndicator.center = CGPointMake(160, 360);
+    activityIndicator.center = CGPointMake(50, 60);
     activityIndicator.hidesWhenStopped = NO;
     [self.view addSubview:activityIndicator];
+    [activityIndicator startAnimating];
     
      NSLog(@"locationIDString: %@", locationIDString);
     
@@ -1851,10 +1852,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
-    /*if (searchingString isEqualToString:@"s"){
     
     
-    } else{*/
     //collectionView.allowsMultipleSelection = YES;
     if (indexPath.section == 0)
         

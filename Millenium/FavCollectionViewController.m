@@ -1702,7 +1702,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if ( indexPath.item < artworkNameArray.count){
+        if ( indexPath.item < artworkNameArray.count && 0<artworkNameArray.count){
         
         
             
@@ -1726,7 +1726,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if (indexPath.item > artworkFullImageArray.count-1){
+        if (indexPath.item > artworkFullImageArray.count-1 ){
             
             
             favCell.logoChooseButton.hidden=YES;
@@ -1737,7 +1737,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackLogo.hidden=YES;
         }
        
-        else if (indexPath.item <= artworkFullImageArray.count){
+        else if (indexPath.item <= artworkFullImageArray.count && indexPath.item > 0){
             
             favCell.logoChooseButton.hidden=NO;
             favCell.removeFavLogoButton.hidden=NO;
@@ -1750,7 +1750,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
            NSLog(@"urlString:%@",urlString);
            NSLog(@"artworkFullImageArray:%@",artworkFullImageArray);
             
-           NSLog(@"indexPathItem:%i",indexPath.item);
+           //NSLog(@"indexPathItem:%i",indexPath.item);
             
             
             //if ([string rangeOfString:@"102-Brown"].location == NSNotFound)
@@ -1827,6 +1827,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
             
             favCell.matTitleLabel.text =matLabelString;
+        }else{
+            
+            favCell.matTitleLabel.hidden=YES;
         }
         
         
@@ -1848,7 +1851,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.matChooseButton.hidden=YES;
             favCell.removeFavMatButton.hidden=YES;
             favCell.removeFavMatLabel.hidden=YES;
-            //favCell.matTitleLabel.hidden=YES;
+            
             favCell.goBackMatLabel.hidden=YES;
             favCell.goBack.hidden=YES;
             

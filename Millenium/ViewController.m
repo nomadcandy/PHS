@@ -100,7 +100,7 @@
 {
     [super viewDidLoad];
     
-    
+    [activityIndicator stopAnimating];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
@@ -1308,7 +1308,10 @@ else{
 }*/
 
 
-
+-(void)viewDidDisappear:(BOOL)animated{
+    
+    [activityIndicator stopAnimating];
+}
 
 
 
