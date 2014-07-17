@@ -188,7 +188,7 @@
 @property (nonatomic,strong) IBOutlet UIButton *addFavMatButton;
 
 
-
+@property (nonatomic,strong) UILabel *headerLabel;
 
 @property (nonatomic,strong) IBOutlet UILabel *removeFavMatLabel;
 @property (nonatomic,strong) IBOutlet UILabel *addFavMatLabel;

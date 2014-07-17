@@ -17,7 +17,7 @@
 
 
 @synthesize searchingString;
-//@synthesize searchingString;
+@synthesize headerLabel;
 
 @synthesize favLogoCount;
 @synthesize favMatCount;
@@ -242,7 +242,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matColorArray = [favoritesMatArray valueForKey:@"color"];
         //matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
         
-        //matCount = matNameArray.count;
+        
         matCount = favoritesMatArray.count;
         NSLog(@"matCount: %i", favoritesMatArray.count);
         
@@ -252,12 +252,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     [self.collectionView reloadData];
-    
-
-    
-    
-    //removeFavLogoLabel.hidden= YES;
-    
     
     
     UIImageView *whitePadView = [[UIImageView alloc] initWithFrame:CGRectMake(00, 0, 1024, 170)];
@@ -306,6 +300,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     [favHereButton setBackgroundImage:favHereImage forState:UIControlStateNormal];
     //[favHereButton setImage:favHereImage forState:UIControlStateSelected];
     favHereButton.frame = CGRectMake(90.0, 33.0, 50.0, 50.0);
+    favHereButton.showsTouchWhenHighlighted = YES;
     [self.view addSubview:favHereButton];
     
     
@@ -318,6 +313,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
      UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
      [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
      repHereButton.frame = CGRectMake(226.0, 33.0, 45.0, 45.0);
+     repHereButton.showsTouchWhenHighlighted = YES;
      [self.view addSubview:repHereButton];
     
     
@@ -330,24 +326,10 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     UIImage*nearHereImage = [UIImage imageNamed:@"AssetsCompassButton.png"];
     [nearHereButton setBackgroundImage:nearHereImage forState:UIControlStateNormal];
     nearHereButton.frame = CGRectMake(158.0, 33.0, 50.0, 50.0);
+    nearHereButton.showsTouchWhenHighlighted = YES;
     [self.view addSubview:nearHereButton];
     
     
-    /*UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-     [searchModeButton addTarget:self
-     action:@selector(goSearchMode:)
-     forControlEvents:UIControlEventTouchDown];*/
-    
-    /*UIButton *searchModeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-     [searchModeButton addTarget:self
-     action:@selector(removeAllFavorites:)
-     forControlEvents:UIControlEventTouchDown];
-     
-     
-     UIImage*searchModeImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
-     [searchModeButton setBackgroundImage:searchModeImage forState:UIControlStateNormal];
-     searchModeButton.frame = CGRectMake(249.0, 33.0, 50.0, 50.0);
-     [self.view addSubview:searchModeButton];*/
     
     
     
@@ -362,22 +344,13 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     UIImage*searchHereImage = [UIImage imageNamed:@"AssetsSearchButton.png"];
     [searchHereButton setBackgroundImage:searchHereImage forState:UIControlStateNormal];
     searchHereButton.frame = CGRectMake(530.0, 35.0, 50.0, 50.0);
+    searchHereButton.showsTouchWhenHighlighted = YES;
     [self.view addSubview:searchHereButton];
 
     
     
     
-   /* UIButton *searchVariationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [searchVariationButton addTarget:self
-                         action:@selector(goSearchVariation:)
-               forControlEvents:UIControlEventTouchDown];
-    
-    
-    UIImage*searchVariationImage = [UIImage imageNamed:@"AssetsDefaultButton.png"];
-    [searchVariationButton setBackgroundImage:searchVariationImage forState:UIControlStateNormal];
-    searchVariationButton.frame = CGRectMake(570.0, 30.0, 40.0, 40.0);
-    [self.view addSubview:searchVariationButton];*/
-
+   
     
     
     UIButton *cintasHomeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -392,9 +365,13 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     [self.view addSubview:cintasHomeButton];
     
     
-    UILabel*headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(894, 70, 200, 30)];
-    headerLabel.font = [UIFont fontWithName:@"Avenir-Light" size:24];
+    
+    
+    
+    headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 80, 300, 30)];
+    headerLabel.font = [UIFont fontWithName:@"Avenir-Regular" size:24];
     headerLabel.text = @"FAVORITES";
+    headerLabel.textAlignment = NSTextAlignmentLeft;
     [self.view addSubview:headerLabel];
 
     
@@ -1537,7 +1514,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     }
     
 
-    
+    [self viewDidLoad];
     
 
     

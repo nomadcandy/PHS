@@ -16,7 +16,8 @@
 @implementation LogoCollectionViewController
 
 
-
+@synthesize headerLabel;
+@synthesize pageTitleString;
 
 @synthesize searchingString;
 //@synthesize searchingString;
@@ -234,6 +235,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
      [favHereButton setBackgroundImage:favHereImage forState:UIControlStateHighlighted];
     //[favHereButton setImage:favHereImage forState:UIControlStateSelected];
     favHereButton.frame = CGRectMake(90.0, 33.0, 50.0, 50.0);
+    favHereButton.showsTouchWhenHighlighted = YES;
     [self.view addSubview:favHereButton];
     
     
@@ -246,6 +248,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     UIImage*repHereImage = [UIImage imageNamed:@"AssetsRepButton.png"];
     [repHereButton setBackgroundImage:repHereImage forState:UIControlStateNormal];
     repHereButton.frame = CGRectMake(226.0, 33.0, 45.0, 45.0);
+    repHereButton.showsTouchWhenHighlighted = YES;
     [self.view addSubview:repHereButton];
     
     
@@ -258,6 +261,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     UIImage*nearHereImage = [UIImage imageNamed:@"AssetsCompassButton.png"];
     [nearHereButton setBackgroundImage:nearHereImage forState:UIControlStateNormal];
     nearHereButton.frame = CGRectMake(158.0, 33.0, 50.0, 50.0);
+    nearHereButton.showsTouchWhenHighlighted = YES;
     [self.view addSubview:nearHereButton];
     
     
@@ -317,9 +321,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     cintasHomeButton.frame = CGRectMake(888.0, 20.0, 137.0, 60.0);
     [self.view addSubview:cintasHomeButton];
     
-    UILabel*headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(932, 70, 200, 30)];
-    headerLabel.font = [UIFont fontWithName:@"Avenir-Light" size:24];
+    
+    headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 80, 300, 30)];
+    headerLabel.font = [UIFont fontWithName:@"Avenir-Regular" size:24];
     headerLabel.text = @"LOGOS";
+    headerLabel.textAlignment = NSTextAlignmentLeft;
     [self.view addSubview:headerLabel];
     
 }
@@ -357,6 +363,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goFav:(id)sender{
     
+    headerLabel.text = @"FAVORITES";
     
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;
@@ -480,6 +487,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goRep:(id)sender{
     
     
+    headerLabel.text = @"YOUR SKETCHES";
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(160, 360);
@@ -536,21 +544,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     artworkCount= searchLogoArray.count;
 
-   /* NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
-    
-    NSLog(@"UrlSearch: %@",urlSearch);
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
-    
-    
-    
-    //parse Array from web
-    NSArray *searchLogoArray = [NSJSONSerialization
-                                JSONObjectWithData:data
-                                options:NSJSONReadingAllowFragments
-                                error: &error];*/
-    
     
     
     
@@ -603,21 +596,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     matCount= searchMatArray.count;
 
-   /*
-    NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
-    
-    NSLog(@"URLLOGIN: %@",urlSearchMat);
-    NSError *errorMat = nil;
-    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
-    
-    
-    
-    
-    //parse Array from web
-    NSArray *searchMatArray = [NSJSONSerialization
-                               JSONObjectWithData:dataMat
-                               options:NSJSONReadingAllowFragments
-                               error: &error];*/
+   
     
     
     if(data!=nil)
@@ -689,6 +668,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 
 -(IBAction)goNearMe:(id)sender{
+    
+    headerLabel.text = @"YOUR LOCATION SKETCHES";
    
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;

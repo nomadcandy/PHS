@@ -65,28 +65,14 @@
     int artworkCount;
     int matCount;
     
-    //int jsonLogoCount;
     
-    /*NSMutableArray *artworkNameArray;
-    NSMutableArray *artworkSizeArray;
-    NSMutableArray *artworkFormatArray;
-    NSMutableArray *artworkFullImageArray;
-    NSMutableArray *artworkIconArray;
-    NSMutableArray *artworkIDArray;
-    NSMutableArray *artworkInfoArray;*/
-    
-    
-    //__unsafe_unretained id <StringPickerProtocol> _delegate;
-    //__unsafe_unretained id <ButtonPickerDelegate> _delegate;
-    //__unsafe_unretained id <ButtonPickerDelegate> _delegate;
-    //__unsafe_unretained id <StringSetDelegate> _delegateString;
   
     
     
 }
 
 
-//@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) NSString*pageTitleString;
 
 @property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
 
@@ -151,7 +137,6 @@
 
 
 @property (nonatomic, copy) NSString *searchingString;
-//@property (nonatomic, copy) NSString *searchingOtherString;
 
 
 @property (nonatomic, copy) NSString *firstNameString;
@@ -185,7 +170,9 @@
 @property (nonatomic,strong) IBOutlet UILabel *removeFavMatLabel;
 @property (nonatomic,strong) IBOutlet UILabel *addFavMatLabel;
 
-//@property (nonatomic,strong) IBOutlet UIButton *logoChoose1Button;
+@property (nonatomic,strong) IBOutlet UILabel *headerLabel;
+
+
 
 @property (nonatomic, copy) NSString*artworkNameAddFavString;
 @property (nonatomic, copy) NSString*artworkCompanyAddFavString;

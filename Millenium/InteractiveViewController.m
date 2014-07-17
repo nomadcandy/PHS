@@ -3215,14 +3215,13 @@ else
         _firstY = [chosenImageView center].y;
         
         
-        // _firstX = [logoPicButton center].x;
-        // _firstY = [logoPicButton center].y;
+       
     }
     
     translatedPoint = CGPointMake(_firstX+translatedPoint.x, _firstY+translatedPoint.y);
     
     [logoPicButton setCenter:translatedPoint];
-    // [self showOverlayWithFrame:chosenImageView.frame];
+   
 }
 
 
@@ -4124,22 +4123,6 @@ else
     }
 
 
-//}
-
-/*- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
- 
-    UITextField * alertTextField = [alertView textFieldAtIndex:0];
-    NSLog(@"alerttextfiled - %@",alertTextField.text);
- 
-    // do whatever you want to do with this UITextField.
- 
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",alertTextField.text]];
-    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
-
- 
- 
- 
-}*/
 -(IBAction)refreshLogoColors:(id)sender{
     
     [self.view addSubview:noteLayerView];
@@ -4156,7 +4139,7 @@ else
     textNoteField.backgroundColor=[UIColor whiteColor];
     textNoteField.text=@"ADD PRODUCTION NOTES";
     textNoteField.tag = 1;
-   // [self.view addSubview:textNoteField];
+   
     [self.noteLayerView addSubview:textNoteField];
     
     
@@ -4206,12 +4189,10 @@ enum {
     textDecField.textColor = [UIColor whiteColor];
     textDecField.font = [UIFont fontWithName:@"Avenir-Bold" size:14];
     textDecField.backgroundColor=[UIColor darkGrayColor];
-    //textDecField.text=@" ";
     textDecField.textAlignment= NSTextAlignmentCenter;
     textDecField.tag = 3;
     
     [self.decTextLayerView addSubview:textDecField];
-    //[self.view addSubview:textDecField];
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
@@ -4230,8 +4211,6 @@ enum {
 -(IBAction)showNotes:(id)sender{
     
     
-    
-    //textDecField.hidden = NO;
     noteLayerView.hidden =NO;
 }
 
@@ -4244,7 +4223,7 @@ enum {
     
     
     
-    //textDecField.hidden = NO;
+    
     decTextLayerView.hidden =NO;
 }
 
