@@ -10,7 +10,7 @@
 
 @interface FavCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *matLabel;
+@property (strong, nonatomic) IBOutlet UILabel *matTitleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *logoLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
 @property (strong, nonatomic) IBOutlet UIButton *logoChooseButton;

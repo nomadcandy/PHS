@@ -4468,7 +4468,7 @@
                                     <outlet property="logoChooseButton" destination="dM1-bm-huB" id="hB5-kc-pSL"/>
                                     <outlet property="logoLabel" destination="dfr-Ra-ajW" id="8T0-sB-gG4"/>
                                     <outlet property="matChooseButton" destination="MXD-B2-aEM" id="SY1-rL-HMS"/>
-                                    <outlet property="matLabel" destination="dhQ-O0-rVE" id="7Pw-ri-fTy"/>
+                                    <outlet property="matTitleLabel" destination="dhQ-O0-rVE" id="P3c-Tc-zCQ"/>
                                     <outlet property="removeFavLogoButton" destination="0i0-RT-6jg" id="Uh1-I5-BOO"/>
                                     <outlet property="removeFavLogoLabel" destination="3X3-R8-0dl" id="BdK-ej-F1t"/>
                                     <outlet property="removeFavMatButton" destination="TNa-GR-k0J" id="fb1-7Y-22X"/>
@@ -5399,8 +5399,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="QQh-is-hk2"/>
-        <segue reference="qOq-Ne-VbY"/>
-        <segue reference="wpq-PH-bdK"/>
+        <segue reference="SGM-ZV-0fv"/>
+        <segue reference="7Yo-1I-ggJ"/>
+        <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>
