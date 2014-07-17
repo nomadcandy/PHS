@@ -157,11 +157,13 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     [DIYMenu dismiss];
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     activityIndicator.alpha = 1.0;
-    activityIndicator.center = CGPointMake(1000, 755);
+    activityIndicator.center = CGPointMake(50, 60);
     activityIndicator.hidesWhenStopped = NO;
     [self.view addSubview:activityIndicator];
+    [activityIndicator startAnimating];
+
    
     if (locationIDString==nil) {
         
