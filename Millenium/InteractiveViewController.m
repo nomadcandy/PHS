@@ -5419,8 +5419,10 @@ enum {
     _heightField.text = @"6'";
     _heightCircleField.text = @"6'";
     
-    CGRect myLogoMatRect = CGRectMake(75.0f, 58.0f, 450.0f, 300.0f);
-    //CGRect myLogoMatRect = CGRectMake(2.0f, 8.0f, 600.0f, 400.0f);
+    //CGRect myLogoMatRect = CGRectMake(75.0f, 58.0f, 450.0f, 300.0f);
+    //CGRect myLogoMatRect = CGRectMake(30.0f, 23.0f, 540.0f, 360.0f);
+     CGRect myLogoMatRect = CGRectMake(41.0f, 33.0f, 520.0f, 346.0f);
+   
     
     
     matBGLogoView.frame=myLogoMatRect;
