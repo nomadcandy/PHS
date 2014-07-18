@@ -270,6 +270,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    portraitImageView.hidden=YES;
     [self.fontPicker removeFromSuperview];
     //self.tapGestureRecognizer.delegate = self;
     colorButtonHideView.hidden=YES;
@@ -534,20 +536,23 @@
     
     if([orientString isEqualToString:@"landscape"])
     {
-        portraitImageView.hidden=YES;
-        landscapeImageView.hidden=NO;
+        //portraitImageView.hidden=YES;
+        //landscapeImageView.hidden=NO;
+        textOrientField.text =@"Portrait";
         
     }
     
     if([orientString isEqualToString:@"portrait"])
     {
-        portraitImageView.hidden=NO;
-        landscapeImageView.hidden=YES;
+        //portraitImageView.hidden=NO;
+        //landscapeImageView.hidden=YES;
+         textOrientField.text =@"Landscape";
 
         
     } else {
-        portraitImageView.hidden=YES;
-        landscapeImageView.hidden=YES;
+        textOrientField.text =@"";
+        //portraitImageView.hidden=YES;
+        //landscapeImageView.hidden=YES;
     }
     
     if ([sizeString isEqualToString:@"2'x3'"])
@@ -605,7 +610,7 @@
           forControlEvents:UIControlEventEditingChanged];
 
     
-    textOrientField.hidden= YES;
+    //textOrientField.hidden= YES;
     
     
     _widthField.text = @"3'";
@@ -976,26 +981,65 @@
     
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
+        
+        
+        
+        
+        
+        [steelBlueButton setEnabled:NO];
+        [_suedeButton setEnabled:NO];
+        [_whiteButton setEnabled:NO];
+        [_roseButton setEnabled:NO];
+        [_royalBlueButton setEnabled:NO];
+        [_sandalWoodButton setEnabled:NO];
+        [_silverButton setEnabled:NO];
+        [_orangeButton setEnabled:NO];
+        [_purpleButton setEnabled:NO];
+        [_redButton setEnabled:NO];
+        [_goldButton setEnabled:NO];
+        [_greyButton setEnabled:NO];
+        [_lightBlueButton setEnabled:NO];
+        [_navyButton setEnabled:NO];
+        [_emeraldGreenButton setEnabled:NO];
+        [_forestGreenButton setEnabled:NO];
+        [_cranberryButton setEnabled:NO];
+        [_darkGoldButton setEnabled:NO];
+        [_charcoalButton setEnabled:NO];
+        [_chocolateButton setEnabled:NO];
+        [_clayButton setEnabled:NO];
+        [_blackButton setEnabled:NO];
+        [_brownButton setEnabled:NO];
+        [_burgundyButton setEnabled:NO];
+        [_aquamarineButton setEnabled:NO];
+        [_turquoiseButton setEnabled:NO];
+        [_yellowButton setEnabled:NO];
+       
+
+        
+        
+        
         colorButtonHideView.hidden=NO;
         
         if([orientString isEqualToString:@"landscape"])
         {
-            portraitImageView.hidden=YES;
-            landscapeImageView.hidden=NO;
+            textOrientField.text =@"PORTRAIT";
+            //portraitImageView.hidden=YES;
+            //landscapeImageView.hidden=NO;
             
         }
         
         if([orientString isEqualToString:@"portrait"])
         {
-            portraitImageView.hidden=NO;
-            landscapeImageView.hidden=YES;
+            //portraitImageView.hidden=NO;
+            //landscapeImageView.hidden=YES;
+             textOrientField.text =@"LANDSCAPE";
             
         }
         
         else {
-            
-            portraitImageView.hidden=YES;
-            landscapeImageView.hidden=YES;
+            textOrientField.text =@"";
+            //portraitImageView.hidden=YES;
+            //landscapeImageView.hidden=YES;
             
         }
 
@@ -1924,23 +1968,24 @@
         
         if([orientString isEqualToString:@"landscape"])
         {
-            portraitImageView.hidden=YES;
-            landscapeImageView.hidden=NO;
+            //portraitImageView.hidden=YES;
+            //landscapeImageView.hidden=NO;
+            textOrientField.text =@"PORTRAIT";
             
         }
         
         if([orientString isEqualToString:@"portrait"])
         {
-            portraitImageView.hidden=NO;
-            landscapeImageView.hidden=YES;
-            
+            //portraitImageView.hidden=NO;
+            //landscapeImageView.hidden=YES;
+            textOrientField.text= @"LANDSCAPE";
         }
         
         else {
             
-            portraitImageView.hidden=YES;
-            landscapeImageView.hidden=YES;
-            
+            //portraitImageView.hidden=YES;
+            //landscapeImageView.hidden=YES;
+            textOrientField.text= @"";
         }
 
         matView1.hidden= YES;
@@ -5116,8 +5161,8 @@ enum {
 
 -(IBAction) Portrait:(id)sender{
     
-    portraitImageView.hidden=NO;
-    landscapeImageView.hidden=YES;
+    //portraitImageView.hidden=NO;
+    //landscapeImageView.hidden=YES;
     
     textOrientField.hidden= NO;
     
@@ -5194,14 +5239,27 @@ enum {
 
 -(IBAction)Landscape:(id)sender{
     
-    portraitImageView.hidden=YES;
-    landscapeImageView.hidden=YES;
+    //portraitImageView.hidden=YES;
+    //landscapeImageView.hidden=YES;
     
-    textOrientField.hidden= YES;
-    textOrientField.textColor = [UIColor redColor];
-    textOrientField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
-    textOrientField.backgroundColor=[UIColor whiteColor];
-    textOrientField.text=@"Landscape";
+    //textOrientField.hidden= YES;
+    //textOrientField.textColor = [UIColor redColor];
+    //textOrientField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+    //textOrientField.backgroundColor=[UIColor whiteColor];
+    
+    if ([orientString isEqualToString:@"Landscape"])
+    {
+        
+        textOrientField.text=@"Landscape";
+        orientString=@"Portrait";
+        
+    }else{
+        
+        
+        textOrientField.text=@"Portrait";
+        orientString=@"Landscape";
+        
+    }
     //[self.view addSubview:textOrientField];
     
     [textOrientField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
