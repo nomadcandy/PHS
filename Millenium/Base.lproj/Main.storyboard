@@ -2241,7 +2241,12 @@
                                 <connections>
                                     <outlet property="addFavLogoButton" destination="lUl-ep-ejy" id="yYI-qS-edW"/>
                                     <outlet property="addFavLogoLabel" destination="c7E-CN-fVm" id="jbP-YS-ccV"/>
-                                    <outlet property="goBack" destination="wgw-lL-oGw" id="mnK-DO-bPa"/>
+                                    <outlet property="addFavMatButton" destination="Och-Yk-Sfk" id="b4A-AY-4na"/>
+                                    <outlet property="addFavMatLabel" destination="43x-as-0ka" id="lCz-GC-KpY"/>
+                                    <outlet property="goBack" destination="AlH-HA-1kT" id="kf3-xx-Xxb"/>
+                                    <outlet property="goBackLogoLabel" destination="hrF-jo-vO6" id="y8V-pa-aY4"/>
+                                    <outlet property="goBackMat" destination="wgw-lL-oGw" id="XWF-a6-PHT"/>
+                                    <outlet property="goBackMatLabel" destination="Fsw-ya-3bq" id="ibi-D0-vUs"/>
                                     <outlet property="logoChooseButton" destination="NGC-wB-rpF" id="MmV-f8-uAv"/>
                                     <outlet property="logoLabel" destination="ytT-DL-OMq" id="ZQx-PS-9o4"/>
                                     <outlet property="matChooseButton" destination="LqT-uu-N44" id="1pB-9q-vx7"/>

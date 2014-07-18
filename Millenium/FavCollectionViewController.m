@@ -615,7 +615,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
             artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-            artworkCount= artworkNameArray.count;
+            
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
@@ -623,7 +623,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
             
-            artworkCount = artworkNameArray.count;
+            
             
         }];
         
@@ -640,7 +640,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
             artworkColorArray = [searchMatArray valueForKey:@"Color"];
             
-            matCount = matNameArray.count;
+            
             
             
             
@@ -787,7 +787,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-        artworkCount= artworkNameArray.count;
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
         artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
@@ -795,7 +794,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         
-        artworkCount = artworkNameArray.count;
+        
         
     }];
     
@@ -813,7 +812,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         artworkColorArray = [searchMatArray valueForKey:@"Color"];
         
-        matCount = matNameArray.count;
+        
         
         [self.collectionView reloadData];
 
@@ -969,7 +968,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-        artworkCount= artworkNameArray.count;
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
         artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
@@ -977,7 +975,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         
-        artworkCount= artworkNameArray.count;
         
         }];
         
@@ -986,8 +983,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
             
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-            matCount= matNameArray.count;
-            
+        
         
             //adding an array to COREDATA
             //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
@@ -1011,7 +1007,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             matBGColorArray=[searchMatArray valueForKey:@"BGColor"];
             matLocationIDArray=[searchMatArray valueForKey:@"BGColor"];
 
-            matCount= matNameArray.count;
+        
         
         [self.collectionView reloadData];
         
@@ -1539,6 +1535,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
     
    else{
+       
         NSLog(@"artworkCount %i",artworkCount);
         NSLog(@"matCount %i",matCount);
         if (artworkCount< matCount){
@@ -1705,7 +1702,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if (indexPath.item > artworkFullImageArray.count-1 ){
+        if (indexPath.item > artworkFullImageArray.count-1 || artworkFullImageArray.count ==0){
             
             
             favCell.logoChooseButton.hidden=YES;
@@ -1716,7 +1713,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackLogo.hidden=YES;
         }
        
-        else if (indexPath.item <= artworkFullImageArray.count && indexPath.item > 0){
+        else if (indexPath.item <= artworkFullImageArray.count && artworkFullImageArray.count > 0){
             
             favCell.logoChooseButton.hidden=NO;
             favCell.removeFavLogoButton.hidden=NO;
@@ -1798,17 +1795,17 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if ( indexPath.item < matNameArray.count){
+        if ( indexPath.item < matNameArray.count && matNameArray.count>0){
             
             
-            //favCell.matTitleLabel.hidden=NO;
             
             NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
-            
             favCell.matTitleLabel.text =matLabelString;
+        
         }else{
             
             favCell.matTitleLabel.hidden=YES;
+            
         }
         
         
@@ -1825,7 +1822,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        if (indexPath.item > matFullImageArray.count-1){
+        if (indexPath.item > matFullImageArray.count-1 && matFullImageArray.count >0){
             
             favCell.matChooseButton.hidden=YES;
             favCell.removeFavMatButton.hidden=YES;
@@ -1837,16 +1834,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         }
 
         
-        
-        
-
-        //NSString *searchString = @"cintas";
-        
-        /*NSString *beginsTest = @"Agencies";
-        NSRange prefixRange = [urlMatString rangeOfString:searchString
-                                                options:(NSAnchoredSearch | NSCaseInsensitiveSearch)];*/
      
-        else if ( indexPath.item <= matFullImageArray.count){
+        else if ( indexPath.item <= matFullImageArray.count && matFullImageArray.count > 0){
         
            
             favCell.matChooseButton.hidden=NO;
@@ -1857,9 +1846,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBack.hidden=NO;
 
             urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
-            //NSLog(@"urlMatString:%@",urlMatString);
-            
-            //if ([string rangeOfString:@"102-Brown"].location == NSNotFound)
            if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
            
             {
@@ -1915,11 +1901,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             selectedIndex=[indexPath row];
             _matChooseButton.tag=[indexPath row];
-            /*NSLog(@"addButton.tag:%ld",(long)_matChooseButton.tag);
-            NSLog(@"indexPathSender1:%@",indexPath);
-            NSLog(@"rowSelectedHere %i",rowSelectedHere);
             
-            NSLog(@"indexPathSender:%ld",(long)favCell.tag);*/
             
             UIButton*button = [favCell matChooseButton];
             button.tag = selectedIndex;
@@ -1959,22 +1941,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         interactiveHeaderString = @"Create Mat";
-        
-        //NSLog(@"addButton.tag:%ld",(long)sender.tag);
-        
-        //int myInt = (int)sender.tag;
         indexPathSend = (int)sender.tag;
-    
-    if (indexPathSend>artworkNameArray.count){
-        
-        indexPathSend=indexPathSend/artworkNameArray.count;
-
-    }
     
         nameString =[artworkNameArray objectAtIndex:indexPathSend];
         //NSLog(@" nameStringLogoSelected %@",nameString);
         
-        if (indexPathSend <artworkFullImageArray.count){
+        if (indexPathSend <artworkFullImageArray.count && artworkFullImageArray.count > 0){
             
             logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
             

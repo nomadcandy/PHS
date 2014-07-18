@@ -84,6 +84,7 @@
 @property (nonatomic, assign) int rowSelectedHere;
 @property (nonatomic, assign) int rowSelectedSend;
 
+@property (nonatomic, assign) int higherCount;
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
 
