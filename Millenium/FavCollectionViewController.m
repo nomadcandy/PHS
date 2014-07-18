@@ -615,10 +615,10 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
             artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-            
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
+            NSLog (@"artworkFullImageArray %@",artworkFullImageArray);
             artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
@@ -1061,19 +1061,17 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     
-    //NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+   
    
     
     
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
-    //self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     self.favoritesLogoArray = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
     
     
-   /* NSFetchRequest * removeAllLogos = [[NSFetchRequest alloc] init];
-    [removeAllLogos setEntity:[NSEntityDescription entityForName:@"LogoFavorite" inManagedObjectContext:context]];*/
+   
     [fetchRequest setIncludesPropertyValues:NO]; //only fetch the managedObjectID
     
     NSError * error = nil;
@@ -1111,19 +1109,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 -(IBAction)addMatFavorite:(id)sender{
     
     
-   /* matUrlAddFavString =[matFullImageArray objectAtIndex:indexPathSend];
-    matNameAddFavString =[matNameArray objectAtIndex:indexPathSend];
-    matSellerAddFavString =[matSellerArray objectAtIndex:indexPathSend];
-    matCompanyAddFavString =[matCompanyArray objectAtIndex:indexPathSend];
-    matIDAddFavString =[matIDArray objectAtIndex:indexPathSend];
-    matLocationIDAddFavString =[matLocationIDArray objectAtIndex:indexPathSend];
-    matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
-    matBGColorAddFavString =[matBGColorArray objectAtIndex:indexPathSend];
-    matSizeAddFavString =[matSizeArray objectAtIndex:indexPathSend];
-    
-    
-    matSizeAddFavString =[matIDArray objectAtIndex:indexPathSend];
-    matLocationIDAddFavString = [matLocationIDArray objectAtIndex:indexPathSend];*/
+  
 
     
     if([NSNull null] != [matFullImageArray objectAtIndex:indexPathSend])
@@ -1576,13 +1562,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
          [[logoHeaderCell cintasButton] addTarget:self action:@selector(goHome:) forControlEvents:UIControlEventTouchUpInside];
         
         
-       //[[logoHeaderCell searchButton] addTarget:self action:@selector(goSearch:) forControlEvents:UIControlEventTouchUpInside];
-        
-        //searchOutField = searchOutField;
-        
-        //searchString=logoHeaderCell.searchField.text;
-        
-        //logoHeaderCell.searchField.text = @"palm"; // or other data from your model*/
         
             reusableview = logoHeaderCell;
             
@@ -1591,7 +1570,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     
-    //NSString *searchTerm = self.searches[indexPath.section]; [headerView setSearchText:searchTerm];
+    
     return reusableview;
 }
 
@@ -1648,11 +1627,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
 {
-    /*if (searchingString isEqualToString:@"s"){
     
-    
-    } else{*/
-    //collectionView.allowsMultipleSelection = YES;
     if (indexPath.section == 0)
         
         
@@ -1702,7 +1677,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if (indexPath.item > artworkFullImageArray.count-1 || artworkFullImageArray.count ==0){
+        if (indexPath.item > artworkFullImageArray.count || artworkFullImageArray.count == 0){
             
             
             favCell.logoChooseButton.hidden=YES;
@@ -1722,14 +1697,18 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackLogoLabel.hidden=NO;
             favCell.goBackLogo.hidden=NO;
             
-           urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
-           NSLog(@"urlString:%@",urlString);
-           NSLog(@"artworkFullImageArray:%@",artworkFullImageArray);
+            if (artworkFullImageArray.count>0){
+                
+                urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+                NSLog(@"urlString:%@",urlString);
+                
+            }else{
+                
+                urlString=@"";
+            }
             
-           //NSLog(@"indexPathItem:%i",indexPath.item);
             
             
-            //if ([string rangeOfString:@"102-Brown"].location == NSNotFound)
             if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
                 
             {
