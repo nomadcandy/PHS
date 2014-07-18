@@ -380,7 +380,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkColorArray = [favoritesLogoArray valueForKey:@"Color"];
         artworkCompanyArray = [favoritesLogoArray valueForKey:@"Company"];
         
-        //artworkCount = artworkNameArray.count;
         artworkCount = favoritesLogoArray.count;
 
         
@@ -556,17 +555,16 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
             NSLog(@"artworkNameArray %@",artworkNameArray);
-            artworkCount= artworkNameArray.count;
+            
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
             NSLog(@"artworkFullImageArray %@",artworkFullImageArray);
-           
             artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
             
-            //artworkCount = artworkNameArray.count;
+            
             
         }];
         
@@ -734,7 +732,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
             artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-            artworkCount= artworkNameArray.count;
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
@@ -742,7 +739,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         
-            artworkCount = artworkNameArray.count;
+            
         
         }];
     
@@ -913,7 +910,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
             artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-            artworkCount= artworkNameArray.count;
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
@@ -2011,8 +2007,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
     matColorString =[matColorArray objectAtIndex:indexPathSend];
     //NSLog(@"matColorString %@",matColorString);
-    //matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
-    //NSLog(@"matBGColorString %@",matBGColorString);
+    matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
+    NSLog(@"matBGColorString %@",matBGColorString);
     //interactiveHeaderString = @"Edit Mat";
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];

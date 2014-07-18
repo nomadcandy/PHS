@@ -297,18 +297,7 @@
     
     pickerViewFontArray=fontNames;
     
-    
-    
-    /*[[NSMutableArray alloc] initWithObjects:
-     [UIImage imageNamed:@"one.jpg"],
-     [UIImage imageNamed:@"two.jpg"],
-     [UIImage imageNamed:@"three.jpg"],
-     [UIImage imageNamed:@"four.jpg"],
-     [UIImage imageNamed:@"five.jpg"], nil];*/
-    
-    
-    
-    
+        
     
      colorNamesImagesArray =@[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Steel Blue_121.jpg"]],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Suede_123.jpg"]],
@@ -4622,21 +4611,10 @@ enum {
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        //NSLog(@"%@", object);
-        //NSLog(@"searchLogoArray %@",searchLogoArray);
-        
-        
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-        artworkCount= artworkNameArray.count;
-        
-        
-        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-        //NSLog(@"artworkSizeArray %@",artworkSizeArray);
         artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        //NSLog(@"artworkFormatString %@",artworkFormatArray);
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        //NSLog(@"fullImageArray %@",artworkFullImageArray);
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
@@ -4651,31 +4629,17 @@ enum {
     
     [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-            //NSLog(@"%@", object);
-            //NSLog(@"searchMatArray %@",searchMatArray);
+        
         
         
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
             matCount= matNameArray.count;
-            //NSLog(@"matNameArray: %@", matNameArray);
-            //NSLog(@"matNameArrayCount: %d", matNameArray.count);
-        
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-            //NSLog(@"matSizeArray %@",matSizeArray);
-        
             matFormatArray = [searchMatArray valueForKey:@"Format"];
-            //NSLog(@"matFormatString %@",matFormatArray);
-        
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-            //NSLog(@"fullImageArray %@",matFullImageArray);
-        
-        
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
-        
             matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
             matSellerArray = [searchMatArray valueForKey:@"Seller"];
-            //NSLog(@"matNameSellerArrayCount: %d", matSellerArray.count);
-        
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             matColorArray = [searchMatArray valueForKey:@"Color"];
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];

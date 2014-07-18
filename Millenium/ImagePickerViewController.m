@@ -779,13 +779,13 @@
     
     
     artworkCount= searchLogoArray.count;
-    //Mat Search Begin
+    
     
     NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", searchString];
     
     
     
-    //NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
+    
         
         
     NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
@@ -842,7 +842,7 @@
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
         
         
-        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
+       
         
         
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
@@ -854,11 +854,7 @@
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
         
-        artworkCount= artworkNameArray.count;
-
         
-        //
-
         
         
         
@@ -867,34 +863,17 @@
     
     [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        //NSLog(@"%@", object);
-        //NSLog(@"searchMatArray %@",searchMatArray);
+        
         
         
         matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-        //NSLog(@"artWorkNameArray: %@", matNameArray);
-        
-        
-        
-        
-        
         matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-        //NSLog(@"matSizeArray %@",matSizeArray);
-        
         matFormatArray = [searchMatArray valueForKey:@"Format"];
-        //NSLog(@"matFormatString %@",matFormatArray);
-        
-        
-        
-        
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-        //NSLog(@"fullImageArray %@",matFullImageArray);
-        
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         matColorArray = [searchMatArray valueForKey:@"Color"];
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
-        
         matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
         matSellerArray = [searchMatArray valueForKey:@"Seller"];
         

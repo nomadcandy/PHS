@@ -387,10 +387,10 @@
     
     NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
+    artworkCount=searchLogoArray.count;
     
     
-    
-    /*NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=bestMatch&interactiveOnly=0&locationID=-1", searchString];*/
+   
         
         NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", searchString];
     
@@ -436,83 +436,27 @@
         
         
         
-        //matCount= searchMatArray.count;
+        matCount= searchMatArray.count;
         
     
-  /*  NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
-    
-    NSLog(@"URLSearchMat: %@",urlSearchMat);
-    NSError *errorMat = nil;
-    NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
-    
-    
-    
-    //parse Array from web
-    NSArray *searchMatArray = [NSJSONSerialization
-                               JSONObjectWithData:dataMat
-                               options:NSJSONReadingAllowFragments
-                               error: &error];*/
-    
-    
-    
-   // NSLog(@"%@SearchMatArray",searchMatArray);
+  
     
     matCount=searchMatArray.count;
 
     
     [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        //NSLog(@"%@", object);
-        //NSLog(@"searchLogoArray %@",searchLogoArray);
-       
+        
        
         artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-        artworkCount= artworkNameArray.count;
-        
-        //NSLog(@"artWorkNameArray: %@", artworkNameArray);
-        
-        
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-      /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-        
-        for (NSString *anArtworkName in logoSearchs) {
-            NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-            NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        
-        
-       
-        
         artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
-                
-       
-        
-       artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
-        //NSLog(@"artworkFormatString %@",artworkFormatArray);
-        
-        
-        
-        
+        artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
         artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-        //NSLog(@"fullImageArray %@",artworkFullImageArray);
-        
-        
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
-                
-        
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
-        //NSLog(@"idString %@",idString);
-        
-        
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
-        
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
-        //NSLog(@"artworkColorArray %@",artworkColorArray);
-        
-        //NSLog(@"locationIDString %@",locationIDString);
         
         
         
@@ -524,43 +468,20 @@
     
     [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
         
-        //NSLog(@"%@", object);
-        //NSLog(@"searchMatArray %@",searchMatArray);
-        
         
         matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-        matCount= matNameArray.count;
-        
-        //NSLog(@"artWorkNameArray: %@", matNameArray);
-        
-        
-        //adding an array to COREDATA
-        //NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == $EMPLOYEE_ID"];
-        /*  NSString *predicateString = [NSString stringWithFormat @"artworkNameArray == ArtworkName"];
-         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateString];
-         
-         for (NSString *anArtworkName in logoSearchs) {
-         NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-         NSPredicate *localPredicate = [predicate predicateWithSubstitutionVariables:variables];*/
-        
-        
-        
-        
-        
         matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
         matFormatArray = [searchMatArray valueForKey:@"Format"];
-        //NSLog(@"matFormatString %@",matFormatArray);
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-        //NSLog(@"fullImageArray %@",matFullImageArray);
+        
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
         matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
         matSellerArray = [searchMatArray valueForKey:@"Seller"];
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
-        //NSLog(@"idString %@",idString);
+        
         matColorArray = [searchMatArray valueForKey:@"Color"];
-        //NSLog(@"matColorArray %@",matColorArray);
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
-        //NSLog(@"matBGColorArray %@",matBGColorArray);
+       
 
          [activityIndicator stopAnimating];
         
@@ -587,34 +508,7 @@
     }
 
     
-    //declare variable and return count of images returned
-    //int jsonLogoCount;
-    //jsonLogoCount = artworkNameArray.count;
     
-   // NSLog(@"jsonLogoCount %d",jsonLogoCount);
-     /*for (int i = 0;i<jsonLogoCount;i++){
-        
-        
-        
-        NSDictionary*logosNameDictionary  = [artworkNameArray objectAtIndex:i];
-        
-        NSLog(@"logosDictionary %@",logosNameDictionary);
-        
-    }*/
-    
-        //NSManagedObject *myManagedObject;
-        /*for (int i=0;i<jsonLogoCount;i++) {
-        
-                    artworkNameAddString =[artworkNameArray objectAtIndex:i];
-                    NSLog(@"artworkNameAddString= %@", artworkNameAddString);
-            
-                     //calls method to add the string to CoreData
-                    //[self insertNewManagedObject:[artworkNameArray objectAtIndex:i]];
-                    [self insertNewManagedObject:artworkNameAddString];
-            
-               }*/
-    
-       
     
     
 }
@@ -627,24 +521,15 @@
         
         
         
-        
-        //NSLog(@"locationIDString: %@", locationIDString);
-        
-        
-       /* NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-        [f setNumberStyle:NSNumberFormatterDecimalStyle];
-        NSNumber *myLocationNumber = [f numberFromString:locationIDString];*/
-        
-        //int locationINT = [locationIDString integerValue];
+       
         
         //Search Logos
         NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=%@&userID=0",20,locationIDString];
         
-         //NSLog(@"URLSearchString: %@",urlSearchString);
         
         NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
         
-        //NSLog(@"URLSearchNearMe: %@",urlSearch);
+        
         NSError *error = nil;
         NSData *data = [NSData dataWithContentsOfURL:urlSearch];
         
@@ -659,7 +544,7 @@
         
         
         
-        
+        artworkCount=searchLogoArray.count;
         
         //Search Mats
         NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=%@&userID=0",20,locationIDString];
@@ -683,7 +568,7 @@
         
         
         
-        
+        matCount=searchMatArray.count;
         
         [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
             
@@ -691,7 +576,6 @@
             
             
             artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-            artworkCount= artworkNameArray.count;
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
@@ -699,7 +583,7 @@
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
             
-            artworkCount = artworkNameArray.count;
+            
             
         }];
         
@@ -717,7 +601,7 @@
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
             artworkColorArray = [searchMatArray valueForKey:@"Color"];
             
-            matCount = matNameArray.count;
+           
             
             
             
