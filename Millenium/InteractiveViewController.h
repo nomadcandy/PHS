@@ -107,6 +107,8 @@
 @property (nonatomic, weak) NSString *logoUseStringHere;
 @property (nonatomic, weak) NSString *urlMatStringAppend;
 
+@property (nonatomic, weak) NSString *sizeGetMatString;
+
 @property (nonatomic, strong) UITextField *textPMSField;
 @property (nonatomic, strong) UITextField *textNoteField;
 @property (nonatomic, strong) UITextField *textDecField;

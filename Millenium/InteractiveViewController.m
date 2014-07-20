@@ -19,6 +19,8 @@
 
 //@synthesize center;
 //@synthesize control;
+
+@synthesize sizeGetMatString;
 @synthesize colorButtonHideView;
 
 @synthesize steelBlueButton;
@@ -654,12 +656,21 @@
         
     }
     
-    
-    numberField.text =numberString;
+    if(numberString!=NULL){
+       
         
+        numberField.text =numberString;
+        
+    }
     
+    if(interactiveHeaderString!=NULL){
     
-    headerLabel.text= interactiveHeaderString;
+        headerLabel.text= interactiveHeaderString;
+        
+    } else{
+        
+        headerLabel.text =@"Create Mat";
+    }
     
     
     //To Do add Logo sizing when available
@@ -910,7 +921,7 @@
     _yellowButton.layer.shadowRadius = 3.0f;
     
     
-    if([interactiveHeaderString isEqualToString:@"Logo Picked"]){
+    if([interactiveHeaderString isEqualToString:@"Create Mat"]){
         
          matView1.hidden= YES;
         
@@ -986,7 +997,7 @@
         
         
         
-        [steelBlueButton setEnabled:NO];
+        /*[steelBlueButton setEnabled:NO];
         [_suedeButton setEnabled:NO];
         [_whiteButton setEnabled:NO];
         [_roseButton setEnabled:NO];
@@ -1018,7 +1029,10 @@
         
         
         
-        colorButtonHideView.hidden=NO;
+        colorButtonHideView.hidden=NO;*/
+        
+        
+        
         
         if([orientString isEqualToString:@"landscape"])
         {
@@ -1049,10 +1063,16 @@
         
         //NSLog(@"sizeStringHere %@",sizeString);
         
-        NSString *sizeGetMatString = sizeString;
         
+       if(sizeString!=NULL){
         
-                
+           sizeGetMatString = sizeString;
+        
+       }else{
+           
+           sizeGetMatString= @"4'x 6' ";
+       }
+        
         
         NSRange range = [sizeGetMatString rangeOfString:@"x"];
         
@@ -1985,14 +2005,14 @@
             
             //portraitImageView.hidden=YES;
             //landscapeImageView.hidden=YES;
-            textOrientField.text= @"";
+            textOrientField.text= @"LANDSCAPE";
         }
 
         matView1.hidden= YES;
         matBGLogoView.hidden= NO;
         
         //sizeString = @"3 X 5";
-        if (sizeString!=nil){
+        if (sizeString!=NULL){
        
             
             //NSLog(@"sizeStringHere %@",sizeString);

@@ -1685,7 +1685,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.removeFavLogoLabel.hidden=YES;
             favCell.logoLabel.hidden=YES;
             favCell.goBackLogoLabel.hidden=YES;
-            favCell.goBackLogo.hidden=YES;
+            favCell.goBack.hidden=YES;
         }
        
         else if (indexPath.item <= artworkFullImageArray.count && artworkFullImageArray.count > 0){
@@ -1695,9 +1695,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.removeFavLogoLabel.hidden=NO;
             favCell.logoLabel.hidden=NO;
             favCell.goBackLogoLabel.hidden=NO;
-            favCell.goBackLogo.hidden=NO;
+            favCell.goBack.hidden=NO;
             
-            if (artworkFullImageArray.count>0){
+            if (artworkFullImageArray.count>0 ){
                 
                 urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
                 NSLog(@"urlString:%@",urlString);
@@ -1735,7 +1735,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 NSString*httpString= @"http://";
                 NSString *urlLogoStringAppend = [httpString stringByAppendingString:urlString];
                 
-                NSLog(@"%@ urlStringAppend",urlLogoStringAppend);
+                NSLog(@" urlStringAppend%@ ",urlLogoStringAppend);
                 
                 NSData * dataLogo = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlLogoStringAppend]];
                 
@@ -1774,7 +1774,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if ( indexPath.item < matNameArray.count && matNameArray.count>0){
+        if ( indexPath.item <= matNameArray.count && matNameArray.count>0){
             
             
             
@@ -1801,7 +1801,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        if (indexPath.item > matFullImageArray.count-1 && matFullImageArray.count >0){
+        if (indexPath.item > matFullImageArray.count || matFullImageArray.count == 0){
             
             favCell.matChooseButton.hidden=YES;
             favCell.removeFavMatButton.hidden=YES;
@@ -1809,6 +1809,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             favCell.goBackMatLabel.hidden=YES;
             favCell.goBack.hidden=YES;
+            //TODO goBackMat.hidden= YES;
             
         }
 
