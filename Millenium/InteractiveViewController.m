@@ -3212,21 +3212,54 @@ else
 
     
 }
+- (void)touchDownRepeatDec:(UITextField*)textField{
+    
+    
+    /* [textNoteField  resignFirstResponder];
+     textNoteField.hidden= YES;
+     textNoteField.delegate = self;
+     textNoteField.returnKeyType = UIReturnKeyDefault;
+     [textNoteField isFirstResponder];*/
+     
+     [textDecField  resignFirstResponder];
+     textDecField.hidden= YES;
+     textDecField.delegate = self;
+     textDecField.returnKeyType = UIReturnKeyDefault;
+     [textDecField isFirstResponder];
+    
+   /* [textField  resignFirstResponder];
+    textField.hidden= YES;
+    textField.delegate = self;
+    textField.returnKeyType = UIReturnKeyDefault;
+    [textField isFirstResponder];*/
+    
+    
+    
+}
 
 
 - (void)touchDownRepeat:(UITextField*)textField{
    
-        
-        [textField  resignFirstResponder];
-        textField.hidden= YES;
-        textField.delegate = self;
-        textField.returnKeyType = UIReturnKeyDefault;
-        [textField isFirstResponder];
+    
+   [textNoteField  resignFirstResponder];
+    textNoteField.hidden= YES;
+    textNoteField.delegate = self;
+    textNoteField.returnKeyType = UIReturnKeyDefault;
+    [textNoteField isFirstResponder];
+
+    /*[textDecField  resignFirstResponder];
+    textDecField.hidden= YES;
+    textDecField.delegate = self;
+    textDecField.returnKeyType = UIReturnKeyDefault;
+    [textDecField isFirstResponder];*/
+    
+   /* [textField  resignFirstResponder];
+    textField.hidden= YES;
+    textField.delegate = self;
+    textField.returnKeyType = UIReturnKeyDefault;
+    [textField isFirstResponder];*/
        
-         
-    
-    
-    
+ 
     
 }
 
@@ -4245,7 +4278,8 @@ else
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    [textDecField addTarget:self action:@selector(touchDownRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
+    //[textDecField addTarget:self action:@selector(touchDragCenter:) forControlEvents:UIControlEventTouchDragOutside];
+    [textDecField addTarget:self action:@selector(touchDownRepeatDec:) forControlEvents:UIControlEventTouchDownRepeat];
     
 
     
