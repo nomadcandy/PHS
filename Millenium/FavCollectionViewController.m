@@ -1963,13 +1963,15 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if (indexPathSend <artworkSellerArray.count-1){
-            
+        if (indexPathSend <artworkSellerArray.count){
+            //Need to check if artworkSellerArray class name=NSNull
             sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
-            
-            
-            if (sellerString==NULL)
-            {
+            NSLog(@"sellerString %@",sellerString);
+            if(sellerString!=NULL){
+                
+                
+                
+            }else{
                 
                 sellerString= @"No Seller Provided";
                 
@@ -1977,7 +1979,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if (indexPathSend <artworkCompanyArray.count-1){
+        if (indexPathSend <artworkCompanyArray.count){
             
             companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
             
@@ -1990,7 +1992,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if (indexPathSend <artworkIDArray.count-1){
+        if (indexPathSend <artworkIDArray.count){
             
             numberString =[artworkIDArray objectAtIndex:indexPathSend];
             
@@ -2003,7 +2005,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if (indexPathSend <artworkSizeArray.count-1){
+        if (indexPathSend <artworkSizeArray.count){
             
             sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
             
@@ -2016,7 +2018,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if (indexPathSend <artworkColorArray.count-1){
+        if (indexPathSend <artworkColorArray.count){
             
             logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
             
@@ -2030,7 +2032,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if (indexPathSend <artworkFullImageArray.count-1){
+        if (indexPathSend <artworkFullImageArray.count){
             
             NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
             NSString*httpString= @"http://";
@@ -2085,9 +2087,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     }
 
     
-   /* if ([[NSNull null] isEqual:nameString]) {
-        nameString = nil;
-    }*/
+   
        sellerString = [matSellerArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:sellerString]) {
         sellerString = nil;

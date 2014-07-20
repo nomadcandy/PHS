@@ -639,20 +639,35 @@
 
     
     if(nameString!=NULL){
-        
+        NSLog(@"nameString %@",nameString);
         nameField.text =nameString;
         
-    }
-    
-    if(sellerString!=NULL){
+    }else{
         
-            sellerField.text =sellerString;
+        nameField.text =@"";
+    }
+    //check if NSNULL CLASS
+     NSLog(@"sellerString %@",sellerString);
+    if(sellerString!=nil ){
+        
+        NSLog(@"sellerString %@",sellerString);
+        sellerField.text =sellerString;
+        
+    }else {
+        
+        sellerField.text =@" ";
+
         
     }
     
     if(companyString!=NULL){
         
+        NSLog(@"sellerString %@",sellerString);
         companyField.text =companyString;
+        
+    }else{
+        
+        companyField.text =@"";
         
     }
     
@@ -661,6 +676,9 @@
         
         numberField.text =numberString;
         
+    }else{
+        
+        numberField.text =@"";
     }
     
     if(interactiveHeaderString!=NULL){
@@ -672,6 +690,8 @@
         headerLabel.text =@"Create Mat";
     }
     
+    
+
     
     //To Do add Logo sizing when available
     /*int wLogo = [_widthField.text intValue];
