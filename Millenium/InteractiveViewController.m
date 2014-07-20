@@ -4205,6 +4205,7 @@ else
 -(IBAction)addNote:(id)sender{
     
     noteLayerView.hidden=NO;
+    decTextLayerView.hidden=YES;
     
     textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(325, 50, 300, 60)];
     //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
@@ -4232,7 +4233,7 @@ else
 
 -(IBAction)addText:(id)sender{
     decTextLayerView.hidden=NO;
-    
+    noteLayerView.hidden=YES;
     textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 100, 600, 100)];
     textDecField.textColor = [UIColor whiteColor];
     textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
