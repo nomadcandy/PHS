@@ -1977,9 +1977,9 @@
     }
     
     
-    
+    //What is this for should not hit this!!!
     //create logo size
-    if ([interactiveHeaderString isEqualToString:@"Create Mat"])
+    if ([interactiveHeaderString isEqualToString:@"Logo Selected"])
     
     {
         colorButtonHideView.hidden=YES;
