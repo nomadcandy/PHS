@@ -1848,7 +1848,8 @@
         [bgColorButton setImage:matBGColorImage forState:UIControlStateNormal];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setTitle:matBGTextColorString forState:UIControlStateNormal];
-
+        
+        
         
         [self.bgColorButton reloadInputViews];
         //NSLog(@"matUseBGColorString %@",matUseBGColorString);
@@ -4437,31 +4438,6 @@ enum {
     imagePath1= [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
     
     NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
-    //UIImage *imageNote = [UIImage imageWithData:dataNote];
-    // Determine the file name and extension
-    /* NSArray *filepart = [file componentsSeparatedByString:@"."];
-     NSString *filename = [filepart objectAtIndex:0];
-     NSString *extension = [filepart objectAtIndex:1];
-     
-     // Get the resource path and read the file using NSData
-     NSString *filePath = [[NSBundle mainBundle] pathForResource:orderImage ofType:extension];
-     NSData *fileData = [NSData dataWithContentsOfFile:filePath];*/
-    
-    // Determine the MIME type
-    /* NSString *mimeType;
-     if ([extension isEqualToString:@"jpg"]) {
-     mimeType = @"image/jpeg";
-     } else if ([extension isEqualToString:@"png"]) {
-     mimeType = @"image/png";
-     } else if ([extension isEqualToString:@"doc"]) {
-     mimeType = @"application/msword";
-     } else if ([extension isEqualToString:@"ppt"]) {
-     mimeType = @"application/vnd.ms-powerpoint";
-     } else if ([extension isEqualToString:@"html"]) {
-     mimeType = @"text/html";
-     } else if ([extension isEqualToString:@"pdf"]) {
-     mimeType = @"application/pdf";
-     }*/
     
     // Add attachment
     [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
@@ -4470,7 +4446,6 @@ enum {
     [self presentViewController:mc animated:YES completion:NULL];
     
     
-    //[self goMail1:sender event:self];
     
     
 }
@@ -5171,75 +5146,7 @@ enum {
 
     
     
-   /* else  if (_PercentMat == .20){
-        
-        int wMatHundred = wMat*100;
-        int hMatHundred = hMat*100;
-        
-        int wMatHundredDivide = wMatHundred/2;
-        int hMatHundredDivide = hMatHundred/2;
-        
-        int wPlaceDouble =  601-wMatHundredDivide;
-        int hPlaceDouble =  511-hMatHundredDivide;
-        
-        int wPlace=wPlaceDouble/2;
-        int hPlace=hPlaceDouble/2;
-        
-        //int wPlaceUse=wPlace+426;
-        //int hPlaceUse=hPlace+100;
-        
-        int wPlaceUse=wPlace+345;
-        //int hPlaceUse=hPlace+20;
-        int hPlaceUse=hPlace+15;
-        
-        
-        CGRect myLogoMatRect = CGRectMake( wPlaceUse, hPlaceUse, wMatHundred, hMatHundred);
-        
-        //CGRect myLogoMatRect = CGRectMake( 426.0f, 100.0f, wMatHundred, hMatHundred);
-        
-        //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
-        
-        matBGLogoView.frame=myLogoMatRect;
-        matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
-        //interactiveMatView.ContentMode = UIViewContentModeCenter;
-        
-        
-    }*/
-    
-   /*else  if (wMat <= 5 & hMat <= 5){
-    
-        int wMatHundred = wMat*100;
-        int hMatHundred = hMat*100;
-    
-        int wMatHundredDivide = wMatHundred/2;
-        int hMatHundredDivide = hMatHundred/2;
-        
-        int wPlaceDouble =  601-wMatHundredDivide;
-        int hPlaceDouble =  511-hMatHundredDivide;
-        
-        int wPlace=wPlaceDouble/2;
-        int hPlace=hPlaceDouble/2;
-        
-        //int wPlaceUse=wPlace+426;
-        //int hPlaceUse=hPlace+100;
-        
-        int wPlaceUse=wPlace+345;
-        //int hPlaceUse=hPlace+20;
-        int hPlaceUse=hPlace+15;
-      
-        
-        CGRect myLogoMatRect = CGRectMake( wPlaceUse, hPlaceUse, wMatHundred, hMatHundred);
-    
-        //CGRect myLogoMatRect = CGRectMake( 426.0f, 100.0f, wMatHundred, hMatHundred);
-    
-        //CGRect myLogoMatRect = CGRectMake( 426.0f, 121.0f, 300.0f, 500.0f);
-    
-        matBGLogoView.frame=myLogoMatRect;
-        matBGLogoView.ContentMode=  UIViewContentModeScaleToFill;
-        //interactiveMatView.ContentMode = UIViewContentModeCenter;
-   
-        
-    } */
+  
 }
 
 
@@ -5291,19 +5198,14 @@ enum {
         difference=a-b/2;
         divide=difference/2;
         
-        //existing width-b
+        
         
         matBGLogoView.frame = CGRectMake (x+divide/2, y-divide/2, b , a);
         
         
         
         
-       //matBGLogoView.center=interactiveMatView.center;
-        
-            //control.frame=_logoColorButton1.frame;
-        
-        
-        //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
+      
     } else{
         
         difference=b-a/2;
@@ -5313,9 +5215,7 @@ enum {
         
         
         matBGLogoView.frame = CGRectMake (x-divide/2, y+divide/2, b , a);
-        //matBGLogoView.frame = CGRectMake (xUse, y+divide, b*100 , a*100);
-        
-        //matBGLogoView.frame = CGRectMake (matBGLogoView.frame.origin.x, matBGLogoView.frame.origin.y, b , a);
+       
     }
     
         
@@ -5656,12 +5556,6 @@ numberOfRowsInComponent:(NSInteger)component
     secondLabel.textAlignment = UITextAlignmentLeft;
     secondLabel.backgroundColor = [UIColor clearColor];
     
-   /* UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%@",[colorNamesImagesArray objectAtIndex:row]]];*/
-    
-    //UIImage *img= [colorNamesImagesArray objectAtIndex:row];
-    
-    //UIImageView *icon = [[UIImageView alloc] initWithImage:img];
-    //temp.frame = CGRectMake(170, 0, 30, 30);
         
     UIImageView *icon = [colorNamesImagesArray objectAtIndex:row];
     icon.frame = CGRectMake(200, 0, 50, 50);
@@ -5671,21 +5565,11 @@ numberOfRowsInComponent:(NSInteger)component
     return secondLabel;
         
         
-       /* UIView *tmpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 400, 32) ];
-        [tmpView insertSubview:icon atIndex:1];
-        [tmpView insertSubview:firstLabel atIndex:0];
-        //[tmpView insertSubview:secondLabel atIndex:0];
-        [tmpView setUserInteractionEnabled:NO];
-        [tmpView setTag:row];
-        //[channelLabel release];
-        //[temp release];
-        return tmpView;*/
-    }else{
+           }else{
         
         UILabel *thirdLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 50)];
         thirdLabel.text = [fontSizeArray objectAtIndex:row];
         thirdLabel.textAlignment = NSTextAlignmentCenter;
-        //[firstLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:10.0]];
         [thirdLabel setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
         thirdLabel.backgroundColor = [UIColor clearColor];
         return thirdLabel;
