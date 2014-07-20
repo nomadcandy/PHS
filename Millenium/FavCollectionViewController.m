@@ -1683,7 +1683,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        if (indexPath.item > artworkFullImageArray.count){
+        if (indexPath.item > artworkFullImageArray.count-1){
             
             
             favCell.logoChooseButton.hidden=YES;
@@ -1692,6 +1692,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.logoLabel.hidden=YES;
             favCell.goBackLogoLabel.hidden=YES;
             favCell.goBack.hidden=YES;
+            favCell.goBackLogo.hidden=YES;
         }
        
         else if (indexPath.item <= artworkFullImageArray.count-1 /*&& indexPath.item == 0*/){
@@ -1702,6 +1703,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.logoLabel.hidden=NO;
             favCell.goBackLogoLabel.hidden=NO;
             favCell.goBack.hidden=NO;
+            favCell.goBackLogo.hidden=NO;
             
             if (artworkFullImageArray.count>0 ){
                 
@@ -1780,7 +1782,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if ( indexPath.item <= matNameArray.count-1 && matNameArray.count>0){
+        if ( indexPath.item <= matNameArray.count-1 /*&& matNameArray.count>0*/){
             
             
             
@@ -1807,7 +1809,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        if (indexPath.item > matFullImageArray.count-1 || matFullImageArray.count == 0){
+        if (indexPath.item > matFullImageArray.count-1 /*|| matFullImageArray.count == 0*/){
             
             favCell.matChooseButton.hidden=YES;
             favCell.removeFavMatButton.hidden=YES;
@@ -1821,7 +1823,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
      
-        else if ( indexPath.item <= matFullImageArray.count-1 && matFullImageArray.count > 0){
+        else if ( indexPath.item <= matFullImageArray.count-1 /*&& matFullImageArray.count > 0*/){
         
            
             favCell.matChooseButton.hidden=NO;
@@ -2071,9 +2073,21 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     nameString = [matNameArray objectAtIndex:indexPathSend];
-    if ([[NSNull null] isEqual:nameString]) {
-        nameString = nil;
+    
+    //logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
+    
+    
+    if (nameString==NULL)
+    {
+        
+        nameString= @" ";
+        
     }
+
+    
+   /* if ([[NSNull null] isEqual:nameString]) {
+        nameString = nil;
+    }*/
        sellerString = [matSellerArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:sellerString]) {
         sellerString = nil;

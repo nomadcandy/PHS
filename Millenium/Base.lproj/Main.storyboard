@@ -4354,7 +4354,7 @@
                                             </state>
                                             <state key="highlighted" backgroundImage="LogoPadGrey"/>
                                             <connections>
-                                                <action selector="logoSelected:event:" destination="xYA-bA-MQ0" eventType="touchUpInside" id="bR0-NH-6Tw"/>
+                                                <action selector="matSelected:event:" destination="xYA-bA-MQ0" eventType="touchUpInside" id="jrV-Ng-FiZ"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="223" placeholderIntrinsicHeight="21" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfr-Ra-ajW">
@@ -4448,7 +4448,7 @@
                                 </view>
                                 <size key="customSize" width="970" height="543"/>
                                 <connections>
-                                    <outlet property="goBack" destination="gCC-Br-Aki" id="aQr-YZ-5V9"/>
+                                    <outlet property="goBack" destination="gCC-Br-Aki" id="gtS-7F-UAq"/>
                                     <outlet property="goBackLogo" destination="nDP-hG-Jdm" id="PcD-fm-y6Q"/>
                                     <outlet property="goBackLogoLabel" destination="xgF-0b-q5i" id="sMd-gQ-PZ8"/>
                                     <outlet property="goBackMatLabel" destination="PzJ-5h-aHP" id="NJC-O2-yAN"/>
@@ -5386,8 +5386,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="SGM-ZV-0fv"/>
+        <segue reference="7Yo-1I-ggJ"/>
         <segue reference="aYA-g1-hsh"/>
-        <segue reference="gYW-Ou-qn0"/>
-        <segue reference="KLb-Iu-kB6"/>
     </inferredMetricsTieBreakers>
 </document>
