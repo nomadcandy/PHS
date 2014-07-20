@@ -1653,7 +1653,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if ( indexPath.item < artworkNameArray.count && 0<artworkNameArray.count){
+        if (indexPath.item <= artworkNameArray.count && indexPath.item == 0){
         
         
             
@@ -1661,6 +1661,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
             
             favCell.logoLabel.text =logoLabelString;
+        }else{
+            
+            favCell.logoLabel.hidden =YES;
         }
         
         
@@ -1674,10 +1677,19 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
         }
+        if (artworkFullImageArray.count ==0){
+           
+            favCell.logoChooseButton.hidden=YES;
+            favCell.removeFavLogoButton.hidden=YES;
+            favCell.removeFavLogoLabel.hidden=YES;
+            favCell.logoLabel.hidden=YES;
+            favCell.goBackLogoLabel.hidden=YES;
+            favCell.goBack.hidden=YES;
+            
+        }
         
         
-        
-        if (indexPath.item > artworkFullImageArray.count || artworkFullImageArray.count == 0){
+        if (indexPath.item > artworkFullImageArray.count){
             
             
             favCell.logoChooseButton.hidden=YES;
@@ -1688,7 +1700,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBack.hidden=YES;
         }
        
-        else if (indexPath.item <= artworkFullImageArray.count && artworkFullImageArray.count > 0){
+        else if (indexPath.item <= artworkFullImageArray.count && indexPath.item == 0){
             
             favCell.logoChooseButton.hidden=NO;
             favCell.removeFavLogoButton.hidden=NO;
@@ -1774,7 +1786,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if ( indexPath.item <= matNameArray.count && matNameArray.count>0){
+        if ( indexPath.item <= matNameArray.count-1 && matNameArray.count>0){
             
             
             
@@ -1815,7 +1827,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
      
-        else if ( indexPath.item <= matFullImageArray.count && matFullImageArray.count > 0){
+        else if ( indexPath.item <= matFullImageArray.count-1 && matFullImageArray.count > 0){
         
            
             favCell.matChooseButton.hidden=NO;
