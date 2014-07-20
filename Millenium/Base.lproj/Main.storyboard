@@ -2151,7 +2151,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="goInteractive1:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="AIK-Op-gxg"/>
+                                                <action selector="goInteractive2:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="jzz-h9-Dkf"/>
                                                 <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="KLb-Iu-kB6"/>
                                             </connections>
                                         </button>

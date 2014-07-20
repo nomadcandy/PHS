@@ -1714,6 +1714,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
             logoCell.logoLabel.text =logoLabelString;
             
+            //added to test hiding buttons
+            //logoCell.goBack.hidden=YES;
+            
         }else{
             
             //logoCell.logoLabel.text =@"";
@@ -1854,6 +1857,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 -(IBAction)goInteractive1:(UIButton*)sender event:(id)event {
+    
+    NSLog(@" %i",  nameString.length);
+    NSLog(@"indexPathSend %d",indexPathSend);
+    if (nameString==nil || nameString.length==1 ||indexPathSend >1000 ) {
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please select your sketch or Mat before proceeding" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+        
+    }else{
+
     //added to enable passing data to other viewController forces ViewDidLoad with new Data
     [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
     
@@ -1861,11 +1876,36 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
      InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
      [self presentViewController:svc animated:YES completion:nil];
     
+    }
+}
+
+-(IBAction)goInteractive2:(UIButton*)sender event:(id)event {
+    
+    NSLog(@" %i",  nameString.length);
+    NSLog(@"indexPathSend %d",indexPathSend);
+    if (nameString==nil || indexPathSend==0 || nameString.length==1 ||indexPathSend >1000 ) {
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please select your sketch or Mat before proceeding" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+        
+    }else{
+        
+        //added to enable passing data to other viewController forces ViewDidLoad with new Data
+        [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
+        
+        UIStoryboard *storyboard = self.storyboard;
+        InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+        [self presentViewController:svc animated:YES completion:nil];
+        
+    }
 }
 
 
-
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
+    
+    
     
     interactiveHeaderString = @"Create Mat";
 
@@ -1876,6 +1916,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     nameString =[artworkNameArray objectAtIndex:indexPathSend];
     
+   
+    
+    sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
+    companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
+    numberString =[artworkIDArray objectAtIndex:indexPathSend];
+    sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
+    logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+    matBGColorString =@" ";
+    matColorString =@" ";
+    //orientString=@"";
+   
+    
+    NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
     
     if (indexPathSend <artworkFullImageArray.count){
         
@@ -1982,8 +2035,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
+    
 }
-
 
 -(IBAction)matSelected:(UIButton*)sender event:(id)event {
     

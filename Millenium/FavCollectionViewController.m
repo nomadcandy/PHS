@@ -1901,6 +1901,17 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goInteractive1:(UIButton*)sender event:(id)event {
     
+    if (nameString==nil) {
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please select your sketch or Mat before proceeding" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+        
+    }else{
+
+    
+    
     //added to enable passing data to other viewController forces ViewDidLoad with new Data
     [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
     
@@ -1908,8 +1919,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
      InteractiveViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
      [self presentViewController:svc animated:YES completion:nil];
     
+    }
 }
-
 
 
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
