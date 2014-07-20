@@ -1700,7 +1700,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBack.hidden=YES;
         }
        
-        else if (indexPath.item <= artworkFullImageArray.count && indexPath.item == 0){
+        else if (indexPath.item <= artworkFullImageArray.count-1 /*&& indexPath.item == 0*/){
             
             favCell.logoChooseButton.hidden=NO;
             favCell.removeFavLogoButton.hidden=NO;
@@ -1813,7 +1813,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        if (indexPath.item > matFullImageArray.count || matFullImageArray.count == 0){
+        if (indexPath.item > matFullImageArray.count-1 || matFullImageArray.count == 0){
             
             favCell.matChooseButton.hidden=YES;
             favCell.removeFavMatButton.hidden=YES;
