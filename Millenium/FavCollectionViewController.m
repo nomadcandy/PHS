@@ -1653,19 +1653,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        if (indexPath.item <= artworkNameArray.count && indexPath.item == 0){
-        
-        
-            
-        
-            NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
-            
-            favCell.logoLabel.text =logoLabelString;
-        }else{
-            
-            favCell.logoLabel.hidden =YES;
-        }
-        
         
         if ([searchingString isEqualToString:@"searchingFavString"]){
             
@@ -1677,16 +1664,23 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
         }
-        if (artworkFullImageArray.count ==0){
-           
-            favCell.logoChooseButton.hidden=YES;
-            favCell.removeFavLogoButton.hidden=YES;
-            favCell.removeFavLogoLabel.hidden=YES;
-            favCell.logoLabel.hidden=YES;
-            favCell.goBackLogoLabel.hidden=YES;
-            favCell.goBack.hidden=YES;
+        
+        
+        if (indexPath.item <= artworkNameArray.count-1 /*|| indexPath.item == 0*/){
             
+            
+            
+            
+            NSString*logoLabelString=[artworkNameArray objectAtIndex:indexPath.item];
+            
+            favCell.logoLabel.text =logoLabelString;
+        
+        }else{
+            
+            favCell.logoLabel.hidden =YES;
         }
+        
+
         
         
         if (indexPath.item > artworkFullImageArray.count){
