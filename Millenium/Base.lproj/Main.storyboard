@@ -1325,24 +1325,27 @@
                                     <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Zh5-Rd-yFs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-cI-ecv">
-                                <rect key="frame" x="44" y="732" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-cI-ecv">
+                                <rect key="frame" x="44" y="729" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="F">
+                                <state key="normal" image="pickerIcon.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="pickerIcon.png"/>
+                                <state key="highlighted" image="pickerIcon.png"/>
                                 <connections>
                                     <action selector="goFontPicker:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="oyh-sg-IJb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCv-rC-z2i">
-                                <rect key="frame" x="85" y="733" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCv-rC-z2i">
+                                <rect key="frame" x="80" y="727" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="C">
+                                <state key="normal" title="C" image="pickerHideIcon1.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="pickerHideIcon1.png"/>
                                 <connections>
                                     <action selector="hideFontPicker:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="ndT-DT-PLz"/>
                                 </connections>
@@ -5377,6 +5380,8 @@
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="loginGraphicIcon.png" width="267" height="58"/>
         <image name="loginIcon2.png" width="50" height="50"/>
+        <image name="pickerHideIcon1.png" width="226" height="220"/>
+        <image name="pickerIcon.png" width="226" height="220"/>
         <image name="returnArrow.png" width="247" height="94"/>
         <image name="textButton.png" width="138" height="134"/>
         <image name="trans1Icon.png" width="213" height="220"/>
@@ -5389,8 +5394,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qOq-Ne-VbY"/>
-        <segue reference="wpq-PH-bdK"/>
+        <segue reference="aYA-g1-hsh"/>
         <segue reference="gYW-Ou-qn0"/>
+        <segue reference="KLb-Iu-kB6"/>
     </inferredMetricsTieBreakers>
 </document>
