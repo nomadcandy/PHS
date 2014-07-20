@@ -2121,14 +2121,14 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqT-uu-N44" userLabel="button1">
-                                            <rect key="frame" x="546" y="1" width="306" height="290"/>
+                                            <rect key="frame" x="546" y="13" width="306" height="278"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <state key="highlighted" backgroundImage="LogoPadGrey"/>
                                             <connections>
-                                                <action selector="logoSelected:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="rE0-iq-NTW"/>
+                                                <action selector="matSelected:event:" destination="l8u-Ww-K06" eventType="touchUpInside" id="AcA-84-Rg7"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="223" placeholderIntrinsicHeight="21" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytT-DL-OMq">
@@ -5386,7 +5386,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SGM-ZV-0fv"/>
+        <segue reference="KLb-Iu-kB6"/>
         <segue reference="7Yo-1I-ggJ"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
