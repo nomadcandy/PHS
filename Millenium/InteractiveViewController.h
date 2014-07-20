@@ -134,6 +134,8 @@
 
 @property (nonatomic, strong) IBOutlet UITextField *textOrientField;
 
+@property (nonatomic, weak) UITextField *selectedTextField;
+
 
 @property (nonatomic, strong) IBOutlet UIView *decTextLayerView;
 @property (nonatomic, strong) IBOutlet UIView *noteLayerView;

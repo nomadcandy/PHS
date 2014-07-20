@@ -3215,11 +3215,7 @@ else
 - (void)touchDownRepeatDec:(UITextField*)textField{
     
     
-    /* [textNoteField  resignFirstResponder];
-     textNoteField.hidden= YES;
-     textNoteField.delegate = self;
-     textNoteField.returnKeyType = UIReturnKeyDefault;
-     [textNoteField isFirstResponder];*/
+   
      
      [textDecField  resignFirstResponder];
      textDecField.hidden= YES;
@@ -3227,11 +3223,7 @@ else
      textDecField.returnKeyType = UIReturnKeyDefault;
      [textDecField isFirstResponder];
     
-   /* [textField  resignFirstResponder];
-    textField.hidden= YES;
-    textField.delegate = self;
-    textField.returnKeyType = UIReturnKeyDefault;
-    [textField isFirstResponder];*/
+   
     
     
     
@@ -3246,30 +3238,17 @@ else
     textNoteField.delegate = self;
     textNoteField.returnKeyType = UIReturnKeyDefault;
     [textNoteField isFirstResponder];
-
-    /*[textDecField  resignFirstResponder];
-    textDecField.hidden= YES;
-    textDecField.delegate = self;
-    textDecField.returnKeyType = UIReturnKeyDefault;
-    [textDecField isFirstResponder];*/
     
-   /* [textField  resignFirstResponder];
-    textField.hidden= YES;
-    textField.delegate = self;
-    textField.returnKeyType = UIReturnKeyDefault;
-    [textField isFirstResponder];*/
-       
+    
  
     
 }
 
-
-/*- (void)touchDownRepeat:(UIButton *)blackButton {
-    //worked
-    blackButton.hidden = YES;
+-(void)touchDownCenter:(UITextField*)textField{
     
+     [self.view addSubview:fontPicker];
     
-}*/
+}
 
 #pragma mark -
 #pragma mark Button tap event
@@ -4265,25 +4244,37 @@ else
 }
 
 -(IBAction)addText:(id)sender{
+    
+   // for (NSInteger i=1; i<10; i++) {
+    
     decTextLayerView.hidden=NO;
     noteLayerView.hidden=YES;
-    textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 100, 600, 100)];
-    textDecField.textColor = [UIColor whiteColor];
-    textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
-    textDecField.backgroundColor=[UIColor clearColor];
-    textDecField.text=@"TEXT";
-    textDecField.tag = 2;
-    //[self.view addSubview:textDecField];
-    [self.decTextLayerView addSubview:textDecField];
     
-    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
-    [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-    //[textDecField addTarget:self action:@selector(touchDragCenter:) forControlEvents:UIControlEventTouchDragOutside];
-    [textDecField addTarget:self action:@selector(touchDownRepeatDec:) forControlEvents:UIControlEventTouchDownRepeat];
     
+        textDecField = [[UITextField alloc] initWithFrame:CGRectMake(445, 100, 600, 100)];
+        textDecField.textColor = [UIColor whiteColor];
+        textDecField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
+        textDecField.backgroundColor=[UIColor clearColor];
+        textDecField.text=@"TEXT";
+    
+    
+        
+        //textDecField.tag = i;
+      
 
     
-}
+        //[self.view addSubview:textDecField];
+        [self.decTextLayerView addSubview:textDecField];
+        
+        [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
+        [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
+       // [textDecField addTarget:self action:@selector(touchDragCenter:) forControlEvents:UIControlEventTouchDragOutside];
+        [textDecField addTarget:self action:@selector(touchDownRepeatDec:) forControlEvents:UIControlEventTouchDownRepeat];
+    
+    
+    }
+    
+//}
 
 enum {
     textDecFieldTag = 2,
@@ -4301,7 +4292,7 @@ enum {
     textDecField.textAlignment= NSTextAlignmentCenter;
     textDecField.tag = 3;
     
-    [self.decTextLayerView addSubview:textDecField];
+    [self.view addSubview:textDecField];
     
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
@@ -4789,6 +4780,16 @@ enum {
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
 {
     
+    
+    NSLog(@"Sender %@",sender);
+    
+    if(sender==textDecField)
+        
+    {
+        _selectedTextField=sender;
+        
+    }
+    
     UITouch *t = [[event allTouches] anyObject];
     UIControl *control = sender;
     CGPoint center = control.center;
@@ -4834,14 +4835,17 @@ enum {
         control.frame=bgColorButton.frame;
         
         
+    
+        
     }
 
+
     
-    //[self ifButtonCollides];
     
     
     
 }
+
 
 
 //moves logo around
@@ -4865,6 +4869,13 @@ enum {
     
     
 }
+
+/*-(void)imageMoved1:(id)sender {
+    
+    [sender isFirstResponder];
+    
+}*/
+
 
 - (IBAction)cropSquare:(id)sender  {
     
@@ -5699,9 +5710,11 @@ numberOfRowsInComponent:(NSInteger)component
         //[textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
         chosenFontString=[familyNamesArray objectAtIndex:chosenFont];
         [textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:chosenFontSize]];
+        [_selectedTextField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:chosenFontSize]];
         [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
-        
+        [_selectedTextField  setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
          textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
+        _selectedTextField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
         
         
         
@@ -5737,8 +5750,11 @@ numberOfRowsInComponent:(NSInteger)component
         
         //chosenFontSize=[fontSizeArray objectAtIndex:chosenFontSize];
         [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
+        textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
+        [_selectedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
+        _selectedTextField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
         
-         textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
+        
           }
 }
 
