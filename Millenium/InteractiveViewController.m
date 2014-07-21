@@ -5507,7 +5507,7 @@ numberOfRowsInComponent:(NSInteger)component
     }else if(component==1){
     
         return colorNamesImagesArray.count;
-    //return 27;
+    
    
     }else{
     
@@ -5517,30 +5517,7 @@ numberOfRowsInComponent:(NSInteger)component
     
 }
 
-/*- (UIView *)pickerView:(UIPickerView *)fontPicker
-             titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-             reusingView:(UIView*)view
-{
-    if (component==1){
-    
-    
-            UILabel*fontLabel;
-            fontLabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0,120,32)];
-            fontLabel.text=[familyNamesArray objectAtIndex:row];
-        
-            return fontLabel;
-        
-       }else {
-        
-        
-        
-        return [colorNamesImagesArray objectAtIndex:row];
-           
-    
-       }
-        
-}*/
+
 
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row
@@ -5548,7 +5525,7 @@ numberOfRowsInComponent:(NSInteger)component
 {
     if (component==0){
     
-        UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 50)];
+        UILabel *firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 270)];
         firstLabel.text = [familyNamesArray objectAtIndex:row];
         firstLabel.textAlignment = NSTextAlignmentCenter;
         //[firstLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:10.0]];
@@ -5559,14 +5536,14 @@ numberOfRowsInComponent:(NSInteger)component
         
     }else if (component==1){
     //add number labels here
-    UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 0, 50, 50)];
-    secondLabel.text = [colorNumbersArray objectAtIndex:row];
-    secondLabel.textAlignment = UITextAlignmentLeft;
-    secondLabel.backgroundColor = [UIColor clearColor];
+        UILabel *secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 0, 50, 50)];
+        secondLabel.text = [colorNumbersArray objectAtIndex:row];
+        secondLabel.textAlignment = UITextAlignmentLeft;
+        secondLabel.backgroundColor = [UIColor clearColor];
     
         
-    UIImageView *icon = [colorNamesImagesArray objectAtIndex:row];
-    icon.frame = CGRectMake(200, 0, 50, 50);
+        UIImageView *icon = [colorNamesImagesArray objectAtIndex:row];
+        icon.frame = CGRectMake(200, 0, 50, 50);
     
     
     return icon;
@@ -5659,7 +5636,7 @@ numberOfRowsInComponent:(NSInteger)component
 -(CGFloat)pickerView:(UIPickerView *)fontPicker rowWidthForComponent:(NSInteger)component{
     if (component==0){
     
-        return 500.0;
+        return 600.0;
         
     }else if (component==1){
         
@@ -5672,45 +5649,6 @@ numberOfRowsInComponent:(NSInteger)component
     }
     
 }
-
-//}
-
-
-
-
-
-/*- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
-{
-    UILabel* tView = (UILabel*)view;
-    if (!tView)
-    {
-        tView = [[UILabel alloc] init];
-        [tView setFont:[UIFont fontWithName:@"Helvetica" size:14]];
-        //[tView setTextAlignment:UITextAlignmentLeft];
-        tView.numberOfLines=3;
-    }
-    // Fill the label text here
-    tView.text=[wishvalues objectAtIndex:row];
-    return tView;
-}*/
-
-
-/*-(BOOL)viewsDoCollide:(UIView *)view1 :(UIView *)view2{
-    if(CGRectIntersectsRect(view1.frame, view2.frame))
-    {
-        return YES;
-    }
-    return NO;
-}*/
-
-
-/*-(BOOL)viewsDoCollide:(UIImageView *)_matBGImageView :(UIButton *)_steelBlueButton{
-    if(CGRectIntersectsRect(_matBGImageView.frame, _steelBlueButton.frame))
-    {
-        return YES;
-    }
-    return NO;
-}*/
 
 //Not Used
 #pragma mark-
