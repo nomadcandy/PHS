@@ -12,7 +12,10 @@
 
 
 @interface InteractiveViewController ()
+@property (strong, nonatomic) IBOutlet UIView *matView;
 
+@property (nonatomic,strong) NSMutableArray* decorativeTestFields;
+@property (nonatomic,strong) UITextField* lastMovedTextField;
 @end
 
 @implementation InteractiveViewController
@@ -272,6 +275,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.decorativeTestFields = [NSMutableArray new];
     
     portraitImageView.hidden=YES;
     [self.fontPicker removeFromSuperview];
@@ -1081,6 +1086,9 @@
         matView1.hidden= NO;
         matBGLogoView.hidden= YES;
         
+        //[self.matView addSubview:noteLayerView];
+        //[self.matView bringSubviewToFront:noteLayerView];
+ 
         [self.matView1 addSubview:noteLayerView];
         
         //NSLog(@"sizeStringHere %@",sizeString);
@@ -4280,6 +4288,7 @@ else
        // [textDecField addTarget:self action:@selector(touchDragCenter:) forControlEvents:UIControlEventTouchDragOutside];
         [textDecField addTarget:self action:@selector(touchDownRepeatDec:) forControlEvents:UIControlEventTouchDownRepeat];
     
+    [self.decorativeTestFields addObject:textDecField];
     
     }
     
@@ -4766,11 +4775,14 @@ enum {
     
     NSLog(@"Sender %@",sender);
     
-    if(sender==textDecField)
+/*    if(sender==textDecField)
         
     {
         _selectedTextField=sender;
         
+    }*/
+    if([sender isKindOfClass:[UITextField class]]){
+        self.lastMovedTextField = sender;
     }
     
     UITouch *t = [[event allTouches] anyObject];
@@ -5573,18 +5585,23 @@ numberOfRowsInComponent:(NSInteger)component
     /*ViewController*initialView;
     initialView=(ViewController*)self.delegate;*/
     
+    
+
     if(component==0)
     {
         int chosenFont=[pickerView selectedRowInComponent:0];
+        /*
         //[textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
         chosenFontString=[familyNamesArray objectAtIndex:chosenFont];
-        [textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:chosenFontSize]];
+        [self.lastMovedTextField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:chosenFontSize]];
         [_selectedTextField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:chosenFont] size:chosenFontSize]];
-        [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
+        
         [_selectedTextField  setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
          textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
-        _selectedTextField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
-        
+        */
+        chosenFontString=[familyNamesArray objectAtIndex:chosenFont];
+        self.lastMovedTextField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
+        [self.lastMovedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
         
         
     }else if (component==1) {

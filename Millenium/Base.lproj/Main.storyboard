@@ -1448,6 +1448,7 @@
                         <outlet property="logoPicButton" destination="Jjd-hV-uA4" id="ml4-Ep-EuZ"/>
                         <outlet property="matBGImageView" destination="50N-Xd-J20" id="pAo-n1-8Ae"/>
                         <outlet property="matBGLogoView" destination="mlP-c3-Xyb" id="6TG-4a-5Nj"/>
+                        <outlet property="matView" destination="hlw-qG-BNy" id="AAo-2y-Vx8"/>
                         <outlet property="matView1" destination="DlZ-Yc-mhz" id="Npe-Ku-Xgf"/>
                         <outlet property="nameField" destination="oeY-YL-pre" id="q5B-Ev-oYg"/>
                         <outlet property="nameHideField" destination="6Ms-IS-vla" id="gVO-Ew-KPe"/>
@@ -5411,8 +5412,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aYA-g1-hsh"/>
-        <segue reference="gYW-Ou-qn0"/>
         <segue reference="WHu-6x-aPj"/>
+        <segue reference="5F9-JV-UFd"/>
+        <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>
