@@ -205,6 +205,20 @@
 		42857707197CA3F7004972AD /* eyeClosedWhiteIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857705197CA3F7004972AD /* eyeClosedWhiteIcon.png */; };
 		42857709197CA572004972AD /* eyeOpenIrisIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857708197CA572004972AD /* eyeOpenIrisIcon.png */; };
 		4285770A197CA572004972AD /* eyeOpenIrisIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857708197CA572004972AD /* eyeOpenIrisIcon.png */; };
+		4285770C197D5FCF004972AD /* returnArrow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4285770B197D5FCF004972AD /* returnArrow1.png */; };
+		4285770D197D5FCF004972AD /* returnArrow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4285770B197D5FCF004972AD /* returnArrow1.png */; };
+		42857714197D66D2004972AD /* eyeOpenBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4285770E197D66D2004972AD /* eyeOpenBlackIcon.png */; };
+		42857715197D66D2004972AD /* eyeOpenBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4285770E197D66D2004972AD /* eyeOpenBlackIcon.png */; };
+		42857716197D66D2004972AD /* eyeClosedBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4285770F197D66D2004972AD /* eyeClosedBlackIcon.png */; };
+		42857717197D66D2004972AD /* eyeClosedBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4285770F197D66D2004972AD /* eyeClosedBlackIcon.png */; };
+		42857718197D66D2004972AD /* pickerHideBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857710197D66D2004972AD /* pickerHideBlackIcon.png */; };
+		42857719197D66D2004972AD /* pickerHideBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857710197D66D2004972AD /* pickerHideBlackIcon.png */; };
+		4285771A197D66D2004972AD /* textBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857711197D66D2004972AD /* textBlackIcon.png */; };
+		4285771B197D66D2004972AD /* textBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857711197D66D2004972AD /* textBlackIcon.png */; };
+		4285771E197D66D2004972AD /* notesBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857713197D66D2004972AD /* notesBlackIcon.png */; };
+		4285771F197D66D2004972AD /* notesBlackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857713197D66D2004972AD /* notesBlackIcon.png */; };
+		42857721197D69F2004972AD /* goArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857720197D69F2004972AD /* goArrow.png */; };
+		42857722197D69F2004972AD /* goArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857720197D69F2004972AD /* goArrow.png */; };
 		4288F1AB1950A03500975FB6 /* LoginIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AA1950A03500975FB6 /* LoginIcon1.png */; };
 		4288F1AF1950A7CF00975FB6 /* MovieIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */; };
 		4288F1B11950ACB800975FB6 /* PDFIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B01950ACB800975FB6 /* PDFIcon2.png */; };
@@ -571,6 +585,13 @@
 		42857702197CA3EA004972AD /* eyeOpenWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeOpenWhite.png; sourceTree = "<group>"; };
 		42857705197CA3F7004972AD /* eyeClosedWhiteIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeClosedWhiteIcon.png; sourceTree = "<group>"; };
 		42857708197CA572004972AD /* eyeOpenIrisIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeOpenIrisIcon.png; sourceTree = "<group>"; };
+		4285770B197D5FCF004972AD /* returnArrow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = returnArrow1.png; sourceTree = "<group>"; };
+		4285770E197D66D2004972AD /* eyeOpenBlackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeOpenBlackIcon.png; sourceTree = "<group>"; };
+		4285770F197D66D2004972AD /* eyeClosedBlackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeClosedBlackIcon.png; sourceTree = "<group>"; };
+		42857710197D66D2004972AD /* pickerHideBlackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pickerHideBlackIcon.png; sourceTree = "<group>"; };
+		42857711197D66D2004972AD /* textBlackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textBlackIcon.png; sourceTree = "<group>"; };
+		42857713197D66D2004972AD /* notesBlackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notesBlackIcon.png; sourceTree = "<group>"; };
+		42857720197D69F2004972AD /* goArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goArrow.png; sourceTree = "<group>"; };
 		4288F1AA1950A03500975FB6 /* LoginIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginIcon1.png; sourceTree = "<group>"; };
 		4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MovieIcon1.png; sourceTree = "<group>"; };
 		4288F1B01950ACB800975FB6 /* PDFIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFIcon2.png; sourceTree = "<group>"; };
@@ -1073,6 +1094,7 @@
 		4288F1A91950A00000975FB6 /* ImagesLogin */ = {
 			isa = PBXGroup;
 			children = (
+				42857720197D69F2004972AD /* goArrow.png */,
 				428576EC197C771F004972AD /* loginGraphicIcon.png */,
 				4288F1AA1950A03500975FB6 /* LoginIcon1.png */,
 			);
@@ -1091,6 +1113,12 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				4285770E197D66D2004972AD /* eyeOpenBlackIcon.png */,
+				4285770F197D66D2004972AD /* eyeClosedBlackIcon.png */,
+				42857710197D66D2004972AD /* pickerHideBlackIcon.png */,
+				42857711197D66D2004972AD /* textBlackIcon.png */,
+				42857713197D66D2004972AD /* notesBlackIcon.png */,
+				4285770B197D5FCF004972AD /* returnArrow1.png */,
 				42857708197CA572004972AD /* eyeOpenIrisIcon.png */,
 				42857705197CA3F7004972AD /* eyeClosedWhiteIcon.png */,
 				42857702197CA3EA004972AD /* eyeOpenWhite.png */,
@@ -1634,6 +1662,7 @@
 				4297E08D19250F8100E43779 /* Chocolate_111.jpg in Resources */,
 				420BEF9619192E04003DCEB0 /* MaskWhiteSquare2.png in Resources */,
 				42B0152218E303C40068019C /* MatChatter5.png in Resources */,
+				4285771E197D66D2004972AD /* notesBlackIcon.png in Resources */,
 				4227989A19129F1400776844 /* AssetsGreyBox1.png in Resources */,
 				4221399919128996001BD328 /* CintasLogoBlackClear.png in Resources */,
 				4297E08519250F8100E43779 /* Grey_115.jpg in Resources */,
@@ -1711,6 +1740,7 @@
 				42B0158518E3428B0068019C /* WaterGuardLogoInlayPDF.png in Resources */,
 				42A24BF719181FB800568305 /* Interactive4by6Button.png in Resources */,
 				420BEF9C191937D2003DCEB0 /* MaskWhiteSquare4.png in Resources */,
+				42857714197D66D2004972AD /* eyeOpenBlackIcon.png in Resources */,
 				4297E08119250F8100E43779 /* Orange_127.jpg in Resources */,
 				42E9AC1818FF59E2000E226D /* Friendly2Button.png in Resources */,
 				4297E07B19250F8100E43779 /* Suede_123.jpg in Resources */,
@@ -1764,11 +1794,14 @@
 				4297E09219250F8100E43779 /* Aquamarine_130.jpg in Resources */,
 				42081FD01947B04700412486 /* AirStepPDF.png in Resources */,
 				42B0150718DFBD0A0068019C /* SquareButton.png in Resources */,
+				4285770C197D5FCF004972AD /* returnArrow1.png in Resources */,
 				4297E08419250F8100E43779 /* Gold_109.jpg in Resources */,
 				42E9AC1A18FF59E2000E226D /* Pro2Button.png in Resources */,
+				4285771A197D66D2004972AD /* textBlackIcon.png in Resources */,
 				42849B7C18E9FE6000E5B3FB /* whitecirclerugsample2.png in Resources */,
 				42F399CE1946675B00C84189 /* BrushTipScraperM.png in Resources */,
 				420A8F09195308ED005FB1D8 /* SketchesIcon1.png in Resources */,
+				42857716197D66D2004972AD /* eyeClosedBlackIcon.png in Resources */,
 				42B0158718E3428B0068019C /* WalkOffLogoMatPDF.png in Resources */,
 				42849B7F18E9FF7F00E5B3FB /* whitecirclematsize1.png in Resources */,
 				42081FE51947B3B300412486 /* EcoGuardPDF.png in Resources */,
@@ -1799,11 +1832,13 @@
 				42081FE11947B29600412486 /* WaterGuard.pdf in Resources */,
 				42081FD11947B04700412486 /* SafeStepPDF.png in Resources */,
 				4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */,
+				42857721197D69F2004972AD /* goArrow.png in Resources */,
 				420BEFA219193F0B003DCEB0 /* MaskGreySquare6.png in Resources */,
 				428576FA197CA0AA004972AD /* eyeOpenIcon.png in Resources */,
 				428576ED197C771F004972AD /* loginGraphicIcon.png in Resources */,
 				422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */,
 				426A6A2018ED0CC300255331 /* SampleLogo1.png in Resources */,
+				42857718197D66D2004972AD /* pickerHideBlackIcon.png in Resources */,
 				4297E08819250F8100E43779 /* Emerald Green_110.jpg in Resources */,
 				42081FDD1947B04700412486 /* SilverSeriesPDF.png in Resources */,
 				42081FD51947B04700412486 /* SafetyChefPDF.png in Resources */,
@@ -1826,10 +1861,12 @@
 				4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */,
 				42849B7D18E9FE6000E5B3FB /* whitecirclerugsample2.png in Resources */,
 				42849B9218EA02BE00E5B3FB /* whitepad.png in Resources */,
+				4285771B197D66D2004972AD /* textBlackIcon.png in Resources */,
 				42B0158218E3428B0068019C /* UltraGuardLogoInlayPDF.png in Resources */,
 				4221399D19128D43001BD328 /* AssetsSearchButton.png in Resources */,
 				428576FE197CA0B6004972AD /* eyeCloseIcon.png in Resources */,
 				42E9AC1B18FF59E2000E226D /* Pro2Button.png in Resources */,
+				42857719197D66D2004972AD /* pickerHideBlackIcon.png in Resources */,
 				428576F5197C7D7F004972AD /* pickerIcon.png in Resources */,
 				42849B8918EA016200E5B3FB /* allmatbuttons2.png in Resources */,
 				42E9AC1518FF59E2000E226D /* Clean2Button.png in Resources */,
@@ -1837,18 +1874,22 @@
 				42849B6C18E5ABEF00E5B3FB /* MatChatterGreyBubbles1.png in Resources */,
 				42B0158818E3428B0068019C /* WalkOffLogoMatPDF.png in Resources */,
 				42B0150E18DFBD330068019C /* CircleButton.png in Resources */,
+				42857715197D66D2004972AD /* eyeOpenBlackIcon.png in Resources */,
 				42E9AC2A18FF5FB9000E226D /* go1Button.png in Resources */,
+				4285770D197D5FCF004972AD /* returnArrow1.png in Resources */,
 				42849B9518EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0150818DFBD0A0068019C /* SquareButton.png in Resources */,
 				42E9AC1918FF59E2000E226D /* Friendly2Button.png in Resources */,
 				42857707197CA3F7004972AD /* eyeClosedWhiteIcon.png in Resources */,
 				42E9AC2718FF5A6C000E226D /* Clean3Button.png in Resources */,
+				42857717197D66D2004972AD /* eyeClosedBlackIcon.png in Resources */,
 				428576F3197C7D7F004972AD /* pickerHideIcon.png in Resources */,
 				42B014FF18DF450F0068019C /* WebViewBG.png in Resources */,
 				42849B7918E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				422139A019128F7E001BD328 /* AssetsAddFavButton.png in Resources */,
 				42849B6F18E5ADAF00E5B3FB /* MatChatterGreyBubbles4.png in Resources */,
 				42B0158618E3428B0068019C /* WaterGuardLogoInlayPDF.png in Resources */,
+				42857722197D69F2004972AD /* goArrow.png in Resources */,
 				42E9AC2118FF5A6C000E226D /* pro3button.png in Resources */,
 				42B0158018E3428B0068019C /* FirstStepLogoScraperPDF.png in Resources */,
 				4285770A197CA572004972AD /* eyeOpenIrisIcon.png in Resources */,
@@ -1869,6 +1910,7 @@
 				420A8F0D19532B10005FB1D8 /* RefreshIcon.png in Resources */,
 				42849B8C18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
 				42B0150218DF46970068019C /* WebViewBG1.png in Resources */,
+				4285771F197D66D2004972AD /* notesBlackIcon.png in Resources */,
 				42E9AC2518FF5A6C000E226D /* Fresh3Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1081,6 +1081,8 @@
         matView1.hidden= NO;
         matBGLogoView.hidden= YES;
         
+        [self.matView1 addSubview:noteLayerView];
+        
         //NSLog(@"sizeStringHere %@",sizeString);
         
         
@@ -4219,6 +4221,12 @@ else
     
     noteLayerView.hidden=NO;
     decTextLayerView.hidden=YES;
+    if(matView1.hidden==NO){
+        
+        [self.matView1 addSubview:noteLayerView];
+        
+    }
+    
     
     textNoteField = [[UITextField alloc] initWithFrame:CGRectMake(325, 50, 300, 60)];
     //textNoteField.textColor = [UIColor colorWithRed:0/256.0 green:84/256.0 blue:129/256.0 alpha:1.0];
