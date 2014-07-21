@@ -1823,7 +1823,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
      
-        else if ( indexPath.item <= matFullImageArray.count-1 /*&& matFullImageArray.count > 0*/){
+        else if ( urlMatString && indexPath.item <= matFullImageArray.count-1 /*&& matFullImageArray.count > 0*/){
         
            
             favCell.matChooseButton.hidden=NO;
@@ -1834,6 +1834,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBack.hidden=NO;
 
             urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
+            
+            
            if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
            
             {
@@ -1856,6 +1858,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 
                 
             }else {
+                
+                NSAssert(urlMatString != nil, @"We aren't finding the mat string properly");
                 
                 NSString*httpString= @"http://";
                 NSString *urlMatStringAppend = [httpString stringByAppendingString:urlMatString];
