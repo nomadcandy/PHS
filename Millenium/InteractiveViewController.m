@@ -3228,12 +3228,17 @@ else
     
    
      
-     [textDecField  resignFirstResponder];
+     /*[textDecField  resignFirstResponder];
      textDecField.hidden= YES;
      textDecField.delegate = self;
      textDecField.returnKeyType = UIReturnKeyDefault;
-     [textDecField isFirstResponder];
+     [textDecField isFirstResponder];*/
     
+    [_lastMovedTextField resignFirstResponder];
+    _lastMovedTextField.hidden= YES;
+    _lastMovedTextField.delegate = self;
+    _lastMovedTextField.returnKeyType = UIReturnKeyDefault;
+    [_lastMovedTextField isFirstResponder];
    
     
     
@@ -3244,11 +3249,22 @@ else
 - (void)touchDownRepeat:(UITextField*)textField{
    
     
-   [textNoteField  resignFirstResponder];
+    //self.lastMovedTextField = sender;
+    
+    
+    
+    
+    [_lastMovedTextField resignFirstResponder];
+    _lastMovedTextField.hidden= YES;
+    _lastMovedTextField.delegate = self;
+    _lastMovedTextField.returnKeyType = UIReturnKeyDefault;
+    [_lastMovedTextField isFirstResponder];
+    
+   /*[textNoteField  resignFirstResponder];
     textNoteField.hidden= YES;
     textNoteField.delegate = self;
     textNoteField.returnKeyType = UIReturnKeyDefault;
-    [textNoteField isFirstResponder];
+    [textNoteField isFirstResponder];*/
     
     
  
