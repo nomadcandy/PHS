@@ -1088,7 +1088,7 @@
         
         //[self.matView addSubview:noteLayerView];
         //[self.matView bringSubviewToFront:noteLayerView];
- 
+        [self.matView1 setUserInteractionEnabled:YES];
         [self.matView1 addSubview:noteLayerView];
         
         //NSLog(@"sizeStringHere %@",sizeString);
