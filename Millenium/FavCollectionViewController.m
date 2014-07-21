@@ -1623,6 +1623,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
 }
 
+- (NSString*)matStringForIndex: (NSInteger)index{
+   return [matFullImageArray objectAtIndex:index];
+}
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
@@ -1809,7 +1812,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        if (indexPath.item > matFullImageArray.count-1 /*|| matFullImageArray.count == 0*/){
+        
+        
+        if (indexPath.item > matFullImageArray.count-1  || ![self matStringForIndex:indexPath.item]/*|| matFullImageArray.count == 0*/){
             
             favCell.matChooseButton.hidden=YES;
             favCell.removeFavMatButton.hidden=YES;
@@ -1823,7 +1828,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
      
-        else if ( urlMatString && indexPath.item <= matFullImageArray.count-1 /*&& matFullImageArray.count > 0*/){
+        else if ( indexPath.item <= matFullImageArray.count-1 /*&& matFullImageArray.count > 0*/){
         
            
             favCell.matChooseButton.hidden=NO;
@@ -1833,8 +1838,10 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackMatLabel.hidden=NO;
             favCell.goBack.hidden=NO;
 
-            urlMatString =[matFullImageArray objectAtIndex:indexPath.item];
+            urlMatString =[self matStringForIndex:indexPath.item];//[matFullImageArray objectAtIndex:indexPath.item];
             
+            //we shouldn't ever try to operate on a nil mat string
+            if(!urlMatString) urlMatString = @"";
             
            if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
            
