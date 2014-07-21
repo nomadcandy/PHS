@@ -199,6 +199,12 @@
 		428576FE197CA0B6004972AD /* eyeCloseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 428576FC197CA0B6004972AD /* eyeCloseIcon.png */; };
 		42857700197CA1D2004972AD /* eyeOpenIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 428576FF197CA1D2004972AD /* eyeOpenIcon1.png */; };
 		42857701197CA1D2004972AD /* eyeOpenIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 428576FF197CA1D2004972AD /* eyeOpenIcon1.png */; };
+		42857703197CA3EA004972AD /* eyeOpenWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857702197CA3EA004972AD /* eyeOpenWhite.png */; };
+		42857704197CA3EA004972AD /* eyeOpenWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857702197CA3EA004972AD /* eyeOpenWhite.png */; };
+		42857706197CA3F7004972AD /* eyeClosedWhiteIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857705197CA3F7004972AD /* eyeClosedWhiteIcon.png */; };
+		42857707197CA3F7004972AD /* eyeClosedWhiteIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857705197CA3F7004972AD /* eyeClosedWhiteIcon.png */; };
+		42857709197CA572004972AD /* eyeOpenIrisIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857708197CA572004972AD /* eyeOpenIrisIcon.png */; };
+		4285770A197CA572004972AD /* eyeOpenIrisIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42857708197CA572004972AD /* eyeOpenIrisIcon.png */; };
 		4288F1AB1950A03500975FB6 /* LoginIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AA1950A03500975FB6 /* LoginIcon1.png */; };
 		4288F1AF1950A7CF00975FB6 /* MovieIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */; };
 		4288F1B11950ACB800975FB6 /* PDFIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4288F1B01950ACB800975FB6 /* PDFIcon2.png */; };
@@ -562,6 +568,9 @@
 		428576F9197CA0AA004972AD /* eyeOpenIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeOpenIcon.png; sourceTree = "<group>"; };
 		428576FC197CA0B6004972AD /* eyeCloseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeCloseIcon.png; sourceTree = "<group>"; };
 		428576FF197CA1D2004972AD /* eyeOpenIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeOpenIcon1.png; sourceTree = "<group>"; };
+		42857702197CA3EA004972AD /* eyeOpenWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeOpenWhite.png; sourceTree = "<group>"; };
+		42857705197CA3F7004972AD /* eyeClosedWhiteIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeClosedWhiteIcon.png; sourceTree = "<group>"; };
+		42857708197CA572004972AD /* eyeOpenIrisIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeOpenIrisIcon.png; sourceTree = "<group>"; };
 		4288F1AA1950A03500975FB6 /* LoginIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LoginIcon1.png; sourceTree = "<group>"; };
 		4288F1AE1950A7CF00975FB6 /* MovieIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MovieIcon1.png; sourceTree = "<group>"; };
 		4288F1B01950ACB800975FB6 /* PDFIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PDFIcon2.png; sourceTree = "<group>"; };
@@ -1082,6 +1091,9 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				42857708197CA572004972AD /* eyeOpenIrisIcon.png */,
+				42857705197CA3F7004972AD /* eyeClosedWhiteIcon.png */,
+				42857702197CA3EA004972AD /* eyeOpenWhite.png */,
 				428576FF197CA1D2004972AD /* eyeOpenIcon1.png */,
 				428576FC197CA0B6004972AD /* eyeCloseIcon.png */,
 				428576F9197CA0AA004972AD /* eyeOpenIcon.png */,
@@ -1596,6 +1608,7 @@
 				42081FFE1948AB9C00412486 /* Mag.png in Resources */,
 				42B0150D18DFBD330068019C /* CircleButton.png in Resources */,
 				420BEFA619195613003DCEB0 /* ImagePickerCropButton.png in Resources */,
+				42857709197CA572004972AD /* eyeOpenIrisIcon.png in Resources */,
 				4297E05E1923D11D00E43779 /* MaskWhiteSquare15.png in Resources */,
 				42849B7818E9F4A200E5B3FB /* carouselbgnopicuse.png in Resources */,
 				426A6A3018EDADBA00255331 /* WeGotThis.png in Resources */,
@@ -1651,6 +1664,7 @@
 				42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */,
 				42081FEF1948A3A200412486 /* DirectPurchase.png in Resources */,
 				426A6A1618ED0CC300255331 /* SampleLogo11.png in Resources */,
+				42857703197CA3EA004972AD /* eyeOpenWhite.png in Resources */,
 				426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */,
 				42E9AC2418FF5A6C000E226D /* Fresh3Button.png in Resources */,
 				422139911912883A001BD328 /* AssetsRepButton.png in Resources */,
@@ -1664,6 +1678,7 @@
 				42081FBF1947AC4700412486 /* GoldenSeriesPDF.png in Resources */,
 				42F399C81946675B00C84189 /* WaterGuardDiamondM.png in Resources */,
 				426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */,
+				42857706197CA3F7004972AD /* eyeClosedWhiteIcon.png in Resources */,
 				427CE62C18F0670700865291 /* FliersWhite.png in Resources */,
 				42E9AC2018FF5A6C000E226D /* pro3button.png in Resources */,
 				42849B4E18E4484700E5B3FB /* email.png in Resources */,
@@ -1804,6 +1819,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42857704197CA3EA004972AD /* eyeOpenWhite.png in Resources */,
 				42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */,
 				42E9AC2318FF5A6C000E226D /* Friendly3Button.png in Resources */,
 				42857701197CA1D2004972AD /* eyeOpenIcon1.png in Resources */,
@@ -1825,6 +1841,7 @@
 				42849B9518EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0150818DFBD0A0068019C /* SquareButton.png in Resources */,
 				42E9AC1918FF59E2000E226D /* Friendly2Button.png in Resources */,
+				42857707197CA3F7004972AD /* eyeClosedWhiteIcon.png in Resources */,
 				42E9AC2718FF5A6C000E226D /* Clean3Button.png in Resources */,
 				428576F3197C7D7F004972AD /* pickerHideIcon.png in Resources */,
 				42B014FF18DF450F0068019C /* WebViewBG.png in Resources */,
@@ -1834,6 +1851,7 @@
 				42B0158618E3428B0068019C /* WaterGuardLogoInlayPDF.png in Resources */,
 				42E9AC2118FF5A6C000E226D /* pro3button.png in Resources */,
 				42B0158018E3428B0068019C /* FirstStepLogoScraperPDF.png in Resources */,
+				4285770A197CA572004972AD /* eyeOpenIrisIcon.png in Resources */,
 				4221399A19128996001BD328 /* CintasLogoBlackClear.png in Resources */,
 				428576F8197C7E81004972AD /* pickerHideIcon1.png in Resources */,
 				42B0150518DF47110068019C /* WebViewBG2.png in Resources */,

@@ -185,9 +185,11 @@
                                 <rect key="frame" x="374" y="726" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="show" image="eyeOpenIcon1.png">
+                                <state key="normal" title="show" image="eyeOpenIrisIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="eyeOpenIrisIcon.png"/>
+                                <state key="highlighted" image="eyeOpenIrisIcon.png"/>
                                 <connections>
                                     <action selector="showNotes:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="2C1-hn-pIR"/>
                                 </connections>
@@ -196,11 +198,11 @@
                                 <rect key="frame" x="178" y="726" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="show" image="eyeOpenIcon1.png">
+                                <state key="normal" title="show" image="eyeOpenIrisIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" image="eyeOpenIcon1.png"/>
-                                <state key="highlighted" image="eyeOpenIcon.png"/>
+                                <state key="selected" image="eyeOpenIrisIcon.png"/>
+                                <state key="highlighted" image="eyeOpenIrisIcon.png"/>
                                 <connections>
                                     <action selector="showText:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="9OI-Yc-KDw"/>
                                 </connections>
@@ -209,9 +211,11 @@
                                 <rect key="frame" x="319" y="727" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
-                                <state key="normal" image="eyeCloseIcon.png">
+                                <state key="normal" image="eyeClosedWhiteIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="eyeClosedWhiteIcon.png"/>
+                                <state key="highlighted" image="eyeClosedWhiteIcon.png"/>
                                 <connections>
                                     <action selector="hideNotes:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="gcT-Iz-yZA"/>
                                 </connections>
@@ -220,9 +224,11 @@
                                 <rect key="frame" x="126" y="728" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="hide" image="eyeCloseIcon.png">
+                                <state key="normal" title="hide" image="eyeClosedWhiteIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="eyeClosedWhiteIcon.png"/>
+                                <state key="highlighted" image="eyeClosedWhiteIcon.png"/>
                                 <connections>
                                     <action selector="hideText:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Kq6-df-F4E"/>
                                 </connections>
@@ -5378,9 +5384,8 @@
         <image name="Yellow_128.jpg" width="800" height="514"/>
         <image name="addNote.png" width="142" height="124"/>
         <image name="envelope.png" width="795" height="462"/>
-        <image name="eyeCloseIcon.png" width="226" height="220"/>
-        <image name="eyeOpenIcon.png" width="226" height="220"/>
-        <image name="eyeOpenIcon1.png" width="226" height="220"/>
+        <image name="eyeClosedWhiteIcon.png" width="226" height="220"/>
+        <image name="eyeOpenIrisIcon.png" width="226" height="220"/>
         <image name="go1Button.png" width="74" height="71"/>
         <image name="gradietebg.png" width="2048" height="1536"/>
         <image name="loginGraphicIcon.png" width="267" height="58"/>
