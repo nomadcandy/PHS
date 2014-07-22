@@ -279,6 +279,9 @@
 @property (nonatomic, retain) NSMutableArray *blueArray;
 
 
+@property (nonatomic, retain) NSString* emailString;
+@property (nonatomic, retain) NSString* emailTitle;
+
 @property (nonatomic, retain) NSString* chosenFontString;
 @property (nonatomic, assign) int chosenColorInt;
 @property (nonatomic, assign) int chosenFontSize;

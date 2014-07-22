@@ -22,7 +22,7 @@
 
 //@synthesize center;
 //@synthesize control;
-
+@synthesize emailTitle;
 @synthesize sizeGetMatString;
 @synthesize colorButtonHideView;
 
@@ -275,6 +275,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    _emailString=@"A New Sketch Request";
     
     self.decorativeTestFields = [NSMutableArray new];
     
@@ -948,6 +950,8 @@
     
     if([interactiveHeaderString isEqualToString:@"Create Mat"]){
         
+        _emailString=@"A New Sketch Request";
+        
          matView1.hidden= YES;
         
         NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
@@ -1018,7 +1022,7 @@
     if([interactiveHeaderString isEqualToString:@"Edit Mat"]){
         
         
-        
+        _emailString=@"Mat Variation";
         
         
         
@@ -4425,30 +4429,19 @@ enum {
     mailComposer = [[MFMailComposeViewController alloc] init];
     mailComposer.mailComposeDelegate=self;
     
-    NSString *emailTitle = @"Mat Approved";
+   
     
-    //NSString*firstNameString= firstNameField.text;
-    //NSString*lastNameString= lastNameField.text;
+    emailTitle = _emailString;
     
     
-    //NSLog(@"%@",lastNameString);
-    
-    //NSString*messageString = [NSString stringWithFormat:@"%@  %@, %@, %@, %@, %@, %@, %@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
-    
-    NSString*messageString = @"This mat requires your approval";
+    NSString*messageString = @"This mat has been approved";
     
     
     //TODO add string and images to email
     NSString *messageBody = messageString;
     
     
-    //add here
-    //[mailComposer setMessageBody:self.messageBody isHTML:YES];
-
-    
-    //NSArray *toRecipents = [NSArray arrayWithObject:emailString];
-    //NSArray *toRecipents = @"yummy@nomadcandy.com";
-    
+       
     
     //Display Email Composer
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
