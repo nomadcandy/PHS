@@ -37,7 +37,7 @@
     
     //Change the host name here to change the server you want to monitor.
     NSString *remoteHostName = @"www.apple.com";
-    NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
+   /* NSString *remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");*/
     //self.remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, remoteHostName];
     
 	self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
@@ -77,7 +77,7 @@
     if (reachability == self.hostReachability)
 	{
 		//[self configureTextField:self.remoteHostStatusField imageView:self.remoteHostImageView reachability:reachability];
-        NetworkStatus netStatus = [reachability currentReachabilityStatus];
+        //NetworkStatus netStatus = [reachability currentReachabilityStatus];
         BOOL connectionRequired = [reachability connectionRequired];
         
         //self.connectionSummaryLabel.hidden = (netStatus != ReachableViaWWAN);

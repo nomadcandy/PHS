@@ -2043,7 +2043,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     interactiveHeaderString = @"Edit Mat";
     //NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
-    int myInt = (int)sender.tag;
+    //int myInt = (int)sender.tag;
     indexPathSend = (int)sender.tag;
     //int indexSend = addButton.tag;
     

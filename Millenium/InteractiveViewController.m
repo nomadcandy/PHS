@@ -2692,7 +2692,7 @@
 //hits this
 #pragma mark - DIYMenuDelegate
 //Item selected on menu
-- (void)menuItemSelected:(NSString *)action
+/*- (void)menuItemSelected:(NSString *)action
 {
     
      //[DIYMenu addTarget:self action:@selector(tapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -2729,9 +2729,7 @@
         
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         
-            /*AppDelegate *appdelegate=(AppDelegate*)[[UIApplication sharedApplication] delegate];
-            appdelegate.model=YES;*/
-
+ 
         
             _actionSelectedString=action;
             
@@ -2803,12 +2801,12 @@
         
     }
     
-}
+}*/
 
 
 
 //hits this
-- (void)menuActivated
+/*- (void)menuActivated
 {
     //NSLog(@"Delegate: menuActivated");
     //NSLog(@"%@",_actionSelectedString);
@@ -2846,13 +2844,13 @@
         
     }
 
-}
+}*/
 
 
 #pragma mark -
 #pragma mark iCarousel methods
 
-- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
+/*- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
     
     
@@ -2879,10 +2877,10 @@
     
     
     
-}
+}*/
 
 
-- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
+/*- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
     //if (carousel==carouselSize){
     
@@ -3008,7 +3006,7 @@
     
 
 
- if (carousel==carouselColor){
+/* if (carousel==carouselColor){
     
     UIButton *matColorButton = (UIButton *)view;
 	if (matColorButton == nil)
@@ -3226,7 +3224,7 @@ else
 }
 
     
-}
+}*/
 - (void)touchDownRepeatDec:(UITextField*)textField{
     
     
@@ -3729,7 +3727,7 @@ else
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     
-    //if (alertView.tag == 1) {  //First Dialog
+   
     
     UITextField * alertNameField = [alertView textFieldAtIndex:0];
     nameField.text=alertNameField.text;
