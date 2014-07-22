@@ -1883,7 +1883,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSLog(@" %i",  nameString.length);
     NSLog(@"indexPathSend %d",indexPathSend);
-    if (nameString==nil || /*indexPathSend==0 ||*/ nameString.length==1 ||indexPathSend >1000 ) {
+    if (nameString==nil ||  nameString.length==1 ||indexPathSend >1000 ) {
         
         
         UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please select your sketch or Mat before proceeding" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
