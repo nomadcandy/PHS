@@ -236,37 +236,6 @@
 }
 
 
-//Not Used
-/*-(void)ViewDidAppear
-{
-    NSLog(@"nameStringHere %@",nameString);
-    nameField.text =nameString;
-    
-    NSLog(@"logoUseStringSend %@",_logoUseStringHere);
-     NSLog(@"logoUseStringSendDidAppear %@",_logoUseStringHere);
-    
-    if (_logoUseStringHere == Nil){
-        
-        selectedImage = [UIImage imageNamed:@"jadeteahouselogo.png"];
-        //UIImage *image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
-		//_logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		[logoPicButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
-    }
-    
-    else {
-        
-        logoPicButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        UIImage*freshImage = [UIImage imageNamed:_logoUseStringHere];
-        NSLog(@"logoUseStringImageName %@",_logoUseStringHere);
-		//[logoPicButton setBackgroundImage:freshImage forState:UIControlStateNormal];
-        [logoPicButton setImage:freshImage forState:UIControlStateNormal];
-        UIImageView * imgView = [[UIImageView alloc] initWithImage:freshImage];
-        [logoPicButton addSubview:imgView];
-        
-    }
-
-    
-}*/
 
 
 
@@ -700,16 +669,7 @@
     
 
     
-    //To Do add Logo sizing when available
-    /*int wLogo = [_widthField.text intValue];
-    int hLogo = [_heightField.text intValue];
-    
-    int wLogoHundred = w*100;
-    int hLogoHundred = h*100;*/
-
-    
-    /*CGFloat width = w;
-    CGFloat height = w;*/
+   
     
     
     UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scale:)] ;
@@ -1859,49 +1819,25 @@
         
         UIImage*matBGColorImage = [UIImage imageNamed:matUseBGColorString];
         [bgColorButton setBackgroundImage:matBGColorImage forState:UIControlStateNormal];
-        [bgColorButton setImage:matBGColorImage forState:UIControlStateNormal];
+        //[bgColorButton setImage:matBGColorImage forState:UIControlStateNormal];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setTitle:matBGTextColorString forState:UIControlStateNormal];
         
         
         
         [self.bgColorButton reloadInputViews];
-        //NSLog(@"matUseBGColorString %@",matUseBGColorString);
-        //NSLog(@"matColorNumberArray %@",matColorNumberArray);
-        //NSLog(@"matColorArray %@",matColorArray);
+        
         int matColorCount= matColorArray.count;
-        //NSLog(@"matColorCount %i",matColorCount);
         
         
-       /* if (0 == matColorCount){
-            
-            
-            UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
-            [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            
-            NSString*emptyString = @" ";
-            [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
-
-            
-                    }*/
+       
 
         
         
         if (1 <= matColorCount){
             
             
-            //id myObj = [logoColorArray objectAtIndex: objIdx];
+            
             
             NSString*firstColorString = [matColorArray objectAtIndex:0];
             UIImage*firstColorImage = [UIImage imageNamed:firstColorString];
@@ -1918,8 +1854,10 @@
             NSString*secondColorString = [matColorArray objectAtIndex:1];
             UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
             [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
+            
             [_logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-            NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
+            NSString*secondColorNoString = [matColorNumberArray objectAtIndex:1];
+            NSLog(@"secondColorNoString %@", secondColorNoString);
             [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
             
         }
@@ -3429,10 +3367,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Steel Blue_121.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
-        [bgColorButton setImage:myBGColor forState:UIControlStateSelected];
-        [bgColorButton setImage:myBGColor forState:UIControlStateHighlighted];
-        [bgColorButton setImage:myBGColor forState:UIControlStateApplication];
+        
+        [bgColorButton setTitle:@"121" forState:UIControlStateNormal];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
@@ -3447,8 +3383,9 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"123" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3458,7 +3395,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"White_140.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+         [bgColorButton setTitle:@"140" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3468,7 +3406,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"119" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3478,9 +3417,11 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"107" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
+    
     }
     
     else if ((long)sender.tag==120){
@@ -3488,7 +3429,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"120" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3498,7 +3440,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"116" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3508,7 +3451,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Orange_127.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"127" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3518,7 +3462,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Purple_105.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"105" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3527,7 +3472,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Red_112.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"112" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3537,7 +3483,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Gold_109.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"109" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3548,7 +3495,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Grey_115.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"115" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3558,7 +3506,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Light Blue_106.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"106" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3568,7 +3517,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Navy_118.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"118" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3578,7 +3528,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Emerald Green_110.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"110" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3588,7 +3539,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Forest Green_117.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"117" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
         
@@ -3599,7 +3551,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Cranberry_114.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"114" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
         
@@ -3610,7 +3563,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Dark Gold_103.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"103" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3620,7 +3574,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Charcoal_101.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"101" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3630,7 +3585,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Chocolate_111.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"111" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3640,9 +3596,10 @@ else
         //create an image
         UIImage *myBGColor = [UIImage imageNamed:@"Clay_126.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"126" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
-        
+    
     }
     
     if ((long)sender.tag==108){
@@ -3650,7 +3607,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Black_108.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"108" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3660,7 +3618,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Brown_102.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"102" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3670,7 +3629,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Burgundy_100.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"100" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3680,7 +3640,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Aquamarine_130.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"130" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3690,7 +3651,8 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Turquoise_104.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"104" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
         
@@ -3701,9 +3663,10 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Yellow_128.jpg"];
         [matBGLogoView setImage:myBGColor];
-        [bgColorButton setImage:nil forState:UIControlStateNormal];
-        [bgColorButton setBackgroundImage:nil forState:UIControlStateNormal];
+        //[bgColorButton setImage:nil forState:UIControlStateNormal];
+        //[bgColorButton setBackgroundImage:nil forState:UIControlStateNormal];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"128" forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3969,12 +3932,10 @@ else
 
     if ([nameStringHere isEqualToString:@""]){
         
-        //nameHideField.text= nameField.text;
-        // Get size of current image
-        //CGSize size = [myBGColor size];
         
         
-        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         
         
@@ -4000,34 +3961,8 @@ else
         c=a+50;
         d=b+50;
         
-        //not doing anything
-        /*logoPicButton.frame = CGRectMake(a-100, b, x, y);
-         [self.snapshotView addSubview:logoPicButton];*/
-
-    
-    
-    
-    
-    //logoPicButton.frame = CGRectMake(snapshotView.frame.origin., d, x, y);
-    
-    
-    /*CGRect screenRect2 = CGRectMake(723,342,600,490);
         
-    UIGraphicsBeginImageContext(screenRect2.size);
-    
-    
-    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx1, screenRect2);
-    
-    
-    [self.snapshotView.layer renderInContext:ctx1];*/
-        
-    /* [self.logoPicButton.layer renderInContext:ctx1];
-    [self.textDecField.layer  renderInContext:ctx1];*/
-    //[logoPicButton center];
-        
-     //paste here
+     
         
         noteLayerView.hidden=YES;
         CGRect screenRect2 = CGRectMake(0,0,1024,768);
@@ -4190,11 +4125,7 @@ else
     }
     
     
-    //NSLog(@"urlFavString %@",matUrlAddFavString);
-    //NSLog(@"urlFavString %@",matNameAddFavString);
-    /*NSString*artworkCompanyAddFavString =[artworkCompanyArray objectAtIndex:indexPathSend];
-     NSString*artworkSellerAddFavString =[artworkSellerArray objectAtIndex:indexPathSend];
-     NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
+    
     
     
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -4222,14 +4153,7 @@ else
     if (![context save:&error]) {
         //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
-    //Fetch Data entered to test
-    /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
-     self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];*/
-    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
-    
-    //NSLog(@"favoritesMatArray %@",favoritesMatArray);
     
 }
 
@@ -4559,35 +4483,8 @@ enum {
     NSString *imagePath3 =  [directoryPath objectAtIndex:0];
     imagePath2= [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
     
-    NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
-    //UIImage *imageNote = [UIImage imageWithData:dataNote];
-    // Determine the file name and extension
-    /* NSArray *filepart = [file componentsSeparatedByString:@"."];
-     NSString *filename = [filepart objectAtIndex:0];
-     NSString *extension = [filepart objectAtIndex:1];
-     
-     // Get the resource path and read the file using NSData
-     NSString *filePath = [[NSBundle mainBundle] pathForResource:orderImage ofType:extension];
-     NSData *fileData = [NSData dataWithContentsOfFile:filePath];*/
-    
-    // Determine the MIME type
-    /* NSString *mimeType;
-     if ([extension isEqualToString:@"jpg"]) {
-     mimeType = @"image/jpeg";
-     } else if ([extension isEqualToString:@"png"]) {
-     mimeType = @"image/png";
-     } else if ([extension isEqualToString:@"doc"]) {
-     mimeType = @"application/msword";
-     } else if ([extension isEqualToString:@"ppt"]) {
-     mimeType = @"application/vnd.ms-powerpoint";
-     } else if ([extension isEqualToString:@"html"]) {
-     mimeType = @"text/html";
-     } else if ([extension isEqualToString:@"pdf"]) {
-     mimeType = @"application/pdf";
-     }*/
-    
-    // Add attachment
-    //[mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
+    //NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
+   
     [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matNoteImage.jpg"];
     
     
