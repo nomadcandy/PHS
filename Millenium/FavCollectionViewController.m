@@ -2105,6 +2105,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 //handle NsNull correctly
 -(IBAction)matSelected:(UIButton*)sender event:(id)event {
     
+    
     interactiveHeaderString = @"Edit Mat";
     //NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
@@ -2163,11 +2164,25 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
     }
     
-    //matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
-    //NSLog(@"matBGColorString %@",matBGColorString);
+    
     interactiveHeaderString = @"Edit Mat";
     
-    NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
+    //TODO add if urlMatString case nameString
+    //NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
+    
+    //
+    
+  /*  NSString*matUrlAppendAddFavString= nameField.text;
+     NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);*/
+     NSString*pngString= @".png";
+     //NSLog(@"nameFieldText %@",nameField.text);
+     //NSLog(@"nameFieldText %@",nameHideField.text);
+     
+     
+     NSString*urlString = [nameString stringByAppendingString:pngString];
+    
+    //
+   // NSString*urlString =urlMatString;
     //new code
     if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
         
@@ -2181,6 +2196,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         NSString *imagePath =  [directoryPath objectAtIndex:0];
         //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
         imagePath= [imagePath stringByAppendingPathComponent:urlString];
+        //imagePath= [imagePath stringByAppendingPathComponent:nameString];
         //NSLog(@"urlMatStringInMethod:%@",urlMatString);
         
         NSData *data = [NSData dataWithContentsOfFile:imagePath];
