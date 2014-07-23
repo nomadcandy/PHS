@@ -2090,7 +2090,7 @@
         }
 
         
-        if (_logoColorString!=NULL){
+        if (_logoColorString!=nil){
 
         
         NSString *string = _logoColorString;
