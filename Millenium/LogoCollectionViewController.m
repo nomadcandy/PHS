@@ -1944,9 +1944,22 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
 
+    if([NSNull null] != [artworkSellerArray objectAtIndex:indexPathSend])
+        
+    {
+        sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        sellerString =@" ";
+        
+        
+    }
+
     
-    
-    if (indexPathSend <artworkSellerArray.count-1){
+   /* if (indexPathSend <artworkSellerArray.count-1){
     
         sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
         
@@ -1958,9 +1971,25 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
         }
         
-    }
+    }*/
     
-    if (indexPathSend <artworkCompanyArray.count-1){
+    
+    if([NSNull null] != [artworkCompanyArray objectAtIndex:indexPathSend])
+        
+    {
+        companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        companyString =@" ";
+        
+        
+    }
+
+    
+    /*if (indexPathSend <artworkCompanyArray.count-1){
         
         companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
         
@@ -1971,9 +2000,25 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
         }
 
-    }
+    }*/
     
-     if (indexPathSend <artworkIDArray.count){
+    
+    if([NSNull null] != [artworkIDArray objectAtIndex:indexPathSend])
+        
+    {
+        numberString =[artworkIDArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        numberString =@" ";
+        
+        
+    }
+
+    
+     /*if (indexPathSend <artworkIDArray.count){
          
          numberString =[artworkIDArray objectAtIndex:indexPathSend];
          
@@ -1984,9 +2029,25 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
              
          }
          
-     }
+     }*/
     
-    if (indexPathSend <artworkSizeArray.count-1){
+    
+    if([NSNull null] != [artworkSizeArray objectAtIndex:indexPathSend])
+        
+    {
+        sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        sizeString =@" ";
+        
+        
+    }
+
+    
+    /*if (indexPathSend <artworkSizeArray.count-1){
         
         sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
         
@@ -1997,9 +2058,24 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
         }
         
-    }
+    }*/
     
-    if (indexPathSend <artworkColorArray.count-1){
+    if([NSNull null] != [artworkColorArray objectAtIndex:indexPathSend])
+        
+    {
+        logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        logoColorString =@" ";
+        
+        
+    }
+
+    
+   /* if (indexPathSend <artworkColorArray.count-1){
     
         logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
         
@@ -2011,7 +2087,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         }
         
         
-    }
+    }*/
+    
+    
+    
     
     if (indexPathSend <artworkFullImageArray.count-1){
         
