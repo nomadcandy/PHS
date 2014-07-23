@@ -855,7 +855,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         artworkCount= searchLogoArray.count;
-        
+        NSLog(@"artworkCount %i",artworkCount);
         
         NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", searchYeahString];
         
@@ -901,7 +901,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
         matCount= searchMatArray.count;
-        //NSLog(@"%@SearchMatArray",searchMatArray);
+        NSLog(@" matCount %i",matCount);
         
         
         [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
