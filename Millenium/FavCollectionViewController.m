@@ -55,6 +55,8 @@
 @synthesize urlMatString;
 @synthesize urlString;
 
+@synthesize matLabelString;
+
 
 @synthesize matUrlAddFavString;
 @synthesize matNameAddFavString;
@@ -1789,7 +1791,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
             
-            NSString*matLabelString=[matNameArray objectAtIndex:indexPath.item];
+            matLabelString=[matNameArray objectAtIndex:indexPath.item];
             favCell.matTitleLabel.text =matLabelString;
         
         }else{
@@ -1842,6 +1844,31 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             //we shouldn't ever try to operate on a nil mat string
             if(!urlMatString) urlMatString = @"";
+            
+            if ([urlMatString isEqualToString:@"No Image Is Available"])
+            {
+                //not working
+                NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+                NSString *imagePath =  [directoryPath objectAtIndex:0];
+                
+                /* NSString*matUrlAppendAddFavString= nameField.text;
+                 NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);*/
+                 NSString*pngString= @".png";
+                 //NSLog(@"nameFieldText %@",nameField.text);
+                 //NSLog(@"nameFieldText %@",nameHideField.text);
+                 
+                 
+                urlMatString = [matLabelString stringByAppendingString:pngString];
+                
+                imagePath= [imagePath stringByAppendingPathComponent:urlMatString];
+                //NSLog(@"urlMatStringInMethod:%@",urlMatString);
+                
+                NSData *data = [NSData dataWithContentsOfFile:imagePath];
+                //no data here
+                UIImage *logoImage = [UIImage imageWithData:data];
+                [favCell.matChooseButton setImage:logoImage forState:UIControlStateNormal];
+                
+            }
             
            if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
            

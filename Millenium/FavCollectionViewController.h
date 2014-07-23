@@ -195,6 +195,9 @@
 
 //@property (nonatomic,strong) IBOutlet UIButton *logoChoose1Button;
 
+
+@property (nonatomic, copy) NSString*matLabelString;
+
 @property (nonatomic, copy) NSString*artworkNameAddFavString;
 @property (nonatomic, copy) NSString*artworkCompanyAddFavString;
 @property (nonatomic, copy) NSString*artworkSellerAddFavString;
@@ -204,6 +207,8 @@
 
 @property (nonatomic, copy) NSString*artworkSizeAddFavString;
 @property (nonatomic, copy) NSString*artworkColorAddFavString;
+
+
 
 @property (nonatomic, copy) NSString*matNameAddFavString;
 @property (nonatomic, copy) NSString*matCompanyAddFavString;

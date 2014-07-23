@@ -3929,8 +3929,18 @@ else
     decTextLayerView.hidden=NO;
     NSString*nameStringHere=nameField.text;
     NSLog(@"nameString %@",nameStringHere);
+    
+    
+   /* NSString*matUrlAppendAddFavString= nameField.text;
+    NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
+    NSString*pngString= @".png";
+    //NSLog(@"nameFieldText %@",nameField.text);
+    //NSLog(@"nameFieldText %@",nameHideField.text);
+    
+    
+    matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
 
-    if ([nameStringHere isEqualToString:@""]){
+    if ([nameStringHere isEqualToString:@""]  /*|| [matUrlAddFavString isEqualToString:@""] */){
         
         
         
@@ -4032,16 +4042,16 @@ else
     
     //NOTE- Do not remove local NSString values will break
     
-    NSString*matUrlAppendAddFavString= nameField.text;
+   /* NSString*matUrlAppendAddFavString= nameField.text;
     NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
     NSString*pngString= @".png";
     //NSLog(@"nameFieldText %@",nameField.text);
     //NSLog(@"nameFieldText %@",nameHideField.text);
     
     
-    NSString*urlMatStringAppend = [matUrlAppendAddFavString stringByAppendingString:pngString];
+     NSString*matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
     
-    NSString*matUrlAddFavString = urlMatStringAppend;
+    
     NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
     NSString*matNameAddFavString =nameField.text;
     NSString*matSellerAddFavString =sellerField.text;
@@ -4062,7 +4072,17 @@ else
         
     {
         
-        matUrlAddFavString= @"No Image Is Available";
+        NSString*matUrlAppendAddFavString= nameField.text;
+        NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
+        NSString*pngString= @".png";
+        //NSLog(@"nameFieldText %@",nameField.text);
+        //NSLog(@"nameFieldText %@",nameHideField.text);
+        
+        
+        matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];
+
+        NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+        
         
     }
     
@@ -4136,6 +4156,7 @@ else
     
     
     //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    //[newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
     [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
     [newMatFavorite setValue:nameField.text forKey:@"artworkName"];
     [newMatFavorite setValue:companyField.text forKey:@"company"];
