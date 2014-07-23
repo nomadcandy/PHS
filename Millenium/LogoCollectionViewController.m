@@ -1930,7 +1930,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
     
-    if (indexPathSend <artworkFullImageArray.count){
+    if (indexPathSend <artworkFullImageArray.count-1){
         
         logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
         
@@ -1946,7 +1946,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
     
     
-    if (indexPathSend <artworkSellerArray.count){
+    if (indexPathSend <artworkSellerArray.count-1){
     
         sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
         
@@ -1960,7 +1960,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
     
-    if (indexPathSend <artworkCompanyArray.count){
+    if (indexPathSend <artworkCompanyArray.count-1){
         
         companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
         
@@ -1986,7 +1986,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
          
      }
     
-    if (indexPathSend <artworkSizeArray.count){
+    if (indexPathSend <artworkSizeArray.count-1){
         
         sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
         
@@ -1999,7 +1999,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
     
-    if (indexPathSend <artworkColorArray.count){
+    if (indexPathSend <artworkColorArray.count-1){
     
         logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
         
@@ -2013,7 +2013,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
     
-    if (indexPathSend <artworkFullImageArray.count){
+    if (indexPathSend <artworkFullImageArray.count-1){
         
         NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
         NSString*httpString= @"http://";
@@ -2047,7 +2047,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     indexPathSend = (int)sender.tag;
     //int indexSend = addButton.tag;
     
-    //NSLog(@"sender %@",sender);
+    NSLog(@"sender %@",sender);
     //NSLog(@"indexPathSend %d",indexPathSend);
     //NSString*nearMeImageString=[nearMeImagesArray objectAtIndex:selectedIndex];
     
@@ -2058,11 +2058,154 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     companyString =[matCompanyArray objectAtIndex:indexPathSend];
     numberString =[matIDArray objectAtIndex:indexPathSend];
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
+    NSLog(@"matColorArray %@",matColorArray);
     matColorString =[matColorArray objectAtIndex:indexPathSend];
-    //NSLog(@"matColorString %@",matColorString);
+    NSLog(@"matColorString %@",matColorString);
     matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
     NSLog(@"matBGColorString %@",matBGColorString);
     //interactiveHeaderString = @"Edit Mat";
+    
+    if (logoColorString==NULL)
+    {
+        
+        logoColorString=@"";
+        
+    }
+    
+    
+    if([NSNull null] != [matSellerArray objectAtIndex:indexPathSend])
+        
+    {
+        sellerString =[matSellerArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        sellerString =@" ";
+        
+        
+    }
+    
+    
+  
+    
+    
+    if([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend])
+        
+    {
+        companyString =[matCompanyArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        companyString =@" ";
+        
+        
+    }
+    
+    
+    if([NSNull null] != [matIDArray objectAtIndex:indexPathSend])
+        
+    {
+        numberString =[matIDArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        numberString =@" ";
+        
+        
+    }
+    
+    /*if (indexPathSend <matIDArray.count-1){
+        
+        numberString =[matIDArray objectAtIndex:indexPathSend];
+        
+        if (numberString==NULL)
+        {
+            
+            numberString= @"No ID is provided";
+            
+        }
+        
+    }*/
+    
+    if([NSNull null] != [matSizeArray objectAtIndex:indexPathSend])
+        
+    {
+        sizeString =[matSizeArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        sizeString =@" ";
+        
+        
+    }
+
+    
+   /* if (indexPathSend <matSizeArray.count-1){
+        
+        sizeString =[matSizeArray objectAtIndex:indexPathSend];
+        
+        if (sizeString==NULL)
+        {
+            
+            sizeString= @"4'x6'";
+            
+        }
+        
+    }*/
+    
+    if([NSNull null] != [matBGColorArray objectAtIndex:indexPathSend])
+        
+    {
+        matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        matBGColorString =@" ";
+        
+        
+    }
+
+    if([NSNull null] != [matColorArray objectAtIndex:indexPathSend])
+        
+    {
+        matColorString =[matColorArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        matColorString =@" ";
+        
+        
+    }
+    
+    
+    /*if (indexPathSend <matColorArray.count-1){
+        
+     
+        
+        matColorString =[matColorArray objectAtIndex:indexPathSend];
+        
+        if (matColorString==NULL)
+        {
+            
+            matColorString= @" ";
+            
+        }
+        
+    }*/
+
+
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
     //new code
