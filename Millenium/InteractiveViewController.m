@@ -245,7 +245,510 @@
 {
     [super viewDidLoad];
     
-    _emailString=@"A New Sketch Request";
+    //_emailString=@"A New Sketch Request";
+    
+    if (logoColorArray == nil)
+    {
+        logoColorArray = [[NSMutableArray alloc] init];
+    }
+    
+    NSLog(@"logoColorArray %@",logoColorArray);
+    
+    
+    if (logoColorNumberArray == nil)
+    {
+        logoColorNumberArray = [[NSMutableArray alloc] init];
+    }
+    
+    
+    if (_logoColorString!=nil){
+        
+        
+        NSString *string = _logoColorString;
+        if ([string rangeOfString:@"108-Black"].location == NSNotFound) {
+            NSLog(@"string does not contain bla");
+            
+            
+            
+        } else {
+            NSLog(@"black Found!");
+            
+            [logoColorArray addObject:@"Black_108.jpg"];
+            [logoColorNumberArray addObject:@"108"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Steel Blue_121.jpg"];
+            [logoColorNumberArray addObject:@"121"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"123-Suede"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Suede_123.jpg"];
+            [logoColorNumberArray addObject:@"123"];
+            
+        }
+        
+        if ([string rangeOfString:@"140-White"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"White_140.jpg"];
+            [logoColorNumberArray addObject:@"140"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"119-Rose"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Rose_119.jpg"];
+            [logoColorNumberArray addObject:@"119"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Royal Blue_107.jpg"];
+            [logoColorNumberArray addObject:@"107"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Sandalwood_120.jpg"];
+            [logoColorNumberArray addObject:@"120"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"116-Silver"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Silver_116.jpg"];
+            [logoColorNumberArray addObject:@"116"];
+            //add string to an array
+            
+        }
+        
+        if ([string rangeOfString:@"127-Orange"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Orange_127.jpg"];
+            [logoColorNumberArray addObject:@"127"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"105-Purple"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Purple_105.jpg"];
+            [logoColorNumberArray addObject:@"105"];
+            
+            
+            
+        }
+        
+        if ([string rangeOfString:@"112-Red"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Red_112.jpg"];
+            [logoColorNumberArray addObject:@"112"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"109-Gold"].location == NSNotFound) {
+            
+            NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Gold_109.jpg"];
+            [logoColorNumberArray addObject:@"109"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"115-Grey"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Grey_115.jpg"];
+            [logoColorNumberArray addObject:@"115"];
+        }
+        
+        if ([string rangeOfString:@"106-Light Blue"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Light Blue_106.jpg"];
+            [logoColorNumberArray addObject:@"106"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"118-Navy"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Navy_118.jpg"];
+            [logoColorNumberArray addObject:@"118"];
+            
+        }
+        
+        if ([string rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Emerald Green_110.jpg"];
+            [logoColorNumberArray addObject:@"110"];
+        }
+        
+        if ([string rangeOfString:@"117-Forest Green"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Forest Green_117.jpg"];
+            [logoColorNumberArray addObject:@"117"];
+        }
+        
+        if ([string rangeOfString:@"114-Cranberry"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Cranberry_114.jpg"];
+            [logoColorNumberArray addObject:@"114"];
+            
+        }
+        
+        if ([string rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Dark Gold_103.jpg"];
+            [logoColorNumberArray addObject:@"103"];
+            
+        }
+        
+        if ([string rangeOfString:@"101-Charcoal"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Charcoal_101.jpg"];
+            [logoColorNumberArray addObject:@"101"];
+            
+        }
+        
+        if ([string rangeOfString:@"111-Chocolate"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Chocolate_111.jpg"];
+            [logoColorNumberArray addObject:@"111"];
+            
+        }
+        
+        if ([string rangeOfString:@"126-Clay"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Clay_126.jpg"];
+            [logoColorNumberArray addObject:@"126"];
+            
+        }
+        
+        if ([string rangeOfString:@"102-Brown"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Brown_102.jpg"];
+            [logoColorNumberArray addObject:@"102"];
+            
+        }
+        
+        if ([string rangeOfString:@"100-Burgundy"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Burgundy_100.jpg"];
+            [logoColorNumberArray addObject:@"100"];
+            
+        }
+        
+        if ([string rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Aquamarine_130.jpg"];
+            [logoColorNumberArray addObject:@"130"];
+            
+        }
+        
+        if ([string rangeOfString:@"104-Turquoise"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Turquoise_104.jpg"];
+            [logoColorNumberArray addObject:@"104"];
+            
+            
+        }
+        
+        if ([string rangeOfString:@"128-Yellow"].location == NSNotFound) {
+            
+            //NSLog(@"string does not contain bla");
+            
+        } else {
+            
+            
+            [logoColorArray addObject:@"Yellow_128.jpg"];
+            [logoColorNumberArray addObject:@"128"];
+            
+            
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    //NSLog(@"logoColorNumberArray %@",logoColorNumberArray);
+    //NSLog(@"logoColorArray %@",logoColorArray);
+    int logoColorCount= logoColorArray.count;
+    //NSLog(@"logoColorCount %i",logoColorCount);
+    
+    
+    
+    if (0 == logoColorCount){
+        
+        
+        /* UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
+         [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+         [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+         [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+         [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+         [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+         [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+         [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];*/
+        
+        NSString*emptyString = @" ";
+        [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
+        
+        
+    }
+    
+    
+    
+    
+    if (1 <= logoColorCount){
+        
+        
+        //id myObj = [logoColorArray objectAtIndex: objIdx];
+        
+        NSString*firstColorString = [logoColorArray objectAtIndex:0];
+        UIImage*firstColorImage = [UIImage imageNamed:firstColorString];
+        [_logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
+        
+        NSString*firstColorNoString = [logoColorNumberArray objectAtIndex:0];
+        [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
+        [_logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        [_logoColorButton1 setNeedsDisplay];
+    }
+    
+    if (2 <= logoColorCount){
+        
+        NSString*secondColorString = [logoColorArray objectAtIndex:1];
+        UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
+        [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
+        
+        NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
+        [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
+        [_logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+    }
+    
+    if (3 <= logoColorCount){
+        
+        NSString*thirdColorString=[logoColorArray objectAtIndex:2];
+        UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
+        [_logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
+        
+        NSString*thirdColorNoString = [logoColorNumberArray objectAtIndex:2];
+        [_logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
+        [_logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        
+    }
+    
+    if (4 <= logoColorCount){
+        
+        NSString*fourthColorString=[logoColorArray objectAtIndex:3];
+        UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
+        [_logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
+        
+        NSString*fourthColorNoString = [logoColorNumberArray objectAtIndex:3];
+        [_logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
+        [_logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        
+    }
+    
+    if (5 <= logoColorCount){
+        
+        NSString*fifthColorString=[logoColorArray objectAtIndex:4];
+        UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
+        [_logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
+        
+        NSString*fifthColorNoString = [logoColorNumberArray objectAtIndex:4];
+        [_logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
+        [_logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        
+        
+    }
+    
+    if (6 <= logoColorCount){
+        
+        NSString*sixthColorString=[logoColorArray objectAtIndex:5];
+        UIImage*sixthColorImage = [UIImage imageNamed:sixthColorString];
+        [_logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
+        
+        
+        NSString*sixthColorNoString = [logoColorNumberArray objectAtIndex:5];
+        [_logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
+        [_logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        
+    }
+    
+    if (7 <= logoColorCount){
+        
+        NSString*seventhColorString=[logoColorArray objectAtIndex:6];
+        UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];
+        [_logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
+        
+        NSString*seventhColorNoString = [logoColorNumberArray objectAtIndex:6];
+        [_logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
+        [_logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        
+    }
+    
+    if (8 == logoColorCount){
+        
+        NSString*eighthColorString=[logoColorArray objectAtIndex:7];
+        UIImage*eighthColorImage = [UIImage imageNamed:eighthColorString];
+        [_logoColorButton8 setBackgroundImage:eighthColorImage forState:UIControlStateNormal];
+        
+        NSString*eighthColorNoString = [logoColorNumberArray objectAtIndex:7];
+        [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
+        [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
+        
+    }
+
     
     self.decorativeTestFields = [NSMutableArray new];
     
@@ -277,7 +780,7 @@
     
     pickerViewFontArray=fontNames;
     
-        
+    
     
      colorNamesImagesArray =@[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Steel Blue_121.jpg"]],
                   [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Suede_123.jpg"]],
@@ -947,14 +1450,14 @@
         }
 
         
-        UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
+        /*UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
         [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
         [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
         [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
         [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
         [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
         [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-        [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];
+        [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];*/
         
         NSString*emptyString = @" ";
         [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
@@ -2076,508 +2579,7 @@
         }
 
         
-        if (logoColorArray == nil)
-        {
-            logoColorArray = [[NSMutableArray alloc] init];
-        }
-        
-        NSLog(@"logoColorArray %@",logoColorArray);
-        
-        
-        if (logoColorNumberArray == nil)
-        {
-            logoColorNumberArray = [[NSMutableArray alloc] init];
-        }
-
-        
-        if (_logoColorString!=nil){
-
-        
-        NSString *string = _logoColorString;
-        if ([string rangeOfString:@"108-Black"].location == NSNotFound) {
-            NSLog(@"string does not contain bla");
-            
-            
-            
-        } else {
-            NSLog(@"black Found!");
-            
-            [logoColorArray addObject:@"Black_108.jpg"];
-            [logoColorNumberArray addObject:@"108"];
-            //add string to an array
-            
-        }
-        
-        if ([string rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
-            
-            NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Steel Blue_121.jpg"];
-            [logoColorNumberArray addObject:@"121"];
-            //add string to an array
-            
-        }
-        
-        if ([string rangeOfString:@"123-Suede"].location == NSNotFound) {
-            
-            NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Suede_123.jpg"];
-            [logoColorNumberArray addObject:@"123"];
-            
-        }
-        
-        if ([string rangeOfString:@"140-White"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"White_140.jpg"];
-             [logoColorNumberArray addObject:@"140"];
-            //add string to an array
-            
-        }
-        
-        if ([string rangeOfString:@"119-Rose"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Rose_119.jpg"];
-            [logoColorNumberArray addObject:@"119"];
-            //add string to an array
-            
-        }
-        
-        if ([string rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Royal Blue_107.jpg"];
-            [logoColorNumberArray addObject:@"107"];
-            //add string to an array
-            
-        }
-        
-        if ([string rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Sandalwood_120.jpg"];
-            [logoColorNumberArray addObject:@"120"];
-            //add string to an array
-            
-        }
-        
-        if ([string rangeOfString:@"116-Silver"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Silver_116.jpg"];
-            [logoColorNumberArray addObject:@"116"];
-            //add string to an array
-            
-        }
-        
-        if ([string rangeOfString:@"127-Orange"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Orange_127.jpg"];
-            [logoColorNumberArray addObject:@"127"];
-            
-            
-        }
-        
-        if ([string rangeOfString:@"105-Purple"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Purple_105.jpg"];
-            [logoColorNumberArray addObject:@"105"];
-            
-            
-            
-        }
-        
-        if ([string rangeOfString:@"112-Red"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Red_112.jpg"];
-            [logoColorNumberArray addObject:@"112"];
-            
-            
-        }
-        
-        if ([string rangeOfString:@"109-Gold"].location == NSNotFound) {
-            
-            NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Gold_109.jpg"];
-            [logoColorNumberArray addObject:@"109"];
-            
-            
-        }
-        
-        if ([string rangeOfString:@"115-Grey"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Grey_115.jpg"];
-            [logoColorNumberArray addObject:@"115"];
-        }
-        
-        if ([string rangeOfString:@"106-Light Blue"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Light Blue_106.jpg"];
-            [logoColorNumberArray addObject:@"106"];
-            
-            
-        }
-        
-        if ([string rangeOfString:@"118-Navy"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Navy_118.jpg"];
-            [logoColorNumberArray addObject:@"118"];
-            
-        }
-        
-        if ([string rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Emerald Green_110.jpg"];
-            [logoColorNumberArray addObject:@"110"];
-        }
-        
-        if ([string rangeOfString:@"117-Forest Green"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Forest Green_117.jpg"];
-            [logoColorNumberArray addObject:@"117"];
-        }
-        
-        if ([string rangeOfString:@"114-Cranberry"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Cranberry_114.jpg"];
-            [logoColorNumberArray addObject:@"114"];
-            
-        }
-        
-        if ([string rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Dark Gold_103.jpg"];
-            [logoColorNumberArray addObject:@"103"];
-            
-        }
-        
-        if ([string rangeOfString:@"101-Charcoal"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Charcoal_101.jpg"];
-            [logoColorNumberArray addObject:@"101"];
-            
-        }
-        
-        if ([string rangeOfString:@"111-Chocolate"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Chocolate_111.jpg"];
-            [logoColorNumberArray addObject:@"111"];
-            
-        }
-        
-        if ([string rangeOfString:@"126-Clay"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Clay_126.jpg"];
-            [logoColorNumberArray addObject:@"126"];
-            
-        }
-        
-        if ([string rangeOfString:@"102-Brown"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Brown_102.jpg"];
-            [logoColorNumberArray addObject:@"102"];
-            
-        }
-        
-        if ([string rangeOfString:@"100-Burgundy"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Burgundy_100.jpg"];
-            [logoColorNumberArray addObject:@"100"];
-            
-        }
-        
-        if ([string rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Aquamarine_130.jpg"];
-            [logoColorNumberArray addObject:@"130"];
-            
-        }
-        
-        if ([string rangeOfString:@"104-Turquoise"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Turquoise_104.jpg"];
-            [logoColorNumberArray addObject:@"104"];
-            
-            
-        }
-        
-        if ([string rangeOfString:@"128-Yellow"].location == NSNotFound) {
-            
-            //NSLog(@"string does not contain bla");
-            
-        } else {
-            
-            
-            [logoColorArray addObject:@"Yellow_128.jpg"];
-            [logoColorNumberArray addObject:@"128"];
-            
-            
-        }
-
-
-
-        }
-
-
-
-
-        //NSLog(@"logoColorNumberArray %@",logoColorNumberArray);
-        //NSLog(@"logoColorArray %@",logoColorArray);
-        int logoColorCount= logoColorArray.count;
-        //NSLog(@"logoColorCount %i",logoColorCount);
-        
-        
-        
-        if (0 == logoColorCount){
-            
-            
-            UIImage*whiteImage = [UIImage imageNamed:@"white_140.jpg"];
-            [_logoColorButton1 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton2 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton3 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton4 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton5 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];
-            
-            NSString*emptyString = @" ";
-            [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
-            [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
-            
-            
-        }
-      
-        
-       
-                    
-              if (1 <= logoColorCount){
-                    
-                
-                    //id myObj = [logoColorArray objectAtIndex: objIdx];
-                    
-                    NSString*firstColorString = [logoColorArray objectAtIndex:0];
-                    UIImage*firstColorImage = [UIImage imageNamed:firstColorString];
-                    [_logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
-                  
-                    NSString*firstColorNoString = [logoColorNumberArray objectAtIndex:0];
-                   [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
-                   [_logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-                  
-                  [_logoColorButton1 setNeedsDisplay];
-                }
-                
-               if (2 <= logoColorCount){
-                   
-                   NSString*secondColorString = [logoColorArray objectAtIndex:1];
-                   UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
-                    [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
-                   
-                   NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
-                   [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
-                   [_logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-                
-                }
-            
-             if (3 <= logoColorCount){
-           
-                 NSString*thirdColorString=[logoColorArray objectAtIndex:2];
-                 UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
-                 [_logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
-                 
-                 NSString*thirdColorNoString = [logoColorNumberArray objectAtIndex:2];
-                 [_logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
-                [_logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-                 
-            
-             }
-                
-                if (4 <= logoColorCount){
-                    
-                    NSString*fourthColorString=[logoColorArray objectAtIndex:3];
-                    UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
-                    [_logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
-                    
-                    NSString*fourthColorNoString = [logoColorNumberArray objectAtIndex:3];
-                    [_logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
-                    [_logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-                    
-                    
-                }
-                
-                if (5 <= logoColorCount){
-                    
-                    NSString*fifthColorString=[logoColorArray objectAtIndex:4];
-                    UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
-                    [_logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
-                    
-                    NSString*fifthColorNoString = [logoColorNumberArray objectAtIndex:4];
-                    [_logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
-                    [_logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-
-                    
-                    
-                }
-                
-                if (6 <= logoColorCount){
-                    
-                    NSString*sixthColorString=[logoColorArray objectAtIndex:5];
-                    UIImage*sixthColorImage = [UIImage imageNamed:sixthColorString];
-                    [_logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
-                    
-                    
-                    NSString*sixthColorNoString = [logoColorNumberArray objectAtIndex:5];
-                    [_logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
-                    [_logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-
-                    
-                }
-                
-                if (7 <= logoColorCount){
-                    
-                    NSString*seventhColorString=[logoColorArray objectAtIndex:6];
-                    UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];
-                    [_logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
-                    
-                    NSString*seventhColorNoString = [logoColorNumberArray objectAtIndex:6];
-                    [_logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
-                    [_logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-                    
-                    
-                }
-                
-                if (8 == logoColorCount){
-                    
-                    NSString*eighthColorString=[logoColorArray objectAtIndex:7];
-                    UIImage*eighthColorImage = [UIImage imageNamed:eighthColorString];
-                    [_logoColorButton8 setBackgroundImage:eighthColorImage forState:UIControlStateNormal];
-                    
-                    NSString*eighthColorNoString = [logoColorNumberArray objectAtIndex:7];
-                    [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
-                    [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
-                    
-                }
-
+     
     
             
        
