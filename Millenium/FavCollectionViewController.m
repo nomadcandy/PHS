@@ -2052,7 +2052,69 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     logoUseString = [artworkFullImageArray objectAtIndex:indexPathSend];
-    if ([[NSNull null] isEqual:logoUseString]) {
+    
+    
+    if(logoUseString==NULL){
+        
+        /*  NSString*matUrlAppendAddFavString= nameField.text;
+         NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);*/
+        NSString*pngString= @".png";
+        //NSLog(@"nameFieldText %@",nameField.text);
+        //NSLog(@"nameFieldText %@",nameHideField.text);
+        
+        
+        urlString = [logoUseString stringByAppendingString:pngString];
+        
+    }
+    
+    //
+    // NSString*urlString =urlMatString;
+    //new code
+    if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
+        
+    {
+        
+        
+        
+        
+        
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath =  [directoryPath objectAtIndex:0];
+        //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+        imagePath= [imagePath stringByAppendingPathComponent:urlString];
+        //imagePath= [imagePath stringByAppendingPathComponent:nameString];
+        //NSLog(@"urlMatStringInMethod:%@",urlMatString);
+        
+        NSData *data = [NSData dataWithContentsOfFile:imagePath];
+        //no data here
+        UIImage *logoImage = [UIImage imageWithData:data];
+        
+        //NSLog(@"%@iconImage",iconImage);
+        imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+        [UIImagePNGRepresentation(logoImage) writeToFile:imagePath atomically:YES];
+        
+    }else {
+        
+        NSString*httpString= @"http://";
+        NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+        
+        
+        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+        
+        UIImage * iconImage;
+        
+        iconImage = [UIImage imageWithData:data];
+        
+        //NSLog(@"%@iconImage",iconImage);
+        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+        [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
+        
+        
+    }
+
+    
+    
+    /*if ([[NSNull null] isEqual:logoUseString]) {
         logoUseString = nil;
     }
 
@@ -2071,7 +2133,10 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
             
             
-        }
+        }*/
+    
+    
+    
         
         
         
