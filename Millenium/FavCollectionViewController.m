@@ -1999,9 +1999,42 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
+    sellerString = [artworkSellerArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:sellerString]) {
+        sellerString = nil;
+    }
+    
+    
+    companyString = [artworkCompanyArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:companyString]) {
+        companyString = nil;
         
+    }
+    numberString = [artworkIDArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:numberString]) {
+        numberString = nil;
         
-        if (indexPathSend <artworkSellerArray.count){
+    }
+    
+    
+    sizeString = [artworkSizeArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:sizeString]) {
+        sizeString = @"4'x 6'";
+        
+    }
+    
+    logoColorString = [artworkColorArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:logoColorString]) {
+        numberString = nil;
+        
+    }
+    
+    
+    
+
+
+    
+        /*if (indexPathSend <artworkSellerArray.count){
             //Need to check if artworkSellerArray class name=NSNull
             sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
             NSLog(@"sellerString %@",sellerString);
@@ -2054,7 +2087,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 
             }
             
-        }
+        }*/
         
         if (indexPathSend <artworkColorArray.count){
             
