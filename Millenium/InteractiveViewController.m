@@ -4187,7 +4187,9 @@ else
 
 -(IBAction)refreshLogoColors:(id)sender{
     
-    [self.view addSubview:noteLayerView];
+    [self.view addSubview:decTextLayerView];
+    
+    
 }
 
 -(IBAction)addNote:(id)sender{
@@ -4245,19 +4247,19 @@ else
       
 
     
-        //[self.view addSubview:textDecField];
+    
         [self.decTextLayerView addSubview:textDecField];
         
         [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
         [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
-       // [textDecField addTarget:self action:@selector(touchDragCenter:) forControlEvents:UIControlEventTouchDragOutside];
+    
         [textDecField addTarget:self action:@selector(touchDownRepeatDec:) forControlEvents:UIControlEventTouchDownRepeat];
     
     [self.decorativeTestFields addObject:textDecField];
     
     }
     
-//}
+
 
 enum {
     textDecFieldTag = 2,
