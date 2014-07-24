@@ -1998,6 +1998,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             }
             
         }
+    
+    
+    logoUseString = [artworkFullImageArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:logoUseString]) {
+        logoUseString = nil;
+    }
         
     sellerString = [artworkSellerArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:sellerString]) {
@@ -2103,11 +2109,11 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if (indexPathSend <artworkFullImageArray.count){
+        if (indexPathSend <artworkFullImageArray.count-1){
             
-            urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
+            //urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
             NSString*httpString= @"http://";
-            NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
+            NSString *urlStringAppend = [httpString stringByAppendingString:logoUseString];
             NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
             UIImage * iconImage;
             iconImage = [UIImage imageWithData:data];
