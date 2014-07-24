@@ -1912,7 +1912,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
     //NSLog(@"addButton.tag:%ld",(long)sender.tag);
     
-    int myInt = (int)sender.tag;
+    //int myInt = (int)sender.tag;
     indexPathSend = (int)sender.tag;
     
     nameString =[artworkNameArray objectAtIndex:indexPathSend];
@@ -1929,9 +1929,9 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     //orientString=@"";
    
     
-    NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
+    //NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
     
-    if (indexPathSend <artworkFullImageArray.count-1){
+    /*if (indexPathSend <artworkFullImageArray.count-1){
         
         logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
         
@@ -1943,7 +1943,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
         }
         
-    }
+    }*/
 
     if([NSNull null] != [artworkSellerArray objectAtIndex:indexPathSend])
         
@@ -1990,18 +1990,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
 
     
-    /*if (indexPathSend <artworkCompanyArray.count-1){
-        
-        companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
-        
-        if (companyString==NULL)
-        {
-            
-            companyString= @"No Company Provided";
-            
-        }
-
-    }*/
     
     
     if([NSNull null] != [artworkIDArray objectAtIndex:indexPathSend])
@@ -2019,18 +2007,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
 
     
-     /*if (indexPathSend <artworkIDArray.count){
-         
-         numberString =[artworkIDArray objectAtIndex:indexPathSend];
-         
-         if (numberString==NULL)
-         {
-             
-             numberString= @"No ID is provided";
-             
-         }
-         
-     }*/
+    
     
     
     if([NSNull null] != [artworkSizeArray objectAtIndex:indexPathSend])
@@ -2048,18 +2025,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
 
     
-    /*if (indexPathSend <artworkSizeArray.count-1){
-        
-        sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
-        
-        if (sizeString==NULL)
-        {
-            
-            sizeString= @"4'x6'";
-            
-        }
-        
-    }*/
+   
     
     if([NSNull null] != [artworkColorArray objectAtIndex:indexPathSend])
         
@@ -2076,19 +2042,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
 
     
-   /* if (indexPathSend <artworkColorArray.count-1){
-    
-        logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
-        
-        if (logoColorString==NULL)
-        {
-            
-            logoColorString= @"No colors available";
-            
-        }
-        
-        
-    }*/
+   
     
     
     
@@ -2200,18 +2154,6 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
     }
     
-    /*if (indexPathSend <matIDArray.count-1){
-        
-        numberString =[matIDArray objectAtIndex:indexPathSend];
-        
-        if (numberString==NULL)
-        {
-            
-            numberString= @"No ID is provided";
-            
-        }
-        
-    }*/
     
     if([NSNull null] != [matSizeArray objectAtIndex:indexPathSend])
         
@@ -2228,18 +2170,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
 
     
-   /* if (indexPathSend <matSizeArray.count-1){
-        
-        sizeString =[matSizeArray objectAtIndex:indexPathSend];
-        
-        if (sizeString==NULL)
-        {
-            
-            sizeString= @"4'x6'";
-            
-        }
-        
-    }*/
+   
     
     if([NSNull null] != [matBGColorArray objectAtIndex:indexPathSend])
         
@@ -2270,21 +2201,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     
-    /*if (indexPathSend <matColorArray.count-1){
-        
-     
-        
-        matColorString =[matColorArray objectAtIndex:indexPathSend];
-        
-        if (matColorString==NULL)
-        {
-            
-            matColorString= @" ";
-            
-        }
-        
-    }*/
-
+    
 
     
     NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];

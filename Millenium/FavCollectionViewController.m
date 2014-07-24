@@ -1985,7 +1985,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matBGColorString =@" ";
         matColorString =@" ";
         
-        if (indexPathSend <artworkFullImageArray.count-1 && artworkFullImageArray.count > 0){
+       /* if (indexPathSend <artworkFullImageArray.count-1 && artworkFullImageArray.count > 0){
             
             logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
             
@@ -1997,7 +1997,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 
             }
             
-        }
+        }*/
     
     
     
@@ -2036,7 +2036,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 
     
-    if (indexPathSend <artworkColorArray.count-1){
+    /*if (indexPathSend <artworkColorArray.count-1){
             
             logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
             
@@ -2048,28 +2048,24 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             }
             
             
-        }
+        }*/
     
     
-    logoUseString = [artworkFullImageArray objectAtIndex:indexPathSend];
+    urlString = [artworkFullImageArray objectAtIndex:indexPathSend];
     
     
-    if(logoUseString==NULL){
+    /*if(logoUseString==NULL){
         
-        /*  NSString*matUrlAppendAddFavString= nameField.text;
-         NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);*/
+        
         NSString*pngString= @".png";
-        //NSLog(@"nameFieldText %@",nameField.text);
-        //NSLog(@"nameFieldText %@",nameHideField.text);
+        
         
         
         urlString = [logoUseString stringByAppendingString:pngString];
         
-    }
     
-    //
-    // NSString*urlString =urlMatString;
-    //new code
+    
+    }*/
     if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
         
     {
