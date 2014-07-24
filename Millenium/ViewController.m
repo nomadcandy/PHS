@@ -100,7 +100,7 @@
 {
     [super viewDidLoad];
     
-    [activityIndicator stopAnimating];
+   // [activityIndicator stopAnimating];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
@@ -325,7 +325,7 @@
 
 -(IBAction)goSearch:(id)sender{
     
-    [activityIndicator startAnimating];
+    //[activityIndicator startAnimating];
     
     if( searchField.text!= Nil || [searchField.text length] == 0 ) {
         
@@ -483,7 +483,7 @@
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
        
 
-         [activityIndicator stopAnimating];
+         //[activityIndicator stopAnimating];
         
         
         
@@ -1194,7 +1194,7 @@ else{
 
 -(void)viewDidDisappear:(BOOL)animated{
     
-    [activityIndicator stopAnimating];
+    //[activityIndicator stopAnimating];
 }
 
 

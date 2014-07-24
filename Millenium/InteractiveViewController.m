@@ -1076,7 +1076,7 @@
     }
 
     
-    [activityIndicator stopAnimating];
+    //[activityIndicator stopAnimating];
     matView1.hidden= YES;
    
     searchField.textAlignment = NSTextAlignmentCenter;
@@ -4525,7 +4525,7 @@ enum {
 -(IBAction)goSearch:(id)sender{
     
     
-  [activityIndicator startAnimating];
+ // [activityIndicator startAnimating];
     
    if( searchField.text!= Nil || [searchField.text length] == 0 ) {
     
@@ -4674,7 +4674,7 @@ enum {
             matColorArray = [searchMatArray valueForKey:@"Color"];
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
         
-        [activityIndicator stopAnimating];
+       // [activityIndicator stopAnimating];
 
         
         

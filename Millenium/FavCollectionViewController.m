@@ -159,12 +159,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     [DIYMenu dismiss];
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+   /* UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(50, 60);
     activityIndicator.hidesWhenStopped = NO;
     [self.view addSubview:activityIndicator];
-    [activityIndicator startAnimating];
+    [activityIndicator startAnimating];*/
 
    
     if (locationIDString==nil) {
@@ -2105,7 +2105,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         if (indexPathSend <artworkFullImageArray.count){
             
-            NSString*urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
+            urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
             NSString*httpString= @"http://";
             NSString *urlStringAppend = [httpString stringByAppendingString:urlString];
             NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
@@ -2201,18 +2201,20 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     interactiveHeaderString = @"Edit Mat";
     
     //TODO add if urlMatString case nameString
-    //NSString*urlString =[matFullImageArray objectAtIndex:indexPathSend];
+    urlString =[matFullImageArray objectAtIndex:indexPathSend];
     
-    //
+    if(urlString==NULL){
     
   /*  NSString*matUrlAppendAddFavString= nameField.text;
      NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);*/
-     NSString*pngString= @".png";
+       NSString*pngString= @".png";
      //NSLog(@"nameFieldText %@",nameField.text);
      //NSLog(@"nameFieldText %@",nameHideField.text);
      
      
-     NSString*urlString = [nameString stringByAppendingString:pngString];
+       urlString = [nameString stringByAppendingString:pngString];
+        
+    }
     
     //
    // NSString*urlString =urlMatString;

@@ -714,7 +714,7 @@
 
 -(IBAction)goSearch:(id)sender{
     
-   [activityIndicator startAnimating];
+   //[activityIndicator startAnimating];
     
     if( searchField.text!= Nil || [searchField.text length] == 0 ) {
         
@@ -878,7 +878,7 @@
         matSellerArray = [searchMatArray valueForKey:@"Seller"];
         
         
-        [activityIndicator stopAnimating];
+       // [activityIndicator stopAnimating];
         
         
     }];

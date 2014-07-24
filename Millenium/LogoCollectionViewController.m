@@ -158,12 +158,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     [DIYMenu dismiss];
     
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+   /* UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(50, 60);
     activityIndicator.hidesWhenStopped = NO;
     [self.view addSubview:activityIndicator];
-    [activityIndicator startAnimating];
+    [activityIndicator startAnimating];*/
     
     NSLog(@"locationIDString: %@", locationIDString);
    
@@ -331,12 +331,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     headerLabel.text = @"FAVORITES";
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+   /* UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(160, 360);
     activityIndicator.hidesWhenStopped = NO;
     [self.view addSubview:activityIndicator];
-    [activityIndicator startAnimating];
+    [activityIndicator startAnimating];*/
     searchingString=@"searchingFavString";
     //TODO load into CoreData anything that is in Favorites.
     
@@ -408,7 +408,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         matCount = favoritesMatArray.count;
         
-        [activityIndicator stopAnimating];
+        //[activityIndicator stopAnimating];
         
         
     }];
@@ -434,12 +434,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     headerLabel.text = @"YOUR SKETCHES";
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    
+   /* UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(160, 360);
     activityIndicator.hidesWhenStopped = NO;
     [self.view addSubview:activityIndicator];
-    [activityIndicator startAnimating];
+    [activityIndicator startAnimating];*/
     
     userIDString = [[NSUserDefaults standardUserDefaults]
                         stringForKey:@"userID"];
@@ -585,7 +586,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
             
-            [activityIndicator stopAnimating];
+           // [activityIndicator stopAnimating];
             
             
         }];
@@ -612,12 +613,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     headerLabel.text = @"YOUR LOCATION SKETCHES";
    
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+   /* UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(160, 360);
     activityIndicator.hidesWhenStopped = NO;
     [self.view addSubview:activityIndicator];
-    [activityIndicator startAnimating];
+    [activityIndicator startAnimating];*/
     
     locationIDString = [[NSUserDefaults standardUserDefaults]
                         stringForKey:@"locationID"];
@@ -758,7 +759,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matColorArray = [searchMatArray valueForKey:@"Color"];
         
             
-            [activityIndicator stopAnimating];
+            //[activityIndicator stopAnimating];
         
         
         }];
@@ -789,7 +790,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goSearch:(id)sender{
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+   /* UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(160, 360);
     activityIndicator.hidesWhenStopped = NO;
@@ -797,7 +798,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
    
     
     
-    [activityIndicator startAnimating];
+    [activityIndicator startAnimating];*/
     
     if( searchHereField.text!= Nil || [searchHereField.text length] == 0 ) {
         
@@ -943,7 +944,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matColorArray = [searchMatArray valueForKey:@"Color"];
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
             
-            [activityIndicator stopAnimating];
+            //[activityIndicator stopAnimating];
 
             
             
