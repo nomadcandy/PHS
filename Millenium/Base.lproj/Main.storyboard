@@ -2412,7 +2412,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="f2h-UF-ZmE" id="QcI-zo-d1M"/>
                         <outlet property="connectionSummaryLabel" destination="vnr-9O-bT0" id="1Xr-8n-OFV"/>
                         <outlet property="goSearchButton" destination="7AH-ZR-YSA" id="ljF-uH-umg"/>
                         <outlet property="searchField" destination="ahh-66-7xL" id="X36-Rk-91j"/>
@@ -5254,7 +5253,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="Fom-bt-WqC" id="ApW-9d-foW"/>
                         <outlet property="connectionSummaryLabel" destination="ygo-bf-37C" id="SyU-Js-Nqn"/>
                         <outlet property="loginField" destination="nQA-fs-qCM" id="gax-ao-zP5"/>
                         <outlet property="passwordField" destination="d2d-4g-PCL" id="ZYb-Cg-0ul"/>
@@ -5412,8 +5410,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
-        <segue reference="5F9-JV-UFd"/>
         <segue reference="aYA-g1-hsh"/>
+        <segue reference="QQh-is-hk2"/>
+        <segue reference="wpq-PH-bdK"/>
     </inferredMetricsTieBreakers>
 </document>

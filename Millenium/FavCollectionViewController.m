@@ -2000,11 +2000,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         }
     
     
-    logoUseString = [artworkFullImageArray objectAtIndex:indexPathSend];
-    if ([[NSNull null] isEqual:logoUseString]) {
-        logoUseString = nil;
-    }
-        
+    
     sellerString = [artworkSellerArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:sellerString]) {
         sellerString = nil;
@@ -2040,62 +2036,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 
     
-        /*if (indexPathSend <artworkSellerArray.count){
-            //Need to check if artworkSellerArray class name=NSNull
-            sellerString =[artworkSellerArray objectAtIndex:indexPathSend];
-            NSLog(@"sellerString %@",sellerString);
-            if(sellerString!=NULL){
-                
-                
-                
-            }else{
-                
-                sellerString= @"No Seller Provided";
-                
-            }
-            
-        }
-        
-        if (indexPathSend <artworkCompanyArray.count){
-            
-            companyString =[artworkCompanyArray objectAtIndex:indexPathSend];
-            
-            if (companyString==NULL)
-            {
-                
-                companyString= @"No Company Provided";
-                
-            }
-            
-        }
-        
-        if (indexPathSend <artworkIDArray.count){
-            
-            numberString =[artworkIDArray objectAtIndex:indexPathSend];
-            
-            if (numberString==NULL)
-            {
-                
-                numberString= @"No ID is provided";
-                
-            }
-            
-        }
-        
-        if (indexPathSend <artworkSizeArray.count){
-            
-            sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
-            
-            if (sizeString==NULL)
-            {
-                
-                sizeString= @"4'x6'";
-                
-            }
-            
-        }*/
-        
-        if (indexPathSend <artworkColorArray.count){
+    if (indexPathSend <artworkColorArray.count-1){
             
             logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
             
@@ -2108,8 +2049,14 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
         }
-        
-        if (indexPathSend <artworkFullImageArray.count-1){
+    
+    
+    logoUseString = [artworkFullImageArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:logoUseString]) {
+        logoUseString = nil;
+    }
+
+    if (indexPathSend <artworkFullImageArray.count-1){
             
             //urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
             NSString*httpString= @"http://";
