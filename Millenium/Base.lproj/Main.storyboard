@@ -1123,7 +1123,7 @@
                                     <action selector="Landscape:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="g3V-KU-PCz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" background="SearchBoxSimple3.png" disabledBackground="SearchBoxSimple3.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-bS-z4q">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" placeholder="                  Search" minimumFontSize="17" background="SearchBoxSimple3.png" disabledBackground="SearchBoxSimple3.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-bS-z4q">
                                 <rect key="frame" x="81" y="724" width="232" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
@@ -3364,16 +3364,16 @@
                                     <action selector="cropScreenShot:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="zOW-d2-RoR"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="SEARCH" minimumFontSize="17" background="SearchBoxSimple3.png" disabledBackground="SearchBoxSimple3.png" translatesAutoresizingMaskIntoConstraints="NO" id="ksh-rg-ieo">
-                                <rect key="frame" x="567" y="730" width="171" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" background="SearchBoxSimple3.png" disabledBackground="SearchBoxSimple3.png" translatesAutoresizingMaskIntoConstraints="NO" id="ksh-rg-ieo">
+                                <rect key="frame" x="584" y="730" width="171" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhu-xd-yI0">
-                                <rect key="frame" x="746" y="727" width="36" height="36"/>
+                                <rect key="frame" x="763" y="727" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="AssetsDefaultButton.png">
+                                <state key="normal" image="AssetsSearchButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -5410,8 +5410,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WHu-6x-aPj"/>
         <segue reference="qwZ-va-rdB"/>
+        <segue reference="WHu-6x-aPj"/>
         <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>

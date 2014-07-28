@@ -132,6 +132,8 @@
 @synthesize favoritesMatArray;
 @synthesize favoritesLogoArray;
 
+@synthesize backgroundImageSearch;
+
 
 NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
 NSString *kLogoCollectionViewCellID = @"logoCollectionViewCellID";
@@ -201,11 +203,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     searchHereField = [[UITextField alloc] initWithFrame:CGRectMake(326, 44, 200, 30)];
     searchHereField.borderStyle = UITextBorderStyleRoundedRect;
+   
+    
+    /*[searchHereField setLeftViewMode:UITextFieldViewModeAlways];
+    
+    searchHereField.leftView= [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"searchBoxSimple3.png"]];*/
+    
     searchHereField.font = [UIFont fontWithName:@"Avenir-Light" size:25];
-    searchHereField.placeholder = @"SEARCH";
+    searchHereField.placeholder = @"Search";
     searchHereField.autocorrectionType = UITextAutocorrectionTypeNo;
     searchHereField.keyboardType = UIKeyboardTypeDefault;
     searchHereField.returnKeyType = UIReturnKeyDone;
+    
     //searchHereField.clearButtonMode = UITextFieldViewModeWhileEditing;
     searchHereField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     searchHereField.delegate = self;

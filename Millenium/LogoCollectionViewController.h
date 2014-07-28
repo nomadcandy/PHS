@@ -221,6 +221,8 @@
 
 //@property (weak,nonatomic) id delegate;
 
+@property(nonatomic, retain) UIImage *backgroundImageSearch;
+
 
 -(IBAction)goFav:(id)sender;
 -(IBAction)goInteractive:(id)sender;
