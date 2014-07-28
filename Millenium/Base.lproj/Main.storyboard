@@ -3076,8 +3076,8 @@
                                     <action selector="goPDFViewController:" destination="rPS-DJ-Fxn" eventType="touchUpInside" id="8k8-Cb-FdR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Marketing Movies" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-Ba-zs9">
-                                <rect key="frame" x="820" y="70" width="202" height="32"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Videos" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-Ba-zs9">
+                                <rect key="frame" x="815" y="70" width="202" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -5322,7 +5322,7 @@
         <image name="InteractiveSizeGreyPad.png" width="694" height="350"/>
         <image name="Light Blue_106.jpg" width="800" height="514"/>
         <image name="LoginIcon1.png" width="106" height="102"/>
-        <image name="LogoColorGuidelinesPDF.png" width="2048" height="1536"/>
+        <image name="LogoColorGuidelinesPDF.png" width="612" height="792"/>
         <image name="LogoPadGrey" width="2048" height="1536"/>
         <image name="LogoSelectedBG.png" width="253" height="213"/>
         <image name="Mag.png" width="125" height="125"/>
@@ -5410,8 +5410,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qwZ-va-rdB"/>
-        <segue reference="WHu-6x-aPj"/>
         <segue reference="aYA-g1-hsh"/>
+        <segue reference="QQh-is-hk2"/>
+        <segue reference="wpq-PH-bdK"/>
     </inferredMetricsTieBreakers>
 </document>

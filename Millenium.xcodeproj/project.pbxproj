@@ -315,6 +315,10 @@
 		42B70D2118F3D45900CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
 		42C2B879196A26260057D583 /* matMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C2B878196A26260057D583 /* matMask.png */; };
 		42CEE8C9194907CB00405489 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CEE8C8194907CB00405489 /* LoginViewController.m */; };
+		42D180BB1986A494003A2F61 /* LogoColorGuidelinesPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D180BA1986A494003A2F61 /* LogoColorGuidelinesPDF.png */; };
+		42D180BC1986A494003A2F61 /* LogoColorGuidelinesPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D180BA1986A494003A2F61 /* LogoColorGuidelinesPDF.png */; };
+		42D180BE1986A4A2003A2F61 /* WaterGuardDiamondPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D180BD1986A4A2003A2F61 /* WaterGuardDiamondPDF.png */; };
+		42D180BF1986A4A2003A2F61 /* WaterGuardDiamondPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D180BD1986A4A2003A2F61 /* WaterGuardDiamondPDF.png */; };
 		42D35011193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */; };
 		42D35013193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 42D35012193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v */; };
 		42D95173190ADF5600FD69B3 /* MatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D95172190ADF5600FD69B3 /* MatCell.m */; };
@@ -677,6 +681,8 @@
 		42C2B878196A26260057D583 /* matMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matMask.png; sourceTree = "<group>"; };
 		42CEE8C7194907CB00405489 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		42CEE8C8194907CB00405489 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		42D180BA1986A494003A2F61 /* LogoColorGuidelinesPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoColorGuidelinesPDF.png; sourceTree = "<group>"; };
+		42D180BD1986A4A2003A2F61 /* WaterGuardDiamondPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardDiamondPDF.png; sourceTree = "<group>"; };
 		42D35010193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMediumMob.m4v; sourceTree = "<group>"; };
 		42D35012193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = WalkOffLogoMatMobile.m4v; sourceTree = "<group>"; };
 		42D95171190ADF5600FD69B3 /* MatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatCell.h; sourceTree = "<group>"; };
@@ -1260,6 +1266,8 @@
 		42B0157618E342550068019C /* ImagesFliers */ = {
 			isa = PBXGroup;
 			children = (
+				42D180BD1986A4A2003A2F61 /* WaterGuardDiamondPDF.png */,
+				42D180BA1986A494003A2F61 /* LogoColorGuidelinesPDF.png */,
 				4288F1B61951330300975FB6 /* Waterguard1PDF.png */,
 				4288F1B41951329E00975FB6 /* TripleFlexFlow1PDF.png */,
 				4288F1B2195130D500975FB6 /* WaterGuardPDF.png */,
@@ -1616,6 +1624,7 @@
 				426A6A1018ED0CC300255331 /* SampleLogo8A.png in Resources */,
 				42E9AC2618FF5A6C000E226D /* Clean3Button.png in Resources */,
 				420A8F0319530579005FB1D8 /* GoWeb1.png in Resources */,
+				42D180BE1986A4A2003A2F61 /* WaterGuardDiamondPDF.png in Resources */,
 				426A6A1A18ED0CC300255331 /* SampleLogo7.png in Resources */,
 				422139921912883A001BD328 /* AssetsCompassButton.png in Resources */,
 				429C4AB01925656900AF8050 /* SearchBoxB.png in Resources */,
@@ -1825,6 +1834,7 @@
 				42B0159918E35CF20068019C /* VideosWhite3.png in Resources */,
 				426A6A1318ED0CC300255331 /* SampleLogo14.png in Resources */,
 				4297E0521923C95200E43779 /* MaskGreySquare8.png in Resources */,
+				42D180BB1986A494003A2F61 /* LogoColorGuidelinesPDF.png in Resources */,
 				4288F1B71951330300975FB6 /* Waterguard1PDF.png in Resources */,
 				4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */,
 				428085CA18FC4B4200389C9C /* MatCintasCenter.png in Resources */,
@@ -1876,6 +1886,8 @@
 				42B0150E18DFBD330068019C /* CircleButton.png in Resources */,
 				42857715197D66D2004972AD /* eyeOpenBlackIcon.png in Resources */,
 				42E9AC2A18FF5FB9000E226D /* go1Button.png in Resources */,
+				42D180BC1986A494003A2F61 /* LogoColorGuidelinesPDF.png in Resources */,
+				42D180BF1986A4A2003A2F61 /* WaterGuardDiamondPDF.png in Resources */,
 				4285770D197D5FCF004972AD /* returnArrow1.png in Resources */,
 				42849B9518EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42B0150818DFBD0A0068019C /* SquareButton.png in Resources */,
