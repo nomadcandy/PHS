@@ -155,9 +155,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 - (void)viewDidLoad
 {
     
+    
+    
+    
     [super viewDidLoad];
     
     [DIYMenu dismiss];
+    
+    if(matCount==0 && artworkCount==0){
+        
+        [self goFav:self];
+        
+    }
     
     
    /* UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
