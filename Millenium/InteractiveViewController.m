@@ -783,32 +783,32 @@
     
     
      colorNamesImagesArray =@[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Steel Blue_121.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Suede_123.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"White_140.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Rose_119.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Royal Blue_107.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Sandalwood_120.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Silver_116"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Orange_127.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Purple_105.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Red_112.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Gold_109.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Grey_115.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Light Blue_106.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Navy_118.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Emerald Green_110.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Forest Green_117.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cranberry_114.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Dark Gold_103.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Charcoal_101.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Chocolate_111.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Clay_126.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Black_108.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Brown_102.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Burgundy_100.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Aquamarine_130.jpg"] ],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Turquoise_104.jpg"]],
-                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Yellow_128.jpg"]]];
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Suede50_123.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"White50_140.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Rose50_119.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Royal Blue50_107.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Sandalwood50_120.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Silver50_116"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Orange50_127.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Purple50_105.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Red50_112.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Gold50_109.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Grey50_115.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Light Blue50_106.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Navy50_118.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Emerald Green50_110.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Forest Green50_117.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cranberry50_114.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Dark Gold50_103.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Charcoal50_101.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Chocolate50_111.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Clay50_126.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Black50_108.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Brown50_102.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Burgundy50_100.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Aquamarine50_130.jpg"] ],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Turquoise50_104.jpg"]],
+                  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Yellow50_128.jpg"]]];
                   
     
     
@@ -4728,35 +4728,43 @@ enum {
     if (CGRectIntersectsRect(control.frame, _logoColorButton1.frame)) {
         
         control.frame=_logoColorButton1.frame;
+        _logoColorButton1.enabled=YES;
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton2.frame)){
         
         control.frame=_logoColorButton2.frame;
+        _logoColorButton2.enabled=YES;
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton3.frame)){
         
         control.frame=_logoColorButton3.frame;
+        _logoColorButton3.enabled=YES;
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton4.frame)) {
         
         control.frame=_logoColorButton4.frame;
+        _logoColorButton4.enabled=YES;
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton5.frame)){
         
         control.frame=_logoColorButton5.frame;
+        _logoColorButton5.enabled=YES;
         
     } else if (CGRectIntersectsRect(control.frame, _logoColorButton6.frame)){
         
         control.frame=_logoColorButton6.frame;
+        _logoColorButton6.enabled=YES;
         
     }else if(CGRectIntersectsRect(control.frame, _logoColorButton7.frame)){
         
         control.frame=_logoColorButton7.frame;
+        _logoColorButton7.enabled=YES;
 
 
     }else if(CGRectIntersectsRect(control.frame, bgColorButton.frame)){
         
         control.frame=bgColorButton.frame;
+        bgColorButton.enabled=YES;
         
         
     
