@@ -1459,14 +1459,14 @@
         [_logoColorButton6 setBackgroundImage:whiteImage forState:UIControlStateNormal];
         [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];*/
         
-        NSString*emptyString = @" ";
+       /* NSString*emptyString = @" ";
         [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
         [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
         [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
         [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
         [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
         [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton7 setTitle:emptyString forState:UIControlStateNormal];
+        [_logoColorButton7 setTitle:emptyString forState:UIControlStateNormal];*/
         
         
         [self.logoColorButton1 reloadInputViews];
