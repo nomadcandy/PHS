@@ -85,6 +85,11 @@
 @synthesize snapshotView;
 @synthesize logoImage;
 
+@synthesize alert;
+@synthesize alertInteractive;
+@synthesize alertLogo;
+
+
 
 
 
@@ -235,7 +240,15 @@
 
 -(void) handleLongPress:(UITapGestureRecognizer*) sender{
     
+    alertLogo=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+    alertLogo.alertViewStyle = UIAlertViewStylePlainTextInput;
     
+    
+    
+    
+    alertLogo.tag = 1;
+    [alertLogo show];
+
    
     
     NSURL*url = [googleWebView.request URL];
@@ -425,6 +438,8 @@
         //NSLog(@"chosenImage %@",chosenImageView.image);
         //goingController.interactiveHeaderString=interactiveHeaderString;
         goingController.interactiveHeaderString=@"Create Mat";
+        goingController.nameString = nameField.text;
+        NSLog(@"nameField %@",nameField.text);
         
 
 
@@ -447,6 +462,8 @@
         goingController.artworkIDArray = artworkIDArray;
         goingController.artworkCount = artworkCount;
         goingController.artworkColorArray = artworkColorArray;
+        
+        
         
         goingController.matNameArray = matNameArray;
         goingController.matSizeArray = matSizeArray;
@@ -559,8 +576,10 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     
-    //if (alertView.tag == 1) {  //First Dialog
+   //if (alertView.tag == 1) {  //First Dialog
     
+    
+   if (alertView == alert) {
     UITextField * alertNameField = [alertView textFieldAtIndex:0];
     //NSLog(@"alertNameField - %@",alertNameField.text);
     logoImage = chosenImageView.image;
@@ -623,8 +642,20 @@
     if (![context save:&error]) {
         //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }
-
-    
+       
+    if ( alert==alertLogo){
+           
+           nameField = [alertLogo textFieldAtIndex:0];
+       }
+//save name for Interactive View
+   }else{
+      
+       nameField = [alertView textFieldAtIndex:0];
+       //NSLog(@"alertNameField - %@",alertNameField.text);
+       
+      //nameField.text = nameField.text;
+       
+   }
     
 }
 
@@ -650,11 +681,6 @@
     
    
     alert.tag = 1;
-    //[alert addButtonWithTitle:@"OK"];
-    //[alert show];
-    /*alert.tag = 2;
-    alert.tag =3;
-    [alert addButtonWithTitle:@"GO"];*/
     [alert show];
     
     
@@ -671,40 +697,7 @@
     
     
     
-    //NSLog(@"urlFavString %@",urlFavString);
-    //NSLog(@"urlFavString %@",artworkNameAddFavString);
-    
-    
-    /* NSString*artworkNumberAddFavString =[artworkNumberArray objectAtIndex:indexPathSend];*/
-    
-    
-   /* NSManagedObjectContext *context = [self managedObjectContext];
-    
-    // Create a new managed object
-    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];*/
-    
-    
-   /* [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
-    [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
-    [newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
-    [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];
-    [newLogoFavorite setValue:self.artworkColorAddFavString forKey:@"color"];
-    [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
-    [newLogoFavorite setValue:self.artworkIDAddFavString forKey:@"productID"];*/
-    
-    
-    
-    
-   /* NSError *error = nil;
-    // Save the object to persistent store
-    if (![context save:&error]) {
-        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-    }*/
-    //Fetch Data entered to test
-   /* NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
-    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];*/
-    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+   
     
     
     //NSLog(@"favoritesArray %@",_favoritesArray);
@@ -1134,7 +1127,15 @@
 
 - (IBAction)screenShot:(UIButton *)sender{
     
+    alertInteractive=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+    alertInteractive.alertViewStyle = UIAlertViewStylePlainTextInput;
     
+    
+    
+    
+    alertInteractive.tag = 1;
+    [alertInteractive show];
+
     
     //begin capture entire webview
     //CGRect screenRect = self->overlayWebView.frame;
@@ -1391,10 +1392,12 @@
 
 - (IBAction)goInteractive:(UIButton *)sender {
     
+    
+   
+    
      interactiveHeaderString = @"Create Mat";
     
     
-    //interactiveHeaderString= @"Logo Picked";
     
     [self performSegueWithIdentifier:@"ImagePickedSegue" sender:sender];
     

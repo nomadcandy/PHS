@@ -99,24 +99,6 @@
     UIImage*temp;
 }
 
--(UIImage *)changeWhiteColorTransparent: (UIImage *)image;
-- (IBAction)presentLogoCollectionViewController:(UIButton *)sender;
-
-- (IBAction)selectPhoto:(UIButton *)sender;
-- (IBAction)goWeb:(UIButton *)sender;
-- (IBAction)editLogo:(UIButton *)sender;
-- (IBAction)drawEllipse:(CGContextRef)context;
-- (IBAction)drawCircle:(UIButton *)sender;
-- (IBAction)drawRect:(UIButton*)sender;
-- (IBAction)getPoints:(UIButton*)sender;
-- (IBAction)cropScreenShot:(UIButton*)sender;
-- (IBAction)maskImage:(id)sender ;
-
-- (IBAction)screenShotRect:(UIButton *)sender;
-
--(IBAction)goSearch:(id)sender;
-
--(IBAction)goWhite:(id)sender;
 
 @property (nonatomic, copy) UIImage *imageDownloaded;
 //@property (nonatomic, copy) UIImage *result;
@@ -180,7 +162,9 @@
 @property (nonatomic, copy) NSString*artworkColorAddFavString;
 @property (nonatomic, copy) NSString*artworkFormatAddFavString;
 
-
+@property (nonatomic, retain)  UIAlertView *alert;
+@property (nonatomic, retain)  UIAlertView *alertInteractive;
+@property (nonatomic, retain)  UIAlertView *alertLogo;
 
 @property (nonatomic, retain) IBOutlet UIImageView *maskSquareImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *maskCircleImageView;
@@ -200,6 +184,27 @@
 @property (nonatomic, strong) IBOutlet UIImageView *chosenImageView;
 @property (nonatomic, strong) IBOutlet UIImageView *testTransImageView;
 @property (nonatomic, strong) IBOutlet UIView *snapshotView;
+
+
+-(UIImage *)changeWhiteColorTransparent: (UIImage *)image;
+- (IBAction)presentLogoCollectionViewController:(UIButton *)sender;
+
+- (IBAction)selectPhoto:(UIButton *)sender;
+- (IBAction)goWeb:(UIButton *)sender;
+- (IBAction)editLogo:(UIButton *)sender;
+- (IBAction)drawEllipse:(CGContextRef)context;
+- (IBAction)drawCircle:(UIButton *)sender;
+- (IBAction)drawRect:(UIButton*)sender;
+- (IBAction)getPoints:(UIButton*)sender;
+- (IBAction)cropScreenShot:(UIButton*)sender;
+- (IBAction)maskImage:(id)sender ;
+
+- (IBAction)screenShotRect:(UIButton *)sender;
+
+-(IBAction)goSearch:(id)sender;
+
+-(IBAction)goWhite:(id)sender;
+
 
 
 - (void)setNeedsDisplay;
