@@ -76,6 +76,22 @@
 }
 
 
+- (IBAction)buttonTappedMotifMat:(UIButton *)sender {
+    
+    
+    selectedPdfString=@"MotifMatPDF.png";
+    selectedString=@"Motif Mat";
+    
+    [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
+    
+    UIStoryboard *storyboard = self.storyboard;
+    PDFBigViewController *pleaseLoad = [storyboard instantiateViewControllerWithIdentifier:@"PDFBigStoryboard"];
+    [self presentViewController:pleaseLoad animated:YES completion:nil];
+    
+    
+}
+
+
 - (IBAction)buttonTappedWalkOffLogoMat:(UIButton *)sender {
     
     
@@ -114,11 +130,11 @@
 
 
 
-- (IBAction)buttonTappedMotifMat:(UIButton *)sender {
+- (IBAction)buttonTappedLogoColorGuidelines:(UIButton *)sender {
     
     
-    selectedPdfString=@"MotifMatPDF.png";
-    selectedString=@"Motif Mat";
+    selectedPdfString=@"LogoColorGuidelinesPDF.png";
+    selectedString=@"Logo Color Guidelines";
     
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
     
