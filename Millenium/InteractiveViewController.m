@@ -4187,7 +4187,7 @@ else
 
 -(IBAction)refreshLogoColors:(id)sender{
     
-   /* float x,y;
+   /*float x,y;
     float a,b;
     x = matBGLogoView.frame.size.width;
     y = matBGLogoView.frame.size.height;
@@ -4198,16 +4198,9 @@ else
     decTextLayerView.hidden=YES;
     
     
+       
+    //matBGLogoView.frame = CGRectMake(a, b, x, y);
     
-    /*matBGLogoView.frame = CGRectMake(matBGLogoView.frame.origin.x,
-     matBGLogoView.frame.origin.y, matBGLogoView.width, matBGLogoView.height);*/
-    
-    //NSLog(@"image after aspect fit: width=%f height=%f",x,y);
-    
-    
-   
-   // matBGLogoView.frame = CGRectMake(a, b, x, y);
-    [self.decTextLayerView bringSubviewToFront:matBGLogoView];
     
     
     
