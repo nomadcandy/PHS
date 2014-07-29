@@ -4333,6 +4333,8 @@ enum {
 
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
     
+    
+    
      [self.fontPicker removeFromSuperview];
     
     noteLayerView.hidden=YES;
