@@ -620,10 +620,13 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
-            NSLog (@"artworkFullImageArray %@",artworkFullImageArray);
+            //NSLog (@"artworkFullImageArray %@",artworkFullImageArray);
             artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+            artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
+            artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
+
             
             
             
@@ -640,7 +643,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             matIconArray = [searchMatArray valueForKey:@"IconURL"];
             matIDArray = [searchMatArray valueForKey:@"ProductID"];
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+            matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
+            matSellerArray = [searchMatArray valueForKey:@"Seller"];
+            
+            
             artworkColorArray = [searchMatArray valueForKey:@"Color"];
+            
             
             
             
@@ -795,6 +803,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+        artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
+        artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         
         
         
@@ -805,13 +815,16 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-        matCount= matNameArray.count;
+        //matCount= matNameArray.count;
         matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
         matFormatArray = [searchMatArray valueForKey:@"Format"];
         matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
         matIconArray = [searchMatArray valueForKey:@"IconURL"];
         matIDArray = [searchMatArray valueForKey:@"ProductID"];
         matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+        matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
+        matSellerArray = [searchMatArray valueForKey:@"Seller"];
+
         artworkColorArray = [searchMatArray valueForKey:@"Color"];
         
         
@@ -977,6 +990,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
         artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
         artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+        artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
+        artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         
         
         }];
@@ -1656,8 +1671,14 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         FavCell *favCell = [collectionView dequeueReusableCellWithReuseIdentifier:kFavCollectionViewCellID forIndexPath:indexPath];
         
-        
-        
+        //unhide all incase next parse is larger then previous parse
+        favCell.logoChooseButton.hidden=NO;
+        favCell.removeFavLogoButton.hidden=NO;
+        favCell.removeFavLogoLabel.hidden=NO;
+        favCell.logoLabel.hidden=NO;
+        favCell.goBackLogoLabel.hidden=NO;
+        favCell.goBack.hidden=NO;
+        favCell.goBackLogo.hidden=NO;
         
         
         if ([searchingString isEqualToString:@"searchingFavString"]){
@@ -1710,6 +1731,14 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackLogoLabel.hidden=NO;
             favCell.goBack.hidden=NO;
             favCell.goBackLogo.hidden=NO;
+            
+            
+            favCell.matChooseButton.hidden=NO;
+            favCell.removeFavMatButton.hidden=NO;
+            favCell.removeFavMatLabel.hidden=NO;
+            favCell.matTitleLabel.hidden=NO;
+            favCell.goBackMatLabel.hidden=NO;
+            favCell.goBack.hidden=NO;
             
             if (artworkFullImageArray.count>0 ){
                 

@@ -757,6 +757,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
+            artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
+            artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         
             
         
@@ -775,6 +777,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
             NSLog(@"URLLOGIN: %@",matBGColorArray);
             matColorArray = [searchMatArray valueForKey:@"Color"];
+            matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
+            matSellerArray = [searchMatArray valueForKey:@"Seller"];
         
             
             //[activityIndicator stopAnimating];
@@ -1722,6 +1726,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         logoCell.goBackLogoLabel.hidden=NO;
         logoCell.logoLabel.hidden=NO;
         
+        logoCell.matChooseButton.hidden=NO;
+        logoCell.addFavMatButton.hidden=NO;
+        logoCell.addFavMatLabel.hidden=NO;
+        logoCell.goBackMat.hidden=NO;
+        logoCell.goBackMatLabel.hidden=NO;
+        logoCell.matLabel.hidden=NO;
+        
         if ([searchingString isEqualToString:@"searchingFavString"]){
             
             
@@ -1933,7 +1944,12 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)logoSelected:(UIButton*)sender event:(id)event {
     
-    
+    NSLog(@"artworkNameArray:%@",artworkNameArray);
+    NSLog(@"artworkCompanyArray:%@",artworkCompanyArray);
+    NSLog(@"artworkCompanyArray:%@",artworkIDArray);
+    NSLog(@"artworkCompanyArray:%@",artworkSizeArray);
+    NSLog(@"artworkCompanyArray:%@",artworkColorArray);
+    NSLog(@"artworkSellerArray:%@",artworkSellerArray);
     
     interactiveHeaderString = @"Create Mat";
 
@@ -1943,6 +1959,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     indexPathSend = (int)sender.tag;
     
     nameString =[artworkNameArray objectAtIndex:indexPathSend];
+   
     
    
     
