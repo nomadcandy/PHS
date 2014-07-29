@@ -1708,10 +1708,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     else  {
     
         
-        
+       
         
         
         LogoCell *logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
+        
+        
+        //unhide all buttons to account for larger collectionView then last parse
+        logoCell.logoChooseButton.hidden=NO;
+        logoCell.addFavLogoButton.hidden=NO;
+        logoCell.addFavLogoLabel.hidden=NO;
+        logoCell.goBack.hidden=NO;
+        logoCell.goBackLogoLabel.hidden=NO;
+        logoCell.logoLabel.hidden=NO;
         
         if ([searchingString isEqualToString:@"searchingFavString"]){
             
