@@ -579,13 +579,14 @@
    //if (alertView.tag == 1) {  //First Dialog
     
     
-   if (alertView == alert) {
-    UITextField * alertNameField = [alertView textFieldAtIndex:0];
-    //NSLog(@"alertNameField - %@",alertNameField.text);
-    logoImage = chosenImageView.image;
+ if (alertView == alert) {
+    
+    nameField = [alertView textFieldAtIndex:0];
+     //NSLog(@"alertNameField - %@",alertNameField.text);
+     logoImage = chosenImageView.image;
     
         
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",alertNameField.text]];
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",nameField.text]];
     
     [UIImagePNGRepresentation(logoImage) writeToFile:imagePath atomically:YES];
     
@@ -596,7 +597,7 @@
     
     //NOTE- Do not remove local NSString values will break
     
-    NSString*logoUrlAppendAddFavString= alertNameField.text;
+    NSString*logoUrlAppendAddFavString= nameField.text;
     NSString*pngString= @".png";
     //NSLog(@"nameFieldText %@",nameField.text);
     //NSLog(@"nameFieldText %@",nameHideField.text);
@@ -608,7 +609,7 @@
     
     NSLog(@"urlFavString%@",urlFavString);
     
-    artworkNameAddFavString =alertNameField.text;
+    artworkNameAddFavString =nameField.text;
     artworkColorAddFavString =@"No Color is provided";
     artworkSizeAddFavString =@"4'x 6'";
     artworkCompanyAddFavString =@"Company";
@@ -632,25 +633,30 @@
      [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
      [newLogoFavorite setValue:self.artworkIDAddFavString forKey:@"productID"];
      [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"locationID"];
-     [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"format"];
+     [newLogoFavorite setValue:self.artworkFormatAddFavString forKey:@"format"];
     
     
     
     
     NSError *error = nil;
     // Save the object to persistent store
-    if (![context save:&error]) {
+   /* if (![context save:&error]) {
         //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-    }
+    }*/
        
     if ( alert==alertLogo){
            
            nameField = [alertLogo textFieldAtIndex:0];
+          artworkNameAddFavString=nameField.text;
+
        }
-//save name for Interactive View
+
+       //save name for Interactive View
    }else{
       
        nameField = [alertView textFieldAtIndex:0];
+       artworkNameAddFavString=nameField.text;
+       
        //NSLog(@"alertNameField - %@",alertNameField.text);
        
       //nameField.text = nameField.text;
@@ -674,14 +680,14 @@
 
 -(IBAction)addLogoFavorite:(id)sender{
     
-    UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+   /* UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     
     
     
    
     alert.tag = 1;
-    [alert show];
+    [alert show];*/
     
     
         artworkColorAddFavString =@"No Color is provided";
@@ -691,9 +697,78 @@
         artworkIDAddFavString =@"no ID has been provided";
         artworkFormatAddFavString =@"landscape";
         artworkLocationIDAddFavString =@"-1";
-        
-        
+    
+       //added
+       // artworkNameAddFavString =nameFi;
+    
+    
+    //UITextField * alertNameField = [alertLogo textFieldAtIndex:0];
 
+    UITextField * alertNameField = [alertLogo textFieldAtIndex:0];
+    //NSLog(@"alertNameField - %@",alertNameField.text);
+    logoImage = chosenImageView.image;
+    
+    
+    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png",artworkNameAddFavString]];
+    
+    [UIImagePNGRepresentation(logoImage) writeToFile:imagePath atomically:YES];
+    
+    
+    
+    //[self.view addSubview:snapshotView];
+    
+    
+    //NOTE- Do not remove local NSString values will break
+    
+    NSString*logoUrlAppendAddFavString= artworkNameAddFavString;
+    NSString*pngString= @".png";
+    //NSLog(@"nameFieldText %@",nameField.text);
+    //NSLog(@"nameFieldText %@",nameHideField.text);
+    
+    
+    NSString*urlLogoStringAppend = [logoUrlAppendAddFavString stringByAppendingString:pngString];
+    
+    urlFavString = urlLogoStringAppend;
+    
+    NSLog(@"urlFavString%@",urlFavString);
+    
+    //artworkNameAddFavString =alertNameField.text;
+    artworkColorAddFavString =@"No Color is provided";
+    artworkSizeAddFavString =@"4'x 6'";
+    artworkCompanyAddFavString =@"Company";
+    artworkSellerAddFavString =@"Seller";
+    artworkIDAddFavString =@"no ID has been provided";
+    
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject *newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
+    
+    
+    
+    NSLog(@"artworkNameAddFavString %@",artworkNameAddFavString);
+    [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
+    
+    [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    [newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
+    [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];
+    [newLogoFavorite setValue:self.artworkColorAddFavString forKey:@"color"];
+    [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
+    [newLogoFavorite setValue:self.artworkIDAddFavString forKey:@"productID"];
+    [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"locationID"];
+    [newLogoFavorite setValue:self.artworkFormatAddFavString forKey:@"format"];
+    
+    
+    
+    
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+
+    
     
     
     

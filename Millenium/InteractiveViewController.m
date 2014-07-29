@@ -4333,108 +4333,115 @@ enum {
 
 -(IBAction)goMail:(UIButton*)sender event:(id)event {
     
+    if ([MFMailComposeViewController canSendMail]) {
+    
+        [self.fontPicker removeFromSuperview];
+    
+        noteLayerView.hidden=YES;
+        decTextLayerView.hidden =NO;
+    
+        CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
     
     
-     [self.fontPicker removeFromSuperview];
+        UIGraphicsBeginImageContext(screenRect2.size);
+        //UIGraphicsBeginImageContext(interactiveMatView.size);
     
-    noteLayerView.hidden=YES;
-    decTextLayerView.hidden =NO;
+        CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+        [[UIColor whiteColor] set];
+        CGContextFillRect(ctx1, screenRect2);
     
-    CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
+        [self.view.layer renderInContext:ctx1];
     
+        UIImage *matImageHere = UIGraphicsGetImageFromCurrentImageContext();
     
-    UIGraphicsBeginImageContext(screenRect2.size);
-    //UIGraphicsBeginImageContext(interactiveMatView.size);
-    
-    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx1, screenRect2);
-    
-    [self.view.layer renderInContext:ctx1];
-    
-    UIImage *matImageHere = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
+        UIGraphicsEndImageContext();
     
     
-    //save image to documents
-    NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImageHere.jpg"]];
-    [UIImageJPEGRepresentation(matImageHere, 1.0) writeToFile:imagePath atomically:YES];
-    noteLayerView.hidden=YES;
+        //save image to documents
+        NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImageHere.jpg"]];
+        [UIImageJPEGRepresentation(matImageHere, 1.0) writeToFile:imagePath atomically:YES];
+        noteLayerView.hidden=YES;
     
-    //snapshot withNotes grab image
-    //noteLayerView.hidden=NO;
-    CGRect screenRect3 = CGRectMake(0.0,0,1028,720);
+        //snapshot withNotes grab image
+        //noteLayerView.hidden=NO;
+        CGRect screenRect3 = CGRectMake(0.0,0,1028,720);
     
     
-    UIGraphicsBeginImageContext(screenRect3.size);
-    //UIGraphicsBeginImageContext(interactiveMatView.size);
+        UIGraphicsBeginImageContext(screenRect3.size);
+        //UIGraphicsBeginImageContext(interactiveMatView.size);
     
-    CGContextRef ctx2 = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx2, screenRect2);
+        CGContextRef ctx2 = UIGraphicsGetCurrentContext();
+        [[UIColor whiteColor] set];
+        CGContextFillRect(ctx2, screenRect2);
     
-    //[self.noteLayerView.layer renderInContext:ctx1];
+        //[self.noteLayerView.layer renderInContext:ctx1];
     
-    UIImage *matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIImage *matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
     
-    UIGraphicsEndImageContext();
+        UIGraphicsEndImageContext();
 
-    NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matNoteImage.jpg"]];
-    [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
+        NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matNoteImage.jpg"]];
+        [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
     
     
-    MFMailComposeViewController*mailComposer;
-    
-   
-    
-    
-    mailComposer = [[MFMailComposeViewController alloc] init];
-    mailComposer.mailComposeDelegate=self;
+        MFMailComposeViewController*mailComposer;
     
    
     
-    emailTitle = _emailString;
+    
+        mailComposer = [[MFMailComposeViewController alloc] init];
+        mailComposer.mailComposeDelegate=self;
+    
+   
+    
+        emailTitle = _emailString;
     
     
-    NSString*messageString = @"This mat has been approved";
+        NSString*messageString = @"This mat has been approved";
     
     
     //TODO add string and images to email
-    NSString *messageBody = messageString;
+        NSString *messageBody = messageString;
     
     
        
     
     //Display Email Composer
-    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-    mc.mailComposeDelegate = self;
-    [mc setSubject:emailTitle];
-    [mc setMessageBody:messageBody isHTML:NO];
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:NO];
     
     //[mc setToRecipients:toRecipents];
     
-    NSMutableArray*recipients=[[NSMutableArray alloc]init];
+        NSMutableArray*recipients=[[NSMutableArray alloc]init];
     
-    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    NSString *imagePath1 =  [directoryPath objectAtIndex:0];
-    imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        NSString *imagePath1 =  [directoryPath objectAtIndex:0];
+        imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];
     
-    NSData *data = [NSData dataWithContentsOfFile:imagePath1];
-    //UIImage *image = [UIImage imageWithData:data];
+        NSData *data = [NSData dataWithContentsOfFile:imagePath1];
+        //UIImage *image = [UIImage imageWithData:data];
     
-    NSString *imagePath3 =  [directoryPath objectAtIndex:0];
-    imagePath1= [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
+        NSString *imagePath3 =  [directoryPath objectAtIndex:0];
+        imagePath1= [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
     
-    NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
+        NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
     
-    // Add attachment
-    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
-    [mailComposer setToRecipients:recipients];
+        // Add attachment
+        [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
+        [mailComposer setToRecipients:recipients];
     
-    [self presentViewController:mc animated:YES completion:NULL];
+        [self presentViewController:mc animated:YES completion:NULL];
     
-    
+    }else{
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please set up an email account on this device to enable this feature." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+        
+            }
     
     
 }
@@ -4443,97 +4450,108 @@ enum {
 
 -(IBAction)goMail1:(UIButton*)sender event:(id)event {
     
-     [self.fontPicker removeFromSuperview];
     
-    decTextLayerView.hidden=NO;
-    noteLayerView.hidden=NO;
+    if ([MFMailComposeViewController canSendMail]) {
     
+        [self.fontPicker removeFromSuperview];
     
-    CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
-    
-    
-    UIGraphicsBeginImageContext(screenRect2.size);
-    //UIGraphicsBeginImageContext(interactiveMatView.size);
-    
-    CGContextRef ctx1 = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    CGContextFillRect(ctx1, screenRect2);
-    
-    [self.view.layer renderInContext:ctx1];
-    
-    UIImage *matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
+        decTextLayerView.hidden=NO;
+        noteLayerView.hidden=NO;
     
     
-    
-    NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matNoteImage.jpg"]];
-    [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
+        CGRect screenRect2 = CGRectMake(0.0,0,1028,720);
     
     
-    MFMailComposeViewController*mailComposer;
+        UIGraphicsBeginImageContext(screenRect2.size);
+        //UIGraphicsBeginImageContext(interactiveMatView.size);
+    
+        CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+        [[UIColor whiteColor] set];
+        CGContextFillRect(ctx1, screenRect2);
+    
+        [self.view.layer renderInContext:ctx1];
+    
+        UIImage *matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+        UIGraphicsEndImageContext();
     
     
     
-    
-    mailComposer = [[MFMailComposeViewController alloc] init];
-    mailComposer.mailComposeDelegate=self;
-    
-    NSString *emailTitle = @"Mat Approved";
-    
-    //NSString*firstNameString= firstNameField.text;
-    //NSString*lastNameString= lastNameField.text;
+        NSString  *imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matNoteImage.jpg"]];
+        [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
     
     
-    //NSLog(@"%@",lastNameString);
-    
-    //NSString*messageString = [NSString stringWithFormat:@"%@  %@, %@, %@, %@, %@, %@, %@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
-    
-    NSString*messageString = @"This mat requires your approval";
+        MFMailComposeViewController*mailComposer;
     
     
-    //TODO add string and images to email
-    NSString *messageBody = messageString;
     
     
-    //add here
-    //[mailComposer setMessageBody:self.messageBody isHTML:YES];
+        mailComposer = [[MFMailComposeViewController alloc] init];
+        mailComposer.mailComposeDelegate=self;
+    
+        NSString *emailTitle = @"Mat Approved";
+    
+        //NSString*firstNameString= firstNameField.text;
+        //NSString*lastNameString= lastNameField.text;
     
     
-    //NSArray *toRecipents = [NSArray arrayWithObject:emailString];
-    //NSArray *toRecipents = @"yummy@nomadcandy.com";
+        //NSLog(@"%@",lastNameString);
+    
+        //NSString*messageString = [NSString stringWithFormat:@"%@  %@, %@, %@, %@, %@, %@, %@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
+    
+        NSString*messageString = @"This mat requires your approval";
     
     
-    //Display Email Composer
-    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
-    mc.mailComposeDelegate = self;
-    [mc setSubject:emailTitle];
-    [mc setMessageBody:messageBody isHTML:NO];
+        //TODO add string and images to email
+        NSString *messageBody = messageString;
     
-    //[mc setToRecipients:toRecipents];
     
-    NSMutableArray*recipients=[[NSMutableArray alloc]init];
+        //add here
+        //[mailComposer setMessageBody:self.messageBody isHTML:YES];
     
-    NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-   /* NSString *imagePath1 =  [directoryPath objectAtIndex:0];
-    imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];*/
     
-    NSData *data = [NSData dataWithContentsOfFile:imagePath2];
-    //UIImage *image = [UIImage imageWithData:data];
+        //NSArray *toRecipents = [NSArray arrayWithObject:emailString];
+        //NSArray *toRecipents = @"yummy@nomadcandy.com";
     
-    NSString *imagePath3 =  [directoryPath objectAtIndex:0];
-    imagePath2= [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
     
-    //NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
+        //Display Email Composer
+        MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:NO];
+    
+        //[mc setToRecipients:toRecipents];
+    
+        NSMutableArray*recipients=[[NSMutableArray alloc]init];
+    
+        NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+        /* NSString *imagePath1 =  [directoryPath objectAtIndex:0];
+         imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];*/
+    
+        NSData *data = [NSData dataWithContentsOfFile:imagePath2];
+        //UIImage *image = [UIImage imageWithData:data];
+    
+        NSString *imagePath3 =  [directoryPath objectAtIndex:0];
+        imagePath2= [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
+    
+        //NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
    
-    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matNoteImage.jpg"];
+        [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matNoteImage.jpg"];
     
     
     
-    [mailComposer setToRecipients:recipients];
+        [mailComposer setToRecipients:recipients];
     
-    [self presentViewController:mc animated:YES completion:NULL];
-    
+        [self presentViewController:mc animated:YES completion:NULL];
+        
+    }else{
+        
+        
+        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Please set up an email account on this device to enable this feature." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+
+    }
     
     
 }
