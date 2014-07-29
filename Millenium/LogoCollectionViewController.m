@@ -162,11 +162,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     [DIYMenu dismiss];
     
-    if(matCount==0 && artworkCount==0){
+   /* if(matCount==0 && artworkCount==0){
         
         [self goFav:self];
         
-    }
+    }*/
     
     
    /* UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -434,7 +434,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-    //[self.collectionView reloadData];
+    [self.collectionView reloadData];
     
     
     UIStoryboard *storyboard = self.storyboard;

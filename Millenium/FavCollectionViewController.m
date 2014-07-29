@@ -816,11 +816,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
         
         
-        [self.collectionView reloadData];
-
+        
         
         
     }];
+    [self.collectionView reloadData];
+
     
     
     [self performSegueWithIdentifier:@"collectionPickedSegue" sender:self];
