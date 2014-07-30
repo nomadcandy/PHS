@@ -2027,6 +2027,7 @@
             
             matUseBGColorString=@"White_140.jpg";
             matBGTextColorString=@"140";
+           
             
             
         }
@@ -2325,8 +2326,13 @@
         //[bgColorButton setImage:matBGColorImage forState:UIControlStateNormal];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setTitle:matBGTextColorString forState:UIControlStateNormal];
+       
         
+        if ([bgColorButton.titleLabel.text isEqualToString:@"140"]){
         
+            [bgColorButton setTitleShadowColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+            
+        }
         
         [self.bgColorButton reloadInputViews];
         
@@ -3672,6 +3678,14 @@ else
         [self.bgColorButton reloadInputViews];
         
     }
+    
+    
+    if ([bgColorButton.titleLabel.text isEqualToString:@"140"]){
+        
+        [bgColorButton setTitleShadowColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        
+    }
+
   [self.bgColorButton reloadInputViews];
   matBGLogoView.contentMode = UIViewContentModeScaleToFill;
 
