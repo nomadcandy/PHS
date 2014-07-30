@@ -3378,6 +3378,9 @@ else
         
         [bgColorButton setTitle:@"121" forState:UIControlStateNormal];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        //[bgColorButton.titleLabelColor setColor:whiteColor  forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
         
@@ -3388,23 +3391,27 @@ else
     
     else if ((long)sender.tag==123){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
         [matBGLogoView setImage:myBGColor];
         
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setTitle:@"123" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     else if ((long)sender.tag==140){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"White_140.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
-         [bgColorButton setTitle:@"140" forState:UIControlStateNormal];
+        [bgColorButton setTitle:@"140" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3414,19 +3421,23 @@ else
         //create an image
         myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"119" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     else if ((long)sender.tag==107){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"107" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     
@@ -3434,65 +3445,77 @@ else
     
     else if ((long)sender.tag==120){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"120" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     else if ((long)sender.tag==116){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"116" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==127){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Orange_127.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"127" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==105){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Purple_105.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"105" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     if ((long)sender.tag==112){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Red_112.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"112" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==109){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Gold_109.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"109" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3500,22 +3523,26 @@ else
     
     if ((long)sender.tag==115){
         
-        //create an image
+       
         myBGColor = [UIImage imageNamed:@"Grey_115.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"115" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==106){
         
-        //create an image
+       
         myBGColor = [UIImage imageNamed:@"Light Blue_106.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"106" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3527,6 +3554,7 @@ else
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"118" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
@@ -3538,17 +3566,20 @@ else
         [matBGLogoView setImage:myBGColor];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"110" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==117){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Forest Green_117.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"117" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
         
@@ -3556,11 +3587,13 @@ else
     
     if ((long)sender.tag==114){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Cranberry_114.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"114" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
         
@@ -3568,99 +3601,117 @@ else
     
     if ((long)sender.tag==103){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Dark Gold_103.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"103" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==101){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Charcoal_101.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"101" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==111){
         
-        //create an image
+       
         myBGColor = [UIImage imageNamed:@"Chocolate_111.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"111" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==126){
         
-        //create an image
+        
         UIImage *myBGColor = [UIImage imageNamed:@"Clay_126.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"126" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
     
     }
     
     if ((long)sender.tag==108){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Black_108.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"108" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==102){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Brown_102.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"102" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==100){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Burgundy_100.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"100" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==130){
         
-        //create an image
+       
         myBGColor = [UIImage imageNamed:@"Aquamarine_130.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"130" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     if ((long)sender.tag==104){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Turquoise_104.jpg"];
         [matBGLogoView setImage:myBGColor];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"104" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
         
@@ -3668,23 +3719,23 @@ else
     //TODO FIX ALL THESE
     if ((long)sender.tag==128){
         
-        //create an image
+        
         myBGColor = [UIImage imageNamed:@"Yellow_128.jpg"];
         [matBGLogoView setImage:myBGColor];
-        //[bgColorButton setImage:nil forState:UIControlStateNormal];
-        //[bgColorButton setBackgroundImage:nil forState:UIControlStateNormal];
+        [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"128" forState:UIControlStateNormal];
+        [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
         
     }
     
     
-    if ([bgColorButton.titleLabel.text isEqualToString:@"140"]){
+   /* if ([bgColorButton.titleLabel.text isEqualToString:@"140"]){
         
         [bgColorButton setTitleShadowColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         
-    }
+    }*/
 
   [self.bgColorButton reloadInputViews];
   matBGLogoView.contentMode = UIViewContentModeScaleToFill;
