@@ -242,7 +242,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matSellerArray = [favoritesMatArray valueForKey:@"seller"];
         matCompanyArray = [favoritesMatArray valueForKey:@"company"];
         matColorArray = [favoritesMatArray valueForKey:@"color"];
-        //matBGColorArray = [favoritesMatArray valueForKey:@"BGColor"];
+        matBGColorArray = [favoritesMatArray valueForKey:@"bgColor"];
         
         
         matCount = favoritesMatArray.count;
@@ -486,7 +486,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matCompanyArray = [favoritesMatArray valueForKey:@"company"];
         matColorArray = [favoritesMatArray valueForKey:@"color"];
         matBGColorArray = [favoritesMatArray valueForKey:@"bgColor"];
-        
+        NSLog(@"matBGColorArray: %@", matBGColorArray);
         matCount = favoritesMatArray.count;
         favMatCount=favoritesMatArray.count;
         NSLog(@"matCount: %i", matCount);
@@ -2234,8 +2234,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         matColorString = nil;
         
     }
-    
+    NSLog(@"matBGColorArray %@",matBGColorArray);
     matBGColorString = [matBGColorArray objectAtIndex:indexPathSend];
+    NSLog(@"matBGColorString %@",matBGColorString);
     if ([[NSNull null] isEqual:matBGColorString]) {
         matBGColorString = nil;
         
@@ -2423,7 +2424,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             goingController.matColorString=@" ";
             
         }
-        if(matBGColorString!=NULL)
+        goingController.matBGColorString=matBGColorString;
+        /*if(matBGColorString!=NULL)
             
         {
             goingController.matBGColorString=matBGColorString;
@@ -2432,7 +2434,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             goingController.matBGColorString=@" ";
             
-        }
+        }*/
         if(interactiveHeaderString!=NULL)
             
         {

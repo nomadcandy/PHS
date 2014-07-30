@@ -334,7 +334,7 @@
 @property (nonatomic, strong) NSString*matIDAddFavString;
 @property (nonatomic, strong) NSString*matLocationIDAddFavString;
 
-
+@property (nonatomic, strong) NSString*BGString;
 @property (nonatomic, strong) NSString*matColorAddFavString;
 @property (nonatomic, strong) NSString*matBGColorAddFavString;
 @property (nonatomic, strong) NSString*matSizeAddFavString;
