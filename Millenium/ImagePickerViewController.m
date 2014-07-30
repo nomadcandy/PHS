@@ -576,9 +576,9 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     
-   //if (alertView.tag == 1) {  //First Dialog
+  
     
-    
+ //This code not used
  if (alertView == alert) {
     
     nameField = [alertView textFieldAtIndex:0];
