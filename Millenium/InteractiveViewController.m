@@ -16,12 +16,17 @@
 
 @property (nonatomic,strong) NSMutableArray* decorativeTestFields;
 @property (nonatomic,strong) UITextField* lastMovedTextField;
+@property (nonatomic,strong) UIButton* lastMovedButton;
 @end
 
 @implementation InteractiveViewController
 
 //@synthesize center;
 //@synthesize control;
+@synthesize matColorString;
+@synthesize logoColorString;
+@synthesize lastMovedButton;
+
 @synthesize emailTitle;
 @synthesize sizeGetMatString;
 @synthesize colorButtonHideView;
@@ -153,6 +158,15 @@
 @synthesize companyString;
 @synthesize numberString;
 @synthesize sizeString;
+
+@synthesize logoColorSelectedString;
+@synthesize logoColor1String;
+@synthesize logoColor2String;
+@synthesize logoColor3String;
+@synthesize logoColor4String;
+@synthesize logoColor5String;
+@synthesize logoColor6String;
+@synthesize logoColor7String;
 
 @synthesize orientString;
 
@@ -652,10 +666,10 @@
     }
     
     
-    if (_logoColorString!=nil){
+    if (logoColorString!=nil){
         
         
-        NSString *string = _logoColorString;
+        NSString *string = logoColorString;
         if ([string rangeOfString:@"108-Black"].location == NSNotFound) {
             NSLog(@"string does not contain bla");
             
@@ -2036,7 +2050,7 @@
         
         
         
-        NSString *string = _matColorString;
+        NSString *string = matColorString;
         if ([string rangeOfString:@"108-Black"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
             
@@ -3914,7 +3928,7 @@ else
     NSString*matCompanyAddFavString =companyField.text;
     NSString*matIDAddFavString =numberField.text;
     NSString*matLocationIDAddFavString =locationIDString;
-    NSString*matColorAddFavString =_matColorString;
+    NSString*matColorAddFavString =matColorString;
     
     //NSString*matBGColorAddFavString =matBGColorString;
     matUseBGColorString=matBGColorString;
@@ -4014,7 +4028,7 @@ else
     [newMatFavorite setValue:sellerField.text forKey:@"seller"];
     [newMatFavorite setValue:numberField.text forKey:@"productID"];
     [newMatFavorite setValue:locationIDString forKey:@"locationID"];
-    [newMatFavorite setValue:_matColorString forKey:@"color"];
+    [newMatFavorite setValue:matColorString forKey:@"color"];
     [newMatFavorite setValue:matUseBGColorString forKey:@"bgColor"];
     [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
     
@@ -4191,7 +4205,7 @@ else
     NSString*matCompanyAddFavString =companyField.text;
     NSString*matIDAddFavString =numberField.text;
     NSString*matLocationIDAddFavString =locationIDString;
-    NSString*matColorAddFavString =_matColorString;
+    NSString*matColorAddFavString =matColorString;
     //matUseBGColorString =matBGColorString;
     //matUseBGColorString =matBGColorString;
     matUseBGColorString =BGString;
@@ -4307,7 +4321,7 @@ else
     [newMatFavorite setValue:sellerField.text forKey:@"seller"];
     [newMatFavorite setValue:numberField.text forKey:@"productID"];
     [newMatFavorite setValue:locationIDString forKey:@"locationID"];
-    [newMatFavorite setValue:_matColorString forKey:@"color"];
+    [newMatFavorite setValue:matColorString forKey:@"color"];
     [newMatFavorite setValue:matBGColorAddFavString forKey:@"bgColor"];
     [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
     
@@ -4880,12 +4894,7 @@ enum {
     
     NSLog(@"Sender %@",sender);
     
-/*    if(sender==textDecField)
-        
-    {
-        _selectedTextField=sender;
-        
-    }*/
+
     if([sender isKindOfClass:[UITextField class]]){
         self.lastMovedTextField = sender;
     }
@@ -4901,40 +4910,234 @@ enum {
     center.y += p.y - pPrev.y;
     control.center = center;
     
+    
+    
+    if([sender isKindOfClass:[UIButton class]]){
+        
+        
+        self.lastMovedButton = sender;
+        NSInteger i = [sender tag];
+
+        if (i== 121)
+        {
+            logoColorSelectedString=@"121-Steel Blue";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        
+        if (i== 123)
+        {
+            logoColorSelectedString=@"123-Suede";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 140)
+        {
+            logoColorSelectedString=@"140-White";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        
+        if (i== 119)
+        {
+            logoColorSelectedString=@"119-Rose";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        
+        if (i== 107)
+        {
+            logoColorSelectedString=@"107-Royal Blue";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        
+        if (i== 120)
+        {
+            logoColorSelectedString=@"120-Sandalwood";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 116)
+        {
+            logoColorSelectedString=@"116-Silver";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        
+        if (i== 127)
+        {
+            logoColorSelectedString=@"127-Orange";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 105)
+        {
+            logoColorSelectedString=@"105-Purple";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 112)
+        {
+            logoColorSelectedString=@"112-Red";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 109)
+        {
+            logoColorSelectedString=@"109-Gold";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 115)
+        {
+            logoColorSelectedString=@"115-Grey";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 106)
+        {
+            logoColorSelectedString=@"106-Light Blue";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 118)
+        {
+            logoColorSelectedString=@"118-Navy";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 110)
+        {
+            logoColorSelectedString=@"110-Emerald Green";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 117)
+        {
+            logoColorSelectedString=@"117-Forest Green";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 114)
+        {
+            logoColorSelectedString=@"114-Cranberry";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 103)
+        {
+            logoColorSelectedString=@"103-Dark Gold";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 101)
+        {
+            logoColorSelectedString=@"101-Charcoal";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 111)
+        {
+            logoColorSelectedString=@"111-Chocolate";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        
+        if (i== 126)
+        {
+            logoColorSelectedString=@"126-Clay";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 108)
+        {
+            logoColorSelectedString=@"108-Black";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 102)
+        {
+            logoColorSelectedString=@"102-Brown";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 100)
+        {
+            logoColorSelectedString=@"100-Burgundy";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 130)
+        {
+            logoColorSelectedString=@"130-Aquamarine";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 104)
+        {
+            logoColorSelectedString=@"104-Turquoise";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+        if (i== 128)
+        {
+            logoColorSelectedString=@"128-Yellow";
+            NSLog(@"%@",logoColorSelectedString);
+        }
+
+
+
+        
+    }
+    
     if (CGRectIntersectsRect(control.frame, _logoColorButton1.frame)) {
         
         control.frame=_logoColorButton1.frame;
         _logoColorButton1.enabled=YES;
+        logoColor1String=logoColorSelectedString;
+        
+        /*matColorString=(@"%@,%@,%@,%@,%@,%@,%@",logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String);*/
+        
+       /* matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        
+        NSLog(@"%@",matColorString);
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton2.frame)){
         
         control.frame=_logoColorButton2.frame;
         _logoColorButton2.enabled=YES;
+        logoColor2String=logoColorSelectedString;
+        NSLog(@"logoColor2String%@",logoColor2String);
+        NSLog(@"%@",matColorString);
+        
+       /* matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        
+        NSLog(@"%@",matColorString);
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton3.frame)){
         
         control.frame=_logoColorButton3.frame;
         _logoColorButton3.enabled=YES;
+        logoColor3String=logoColorSelectedString;
+        
+        /*matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        
+        NSLog(@"%@",matColorString);
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton4.frame)) {
         
         control.frame=_logoColorButton4.frame;
         _logoColorButton4.enabled=YES;
+        logoColor4String=logoColorSelectedString;
+        
+      /*  matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        
+        NSLog(@"%@",matColorString);
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton5.frame)){
         
         control.frame=_logoColorButton5.frame;
         _logoColorButton5.enabled=YES;
+        logoColor5String=logoColorSelectedString;
+        
+        /*matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        
+        NSLog(@"%@",matColorString);
         
     } else if (CGRectIntersectsRect(control.frame, _logoColorButton6.frame)){
         
         control.frame=_logoColorButton6.frame;
         _logoColorButton6.enabled=YES;
+        logoColor6String=logoColorSelectedString;
+        
+       /* matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        
+        NSLog(@"%@",matColorString);
         
     }else if(CGRectIntersectsRect(control.frame, _logoColorButton7.frame)){
         
         control.frame=_logoColorButton7.frame;
         _logoColorButton7.enabled=YES;
+        logoColor7String=logoColorSelectedString;
+        
+        matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;
+        
+        NSLog(@"%@",matColorString);
 
 
     }else if(CGRectIntersectsRect(control.frame, bgColorButton.frame)){
@@ -4947,6 +5150,21 @@ enum {
         
     }
 
+    /*logoColorString=(@"%@,%@,%@,%@,%@,%@,%@",logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String);
+    
+    NSLog(@"%@",logoColorString);*/
+    
+   /*matColorString=(@"%@,%@,%@,%@,%@,%@,%@",logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String);*/
+    
+    
+   //NSString *joinedFromLiterals = @"ONE " @"MILLION " @"YEARS " @"DUNGEON!!!";
+    
+    /*matColorString=@"%@,,"logoColor1String @"%@,,"logoColor2String @"%@,,"logoColor3String @"%@,,"logoColor4String@"%@,,"logoColor5String @"%@,,"logoColor6String @"%@,,"logoColor7String);*/
+    
+   matColorString= [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String,logoColor7String];
+   
+    
+    NSLog(@"matColorString pass%@",matColorString);
 
     
     

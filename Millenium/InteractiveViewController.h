@@ -339,6 +339,14 @@
 @property (nonatomic, strong) NSString*matBGColorAddFavString;
 @property (nonatomic, strong) NSString*matSizeAddFavString;
 
+@property (nonatomic, strong) NSString*logoColorSelectedString;
+@property (nonatomic, strong) NSString*logoColor1String;
+@property (nonatomic, strong) NSString*logoColor2String;
+@property (nonatomic, strong) NSString*logoColor3String;
+@property (nonatomic, strong) NSString*logoColor4String;
+@property (nonatomic, strong) NSString*logoColor5String;
+@property (nonatomic, strong) NSString*logoColor6String;
+@property (nonatomic, strong) NSString*logoColor7String;
 
 @property (nonatomic, strong) NSString *nameString;
 @property (nonatomic, strong) NSString *sellerString;
