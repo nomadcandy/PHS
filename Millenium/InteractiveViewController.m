@@ -261,7 +261,13 @@
     
     //_emailString=@"A New Sketch Request";
     
-    
+    _logoColorButton1.enabled=YES;
+    _logoColorButton2.enabled=YES;
+    _logoColorButton3.enabled=YES;
+    _logoColorButton4.enabled=YES;
+    _logoColorButton5.enabled=YES;
+    _logoColorButton6.enabled=YES;
+    _logoColorButton7.enabled=YES;
     
     //TODO Add matbgColor info
     NSLog(@"matBGColorString %@",matBGColorString);
@@ -4914,7 +4920,7 @@ enum {
     
     if([sender isKindOfClass:[UIButton class]]){
         
-        
+       //[self.view bringSubviewToFront:sender];
         self.lastMovedButton = sender;
         NSInteger i = [sender tag];
 
@@ -5065,35 +5071,69 @@ enum {
         
     }
     
+    if(!logoColor1String.length==0){
+        
+        _logoColorButton1.enabled=NO;
+    }
+    
+    NSLog(@"%@",logoColor1String);
     if (CGRectIntersectsRect(control.frame, _logoColorButton1.frame)) {
         
-        control.frame=_logoColorButton1.frame;
-        _logoColorButton1.enabled=YES;
-        logoColor1String=logoColorSelectedString;
+        //_logoColorButton1.enabled=YES;
+        //if(logoColor1String==nil){
+        //if([logoColor1String isEqualToString:@""]){
+        //if([logoColor1String length:0]){
+        //if(_logoColorButton1.imageView==Nil){
         
-        /*matColorString=(@"%@,%@,%@,%@,%@,%@,%@",logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String);*/
+            control.frame=_logoColorButton1.frame;
+            //_logoColorButton1.enabled=YES;
+            logoColor1String=logoColorSelectedString;
+            _logoColorButton1.enabled=NO;
+            //_logoColorButton1.enabled=NO;
+            
+       /* }else{
+                
+                _logoColorButton1.enabled=YES;
+            }*/
         
-       /* matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
         
-        NSLog(@"%@",matColorString);
+    
+    
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton2.frame)){
         
-        control.frame=_logoColorButton2.frame;
-        _logoColorButton2.enabled=YES;
-        logoColor2String=logoColorSelectedString;
-        NSLog(@"logoColor2String%@",logoColor2String);
-        NSLog(@"%@",matColorString);
         
-       /* matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        //if(logoColor2String==Nil){
+            
+            control.frame=_logoColorButton2.frame;
+            _logoColorButton2.enabled=YES;
+            logoColor2String=logoColorSelectedString;
+            NSLog(@"logoColor2String%@",logoColor2String);
+            _logoColorButton2.enabled=NO;
+        
+       /* }else{
+            
+            _logoColorButton2.enabled=NO;
+        }*/
+        
+      
         
         NSLog(@"%@",matColorString);
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton3.frame)){
         
-        control.frame=_logoColorButton3.frame;
-        _logoColorButton3.enabled=YES;
-        logoColor3String=logoColorSelectedString;
+        
+       // if(logoColor3String==Nil){
+        
+            control.frame=_logoColorButton3.frame;
+            _logoColorButton3.enabled=YES;
+            logoColor3String=logoColorSelectedString;
+            _logoColorButton3.enabled=NO;
+            
+       /* }else{
+            
+            _logoColorButton3.enabled=NO;
+        }*/
         
         /*matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
         
@@ -5101,43 +5141,75 @@ enum {
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton4.frame)) {
         
-        control.frame=_logoColorButton4.frame;
-        _logoColorButton4.enabled=YES;
-        logoColor4String=logoColorSelectedString;
+       // if(logoColor4String==Nil){
+        
+            control.frame=_logoColorButton4.frame;
+            _logoColorButton4.enabled=YES;
+            logoColor4String=logoColorSelectedString;
+            _logoColorButton4.enabled=NO;
+            
+        /*}else{
+            
+             _logoColorButton4.enabled=NO;
+        }*/
         
       /*  matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
         
-        NSLog(@"%@",matColorString);
+        
         
     }else if (CGRectIntersectsRect(control.frame, _logoColorButton5.frame)){
         
-        control.frame=_logoColorButton5.frame;
-        _logoColorButton5.enabled=YES;
-        logoColor5String=logoColorSelectedString;
         
-        /*matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        //if(logoColor5String==Nil){
         
-        NSLog(@"%@",matColorString);
+            control.frame=_logoColorButton5.frame;
+            _logoColorButton5.enabled=YES;
+            logoColor5String=logoColorSelectedString;
+            _logoColorButton5.enabled=NO;
+            
+       /* }else{
+            
+            _logoColorButton5.enabled=NO;
+        }*/
+        
+        
+        
         
     } else if (CGRectIntersectsRect(control.frame, _logoColorButton6.frame)){
         
-        control.frame=_logoColorButton6.frame;
-        _logoColorButton6.enabled=YES;
-        logoColor6String=logoColorSelectedString;
+         //if(logoColor6String==Nil){
         
-       /* matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+             control.frame=_logoColorButton6.frame;
+             _logoColorButton6.enabled=YES;
+             logoColor6String=logoColorSelectedString;
+             _logoColorButton6.enabled=NO;
+             
+        /* }else{
+             
+             _logoColorButton6.enabled=NO;
+         }*/
         
-        NSLog(@"%@",matColorString);
+       
+        
+        
         
     }else if(CGRectIntersectsRect(control.frame, _logoColorButton7.frame)){
         
-        control.frame=_logoColorButton7.frame;
-        _logoColorButton7.enabled=YES;
-        logoColor7String=logoColorSelectedString;
+        //if(logoColor7String==Nil){
         
-        matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;
+            control.frame=_logoColorButton7.frame;
+            _logoColorButton7.enabled=YES;
+            logoColor7String=logoColorSelectedString;
+            _logoColorButton7.enabled=NO;
+            
+       /* }else{
+            
+             _logoColorButton7.enabled=NO;
+        }*/
         
-        NSLog(@"%@",matColorString);
+       /* matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;
+        
+        NSLog(@"%@",matColorString);*/
 
 
     }else if(CGRectIntersectsRect(control.frame, bgColorButton.frame)){
@@ -5150,16 +5222,7 @@ enum {
         
     }
 
-    /*logoColorString=(@"%@,%@,%@,%@,%@,%@,%@",logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String);
-    
-    NSLog(@"%@",logoColorString);*/
-    
-   /*matColorString=(@"%@,%@,%@,%@,%@,%@,%@",logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String);*/
-    
-    
-   //NSString *joinedFromLiterals = @"ONE " @"MILLION " @"YEARS " @"DUNGEON!!!";
-    
-    /*matColorString=@"%@,,"logoColor1String @"%@,,"logoColor2String @"%@,,"logoColor3String @"%@,,"logoColor4String@"%@,,"logoColor5String @"%@,,"logoColor6String @"%@,,"logoColor7String);*/
+   
     
    matColorString= [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String,logoColor7String];
    
