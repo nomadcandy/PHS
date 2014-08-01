@@ -476,56 +476,62 @@
         
     }
     //TODO set equalToStringHere
-    if ([BGString rangeOfString:@"112-Red"].location == NSNotFound) {
-        
-        NSLog(@"string does not contain bla");
-        
-    } else {
-        
-        
+    //if ([BGString rangeOfString:@"112-Red"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"112-Red"]) {
+        //NSLog(@"string does not contain bla");
         matUseBGColorString=@"Red_112.jpg";
         matBGTextColorString=@"112";
         matBGColorAddFavString=@"112-Red";
-        
-        
-    }
-    
-    if ([BGString rangeOfString:@"109-Gold"].location == NSNotFound) {
-        
-        NSLog(@"string does not contain bla");
+
         
     } else {
         
         
+         NSLog(@"string does not contain bla");
+        
+    }
+    
+    //if ([BGString rangeOfString:@"109-Gold"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"109-Gold"]) {
         matUseBGColorString=@"Gold_109.jpg";
         matBGTextColorString=@"109";
         matBGColorAddFavString=@"109-Gold";
         
         
-    }
-    
-    if ([BGString rangeOfString:@"115-Grey"].location == NSNotFound) {
+    } else {
+        
         
         NSLog(@"string does not contain bla");
         
-    } else {
         
+    }
+    
+    //if ([BGString rangeOfString:@"115-Grey"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"115-Grey"]) {
         
         matUseBGColorString=@"Grey_115.jpg";
         matBGTextColorString= @"115";
         matBGColorAddFavString=@"115-Grey";
-    }
-    
-    if ([BGString rangeOfString:@"106-Light Blue"].location == NSNotFound) {
         
-        NSLog(@"string does not contain bla");
         
     } else {
         
+        NSLog(@"string does not contain bla");
+       
+    }
+    
+    //if ([BGString rangeOfString:@"106-Light Blue"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"106-Light Blue"]) {
         
-        matUseBGColorString=@"Light Blue_106.jpg";
-        matUseBGColorString=@"106";
-        matBGColorAddFavString=@"106-Light Blue";
+            matUseBGColorString=@"Light Blue_106.jpg";
+            matUseBGColorString=@"106";
+            matBGColorAddFavString=@"106-Light Blue";
+
+        
+        
+    } else {
+        
+        NSLog(@"string does not contain bla");
         
         
     }
