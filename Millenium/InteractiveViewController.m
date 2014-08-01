@@ -23,6 +23,16 @@
 
 //@synthesize center;
 //@synthesize control;
+@synthesize firstColorNameString;
+@synthesize secondColorNameString;
+@synthesize thirdColorNameString;
+@synthesize fourthColorNameString;
+@synthesize fifthColorNameString;
+@synthesize sixthColorNameString;
+@synthesize seventhColorNameString;
+
+
+@synthesize logoColorMoveButton;
 @synthesize matColorString;
 @synthesize logoColorString;
 @synthesize lastMovedButton;
@@ -113,7 +123,11 @@
 @synthesize matCount;
 
 @synthesize logoColorArray;
+@synthesize logoColorButtonArray;
+@synthesize logoColorNameArray;
 @synthesize logoColorNumberArray;
+
+@synthesize matColorNameArray;
 
 @synthesize matNameArray;
 @synthesize matSizeArray;
@@ -176,6 +190,15 @@
 @synthesize logoColorButton5;
 @synthesize logoColorButton6;
 @synthesize logoColorButton7;
+
+
+@synthesize firstColorLogoButton;
+@synthesize secondColorLogoButton;
+@synthesize thirdColorLogoButton;
+@synthesize fourthColorLogoButton;
+@synthesize fifthColorLogoButton;
+@synthesize sixthColorLogoButton;
+@synthesize seventhColorLogoButton;
 
 
 @synthesize orientString;
@@ -371,7 +394,6 @@
         matUseBGColorString=@"Royal Blue_107.jpg";
         matBGTextColorString=@"107";
         matBGColorAddFavString=@"107-Royal Blue";
-        //add string to an array
         
     }
     
@@ -385,7 +407,7 @@
         matUseBGColorString=@"Sandalwood_120.jpg";
         matBGTextColorString=@"120";
         matBGColorAddFavString=@"120-Sandalwood";
-        //add string to an array
+       
         
     }
     
@@ -399,7 +421,6 @@
         matUseBGColorString=@"Silver_116.jpg";
         matBGTextColorString=@"116";
         matBGColorAddFavString=@"116-Silver";
-        //add string to an array
         
     }
     
@@ -681,6 +702,18 @@
         logoColorNumberArray = [[NSMutableArray alloc] init];
     }
     
+    if (logoColorNameArray == nil)
+    {
+        logoColorNameArray = [[NSMutableArray alloc] init];
+    }
+    
+    if (logoColorButtonArray == nil)
+    {
+        logoColorButtonArray = [[NSMutableArray alloc] init];
+    }
+    
+    NSLog(@"logoColorArray %@",logoColorArray);
+
     
     if (logoColorString!=nil){
         
@@ -695,8 +728,9 @@
             NSLog(@"black Found!");
             
             [logoColorArray addObject:@"Black_108.jpg"];
+            [logoColorNameArray addObject:_blackButton];
             [logoColorNumberArray addObject:@"108"];
-            //add string to an array
+            
             
         }
         
@@ -708,8 +742,9 @@
             
             
             [logoColorArray addObject:@"Steel Blue_121.jpg"];
+            [logoColorNameArray addObject:steelBlueButton];
             [logoColorNumberArray addObject:@"121"];
-            //add string to an array
+            
             
         }
         
@@ -721,6 +756,7 @@
             
             
             [logoColorArray addObject:@"Suede_123.jpg"];
+            [logoColorNameArray addObject:_suedeButton];
             [logoColorNumberArray addObject:@"123"];
             
         }
@@ -733,8 +769,9 @@
             
             
             [logoColorArray addObject:@"White_140.jpg"];
+            [logoColorNameArray addObject:_whiteButton];
             [logoColorNumberArray addObject:@"140"];
-            //add string to an array
+            
             
         }
         
@@ -746,6 +783,7 @@
             
             
             [logoColorArray addObject:@"Rose_119.jpg"];
+            [logoColorNameArray addObject:_roseButton];
             [logoColorNumberArray addObject:@"119"];
             //add string to an array
             
@@ -759,6 +797,7 @@
             
             
             [logoColorArray addObject:@"Royal Blue_107.jpg"];
+            [logoColorNameArray addObject:_royalBlueButton];
             [logoColorNumberArray addObject:@"107"];
             //add string to an array
             
@@ -772,6 +811,7 @@
             
             
             [logoColorArray addObject:@"Sandalwood_120.jpg"];
+            [logoColorNameArray addObject:_sandalWoodButton];
             [logoColorNumberArray addObject:@"120"];
             //add string to an array
             
@@ -785,6 +825,7 @@
             
             
             [logoColorArray addObject:@"Silver_116.jpg"];
+            [logoColorNameArray addObject:_silverButton];
             [logoColorNumberArray addObject:@"116"];
             //add string to an array
             
@@ -798,6 +839,7 @@
             
             
             [logoColorArray addObject:@"Orange_127.jpg"];
+            [logoColorNameArray addObject:_orangeButton];
             [logoColorNumberArray addObject:@"127"];
             
             
@@ -811,6 +853,7 @@
             
             
             [logoColorArray addObject:@"Purple_105.jpg"];
+            [logoColorNameArray addObject:_purpleButton];
             [logoColorNumberArray addObject:@"105"];
             
             
@@ -825,6 +868,7 @@
             
             
             [logoColorArray addObject:@"Red_112.jpg"];
+            [logoColorNameArray addObject:_redButton];
             [logoColorNumberArray addObject:@"112"];
             
             
@@ -838,6 +882,7 @@
             
             
             [logoColorArray addObject:@"Gold_109.jpg"];
+            [logoColorNameArray addObject:_goldButton];
             [logoColorNumberArray addObject:@"109"];
             
             
@@ -851,6 +896,7 @@
             
             
             [logoColorArray addObject:@"Grey_115.jpg"];
+            [logoColorNameArray addObject:_greyButton];
             [logoColorNumberArray addObject:@"115"];
         }
         
@@ -862,6 +908,7 @@
             
             
             [logoColorArray addObject:@"Light Blue_106.jpg"];
+            [logoColorNameArray addObject:_lightBlueButton];
             [logoColorNumberArray addObject:@"106"];
             
             
@@ -875,6 +922,7 @@
             
             
             [logoColorArray addObject:@"Navy_118.jpg"];
+            [logoColorNameArray addObject:_navyButton];
             [logoColorNumberArray addObject:@"118"];
             
         }
@@ -887,6 +935,7 @@
             
             
             [logoColorArray addObject:@"Emerald Green_110.jpg"];
+            [logoColorNameArray addObject:_emeraldGreenButton];
             [logoColorNumberArray addObject:@"110"];
         }
         
@@ -898,6 +947,7 @@
             
             
             [logoColorArray addObject:@"Forest Green_117.jpg"];
+            [logoColorNameArray addObject:_forestGreenButton];
             [logoColorNumberArray addObject:@"117"];
         }
         
@@ -909,6 +959,7 @@
             
             
             [logoColorArray addObject:@"Cranberry_114.jpg"];
+            [logoColorNameArray addObject:_cranberryButton];
             [logoColorNumberArray addObject:@"114"];
             
         }
@@ -921,6 +972,7 @@
             
             
             [logoColorArray addObject:@"Dark Gold_103.jpg"];
+            [logoColorNameArray addObject:_darkGoldButton];
             [logoColorNumberArray addObject:@"103"];
             
         }
@@ -933,6 +985,7 @@
             
             
             [logoColorArray addObject:@"Charcoal_101.jpg"];
+            [logoColorNameArray addObject:_charcoalButton];
             [logoColorNumberArray addObject:@"101"];
             
         }
@@ -945,6 +998,7 @@
             
             
             [logoColorArray addObject:@"Chocolate_111.jpg"];
+            [logoColorNameArray addObject:_chocolateButton];
             [logoColorNumberArray addObject:@"111"];
             
         }
@@ -957,6 +1011,7 @@
             
             
             [logoColorArray addObject:@"Clay_126.jpg"];
+            [logoColorNameArray addObject:_clayButton];
             [logoColorNumberArray addObject:@"126"];
             
         }
@@ -969,6 +1024,7 @@
             
             
             [logoColorArray addObject:@"Brown_102.jpg"];
+            [logoColorNameArray addObject:_brownButton];
             [logoColorNumberArray addObject:@"102"];
             
         }
@@ -981,6 +1037,7 @@
             
             
             [logoColorArray addObject:@"Burgundy_100.jpg"];
+            [logoColorNameArray addObject:_burgundyButton];
             [logoColorNumberArray addObject:@"100"];
             
         }
@@ -993,6 +1050,7 @@
             
             
             [logoColorArray addObject:@"Aquamarine_130.jpg"];
+            [logoColorNameArray addObject:_aquamarineButton];
             [logoColorNumberArray addObject:@"130"];
             
         }
@@ -1005,6 +1063,7 @@
             
             
             [logoColorArray addObject:@"Turquoise_104.jpg"];
+            [logoColorNameArray addObject:_turquoiseButton];
             [logoColorNumberArray addObject:@"104"];
             
             
@@ -1018,6 +1077,7 @@
             
             
             [logoColorArray addObject:@"Yellow_128.jpg"];
+            [logoColorNameArray addObject:_yellowButton];
             [logoColorNumberArray addObject:@"128"];
             
             
@@ -1076,7 +1136,26 @@
         [logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
         [logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-        [logoColorButton1 setNeedsDisplay];
+    
+        
+       firstColorNameString = [logoColorNameArray objectAtIndex:0];
+       NSLog(@"firstColorNameString %@",firstColorNameString);
+       
+        
+        firstColorNameString.hidden=YES;
+        
+        logoColor1String=logoColorSelectedString;
+      
+        // UIButton*firstColorButtonName=[selectButtonWithName:firstColorNameString];
+        // Control=firstColorNameString;
+        //control=button.tag.firstColorNoString;
+        //Sender.frame=logoColorButton1.frame;
+        //firstColorNameString.frame=logoColorButton1.frame;
+        // firstColorNameString.frame= logoColorButton1.frame;
+       //firstColorNameString.frame= CGRectMake(52, 519, 38, 38);
+       // _blackButton.frame=logoColorButton1.frame;
+       //[firstColorNameString reloadInputViews];
+        //[firstColorNameString setNeedsDisplay];
     }
     
     if (2 <= logoColorCount){
@@ -1088,6 +1167,11 @@
         NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
         [logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
         [logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        secondColorNameString = [logoColorNameArray objectAtIndex:1];
+        //secondColorNameString.frame=logoColorButton2.frame;
+        
+        secondColorNameString.hidden=YES;
         
     }
     
@@ -1101,7 +1185,10 @@
         [logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
         [logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
+        thirdColorNameString = [logoColorNameArray objectAtIndex:2];
+        thirdColorNameString.frame=logoColorButton3.frame;
         
+        thirdColorNameString.hidden=YES;
     }
     
     if (4 <= logoColorCount){
@@ -1114,7 +1201,10 @@
         [logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
         [logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
+        fourthColorNameString = [logoColorNameArray objectAtIndex:3];
+        //fourthColorNameString.frame=logoColorButton4.frame;
         
+        fourthColorNameString.hidden=YES;
     }
     
     if (5 <= logoColorCount){
@@ -1127,7 +1217,10 @@
         [logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
         [logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
+        fifthColorNameString = [logoColorNameArray objectAtIndex:4];
+        fifthColorNameString.frame=logoColorButton5.frame;
         
+        fifthColorNameString.hidden=YES;
         
     }
     
@@ -1142,6 +1235,9 @@
         [logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
         [logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
+        sixthColorNameString = [logoColorNameArray objectAtIndex:5];
+        sixthColorNameString.frame=logoColorButton6.frame;
+        sixthColorNameString.hidden=YES;
         
     }
     
@@ -1154,6 +1250,11 @@
         NSString*seventhColorNoString = [logoColorNumberArray objectAtIndex:6];
         [logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
         [logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        seventhColorNameString = [logoColorNameArray objectAtIndex:6];
+        seventhColorNameString.frame=logoColorButton7.frame;
+        seventhColorNameString.hidden=YES;
+        
         
         
     }
@@ -2076,6 +2177,7 @@
             //NSLog(@"black Found!");
             
             [matColorArray addObject:@"Black_108.jpg"];
+            [matColorNameArray addObject:@"BlackButton"];
             [matColorNumberArray addObject:@"108"];
             //add string to an array
             
@@ -2089,6 +2191,7 @@
             
             
             [matColorArray addObject:@"Steel Blue_121.jpg"];
+            [matNameArray addObject:@"SteelBlueButton"];
             [matColorNumberArray addObject:@"121"];
             //add string to an array
             
@@ -2102,6 +2205,7 @@
             
             
             [matColorArray addObject:@"Suede_123.jpg"];
+            [matColorNameArray addObject:@"SuedeButton"];
             [matColorNumberArray addObject:@"123"];
             
         }
@@ -2114,6 +2218,7 @@
             
             
             [matColorArray addObject:@"White_140.jpg"];
+            [matColorNameArray addObject:@"WhiteButton"];
             [matColorNumberArray addObject:@"140"];
             //add string to an array
             
@@ -2127,6 +2232,7 @@
             
             
             [matColorArray addObject:@"Rose_119.jpg"];
+            [matColorNameArray addObject:@"RoseButton"];
             [matColorNumberArray addObject:@"119"];
             //add string to an array
             
@@ -2140,6 +2246,7 @@
             
             
             [matColorArray addObject:@"Royal Blue_107.jpg"];
+            [matColorNameArray addObject:@"RoyalBlueButton"];
             [matColorNumberArray addObject:@"107"];
             //add string to an array
             
@@ -2153,6 +2260,7 @@
             
             
             [matColorArray addObject:@"Sandalwood_120.jpg"];
+            [matColorNameArray addObject:@"SandalwoodButton"];
             [matColorNumberArray addObject:@"120"];
             //add string to an array
             
@@ -2166,6 +2274,7 @@
             
             
             [matColorArray addObject:@"Silver_116.jpg"];
+            [matColorNameArray addObject:@"SilverButton"];
             [matColorNumberArray addObject:@"116"];
             //add string to an array
             
@@ -2179,6 +2288,7 @@
             
             
             [matColorArray addObject:@"Orange_127.jpg"];
+            [matColorNameArray addObject:@"OrangeButton"];
             [matColorNumberArray addObject:@"127"];
             
             
@@ -2192,6 +2302,7 @@
             
             
             [matColorArray addObject:@"Purple_105.jpg"];
+            [matColorNameArray addObject:@"PurpleButton"];
             [matColorNumberArray addObject:@"105"];
             
             
@@ -2206,6 +2317,7 @@
             
             
             [matColorArray addObject:@"Red_112.jpg"];
+            [matColorNameArray addObject:@"RedButton"];
             [matColorNumberArray addObject:@"112"];
             
             
@@ -2219,6 +2331,7 @@
             
             
             [matColorArray addObject:@"Gold_109.jpg"];
+            [matColorNameArray addObject:@"GoldButton"];
             [matColorNumberArray addObject:@"109"];
             
             
@@ -2232,6 +2345,7 @@
             
             
             [matColorArray addObject:@"Grey_115.jpg"];
+            [matColorNameArray addObject:@"GreyButton"];
             [matColorNumberArray addObject:@"115"];
         }
         
@@ -2243,6 +2357,7 @@
             
             
             [matColorArray addObject:@"Light Blue_106.jpg"];
+            [matColorNameArray addObject:@"LightBlueButton"];
             [matColorNumberArray addObject:@"106"];
             
             
@@ -2256,6 +2371,7 @@
             
             
             [matColorArray addObject:@"Navy_118.jpg"];
+            [matColorNameArray addObject:@"NavyButton"];
             [matColorNumberArray addObject:@"118"];
             
         }
@@ -2268,6 +2384,7 @@
             
             
             [matColorArray addObject:@"Emerald Green_110.jpg"];
+            [matColorNameArray addObject:@"EmeraldGreenButton"];
             [matColorNumberArray addObject:@"110"];
         }
         
@@ -2279,6 +2396,7 @@
             
             
             [matColorArray addObject:@"Forest Green_117.jpg"];
+            [matColorNameArray addObject:@"ForestGreenButton"];
             [matColorNumberArray addObject:@"117"];
         }
         
@@ -2290,6 +2408,7 @@
             
             
             [matColorArray addObject:@"Cranberry_114.jpg"];
+            [matColorNameArray addObject:@"CranberryButton"];
             [matColorNumberArray addObject:@"114"];
             
         }
@@ -2302,6 +2421,7 @@
             
             
             [matColorArray addObject:@"Dark Gold_103.jpg"];
+            [matColorNameArray addObject:@"DarkGoldButton"];
             [matColorNumberArray addObject:@"103"];
             
         }
@@ -2314,6 +2434,7 @@
             
             
             [matColorArray addObject:@"Charcoal_101.jpg"];
+            [matColorNameArray addObject:@"CharcoalButton"];
             [matColorNumberArray addObject:@"101"];
             
         }
@@ -2326,6 +2447,7 @@
             
             
             [matColorArray addObject:@"Chocolate_111.jpg"];
+            [matColorNameArray addObject:@"ChocolateButton"];
             [matColorNumberArray addObject:@"111"];
             
         }
@@ -2338,6 +2460,7 @@
             
             
             [matColorArray addObject:@"Clay_126.jpg"];
+            [matColorNameArray addObject:@"ClayButton"];
             [matColorNumberArray addObject:@"126"];
             
         }
@@ -2350,6 +2473,7 @@
             
             
             [matColorArray addObject:@"Brown_102.jpg"];
+            [matColorNameArray addObject:@"BrownButton"];
             [matColorNumberArray addObject:@"102"];
             
         }
@@ -2362,6 +2486,7 @@
             
             
             [matColorArray addObject:@"Burgundy_100.jpg"];
+            [matColorNameArray addObject:@"BurgundyButton"];
             [matColorNumberArray addObject:@"100"];
             
         }
@@ -2374,6 +2499,7 @@
             
             
             [matColorArray addObject:@"Aquamarine_130.jpg"];
+            [matColorNameArray addObject:@"AquamarineButton"];
             [matColorNumberArray addObject:@"130"];
             
         }
@@ -2386,6 +2512,7 @@
             
             
             [matColorArray addObject:@"Turquoise_104.jpg"];
+            [matColorNameArray addObject:@"TurquoiseButton"];
             [matColorNumberArray addObject:@"104"];
             
             
@@ -2399,6 +2526,7 @@
             
             
             [matColorArray addObject:@"Yellow_128.jpg"];
+            [matColorNameArray addObject:@"YellowButton"];
             [matColorNumberArray addObject:@"128"];
             
             
@@ -2430,6 +2558,10 @@
             NSString*firstColorNoString = [matColorNumberArray objectAtIndex:0];
             [logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
             [logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+            
+            UIButton*firstColorNameString=[matColorNameArray objectAtIndex:0];
+            firstColorNameString.frame=logoColorButton1.frame;
+            
             [logoColorButton1 setNeedsDisplay];
         }
         
@@ -2444,6 +2576,9 @@
             NSLog(@"secondColorNoString %@", secondColorNoString);
             [logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
             
+            UIButton*secondColorNameString=[matColorNameArray objectAtIndex:1];
+            secondColorNameString.frame=logoColorButton2.frame;
+            
         }
         
         if (3 <= matColorCount){
@@ -2454,6 +2589,9 @@
             [logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*thirdColorNoString = [matColorNumberArray objectAtIndex:2];
             [logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
+            
+            UIButton*thirdColorNameString=[matColorNameArray objectAtIndex:2];
+            thirdColorNameString.frame=logoColorButton3.frame;
             
             
         }
@@ -2468,6 +2606,9 @@
             NSString*fourthColorNoString = [matColorNumberArray objectAtIndex:3];
             [logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
             
+            UIButton*fourthColorNameString=[matColorNameArray objectAtIndex:3];
+            fourthColorNameString.frame=logoColorButton4.frame;
+            
             
         }
         
@@ -2480,6 +2621,8 @@
             NSString*fifthColorNoString = [matColorNumberArray objectAtIndex:4];
             [logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
             
+            UIButton*fifthColorNameString=[matColorNameArray objectAtIndex:4];
+            fifthColorNameString.frame=logoColorButton5.frame;
             
             
         }
@@ -2494,6 +2637,9 @@
             NSString*sixthColorNoString = [matColorNumberArray objectAtIndex:5];
             [logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
             
+            UIButton*sixthColorNameString=[matColorNameArray objectAtIndex:5];
+            sixthColorNameString.frame=logoColorButton6.frame;
+            
             
         }
         
@@ -2505,6 +2651,9 @@
             [logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*seventhColorNoString = [matColorNumberArray objectAtIndex:6];
             [logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
+            
+            UIButton*seventhColorNameString=[matColorNameArray objectAtIndex:6];
+            seventhColorNameString.frame=logoColorButton7.frame;
             
             
         }
@@ -4366,6 +4515,24 @@ else
     a=matBGLogoView.frame.origin.x;
     b=matBGLogoView.frame.origin.y;*/
     
+    
+    firstColorNameString.hidden=NO;
+    secondColorNameString.hidden=NO;
+    thirdColorNameString.hidden=NO;
+    fourthColorNameString.hidden=NO;
+    fifthColorNameString.hidden=NO;
+    sixthColorNameString.hidden=NO;
+    seventhColorNameString.hidden=NO;
+    
+    
+    logoColorButton1.hidden=YES;
+    logoColorButton2.hidden=YES;
+    logoColorButton3.hidden=YES;
+    logoColorButton4.hidden=YES;
+    logoColorButton5.hidden=YES;
+    logoColorButton6.hidden=YES;
+    logoColorButton7.hidden=YES;
+    
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden=YES;
     
@@ -5081,10 +5248,6 @@ enum {
         
     }
     
-   /* if(!logoColor1String.length==0){
-        
-        logoColorButton1.enabled=NO;
-    }*/
     
     NSLog(@"%@",logoColor1String);
     if (CGRectIntersectsRect(control.frame, logoColorButton1.frame)) {
@@ -5113,18 +5276,12 @@ enum {
     }else if (CGRectIntersectsRect(control.frame, logoColorButton2.frame)){
         
         
-        //if(logoColor2String==Nil){
+       
             
             control.frame=logoColorButton2.frame;
             logoColorButton2.enabled=YES;
             logoColor2String=logoColorSelectedString;
             NSLog(@"logoColor2String%@",logoColor2String);
-            //logoColorButton2.enabled=NO;
-        
-       /* }else{
-            
-            _logoColorButton2.enabled=NO;
-        }*/
         
       
         
@@ -5133,71 +5290,44 @@ enum {
     }else if (CGRectIntersectsRect(control.frame, logoColorButton3.frame)){
         
         
-       // if(logoColor3String==Nil){
+      
         
             control.frame=logoColorButton3.frame;
             logoColorButton3.enabled=YES;
             logoColor3String=logoColorSelectedString;
             //logoColorButton3.enabled=NO;
             
-       /* }else{
-            
-            _logoColorButton3.enabled=NO;
-        }*/
         
-        /*matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
+        
         
         NSLog(@"%@",matColorString);
         
     }else if (CGRectIntersectsRect(control.frame, logoColorButton4.frame)) {
         
-       // if(logoColor4String==Nil){
+      
         
             control.frame=logoColorButton4.frame;
             logoColorButton4.enabled=YES;
             logoColor4String=logoColorSelectedString;
-            //logoColorButton4.enabled=NO;
-            
-        /*}else{
-            
-             _logoColorButton4.enabled=NO;
-        }*/
-        
-      /*  matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;*/
-        
         
         
     }else if (CGRectIntersectsRect(control.frame, logoColorButton5.frame)){
         
         
-        //if(logoColor5String==Nil){
         
             control.frame=logoColorButton5.frame;
             logoColorButton5.enabled=YES;
             logoColor5String=logoColorSelectedString;
-            //logoColorButton5.enabled=NO;
-            
-       /* }else{
-            
-            _logoColorButton5.enabled=NO;
-        }*/
-        
         
         
         
     } else if (CGRectIntersectsRect(control.frame, logoColorButton6.frame)){
         
-         //if(logoColor6String==Nil){
+        
         
              control.frame=logoColorButton6.frame;
              logoColorButton6.enabled=YES;
              logoColor6String=logoColorSelectedString;
-             //logoColorButton6.enabled=NO;
-             
-        /* }else{
-             
-             _logoColorButton6.enabled=NO;
-         }*/
         
        
         
@@ -5205,21 +5335,13 @@ enum {
         
     }else if(CGRectIntersectsRect(control.frame, logoColorButton7.frame)){
         
-        //if(logoColor7String==Nil){
+       
         
             control.frame=logoColorButton7.frame;
             logoColorButton7.enabled=YES;
             logoColor7String=logoColorSelectedString;
-            //logoColorButton7.enabled=NO;
-            
-       /* }else{
-            
-             _logoColorButton7.enabled=NO;
-        }*/
         
-       /* matColorString=logoColor1String,logoColor2String,logoColor3String,logoColor4String,logoColor5String,logoColor6String,logoColor7String;
         
-        NSLog(@"%@",matColorString);*/
 
 
     }else if(CGRectIntersectsRect(control.frame, bgColorButton.frame)){

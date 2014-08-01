@@ -207,6 +207,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *matColorButton8;
 @property (nonatomic, assign) IBOutlet UIButton *bgColorButton;
 
+@property (nonatomic, assign) IBOutlet UIButton *logoColorMoveButton;
+
 
 
 @property (nonatomic, strong) IBOutlet UIButton *steelBlueButton;
@@ -237,6 +239,23 @@
 @property (nonatomic, strong) IBOutlet UIButton *turquoiseButton;
 @property (nonatomic, strong) IBOutlet UIButton *yellowButton;
 
+@property (nonatomic, strong) UIButton *firstColorNameString;
+@property (nonatomic, strong) UIButton *secondColorNameString;
+@property (nonatomic, strong) UIButton *thirdColorNameString;
+@property (nonatomic, strong) UIButton *fourthColorNameString;
+@property (nonatomic, strong) UIButton *fifthColorNameString;
+@property (nonatomic, strong) UIButton *sixthColorNameString;
+@property (nonatomic, strong) UIButton *seventhColorNameString;
+
+
+@property (nonatomic, strong) UIButton *firstColorLogoButton;
+@property (nonatomic, strong) UIButton *secondColorLogoButton;
+@property (nonatomic, strong) UIButton *thirdColorLogoButton;
+@property (nonatomic, strong) UIButton *fourthColorLogoButton;
+@property (nonatomic, strong) UIButton *fifthColorLogoButton;
+@property (nonatomic, strong) UIButton *sixthColorLogoButton;
+@property (nonatomic, strong) UIButton *seventhColorLogoButton;
+
 
 
 @property (nonatomic, copy) NSMutableArray *artworkNameArray;
@@ -251,7 +270,11 @@
 @property (nonatomic, copy) NSMutableArray *artworkColorArray;
 
 @property (nonatomic, copy) NSMutableArray *logoColorArray;
+@property (nonatomic, copy) NSMutableArray *logoColorButtonArray;
+@property (nonatomic, copy) NSMutableArray *logoColorNameArray;
 @property (nonatomic, copy) NSMutableArray *logoColorNumberArray;
+
+@property (nonatomic, copy) NSMutableArray *matColorNameArray;
 @property (nonatomic, copy) NSMutableArray *matColorNumberArray;
 
 @property (nonatomic, copy) NSMutableArray *matNameArray;
