@@ -168,6 +168,16 @@
 @synthesize logoColor6String;
 @synthesize logoColor7String;
 
+
+@synthesize logoColorButton1;
+@synthesize logoColorButton2;
+@synthesize logoColorButton3;
+@synthesize logoColorButton4;
+@synthesize logoColorButton5;
+@synthesize logoColorButton6;
+@synthesize logoColorButton7;
+
+
 @synthesize orientString;
 
 @synthesize interactiveHeaderString;
@@ -261,13 +271,13 @@
     
     //_emailString=@"A New Sketch Request";
     
-    _logoColorButton1.enabled=YES;
-    _logoColorButton2.enabled=YES;
-    _logoColorButton3.enabled=YES;
-    _logoColorButton4.enabled=YES;
-    _logoColorButton5.enabled=YES;
-    _logoColorButton6.enabled=YES;
-    _logoColorButton7.enabled=YES;
+    logoColorButton1.enabled=YES;
+    logoColorButton2.enabled=YES;
+    logoColorButton3.enabled=YES;
+    logoColorButton4.enabled=YES;
+    logoColorButton5.enabled=YES;
+    logoColorButton6.enabled=YES;
+    logoColorButton7.enabled=YES;
     
     //TODO Add matbgColor info
     NSLog(@"matBGColorString %@",matBGColorString);
@@ -1040,12 +1050,12 @@
          [_logoColorButton7 setBackgroundImage:whiteImage forState:UIControlStateNormal];*/
         
         NSString*emptyString = @" ";
-        [_logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
-        [_logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
+        [logoColorButton1 setTitle:emptyString forState:UIControlStateNormal];
+        [logoColorButton2 setTitle:emptyString forState:UIControlStateNormal];
+        [logoColorButton3 setTitle:emptyString forState:UIControlStateNormal];
+        [logoColorButton4 setTitle:emptyString forState:UIControlStateNormal];
+        [logoColorButton5 setTitle:emptyString forState:UIControlStateNormal];
+        [logoColorButton6 setTitle:emptyString forState:UIControlStateNormal];
         
         
     }
@@ -1060,24 +1070,24 @@
         
         NSString*firstColorString = [logoColorArray objectAtIndex:0];
         UIImage*firstColorImage = [UIImage imageNamed:firstColorString];
-        [_logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
+        [logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
         
         NSString*firstColorNoString = [logoColorNumberArray objectAtIndex:0];
-        [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
-        [_logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        [logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
+        [logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-        [_logoColorButton1 setNeedsDisplay];
+        [logoColorButton1 setNeedsDisplay];
     }
     
     if (2 <= logoColorCount){
         
         NSString*secondColorString = [logoColorArray objectAtIndex:1];
         UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
-        [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
+        [logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
         
         NSString*secondColorNoString = [logoColorNumberArray objectAtIndex:1];
-        [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
-        [_logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        [logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
+        [logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
     }
     
@@ -1085,11 +1095,11 @@
         
         NSString*thirdColorString=[logoColorArray objectAtIndex:2];
         UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
-        [_logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
+        [logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
         
         NSString*thirdColorNoString = [logoColorNumberArray objectAtIndex:2];
-        [_logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
-        [_logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        [logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
+        [logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
         
     }
@@ -1098,11 +1108,11 @@
         
         NSString*fourthColorString=[logoColorArray objectAtIndex:3];
         UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
-        [_logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
+        [logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
         
         NSString*fourthColorNoString = [logoColorNumberArray objectAtIndex:3];
-        [_logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
-        [_logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        [logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
+        [logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
         
     }
@@ -1111,11 +1121,11 @@
         
         NSString*fifthColorString=[logoColorArray objectAtIndex:4];
         UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
-        [_logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
+        [logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
         
         NSString*fifthColorNoString = [logoColorNumberArray objectAtIndex:4];
-        [_logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
-        [_logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        [logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
+        [logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
         
         
@@ -1125,12 +1135,12 @@
         
         NSString*sixthColorString=[logoColorArray objectAtIndex:5];
         UIImage*sixthColorImage = [UIImage imageNamed:sixthColorString];
-        [_logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
+        [logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
         
         
         NSString*sixthColorNoString = [logoColorNumberArray objectAtIndex:5];
-        [_logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
-        [_logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        [logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
+        [logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
         
     }
@@ -1139,11 +1149,11 @@
         
         NSString*seventhColorString=[logoColorArray objectAtIndex:6];
         UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];
-        [_logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
+        [logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
         
         NSString*seventhColorNoString = [logoColorNumberArray objectAtIndex:6];
-        [_logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
-        [_logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        [logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
+        [logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
         
     }
@@ -2415,24 +2425,24 @@
             
             NSString*firstColorString = [matColorArray objectAtIndex:0];
             UIImage*firstColorImage = [UIImage imageNamed:firstColorString];
-            [_logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
+            [logoColorButton1 setBackgroundImage:firstColorImage forState:UIControlStateNormal];
             
             NSString*firstColorNoString = [matColorNumberArray objectAtIndex:0];
-            [_logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
-            [_logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-            [_logoColorButton1 setNeedsDisplay];
+            [logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
+            [logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+            [logoColorButton1 setNeedsDisplay];
         }
         
         if (2 <= matColorCount){
             
             NSString*secondColorString = [matColorArray objectAtIndex:1];
             UIImage*secondColorImage = [UIImage imageNamed:secondColorString];
-            [_logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
+            [logoColorButton2 setBackgroundImage:secondColorImage forState:UIControlStateNormal];
             
-            [_logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+            [logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*secondColorNoString = [matColorNumberArray objectAtIndex:1];
             NSLog(@"secondColorNoString %@", secondColorNoString);
-            [_logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
+            [logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
             
         }
         
@@ -2440,10 +2450,10 @@
             
             NSString*thirdColorString=[matColorArray objectAtIndex:2];
             UIImage*thirdColorImage = [UIImage imageNamed:thirdColorString];
-            [_logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
-            [_logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+            [logoColorButton3 setBackgroundImage:thirdColorImage forState:UIControlStateNormal];
+            [logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*thirdColorNoString = [matColorNumberArray objectAtIndex:2];
-            [_logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
+            [logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
             
             
         }
@@ -2452,11 +2462,11 @@
             
             NSString*fourthColorString=[matColorArray objectAtIndex:3];
             UIImage*fourthColorImage = [UIImage imageNamed:fourthColorString];
-            [_logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
-            [_logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+            [logoColorButton4 setBackgroundImage:fourthColorImage forState:UIControlStateNormal];
+            [logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             
             NSString*fourthColorNoString = [matColorNumberArray objectAtIndex:3];
-            [_logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
+            [logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
             
             
         }
@@ -2465,10 +2475,10 @@
             
             NSString*fifthColorString=[matColorArray objectAtIndex:4];
             UIImage*fifthColorImage = [UIImage imageNamed:fifthColorString];
-            [_logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
-             [_logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+            [logoColorButton5 setBackgroundImage:fifthColorImage forState:UIControlStateNormal];
+             [logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*fifthColorNoString = [matColorNumberArray objectAtIndex:4];
-            [_logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
+            [logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
             
             
             
@@ -2478,11 +2488,11 @@
             
             NSString*sixthColorString=[matColorArray objectAtIndex:5];
             UIImage*sixthColorImage = [UIImage imageNamed:sixthColorString];
-            [_logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
-            [_logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+            [logoColorButton6 setBackgroundImage:sixthColorImage forState:UIControlStateNormal];
+            [logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             
             NSString*sixthColorNoString = [matColorNumberArray objectAtIndex:5];
-            [_logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
+            [logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
             
             
         }
@@ -2491,10 +2501,10 @@
             
             NSString*seventhColorString=[matColorArray objectAtIndex:6];
             UIImage*seventhColorImage = [UIImage imageNamed:seventhColorString];
-            [_logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
-            [_logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+            [logoColorButton7 setBackgroundImage:seventhColorImage forState:UIControlStateNormal];
+            [logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
             NSString*seventhColorNoString = [matColorNumberArray objectAtIndex:6];
-            [_logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
+            [logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
             
             
         }
@@ -5071,13 +5081,13 @@ enum {
         
     }
     
-    if(!logoColor1String.length==0){
+   /* if(!logoColor1String.length==0){
         
-        _logoColorButton1.enabled=NO;
-    }
+        logoColorButton1.enabled=NO;
+    }*/
     
     NSLog(@"%@",logoColor1String);
-    if (CGRectIntersectsRect(control.frame, _logoColorButton1.frame)) {
+    if (CGRectIntersectsRect(control.frame, logoColorButton1.frame)) {
         
         //_logoColorButton1.enabled=YES;
         //if(logoColor1String==nil){
@@ -5085,10 +5095,10 @@ enum {
         //if([logoColor1String length:0]){
         //if(_logoColorButton1.imageView==Nil){
         
-            control.frame=_logoColorButton1.frame;
+            control.frame=logoColorButton1.frame;
             //_logoColorButton1.enabled=YES;
             logoColor1String=logoColorSelectedString;
-            _logoColorButton1.enabled=NO;
+            //logoColorButton1.enabled=NO;
             //_logoColorButton1.enabled=NO;
             
        /* }else{
@@ -5100,16 +5110,16 @@ enum {
     
     
         
-    }else if (CGRectIntersectsRect(control.frame, _logoColorButton2.frame)){
+    }else if (CGRectIntersectsRect(control.frame, logoColorButton2.frame)){
         
         
         //if(logoColor2String==Nil){
             
-            control.frame=_logoColorButton2.frame;
-            _logoColorButton2.enabled=YES;
+            control.frame=logoColorButton2.frame;
+            logoColorButton2.enabled=YES;
             logoColor2String=logoColorSelectedString;
             NSLog(@"logoColor2String%@",logoColor2String);
-            _logoColorButton2.enabled=NO;
+            //logoColorButton2.enabled=NO;
         
        /* }else{
             
@@ -5120,15 +5130,15 @@ enum {
         
         NSLog(@"%@",matColorString);
         
-    }else if (CGRectIntersectsRect(control.frame, _logoColorButton3.frame)){
+    }else if (CGRectIntersectsRect(control.frame, logoColorButton3.frame)){
         
         
        // if(logoColor3String==Nil){
         
-            control.frame=_logoColorButton3.frame;
-            _logoColorButton3.enabled=YES;
+            control.frame=logoColorButton3.frame;
+            logoColorButton3.enabled=YES;
             logoColor3String=logoColorSelectedString;
-            _logoColorButton3.enabled=NO;
+            //logoColorButton3.enabled=NO;
             
        /* }else{
             
@@ -5139,14 +5149,14 @@ enum {
         
         NSLog(@"%@",matColorString);
         
-    }else if (CGRectIntersectsRect(control.frame, _logoColorButton4.frame)) {
+    }else if (CGRectIntersectsRect(control.frame, logoColorButton4.frame)) {
         
        // if(logoColor4String==Nil){
         
-            control.frame=_logoColorButton4.frame;
-            _logoColorButton4.enabled=YES;
+            control.frame=logoColorButton4.frame;
+            logoColorButton4.enabled=YES;
             logoColor4String=logoColorSelectedString;
-            _logoColorButton4.enabled=NO;
+            //logoColorButton4.enabled=NO;
             
         /*}else{
             
@@ -5157,15 +5167,15 @@ enum {
         
         
         
-    }else if (CGRectIntersectsRect(control.frame, _logoColorButton5.frame)){
+    }else if (CGRectIntersectsRect(control.frame, logoColorButton5.frame)){
         
         
         //if(logoColor5String==Nil){
         
-            control.frame=_logoColorButton5.frame;
-            _logoColorButton5.enabled=YES;
+            control.frame=logoColorButton5.frame;
+            logoColorButton5.enabled=YES;
             logoColor5String=logoColorSelectedString;
-            _logoColorButton5.enabled=NO;
+            //logoColorButton5.enabled=NO;
             
        /* }else{
             
@@ -5175,14 +5185,14 @@ enum {
         
         
         
-    } else if (CGRectIntersectsRect(control.frame, _logoColorButton6.frame)){
+    } else if (CGRectIntersectsRect(control.frame, logoColorButton6.frame)){
         
          //if(logoColor6String==Nil){
         
-             control.frame=_logoColorButton6.frame;
-             _logoColorButton6.enabled=YES;
+             control.frame=logoColorButton6.frame;
+             logoColorButton6.enabled=YES;
              logoColor6String=logoColorSelectedString;
-             _logoColorButton6.enabled=NO;
+             //logoColorButton6.enabled=NO;
              
         /* }else{
              
@@ -5193,14 +5203,14 @@ enum {
         
         
         
-    }else if(CGRectIntersectsRect(control.frame, _logoColorButton7.frame)){
+    }else if(CGRectIntersectsRect(control.frame, logoColorButton7.frame)){
         
         //if(logoColor7String==Nil){
         
-            control.frame=_logoColorButton7.frame;
-            _logoColorButton7.enabled=YES;
+            control.frame=logoColorButton7.frame;
+            logoColorButton7.enabled=YES;
             logoColor7String=logoColorSelectedString;
-            _logoColorButton7.enabled=NO;
+            //logoColorButton7.enabled=NO;
             
        /* }else{
             
