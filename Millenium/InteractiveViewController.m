@@ -304,6 +304,7 @@
     
     //TODO Add matbgColor info
     NSLog(@"matBGColorString %@",matBGColorString);
+    NSLog(@"matColorString Interactive %@",matColorString);
     
     //NSLog(@"%@ matBGColorString", matBGColorString);
     BGString = matBGColorString;
@@ -714,9 +715,11 @@
     
     NSLog(@"logoColorArray %@",logoColorArray);
 
+   
+    //logoColorString=matColorString;
     
     if (logoColorString!=nil){
-        
+         NSLog(@"logoColorString Interactive %@",logoColorString);
         
         NSString *string = logoColorString;
         if ([string rangeOfString:@"108-Black"].location == NSNotFound) {
@@ -728,7 +731,8 @@
             NSLog(@"black Found!");
             
             [logoColorArray addObject:@"Black_108.jpg"];
-            [logoColorNameArray addObject:_blackButton];
+            [logoColorButtonArray addObject:_blackButton];
+            [logoColorNameArray addObject:@"108-Black"];
             [logoColorNumberArray addObject:@"108"];
             
             
@@ -742,7 +746,8 @@
             
             
             [logoColorArray addObject:@"Steel Blue_121.jpg"];
-            [logoColorNameArray addObject:steelBlueButton];
+            [logoColorButtonArray addObject:steelBlueButton];
+            [logoColorNameArray addObject:@"121-Steel Blue"];
             [logoColorNumberArray addObject:@"121"];
             
             
@@ -756,7 +761,8 @@
             
             
             [logoColorArray addObject:@"Suede_123.jpg"];
-            [logoColorNameArray addObject:_suedeButton];
+            [logoColorButtonArray addObject:_suedeButton];
+            [logoColorNameArray addObject:@"123-Suede"];
             [logoColorNumberArray addObject:@"123"];
             
         }
@@ -769,7 +775,8 @@
             
             
             [logoColorArray addObject:@"White_140.jpg"];
-            [logoColorNameArray addObject:_whiteButton];
+            [logoColorButtonArray addObject:_whiteButton];
+            [logoColorNameArray addObject:@"140-White"];
             [logoColorNumberArray addObject:@"140"];
             
             
@@ -783,7 +790,8 @@
             
             
             [logoColorArray addObject:@"Rose_119.jpg"];
-            [logoColorNameArray addObject:_roseButton];
+            [logoColorButtonArray addObject:_roseButton];
+            [logoColorNameArray addObject:@"119-Rose"];
             [logoColorNumberArray addObject:@"119"];
             //add string to an array
             
@@ -797,7 +805,8 @@
             
             
             [logoColorArray addObject:@"Royal Blue_107.jpg"];
-            [logoColorNameArray addObject:_royalBlueButton];
+            [logoColorButtonArray addObject:_royalBlueButton];
+            [logoColorNameArray addObject:@"107-Royal Blue"];
             [logoColorNumberArray addObject:@"107"];
             //add string to an array
             
@@ -811,7 +820,8 @@
             
             
             [logoColorArray addObject:@"Sandalwood_120.jpg"];
-            [logoColorNameArray addObject:_sandalWoodButton];
+            [logoColorButtonArray addObject:_sandalWoodButton];
+            [logoColorNameArray addObject:@"120-Sandalwood"];
             [logoColorNumberArray addObject:@"120"];
             //add string to an array
             
@@ -825,7 +835,8 @@
             
             
             [logoColorArray addObject:@"Silver_116.jpg"];
-            [logoColorNameArray addObject:_silverButton];
+            [logoColorButtonArray addObject:_silverButton];
+            [logoColorNameArray addObject:@"116-Silver"];
             [logoColorNumberArray addObject:@"116"];
             //add string to an array
             
@@ -839,7 +850,8 @@
             
             
             [logoColorArray addObject:@"Orange_127.jpg"];
-            [logoColorNameArray addObject:_orangeButton];
+            [logoColorButtonArray addObject:_orangeButton];
+            [logoColorNameArray addObject:@"127-Orange"];
             [logoColorNumberArray addObject:@"127"];
             
             
@@ -853,7 +865,8 @@
             
             
             [logoColorArray addObject:@"Purple_105.jpg"];
-            [logoColorNameArray addObject:_purpleButton];
+            [logoColorButtonArray addObject:_purpleButton];
+            [logoColorNameArray addObject:@"105-Purple"];
             [logoColorNumberArray addObject:@"105"];
             
             
@@ -868,7 +881,8 @@
             
             
             [logoColorArray addObject:@"Red_112.jpg"];
-            [logoColorNameArray addObject:_redButton];
+            [logoColorButtonArray addObject:_redButton];
+            [logoColorNameArray addObject:@"112-Red"];
             [logoColorNumberArray addObject:@"112"];
             
             
@@ -882,7 +896,8 @@
             
             
             [logoColorArray addObject:@"Gold_109.jpg"];
-            [logoColorNameArray addObject:_goldButton];
+            [logoColorButtonArray addObject:_goldButton];
+            [logoColorNameArray addObject:@"109-Gold"];
             [logoColorNumberArray addObject:@"109"];
             
             
@@ -896,7 +911,8 @@
             
             
             [logoColorArray addObject:@"Grey_115.jpg"];
-            [logoColorNameArray addObject:_greyButton];
+            [logoColorButtonArray addObject:_greyButton];
+            [logoColorNameArray addObject:@"115-Grey"];
             [logoColorNumberArray addObject:@"115"];
         }
         
@@ -908,7 +924,8 @@
             
             
             [logoColorArray addObject:@"Light Blue_106.jpg"];
-            [logoColorNameArray addObject:_lightBlueButton];
+            [logoColorButtonArray addObject:_lightBlueButton];
+            [logoColorNameArray addObject:@"106-Light Blue"];
             [logoColorNumberArray addObject:@"106"];
             
             
@@ -922,7 +939,8 @@
             
             
             [logoColorArray addObject:@"Navy_118.jpg"];
-            [logoColorNameArray addObject:_navyButton];
+            [logoColorButtonArray addObject:_navyButton];
+            [logoColorNameArray addObject:@"118-Navy"];
             [logoColorNumberArray addObject:@"118"];
             
         }
@@ -935,7 +953,8 @@
             
             
             [logoColorArray addObject:@"Emerald Green_110.jpg"];
-            [logoColorNameArray addObject:_emeraldGreenButton];
+            [logoColorButtonArray addObject:_emeraldGreenButton];
+            [logoColorNameArray addObject:@"110-Emerald Green"];
             [logoColorNumberArray addObject:@"110"];
         }
         
@@ -947,7 +966,8 @@
             
             
             [logoColorArray addObject:@"Forest Green_117.jpg"];
-            [logoColorNameArray addObject:_forestGreenButton];
+            [logoColorButtonArray addObject:_forestGreenButton];
+            [logoColorNameArray addObject:@"117-Forest Green"];
             [logoColorNumberArray addObject:@"117"];
         }
         
@@ -959,7 +979,8 @@
             
             
             [logoColorArray addObject:@"Cranberry_114.jpg"];
-            [logoColorNameArray addObject:_cranberryButton];
+            [logoColorButtonArray addObject:_cranberryButton];
+            [logoColorNameArray addObject:@"114-Cranberry"];
             [logoColorNumberArray addObject:@"114"];
             
         }
@@ -972,7 +993,8 @@
             
             
             [logoColorArray addObject:@"Dark Gold_103.jpg"];
-            [logoColorNameArray addObject:_darkGoldButton];
+            [logoColorButtonArray addObject:_darkGoldButton];
+            [logoColorNameArray addObject:@"103-Dark Gold"];
             [logoColorNumberArray addObject:@"103"];
             
         }
@@ -985,7 +1007,8 @@
             
             
             [logoColorArray addObject:@"Charcoal_101.jpg"];
-            [logoColorNameArray addObject:_charcoalButton];
+            [logoColorButtonArray addObject:_charcoalButton];
+            [logoColorNameArray addObject:@"101-Charcoal"];
             [logoColorNumberArray addObject:@"101"];
             
         }
@@ -998,7 +1021,8 @@
             
             
             [logoColorArray addObject:@"Chocolate_111.jpg"];
-            [logoColorNameArray addObject:_chocolateButton];
+            [logoColorButtonArray addObject:_chocolateButton];
+            [logoColorNameArray addObject:@"111-Chocolate"];
             [logoColorNumberArray addObject:@"111"];
             
         }
@@ -1011,7 +1035,8 @@
             
             
             [logoColorArray addObject:@"Clay_126.jpg"];
-            [logoColorNameArray addObject:_clayButton];
+            [logoColorButtonArray addObject:_clayButton];
+            [logoColorNameArray addObject:@"126-Clay"];
             [logoColorNumberArray addObject:@"126"];
             
         }
@@ -1024,7 +1049,8 @@
             
             
             [logoColorArray addObject:@"Brown_102.jpg"];
-            [logoColorNameArray addObject:_brownButton];
+            [logoColorButtonArray addObject:_brownButton];
+            [logoColorNameArray addObject:@"102-Brown"];
             [logoColorNumberArray addObject:@"102"];
             
         }
@@ -1037,7 +1063,8 @@
             
             
             [logoColorArray addObject:@"Burgundy_100.jpg"];
-            [logoColorNameArray addObject:_burgundyButton];
+            [logoColorButtonArray addObject:_burgundyButton];
+            [logoColorNameArray addObject:@"100-Burgundy"];
             [logoColorNumberArray addObject:@"100"];
             
         }
@@ -1050,7 +1077,8 @@
             
             
             [logoColorArray addObject:@"Aquamarine_130.jpg"];
-            [logoColorNameArray addObject:_aquamarineButton];
+            [logoColorButtonArray addObject:_aquamarineButton];
+            [logoColorNameArray addObject:@"130-Aquamarine"];
             [logoColorNumberArray addObject:@"130"];
             
         }
@@ -1063,7 +1091,8 @@
             
             
             [logoColorArray addObject:@"Turquoise_104.jpg"];
-            [logoColorNameArray addObject:_turquoiseButton];
+            [logoColorButtonArray addObject:_turquoiseButton];
+            [logoColorNameArray addObject:@"104-Turquoise"];
             [logoColorNumberArray addObject:@"104"];
             
             
@@ -1077,7 +1106,8 @@
             
             
             [logoColorArray addObject:@"Yellow_128.jpg"];
-            [logoColorNameArray addObject:_yellowButton];
+            [logoColorButtonArray addObject:_yellowButton];
+            [logoColorNameArray addObject:@"128-Yellow"];
             [logoColorNumberArray addObject:@"128"];
             
             
@@ -1138,13 +1168,17 @@
         
     
         
-       firstColorNameString = [logoColorNameArray objectAtIndex:0];
+       firstColorNameString = [logoColorButtonArray objectAtIndex:0];
        NSLog(@"firstColorNameString %@",firstColorNameString);
+        
+        logoColor1String = [logoColorNameArray objectAtIndex:0];
+        NSLog(@"logoColor1String%@",logoColor1String);
+
        
         
         firstColorNameString.hidden=YES;
         
-        logoColor1String=logoColorSelectedString;
+        //logoColor1String=logoColorSelectedString;
       
         // UIButton*firstColorButtonName=[selectButtonWithName:firstColorNameString];
         // Control=firstColorNameString;
@@ -1168,8 +1202,13 @@
         [logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
         [logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-        secondColorNameString = [logoColorNameArray objectAtIndex:1];
+        secondColorNameString = [logoColorButtonArray objectAtIndex:1];
         //secondColorNameString.frame=logoColorButton2.frame;
+        
+        
+        logoColor2String = [logoColorNameArray objectAtIndex:1];
+        NSLog(@"logoColor2String%@",logoColor2String);
+
         
         secondColorNameString.hidden=YES;
         
@@ -1185,8 +1224,12 @@
         [logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
         [logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-        thirdColorNameString = [logoColorNameArray objectAtIndex:2];
+        thirdColorNameString = [logoColorButtonArray objectAtIndex:2];
         thirdColorNameString.frame=logoColorButton3.frame;
+        
+        logoColor3String = [logoColorNameArray objectAtIndex:2];
+        NSLog(@"logoColor3String%@",logoColor3String);
+
         
         thirdColorNameString.hidden=YES;
     }
@@ -1201,8 +1244,12 @@
         [logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
         [logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-        fourthColorNameString = [logoColorNameArray objectAtIndex:3];
+        fourthColorNameString = [logoColorButtonArray objectAtIndex:3];
         //fourthColorNameString.frame=logoColorButton4.frame;
+        
+        logoColor4String = [logoColorNameArray objectAtIndex:3];
+        NSLog(@"logoColor2String%@",logoColor4String);
+
         
         fourthColorNameString.hidden=YES;
     }
@@ -1217,8 +1264,13 @@
         [logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
         [logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-        fifthColorNameString = [logoColorNameArray objectAtIndex:4];
+        fifthColorNameString = [logoColorButtonArray objectAtIndex:4];
         fifthColorNameString.frame=logoColorButton5.frame;
+        
+        
+        logoColor5String = [logoColorNameArray objectAtIndex:4];
+        NSLog(@"logoColor5String%@",logoColor5String);
+
         
         fifthColorNameString.hidden=YES;
         
@@ -1235,8 +1287,13 @@
         [logoColorButton6 setTitle:sixthColorNoString forState:UIControlStateNormal];
         [logoColorButton6.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-        sixthColorNameString = [logoColorNameArray objectAtIndex:5];
+        sixthColorNameString = [logoColorButtonArray objectAtIndex:5];
         sixthColorNameString.frame=logoColorButton6.frame;
+        
+        logoColor6String = [logoColorNameArray objectAtIndex:5];
+        NSLog(@"logoColor6String%@",logoColor6String);
+
+        
         sixthColorNameString.hidden=YES;
         
     }
@@ -1251,8 +1308,13 @@
         [logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
         [logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-        seventhColorNameString = [logoColorNameArray objectAtIndex:6];
+        seventhColorNameString = [logoColorButtonArray objectAtIndex:6];
         seventhColorNameString.frame=logoColorButton7.frame;
+        
+        logoColor7String = [logoColorNameArray objectAtIndex:6];
+        NSLog(@"logoColor7String%@",logoColor7String);
+
+        
         seventhColorNameString.hidden=YES;
         
         
@@ -1270,6 +1332,12 @@
         [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
         
     }
+
+    
+    matColorString= [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String,logoColor7String];
+    
+    
+    NSLog(@"matColorString pass%@",matColorString);
 
     
     self.decorativeTestFields = [NSMutableArray new];
@@ -4370,10 +4438,11 @@ else
     NSString*matCompanyAddFavString =companyField.text;
     NSString*matIDAddFavString =numberField.text;
     NSString*matLocationIDAddFavString =locationIDString;
-    NSString*matColorAddFavString =matColorString;
+    matColorAddFavString =matColorString;
     //matUseBGColorString =matBGColorString;
     //matUseBGColorString =matBGColorString;
     matUseBGColorString =BGString;
+    NSLog(@"matColorAddFavString %@",matColorAddFavString);
     NSLog(@"matBGColorAddFavString %@",matBGColorAddFavString);
     NSString*matSizeAddFavString =matSizeString;
     
