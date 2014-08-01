@@ -328,133 +328,154 @@
         
     }
     
-   if ([BGString rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
-    
+   //if ([BGString rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"121-Steel Blue"]) {
    
-        
-        NSLog(@"string does not contain bla");
-        
-    } else {
-        
         matUseBGColorString = @"Steel Blue_121.jpg";
         matBGTextColorString=@"121";
         matBGColorAddFavString=@"121-Steel Blue";
+
         
+        
+    } else {
+        
+        NSLog(@"string does not contain bla");
       
-        //add string to an array
+        
         
     }
     
-    if ([BGString rangeOfString:@"123-Suede"].location == NSNotFound) {
+    //if ([BGString rangeOfString:@"123-Suede"].location == NSNotFound) {
+     if ([BGString isEqualToString:@"123-Suede"]) {
         
-        NSLog(@"string does not contain bla");
+         matUseBGColorString=@"Suede_123.jpg";
+         matBGTextColorString=@"123";
+         matBGColorAddFavString=@"123-Suede";
         
     } else {
         
         
-        matUseBGColorString=@"Suede_123.jpg";
-        matBGTextColorString=@"123";
-        matBGColorAddFavString=@"123-Suede";
-        
+        NSLog(@"string does not contain bla");
     }
     
-    if ([BGString rangeOfString:@"140-White"].location == NSNotFound) {
+    //if ([BGString rangeOfString:@"140-White"].location == NSNotFound) {
+     if ([BGString isEqualToString:@"140-White"]) {
+        
+        
+         matUseBGColorString=@"White_140.jpg";
+         matBGTextColorString=@"140";
+         matBGColorAddFavString=@"140-White";
+         
+    } else {
         
         //NSLog(@"string does not contain bla");
         
-    } else {
-        
-        
-        matUseBGColorString=@"White_140.jpg";
-        matBGTextColorString=@"140";
-        matBGColorAddFavString=@"140-White";
         
         
         
     }
     
-    if ([BGString rangeOfString:@"119-Rose"].location == NSNotFound) {
-        
-        NSLog(@"string does not contain bla");
-        
-    } else {
-        
+    //if ([BGString rangeOfString:@"119-Rose"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"119-Rose"]) {
         
         matUseBGColorString=@"Rose_119.jpg";
         matBGTextColorString=@"119";
         matBGColorAddFavString=@"119-Rose";
-        
-        
-    }
-    
-    if ([BGString rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
-        
-        NSLog(@"string does not contain bla");
+
         
     } else {
         
         
-        matUseBGColorString=@"Royal Blue_107.jpg";
-        matBGTextColorString=@"107";
-        matBGColorAddFavString=@"107-Royal Blue";
+        /*matUseBGColorString=@"Rose_119.jpg";
+        matBGTextColorString=@"119";
+        matBGColorAddFavString=@"119-Rose";*/
+        NSLog(@"string does not contain bla");
+
         
     }
     
-    if ([BGString rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
+    //if ([BGString rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
+     if ([BGString isEqualToString:@"107-Royal Blue"]) {
         
-        NSLog(@"string does not contain bla");
+         
+         matUseBGColorString=@"Royal Blue_107.jpg";
+         matBGTextColorString=@"107";
+         matBGColorAddFavString=@"107-Royal Blue";
+
         
     } else {
         
-        
-        matUseBGColorString=@"Sandalwood_120.jpg";
-        matBGTextColorString=@"120";
-        matBGColorAddFavString=@"120-Sandalwood";
+        NSLog(@"string does not contain bla");
        
         
     }
     
-    if ([BGString rangeOfString:@"116-Silver"].location == NSNotFound) {
+   // if ([BGString rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"120-Sandalwood"]) {
+        
+        matUseBGColorString=@"Sandalwood_120.jpg";
+        matBGTextColorString=@"120";
+        matBGColorAddFavString=@"120-Sandalwood";
+        
+        
+    } else {
         
         NSLog(@"string does not contain bla");
         
-    } else {
+       
+        
+    }
+    
+    //if ([BGString rangeOfString:@"116-Silver"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"116-Silver"]) {
         
         
         matUseBGColorString=@"Silver_116.jpg";
         matBGTextColorString=@"116";
         matBGColorAddFavString=@"116-Silver";
         
-    }
-    
-    if ([BGString rangeOfString:@"127-Orange"].location == NSNotFound) {
-        
-        NSLog(@"string does not contain bla");
-        
     } else {
         
-        
-        matUseBGColorString=@"Orange_127.jpg";
-        matBGTextColorString=@"127";
-        matBGColorAddFavString=@"127-Orange";
+        NSLog(@"string does not contain bla");
+       /* matUseBGColorString=@"Silver_116.jpg";
+        matBGTextColorString=@"116";
+        matBGColorAddFavString=@"116-Silver";*/
         
     }
     
-    if ([BGString rangeOfString:@"105-Purple"].location == NSNotFound) {
-        
-        NSLog(@"string does not contain bla");
+    //if ([BGString rangeOfString:@"127-Orange"].location == NSNotFound) {
+     if ([BGString isEqualToString:@"127-Orange"]) {
+       
+         
+         matUseBGColorString=@"Orange_127.jpg";
+         matBGTextColorString=@"127";
+         matBGColorAddFavString=@"127-Orange";
+
         
     } else {
         
+         NSLog(@"string does not contain bla");
         
+    }
+    
+    //if ([BGString rangeOfString:@"105-Purple"].location == NSNotFound) {
+    if ([BGString isEqualToString:@"105-Purple"]) {
+        //NSLog(@"string does not contain bla");
         matUseBGColorString=@"Purple_105.jpg";
         matBGTextColorString=@"105";
         matBGColorAddFavString=@"105-Purple";
         
+    } else {
+        
+         //NSLog(@"string does not contain bla");
+        /*matUseBGColorString=@"Purple_105.jpg";
+        matBGTextColorString=@"105";
+        matBGColorAddFavString=@"105-Purple";*/
+        
         
         
     }
-    
+    //TODO set equalToStringHere
     if ([BGString rangeOfString:@"112-Red"].location == NSNotFound) {
         
         NSLog(@"string does not contain bla");
