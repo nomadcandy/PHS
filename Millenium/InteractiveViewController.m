@@ -309,26 +309,28 @@
     //NSLog(@"%@ matBGColorString", matBGColorString);
     BGString = matBGColorString;
     matUseBGColorString=matBGColorString;
-    if ([BGString rangeOfString:@"108-Black"].location == NSNotFound ) {
-        
-        
-        
-        
-        
-        
-    } else {
-        //NSLog(@"black Found!");
+    
+    
+   //if ([BGString rangeOfString:@"108-Black"].location == NSNotFound ) {
+   if ([BGString isEqualToString:@"108-Black"]) {
         
         matUseBGColorString = @"Black_108.jpg";
         matBGTextColorString=@"108";
-        //add string to an array
+
+       
+        
+        
+    } else {
+        
+        
+        NSLog(@"string does not contain bla");
+        
         
     }
-    //if (![a isEqualToString:b)
-    NSLog(@"BGString %@",BGString);
-   if ([BGString rangeOfString:@"121-Steel Blue"].location == NSNotFound/* || ![BGString isEqualToString:@"Steel Blue_121.jpg"]*/) {
     
-    //if ([BGString isEqualToString:@"Steel Blue_121.jpg"]) {
+   if ([BGString rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
+    
+   
         
         NSLog(@"string does not contain bla");
         
@@ -668,9 +670,8 @@
         
     }
     
-    
-    
-    
+   
+   
     
     UIImage*matBGColorImage = [UIImage imageNamed:matUseBGColorString];
     [bgColorButton setBackgroundImage:matBGColorImage forState:UIControlStateNormal];
@@ -2218,7 +2219,7 @@
         
         
         //add logo colors fot the mats
-        if (matColorArray == nil)
+      /*  if (matColorArray == nil)
         {
             matColorArray = [[NSMutableArray alloc] init];
         }
@@ -2735,7 +2736,7 @@
             NSString*eighthColorNoString = [matColorNumberArray objectAtIndex:7];
             [_logoColorButton8 setTitle:eighthColorNoString forState:UIControlStateNormal];
             
-        }
+        }*/
    
         
         
@@ -4601,6 +4602,14 @@ else
     logoColorButton5.hidden=YES;
     logoColorButton6.hidden=YES;
     logoColorButton7.hidden=YES;
+    
+    logoColor1String=@"";
+    logoColor2String=@"";
+    logoColor3String=@"";
+    logoColor4String=@"";
+    logoColor5String=@"";
+    logoColor6String=@"";
+    logoColor7String=@"";
     
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden=YES;

@@ -2229,11 +2229,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 }
 
                 
-    matColorString = [matColorArray objectAtIndex:indexPathSend];
+    logoColorString = [matColorArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:matColorString]) {
-        matColorString = nil;
+        logoColorString = nil;
         
     }
+    NSLog(@"logoColorString %@",logoColorString);
     NSLog(@"matBGColorArray %@",matBGColorArray);
     matBGColorString = [matBGColorArray objectAtIndex:indexPathSend];
     NSLog(@"matBGColorString %@",matBGColorString);

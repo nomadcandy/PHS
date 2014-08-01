@@ -2137,7 +2137,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     numberString =[matIDArray objectAtIndex:indexPathSend];
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
     NSLog(@"matColorArray %@",matColorArray);
-    matColorString =[matColorArray objectAtIndex:indexPathSend];
+    //matColorString =[matColorArray objectAtIndex:indexPathSend];
+    logoColorString =[matColorArray objectAtIndex:indexPathSend];
     NSLog(@"matColorString %@",matColorString);
     matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
     NSLog(@"matBGColorString %@",matBGColorString);
@@ -2389,11 +2390,11 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         if(matColorString!=NULL)
             
         {
-            goingController.matColorString=matColorString;
+            goingController.logoColorString=logoColorString;
             
         }else{
             
-            goingController.matColorString=@" ";
+            goingController.logoColorString=@" ";
             
         }
         if(matBGColorString!=NULL)
