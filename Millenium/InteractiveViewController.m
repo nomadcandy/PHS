@@ -4684,6 +4684,20 @@ else
     logoColor6String=@"";
     logoColor7String=@"";
     
+    /*logoColor1String=nil;
+    logoColor2String=nil;
+    logoColor3String=nil;
+    logoColor4String=nil;
+    logoColor5String=nil;
+    logoColor6String=nil;
+    logoColor7String=nil;*/
+    
+    
+    matColorString= [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String,logoColor7String];
+    
+    
+    NSLog(@"matColorString pass%@",matColorString);
+    
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden=YES;
     
