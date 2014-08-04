@@ -191,7 +191,7 @@
             
             
             NSURL *urlLogin = [[NSURL alloc] initWithString:urlLoginString];
-            NSLog(@"URLLOGIN: %@",urlLogin);
+            //NSLog(@"URLLOGIN: %@",urlLogin);
             NSError *error = nil;
             NSData *data = [NSData dataWithContentsOfURL:urlLogin];
             
@@ -206,8 +206,8 @@
             
             [loginArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
                 
-                NSLog(@"%@", object);
-                NSLog(@"loginArray %@",loginArray);
+               // NSLog(@"%@", object);
+               // NSLog(@"loginArray %@",loginArray);
                 
                 
                 firstNameString = [loginArray valueForKey:@"FirstName"];
@@ -223,7 +223,7 @@
                 
                 NSArray*userIDArray = [loginArray valueForKey:@"UserID"];
                 userIDString = [userIDArray objectAtIndex:0];
-                NSLog(@"userIDString %@",userIDString);
+                //NSLog(@"userIDString %@",userIDString);
                 
                 
                 
@@ -240,7 +240,7 @@
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 
                 locationIDString = [locationIDArray objectAtIndex:0];
-                NSLog(@"locationIDString %@",locationIDString);
+                //NSLog(@"locationIDString %@",locationIDString);
                 NSString *valueToSave = locationIDString;
                 [[NSUserDefaults standardUserDefaults] setObject:valueToSave forKey:@"locationID"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
@@ -273,7 +273,6 @@
         goingController.firstNameString = firstNameString;
         goingController.lastNameString = lastNameString;
         goingController.locationIDString = locationIDString;
-        NSLog(@"locationIDString %@",locationIDString);
         goingController.locationNameString = locationNameString;
         goingController.locationNumberString = locationNumberString;
         goingController.userIDString = userIDString;

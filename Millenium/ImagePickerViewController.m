@@ -439,7 +439,7 @@
         //goingController.interactiveHeaderString=interactiveHeaderString;
         goingController.interactiveHeaderString=@"Create Mat";
         goingController.nameString = nameField.text;
-        NSLog(@"nameField %@",nameField.text);
+        //NSLog(@"nameField %@",nameField.text);
         
 
 
@@ -607,7 +607,7 @@
     
     urlFavString = urlLogoStringAppend;
     
-    NSLog(@"urlFavString%@",urlFavString);
+    //NSLog(@"urlFavString%@",urlFavString);
     
     artworkNameAddFavString =nameField.text;
     artworkColorAddFavString =@"No Color is provided";
@@ -730,7 +730,7 @@
     
     urlFavString = urlLogoStringAppend;
     
-    NSLog(@"urlFavString%@",urlFavString);
+    //NSLog(@"urlFavString%@",urlFavString);
     
     //artworkNameAddFavString =alertNameField.text;
     artworkColorAddFavString =@"No Color is provided";
@@ -747,7 +747,7 @@
     
     
     
-    NSLog(@"artworkNameAddFavString %@",artworkNameAddFavString);
+    //NSLog(@"artworkNameAddFavString %@",artworkNameAddFavString);
     [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
     
     [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
@@ -808,7 +808,7 @@
                                  urlSearch];
 
     
-    NSLog(@"URLLOGIN: %@",urlSearch);
+    //NSLog(@"URLLOGIN: %@",urlSearch);
     
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:[NSOperationQueue mainQueue]

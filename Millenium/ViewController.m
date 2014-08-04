@@ -352,7 +352,7 @@
                                  urlSearch];
         
         
-        NSLog(@"URLLOGIN: %@",urlSearch);
+        //NSLog(@"URLLOGIN: %@",urlSearch);
         
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:[NSOperationQueue mainQueue]
@@ -385,7 +385,7 @@
         
     
     
-    NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
+    //NSLog(@"%@SEARCHLOGOARRAY",searchLogoArray);
     
     artworkCount=searchLogoArray.count;
     
@@ -404,7 +404,7 @@
         NSError *errorMat = nil;
         NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
         
-        NSLog(@"URLLOGIN: %@",urlSearch);
+        //NSLog(@"URLLOGIN: %@",urlSearch);
         
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:[NSOperationQueue mainQueue]
@@ -1080,7 +1080,6 @@ else{
         goingController.matFormatArray = matFormatArray;
         goingController.matIconArray = matIconArray;
         goingController.matFullImageArray = matFullImageArray;
-        ///goingController.matIconImageArray = matIconImageArray;
         goingController.matIDArray = matIDArray;
         goingController.matCompanyArray = matCompanyArray;
         goingController.matSellerArray = matSellerArray;
@@ -1091,7 +1090,6 @@ else{
         goingController.firstNameString = firstNameString;
         goingController.lastNameString = lastNameString;
         goingController.locationIDString = locationIDString;
-         NSLog(@"locationIDString %@",locationIDString);
         goingController.locationNameString = locationNameString;
         goingController.locationNumberString = locationNumberString;
         
