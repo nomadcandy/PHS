@@ -1240,7 +1240,13 @@
         [logoColorButton1 setTitle:firstColorNoString forState:UIControlStateNormal];
         [logoColorButton1.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
-    
+        if([firstColorNoString isEqualToString:@"140"]){
+            
+            
+            [logoColorButton1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            
+            
+        }
         
        firstColorNameString = [logoColorButtonArray objectAtIndex:0];
        NSLog(@"firstColorNameString %@",firstColorNameString);
@@ -1276,6 +1282,15 @@
         [logoColorButton2 setTitle:secondColorNoString forState:UIControlStateNormal];
         [logoColorButton2.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
+        if([secondColorNoString isEqualToString:@"140"]){
+            
+            
+            [logoColorButton2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            
+            
+        }
+
+        
         secondColorNameString = [logoColorButtonArray objectAtIndex:1];
         //secondColorNameString.frame=logoColorButton2.frame;
         
@@ -1298,6 +1313,14 @@
         [logoColorButton3 setTitle:thirdColorNoString forState:UIControlStateNormal];
         [logoColorButton3.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
+        if([thirdColorNoString isEqualToString:@"140"]){
+            
+            
+            [logoColorButton3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            
+            
+        }
+        
         thirdColorNameString = [logoColorButtonArray objectAtIndex:2];
         thirdColorNameString.frame=logoColorButton3.frame;
         
@@ -1318,6 +1341,14 @@
         [logoColorButton4 setTitle:fourthColorNoString forState:UIControlStateNormal];
         [logoColorButton4.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         
+        if([fourthColorNoString isEqualToString:@"140"]){
+            
+            
+            [logoColorButton4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            
+            
+        }
+        
         fourthColorNameString = [logoColorButtonArray objectAtIndex:3];
         //fourthColorNameString.frame=logoColorButton4.frame;
         
@@ -1337,6 +1368,14 @@
         NSString*fifthColorNoString = [logoColorNumberArray objectAtIndex:4];
         [logoColorButton5 setTitle:fifthColorNoString forState:UIControlStateNormal];
         [logoColorButton5.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        if([fifthColorNoString isEqualToString:@"140"]){
+            
+            
+            [logoColorButton5 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            
+            
+        }
         
         fifthColorNameString = [logoColorButtonArray objectAtIndex:4];
         fifthColorNameString.frame=logoColorButton5.frame;
@@ -1364,6 +1403,14 @@
         sixthColorNameString = [logoColorButtonArray objectAtIndex:5];
         sixthColorNameString.frame=logoColorButton6.frame;
         
+        if([sixthColorNoString isEqualToString:@"140"]){
+            
+            
+            [logoColorButton6 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            
+            
+        }
+        
         logoColor6String = [logoColorNameArray objectAtIndex:5];
         NSLog(@"logoColor6String%@",logoColor6String);
 
@@ -1381,6 +1428,15 @@
         NSString*seventhColorNoString = [logoColorNumberArray objectAtIndex:6];
         [logoColorButton7 setTitle:seventhColorNoString forState:UIControlStateNormal];
         [logoColorButton7.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
+        
+        
+        if([seventhColorNoString isEqualToString:@"140"]){
+            
+            
+            [logoColorButton7 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            
+            
+        }
         
         seventhColorNameString = [logoColorButtonArray objectAtIndex:6];
         seventhColorNameString.frame=logoColorButton7.frame;
