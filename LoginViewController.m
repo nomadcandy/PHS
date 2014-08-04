@@ -30,7 +30,7 @@
     
     
     
-   // [activityIndicator stopAnimating];
+    [activityIndicator stopAnimating];
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
@@ -155,7 +155,7 @@
 
 -(IBAction)goLogin:(id)sender{
     
-    //[activityIndicator startAnimating];
+   [activityIndicator startAnimating];
     
     NSString*loginFieldString= loginField.text;
     NSString*passwordFieldString= passwordField.text;
@@ -263,7 +263,7 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    //[activityIndicator stopAnimating];
+    [activityIndicator stopAnimating];
 
     
     if ([segue.identifier isEqualToString:@"HomeSegue"]) {

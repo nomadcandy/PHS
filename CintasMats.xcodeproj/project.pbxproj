@@ -825,23 +825,23 @@
 		42F399BE1946675B00C84189 /* ThumbWalkOffLogoMatM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ThumbWalkOffLogoMatM.png; sourceTree = "<group>"; };
 		42F399D7194669F200C84189 /* FreeFlowComfortM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FreeFlowComfortM.png; sourceTree = "<group>"; };
 		42FF0EED18FC32C10060B036 /* MatClientFocusJade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatClientFocusJade.png; sourceTree = "<group>"; };
-		42FF7A1118CDE92A00C72695 /* Millenium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millenium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42FF7A1118CDE92A00C72695 /* CintasMats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CintasMats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A1418CDE92A00C72695 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42FF7A1618CDE92A00C72695 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		42FF7A1818CDE92A00C72695 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		42FF7A1C18CDE92A00C72695 /* Millenium-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Millenium-Info.plist"; sourceTree = "<group>"; };
+		42FF7A1C18CDE92A00C72695 /* CintasMats-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CintasMats-Info.plist"; sourceTree = "<group>"; };
 		42FF7A1E18CDE92A00C72695 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42FF7A2018CDE92A00C72695 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		42FF7A2218CDE92A00C72695 /* Millenium-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Millenium-Prefix.pch"; sourceTree = "<group>"; };
+		42FF7A2218CDE92A00C72695 /* CintasMats-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CintasMats-Prefix.pch"; sourceTree = "<group>"; };
 		42FF7A2318CDE92A00C72695 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		42FF7A2418CDE92A00C72695 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		42FF7A2718CDE92A00C72695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42FF7A2918CDE92A00C72695 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		42FF7A2A18CDE92A00C72695 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		42FF7A2C18CDE92A00C72695 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		42FF7A3218CDE92A00C72695 /* MilleniumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilleniumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42FF7A3218CDE92A00C72695 /* CintasMatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CintasMatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FF7A3318CDE92A00C72695 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		42FF7A3B18CDE92A00C72695 /* MilleniumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MilleniumTests-Info.plist"; sourceTree = "<group>"; };
+		42FF7A3B18CDE92A00C72695 /* CintasMatsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CintasMatsTests-Info.plist"; sourceTree = "<group>"; };
 		42FF7A3D18CDE92A00C72695 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42FF7A3F18CDE92A00C72695 /* MilleniumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MilleniumTests.m; sourceTree = "<group>"; };
 		42FF7A4E18CDF09B00C72695 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
@@ -1536,8 +1536,8 @@
 		42FF7A1218CDE92A00C72695 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42FF7A1118CDE92A00C72695 /* Millenium.app */,
-				42FF7A3218CDE92A00C72695 /* MilleniumTests.xctest */,
+				42FF7A1118CDE92A00C72695 /* CintasMats.app */,
+				42FF7A3218CDE92A00C72695 /* CintasMatsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1602,10 +1602,10 @@
 		42FF7A1B18CDE92A00C72695 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				42FF7A1C18CDE92A00C72695 /* Millenium-Info.plist */,
+				42FF7A1C18CDE92A00C72695 /* CintasMats-Info.plist */,
 				42FF7A1D18CDE92A00C72695 /* InfoPlist.strings */,
 				42FF7A2018CDE92A00C72695 /* main.m */,
-				42FF7A2218CDE92A00C72695 /* Millenium-Prefix.pch */,
+				42FF7A2218CDE92A00C72695 /* CintasMats-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1622,7 +1622,7 @@
 		42FF7A3A18CDE92A00C72695 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				42FF7A3B18CDE92A00C72695 /* MilleniumTests-Info.plist */,
+				42FF7A3B18CDE92A00C72695 /* CintasMatsTests-Info.plist */,
 				42FF7A3C18CDE92A00C72695 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -1641,9 +1641,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		42FF7A1018CDE92A00C72695 /* Millenium */ = {
+		42FF7A1018CDE92A00C72695 /* CintasMats */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42FF7A4318CDE92A00C72695 /* Build configuration list for PBXNativeTarget "Millenium" */;
+			buildConfigurationList = 42FF7A4318CDE92A00C72695 /* Build configuration list for PBXNativeTarget "CintasMats" */;
 			buildPhases = (
 				42FF7A0D18CDE92A00C72695 /* Sources */,
 				42FF7A0E18CDE92A00C72695 /* Frameworks */,
@@ -1653,14 +1653,14 @@
 			);
 			dependencies = (
 			);
-			name = Millenium;
+			name = CintasMats;
 			productName = Millenium;
-			productReference = 42FF7A1118CDE92A00C72695 /* Millenium.app */;
+			productReference = 42FF7A1118CDE92A00C72695 /* CintasMats.app */;
 			productType = "com.apple.product-type.application";
 		};
-		42FF7A3118CDE92A00C72695 /* MilleniumTests */ = {
+		42FF7A3118CDE92A00C72695 /* CintasMatsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "MilleniumTests" */;
+			buildConfigurationList = 42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "CintasMatsTests" */;
 			buildPhases = (
 				42FF7A2E18CDE92A00C72695 /* Sources */,
 				42FF7A2F18CDE92A00C72695 /* Frameworks */,
@@ -1671,9 +1671,9 @@
 			dependencies = (
 				42FF7A3818CDE92A00C72695 /* PBXTargetDependency */,
 			);
-			name = MilleniumTests;
+			name = CintasMatsTests;
 			productName = MilleniumTests;
-			productReference = 42FF7A3218CDE92A00C72695 /* MilleniumTests.xctest */;
+			productReference = 42FF7A3218CDE92A00C72695 /* CintasMatsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1693,7 +1693,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 42FF7A0C18CDE92A00C72695 /* Build configuration list for PBXProject "Millenium" */;
+			buildConfigurationList = 42FF7A0C18CDE92A00C72695 /* Build configuration list for PBXProject "CintasMats" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1706,8 +1706,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42FF7A1018CDE92A00C72695 /* Millenium */,
-				42FF7A3118CDE92A00C72695 /* MilleniumTests */,
+				42FF7A1018CDE92A00C72695 /* CintasMats */,
+				42FF7A3118CDE92A00C72695 /* CintasMatsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2180,7 +2180,7 @@
 /* Begin PBXTargetDependency section */
 		42FF7A3818CDE92A00C72695 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 42FF7A1018CDE92A00C72695 /* Millenium */;
+			target = 42FF7A1018CDE92A00C72695 /* CintasMats */;
 			targetProxy = 42FF7A3718CDE92A00C72695 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2295,9 +2295,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Millenium/Millenium-Prefix.pch";
-				INFOPLIST_FILE = "Millenium/Millenium-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Millenium/CintasMats-Prefix.pch";
+				INFOPLIST_FILE = "Millenium/CintasMats-Info.plist";
+				PRODUCT_NAME = CintasMats;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -2312,9 +2312,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Millenium/Millenium-Prefix.pch";
-				INFOPLIST_FILE = "Millenium/Millenium-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Millenium/CintasMats-Prefix.pch";
+				INFOPLIST_FILE = "Millenium/CintasMats-Info.plist";
+				PRODUCT_NAME = CintasMats;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
@@ -2336,8 +2336,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "MilleniumTests/MilleniumTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MilleniumTests/CintasMatsTests-Info.plist";
+				PRODUCT_NAME = CintasMatsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -2354,8 +2354,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Millenium/Millenium-Prefix.pch";
-				INFOPLIST_FILE = "MilleniumTests/MilleniumTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "MilleniumTests/CintasMatsTests-Info.plist";
+				PRODUCT_NAME = CintasMatsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -2364,7 +2364,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		42FF7A0C18CDE92A00C72695 /* Build configuration list for PBXProject "Millenium" */ = {
+		42FF7A0C18CDE92A00C72695 /* Build configuration list for PBXProject "CintasMats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42FF7A4118CDE92A00C72695 /* Debug */,
@@ -2373,7 +2373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42FF7A4318CDE92A00C72695 /* Build configuration list for PBXNativeTarget "Millenium" */ = {
+		42FF7A4318CDE92A00C72695 /* Build configuration list for PBXNativeTarget "CintasMats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42FF7A4418CDE92A00C72695 /* Debug */,
@@ -2382,7 +2382,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "MilleniumTests" */ = {
+		42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "CintasMatsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42FF7A4718CDE92A00C72695 /* Debug */,
