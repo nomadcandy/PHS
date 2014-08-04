@@ -710,7 +710,7 @@
     }
     
     //if ([BGString rangeOfString:@"104-Turquoise"].location == NSNotFound) {
-    if ([BGString isEqualToString:@"130-Aquamarine"]) {
+    if ([BGString isEqualToString:@"104-Turquoise"]) {
        
         matUseBGColorString=@"Turquoise_104.jpg";
         matBGTextColorString=@"104";
