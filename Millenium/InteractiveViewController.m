@@ -3582,11 +3582,6 @@ else
     
    
      
-     /*[textDecField  resignFirstResponder];
-     textDecField.hidden= YES;
-     textDecField.delegate = self;
-     textDecField.returnKeyType = UIReturnKeyDefault;
-     [textDecField isFirstResponder];*/
     
     [_lastMovedTextField resignFirstResponder];
     _lastMovedTextField.hidden= YES;
@@ -3603,7 +3598,6 @@ else
 - (void)touchDownRepeat:(UITextField*)textField{
    
     
-    //self.lastMovedTextField = sender;
     
     
     
@@ -5279,10 +5273,6 @@ enum {
 - (IBAction) imageMoved:(id) sender withEvent:(UIEvent *) event
 {
     
-    
-    //NSLog(@"Sender %@",sender);
-    
-
     if([sender isKindOfClass:[UITextField class]]){
         self.lastMovedTextField = sender;
     }
@@ -6312,7 +6302,7 @@ numberOfRowsInComponent:(NSInteger)component
         textDecField.textColor= [UIColor colorWithRed:redValue/225.0f green:greenValue/225.0f  blue:blueValue/225.0f alpha:1];
         
         
-        //textDecField.textColor= [UIColor colorWithRed:40/225.0f green:75/225.0f  blue:230/225.0f alpha:1];
+        
 
        
        

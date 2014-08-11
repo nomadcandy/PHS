@@ -236,18 +236,39 @@
     //[self showOverlayWithFrame:chosenImageView.frame];
 }
 
+-(BOOL) doesAlertLogoExist {
+    for (UIWindow* window in [UIApplication sharedApplication].windows) {
+        NSArray* subviews = window.subviews;
+        if ([subviews count] > 0) {
+            
+            BOOL alert = [[subviews objectAtIndex:0] isKindOfClass:[UIAlertView class]];
+            BOOL action = [[subviews objectAtIndex:0] isKindOfClass:[UIActionSheet class]];
+            
+            if (alert || action)
+                return YES;
+        }
+    }
+    return NO;
+}
 
 
 -(void) handleLongPress:(UITapGestureRecognizer*) sender{
     
+    
     alertLogo=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
     alertLogo.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+    
+    
+   
     
     
     
     
     alertLogo.tag = 1;
     [alertLogo show];
+        
+    
 
    
     
@@ -643,11 +664,16 @@
    /* if (![context save:&error]) {
         //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }*/
+     
+     
+   
+     
        
     if ( alert==alertLogo){
            
            nameField = [alertLogo textFieldAtIndex:0];
           artworkNameAddFavString=nameField.text;
+        
 
        }
 
