@@ -814,16 +814,19 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         NSString*searchOneString= searchHereField.text;
         
-        NSInteger nWords = 1;
-        NSRange wordRange = NSMakeRange(0, nWords);
-        NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
         
-        NSString*searchYeahString= [searchStringArray objectAtIndex:0];
+        
+        int stringLength = [searchOneString length];
+        NSRange range = NSMakeRange(0, stringLength);
+        NSString *newString = [searchOneString stringByReplacingOccurrencesOfString:@" " withString:@"%20" options:NSCaseInsensitiveSearch range:range];
+        
+        NSLog(@"Old String: '%@' --> New String: '%@'", searchOneString, newString);
+
         
         
         //Search Logos
         
-        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", searchYeahString];
+        NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", newString];
         
         
         NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -867,7 +870,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         artworkCount= searchLogoArray.count;
         
         
-        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", searchYeahString];
+        NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", newString];
         
         NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
         NSURLRequest *requestMat = [NSURLRequest requestWithURL:

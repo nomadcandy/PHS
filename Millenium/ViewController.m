@@ -333,22 +333,18 @@
         
         NSString*searchOneString= searchField.text;
         
-       /* NSInteger nWords = 1;
-        NSRange wordRange = NSMakeRange(0, nWords);
-        NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
-        
-        NSString*searchString= [searchStringArray objectAtIndex:0];*/
-       
-        //NSString *str = @"i'm a noob";
         int stringLength = [searchOneString length];
         NSRange range = NSMakeRange(0, stringLength);
         NSString *newString = [searchOneString stringByReplacingOccurrencesOfString:@" " withString:@"%20" options:NSCaseInsensitiveSearch range:range];
         
+        newString = [newString stringByReplacingOccurrencesOfString:@"'" withString:@"" options:NSCaseInsensitiveSearch range:range];
+        
+        //[searchOneString stringByTrimmingCharactersInSet:@"'"];
+        
         NSLog(@"Old String: '%@' --> New String: '%@'", searchOneString, newString);
         
        
-        //Sample two search terms taken from location search on other viewController
-       /* NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=%@&userID=0",20,locationIDString];*/
+      
 
         
         NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", newString];
@@ -359,7 +355,7 @@
                                  urlSearch];
         
         
-        //NSLog(@"URLLOGIN: %@",urlSearch);
+       
         
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:[NSOperationQueue mainQueue]

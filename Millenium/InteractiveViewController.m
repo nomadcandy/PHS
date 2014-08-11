@@ -5106,14 +5106,17 @@ enum {
     
     NSString*searchOneString= searchField.text;
     
-    NSInteger nWords = 1;
-    NSRange wordRange = NSMakeRange(0, nWords);
-    NSArray *searchStringArray = [[searchOneString componentsSeparatedByString:@" "] subarrayWithRange:wordRange];
-    
-    NSString*searchString= [searchStringArray objectAtIndex:0];
+      
+       
+       int stringLength = [searchOneString length];
+       NSRange range = NSMakeRange(0, stringLength);
+       NSString *newString = [searchOneString stringByReplacingOccurrencesOfString:@" " withString:@"%20" options:NSCaseInsensitiveSearch range:range];
+       
+       NSLog(@"Old String: '%@' --> New String: '%@'", searchOneString, newString);
+
     
        
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", searchString];
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", newString];
 
        
        NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
@@ -5157,7 +5160,7 @@ enum {
        artworkCount= searchLogoArray.count;
 
     
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", searchString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", newString];
     
        NSURL *urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
        NSURLRequest *requestMat = [NSURLRequest requestWithURL:
