@@ -14,7 +14,7 @@
 
 @implementation ImagePickerViewController
 //@synthesize chosenImage;
-//@synthesize result;
+@synthesize alertShowString;
 @synthesize imageDownloaded;
 
 @synthesize interactiveHeaderString;
@@ -255,22 +255,6 @@
 -(void) handleLongPress:(UITapGestureRecognizer*) sender{
     
     
-    alertLogo=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-    alertLogo.alertViewStyle = UIAlertViewStylePlainTextInput;
-        
-    
-    
-   
-    
-    
-    
-    
-    alertLogo.tag = 1;
-    [alertLogo show];
-        
-    
-
-   
     
     NSURL*url = [googleWebView.request URL];
     
@@ -308,6 +292,40 @@
     //return [UIImage imageWithCGImage:myColorMaskedImage];
     NSString  *imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
+    
+
+
+    
+    if ([alertShowString isEqualToString:@"YES"]){
+        
+        
+        
+        
+    }else{
+    
+        
+    
+        alertLogo=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Add a name for your Logo"  delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        alertLogo.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+    
+        alertShowString=@"YES";
+   
+    
+    
+    
+    
+        alertLogo.tag = 1;
+        [alertLogo show];
+        
+        
+    }
+    
+
+
+  alertShowString=@"NO";
+    
+    
     
 }
 
@@ -1570,7 +1588,20 @@
     
 }
 
-
+-(BOOL) countOfAlert {
+    for (UIWindow* window in [UIApplication sharedApplication].windows) {
+        NSArray* subviews = window.subviews;
+        if ([subviews count] > 0) {
+            
+            BOOL alert = [[subviews objectAtIndex:0] isKindOfClass:[UIAlertView class]];
+            BOOL action = [[subviews objectAtIndex:0] isKindOfClass:[UIActionSheet class]];
+            
+            if (alert || action)
+                return YES;
+        }
+    }
+    return NO;
+}
 
 
 

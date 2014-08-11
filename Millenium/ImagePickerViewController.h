@@ -162,6 +162,8 @@
 @property (nonatomic, copy) NSString*artworkColorAddFavString;
 @property (nonatomic, copy) NSString*artworkFormatAddFavString;
 
+@property (nonatomic, copy) NSString*alertShowString;
+
 @property (nonatomic, retain)  UIAlertView *alert;
 @property (nonatomic, retain)  UIAlertView *alertInteractive;
 @property (nonatomic, retain)  UIAlertView *alertLogo;
