@@ -213,6 +213,7 @@
 @property (nonatomic, copy) NSString *numberString;
 @property (nonatomic, copy) NSString *sizeString;
 @property (nonatomic, copy) NSString *interactiveHeaderString;
+@property (nonatomic, copy) NSString *orientString;
 
 
 //@property (nonatomic, assign) id <StringSetDelegate> delegateString;

@@ -89,6 +89,7 @@
 @synthesize numberString;
 @synthesize sizeString;
 @synthesize interactiveHeaderString;
+@synthesize orientString;
 
 @synthesize artworkNameDictionary;
 
@@ -1966,6 +1967,8 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     numberString =[artworkIDArray objectAtIndex:indexPathSend];
     sizeString =[artworkSizeArray objectAtIndex:indexPathSend];
     logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
+    
+   
     matBGColorString =@" ";
     matColorString =@" ";
     //orientString=@"";
@@ -2134,12 +2137,14 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     companyString =[matCompanyArray objectAtIndex:indexPathSend];
     numberString =[matIDArray objectAtIndex:indexPathSend];
     sizeString =[matSizeArray objectAtIndex:indexPathSend];
-    //NSLog(@"matColorArray %@",matColorArray);
-    //matColorString =[matColorArray objectAtIndex:indexPathSend];
+    
+    
+    orientString =[matFormatArray objectAtIndex:indexPathSend];
+    
+   
     logoColorString =[matColorArray objectAtIndex:indexPathSend];
-    //NSLog(@"matColorString %@",matColorString);
     matBGColorString =[matBGColorArray objectAtIndex:indexPathSend];
-    //NSLog(@"matBGColorString %@",matBGColorString);
+   
     //interactiveHeaderString = @"Edit Mat";
     
     if (logoColorString==NULL)
@@ -2211,6 +2216,21 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         
         
     }
+    
+    if([NSNull null] != [matFormatArray objectAtIndex:indexPathSend])
+        
+    {
+        orientString =[matFormatArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        orientString =@" ";
+        
+        
+    }
+
 
     
    
@@ -2371,6 +2391,18 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         }else{
             
             goingController.sizeString=@" ";
+            
+        }
+        
+        if(orientString!=NULL)
+            
+        {
+            goingController.orientString=orientString;
+            NSLog(@"orientString %@",orientString);
+            
+        }else{
+            
+            goingController.orientString=@" ";
             
         }
         

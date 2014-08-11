@@ -1727,19 +1727,19 @@
     
     
     
-    if([orientString isEqualToString:@"landscape"])
+    if([orientString isEqualToString:@"Landscape"])
     {
         //portraitImageView.hidden=YES;
         //landscapeImageView.hidden=NO;
-        textOrientField.text =@"Portrait";
+        textOrientField.text =@"Landscape";
         
     }
     
-    if([orientString isEqualToString:@"portrait"])
+    if([orientString isEqualToString:@"Portrait"])
     {
         //portraitImageView.hidden=NO;
         //landscapeImageView.hidden=YES;
-         textOrientField.text =@"Landscape";
+         textOrientField.text =@"Portrait";
 
         
     } else {
@@ -2236,19 +2236,19 @@
         
         
         
-        if([orientString isEqualToString:@"landscape"])
+       if([orientString isEqualToString:@"Landscape"])
         {
-            textOrientField.text =@"PORTRAIT";
+            textOrientField.text =@"Landscape";
             //portraitImageView.hidden=YES;
             //landscapeImageView.hidden=NO;
             
         }
         
-        if([orientString isEqualToString:@"portrait"])
+        if([orientString isEqualToString:@"Portrait"])
         {
             //portraitImageView.hidden=NO;
             //landscapeImageView.hidden=YES;
-             textOrientField.text =@"LANDSCAPE";
+             textOrientField.text =@"Portrait";
             
         }
         
