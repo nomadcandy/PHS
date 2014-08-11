@@ -339,7 +339,10 @@
         
         newString = [newString stringByReplacingOccurrencesOfString:@"'" withString:@"" options:NSCaseInsensitiveSearch range:range];
         
-        //[searchOneString stringByTrimmingCharactersInSet:@"'"];
+        newString = [newString stringByReplacingOccurrencesOfString:@"!" withString:@"" options:NSCaseInsensitiveSearch range:range];
+        
+        newString = [newString stringByReplacingOccurrencesOfString:@"-" withString:@"" options:NSCaseInsensitiveSearch range:range];
+        
         
         NSLog(@"Old String: '%@' --> New String: '%@'", searchOneString, newString);
         

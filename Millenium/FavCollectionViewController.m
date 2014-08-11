@@ -869,6 +869,13 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         NSRange range = NSMakeRange(0, stringLength);
         NSString *newString = [searchOneString stringByReplacingOccurrencesOfString:@" " withString:@"%20" options:NSCaseInsensitiveSearch range:range];
         
+        newString = [newString stringByReplacingOccurrencesOfString:@"'" withString:@"" options:NSCaseInsensitiveSearch range:range];
+        
+        newString = [newString stringByReplacingOccurrencesOfString:@"!" withString:@"" options:NSCaseInsensitiveSearch range:range];
+        
+        newString = [newString stringByReplacingOccurrencesOfString:@"-" withString:@"" options:NSCaseInsensitiveSearch range:range];
+
+        
         NSLog(@"Old String: '%@' --> New String: '%@'", searchOneString, newString);
     
     
