@@ -1336,7 +1336,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     
-    
+    [self viewDidLoad];
     
     
 }
