@@ -1767,13 +1767,26 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
                 NSLog(@"urlString:%@",urlString);
                 
-            /*}else{
-                
-                urlString=@"";
-                NSLog(@"urlString:%@",urlString);
-            }*/
+           
             }
+            //check if
             
+            //urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+            
+            //returns null
+            
+            
+            if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item])
+                
+            {
+                urlString;
+                
+            } else {
+                
+                urlString =@" ";
+                
+                
+            }
            
             if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
                 
@@ -1897,6 +1910,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             //we shouldn't ever try to operate on a nil mat string
             if(!urlMatString) urlMatString = @"";
+            
+            
+            
             
             if ([urlMatString isEqualToString:@"No Image Is Available"])
             {
