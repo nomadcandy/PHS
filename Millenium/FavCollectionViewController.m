@@ -490,6 +490,28 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goRep:(id)sender{
     
+    
+    artworkNameArray = nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    artworkSellerArray = nil;
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray = nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
+   
+    
     userIDString = [[NSUserDefaults standardUserDefaults]
                     stringForKey:@"userID"];
     
@@ -1731,18 +1753,28 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackMatLabel.hidden=NO;
             favCell.goBack.hidden=NO;
             
-            if (artworkFullImageArray.count>0 ){
+            
+            if (artworkFullImageArray.count==0 || artworkNameArray.count==0 /*|| indexPath.item > artworkFullImageArray.count-1 */){
+                
+                //urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+                urlString=@"";
+                NSLog(@"urlString:%@",urlString);
+            }
+
+            
+            else if (artworkFullImageArray.count>0 /*&& indexPath.item < artworkFullImageArray.count-1*/ ){
                 
                 urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
-                //NSLog(@"urlString:%@",urlString);
+                NSLog(@"urlString:%@",urlString);
                 
-            }else{
+            /*}else{
                 
                 urlString=@"";
+                NSLog(@"urlString:%@",urlString);
+            }*/
             }
             
-            
-            
+           
             if ([urlString rangeOfString:@"cintas"].location == NSNotFound)
                 
             {
