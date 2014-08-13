@@ -348,6 +348,31 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goFav:(id)sender{
     
+    artworkNameArray =nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray =nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
+    
     headerLabel.text = @"FAVORITES";
     
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
@@ -443,6 +468,32 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 
 -(IBAction)goRep:(id)sender{
+    
+    
+    artworkNameArray =nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray =nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
     
     
     headerLabel.text = @"YOUR SKETCHES";
@@ -625,6 +676,32 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 -(IBAction)goNearMe:(id)sender{
     
+    
+    artworkNameArray =nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray =nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
+    
     headerLabel.text = @"YOUR LOCATION SKETCHES";
    
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
@@ -806,6 +883,32 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
 
 
 -(IBAction)goSearch:(id)sender{
+    
+    
+    artworkNameArray =nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray =nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
     
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;

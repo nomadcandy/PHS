@@ -408,6 +408,31 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goFav:(id)sender{
     
     
+    artworkNameArray =nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray =nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
+    
     searchingString=@"searchingFavString";
     //TODO load into CoreData anything that is in Favorites.
     
@@ -491,26 +516,14 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goRep:(id)sender{
     
     
-    /*artworkNameArray = nil;
-    artworkSizeArray = nil;
-    artworkFormatArray = nil;
-    artworkFullImageArray = nil;
-    artworkIconArray = nil;
-    artworkIDArray = nil;
-    artworkColorArray = nil;
-    artworkCompanyArray = nil;
-    artworkSellerArray = nil;
-    matSizeArray = nil;
-    matFormatArray = nil;
-    matFullImageArray = nil;
-    matIconArray = nil;
-    matIDArray = nil;
-    matLocationIDArray = nil;
-    matSellerArray = nil;
-    matCompanyArray = nil;
-    matColorArray = nil;
-    matBGColorArray = nil;*/
-   
+    headerLabel.text = @"YOUR SKETCHES";
+    
+    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    activityIndicator.alpha = 1.0;
+    activityIndicator.center = CGPointMake(160, 360);
+    activityIndicator.hidesWhenStopped = NO;
+    [self.view addSubview:activityIndicator];
+    [activityIndicator startAnimating];
     
     userIDString = [[NSUserDefaults standardUserDefaults]
                     stringForKey:@"userID"];
@@ -518,16 +531,17 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     //NSLog(@"userIDString: %@", userIDString);
     
     
-    //Search Logos
-    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&userID=%@",20,userIDString];
     
+    
+    //Search Logos
+    NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=%@",20,userIDString];
     
     NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     NSURLRequest *request = [NSURLRequest requestWithURL:
                              urlSearch];
     
     
-    
+    //NSLog(@"URLLOGIN: %@",urlSearch);
     
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
@@ -556,15 +570,16 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                                 error: &error];
     
     
-    
+    //NSLog(@"searchLogoArray %@",searchLogoArray);
     
     artworkCount= searchLogoArray.count;
+    //NSLog(@"artworkCount %i",artworkCount);
     
     
     
     
     //Search Mats
-    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&userID=%@",20,userIDString];
+    NSString*urlSearchMatString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=%@",20,userIDString];
     
     
     
@@ -577,7 +592,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     NSError *errorMat = nil;
     NSData *dataMat = [NSData dataWithContentsOfURL:urlSearchMat];//
     
-    //NSLog(@"URLLOGIN: %@",urlSearch);
+    
     
     [NSURLConnection sendAsynchronousRequest:requestMat
                                        queue:[NSOperationQueue mainQueue]
@@ -606,117 +621,74 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                                error: &errorMat];
     
     
-    
-    
-    
     matCount= searchMatArray.count;
+    
+    
+    
     
     if(data!=nil)
         
     {
         
-        //TODO check for Null values
+        
         
         [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
             
-            NSLog(@"artworkNameArray: %@",artworkNameArray);
-            
-            
-            if ([searchLogoArray objectAtIndex:0] == [NSNull null])
-            {
-                artworkNameArray=nil;
-            }
-            else
-            {
-                artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-            }
-            
-            /*if([NSNull null] != [searchLogoArray valueForKey:@"ArtworkName"]){
-                
-                
-                artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
-                
-            }else{
-                
-                artworkNameArray=nil;
-            }*/
-
-          
             
             
             
-            NSLog(@"artworkNameArray: %@",artworkNameArray);
+            artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
             artworkIconArray = [searchLogoArray valueForKey:@"IconURL"];
             artworkIDArray = [searchLogoArray valueForKey:@"ProductID"];
             artworkColorArray = [searchLogoArray valueForKey:@"Color"];
-            artworkCompanyArray = [searchLogoArray valueForKey:@"CompanyName"];
-            artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
-
             
             
             
         }];
         
-        if(dataMat!=nil)
-            
-        {
-
+    }
+    
+    if(dataMat!=nil){
         
-            [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
-            
-                NSLog(@"matNameArray: %@",matNameArray);
-                
-                
-                matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-                if ([NSNull null] != [matNameArray objectAtIndex:0] && matNameArray.count==1)
-                    
-                    {
-                      
-                        matCount=0;
-                    
-                    }
-                
-                
-            
-                NSLog(@"matNameArray: %@",matNameArray);
-                matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-                matFormatArray = [searchMatArray valueForKey:@"Format"];
-                matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-                matIconArray = [searchMatArray valueForKey:@"IconURL"];
-                matIDArray = [searchMatArray valueForKey:@"ProductID"];
-                matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
-                matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
-                matSellerArray = [searchMatArray valueForKey:@"Seller"];
-            
-            
-                artworkColorArray = [searchMatArray valueForKey:@"Color"];
+        [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
             
             
             
+            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+            NSLog(@"matNameArray: %@",matNameArray);
+            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+            matFormatArray = [searchMatArray valueForKey:@"Format"];
+            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+            matIconArray = [searchMatArray valueForKey:@"IconURL"];
+            matIDArray = [searchMatArray valueForKey:@"ProductID"];
+            matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+            artworkColorArray = [searchMatArray valueForKey:@"Color"];
             
             
             
+            [activityIndicator stopAnimating];
             
-            }];
             
-        }
-        
-        [self.collectionView reloadData];
+        }];
         
     }
     
-    else {
-        
-        
-        UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your personal data is not available please login once more to the application" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-        
-        [alert show];
-        
-        
-    }
+    [self.collectionView reloadData];
+    
+    
+    
+    /*else {
+     
+     
+     UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your personal data is not available please login once more to the application" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+     
+     [alert show];
+     
+     
+     }*/
     
 }
 
