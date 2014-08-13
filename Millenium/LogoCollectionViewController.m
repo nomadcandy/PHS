@@ -375,24 +375,23 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     headerLabel.text = @"FAVORITES";
     
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+    /*UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     activityIndicator.alpha = 1.0;
     activityIndicator.center = CGPointMake(160, 360);
     activityIndicator.hidesWhenStopped = NO;
     [self.view addSubview:activityIndicator];
-    [activityIndicator startAnimating];
+    [activityIndicator startAnimating];*/
     searchingString=@"searchingFavString";
     //TODO load into CoreData anything that is in Favorites.
     
     // Fetch the devices from persistent data store
-    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    /*NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
     
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
     
 
     self.favoritesLogoArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    //setReturnsDistinctResults:YES
     NSManagedObjectContext *managedObjectContext1 = [self managedObjectContext];
     NSFetchRequest *fetchRequestMat = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
     self.favoritesMatArray = [[managedObjectContext1 executeFetchRequest:fetchRequestMat error:nil] mutableCopy];
@@ -454,7 +453,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     
-    [self.collectionView reloadData];
+    [self.collectionView reloadData];*/
     
     
     UIStoryboard *storyboard = self.storyboard;
