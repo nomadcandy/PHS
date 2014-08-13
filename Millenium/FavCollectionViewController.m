@@ -1315,7 +1315,10 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     for (LogoFavorite* logoFavoriteDelete in fetchedFavoritesArray) {
         // NSLog(@"artworkName %@",logoFavoriteDelete.artworkName);
         [managedObjectContext deleteObject:logoFavoriteDelete];
+        
     }
+    
+    [managedObjectContext save:nil];
 
     [self viewDidLoad];
 }
