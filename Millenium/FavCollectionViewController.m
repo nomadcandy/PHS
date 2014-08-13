@@ -491,7 +491,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goRep:(id)sender{
     
     
-    artworkNameArray = nil;
+    /*artworkNameArray = nil;
     artworkSizeArray = nil;
     artworkFormatArray = nil;
     artworkFullImageArray = nil;
@@ -509,7 +509,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     matSellerArray = nil;
     matCompanyArray = nil;
     matColorArray = nil;
-    matBGColorArray = nil;
+    matBGColorArray = nil;*/
    
     
     userIDString = [[NSUserDefaults standardUserDefaults]

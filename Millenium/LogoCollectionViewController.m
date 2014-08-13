@@ -578,6 +578,10 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
         }];
         
+    }
+    
+    if(dataMat!=nil){
+    
         [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
             
             
@@ -599,11 +603,13 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
         }];
         
-        [self.collectionView reloadData];
-        
     }
     
-    else {
+        [self.collectionView reloadData];
+        
+   
+    
+    /*else {
         
         
         UIAlertView* alert=[[UIAlertView alloc]initWithTitle:@"Alert" message:@"Your personal data is not available please login once more to the application" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
@@ -611,7 +617,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         [alert show];
         
         
-    }
+    }*/
 
 }
 
