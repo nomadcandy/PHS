@@ -1753,35 +1753,27 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackMatLabel.hidden=NO;
             favCell.goBack.hidden=NO;
             
+            if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item]){
             
-            if (artworkFullImageArray.count==0 || artworkNameArray.count==0 /*|| indexPath.item > artworkFullImageArray.count-1 */){
-                
-                //urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
-                urlString=@"";
-                NSLog(@"urlString:%@",urlString);
-            }
-
             
-            else if (artworkFullImageArray.count>0 /*&& indexPath.item < artworkFullImageArray.count-1*/ ){
+                if (artworkFullImageArray.count==0 || artworkNameArray.count==0 ){
                 
-                urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
-                NSLog(@"urlString:%@",urlString);
+                    urlString=@"";
+                    NSLog(@"urlString:%@",urlString);
+                
+                
+                } else if (artworkFullImageArray.count>0  ){
+                
+                    urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
+                    NSLog(@"urlString:%@",urlString);
                 
            
-            }
-            //check if
-            
-            //urlString =[artworkFullImageArray objectAtIndex:indexPath.item];
-            
-            //returns null
-            
-            
-            if([NSNull null] != [artworkFullImageArray objectAtIndex:indexPath.item])
+                }
                 
-            {
-                urlString;
+            }else
+            
                 
-            } else {
+           {
                 
                 urlString =@" ";
                 
@@ -1838,11 +1830,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             selectedIndex=[indexPath row];
             _logoChooseButton.tag=[indexPath row];
-           /* NSLog(@"addButton.tag:%ld",(long)_logoChooseButton.tag);
-            NSLog(@"indexPathSender1:%@",indexPath);
-            NSLog(@"rowSelectedHere %i",rowSelectedHere);
-            
-            NSLog(@"indexPathSender:%ld",(long)logoCell.tag);*/
             
             UIButton*button = [favCell logoChooseButton];
             button.tag = selectedIndex;
@@ -1853,7 +1840,9 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }
         
-        if ( indexPath.item <= matNameArray.count-1 /*&& matNameArray.count>0*/){
+        if([NSNull null] != [matNameArray objectAtIndex:indexPath.item]){
+        
+        //if ( indexPath.item <= matNameArray.count-1 ){
             
             
             
@@ -1880,25 +1869,10 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        
-        
-        if (indexPath.item > matFullImageArray.count-1  || ![self matStringForIndex:indexPath.item]/*|| matFullImageArray.count == 0*/){
+        if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item]){
             
-            favCell.matChooseButton.hidden=YES;
-            favCell.removeFavMatButton.hidden=YES;
-            favCell.removeFavMatLabel.hidden=YES;
-            
-            favCell.goBackMatLabel.hidden=YES;
-            favCell.goBack.hidden=YES;
-            //TODO goBackMat.hidden= YES;
-            
-        }
-
+            urlMatString=[matFullImageArray objectAtIndex:indexPath.item];
         
-     
-        else if ( indexPath.item <= matFullImageArray.count-1 /*&& matFullImageArray.count > 0*/){
-        
-           
             favCell.matChooseButton.hidden=NO;
             favCell.removeFavMatButton.hidden=NO;
             favCell.removeFavMatLabel.hidden=NO;
@@ -1906,13 +1880,6 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackMatLabel.hidden=NO;
             favCell.goBack.hidden=NO;
 
-            urlMatString =[self matStringForIndex:indexPath.item];//[matFullImageArray objectAtIndex:indexPath.item];
-            
-            //we shouldn't ever try to operate on a nil mat string
-            if(!urlMatString) urlMatString = @"";
-            
-            
-            
             
             if ([urlMatString isEqualToString:@"No Image Is Available"])
             {
@@ -1920,13 +1887,12 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
                 NSString *imagePath =  [directoryPath objectAtIndex:0];
                 
-                /* NSString*matUrlAppendAddFavString= nameField.text;
-                 NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);*/
-                 NSString*pngString= @".png";
-                 //NSLog(@"nameFieldText %@",nameField.text);
-                 //NSLog(@"nameFieldText %@",nameHideField.text);
-                 
-                 
+                
+                //NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
+                NSString*pngString= @".png";
+                
+                
+                
                 urlMatString = [matLabelString stringByAppendingString:pngString];
                 
                 imagePath= [imagePath stringByAppendingPathComponent:urlMatString];
@@ -1937,10 +1903,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 UIImage *logoImage = [UIImage imageWithData:data];
                 [favCell.matChooseButton setImage:logoImage forState:UIControlStateNormal];
                 
-            }
-            
-           if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
-           
+            }else if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
+                
             {
                 
                 
@@ -1957,17 +1921,17 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 //no data here
                 UIImage *logoImage = [UIImage imageWithData:data];
                 [favCell.matChooseButton setImage:logoImage forState:UIControlStateNormal];
-
+                
                 
                 
             }else {
-                
-                NSAssert(urlMatString != nil, @"We aren't finding the mat string properly");
+                //TODO Crashes here..
+                //NSAssert(urlMatString != nil, @"We aren't finding the mat string properly");
                 
                 NSString*httpString= @"http://";
                 NSString *urlMatStringAppend = [httpString stringByAppendingString:urlMatString];
                 
-                //NSLog(@"%@ urlStringAppend",urlMatStringAppend);
+                NSLog(@"%@ urlStringAppend",urlMatStringAppend);
                 
                 NSData * dataMat = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlMatStringAppend]];
                 
@@ -1977,6 +1941,41 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 [favCell.matChooseButton setImage:iconImage forState:UIControlStateNormal];
                 
             }
+
+        
+            
+                        //TODO goBackMat.hidden= YES;
+            
+        } else  {
+
+            
+        //else if ( indexPath.item <= matFullImageArray.count-1 ){
+        
+           
+            favCell.matChooseButton.hidden=YES;
+            favCell.removeFavMatButton.hidden=YES;
+            favCell.removeFavMatLabel.hidden=YES;
+            
+            favCell.goBackMatLabel.hidden=YES;
+            favCell.goBack.hidden=YES;
+
+            
+            
+           
+            //urlMatString =[self matStringForIndex:indexPath.item];//[matFullImageArray objectAtIndex:indexPath.item];
+            
+            //we shouldn't ever try to operate on a nil mat string
+            //if(!urlMatString) urlMatString = @"";
+            
+            
+        //if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item])
+                
+            
+            
+                
+        
+
+        
             
         }
         
