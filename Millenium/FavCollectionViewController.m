@@ -516,6 +516,32 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 -(IBAction)goRep:(id)sender{
     
     
+    artworkNameArray =nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray =nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
+    
+    
     headerLabel.text = @"YOUR SKETCHES";
     
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
@@ -680,6 +706,16 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     
     
+    
+    
+    [self performSegueWithIdentifier:@"collectionPickedSegue" sender:self];
+    
+    UIStoryboard *storyboard = self.storyboard;
+    LogoCollectionViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+    [self presentViewController:svc animated:YES completion:nil];
+    
+    
+    
     /*else {
      
      
@@ -695,6 +731,32 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 
 -(IBAction)goNearMe:(id)sender{
+    
+    
+    artworkNameArray =nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray =nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
 
     
     locationIDString = [[NSUserDefaults standardUserDefaults]
@@ -892,6 +954,32 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
 
 -(IBAction)goSearch:(id)sender{
+    
+    
+    artworkNameArray =nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray =nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
     
         
     if( searchHereField.text!= Nil || [searchHereField.text length] == 0 ) {
