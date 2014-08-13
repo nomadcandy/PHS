@@ -583,6 +583,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
             
             
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+            NSLog(@"matNameArray: %@",matNameArray);
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
             matFormatArray = [searchMatArray valueForKey:@"Format"];
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];

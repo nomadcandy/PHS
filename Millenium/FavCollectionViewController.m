@@ -615,14 +615,37 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         
     {
         
-        
+        //TODO check for Null values
         
         [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
             
+            NSLog(@"artworkNameArray: %@",artworkNameArray);
+            
+            
+            if ([searchLogoArray objectAtIndex:0] == [NSNull null])
+            {
+                artworkNameArray=nil;
+            }
+            else
+            {
+                artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+            }
+            
+            /*if([NSNull null] != [searchLogoArray valueForKey:@"ArtworkName"]){
+                
+                
+                artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+                
+            }else{
+                
+                artworkNameArray=nil;
+            }*/
+
+          
             
             
             
-            artworkNameArray = [searchLogoArray valueForKey:@"ArtworkName"];
+            NSLog(@"artworkNameArray: %@",artworkNameArray);
             artworkSizeArray = [searchLogoArray valueForKey:@"ArtworkSize"];
             artworkFormatArray = [searchLogoArray valueForKey:@"Format"];
             artworkFullImageArray = [searchLogoArray valueForKey:@"FullImageURL"];
@@ -637,30 +660,49 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
         }];
         
-        [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        if(dataMat!=nil)
+            
+        {
+
+        
+            [searchMatArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+            
+                NSLog(@"matNameArray: %@",matNameArray);
+                
+                
+                matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
+                if ([NSNull null] != [matNameArray objectAtIndex:0] && matNameArray.count==1)
+                    
+                    {
+                      
+                        matCount=0;
+                    
+                    }
+                
+                
+            
+                NSLog(@"matNameArray: %@",matNameArray);
+                matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
+                matFormatArray = [searchMatArray valueForKey:@"Format"];
+                matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
+                matIconArray = [searchMatArray valueForKey:@"IconURL"];
+                matIDArray = [searchMatArray valueForKey:@"ProductID"];
+                matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
+                matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
+                matSellerArray = [searchMatArray valueForKey:@"Seller"];
+            
+            
+                artworkColorArray = [searchMatArray valueForKey:@"Color"];
             
             
             
-            matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-            matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
-            matFormatArray = [searchMatArray valueForKey:@"Format"];
-            matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
-            matIconArray = [searchMatArray valueForKey:@"IconURL"];
-            matIDArray = [searchMatArray valueForKey:@"ProductID"];
-            matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
-            matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
-            matSellerArray = [searchMatArray valueForKey:@"Seller"];
-            
-            
-            artworkColorArray = [searchMatArray valueForKey:@"Color"];
             
             
             
             
+            }];
             
-            
-            
-        }];
+        }
         
         [self.collectionView reloadData];
         
@@ -1356,13 +1398,51 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         [managedObjectContext deleteObject:matFavoriteDelete];
     }
     
+    [self saveContext];
     
+    //[self updateTable];
     
+    [self.collectionView reloadData];
+
+    //[self goFav:(id)sender];
     [self viewDidLoad];
     
     
 }
 
+
+- (void)saveContext
+{
+    NSLog(@"save context hit");
+    
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    // Save the context.
+    NSError *error = nil;
+    if (![managedObjectContext save:&error]) {
+        NSLog(@"Unresolved context save error yikes! %@, %@", error, [error userInfo]);
+        abort();
+    }else{
+        
+        //[managedObjectContext mergeChangesFromContext];
+        [self.collectionView reloadData];
+    }
+}
+
+
+- (void)saveNotification
+{
+    NSLog(@"update table hit");
+    
+    [self.collectionView reloadData];
+}
+
+
+- (void)updateTable
+{
+    NSLog(@"update table hit");
+    
+    [self.collectionView reloadData];
+}
 
 
 -(IBAction)addLogoFavorite:(id)sender{
@@ -1839,19 +1919,23 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             
             
         }
+        //TODO Crashing here
+        NSLog(@"matNameArray %@",matNameArray);
+        NSLog(@"matNameArray %i",matNameArray.count);
         
-        if([NSNull null] != [matNameArray objectAtIndex:indexPath.item]){
+        if([NSNull null] != [matNameArray objectAtIndex:indexPath.item] &&  indexPath.item <= matNameArray.count-1 /*&& matNameArray.count > 0 && !matNameArray*/ ){
         
-        //if ( indexPath.item <= matNameArray.count-1 ){
+        
             
             
             
             matLabelString=[matNameArray objectAtIndex:indexPath.item];
             favCell.matTitleLabel.text =matLabelString;
         
-        }else{
+        }else {
             
             favCell.matTitleLabel.hidden=YES;
+            matLabelString=@"";
             
         }
         
@@ -1869,9 +1953,11 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item]){
+        if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item] &&  indexPath.item <= matFullImageArray.count-1  && matFullImageArray.count >0){
+            
             
             urlMatString=[matFullImageArray objectAtIndex:indexPath.item];
+            NSLog(@"urlMatString %@",urlMatString);
         
             favCell.matChooseButton.hidden=NO;
             favCell.removeFavMatButton.hidden=NO;
@@ -1880,8 +1966,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
             favCell.goBackMatLabel.hidden=NO;
             favCell.goBack.hidden=NO;
 
-            
-            if ([urlMatString isEqualToString:@"No Image Is Available"])
+            //TODO crashing here when hit rep
+           /* if ([urlMatString isEqualToString:@"No Image Is Available"])
             {
                 //not working
                 NSArray *directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
@@ -1903,7 +1989,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
                 UIImage *logoImage = [UIImage imageWithData:data];
                 [favCell.matChooseButton setImage:logoImage forState:UIControlStateNormal];
                 
-            }else if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
+            }else*/
+            if ([urlMatString rangeOfString:@"cintas"].location == NSNotFound)
                 
             {
                 
@@ -2226,19 +2313,36 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     
     //int myInt = (int)sender.tag;
     indexPathSend = (int)sender.tag;
+    NSLog(@"indexPathSend:%i",indexPathSend);
     
     
-    nameString = [matNameArray objectAtIndex:indexPathSend];
+    //nameString = [matNameArray objectAtIndex:indexPathSend];
     
     //logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
     
     
-    if (nameString==NULL)
+    /*if (nameString==NULL)
     {
         
         nameString= @" ";
         
+    }*/
+    
+    
+    if([NSNull null] != [matNameArray objectAtIndex:indexPathSend])
+        
+    {
+        nameString =[matNameArray objectAtIndex:indexPathSend];
+        
+        
+    } else {
+        
+        
+        nameString =@" ";
+        
+        
     }
+
 
     
    
