@@ -442,6 +442,7 @@ NSString *kLogoHeaderCellID = @"logoHeaderCellID";
         matCompanyArray = [favoritesMatArray valueForKey:@"Company"];
         matColorArray = [favoritesMatArray valueForKey:@"Color"];
         //matBGColorArray = [_favoritesMatArray valueForKey:@"BGColor"];
+        NSLog(@"matNameArray %@",matNameArray);
         
         matCount = favoritesMatArray.count;
         

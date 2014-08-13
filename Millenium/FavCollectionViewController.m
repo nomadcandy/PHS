@@ -1142,7 +1142,7 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
 
         
         
-        [self.collectionView reloadData];
+        //[self.collectionView reloadData];
         
         
     }];
@@ -2376,20 +2376,8 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
     NSLog(@"indexPathSend:%i",indexPathSend);
     
     
-    //nameString = [matNameArray objectAtIndex:indexPathSend];
     
-    //logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
-    
-    
-    /*if (nameString==NULL)
-    {
-        
-        nameString= @" ";
-        
-    }*/
-    
-    
-    if([NSNull null] != [matNameArray objectAtIndex:indexPathSend])
+   /* if([NSNull null] != [matNameArray objectAtIndex:indexPathSend])
         
     {
         nameString =[matNameArray objectAtIndex:indexPathSend];
@@ -2401,12 +2389,15 @@ NSString *kFavHeaderCellID = @"logoHeaderCellID";
         nameString =@" ";
         
         
+    }*/
+
+
+    nameString = [matNameArray objectAtIndex:indexPathSend];
+    if ([[NSNull null] isEqual:nameString]) {
+        nameString = nil;
     }
-
-
-    
    
-       sellerString = [matSellerArray objectAtIndex:indexPathSend];
+    sellerString = [matSellerArray objectAtIndex:indexPathSend];
     if ([[NSNull null] isEqual:sellerString]) {
         sellerString = nil;
     }
