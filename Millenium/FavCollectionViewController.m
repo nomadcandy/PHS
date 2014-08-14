@@ -908,23 +908,14 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         artworkSellerArray = [searchLogoArray valueForKey:@"Seller"];
         }];
 
+        artworkCount = searchLogoArray.count;
+
         [searchMatArray
             enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL* stop) {
 
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
 
-            // adding an array to COREDATA
-            // NSString *predicateString = [NSString stringWithFormat
-            // @"artworkNameArray == $EMPLOYEE_ID"];
-            /*  NSString *predicateString = [NSString stringWithFormat
-             @"artworkNameArray == ArtworkName"];
-             NSPredicate *predicate = [NSPredicate
-             predicateWithFormat:predicateString];
-
-             for (NSString *anArtworkName in logoSearchs) {
-             NSDictionary *variables = @{ @"ArtworkName" : anArtworkName };
-             NSPredicate *localPredicate = [predicate
-             predicateWithSubstitutionVariables:variables];*/
+            
 
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
             matFormatArray = [searchMatArray valueForKey:@"Format"];
@@ -939,6 +930,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
                 //[self.collectionView reloadData];
             }];
+
+        matCount = searchMatArray.count;
 
         [self performSegueWithIdentifier:@"collectionPickedSegue" sender:self];
 
@@ -1315,9 +1308,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     for (LogoFavorite* logoFavoriteDelete in fetchedFavoritesArray) {
         // NSLog(@"artworkName %@",logoFavoriteDelete.artworkName);
         [managedObjectContext deleteObject:logoFavoriteDelete];
-        
     }
-    
+
     [managedObjectContext save:nil];
 
     [self viewDidLoad];
@@ -1925,7 +1917,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             NSDocumentDirectory, NSUserDomainMask, YES);
         NSString* imagePath = [directoryPath objectAtIndex:0];
         // imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
-        imagePath = [imagePath stringByAppendingPathComponent:urlString];
+        imagePath = [imagePath stringByAppendingPathComponent:urlMatString];
         // imagePath= [imagePath stringByAppendingPathComponent:nameString];
         // NSLog(@"urlMatStringInMethod:%@",urlMatString);
 
