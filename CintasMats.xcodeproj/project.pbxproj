@@ -2298,7 +2298,7 @@
 				GCC_PREFIX_HEADER = "Millenium/CintasMats-Prefix.pch";
 				INFOPLIST_FILE = "Millenium/CintasMats-Info.plist";
 				PRODUCT_NAME = CintasMats;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2b670721-7dde-4f2e-b8b3-a363e4fe4e28";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2315,7 +2315,7 @@
 				GCC_PREFIX_HEADER = "Millenium/CintasMats-Prefix.pch";
 				INFOPLIST_FILE = "Millenium/CintasMats-Info.plist";
 				PRODUCT_NAME = CintasMats;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2b670721-7dde-4f2e-b8b3-a363e4fe4e28";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};

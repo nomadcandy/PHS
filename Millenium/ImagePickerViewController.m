@@ -692,7 +692,7 @@
 
         NSLog(@"Old String: '%@' --> New String: '%@'", searchOneString, newString);
 
-        NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=1&locationID=-1&userID=0", newString];
+        NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostRecent&interactiveOnly=1&locationID=-1&userID=0", newString];
 
         NSURL* urlSearch = [[NSURL alloc] initWithString:urlSearchString];
         NSURLRequest* request = [NSURLRequest requestWithURL:
@@ -727,7 +727,7 @@
 
         artworkCount = searchLogoArray.count;
 
-        NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostPopular&interactiveOnly=0&locationID=-1&userID=0", newString];
+        NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostRecent&interactiveOnly=0&locationID=-1&userID=0", newString];
 
         NSURL* urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
         NSURLRequest* requestMat = [NSURLRequest requestWithURL:
@@ -1240,6 +1240,7 @@
         NSURLRequest* urlRequest = [NSURLRequest requestWithURL:url];
         [self->googleWebView loadRequest:urlRequest];
     }
+
 }
 
 - (BOOL)countOfAlert
