@@ -264,9 +264,19 @@
     return context;
 }
 
+- (void)refreshView:(UIRefreshControl*)refresh
+{
+    NSLog(@"test");
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    //UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
+    //[refresh addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
+    //[fontPicker addTarget:self action:@selector(refreshView:) ];
+    //self.refreshControl = refresh;
 
     //_emailString=@"A New Sketch Request";
 
@@ -1778,26 +1788,18 @@
 
         if ([orientString isEqualToString:@"Landscape"]) {
             textOrientField.text = @"Landscape";
-            //portraitImageView.hidden=YES;
-            //landscapeImageView.hidden=NO;
         }
 
         if ([orientString isEqualToString:@"Portrait"]) {
-            //portraitImageView.hidden=NO;
-            //landscapeImageView.hidden=YES;
             textOrientField.text = @"Portrait";
 
         } else {
             textOrientField.text = @"";
-            //portraitImageView.hidden=YES;
-            //landscapeImageView.hidden=YES;
         }
 
         matView1.hidden = NO;
         matBGLogoView.hidden = YES;
 
-        //[self.matView addSubview:noteLayerView];
-        //[self.matView bringSubviewToFront:noteLayerView];
         [self.matView1 setUserInteractionEnabled:YES];
         [self.matView1 addSubview:noteLayerView];
 
@@ -5017,6 +5019,8 @@ enum {
         [self.lastMovedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
 
     } else if (component == 1) {
+        //[self.fontPicker reloadAllComponents];
+
         int chosenColor = [pickerView selectedRowInComponent:1];
         chosenColorInt = [pickerView selectedRowInComponent:1];
         // NSLog(@"%i",chosenColorInt);
@@ -5032,6 +5036,11 @@ enum {
         //convertStringTo an Integer
 
         textDecField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
+
+        UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
+        [refresh addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
+
+        [self refreshView:refresh];
 
     } else {
         int chosenFontSize1 = [pickerView selectedRowInComponent:2];

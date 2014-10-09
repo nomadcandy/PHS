@@ -4820,7 +4820,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTappedWaterGuard:" destination="LNG-cb-6CN" eventType="touchUpInside" id="uiV-zT-Bbp"/>
+                                            <action selector="buttonTappedUltraGuard:" destination="LNG-cb-6CN" eventType="touchUpInside" id="bs8-Wt-T6r"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsJ-JU-jCg">
@@ -4830,7 +4830,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTappedSpringStep:" destination="LNG-cb-6CN" eventType="touchUpInside" id="Oep-fv-q4x"/>
+                                            <action selector="buttonTappedWaterGuard:" destination="LNG-cb-6CN" eventType="touchUpInside" id="W5L-oP-VQC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojt-Sf-yGW">
@@ -4840,7 +4840,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonTappedWaterGuardDiamond:" destination="LNG-cb-6CN" eventType="touchUpInside" id="ZKl-vu-3sJ"/>
+                                            <action selector="buttonTappedEcoGuard:" destination="LNG-cb-6CN" eventType="touchUpInside" id="RiF-n1-k3i"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-bT-YWd">
@@ -5418,8 +5418,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="c2D-ne-Y5B"/>
         <segue reference="wpq-PH-bdK"/>
-        <segue reference="gYW-Ou-qn0"/>
+        <segue reference="c2D-ne-Y5B"/>
+        <segue reference="QQh-is-hk2"/>
     </inferredMetricsTieBreakers>
 </document>
