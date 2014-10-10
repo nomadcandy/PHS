@@ -96,7 +96,7 @@
 
 - (IBAction)buttonTappedWaterGuardLogoInlay:(UIButton*)sender
 {
-    selectedPdfString = @"WaterGuardLogoInlay.png";
+    selectedPdfString = @"WaterGuardLogoInlayPDF.png";
     selectedString = @"Water Guard Logo Inlay";
 
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];
@@ -120,8 +120,7 @@
 
 - (IBAction)buttonTappedUltraGuardLogoInlay:(UIButton*)sender
 {
-    selectedPdfString = @"UltraGuardLogoInlay.png";
-    //selectedString=@"Water Guard Logo Inlay";
+    selectedPdfString = @"UltraGuardLogoInlayPDF.png";
     selectedString = @"Ultra Guard Logo Inlay";
 
     [self performSegueWithIdentifier:@"pdfPickedSegue" sender:sender];

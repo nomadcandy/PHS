@@ -1099,10 +1099,6 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     self.favoritesMatArray =
         [[managedObjectContext executeFetchRequest:fetchRequest
                                              error:nil] mutableCopy];
-    // self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest
-    // error:nil] mutableCopy];
-
-    // NSLog(@"favoritesMatArray %@",favoritesMatArray);
 }
 
 - (IBAction)removeMatFavorite:(id)sender
