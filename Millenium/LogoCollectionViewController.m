@@ -435,7 +435,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     //NSLog(@"userIDString: %@", userIDString);
 
     //Search Logos
-    NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostRecent&interactiveOnly=1&locationID=-1&userID=%@", 20, userIDString];
+    NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=designdate&interactiveOnly=1&locationID=-1&userID=%@", 20, userIDString];
 
     NSURL* urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     NSURLRequest* request = [NSURLRequest requestWithURL:
@@ -473,7 +473,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     //NSLog(@"artworkCount %i",artworkCount);
 
     //Search Mats
-    NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostRecent&interactiveOnly=0&locationID=-1&userID=%@", 20, userIDString];
+    NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=designdate&interactiveOnly=0&locationID=-1&userID=%@", 20, userIDString];
 
     NSURL* urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
     NSURLRequest* requestMat = [NSURLRequest requestWithURL:
@@ -593,7 +593,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         stringForKey:@"locationID"];
 
     //Search Logos
-    NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostRecent&interactiveOnly=1&locationID=%@&userID=0", 20, locationIDString];
+    NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=designdate&interactiveOnly=1&locationID=%@&userID=0", 20, locationIDString];
 
     NSURL* urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     NSURLRequest* request = [NSURLRequest requestWithURL:
@@ -626,7 +626,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     artworkCount = searchLogoArray.count;
 
     //Search Mats
-    NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostRecent&interactiveOnly=0&locationID=%@&userID=0", 20, locationIDString];
+    NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=designdate&interactiveOnly=0&locationID=%@&userID=0", 20, locationIDString];
 
     NSURL* urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
     NSURLRequest* requestMat = [NSURLRequest requestWithURL:
@@ -752,7 +752,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
         //Search Logos
 
-        NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostRecent&interactiveOnly=1&locationID=-1&userID=0", newString];
+        NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=designdate&interactiveOnly=1&locationID=-1&userID=0", newString];
 
         NSURL* urlSearch = [[NSURL alloc] initWithString:urlSearchString];
         NSURLRequest* request = [NSURLRequest requestWithURL:
@@ -786,7 +786,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
         artworkCount = searchLogoArray.count;
 
-        NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostRecent&interactiveOnly=0&locationID=-1&userID=0", newString];
+        NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=designdate&interactiveOnly=0&locationID=-1&userID=0", newString];
 
         NSURL* urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
         NSURLRequest* requestMat = [NSURLRequest requestWithURL:
