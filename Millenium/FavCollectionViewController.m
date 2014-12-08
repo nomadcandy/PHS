@@ -491,7 +491,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     // Search Logos
     NSString* urlSearchString = [NSString
         stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/"
-                         @"?searchString=%%%i&Orderby=designdate&"
+                         @"?searchString=%%%i&Orderby=mostRecent&"
                          @"interactiveOnly=1&locationID=-1&userID=%@",
                          20,
                          userIDString];
@@ -530,7 +530,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     // Search Mats
     NSString* urlSearchMatString = [NSString
         stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/"
-                         @"?searchString=%%%i&Orderby=designdate&"
+                         @"?searchString=%%%i&Orderby=mostRecent&"
                          @"interactiveOnly=0&locationID=-1&userID=%@",
                          20,
                          userIDString];
@@ -647,7 +647,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     // Search Logos
     NSString* urlSearchString = [NSString
         stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/"
-                         @"?searchString=%%%i&Orderby=designdate&"
+                         @"?searchString=%%%i&Orderby=mostRecent&"
                          @"interactiveOnly=1&locationID=%@&userID=0",
                          20,
                          locationIDString];
@@ -681,7 +681,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     // Search Mats
     NSString* urlSearchMatString = [NSString
         stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/"
-                         @"?searchString=%%%i&Orderby=designdate&"
+                         @"?searchString=%%%i&Orderby=mostRecent&"
                          @"interactiveOnly=0&locationID=%@&userID=0",
                          20,
                          locationIDString];
@@ -834,7 +834,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
         NSString* urlSearchString = [NSString
             stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/"
-                             @"?searchString=%@&Orderby=designdate&"
+                             @"?searchString=%@&Orderby=mostRecent&"
                              @"interactiveOnly=1&locationID=-1&userID=0",
                              newString];
 
@@ -866,7 +866,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
         NSString* urlSearchMatString = [NSString
             stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/"
-                             @"?searchString=%@&Orderby=designdate&"
+                             @"?searchString=%@&Orderby=mostRecent&"
                              @"interactiveOnly=0&locationID=-1&userID=0",
                              newString];
 
