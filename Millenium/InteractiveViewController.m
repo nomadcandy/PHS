@@ -4979,10 +4979,10 @@ enum {
         secondLabel.textColor = [UIColor darkGrayColor];
         secondLabel.backgroundColor = [UIColor clearColor];
 
-        UIImageView* icon = [colorNamesImagesArray objectAtIndex:row];
+        /*UIImageView* icon = [colorNamesImagesArray objectAtIndex:row];
         icon.frame = CGRectMake(200, 0, 50, 50);
 
-        return icon;
+        return icon;*/
         return secondLabel;
 
     } else {
@@ -5021,7 +5021,7 @@ enum {
     } else if (component == 1) {
         //[self.fontPicker reloadAllComponents];
 
-        int chosenColor = [pickerView selectedRowInComponent:1];
+        //int chosenColor = [pickerView selectedRowInComponent:1];
         chosenColorInt = [pickerView selectedRowInComponent:1];
         // NSLog(@"%i",chosenColorInt);
 
@@ -5035,22 +5035,24 @@ enum {
         blueValue = [blueInt intValue];
         //convertStringTo an Integer
 
-        textDecField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
+       
+        
+        self.lastMovedTextField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
+        [self.lastMovedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
 
-        UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
+       /* UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
         [refresh addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
 
-        [self refreshView:refresh];
+        [self refreshView:refresh];*/
 
     } else {
         int chosenFontSize1 = [pickerView selectedRowInComponent:2];
         chosenFontSize = chosenFontSize1 * 10;
 
-        //chosenFontSize=[fontSizeArray objectAtIndex:chosenFontSize];
-        [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
-        textDecField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
-        [_selectedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
-        _selectedTextField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
+                
+        
+        self.lastMovedTextField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
+        [self.lastMovedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
     }
 }
 
