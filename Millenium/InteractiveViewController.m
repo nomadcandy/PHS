@@ -4591,6 +4591,17 @@ enum {
     //[self dismissModalViewControllerAnimated:NO];
 }
 
+- (IBAction)centerLogo:(id)sender
+{
+    
+    CGPoint centerImageView = croppedImageView.center;
+    //centerImageView = self.matBGLogoView.center;
+    logoPicButton.center = centerImageView;
+    
+    //matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+}
+
+
 //# UpdateMatSize
 
 - (IBAction)sizeFieldUpdate:(id)sender
