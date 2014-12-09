@@ -275,6 +275,9 @@
 		42A24BFA19181FB800568305 /* InteractiveLandscapeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */; };
 		42A24BFC19183F3000568305 /* InteractiveSignHere.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BFB19183F3000568305 /* InteractiveSignHere.png */; };
 		42A24BFE191843FF00568305 /* InteractiveGreyMat.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A24BFD191843FF00568305 /* InteractiveGreyMat.png */; };
+		42A2C3781A37A224001B27CE /* eyeShut2Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A2C3761A37A224001B27CE /* eyeShut2Icon.png */; };
+		42A2C3791A37A224001B27CE /* eyeShutIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A2C3771A37A224001B27CE /* eyeShutIcon.png */; };
+		42A2C37B1A37A2A2001B27CE /* AddNotesIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42A2C37A1A37A2A2001B27CE /* AddNotesIcon2.png */; };
 		42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AB550F18EF51310051AF9F /* LogoSelectedBG.png */; };
 		42B014FE18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
 		42B014FF18DF450F0068019C /* WebViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B014FD18DF450F0068019C /* WebViewBG.png */; };
@@ -707,6 +710,9 @@
 		42A24BF419181FB800568305 /* InteractiveLandscapeButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveLandscapeButton.png; sourceTree = "<group>"; };
 		42A24BFB19183F3000568305 /* InteractiveSignHere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveSignHere.png; sourceTree = "<group>"; };
 		42A24BFD191843FF00568305 /* InteractiveGreyMat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InteractiveGreyMat.png; sourceTree = "<group>"; };
+		42A2C3761A37A224001B27CE /* eyeShut2Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeShut2Icon.png; sourceTree = "<group>"; };
+		42A2C3771A37A224001B27CE /* eyeShutIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeShutIcon.png; sourceTree = "<group>"; };
+		42A2C37A1A37A2A2001B27CE /* AddNotesIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddNotesIcon2.png; sourceTree = "<group>"; };
 		42AB550F18EF51310051AF9F /* LogoSelectedBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoSelectedBG.png; sourceTree = "<group>"; };
 		42B014FD18DF450F0068019C /* WebViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG.png; sourceTree = "<group>"; };
 		42B0150018DF46970068019C /* WebViewBG1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WebViewBG1.png; sourceTree = "<group>"; };
@@ -1200,6 +1206,9 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				42A2C37A1A37A2A2001B27CE /* AddNotesIcon2.png */,
+				42A2C3761A37A224001B27CE /* eyeShut2Icon.png */,
+				42A2C3771A37A224001B27CE /* eyeShutIcon.png */,
 				42D180C01986BFC0003A2F61 /* fontPickerColors */,
 				4285770E197D66D2004972AD /* eyeOpenBlackIcon.png */,
 				4285770F197D66D2004972AD /* eyeClosedBlackIcon.png */,
@@ -1728,6 +1737,7 @@
 				422139A219128F8B001BD328 /* AssetsRemFavButtons.png in Resources */,
 				42081FD81947B04700412486 /* TripleFlexScraperPDF.png in Resources */,
 				428576F4197C7D7F004972AD /* pickerIcon.png in Resources */,
+				42A2C37B1A37A2A2001B27CE /* AddNotesIcon2.png in Resources */,
 				426A6A1F18ED0CC300255331 /* SampleLogo2.png in Resources */,
 				42081FED1948A3A200412486 /* RepHead.png in Resources */,
 				428085D018FD792D00389C9C /* goButton.png in Resources */,
@@ -1814,6 +1824,7 @@
 				4297E09419250F8100E43779 /* Yellow_128.jpg in Resources */,
 				422139931912883A001BD328 /* AssetsFavButton.png in Resources */,
 				42D180E21986C1B6003A2F61 /* Suede50_123.jpg in Resources */,
+				42A2C3791A37A224001B27CE /* eyeShutIcon.png in Resources */,
 				42E9AC1418FF59E2000E226D /* Clean2Button.png in Resources */,
 				426A6A3318EDADBA00255331 /* FriendlyButton.png in Resources */,
 				42D181041986C1B6003A2F61 /* Clay50_126.jpg in Resources */,
@@ -1874,6 +1885,7 @@
 				4297E0501923C74D00E43779 /* MaskWhiteSquare8.png in Resources */,
 				42D181021986C1B6003A2F61 /* Cranberry50_114.jpg in Resources */,
 				4221399519128864001BD328 /* AssetsAddButton.png in Resources */,
+				42A2C3781A37A224001B27CE /* eyeShut2Icon.png in Resources */,
 				426A6A3918EDD99200255331 /* FriendlyCharlesUse.png in Resources */,
 				420BEF9A191937C7003DCEB0 /* MaskGreySquare4.png in Resources */,
 				42B0158118E3428B0068019C /* UltraGuardLogoInlayPDF.png in Resources */,
