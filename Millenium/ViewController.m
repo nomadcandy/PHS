@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "InteractiveViewController.h"
+#import "ImagePickerViewController.h"
+
 
 @interface ViewController ()
 
@@ -250,6 +252,16 @@
 {
     return UIStatusBarStyleDefault;
 }*/
+
+- (IBAction)goAcquireSketches:(id)sender
+{
+    UIStoryboard* storyboardLogo = self.storyboard;
+    ImagePickerViewController* ImagePickerVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"ImagePickerBoard"];
+    
+    // Configure the new view controller here.
+    [self presentViewController:ImagePickerVC animated:YES completion:nil];
+}
+
 
 
 -(IBAction)showLogin:(id)sender{
