@@ -4174,6 +4174,93 @@ enum {
     }
 }
 
+
+- (IBAction)goSaveSignature:(UIButton*)sender event:(id)event
+{
+    if ([MFMailComposeViewController canSendMail]) {
+        [self.fontPicker removeFromSuperview];
+        
+        decTextLayerView.hidden = NO;
+        noteLayerView.hidden = NO;
+        
+        CGRect screenRect2 = CGRectMake(0.0, 0, 1028, 720);
+        
+        UIGraphicsBeginImageContext(screenRect2.size);
+        //UIGraphicsBeginImageContext(interactiveMatView.size);
+        
+        CGContextRef ctx1 = UIGraphicsGetCurrentContext();
+        [[UIColor whiteColor] set];
+        CGContextFillRect(ctx1, screenRect2);
+        
+        [self.view.layer renderInContext:ctx1];
+        
+        UIImage* matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        NSString* imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matSignatureImage.jpg"]];
+        [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
+        
+        MFMailComposeViewController* mailComposer;
+        
+        mailComposer = [[MFMailComposeViewController alloc] init];
+        mailComposer.mailComposeDelegate = self;
+        
+        NSString* emailTitle = @"Mat Approved";
+        
+        //NSString*firstNameString= firstNameField.text;
+        //NSString*lastNameString= lastNameField.text;
+        
+        //NSLog(@"%@",lastNameString);
+        
+        //NSString*messageString = [NSString stringWithFormat:@"%@  %@, %@, %@, %@, %@, %@, %@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
+        
+        NSString* messageString = @"This mat requires your approval";
+        
+        //TODO add string and images to email
+        NSString* messageBody = messageString;
+        
+        //add here
+        //[mailComposer setMessageBody:self.messageBody isHTML:YES];
+        
+        //NSArray *toRecipents = [NSArray arrayWithObject:emailString];
+        //NSArray *toRecipents = @"yummy@nomadcandy.com";
+        
+        //Display Email Composer
+        MFMailComposeViewController* mc = [[MFMailComposeViewController alloc] init];
+        mc.mailComposeDelegate = self;
+        [mc setSubject:emailTitle];
+        [mc setMessageBody:messageBody isHTML:NO];
+        
+        //[mc setToRecipients:toRecipents];
+        
+        NSMutableArray* recipients = [[NSMutableArray alloc] init];
+        
+        NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        /* NSString *imagePath1 =  [directoryPath objectAtIndex:0];
+         imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];*/
+        
+        NSData* data = [NSData dataWithContentsOfFile:imagePath2];
+        //UIImage *image = [UIImage imageWithData:data];
+        
+        NSString* imagePath3 = [directoryPath objectAtIndex:0];
+        imagePath2 = [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
+        
+        //NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
+        
+        [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matNoteImage.jpg"];
+        
+        [mailComposer setToRecipients:recipients];
+        
+        [self presentViewController:mc animated:YES completion:NULL];
+        
+    } else {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please set up an email account on this device to enable this feature." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        
+        [alert show];
+    }
+}
+
 - (IBAction)goSearch:(id)sender
 {
     [activityIndicator startAnimating];

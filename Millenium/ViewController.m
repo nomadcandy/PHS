@@ -253,6 +253,29 @@
     return UIStatusBarStyleDefault;
 }*/
 
+- (IBAction)goRepSketches:(id)sender
+{
+    UIStoryboard* storyboardLogo = self.storyboard;
+    LogoCollectionViewController* LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+    [self presentViewController:LogoCVC animated:YES completion:nil];
+}
+
+- (IBAction)goLocationSketches:(id)sender
+{
+    UIStoryboard* storyboardLogo = self.storyboard;
+    LogoCollectionViewController* LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+    [self presentViewController:LogoCVC animated:YES completion:nil];
+}
+
+- (IBAction)goFavSketches:(id)sender
+{
+    UIStoryboard* storyboardLogo = self.storyboard;
+    LogoCollectionViewController* LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
+    [self presentViewController:LogoCVC animated:YES completion:nil];
+}
+
+
+
 - (IBAction)goAcquireSketches:(id)sender
 {
     UIStoryboard* storyboardLogo = self.storyboard;

@@ -23,12 +23,9 @@
 
 @end
 
-/*@protocol StringSetDelegate <NSObject>
-- (void)didSetNameString:(NSString *)nameString;*/
 
-//@end
 
-@interface FavCollectionViewController : UICollectionViewController <DIYMenuDelegate, ButtonFavPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate /*, StringSetDelegate*/> {
+@interface FavCollectionViewController : UICollectionViewController <DIYMenuDelegate, ButtonFavPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate > {
     /*NSString*sellerString;
     NSString*nameString;
     NSString*companyString;
@@ -45,10 +42,8 @@
     NSString* urlUnFavString;
 
     IBOutlet UITextField* searchOutField;
-    //UITextField *searchHereField;
     LogoSearch* logoSearch;
-    //UIButton* button;
-
+   
     int selectedIndex;
     int indexPathSend;
     int rowSelectedHere;

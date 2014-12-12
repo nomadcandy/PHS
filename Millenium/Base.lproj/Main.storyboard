@@ -220,7 +220,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="log-b2-7Uv" customClass="SignView">
-                                <rect key="frame" x="428" y="631" width="459" height="77"/>
+                                <rect key="frame" x="428" y="631" width="449" height="77"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -293,7 +293,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luq-4a-iUE">
-                                <rect key="frame" x="885" y="641" width="66" height="52"/>
+                                <rect key="frame" x="886" y="641" width="66" height="52"/>
                                 <state key="normal" backgroundImage="envelope.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1293,6 +1293,17 @@
                                     <action selector="addText:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="cAV-P6-nvh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsE-FS-8rq">
+                                <rect key="frame" x="436" y="712" width="66" height="52"/>
+                                <state key="normal" backgroundImage="envelope.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="envelope.png"/>
+                                <state key="highlighted" backgroundImage="envelope.png"/>
+                                <connections>
+                                    <action selector="goMail1:event:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Lbd-R5-QHZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -2189,6 +2200,12 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVG-xs-Bt2">
+                                <rect key="frame" x="26" y="270" width="55" height="55"/>
+                                <state key="normal" image="AssetsFavButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOM-6Z-tsG">
                                 <rect key="frame" x="26" y="144" width="55" height="55"/>
                                 <state key="normal" image="GoWeb1.png">
@@ -2204,9 +2221,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVG-xs-Bt2">
-                                <rect key="frame" x="26" y="270" width="55" height="55"/>
-                                <state key="normal" image="AssetsFavButton.png">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbm-sd-Ngi">
+                                <rect key="frame" x="26" y="333" width="55" height="55"/>
+                                <state key="normal" image="AssetsRepButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -4922,6 +4939,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="qOq-Ne-VbY"/>
         <segue reference="wpq-PH-bdK"/>
-        <segue reference="QQh-is-hk2"/>
+        <segue reference="gYW-Ou-qn0"/>
     </inferredMetricsTieBreakers>
 </document>
