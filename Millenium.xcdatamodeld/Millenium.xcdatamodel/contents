@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="13F34" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Draft" representedClassName="Draft" syncable="YES">
+        <attribute name="draftName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullImageURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="LogoFavorite" representedClassName="LogoFavorite" syncable="YES">
         <attribute name="artworkName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="artworkSize" optional="YES" attributeType="String" syncable="YES"/>
@@ -88,5 +92,6 @@
         <element name="MatFavorite" positionX="-18" positionY="117" width="128" height="343"/>
         <element name="MatSearch" positionX="-36" positionY="108" width="128" height="313"/>
         <element name="RepSearch" positionX="0" positionY="126" width="128" height="45"/>
+        <element name="Draft" positionX="-18" positionY="135" width="128" height="73"/>
     </elements>
 </model>

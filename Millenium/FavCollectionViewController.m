@@ -123,7 +123,7 @@
 @synthesize locationNameString;
 @synthesize locationNumberString;
 
-// NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
+//NSString *kMatCollectionViewCellID = @"matCollectionViewCellID";
 NSString* kFavCollectionViewCellID = @"logoCollectionViewCellID";
 NSString* kFavHeaderCellID = @"logoHeaderCellID";
 

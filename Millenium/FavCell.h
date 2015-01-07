@@ -23,9 +23,7 @@
 
 @property (nonatomic,strong) IBOutlet UILabel *goBackLogoLabel;
 @property (nonatomic,strong) IBOutlet UILabel *goBackMatLabel;
-//@property (strong, nonatomic) IBOutlet UIButton *favButton;
-//@property (strong, nonatomic) IBOutlet UIButton *removeFavButton;
-//@property (strong, nonatomic) IBOutlet UIButton *saveButton;
+
 
 
 @property (nonatomic,strong) IBOutlet UIButton *removeFavLogoButton;

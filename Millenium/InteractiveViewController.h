@@ -12,6 +12,7 @@
 #import "MyDraggableImage.h"
 #import "DIYMenu.h"
 #import "LogoCollectionViewController.h"
+#import "DraftCollectionViewController.h"
 #import "ImagePickerViewController.h"
 #import "SignOffViewController.h"
 
@@ -349,6 +350,11 @@
 
 @property (nonatomic, strong) NSString *matColorUseString;
 @property (nonatomic, strong) NSString *matSizeUseString;
+
+
+@property (nonatomic, strong) NSString*draftUrlAddFavString;
+@property (nonatomic, strong) NSString*draftNameAddFavString;
+
 
 @property (nonatomic, strong) NSString*matUrlAddFavString;
 @property (nonatomic, strong) NSString*matNameAddFavString;

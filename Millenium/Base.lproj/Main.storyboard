@@ -141,7 +141,7 @@
                                 <rect key="frame" x="6" y="585" width="414" height="143"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-fi-6vE">
-                                <rect key="frame" x="587" y="709" width="55" height="55"/>
+                                <rect key="frame" x="671" y="711" width="55" height="55"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                 <state key="normal" backgroundImage="AddNotesIcon2.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -154,7 +154,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQT-cJ-UpN">
-                                <rect key="frame" x="663" y="716" width="50" height="50"/>
+                                <rect key="frame" x="743" y="714" width="50" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <state key="normal" backgroundImage="eyeOpenBlackIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,7 +166,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gV-Yq-EfW">
-                                <rect key="frame" x="735" y="716" width="50" height="50"/>
+                                <rect key="frame" x="808" y="714" width="50" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <state key="normal" backgroundImage="eyeShut2Icon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -225,7 +225,7 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRW-Mr-nQW">
-                                <rect key="frame" x="954" y="601" width="50" height="50"/>
+                                <rect key="frame" x="967" y="597" width="50" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
                                 <state key="normal" backgroundImage="FavAddIcon.png">
@@ -282,7 +282,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUb-hm-vNf">
-                                <rect key="frame" x="954" y="641" width="68" height="51"/>
+                                <rect key="frame" x="890" y="597" width="60" height="45"/>
                                 <state key="normal" backgroundImage="envelope.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -293,7 +293,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luq-4a-iUE">
-                                <rect key="frame" x="886" y="641" width="66" height="52"/>
+                                <rect key="frame" x="890" y="647" width="60" height="45"/>
                                 <state key="normal" backgroundImage="envelope.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -577,7 +577,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9a-o0-Ov9">
-                                <rect key="frame" x="895" y="690" width="56" height="21"/>
+                                <rect key="frame" x="897" y="686" width="56" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -591,7 +591,7 @@
                                 </accessibility>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BG-e8-Xua">
-                                <rect key="frame" x="965" y="690" width="56" height="24"/>
+                                <rect key="frame" x="907" y="631" width="56" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1273,15 +1273,6 @@
                                     <action selector="bgColorSelected:event:" destination="EOd-lr-Xtf" eventType="touchDownRepeat" id="rEU-0h-AyL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OO-RJ-PIv">
-                                <rect key="frame" x="510" y="718" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="centerLogo:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="6KY-l8-Z89"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-1x-oeW">
                                 <rect key="frame" x="127" y="217" width="53" height="53"/>
                                 <state key="normal" backgroundImage="textBlackIcon.png">
@@ -1293,8 +1284,37 @@
                                     <action selector="addText:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="cAV-P6-nvh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VM-0v-Cbe">
+                                <rect key="frame" x="517" y="718" width="62" height="30"/>
+                                <state key="normal" title="go drafts">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goDrafts:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Cdl-Ea-rhs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OO-RJ-PIv">
+                                <rect key="frame" x="601" y="718" width="46" height="30"/>
+                                <state key="normal" title="Center">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerLogo:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="6KY-l8-Z89"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkU-aY-gHB">
+                                <rect key="frame" x="973" y="662" width="32" height="30"/>
+                                <state key="normal" title="save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDraft:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="b7D-wP-s58"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsE-FS-8rq">
-                                <rect key="frame" x="436" y="712" width="66" height="52"/>
+                                <rect key="frame" x="890" y="707" width="60" height="45"/>
                                 <state key="normal" backgroundImage="envelope.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2851,7 +2871,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DV7-oj-bkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4468" y="-2053"/>
+            <point key="canvasLocation" x="-4468" y="-1825"/>
         </scene>
         <!--Image Picker View Controller-->
         <scene sceneID="gLM-9p-gub">
@@ -4103,6 +4123,89 @@
             </objects>
             <point key="canvasLocation" x="-2231" y="-4358"/>
         </scene>
+        <!--Draft Collection View Controller-->
+        <scene sceneID="5CL-Ff-ADM">
+            <objects>
+                <collectionViewController storyboardIdentifier="DraftViewBoard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3lU-CS-FwV" customClass="DraftCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="k2o-4t-JDk">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xsU-Ep-oEH">
+                            <size key="itemSize" width="970" height="543"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="draftHeaderCellID" reuseIdentifier="draftHeaderCellID" id="5Vf-hW-b5K" customClass="DraftHeaderCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="970" height="132"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="970" height="132"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="draftCollectionViewCellID" reuseIdentifier="draftCollectionViewCellID" id="mUw-ju-yu3" customClass="DraftCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="970" height="743"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AssetsGreyBox1.png" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-JD-eaO">
+                                            <rect key="frame" x="215" y="-2" width="600" height="490"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rF0-XH-Pmo">
+                                            <rect key="frame" x="215" y="7" width="600" height="481"/>
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="logoSelected:event:" destination="3lU-CS-FwV" eventType="touchUpInside" id="oqW-41-7Yi"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p47-R0-4wh">
+                                            <rect key="frame" x="728" y="531" width="38" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWs-X3-4wg">
+                                            <rect key="frame" x="227" y="512" width="417" height="35"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-7N-74H">
+                                            <rect key="frame" x="726" y="486" width="44" height="44"/>
+                                            <state key="normal" image="AssetCheckButton.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <size key="customSize" width="970" height="743"/>
+                                <connections>
+                                    <outlet property="draftChooseButton" destination="rF0-XH-Pmo" id="aFc-99-7xq"/>
+                                    <outlet property="draftTitleLabel" destination="sWs-X3-4wg" id="xLF-dV-dBp"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="3lU-CS-FwV" id="9CJ-t8-5YW"/>
+                            <outlet property="delegate" destination="3lU-CS-FwV" id="01x-XU-1Rj"/>
+                        </connections>
+                    </collectionView>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="poR-uA-Zm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4776" y="-5362"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="WvQ-If-tJX">
             <objects>
@@ -4937,8 +5040,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qOq-Ne-VbY"/>
-        <segue reference="wpq-PH-bdK"/>
         <segue reference="gYW-Ou-qn0"/>
+        <segue reference="KLb-Iu-kB6"/>
+        <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>
