@@ -3855,6 +3855,7 @@ else
 - (IBAction)addDraftWithNotes:(id)sender
 {
     decTextLayerView.hidden = NO;
+    noteLayerView.hidden=NO;
     NSString* nameStringHere = nameField.text;
     //NSLog(@"nameString %@",nameStringHere);
     
@@ -3868,13 +3869,15 @@ else
      matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
     
     if ([nameStringHere isEqualToString:@""] /*|| [matUrlAddFavString isEqualToString:@""] */) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request Draft With Notes and resave it" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        //alert.alertViewStyle = UIAlertViewStylePlainTextInput;
         
-        //alert.alertViewStyle = UIAlertViewStyleDefault;
+        alert.alertViewStyle = UIAlertViewStyleDefault;
         
         alert.tag = 1;
         [alert show];
+        
+        noteLayerView.hidden=NO;
         
     } else {
         //temporarily add button to subview to snap picture of mat
@@ -3892,37 +3895,26 @@ else
         
         noteLayerView.hidden = NO;
         
-        
-        
         [self.fontPicker removeFromSuperview];
         
         
         decTextLayerView.hidden = NO;
-        
-        
         UIGraphicsBeginImageContext(CGSizeMake(1024, 768));
         
         //this gets the graphic context
         CGContextRef context1 = UIGraphicsGetCurrentContext();
         
-        
         [[UIColor whiteColor] set];
-        
         
         [self.view.layer renderInContext:context1];
         
-        
         UIImage* draftImage = UIGraphicsGetImageFromCurrentImageContext();
-        
         UIGraphicsEndImageContext();
         
         croppedImageView = [[UIImageView alloc] initWithImage:draftImage];
         
         // Get size of current image
         CGSize size = [draftImage size];
-        
-        
-        
         
         // Frame location in view to show original image
         [croppedImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
@@ -4075,12 +4067,16 @@ else
     
     matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
 
-    if ([nameStringHere isEqualToString:@""] /*|| [matUrlAddFavString isEqualToString:@""] */) {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    if ([nameStringHere isEqualToString:@""] ) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request Draft  and resave it" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        //alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+        alert.alertViewStyle = UIAlertViewStyleDefault;
+
 
         alert.tag = 1;
         [alert show];
+        
 
     } else {
         //temporarily add button to subview to snap picture of mat
