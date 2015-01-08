@@ -476,7 +476,7 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
     
     //hide logo controls if no data
     if (indexPath.item > artworkFullImageArray.count - 1) {
-        //draftCell.draftChooseButton.hidden = YES;
+        draftCell.draftChooseButton.hidden = YES;
         draftCell.removeDraftButton.hidden = YES;
         draftCell.removeDraftLabel.hidden = YES;
         //draftCell.draftTitleLabel.hidden = YES;
@@ -549,14 +549,14 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
                                       forState:UIControlStateNormal];
         }
     }
-    
-    [[draftCell draftChooseButton] addTarget:self
-                                   action:@selector(logoSelected:event:)
+    //removed to debug
+   [[draftCell draftChooseButton] addTarget:self
+                                   action:@selector(draftSelected:event:)
                          forControlEvents:UIControlEventTouchUpInside];
     
     if (draftCell.draftChooseButton) {
         selectedIndex = [indexPath row];
-        _logoChooseButton.tag = [indexPath row];
+        _draftChooseButton.tag = [indexPath row];
         
         UIButton* button = [draftCell draftChooseButton];
         button.tag = selectedIndex;
@@ -657,8 +657,8 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
             
             // if([NSNull null] != [matFullImageArray objectAtIndex:indexPath.item])
         }
-    
-    [[draftCell draftChooseButton] addTarget:self
+    //removed to Debug
+   /* [[draftCell draftChooseButton] addTarget:self
                                   action:@selector(matSelected:event:)
                         forControlEvents:UIControlEventTouchUpInside];
     
@@ -670,7 +670,7 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
         button.tag = selectedIndex;
         intMat = 1;
         intLogo = 0;
-    }
+    }*/
     
     return draftCell;
 }
@@ -700,148 +700,43 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
     }
 }
 
-- (IBAction)logoSelected:(UIButton*)sender event:(id)event
+
+//- (IBAction)draftSelected:(UIButton*)sender
+//called programmatically
+- (IBAction)draftSelected:(UIButton*)sender event:(id)event
 {
-    interactiveHeaderString = @"Create Mat";
     indexPathSend = (int)sender.tag;
+    NSLog(@"indexPathSend: %d ",indexPathSend);
+    NSString* urlDraftString = [artworkFullImageArray objectAtIndex:indexPathSend];
+    NSLog(@"urlDraftString: %@",urlDraftString);
+    //new code
     
-    nameString = [artworkNameArray objectAtIndex:indexPathSend];
-    // NSLog(@" nameStringLogoSelected %@",nameString);
-    matBGColorString = @" ";
-    matColorString = @" ";
-    
-    /* if (indexPathSend <artworkFullImageArray.count-1 &&
-     artworkFullImageArray.count > 0){
-     
-     logoUseString =[artworkFullImageArray objectAtIndex:indexPathSend];
-     
-     
-     if (logoUseString==NULL)
-     {
-     
-     logoUseString= @"No Picture is Provided";
-     
-     }
-     
-     }*/
-    
-    sellerString = [artworkSellerArray objectAtIndex:indexPathSend];
-    if ([[NSNull null] isEqual:sellerString]) {
-        sellerString = nil;
-    }
-    
-    companyString = [artworkCompanyArray objectAtIndex:indexPathSend];
-    if ([[NSNull null] isEqual:companyString]) {
-        companyString = nil;
-    }
-    numberString = [artworkIDArray objectAtIndex:indexPathSend];
-    if ([[NSNull null] isEqual:numberString]) {
-        numberString = nil;
-    }
-    
-    sizeString = [artworkSizeArray objectAtIndex:indexPathSend];
-    if ([[NSNull null] isEqual:sizeString]) {
-        sizeString = @"4'x 6'";
-    }
-    
-    logoColorString = [artworkColorArray objectAtIndex:indexPathSend];
-    if ([[NSNull null] isEqual:logoColorString]) {
-        numberString = nil;
-    }
-    
-    /*if (indexPathSend <artworkColorArray.count-1){
-     
-     logoColorString =[artworkColorArray objectAtIndex:indexPathSend];
-     
-     if (logoColorString==NULL)
-     {
-     
-     logoColorString= @"No colors available";
-     
-     }
-     
-     
-     }*/
-    
-    urlString = [artworkFullImageArray objectAtIndex:indexPathSend];
-    
-    /*if(logoUseString==NULL){
-     
-     
-     NSString*pngString= @".png";
-     
-     
-     
-     urlString = [logoUseString stringByAppendingString:pngString];
-     
-     
-     
-     }*/
-    if ([urlString rangeOfString:@"cintas"].location == NSNotFound) {
-        NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(
-                                                                     NSDocumentDirectory, NSUserDomainMask, YES);
+    if ([urlDraftString rangeOfString:@"cintas"].location == NSNotFound) {
+        NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString* imagePath = [directoryPath objectAtIndex:0];
-        // imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
-        imagePath = [imagePath stringByAppendingPathComponent:urlString];
-        // imagePath= [imagePath stringByAppendingPathComponent:nameString];
-        // NSLog(@"urlMatStringInMethod:%@",urlMatString);
+        //imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+        imagePath = [imagePath stringByAppendingPathComponent:urlDraftString];
+        //NSLog(@"urlMatStringInMethod:%@",urlMatString);
         
         NSData* data = [NSData dataWithContentsOfFile:imagePath];
-        // no data here
-        UIImage* logoImage = [UIImage imageWithData:data];
+        //no data here
+        UIImage* draftImage = [UIImage imageWithData:data];
         
-        // NSLog(@"%@iconImage",iconImage);
-        imagePath = [NSHomeDirectory()
-                     stringByAppendingPathComponent:
-                     [NSString stringWithFormat:@"Documents/draftImage.png"]];
-        [UIImagePNGRepresentation(logoImage) writeToFile:imagePath
-                                              atomically:YES];
+        //NSLog(@"%@iconImage",iconImage);
+        NSString* imagePathDraftSend = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/draftImageSend.jpg"]];
+        [UIImagePNGRepresentation(draftImage) writeToFile:imagePathDraftSend atomically:YES];
         
     } else {
         NSString* httpString = @"http://";
-        NSString* urlStringAppend =
-        [httpString stringByAppendingString:urlString];
-        
-        NSData* data =
-        [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
-        
-        UIImage* iconImage;
-        
-        iconImage = [UIImage imageWithData:data];
-        
-        // NSLog(@"%@iconImage",iconImage);
-        NSString* imagePath = [NSHomeDirectory()
-                               stringByAppendingPathComponent:
-                               [NSString stringWithFormat:@"Documents/draftImage.png"]];
-        [UIImagePNGRepresentation(iconImage) writeToFile:imagePath
-                                              atomically:YES];
+        //crashes here
+        NSString* urlStringAppend = [httpString stringByAppendingString:urlDraftString];
+        NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+        UIImage* draftImage;
+        draftImage = [UIImage imageWithData:data];
+        //NSLog(@"%@iconImage",iconImage);
+        NSString* imagePathDraft = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/draftImageSend.png"]];
+        [UIImagePNGRepresentation(draftImage) writeToFile:imagePathDraft atomically:YES];
     }
-    
-    /*if ([[NSNull null] isEqual:logoUseString]) {
-     logoUseString = nil;
-     }
-     
-     if (indexPathSend <artworkFullImageArray.count-1){
-     
-     //urlString =[artworkFullImageArray objectAtIndex:indexPathSend];
-     NSString*httpString= @"http://";
-     NSString *urlStringAppend = [httpString
-     stringByAppendingString:logoUseString];
-     NSData * data = [NSData dataWithContentsOfURL:[NSURL
-     URLWithString:urlStringAppend]];
-     UIImage * iconImage;
-     iconImage = [UIImage imageWithData:data];
-     //NSLog(@"%@iconImage",iconImage);
-     
-     
-     NSString  *imagePath = [NSHomeDirectory()
-     stringByAppendingPathComponent:[NSString
-     stringWithFormat:@"Documents/logoImage.png"]];
-     [UIImagePNGRepresentation(iconImage) writeToFile:imagePath
-     atomically:YES];
-     
-     
-     }*/
 }
 
 // handle NsNull correctly
@@ -1133,19 +1028,19 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
     NSMutableArray* recipients = [[NSMutableArray alloc] init];
     
     NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* imagePath1 = [directoryPath objectAtIndex:0];
-    imagePath1 = [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];
+    NSString* imagePathDraftSend = [directoryPath objectAtIndex:0];
+    imagePathDraftSend= [imagePathDraftSend stringByAppendingPathComponent:@"draftImageSend.jpg"];
     
-    NSData* data = [NSData dataWithContentsOfFile:imagePath1];
+    NSData* data = [NSData dataWithContentsOfFile:imagePathDraftSend];
     //UIImage *image = [UIImage imageWithData:data];
     
-    NSString* imagePath3 = [directoryPath objectAtIndex:0];
-    imagePath1 = [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
+    /*NSString* imagePath3 = [directoryPath objectAtIndex:0];
+    imagePath1 = [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];*/
     
     //NSData* dataNote = [NSData dataWithContentsOfFile:imagePath3];
     
     // Add attachment
-    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
+    [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"draftImage.jpg"];
     [mailComposer setToRecipients:recipients];
     
     [self presentViewController:mc animated:YES completion:NULL];
@@ -1163,6 +1058,17 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
     UIStoryboard* storyboard = self.storyboard;
     ViewController* vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+
+// The mail compose view controller delegate method
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error
+{
+    //[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
 }
 - (void)textFieldDidChange:(UITextField*)searchHereField
 {

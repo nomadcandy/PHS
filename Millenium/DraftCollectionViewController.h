@@ -136,7 +136,7 @@
 @property (nonatomic, copy) NSString* searchHereString;
 
 @property (nonatomic, strong) IBOutlet UIButton* goBackButton;
-@property (nonatomic, strong) IBOutlet UIButton* logoChooseButton;
+@property (nonatomic, strong) IBOutlet UIButton* draftChooseButton;
 @property (nonatomic, strong) IBOutlet UIButton* matChooseButton;
 
 @property (nonatomic, strong) IBOutlet UIButton* removeFavMatButton;
