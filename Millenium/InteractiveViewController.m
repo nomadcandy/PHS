@@ -3852,6 +3852,214 @@ else
 }
 
 
+- (IBAction)addDraftWithNotes:(id)sender
+{
+    decTextLayerView.hidden = NO;
+    NSString* nameStringHere = nameField.text;
+    //NSLog(@"nameString %@",nameStringHere);
+    
+    /* NSString*matUrlAppendAddFavString= nameField.text;
+     NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
+     NSString*pngString= @".png";
+     //NSLog(@"nameFieldText %@",nameField.text);
+     //NSLog(@"nameFieldText %@",nameHideField.text);
+     
+     
+     matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
+    
+    if ([nameStringHere isEqualToString:@""] /*|| [matUrlAddFavString isEqualToString:@""] */) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        
+        //alert.alertViewStyle = UIAlertViewStyleDefault;
+        
+        alert.tag = 1;
+        [alert show];
+        
+    } else {
+        //temporarily add button to subview to snap picture of mat
+        
+        float x, y;
+        float a, b;
+        float c, d;
+        x = logoPicButton.frame.size.width;
+        y = logoPicButton.frame.size.height;
+        a = logoPicButton.frame.origin.x;
+        b = logoPicButton.frame.origin.y;
+        
+        c = a + 50;
+        d = b + 50;
+        
+        noteLayerView.hidden = NO;
+        
+        
+        
+        [self.fontPicker removeFromSuperview];
+        
+        
+        decTextLayerView.hidden = NO;
+        
+        
+        UIGraphicsBeginImageContext(CGSizeMake(1024, 768));
+        
+        //this gets the graphic context
+        CGContextRef context1 = UIGraphicsGetCurrentContext();
+        
+        
+        [[UIColor whiteColor] set];
+        
+        
+        [self.view.layer renderInContext:context1];
+        
+        
+        UIImage* draftImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        croppedImageView = [[UIImageView alloc] initWithImage:draftImage];
+        
+        // Get size of current image
+        CGSize size = [draftImage size];
+        
+        
+        
+        
+        // Frame location in view to show original image
+        [croppedImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
+        //[croppedImageView setFrame:CGRectMake(0, 0, 1024, 768)];
+        
+        
+        CGRect rect = CGRectMake(425, 142, 600, 416);
+        
+        // Create bitmap image from original image data,
+        // using rectangle to specify desired crop area
+        CGImageRef imageRef = CGImageCreateWithImageInRect([draftImage CGImage], rect);
+        UIImage* img = [UIImage imageWithCGImage:imageRef];
+        CGImageRelease(imageRef);
+        
+        //used to crop the image smaller we don't need this but good for reference
+        // Create and show the new image from bitmap data
+        croppedImageView = [[UIImageView alloc] initWithImage:img];
+        [croppedImageView setFrame:CGRectMake(0, 0, 600, 416)];
+        
+        //save new imageView to FAV
+        //CGRect screenRect3 = CGRectMake(425, 142, 600, 416);
+        //CGRect screenRect3 = CGRectMake(0, 0, 1024, 768);
+        
+        //UIGraphicsBeginImageContext(screenRect3.size);
+        
+        /*CGContextRef ctx2 = UIGraphicsGetCurrentContext();
+         [[UIColor whiteColor] set];
+         CGContextFillRect(ctx2, screenRect3);
+         
+         [self.croppedImageView.layer renderInContext:ctx2];
+         UIImage* draftCroppedImage = UIGraphicsGetImageFromCurrentImageContext();
+         
+         UIGraphicsEndImageContext();*/
+        
+        NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", nameStringHere]];
+        
+        
+        //not cropping image-commented out
+        //[UIImagePNGRepresentation(draftCroppedImage) writeToFile:imagePath atomically:YES];
+        
+        [UIImagePNGRepresentation(draftImage) writeToFile:imagePath atomically:YES];
+        
+        //NOTE- Do not remove local NSString values will break
+        NSLog(@"nameFieldText %@",nameField.text);
+        
+        
+        //NSString*matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];
+        
+        //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+        NSString* draftNameAddFavString = nameField.text;
+        NSString* draftSellerAddFavString = sellerField.text;
+        NSString* draftCompanyAddFavString = companyField.text;
+        NSString* draftIDAddFavString = numberField.text;
+        NSString* draftLocationIDAddFavString = locationIDString;
+        matColorAddFavString = matColorString;
+        matUseBGColorString = BGString;
+        
+        NSString* matSizeAddFavString = matSizeString;
+        
+        //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+        if (draftUrlAddFavString == NULL) {
+            NSString* draftUrlAppendAddFavString = nameField.text;
+            //NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
+            NSString* pngString = @".png";
+            //NSLog(@"nameFieldText %@",nameField.text);
+            //NSLog(@"nameFieldText %@",nameHideField.text);
+            
+            draftUrlAddFavString = [draftUrlAppendAddFavString stringByAppendingString:pngString];
+            
+            //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+        }
+        
+        if (draftNameAddFavString == NULL) {
+            draftNameAddFavString = @"The Artwork has no name";
+        }
+        
+        if (draftCompanyAddFavString == NULL) {
+            matCompanyAddFavString = @"No Company Name Is Available";
+        }
+        
+        if (matSellerAddFavString == NULL) {
+            matSellerAddFavString = @"Sales Person Unknown";
+        }
+        
+        if (matIDAddFavString == NULL) {
+            matIDAddFavString = @"No ID Provided";
+        }
+        
+        if (matLocationIDAddFavString == NULL) {
+            matLocationIDAddFavString = @"No Location Provided";
+        }
+        
+        if (matColorAddFavString == NULL) {
+            matColorAddFavString = @"No Colors are provided";
+        }
+        
+        if (matUseBGColorString == NULL) {
+            matUseBGColorString = @"No Background Color is provided";
+        }
+        
+        /* if (matBGColorAddFavString==NULL)
+         {
+         
+         matBGColorAddFavString= @"No Background Color is provided";
+         
+         }*/
+        
+        if (matSizeAddFavString == NULL) {
+            matSizeAddFavString = @"4' x 6'";
+        }
+        
+        NSManagedObjectContext* context = [self managedObjectContext];
+        
+        // Create a new managed object
+        NSManagedObject* newDraftFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"Draft" inManagedObjectContext:context];
+        
+        //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+        //[newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
+        [newDraftFavorite setValue:draftUrlAddFavString forKey:@"fullImageURL"];
+        [newDraftFavorite setValue:nameField.text forKey:@"draftName"];
+        /*[newMatFavorite setValue:companyField.text forKey:@"company"];
+         [newMatFavorite setValue:sellerField.text forKey:@"seller"];
+         [newMatFavorite setValue:numberField.text forKey:@"productID"];
+         [newMatFavorite setValue:locationIDString forKey:@"locationID"];
+         [newMatFavorite setValue:matColorString forKey:@"color"];
+         [newMatFavorite setValue:matBGColorAddFavString forKey:@"bgColor"];
+         [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];*/
+        
+        NSError* error = nil;
+        // Save the object to persistent store
+        if (![context save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
+    }
+}
+
+
 - (IBAction)addDraft:(id)sender
 {
     decTextLayerView.hidden = NO;
@@ -3889,14 +4097,7 @@ else
         d = b + 50;
 
         noteLayerView.hidden = YES;
-        /*CGRect screenRect2 = CGRectMake(0, 0, 1024, 768);
-        UIGraphicsBeginImageContext(screenRect2.size);
-
-        CGContextRef ctx1 = UIGraphicsGetCurrentContext();
-        [[UIColor whiteColor] set];
-        CGContextFillRect(ctx1, screenRect2);
-
-        [self.view.layer renderInContext:ctx1];*/
+        
         
         
         [self.fontPicker removeFromSuperview];
@@ -3904,18 +4105,15 @@ else
         
         decTextLayerView.hidden = NO;
         
-        //CGRect screenRect2 = CGRectMake(0.0, 0, 1028, 720);
+        
         UIGraphicsBeginImageContext(CGSizeMake(1024, 768));
         
         //this gets the graphic context
         CGContextRef context1 = UIGraphicsGetCurrentContext();
         
-        //UIGraphicsBeginImageContext(screenRect2.size);
-        //UIGraphicsBeginImageContext(interactiveMatView.size);
         
-        //CGContextRef ctx1 = UIGraphicsGetCurrentContext();
         [[UIColor whiteColor] set];
-        //CGContextFillRect(ctx1, screenRect2);
+        
         
         [self.view.layer renderInContext:context1];
         
@@ -3974,15 +4172,10 @@ else
          [UIImagePNGRepresentation(draftImage) writeToFile:imagePath atomically:YES];
 
         //NOTE- Do not remove local NSString values will break
-
-        /* NSString*matUrlAppendAddFavString= nameField.text;
-         NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
-         NSString*pngString= @".png";*/
         NSLog(@"nameFieldText %@",nameField.text);
-        //NSLog(@"nameFieldText %@",nameHideField.text);
+        
     
-    
-     //NSString*matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];
+        //NSString*matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];
 
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         NSString* draftNameAddFavString = nameField.text;

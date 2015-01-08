@@ -1304,15 +1304,6 @@
                                     <action selector="centerLogo:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="6KY-l8-Z89"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkU-aY-gHB">
-                                <rect key="frame" x="973" y="662" width="32" height="30"/>
-                                <state key="normal" title="save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addDraft:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="b7D-wP-s58"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsE-FS-8rq">
                                 <rect key="frame" x="890" y="707" width="60" height="45"/>
                                 <state key="normal" backgroundImage="envelope.png">
@@ -1322,6 +1313,24 @@
                                 <state key="highlighted" backgroundImage="envelope.png"/>
                                 <connections>
                                     <action selector="goMail1:event:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Lbd-R5-QHZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIk-9E-3Od">
+                                <rect key="frame" x="961" y="686" width="56" height="30"/>
+                                <state key="normal" title="saveWithNotes">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDraftWithNotes:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="0l6-fk-Kgl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkU-aY-gHB">
+                                <rect key="frame" x="979" y="655" width="32" height="30"/>
+                                <state key="normal" title="save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addDraft:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="b7D-wP-s58"/>
                                 </connections>
                             </button>
                         </subviews>
