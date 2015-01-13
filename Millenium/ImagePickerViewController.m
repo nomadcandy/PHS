@@ -103,7 +103,7 @@
 {
     [super viewDidLoad];
     
-    floodImageView.newcolor = [UIColor clearColor];
+    floodImageView.newcolor = [UIColor blackColor];
 
     interactiveHeaderString = @"Logo Picked";
 
@@ -524,6 +524,60 @@
     UIImage *clearImg = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();*/
 }
+
+- (UIImage*)changeBlackColorTransparent:(UIImage*)image
+{
+    UIImage* imageTrans;
+    imageTrans = floodImageView.image;
+    
+    imageTrans = [UIImage imageWithData:UIImageJPEGRepresentation(imageTrans, 1.0)];
+    CGImageRef rawImageRef = imageTrans.CGImage;
+    //RGB color range to mask (make transparent)  R-Low, R-High, G-Low, G-High, B-Low, B-High
+    //255 is for white only
+    //const float colorMasking[6] = {222, 255, 222, 255, 222, 255};
+    //masks black
+    const float colorMasking[6] = { 0, 0, 0, 0, 0, 0 };
+    //{ 0, 124, 0, 68, 0, 0 };
+    
+    UIGraphicsBeginImageContext(imageTrans.size);
+    CGImageRef maskedImageRef = CGImageCreateWithMaskingColors(rawImageRef, colorMasking);
+    
+    //iPhone translation
+    CGContextTranslateCTM(UIGraphicsGetCurrentContext(), 0.0, imageTrans.size.height);
+    CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1.0, -1.0);
+    
+    CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, imageTrans.size.width, imageTrans.size.height), maskedImageRef);
+    UIImage* result = UIGraphicsGetImageFromCurrentImageContext();
+    CGImageRelease(maskedImageRef);
+    UIGraphicsEndImageContext();
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+    NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(result) writeToFile:imagePath atomically:NO];
+    
+    return result;
+    
+    //does not hit anything after this...
+    
+    /*[[UIColor clearColor] set];
+     
+     
+     
+     [chosenImageView setOpaque:NO];
+     [chosenImageView setOpaque:NO];
+     [chosenImageView setBackgroundColor:[UIColor clearColor]];*/
+    
+    //chosenImageView.image= result;
+    
+    // UIImage*transLogoImage = result;
+    
+    //rewrite image to crop it correctly
+    /* UIGraphicsBeginImageContext(transLogoImage.size);
+     [transLogoImage drawAtPoint:CGPointZero];
+     UIImage *clearImg = UIGraphicsGetImageFromCurrentImageContext();
+     UIGraphicsEndImageContext();*/
+}
+
 
 - (IBAction)goWhite:(id)sender
 {
@@ -1289,8 +1343,13 @@
     ///switch (sender.tag)
     //{
         //case 1:
-        floodImageView.newcolor = [UIColor clearColor];
-        //floodImageView.newcolor = [UIColor whiteColorTransparent];
+        //floodImageView.newcolor = [UIColor whiteColor];
+        floodImageView.newcolor = [UIColor blackColor];
+        //chosenImageView.image = [self changeBlackColorTransparent:floodImageView.image];
+        //floodImageView.image = [self changeBlackColorTransparent:floodImageView.image];
+    
+    
+         //floodImageView.image = [self changeWhiteColorTransparent:floodImageView.image];
     
          //floodImageView.newcolor = [self changeWhiteColorTransparent:floodImageView.image];
             //break;
@@ -1316,6 +1375,9 @@
 
 - (IBAction)saveFloodPic:(UIButton *)sender{
 
+    
+    chosenImageView.image = [self changeBlackColorTransparent:floodImageView.image];
+    floodImageView.image = [self changeBlackColorTransparent:floodImageView.image];
     UIImage* newImg1 = floodImageView.image;
     
     

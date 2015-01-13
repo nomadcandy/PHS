@@ -79,6 +79,7 @@
         {
             newRed   = newGreen = newBlue = components[0] * 255;
             newAlpha = components[1] * 255;
+            
         }
         else if (CGColorGetNumberOfComponents(newColor.CGColor) == 4)
         {
@@ -88,6 +89,7 @@
                 newGreen = components[1] * 255;
                 newBlue  = components[0] * 255;
                 newAlpha = 255;
+                
             }
             else
             {
@@ -95,6 +97,7 @@
                 newGreen = components[1] * 255;
                 newBlue  = components[2] * 255;
                 newAlpha = 255;
+                
             }
         }
         
