@@ -103,7 +103,10 @@
 {
     [super viewDidLoad];
     
-    floodImageView.newcolor = [UIColor blackColor];
+    floodImageView.newcolor = [UIColor lightGrayColor];
+    //floodImageView.newcolor = [UIColor whiteColor];
+    //floodImageView.newcolor = [UIColor blueColor];
+    //floodImageView.newcolor= [UIColor colorWithRed:.0f green:.0f blue:225.0f alpha:0];
 
     interactiveHeaderString = @"Logo Picked";
 
@@ -536,8 +539,13 @@
     //255 is for white only
     //const float colorMasking[6] = {222, 255, 222, 255, 222, 255};
     //masks black
-    const float colorMasking[6] = { 0, 0, 0, 0, 0, 0 };
+    //const float colorMasking[6] = { 0, 0, 0, 0, 0, 0 };
+    //masks blue-works
+    //const float colorMasking[6] = { 0, 0, 0, 0, 0, 255 };
+    //const float colorMasking[6] = { 56, 91, 127, 153, 0, 255 };
     //{ 0, 124, 0, 68, 0, 0 };
+    //lightGray only
+    const float colorMasking[6] = {106, 204, 106, 204, 106, 204};
     
     UIGraphicsBeginImageContext(imageTrans.size);
     CGImageRef maskedImageRef = CGImageCreateWithMaskingColors(rawImageRef, colorMasking);
@@ -1343,8 +1351,11 @@
     ///switch (sender.tag)
     //{
         //case 1:
+        floodImageView.newcolor = [UIColor lightGrayColor];
         //floodImageView.newcolor = [UIColor whiteColor];
-        floodImageView.newcolor = [UIColor blackColor];
+        //floodImageView.newcolor = [UIColor blueColor];
+    
+        //floodImageView.newcolor= [UIColor colorWithRed:.0f green:.0f blue:225.0f alpha:0];
         //chosenImageView.image = [self changeBlackColorTransparent:floodImageView.image];
         //floodImageView.image = [self changeBlackColorTransparent:floodImageView.image];
     
