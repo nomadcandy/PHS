@@ -22,6 +22,7 @@
 #import "LogoSearch.h"
 #import "LogoFavorite.h"
 #import "MatFavorite.h"
+#import "Draft.h"
 
 /*@protocol ButtonDraftPickerDelegate <NSObject>
 
@@ -35,6 +36,7 @@
      NSString*numberString;*/
     
     MatFavorite* matFavorite;
+    Draft*draftDelete;
     
     NSString* artworkNameAddFavString;
     NSString* urlFavString;

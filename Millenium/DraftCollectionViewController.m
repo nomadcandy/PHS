@@ -707,6 +707,7 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
 {
     indexPathSend = (int)sender.tag;
     NSLog(@"indexPathSend: %d ",indexPathSend);
+    nameString = [artworkNameArray objectAtIndex:indexPathSend];
     NSString* urlDraftString = [artworkFullImageArray objectAtIndex:indexPathSend];
     NSLog(@"urlDraftString: %@",urlDraftString);
     //new code
@@ -1052,6 +1053,69 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
 }
 
 }
+
+- (IBAction)removeDraft:(id)sender
+{
+    // NSLog(@"nameString %@",nameString);
+    
+    NSManagedObjectContext* managedObjectContext = [self managedObjectContext];
+    
+    NSFetchRequest* fetch = [[NSFetchRequest alloc] init];
+    NSEntityDescription* draftEntity =
+    [NSEntityDescription entityForName:@"Draft"
+                inManagedObjectContext:managedObjectContext];
+    
+    NSSortDescriptor* nameSort =
+    [[NSSortDescriptor alloc] initWithKey:@"draftName" ascending:YES];
+    
+    NSArray* sortDescriptors = [[NSArray alloc] initWithObjects:nameSort, nil];
+    
+    fetch.sortDescriptors = sortDescriptors;
+    
+    NSPredicate* p =
+    [NSPredicate predicateWithFormat:@"draftName == %@", nameString];
+    [fetch setPredicate:p];
+    
+    [fetch setEntity:draftEntity];
+    
+    NSError* fetchError;
+    
+    NSArray* fetchedDraftsArray =
+    [self.managedObjectContext executeFetchRequest:fetch error:&fetchError];
+    
+    // NSLog(@"fetchedFavoritesArray %@",fetchedFavoritesArray);
+    
+    for (Draft* draftDelete in fetchedDraftsArray) {
+         NSLog(@"draftName %@",draftDelete.draftName);
+        [managedObjectContext deleteObject:draftDelete];
+    }
+    
+    [self saveContext];
+    
+    //[self updateTable];
+    
+    [self.collectionView reloadData];
+    
+    //[self goFav:(id)sender];
+    [self viewDidLoad];
+}
+
+- (void)saveContext
+{
+    NSLog(@"save context hit");
+    
+    NSManagedObjectContext* managedObjectContext = self.managedObjectContext;
+    // Save the context.
+    NSError* error = nil;
+    if (![managedObjectContext save:&error]) {
+        NSLog(@"Unresolved context save error yikes! %@, %@", error, [error userInfo]);
+        abort();
+    } else {
+        //[managedObjectContext mergeChangesFromContext];
+        [self.collectionView reloadData];
+    }
+}
+
 
 - (IBAction)goHome:(UIButton*)sender
 {
