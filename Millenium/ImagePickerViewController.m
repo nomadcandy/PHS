@@ -14,6 +14,10 @@
 
 @implementation ImagePickerViewController
 //@synthesize chosenImage;
+
+@synthesize txtTolerance;
+@synthesize floodImageView;
+
 @synthesize alertShowString;
 @synthesize imageDownloaded;
 
@@ -98,6 +102,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    floodImageView.newcolor = [UIColor clearColor];
 
     interactiveHeaderString = @"Logo Picked";
 
@@ -256,6 +262,7 @@
     //NSLog(@"%f,%f",imageDownloaded.size.width,imageDownloaded.size.height);
 
     chosenImageView.image = imageDownloaded;
+    floodImageView.image=imageDownloaded;
     UIGraphicsBeginImageContext(imageDownloaded.size);
     [imageDownloaded drawAtPoint:CGPointZero];
 
@@ -411,6 +418,19 @@
 
         goingController.logoColorString = @" ";
     }
+    
+    if ([segue.identifier isEqualToString:@"FloodPickedSegue"]) {
+        InteractiveViewController* goingController = segue.destinationViewController;
+        goingController.selectedImage = floodImageView.image;
+        //NSLog(@"chosenImage %@",chosenImageView.image);
+        //goingController.interactiveHeaderString=interactiveHeaderString;
+        goingController.interactiveHeaderString = @"Create Mat";
+        goingController.nameString = nameField.text;
+        //NSLog(@"nameField %@",nameField.text);
+        
+        goingController.logoColorString = @" ";
+    }
+
 
     if ([segue.identifier isEqualToString:@"SearchSegue"]) {
         LogoCollectionViewController* goingController = segue.destinationViewController;
@@ -1209,6 +1229,18 @@
     [self presentViewController:svc animated:YES completion:nil];
 }
 
+
+- (IBAction)goInteractiveFlood:(UIButton*)sender
+{
+    interactiveHeaderString = @"Create Mat";
+    
+    [self performSegueWithIdentifier:@"FloodPickedSegue" sender:sender];
+    
+    UIStoryboard* storyboard = self.storyboard;
+    InteractiveViewController* svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
+    [self presentViewController:svc animated:YES completion:nil];
+}
+
 - (IBAction)goHome:(UIButton*)sender
 {
     UIStoryboard* storyboard = self.storyboard;
@@ -1243,6 +1275,64 @@
 
 }
 
+//FloodFill
+- (IBAction)btnSetTap:(UIButton *)sender
+{
+    [txtTolerance resignFirstResponder];
+    floodImageView.tolorance = [txtTolerance.text intValue];
+    //[imageView setImage:[UIImage imageNamed:@"star.png"]];
+    //[floodImageView setImage:[UIImage imageNamed:@"Android.jpg"]];
+}
+
+- (IBAction)btnColorTap:(UIButton *)sender
+{
+    ///switch (sender.tag)
+    //{
+        //case 1:
+        floodImageView.newcolor = [UIColor clearColor];
+        //floodImageView.newcolor = [UIColor whiteColorTransparent];
+    
+         //floodImageView.newcolor = [self changeWhiteColorTransparent:floodImageView.image];
+            //break;
+        /*case 2:
+            imageView.newcolor = [UIColor greenColor];
+            break;
+        case 3:
+            imageView.newcolor = [UIColor blueColor];
+            break;
+        case 4:
+            imageView.newcolor = [UIColor blackColor];
+            break;
+        case 5:
+            imageView.newcolor = [UIColor darkGrayColor];
+            break;*/
+    //}
+}
+
+- (IBAction)useFloodImageView:(UIButton *)sender{
+    
+    //chosenImageView=floodImageView;
+}
+
+- (IBAction)saveFloodPic:(UIButton *)sender{
+
+    UIImage* newImg1 = floodImageView.image;
+    
+    
+    //UIImage* newImg = UIGraphicsGetImageFromCurrentImageContext();
+    //UIGraphicsEndImageContext();
+    
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+   // NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    //[UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
+    //UIGraphicsEndImageContext();
+
+    //return [UIImage imageWithCGImage:myColorMaskedImage];
+    NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(newImg1) writeToFile:imagePath atomically:NO];
+    
+}
+
 - (BOOL)countOfAlert
 {
     for (UIWindow* window in [UIApplication sharedApplication].windows) {
@@ -1265,6 +1355,8 @@
 
 - (void)dealloc
 {
+    floodImageView.image=nil;
+    
 }
 
 @end

@@ -13,6 +13,9 @@
 #import "MaskView.h"
 #import <QuartzCore/QuartzCore.h>
 
+#import "UIImage+FloodFill.h"
+#import "FloodFillImageView.h"
+
 @interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate,NSURLConnectionDelegate,NSURLConnectionDataDelegate, UIGestureRecognizerDelegate>
 {
     
@@ -98,6 +101,10 @@
     
     UIImage*temp;
 }
+
+//FloodFill
+@property (strong, nonatomic) IBOutlet FloodFillImageView *floodImageView;
+@property (strong, nonatomic) IBOutlet UITextField *txtTolerance;
 
 
 @property (nonatomic, copy) UIImage *imageDownloaded;
