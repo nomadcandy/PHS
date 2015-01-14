@@ -290,6 +290,9 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     favHereButton.frame = CGRectMake(90.0, 33.0, 50.0, 50.0);
     favHereButton.showsTouchWhenHighlighted = YES;
     [self.view addSubview:favHereButton];
+    
+    
+    
 
     UIButton* repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [repHereButton addTarget:self
@@ -1683,7 +1686,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     indexPathSend = (int)sender.tag;
 
     nameString = [artworkNameArray objectAtIndex:indexPathSend];
-    // NSLog(@" nameStringLogoSelected %@",nameString);
+    NSLog(@" nameStringLogoSelected %@",nameString);
     matBGColorString = @" ";
     matColorString = @" ";
 

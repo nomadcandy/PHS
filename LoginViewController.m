@@ -151,7 +151,13 @@
     textField.text= statusString;
 }
 
+-(IBAction)goUseOffline:(id)sender{
 
+    UIStoryboard *storyboard = self.storyboard;
+    ViewController *svc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+    [self presentViewController:svc animated:YES completion:nil];
+    
+}
 
 -(IBAction)goLogin:(id)sender{
     

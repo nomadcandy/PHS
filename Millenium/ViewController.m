@@ -27,6 +27,8 @@
 @synthesize goSearchButton;
 
 
+@synthesize goToPageString;
+
 @synthesize firstNameString;
 @synthesize lastNameString;
 @synthesize locationIDString;
@@ -44,6 +46,7 @@
 @synthesize artworkSellerArray;
 @synthesize artworkCompanyArray;
 @synthesize artworkColorArray;
+@synthesize artworkLocationIDArray;
 
 
 @synthesize matNameArray;
@@ -57,6 +60,7 @@
 @synthesize matCompanyArray;
 @synthesize matColorArray;
 @synthesize matBGColorArray;
+@synthesize matLocationIDArray;
 
 
 @synthesize favoritesArray;
@@ -253,8 +257,17 @@
     return UIStatusBarStyleDefault;
 }*/
 
+- (IBAction)goDrafts:(id)sender
+{
+    UIStoryboard* storyboardLogo = self.storyboard;
+    DraftCollectionViewController* draftCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"DraftViewBoard"];
+    [self presentViewController:draftCVC animated:YES completion:nil];
+}
+
 - (IBAction)goRepSketches:(id)sender
 {
+    
+    goToPageString=@"loadRep";
     UIStoryboard* storyboardLogo = self.storyboard;
     LogoCollectionViewController* LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
     [self presentViewController:LogoCVC animated:YES completion:nil];
@@ -262,6 +275,8 @@
 
 - (IBAction)goLocationSketches:(id)sender
 {
+    
+    goToPageString=@"loadLocation";
     UIStoryboard* storyboardLogo = self.storyboard;
     LogoCollectionViewController* LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
     [self presentViewController:LogoCVC animated:YES completion:nil];
@@ -269,9 +284,51 @@
 
 - (IBAction)goFavSketches:(id)sender
 {
+   /* goToPageString=@"loadFavs";
+    [self performSegueWithIdentifier:@"SearchSegue" sender:sender];
     UIStoryboard* storyboardLogo = self.storyboard;
     LogoCollectionViewController* LogoCVC = [storyboardLogo instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
-    [self presentViewController:LogoCVC animated:YES completion:nil];
+    [self presentViewController:LogoCVC animated:YES completion:nil];*/
+    
+    
+   artworkNameArray = nil;
+    artworkSizeArray = nil;
+    artworkFormatArray = nil;
+    artworkFullImageArray = nil;
+    artworkIconArray = nil;
+    artworkIDArray = nil;
+    artworkLocationIDArray = nil;
+    artworkSellerArray = nil;
+    artworkColorArray = nil;
+    artworkCompanyArray = nil;
+    
+    matNameArray = nil;
+    
+    matSizeArray = nil;
+    matFormatArray = nil;
+    matFullImageArray = nil;
+    matIconArray = nil;
+    matIDArray = nil;
+    matLocationIDArray = nil;
+    matSellerArray = nil;
+    matCompanyArray = nil;
+    matColorArray = nil;
+    matBGColorArray = nil;
+    
+    //headerLabel.text = @"FAVORITES";
+    
+    /*UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+     activityIndicator.alpha = 1.0;
+     activityIndicator.center = CGPointMake(160, 360);
+     activityIndicator.hidesWhenStopped = NO;
+     [self.view addSubview:activityIndicator];
+     [activityIndicator startAnimating];*/
+    //searchingString = @"searchingFavString";
+    
+    
+    UIStoryboard* storyboard = self.storyboard;
+    FavCollectionViewController* svc = [storyboard instantiateViewControllerWithIdentifier:@"FavViewBoard"];
+    [self presentViewController:svc animated:YES completion:nil];
 }
 
 
@@ -1059,6 +1116,9 @@ else{
 
 - (IBAction)presentLogoCollectionViewController:(UIButton *)sender{
     
+    
+    goToPageString=@"loadSearch";
+    
     UIStoryboard *storyboard = self.storyboard;
     LogoCollectionViewController *searchvc = [storyboard instantiateViewControllerWithIdentifier:@"LogoViewBoard"];
     [self presentViewController:searchvc animated:YES completion:nil];
@@ -1135,6 +1195,7 @@ else{
         goingController.locationNumberString = locationNumberString;
         
         goingController.userIDString = userIDString;
+        goingController.goToPageString=goToPageString;
         
         
         

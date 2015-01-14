@@ -14,10 +14,14 @@
 
 @implementation LogoCollectionViewController
 
+@synthesize favHereButton;
+
 @synthesize higherCount;
 @synthesize headerLabel;
 @synthesize pageTitleString;
 
+
+@synthesize goToPageString;
 @synthesize searchingString;
 //@synthesize searchingString;
 
@@ -141,6 +145,52 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     [super viewDidLoad];
 
     [DIYMenu dismiss];
+    
+    if ([goToPageString isEqualToString: @"loadFavs"]){
+        
+        //[favHereButton  sendActionsForControlEvents: UIControlEventTouchUpInside];
+        
+        artworkNameArray = nil;
+        artworkSizeArray = nil;
+        artworkFormatArray = nil;
+        artworkFullImageArray = nil;
+        artworkIconArray = nil;
+        artworkIDArray = nil;
+        artworkLocationIDArray = nil;
+        artworkSellerArray = nil;
+        artworkColorArray = nil;
+        artworkCompanyArray = nil;
+        
+        matNameArray = nil;
+        
+        matSizeArray = nil;
+        matFormatArray = nil;
+        matFullImageArray = nil;
+        matIconArray = nil;
+        matIDArray = nil;
+        matLocationIDArray = nil;
+        matSellerArray = nil;
+        matCompanyArray = nil;
+        matColorArray = nil;
+        matBGColorArray = nil;
+        
+        headerLabel.text = @"FAVORITES";
+        
+        /*UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+         activityIndicator.alpha = 1.0;
+         activityIndicator.center = CGPointMake(160, 360);
+         activityIndicator.hidesWhenStopped = NO;
+         [self.view addSubview:activityIndicator];
+         [activityIndicator startAnimating];*/
+        searchingString = @"searchingFavString";
+        
+        
+        UIStoryboard* storyboard = self.storyboard;
+        FavCollectionViewController* svc = [storyboard instantiateViewControllerWithIdentifier:@"FavViewBoard"];
+        [self presentViewController:svc animated:YES completion:nil];
+        
+        
+    }
 
     /* if(matCount==0 && artworkCount==0){
         
@@ -433,6 +483,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         stringForKey:@"userID"];
 
     //NSLog(@"userIDString: %@", userIDString);
+    
+    //TODO add if internet connection available and if userIDString available
 
     //Search Logos
     NSString* urlSearchString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%%%i&Orderby=mostRecent&interactiveOnly=1&locationID=-1&userID=%@", 20, userIDString];
@@ -1063,6 +1115,131 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
     //NSLog(@"favoritesArray %@",_favoritesArray);
 }
+
+
+- (IBAction)addLogoLocalFavorite:(id)sender
+{
+    //NSLog(@"indexPathSend %d",indexPathSend);
+    
+    if ([NSNull null] != [artworkFullImageArray objectAtIndex:indexPathSend]) {
+        //matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
+        urlFavString = [artworkFullImageArray objectAtIndex:indexPathSend];
+        
+    } else {
+        urlFavString = @"No Image is provided";
+    }
+    
+    if ([NSNull null] != [artworkNameArray objectAtIndex:indexPathSend]) {
+        //matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
+        artworkNameAddFavString = [artworkNameArray objectAtIndex:indexPathSend];
+        
+    } else {
+        artworkNameAddFavString = @"No Name is provided";
+    }
+    
+    if ([NSNull null] != [artworkColorArray objectAtIndex:indexPathSend]) {
+        artworkColorAddFavString = [artworkColorArray objectAtIndex:indexPathSend];
+        
+    } else {
+        artworkColorAddFavString = @"No Color is provided";
+    }
+    
+    if ([NSNull null] != [artworkSizeArray objectAtIndex:indexPathSend]) {
+        artworkSizeAddFavString = [artworkSizeArray objectAtIndex:indexPathSend];
+        
+    } else {
+        artworkSizeAddFavString = @"4'x 6'";
+    }
+    
+    if ([NSNull null] != [artworkCompanyArray objectAtIndex:indexPathSend]) {
+        artworkCompanyAddFavString = [artworkCompanyArray objectAtIndex:indexPathSend];
+        
+    } else {
+        artworkCompanyAddFavString = @"Company";
+    }
+    
+    if ([NSNull null] != [artworkSellerArray objectAtIndex:indexPathSend]) {
+        artworkSellerAddFavString = [artworkSellerArray objectAtIndex:indexPathSend];
+        
+    } else {
+        artworkSellerAddFavString = @"Seller";
+    }
+    
+    if ([NSNull null] != [artworkIDArray objectAtIndex:indexPathSend]) {
+        artworkIDAddFavString = [artworkIDArray objectAtIndex:indexPathSend];
+        
+    } else {
+        artworkIDAddFavString = @"no ID has been provided";
+    }
+    
+    if ([NSNull null] != [artworkLocationIDArray objectAtIndex:indexPathSend]) {
+        artworkLocationIDAddFavString = [artworkLocationIDArray objectAtIndex:indexPathSend];
+        
+    } else {
+        artworkLocationIDAddFavString = @"-1";
+    }
+    
+    
+    //UITextField* alertNameField = [alertLogo textFieldAtIndex:0];
+    //NSLog(@"alertNameField - %@",alertNameField.text);
+    
+    
+    
+    
+    NSString* urlString = [artworkFullImageArray objectAtIndex:indexPathSend];
+    NSString* httpString = @"http://";
+    NSString* urlStringAppend = [httpString stringByAppendingString:urlString];
+    NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+    UIImage* logoImage;
+    logoImage = [UIImage imageWithData:data];
+
+    
+    NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
+    
+    [UIImagePNGRepresentation(logoImage) writeToFile:imagePath atomically:YES];
+    
+    //[self.view addSubview:snapshotView];
+    
+    //NOTE- Do not remove local NSString values will break
+    
+    NSString* logoUrlAppendAddFavString = artworkNameAddFavString;
+    NSString* pngString = @".png";
+    //NSLog(@"nameFieldText %@",nameField.text);
+    //NSLog(@"nameFieldText %@",nameHideField.text);
+    
+    NSString* urlLogoStringAppend = [logoUrlAppendAddFavString stringByAppendingString:pngString];
+    
+    urlFavString = urlLogoStringAppend;
+
+    
+    NSManagedObjectContext* context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject* newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
+    
+    [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
+    [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
+    [newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
+    [newLogoFavorite setValue:self.artworkSellerAddFavString forKey:@"seller"];
+    [newLogoFavorite setValue:self.artworkIDAddFavString forKey:@"productID"];
+    [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"locationID"];
+    [newLogoFavorite setValue:self.artworkColorAddFavString forKey:@"color"];
+    [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
+    
+    NSError* error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    //Fetch Data entered to test
+    NSManagedObjectContext* managedObjectContext = [self managedObjectContext];
+    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
+    self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    //NSLog(@"favoritesArray %@",_favoritesArray);
+}
+
 
 - (IBAction)addLogoFavorite:(id)sender
 {

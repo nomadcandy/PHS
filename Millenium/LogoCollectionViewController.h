@@ -71,7 +71,7 @@
     
 }
 
-
+@property (nonatomic, strong) NSString*goToPageString;
 @property (nonatomic, strong) NSString*pageTitleString;
 
 @property (nonatomic, strong) IBOutlet UIViewController *InteractiveViewController;
@@ -223,6 +223,8 @@
 //@property (weak,nonatomic) id delegate;
 
 @property(nonatomic, retain) UIImage *backgroundImageSearch;
+
+@property(nonatomic, retain) UIButton* favHereButton;
 
 
 -(IBAction)goFav:(id)sender;

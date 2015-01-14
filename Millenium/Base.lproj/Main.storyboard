@@ -387,6 +387,9 @@
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoColor1touched:" destination="EOd-lr-Xtf" eventType="touchDragInside" id="BYw-W2-mgs"/>
+                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="riq-ZZ-dct">
                                 <rect key="frame" x="87" y="500" width="38" height="38"/>
@@ -396,6 +399,9 @@
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoColor2touched:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="p4s-TC-ocz"/>
+                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WcP-YM-edR">
                                 <rect key="frame" x="140" y="500" width="38" height="38"/>
@@ -405,6 +411,9 @@
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoColor3touched:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="B69-Jd-xwe"/>
+                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InF-1N-Qmg">
                                 <rect key="frame" x="195" y="500" width="38" height="38"/>
@@ -414,6 +423,9 @@
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoColor4touched:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="ytd-Ov-rAs"/>
+                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2l-ox-7Vn">
                                 <rect key="frame" x="248" y="500" width="38" height="38"/>
@@ -423,6 +435,9 @@
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoColor5touched:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="e8M-IQ-jIs"/>
+                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="01b-cn-rTj">
                                 <rect key="frame" x="302" y="500" width="38" height="38"/>
@@ -432,6 +447,9 @@
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoColor6touched:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="2fc-dS-KbA"/>
+                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PcC-gY-OAn">
                                 <rect key="frame" x="356" y="500" width="38" height="38"/>
@@ -441,6 +459,9 @@
                                 <state key="normal">
                                     <attributedString key="attributedTitle"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoColor7touched:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="uk2-Mq-TOr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2I-8B-uPB">
                                 <rect key="frame" x="86" y="420" width="309" height="40"/>
@@ -2076,6 +2097,15 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-Px-cus">
+                                            <rect key="frame" x="217" y="336" width="30" height="30"/>
+                                            <state key="normal" title="Fav">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addLogoLocalFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="kgx-2h-kLH"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -2111,7 +2141,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2c-OH-iGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3538" y="-4508"/>
+            <point key="canvasLocation" x="-6534" y="-2379"/>
         </scene>
         <!--LandingPage-->
         <scene sceneID="tne-QT-ifu">
@@ -2176,7 +2206,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sao-XV-ov9">
-                                <rect key="frame" x="260" y="559" width="217" height="93"/>
+                                <rect key="frame" x="409" y="532" width="217" height="93"/>
                                 <state key="normal" backgroundImage="Marketing.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2186,8 +2216,8 @@
                                     <action selector="presentPDFViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kfy-xd-ln6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLp-UA-7Dz">
-                                <rect key="frame" x="560" y="458" width="217" height="93"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLp-UA-7Dz">
+                                <rect key="frame" x="283" y="649" width="217" height="93"/>
                                 <state key="normal" backgroundImage="RentalButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2198,7 +2228,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cl-d4-z8W">
-                                <rect key="frame" x="259" y="458" width="220" height="93"/>
+                                <rect key="frame" x="407" y="441" width="220" height="93"/>
                                 <state key="normal" backgroundImage="BuildMat.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2209,8 +2239,8 @@
                                     <segue destination="EOd-lr-Xtf" kind="modal" identifier="InteractiveSegue" id="T0F-q4-d7o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="670-Rt-vDb">
-                                <rect key="frame" x="560" y="559" width="217" height="93"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="670-Rt-vDb">
+                                <rect key="frame" x="508" y="648" width="217" height="93"/>
                                 <state key="normal" backgroundImage="DirectPurchase.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2234,6 +2264,9 @@
                                 <state key="normal" image="AssetsFavButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goFavSketches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfB-V8-wHX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOM-6Z-tsG">
                                 <rect key="frame" x="26" y="144" width="55" height="55"/>
@@ -2249,12 +2282,28 @@
                                 <state key="normal" image="AssetsCompassButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goLocationSketches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crM-MM-HBH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbm-sd-Ngi">
                                 <rect key="frame" x="26" y="333" width="55" height="55"/>
                                 <state key="normal" image="AssetsRepButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goRepSketches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MoC-uU-pKy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFU-84-aQM">
+                                <rect key="frame" x="32" y="406" width="42" height="30"/>
+                                <state key="normal" title="Drafts">
+                                    <color key="titleColor" red="0.093754254359999997" green="0.11442590129999999" blue="0.30197704079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goDrafts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzX-YL-klk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -2276,7 +2325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6047" y="-3425"/>
+            <point key="canvasLocation" x="-6510" y="-3570"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="ugm-Pt-D7d">
@@ -4279,7 +4328,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poR-uA-Zm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4776" y="-5361"/>
+            <point key="canvasLocation" x="-5103" y="-5419"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WvQ-If-tJX">
@@ -4944,6 +4993,16 @@
                                 <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCz-0z-unu">
+                                <rect key="frame" x="474" y="397" width="76" height="30"/>
+                                <state key="normal" title="Use Offline">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goUseOffline:" destination="pi4-eg-5Az" eventType="touchUpInside" id="KaW-0N-YzJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -4963,7 +5022,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2CA-9W-Tvi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6127" y="-4441"/>
+            <point key="canvasLocation" x="-6552" y="-4479"/>
         </scene>
     </scenes>
     <resources>
@@ -5115,8 +5174,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="KLb-Iu-kB6"/>
+        <segue reference="QQh-is-hk2"/>
         <segue reference="aYA-g1-hsh"/>
-        <segue reference="gYW-Ou-qn0"/>
-        <segue reference="nM1-xc-Gsu"/>
     </inferredMetricsTieBreakers>
 </document>

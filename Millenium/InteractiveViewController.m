@@ -3162,6 +3162,8 @@ else
 
 #pragma bgColorSelected
 
+//TODO add spot location tracking to build matColorString data
+
 - (IBAction)bgColorSelected:(UIButton*)sender event:(id)event
 {
     interactiveHeaderString = @"Create Mat";
@@ -3169,7 +3171,7 @@ else
     //NSLog(@"addButton.tag:%ld",(long)sender.tag);
 
     int myInt = (int)sender.tag;
-    //NSLog(@"sender %@",sender);
+    NSLog(@"sender %@",sender);
 
     if ((long)sender.tag == 121) {
         matBGColorAddFavString = @"121-Steel Blue";
@@ -3184,6 +3186,12 @@ else
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         //[bgColorButton.titleLabelColor setColor:whiteColor  forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
+        
+        //TODO track this as we do for mats coming in
+       /* matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+        
+        NSLog(@"matColorString pass%@",matColorString);*/
+
 
     } else if ((long)sender.tag == 123) {
         matBGColorAddFavString = @"123-Suede";
@@ -4260,6 +4268,125 @@ else
         }
     }
 }
+//return logo colors singly to spots
+- (IBAction)logoColor1touched:(id)sender{
+    
+    firstColorNameString.hidden = NO;
+    logoColorButton1.hidden = YES;
+    logoColor1String = @"";
+    
+    
+    matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+    
+    NSLog(@"matColorString pass%@",matColorString);
+    
+    [self.view addSubview:decTextLayerView];
+    decTextLayerView.hidden = YES;
+    
+}
+
+- (IBAction)logoColor2touched:(id)sender{
+    
+    
+    secondColorNameString.hidden = NO;
+    logoColorButton2.hidden = YES;
+    logoColor2String = @"";
+    
+    
+    matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+    
+    NSLog(@"matColorString pass%@",matColorString);
+    
+    [self.view addSubview:decTextLayerView];
+    decTextLayerView.hidden = YES;
+    
+}
+
+- (IBAction)logoColor3touched:(id)sender{
+    
+    
+    thirdColorNameString.hidden = NO;
+    logoColorButton3.hidden = YES;
+    logoColor3String = @"";
+    
+    
+    matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+    
+    NSLog(@"matColorString pass%@",matColorString);
+    
+    [self.view addSubview:decTextLayerView];
+    decTextLayerView.hidden = YES;
+    
+}
+
+- (IBAction)logoColor4touched:(id)sender{
+    
+    
+    fourthColorNameString.hidden = NO;
+    logoColorButton4.hidden = YES;
+    logoColor4String = @"";
+    
+    
+    matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+    
+    NSLog(@"matColorString pass%@",matColorString);
+    
+    [self.view addSubview:decTextLayerView];
+    decTextLayerView.hidden = YES;
+    
+}
+
+- (IBAction)logoColor5touched:(id)sender{
+    
+    
+    fifthColorNameString.hidden = NO;
+    logoColorButton5.hidden = YES;
+    logoColor5String = @"";
+    
+    
+    matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+    
+    NSLog(@"matColorString pass%@",matColorString);
+    
+    [self.view addSubview:decTextLayerView];
+    decTextLayerView.hidden = YES;
+    
+}
+
+- (IBAction)logoColor6touched:(id)sender{
+    
+    
+    sixthColorNameString.hidden = NO;
+    logoColorButton6.hidden = YES;
+    logoColor6String = @"";
+    
+    
+    matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+    
+    NSLog(@"matColorString pass%@",matColorString);
+    
+    [self.view addSubview:decTextLayerView];
+    decTextLayerView.hidden = YES;
+    
+}
+
+- (IBAction)logoColor7touched:(id)sender{
+    
+    
+    seventhColorNameString.hidden = NO;
+    logoColorButton7.hidden = YES;
+    logoColor7String = @"";
+    
+    
+    matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+    
+    NSLog(@"matColorString pass%@",matColorString);
+    
+    [self.view addSubview:decTextLayerView];
+    decTextLayerView.hidden = YES;
+    
+}
+
 
 - (IBAction)refreshLogoColors:(id)sender
 {
@@ -4836,6 +4963,8 @@ enum {
 
         if (i == 121) {
             logoColorSelectedString = @"121-Steel Blue";
+            //add if text set selected then return to spot
+            
         }
 
         if (i == 123) {
@@ -4927,6 +5056,8 @@ enum {
     if (CGRectIntersectsRect(control.frame, logoColorButton1.frame)) {
         control.frame = logoColorButton1.frame;
         logoColor1String = logoColorSelectedString;
+        
+        //TODO track what string is here
 
     } else if (CGRectIntersectsRect(control.frame, logoColorButton2.frame)) {
         control.frame = logoColorButton2.frame;

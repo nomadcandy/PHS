@@ -98,6 +98,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *goSearchButton;
 
 
+@property (nonatomic, strong) NSString*goToPageString;
+
 @property (nonatomic, copy) NSString *firstNameString;
 @property (nonatomic, copy) NSString *lastNameString;
 @property (nonatomic, copy) NSString *locationIDString;
@@ -120,6 +122,7 @@
 @property (nonatomic, copy) NSMutableArray *artworkSellerArray;
 @property (nonatomic, copy) NSMutableArray *artworkCompanyArray;
 @property (nonatomic, copy) NSMutableArray *artworkColorArray;
+@property (nonatomic, copy) NSMutableArray *artworkLocationIDArray;
 
 
 @property (nonatomic, copy) NSMutableArray *matNameArray;
@@ -133,6 +136,7 @@
 @property (nonatomic, copy) NSMutableArray *matCompanyArray;
 @property (nonatomic, copy) NSMutableArray *matColorArray;
 @property (nonatomic, copy) NSMutableArray *matBGColorArray;
+@property (nonatomic, copy) NSMutableArray *matLocationIDArray;
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
