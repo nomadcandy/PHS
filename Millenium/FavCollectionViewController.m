@@ -1496,7 +1496,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         }
 
         //find uRL to get retrieve it
-        if ([urlString rangeOfString:@"cintas"].location == NSNotFound) {
+        //if ([urlString rangeOfString:@"cintas"].location == NSNotFound) {
             // not working
             NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(
                 NSDocumentDirectory, NSUserDomainMask, YES);
@@ -1512,7 +1512,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             [favCell.logoChooseButton setImage:logoImage
                                       forState:UIControlStateNormal];
 
-        } else {
+        /*} else {
             NSString* httpString = @"http://";
             NSString* urlLogoStringAppend =
                 [httpString stringByAppendingString:urlString];
@@ -1527,7 +1527,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             iconLogoImage = [UIImage imageWithData:dataLogo];
             [favCell.logoChooseButton setImage:iconLogoImage
                                       forState:UIControlStateNormal];
-        }
+        }*/
     }
 
     [[favCell logoChooseButton] addTarget:self
@@ -1757,7 +1757,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
 
     }*/
-    if ([urlString rangeOfString:@"cintas"].location == NSNotFound) {
+    //if ([urlString rangeOfString:@"cintas"].location == NSNotFound) {
         NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(
             NSDocumentDirectory, NSUserDomainMask, YES);
         NSString* imagePath = [directoryPath objectAtIndex:0];
@@ -1777,7 +1777,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         [UIImagePNGRepresentation(logoImage) writeToFile:imagePath
                                               atomically:YES];
 
-    } else {
+    /*} else {
         NSString* httpString = @"http://";
         NSString* urlStringAppend =
             [httpString stringByAppendingString:urlString];
@@ -1795,7 +1795,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
                 [NSString stringWithFormat:@"Documents/logoImage.png"]];
         [UIImagePNGRepresentation(iconImage) writeToFile:imagePath
                                               atomically:YES];
-    }
+    }*/
 
     /*if ([[NSNull null] isEqual:logoUseString]) {
         logoUseString = nil;

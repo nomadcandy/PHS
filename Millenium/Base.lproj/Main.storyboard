@@ -2050,7 +2050,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="addLogoFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="BEi-I1-bHQ"/>
+                                                <action selector="addLogoLocalFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="68n-eN-sJ6"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7E-CN-fVm">
@@ -2097,15 +2097,6 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-Px-cus">
-                                            <rect key="frame" x="217" y="336" width="30" height="30"/>
-                                            <state key="normal" title="Fav">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="addLogoLocalFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="kgx-2h-kLH"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -2264,9 +2255,6 @@
                                 <state key="normal" image="AssetsFavButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="goFavSketches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfB-V8-wHX"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOM-6Z-tsG">
                                 <rect key="frame" x="26" y="144" width="55" height="55"/>
@@ -2303,6 +2291,16 @@
                                 </state>
                                 <connections>
                                     <action selector="goDrafts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzX-YL-klk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0i-Op-0bk">
+                                <rect key="frame" x="447" y="383" width="68" height="30"/>
+                                <state key="normal" title="Go Logos">
+                                    <color key="titleColor" red="0.093754254359999997" green="0.11442590129999999" blue="0.30197704079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goSearchOffline:" destination="BYZ-38-t0r" eventType="touchUpInside" id="as0-Sa-Mnc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -5174,8 +5172,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="KLb-Iu-kB6"/>
-        <segue reference="QQh-is-hk2"/>
+        <segue reference="wpq-PH-bdK"/>
         <segue reference="aYA-g1-hsh"/>
+        <segue reference="QQh-is-hk2"/>
     </inferredMetricsTieBreakers>
 </document>
