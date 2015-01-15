@@ -963,6 +963,170 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     [context save:&saveErrorMat];
 }
 
+
+- (IBAction)addMatLocalFavorite:(id)sender
+{
+    //NSLog(@"matNameArray %@",matNameArray);
+    //NSLog(@"matNameArrayCount %d",matNameArray.count);
+    //NSLog(@"indexPathSend %d",indexPathSend);
+    
+    if ([NSNull null] != [matFullImageArray objectAtIndex:indexPathSend]) {
+        matUrlAddFavString = [matFullImageArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matUrlAddFavString = @"No Image has been provided";
+    }
+    
+    //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
+    //NSLog(@"matFullImageArrayCount %d",matFullImageArray.count);
+    
+    if ([NSNull null] != [matNameArray objectAtIndex:indexPathSend]) {
+        matNameAddFavString = [matNameArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matNameAddFavString = @"No Name has been provided";
+    }
+    
+    //NSLog(@"matNameAddFavString %@",matNameAddFavString);
+    //NSLog(@"matNameArrayCount %d",matNameArray.count);
+    
+    if ([NSNull null] != [matSellerArray objectAtIndex:indexPathSend]) {
+        matSellerAddFavString = [matSellerArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matSellerAddFavString = @"Seller";
+    }
+    
+    //NSLog(@" matSellerAddFavString %@",matSellerAddFavString);
+    //NSLog(@" matSellerArrayCount %d",matSellerArray.count);
+    
+    if ([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend]) {
+        matCompanyAddFavString = [matCompanyArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matCompanyAddFavString = @"Company";
+    }
+    //NSLog(@"matCompanyAddFavString %@",matCompanyAddFavString);
+    //NSLog(@"matCompanyArrayCount %d",matCompanyArray.count);
+    
+    if ([NSNull null] != [matIDArray objectAtIndex:indexPathSend]) {
+        matIDAddFavString = [matIDArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matIDAddFavString = @"No product ID has been provided";
+    }
+    
+    //NSLog(@" matIDAddFavString %@",matIDAddFavString);
+    //NSLog(@" matIDArrayCount %d",matIDArray.count);
+    
+    if ([NSNull null] != [matLocationIDArray objectAtIndex:indexPathSend]) {
+        matLocationIDAddFavString = [matLocationIDArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matLocationIDAddFavString = @"No location is available";
+    }
+    
+    // NSLog(@" matLocationIDAddFavString %@",matLocationIDAddFavString);
+    
+    if ([NSNull null] != [matColorArray objectAtIndex:indexPathSend]) {
+        matColorAddFavString = [matColorArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matColorAddFavString = @"No Colors are provided";
+    }
+    //NSLog(@" matColorAddFavString %@",matColorAddFavString);
+    
+    if ([NSNull null] != [matBGColorArray objectAtIndex:indexPathSend]) {
+        matBGColorAddFavString = [matBGColorArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matBGColorAddFavString = @"";
+    }
+    
+    //NSLog(@" matBGColorAddFavString %@",matBGColorAddFavString);
+    
+    if ([NSNull null] != [matSizeArray objectAtIndex:indexPathSend]) {
+        matSizeAddFavString = [matSizeArray objectAtIndex:indexPathSend];
+        
+    } else {
+        matSizeAddFavString = @"4'x 6'";
+    }
+    
+    //paste here from logo
+    
+    NSString* urlString = [matFullImageArray objectAtIndex:indexPathSend];
+    NSString* httpString = @"http://";
+    NSString* urlStringAppend = [httpString stringByAppendingString:urlString];
+    NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
+    UIImage* matImage;
+    matImage = [UIImage imageWithData:data];
+    
+    
+    //add compression
+    CGFloat compression = 0.9f;
+    CGFloat maxCompression = 0.1f;
+    //int maxFileSize = 250*1024;
+    int maxFileSize = 250*200;
+    
+    NSData *imageData = UIImageJPEGRepresentation(matImage, compression);
+    
+    while ([imageData length] > maxFileSize && compression > maxCompression)
+    {
+        compression -= 0.1;
+        imageData = UIImageJPEGRepresentation(matImage, compression);
+    }
+    
+    UIImage*matWriteImage = [UIImage imageWithData:imageData];
+    
+    NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", matNameAddFavString]];
+    
+    [UIImagePNGRepresentation(matWriteImage) writeToFile:imagePath atomically:YES];
+    
+    //[self.view addSubview:snapshotView];
+    
+    //NOTE- Do not remove local NSString values will break
+    
+    NSString* logoUrlAppendAddFavString = matNameAddFavString;
+    NSString* pngString = @".png";
+    //NSLog(@"nameFieldText %@",nameField.text);
+    //NSLog(@"nameFieldText %@",nameHideField.text);
+    
+    NSString* urlLogoStringAppend = [logoUrlAppendAddFavString stringByAppendingString:pngString];
+    
+    matUrlAddFavString = urlLogoStringAppend;
+    //end paste
+    
+    
+    NSManagedObjectContext* context = [self managedObjectContext];
+    
+    // Create a new managed object
+    NSManagedObject* newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
+    
+    [newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
+    [newMatFavorite setValue:self.matNameAddFavString forKey:@"artworkName"];
+    [newMatFavorite setValue:self.matCompanyAddFavString forKey:@"company"];
+    [newMatFavorite setValue:self.matSellerAddFavString forKey:@"seller"];
+    [newMatFavorite setValue:self.matIDAddFavString forKey:@"productID"];
+    [newMatFavorite setValue:self.matLocationIDAddFavString forKey:@"locationID"];
+    [newMatFavorite setValue:self.matColorAddFavString forKey:@"color"];
+    [newMatFavorite setValue:self.matBGColorAddFavString forKey:@"bgColor"];
+    [newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];
+    
+    NSError* error = nil;
+    // Save the object to persistent store
+    if (![context save:&error]) {
+        //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    //Fetch Data entered to test
+    NSManagedObjectContext* managedObjectContext = [self managedObjectContext];
+    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
+    self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    // NSLog(@"favoritesMatArray %@",favoritesMatArray);
+}
+
+
 - (IBAction)addMatFavorite:(id)sender
 {
     //NSLog(@"matNameArray %@",matNameArray);
@@ -1208,9 +1372,11 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         imageData = UIImageJPEGRepresentation(logoImage, compression);
     }
     
+    UIImage*logoWriteImage = [UIImage imageWithData:imageData];
+    
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
     
-    [UIImagePNGRepresentation(logoImage) writeToFile:imagePath atomically:YES];
+    [UIImagePNGRepresentation(logoWriteImage) writeToFile:imagePath atomically:YES];
     
     //[self.view addSubview:snapshotView];
     

@@ -2097,6 +2097,15 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-eg-X4h">
+                                            <rect key="frame" x="674" y="342" width="46" height="30"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addMatLocalFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="P9Q-AA-MUS"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -5172,8 +5181,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wpq-PH-bdK"/>
-        <segue reference="aYA-g1-hsh"/>
+        <segue reference="KLb-Iu-kB6"/>
         <segue reference="QQh-is-hk2"/>
+        <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>
