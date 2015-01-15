@@ -1192,7 +1192,21 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     UIImage* logoImage;
     logoImage = [UIImage imageWithData:data];
-
+    
+    
+    //add compression
+    CGFloat compression = 0.9f;
+    CGFloat maxCompression = 0.1f;
+    //int maxFileSize = 250*1024;
+    int maxFileSize = 250*200;
+    
+    NSData *imageData = UIImageJPEGRepresentation(logoImage, compression);
+    
+    while ([imageData length] > maxFileSize && compression > maxCompression)
+    {
+        compression -= 0.1;
+        imageData = UIImageJPEGRepresentation(logoImage, compression);
+    }
     
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
     
