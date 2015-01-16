@@ -3859,7 +3859,7 @@ else
     }
 }
 
-
+//must be unique name to not overwrite mat favorites
 - (IBAction)addDraftWithNotes:(id)sender
 {
     decTextLayerView.hidden = NO;
@@ -4059,7 +4059,7 @@ else
     }
 }
 
-
+//must be unique name to not overwrite mat favorites
 - (IBAction)addDraft:(id)sender
 {
     decTextLayerView.hidden = NO;
@@ -4126,7 +4126,7 @@ else
 
         UIGraphicsEndImageContext();
 
-        croppedImageView = [[UIImageView alloc] initWithImage:draftImage];
+        UIImageView*croppedDraftImageView = [[UIImageView alloc] initWithImage:draftImage];
 
         // Get size of current image
         CGSize size = [draftImage size];
@@ -4135,7 +4135,7 @@ else
         
 
         // Frame location in view to show original image
-        [croppedImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
+        [croppedDraftImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
         //[croppedImageView setFrame:CGRectMake(0, 0, 1024, 768)];
         
 
@@ -4143,14 +4143,14 @@ else
 
         // Create bitmap image from original image data,
         // using rectangle to specify desired crop area
-        CGImageRef imageRef = CGImageCreateWithImageInRect([draftImage CGImage], rect);
-        UIImage* img = [UIImage imageWithCGImage:imageRef];
-        CGImageRelease(imageRef);
+        CGImageRef imageDraftRef = CGImageCreateWithImageInRect([draftImage CGImage], rect);
+        UIImage* draftImg = [UIImage imageWithCGImage:imageDraftRef];
+        CGImageRelease(imageDraftRef);
 
         //used to crop the image smaller we don't need this but good for reference
         // Create and show the new image from bitmap data
-        croppedImageView = [[UIImageView alloc] initWithImage:img];
-        [croppedImageView setFrame:CGRectMake(0, 0, 600, 416)];
+        croppedDraftImageView = [[UIImageView alloc] initWithImage:draftImg];
+        [croppedDraftImageView setFrame:CGRectMake(0, 0, 600, 416)];
         
         //save new imageView to FAV
         //CGRect screenRect3 = CGRectMake(425, 142, 600, 416);
@@ -4166,8 +4166,11 @@ else
         UIImage* draftCroppedImage = UIGraphicsGetImageFromCurrentImageContext();
 
         UIGraphicsEndImageContext();*/
-
+        
+        //TODO add Draft text here
         NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", nameStringHere]];
+        
+        //NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@draft.png", nameStringHere]];
 
         
         //not cropping image-commented out
@@ -4196,6 +4199,7 @@ else
         if (draftUrlAddFavString == NULL) {
             NSString* draftUrlAppendAddFavString = nameField.text;
             //NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
+            //NSString* pngString = @"draft.png";
             NSString* pngString = @".png";
             //NSLog(@"nameFieldText %@",nameField.text);
             //NSLog(@"nameFieldText %@",nameHideField.text);
