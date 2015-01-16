@@ -328,6 +328,13 @@
 		42B0158818E3428B0068019C /* WalkOffLogoMatPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0157E18E3428B0068019C /* WalkOffLogoMatPDF.png */; };
 		42B0159918E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
 		42B0159A18E35CF20068019C /* VideosWhite3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B0159818E35CF20068019C /* VideosWhite3.png */; };
+		42B3CE321A695B9D001036A8 /* AssetsDraftsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B3CE311A695B9D001036A8 /* AssetsDraftsButton.png */; };
+		42B3CE341A695CA0001036A8 /* AssetsDraft1Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B3CE331A695CA0001036A8 /* AssetsDraft1Button.png */; };
+		42B3CE361A695D51001036A8 /* AssetsDraftClearButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B3CE351A695D51001036A8 /* AssetsDraftClearButton.png */; };
+		42B3CE381A696487001036A8 /* AssetsIconButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B3CE371A696487001036A8 /* AssetsIconButton.png */; };
+		42B3CE3A1A696CE3001036A8 /* AssetsCenterLogoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B3CE391A696CE3001036A8 /* AssetsCenterLogoButton.png */; };
+		42B3CE3D1A696FD2001036A8 /* AssetsAddDraftButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B3CE3B1A696FD2001036A8 /* AssetsAddDraftButton.png */; };
+		42B3CE3E1A696FD2001036A8 /* AssetsAddDraftNotesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B3CE3C1A696FD2001036A8 /* AssetsAddDraftNotesButton.png */; };
 		42B70D2018F3D45800CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
 		42B70D2118F3D45900CF0C97 /* SketchRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */; };
 		42C2B879196A26260057D583 /* matMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C2B878196A26260057D583 /* matMask.png */; };
@@ -766,6 +773,13 @@
 		42B0157D18E3428B0068019C /* WaterGuardLogoInlayPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardLogoInlayPDF.png; sourceTree = "<group>"; };
 		42B0157E18E3428B0068019C /* WalkOffLogoMatPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WalkOffLogoMatPDF.png; sourceTree = "<group>"; };
 		42B0159818E35CF20068019C /* VideosWhite3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VideosWhite3.png; sourceTree = "<group>"; };
+		42B3CE311A695B9D001036A8 /* AssetsDraftsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsDraftsButton.png; sourceTree = "<group>"; };
+		42B3CE331A695CA0001036A8 /* AssetsDraft1Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsDraft1Button.png; sourceTree = "<group>"; };
+		42B3CE351A695D51001036A8 /* AssetsDraftClearButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsDraftClearButton.png; sourceTree = "<group>"; };
+		42B3CE371A696487001036A8 /* AssetsIconButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsIconButton.png; sourceTree = "<group>"; };
+		42B3CE391A696CE3001036A8 /* AssetsCenterLogoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsCenterLogoButton.png; sourceTree = "<group>"; };
+		42B3CE3B1A696FD2001036A8 /* AssetsAddDraftButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsAddDraftButton.png; sourceTree = "<group>"; };
+		42B3CE3C1A696FD2001036A8 /* AssetsAddDraftNotesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsAddDraftNotesButton.png; sourceTree = "<group>"; };
 		42B70D1E18F3D45800CF0C97 /* SketchRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SketchRequestViewController.h; sourceTree = "<group>"; };
 		42B70D1F18F3D45800CF0C97 /* SketchRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SketchRequestViewController.m; sourceTree = "<group>"; };
 		42C2B878196A26260057D583 /* matMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matMask.png; sourceTree = "<group>"; };
@@ -929,6 +943,10 @@
 		42081FE61948A33800412486 /* ImagesNewHome */ = {
 			isa = PBXGroup;
 			children = (
+				42B3CE371A696487001036A8 /* AssetsIconButton.png */,
+				42B3CE351A695D51001036A8 /* AssetsDraftClearButton.png */,
+				42B3CE331A695CA0001036A8 /* AssetsDraft1Button.png */,
+				42B3CE311A695B9D001036A8 /* AssetsDraftsButton.png */,
 				42081FFD1948AB9C00412486 /* Mag.png */,
 				42081FFB1948AB3800412486 /* SearchBoxSimple3.png */,
 				42081FE71948A3A200412486 /* RepHead.png */,
@@ -1259,6 +1277,9 @@
 		42AB550E18EF51190051AF9F /* ImagesInteractivePage */ = {
 			isa = PBXGroup;
 			children = (
+				42B3CE3B1A696FD2001036A8 /* AssetsAddDraftButton.png */,
+				42B3CE3C1A696FD2001036A8 /* AssetsAddDraftNotesButton.png */,
+				42B3CE391A696CE3001036A8 /* AssetsCenterLogoButton.png */,
 				42A2C37A1A37A2A2001B27CE /* AddNotesIcon2.png */,
 				42A2C3761A37A224001B27CE /* eyeShut2Icon.png */,
 				42A2C3771A37A224001B27CE /* eyeShutIcon.png */,
@@ -1825,6 +1846,7 @@
 				42E9AC2918FF5FB9000E226D /* go1Button.png in Resources */,
 				428576FD197CA0B6004972AD /* eyeCloseIcon.png in Resources */,
 				42F399D21946675B00C84189 /* FirstStepLogoScraperM.png in Resources */,
+				42B3CE381A696487001036A8 /* AssetsIconButton.png in Resources */,
 				429C4AB3192566D900AF8050 /* addNote.png in Resources */,
 				42081FFE1948AB9C00412486 /* Mag.png in Resources */,
 				42D180EC1986C1B6003A2F61 /* Rose50_119.jpg in Resources */,
@@ -1849,9 +1871,11 @@
 				4221399C19128D43001BD328 /* AssetsSearchButton.png in Resources */,
 				42849B9418EA04AB00E5B3FB /* logothumbnailbg.png in Resources */,
 				42081FD31947B04700412486 /* MarbleTopPDF.png in Resources */,
+				42B3CE3E1A696FD2001036A8 /* AssetsAddDraftNotesButton.png in Resources */,
 				4297E07C19250F8100E43779 /* White_140.jpg in Resources */,
 				42D1810E1986C1B6003A2F61 /* Black50_108.jpg in Resources */,
 				427CE64B18F3316900865291 /* jadeteahouselogo1.png in Resources */,
+				42B3CE361A695D51001036A8 /* AssetsDraftClearButton.png in Resources */,
 				422A692119100C23001CAB8D /* LogoPadGrey.png in Resources */,
 				4297E08919250F8100E43779 /* Forest Green_117.jpg in Resources */,
 				42E9AC0B18FF58D3000E226D /* Friendly1Button.png in Resources */,
@@ -1874,6 +1898,7 @@
 				42E9AC0718FF5187000E226D /* MatClientFocusJade4.png in Resources */,
 				426A6A3218EDADBA00255331 /* ProffessionalButton.png in Resources */,
 				42AB551018EF51310051AF9F /* LogoSelectedBG.png in Resources */,
+				42B3CE321A695B9D001036A8 /* AssetsDraftsButton.png in Resources */,
 				425ECB0C195C63EE009A0AA9 /* FavAddIcon.png in Resources */,
 				4297E09419250F8100E43779 /* Yellow_128.jpg in Resources */,
 				422139931912883A001BD328 /* AssetsFavButton.png in Resources */,
@@ -1901,6 +1926,7 @@
 				426A6A1218ED0CC300255331 /* SampleLogo15.png in Resources */,
 				42E9AC2418FF5A6C000E226D /* Fresh3Button.png in Resources */,
 				422139911912883A001BD328 /* AssetsRepButton.png in Resources */,
+				42B3CE341A695CA0001036A8 /* AssetsDraft1Button.png in Resources */,
 				42081FDB1947B04700412486 /* ParquetWiperScraperPDF.png in Resources */,
 				42081FCF1947B04700412486 /* SoftStepPDF.png in Resources */,
 				42A24BF819181FB800568305 /* Interactive3by10Button.png in Resources */,
@@ -1908,6 +1934,7 @@
 				4288F1AB1950A03500975FB6 /* LoginIcon1.png in Resources */,
 				42F399D8194669F200C84189 /* FreeFlowComfortM.png in Resources */,
 				420A8F07195308A9005FB1D8 /* SketchesIcon.png in Resources */,
+				42B3CE3A1A696CE3001036A8 /* AssetsCenterLogoButton.png in Resources */,
 				42081FBF1947AC4700412486 /* GoldenSeriesPDF.png in Resources */,
 				42F399C81946675B00C84189 /* WaterGuardDiamondM.png in Resources */,
 				426A6A1118ED0CC300255331 /* SampleLogo16.png in Resources */,
@@ -2035,6 +2062,7 @@
 				428085C618FC3F9100389C9C /* loginIcon2.png in Resources */,
 				421AC83A1918191400D37F7B /* InteractiveColorsGreyPad.png in Resources */,
 				4297E0581923CF2000E43779 /* MaskWhiteSquare12.png in Resources */,
+				42B3CE3D1A696FD2001036A8 /* AssetsAddDraftButton.png in Resources */,
 				421EE3501919788F008A5CAB /* WebPadLil.png in Resources */,
 				4297E0541923CA9400E43779 /* MaskWhiteSquare9.png in Resources */,
 				42081FD41947B04700412486 /* FreeFlowComfortPDF.png in Resources */,

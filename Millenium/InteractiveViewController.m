@@ -4110,7 +4110,10 @@ else
         decTextLayerView.hidden = NO;
         
         
-        UIGraphicsBeginImageContext(CGSizeMake(1024, 768));
+        //UIGraphicsBeginImageContext(CGSizeMake(1024, 768));
+        UIGraphicsBeginImageContext(CGSizeMake(1040, 780));
+        
+        
         
         //this gets the graphic context
         CGContextRef context1 = UIGraphicsGetCurrentContext();
@@ -4139,7 +4142,9 @@ else
         //[croppedImageView setFrame:CGRectMake(0, 0, 1024, 768)];
         
 
-        CGRect rect = CGRectMake(425, 142, 600, 416);
+        //CGRect rect = CGRectMake(425, 142, 600, 416);
+        
+        CGRect rect = CGRectMake(425, 142, 600, 440);
 
         // Create bitmap image from original image data,
         // using rectangle to specify desired crop area
@@ -4150,7 +4155,9 @@ else
         //used to crop the image smaller we don't need this but good for reference
         // Create and show the new image from bitmap data
         croppedDraftImageView = [[UIImageView alloc] initWithImage:draftImg];
-        [croppedDraftImageView setFrame:CGRectMake(0, 0, 600, 416)];
+        //[croppedDraftImageView setFrame:CGRectMake(0, 0, 600, 416)];
+        
+        [croppedDraftImageView setFrame:CGRectMake(0, 0, 600, 440)];
         
         //save new imageView to FAV
         //CGRect screenRect3 = CGRectMake(425, 142, 600, 416);
@@ -4644,7 +4651,8 @@ enum {
         decTextLayerView.hidden = NO;
         noteLayerView.hidden = NO;
 
-        CGRect screenRect2 = CGRectMake(0.0, 0, 1028, 720);
+        //CGRect screenRect2 = CGRectMake(0.0, 0, 1028, 720);
+        CGRect screenRect2 = CGRectMake(0.0, 0, 1028, 780);
 
         UIGraphicsBeginImageContext(screenRect2.size);
         //UIGraphicsBeginImageContext(interactiveMatView.size);
