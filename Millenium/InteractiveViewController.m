@@ -5249,7 +5249,8 @@ enum {
 - (IBAction)centerLogo:(id)sender
 {
     
-    CGPoint centerImageView = croppedImageView.center;
+    //CGPoint centerImageView = croppedImageView.center;
+    CGPoint centerImageView = interactiveMatView.center;
     //centerImageView = self.matBGLogoView.center;
     logoPicButton.center = centerImageView;
     
