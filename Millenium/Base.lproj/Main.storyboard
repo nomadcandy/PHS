@@ -140,7 +140,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveColorPickGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="zyq-IV-gch" userLabel="bgColors">
                                 <rect key="frame" x="6" y="585" width="414" height="143"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-fi-6vE">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlx-fi-6vE">
                                 <rect key="frame" x="491" y="697" width="55" height="55"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
                                 <state key="normal" backgroundImage="AddNotesIcon2.png">
@@ -153,7 +153,7 @@
                                     <action selector="addNote:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="fRK-46-SG3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQT-cJ-UpN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQT-cJ-UpN">
                                 <rect key="frame" x="550" y="702" width="50" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <state key="normal" backgroundImage="eyeOpenBlackIcon.png">
@@ -165,7 +165,7 @@
                                     <action selector="showNotes:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="2C1-hn-pIR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gV-Yq-EfW">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gV-Yq-EfW">
                                 <rect key="frame" x="611" y="702" width="50" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <state key="normal" backgroundImage="eyeShut2Icon.png">
@@ -224,7 +224,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRW-Mr-nQW">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRW-Mr-nQW">
                                 <rect key="frame" x="974" y="603" width="50" height="50"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
                                 <size key="titleShadowOffset" width="2" height="1"/>
@@ -629,9 +629,9 @@
                                     <action selector="imageMoved:withEvent:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Zh5-Rd-yFs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-cI-ecv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-cI-ecv">
                                 <rect key="frame" x="179" y="217" width="53" height="53"/>
-                                <state key="normal" image="pickerIcon.png">
+                                <state key="normal" backgroundImage="pickerIcon.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -641,7 +641,7 @@
                                     <action selector="goFontPicker:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="oyh-sg-IJb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCv-rC-z2i">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCv-rC-z2i">
                                 <rect key="frame" x="232" y="217" width="53" height="53"/>
                                 <state key="normal" backgroundImage="pickerHideBlackIcon.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -685,7 +685,7 @@
                                     <action selector="refreshLogoColors:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="7Yb-l8-C5b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFf-j0-4PN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFf-j0-4PN">
                                 <rect key="frame" x="347" y="217" width="53" height="53"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <state key="normal" backgroundImage="eyeShut2Icon.png">
@@ -697,7 +697,7 @@
                                     <action selector="hideText:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Kq6-df-F4E"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAV-xA-VCy">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAV-xA-VCy">
                                 <rect key="frame" x="289" y="217" width="53" height="53"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                 <state key="normal" backgroundImage="eyeOpenBlackIcon.png">
@@ -1283,7 +1283,7 @@
                                     <action selector="bgColorSelected:event:" destination="EOd-lr-Xtf" eventType="touchDownRepeat" id="rEU-0h-AyL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-1x-oeW">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k8-1x-oeW">
                                 <rect key="frame" x="127" y="217" width="53" height="53"/>
                                 <state key="normal" backgroundImage="textBlackIcon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1294,9 +1294,9 @@
                                     <action selector="addText:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="cAV-P6-nvh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VM-0v-Cbe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5VM-0v-Cbe">
                                 <rect key="frame" x="824" y="686" width="70" height="70"/>
-                                <state key="normal" image="AssetsDraftClearButton.png">
+                                <state key="normal" backgroundImage="AssetsDraftClearButton.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1304,9 +1304,9 @@
                                     <action selector="goDrafts:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Cdl-Ea-rhs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OO-RJ-PIv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OO-RJ-PIv">
                                 <rect key="frame" x="444" y="705" width="42" height="44"/>
-                                <state key="normal" image="AssetsCenterLogoButton.png">
+                                <state key="normal" backgroundImage="AssetsCenterLogoButton.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1327,27 +1327,27 @@
                                     <action selector="goMail1:event:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="Lbd-R5-QHZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIk-9E-3Od">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIk-9E-3Od">
                                 <rect key="frame" x="755" y="693" width="70" height="70"/>
-                                <state key="normal" image="AssetsAddDraftNotesButton.png">
+                                <state key="normal" backgroundImage="AssetsAddDraftNotesButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="addDraftWithNotes:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="0l6-fk-Kgl"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveColorPickGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="kIs-8v-hEo" userLabel="killButtons">
-                                <rect key="frame" x="28" y="591" width="414" height="143"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkU-aY-gHB">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkU-aY-gHB">
                                 <rect key="frame" x="686" y="688" width="70" height="70"/>
-                                <state key="normal" image="AssetsAddDraftButton.png">
+                                <state key="normal" backgroundImage="AssetsAddDraftButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="addDraft:" destination="EOd-lr-Xtf" eventType="touchUpInside" id="b7D-wP-s58"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InteractiveColorPickGreyPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="kIs-8v-hEo" userLabel="killButtons">
+                                <rect key="frame" x="16" y="591" width="414" height="143"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -2026,7 +2026,7 @@
                                             <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-HA-1kT" userLabel="useLogoButton">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-HA-1kT" userLabel="useLogoButton">
                                             <rect key="frame" x="287" y="329" width="44" height="44"/>
                                             <state key="normal" title="Use" image="AssetCheckButton.png">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -2076,7 +2076,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="addMatFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="REb-IT-YQJ"/>
+                                                <action selector="addMatLocalFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="zoR-jP-YRc"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43x-as-0ka">
@@ -2091,15 +2091,6 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3G-eg-X4h">
-                                            <rect key="frame" x="674" y="342" width="46" height="30"/>
-                                            <state key="normal" title="Button">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="addMatLocalFavorite:" destination="l8u-Ww-K06" eventType="touchUpInside" id="P9Q-AA-MUS"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -2253,9 +2244,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOM-6Z-tsG">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOM-6Z-tsG">
                                 <rect key="frame" x="25" y="155" width="55" height="55"/>
-                                <state key="normal" image="GoWeb1.png">
+                                <state key="normal" backgroundImage="GoWeb1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2280,9 +2271,9 @@
                                     <action selector="goRepSketches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MoC-uU-pKy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFU-84-aQM">
-                                <rect key="frame" x="8" y="211" width="88" height="80"/>
-                                <state key="normal" image="AssetsDraftClearButton.png">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFU-84-aQM">
+                                <rect key="frame" x="12" y="212" width="78" height="70"/>
+                                <state key="normal" backgroundImage="AssetsDraftClearButton.png">
                                     <color key="titleColor" red="0.093754254359999997" green="0.11442590129999999" blue="0.30197704079999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2290,21 +2281,21 @@
                                     <action selector="goDrafts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzX-YL-klk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0i-Op-0bk">
-                                <rect key="frame" x="12" y="290" width="80" height="80"/>
-                                <state key="normal" image="AssetsIconButton.png">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVG-xs-Bt2">
+                                <rect key="frame" x="214" y="359" width="55" height="55"/>
+                                <state key="normal" image="AssetsFavButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0i-Op-0bk">
+                                <rect key="frame" x="12" y="281" width="80" height="80"/>
+                                <state key="normal" backgroundImage="AssetsIconButton.png">
                                     <color key="titleColor" red="0.093754254359999997" green="0.11442590129999999" blue="0.30197704079999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="goSearchOffline:" destination="BYZ-38-t0r" eventType="touchUpInside" id="as0-Sa-Mnc"/>
                                 </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVG-xs-Bt2">
-                                <rect key="frame" x="214" y="359" width="55" height="55"/>
-                                <state key="normal" image="AssetsFavButton.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -2944,8 +2935,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradietebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFr-uU-ed4" userLabel="gradieteBG">
+                                <rect key="frame" x="0.0" y="230" width="1024" height="717"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebPadBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="XE3-hn-LPN" userLabel="webViewOutline">
-                                <rect key="frame" x="0.0" y="75" width="1034" height="583"/>
+                                <rect key="frame" x="0.0" y="58" width="1034" height="627"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebPadLil.png" translatesAutoresizingMaskIntoConstraints="NO" id="bOg-aA-fbB" userLabel="logoSelectedBG">
                                 <rect key="frame" x="35" y="121" width="322" height="274"/>
@@ -2964,22 +2958,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOGO SELECTED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T2-ef-5CF">
-                                <rect key="frame" x="35" y="113" width="161" height="24"/>
+                                <rect key="frame" x="43" y="102" width="161" height="24"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WEB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egm-v4-mNc">
-                                <rect key="frame" x="364" y="113" width="161" height="25"/>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gradietebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFr-uU-ed4" userLabel="gradieteBG">
-                                <rect key="frame" x="0.0" y="230" width="1024" height="717"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebPadBig.png" translatesAutoresizingMaskIntoConstraints="NO" id="I8p-6N-ndX" userLabel="webViewOutline">
-                                <rect key="frame" x="337" y="124" width="660" height="501"/>
+                                <rect key="frame" x="337" y="116" width="660" height="517"/>
                             </imageView>
                             <webView contentMode="center" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39j-QV-6iW">
                                 <rect key="frame" x="364" y="145" width="604" height="458"/>
@@ -3093,7 +3078,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-gV-E9O">
                                 <rect key="frame" x="96" y="398" width="44" height="44"/>
-                                <state key="normal" image="ImagePickerMaskButton.png">
+                                <state key="normal" backgroundImage="ImagePickerMaskButton.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3138,7 +3123,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ife-dv-p3w">
-                                <rect key="frame" x="919" y="92" width="44" height="44"/>
+                                <rect key="frame" x="919" y="80" width="44" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                                 <state key="normal" backgroundImage="returnArrow1.png">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -3236,30 +3221,22 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3lw-UI-SWF">
-                                <rect key="frame" x="269" y="476" width="50" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="294" y="476" width="38" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r77-wb-w8t">
-                                <rect key="frame" x="270" y="508" width="30" height="30"/>
-                                <state key="normal" title="No">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnSetTap:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="CfF-yZ-a8l"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPc-kg-zia">
-                                <rect key="frame" x="270" y="535" width="54" height="30"/>
-                                <state key="normal" title="Change">
+                                <rect key="frame" x="287" y="545" width="55" height="55"/>
+                                <state key="normal" backgroundImage="AssetsPaintButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="btnColorTap:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="5nN-Qi-vOZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-QK-pp2">
-                                <rect key="frame" x="274" y="595" width="30" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aa-QK-pp2">
+                                <rect key="frame" x="299" y="645" width="30" height="30"/>
                                 <state key="normal" title="Go">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -3268,8 +3245,11 @@
                                     <segue destination="EOd-lr-Xtf" kind="modal" id="nM1-xc-Gsu"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WebPadLil.png" translatesAutoresizingMaskIntoConstraints="NO" id="CiI-ht-OYe">
+                                <rect key="frame" x="35" y="465" width="227" height="186"/>
+                            </imageView>
                             <imageView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh4-GG-SdC" customClass="FloodFillImageView">
-                                <rect key="frame" x="60" y="467" width="184" height="166"/>
+                                <rect key="frame" x="57" y="476" width="184" height="166"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -3278,12 +3258,27 @@
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1b-1k-rVW">
-                                <rect key="frame" x="274" y="563" width="34" height="30"/>
-                                <state key="normal" title="Save">
+                                <rect key="frame" x="292" y="598" width="44" height="44"/>
+                                <state key="normal" backgroundImage="AssetCheckButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="saveFloodPic:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="Cli-sO-Vvh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WEB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egm-v4-mNc">
+                                <rect key="frame" x="364" y="102" width="161" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r77-wb-w8t">
+                                <rect key="frame" x="287" y="499" width="59" height="57"/>
+                                <state key="normal" backgroundImage="AssetsEnterButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSetTap:" destination="SIb-h3-Hq1" eventType="touchUpInside" id="CfF-yZ-a8l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4131,7 +4126,7 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDP-hG-Jdm" userLabel="useLogoButton">
                                             <rect key="frame" x="287" y="329" width="44" height="44"/>
-                                            <state key="normal" title="Use" image="AssetCheckButton.png">
+                                            <state key="normal" backgroundImage="AssetCheckButton.png">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -4142,7 +4137,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0i0-RT-6jg">
                                             <rect key="frame" x="154" y="329" width="44" height="44"/>
-                                            <state key="normal" image="AssetsRemFavButtons.png">
+                                            <state key="normal" backgroundImage="AssetsRemFavButtons.png">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -4164,7 +4159,7 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCC-Br-Aki">
                                             <rect key="frame" x="753" y="329" width="44" height="44"/>
-                                            <state key="normal" title="Use" image="AssetCheckButton.png">
+                                            <state key="normal" backgroundImage="AssetCheckButton.png">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -4175,7 +4170,7 @@
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-GR-k0J">
                                             <rect key="frame" x="608" y="329" width="44" height="44"/>
-                                            <state key="normal" image="AssetsRemFavButtons.png">
+                                            <state key="normal" backgroundImage="AssetsRemFavButtons.png">
                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -4264,26 +4259,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="970" height="543"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="970" height="584"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AssetsGreyBox1.png" translatesAutoresizingMaskIntoConstraints="NO" id="mGb-JD-eaO">
                                             <rect key="frame" x="192" y="-10" width="646" height="517"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rF0-XH-Pmo">
+                                        <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rF0-XH-Pmo">
                                             <rect key="frame" x="215" y="7" width="600" height="481"/>
                                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <action selector="draftSelected:event:" destination="3lU-CS-FwV" eventType="touchUpInside" id="aeP-Zp-0g3"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-7N-74H">
-                                            <rect key="frame" x="749" y="498" width="75" height="51"/>
-                                            <state key="normal" image="envelope.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="goMailDraft:" destination="3lU-CS-FwV" eventType="touchUpInside" id="HA0-hX-WaL"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWs-X3-4wg">
@@ -4294,14 +4280,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p47-R0-4wh">
-                                            <rect key="frame" x="760" y="543" width="58" height="21"/>
+                                            <rect key="frame" x="762" y="555" width="58" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zs-vb-noy">
-                                            <rect key="frame" x="681" y="505" width="60" height="30"/>
-                                            <state key="normal" title="Remove">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zs-vb-noy">
+                                            <rect key="frame" x="674" y="505" width="77" height="70"/>
+                                            <state key="normal" backgroundImage="RemoveDraft.png">
                                                 <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -4309,10 +4295,19 @@
                                                 <action selector="removeDraft:" destination="3lU-CS-FwV" eventType="touchUpInside" id="S7e-Vc-YYt"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-7N-74H">
+                                            <rect key="frame" x="750" y="503" width="75" height="51"/>
+                                            <state key="normal" backgroundImage="envelope.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="goMailDraft:" destination="3lU-CS-FwV" eventType="touchUpInside" id="HA0-hX-WaL"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <size key="customSize" width="970" height="543"/>
+                                <size key="customSize" width="970" height="584"/>
                                 <connections>
                                     <outlet property="draftChooseButton" destination="rF0-XH-Pmo" id="aFc-99-7xq"/>
                                     <outlet property="draftTitleLabel" destination="sWs-X3-4wg" id="xLF-dV-dBp"/>
@@ -5039,9 +5034,11 @@
         <image name="AssetsCompassButton.png" width="106" height="102"/>
         <image name="AssetsDefaultButton.png" width="106" height="102"/>
         <image name="AssetsDraftClearButton.png" width="106" height="102"/>
+        <image name="AssetsEnterButton.png" width="106" height="102"/>
         <image name="AssetsFavButton.png" width="106" height="102"/>
         <image name="AssetsGreyBox1.png" width="877" height="873"/>
         <image name="AssetsIconButton.png" width="106" height="102"/>
+        <image name="AssetsPaintButton.png" width="106" height="102"/>
         <image name="AssetsRemFavButtons.png" width="106" height="102"/>
         <image name="AssetsRepButton.png" width="106" height="102"/>
         <image name="AssetsSearchButton.png" width="106" height="102"/>
@@ -5114,6 +5111,7 @@
         <image name="Purple_105.jpg" width="800" height="514"/>
         <image name="Red_112.jpg" width="800" height="514"/>
         <image name="RefreshIcon.png" width="1000" height="1000"/>
+        <image name="RemoveDraft.png" width="106" height="102"/>
         <image name="RentalButton.png" width="518" height="238"/>
         <image name="Rose_119.jpg" width="800" height="514"/>
         <image name="Royal Blue_107.jpg" width="800" height="514"/>
@@ -5180,8 +5178,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wpq-PH-bdK"/>
-        <segue reference="aYA-g1-hsh"/>
+        <segue reference="KLb-Iu-kB6"/>
         <segue reference="gYW-Ou-qn0"/>
+        <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -150,6 +150,9 @@
 		426A6A3418EDADBA00255331 /* CleanButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2D18EDADBA00255331 /* CleanButton.png */; };
 		426A6A3518EDADBA00255331 /* FreshButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A2E18EDADBA00255331 /* FreshButton.png */; };
 		426A6A3918EDD99200255331 /* FriendlyCharlesUse.png in Resources */ = {isa = PBXBuildFile; fileRef = 426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */; };
+		427B46FD1A69902E00028DD2 /* AssetsPaintButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 427B46FC1A69902E00028DD2 /* AssetsPaintButton.png */; };
+		427B46FF1A69AA9500028DD2 /* AssetsEnterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 427B46FE1A69AA9500028DD2 /* AssetsEnterButton.png */; };
+		427B47021A69B60500028DD2 /* RemoveDraft.png in Resources */ = {isa = PBXBuildFile; fileRef = 427B47011A69B60500028DD2 /* RemoveDraft.png */; };
 		427CE62C18F0670700865291 /* FliersWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CE62B18F0670700865291 /* FliersWhite.png */; };
 		427CE62E18F069DF00865291 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427CE62D18F069DF00865291 /* MessageUI.framework */; };
 		427CE63218F072F400865291 /* SignOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CE63118F072F400865291 /* SignOffViewController.m */; };
@@ -633,6 +636,9 @@
 		426A6A2D18EDADBA00255331 /* CleanButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CleanButton.png; sourceTree = "<group>"; };
 		426A6A2E18EDADBA00255331 /* FreshButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FreshButton.png; sourceTree = "<group>"; };
 		426A6A3818EDD99200255331 /* FriendlyCharlesUse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FriendlyCharlesUse.png; sourceTree = "<group>"; };
+		427B46FC1A69902E00028DD2 /* AssetsPaintButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsPaintButton.png; sourceTree = "<group>"; };
+		427B46FE1A69AA9500028DD2 /* AssetsEnterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsEnterButton.png; sourceTree = "<group>"; };
+		427B47011A69B60500028DD2 /* RemoveDraft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RemoveDraft.png; sourceTree = "<group>"; };
 		427CE62B18F0670700865291 /* FliersWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FliersWhite.png; sourceTree = "<group>"; };
 		427CE62D18F069DF00865291 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		427CE63018F072F400865291 /* SignOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignOffViewController.h; sourceTree = "<group>"; };
@@ -1149,6 +1155,14 @@
 			name = MatVideos;
 			sourceTree = "<group>";
 		};
+		427B47001A69B5E900028DD2 /* ImagesDrafts */ = {
+			isa = PBXGroup;
+			children = (
+				427B47011A69B60500028DD2 /* RemoveDraft.png */,
+			);
+			name = ImagesDrafts;
+			sourceTree = "<group>";
+		};
 		427CE62F18F072CC00865291 /* SignOffViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1521,6 +1535,8 @@
 		42DEAF2C19192D6E0087E71D /* ImagesImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				427B46FE1A69AA9500028DD2 /* AssetsEnterButton.png */,
+				427B46FC1A69902E00028DD2 /* AssetsPaintButton.png */,
 				4228901D1959DCE5009303C4 /* trans1Icon.png */,
 				4297E05D1923D11D00E43779 /* MaskWhiteSquare15.png */,
 				4297E05B1923D08100E43779 /* MaskWhiteSquare14.png */,
@@ -1592,6 +1608,7 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				427B47001A69B5E900028DD2 /* ImagesDrafts */,
 				420A8F0A19532B00005FB1D8 /* ImagesDirect */,
 				4288F1A91950A00000975FB6 /* ImagesLogin */,
 				42081FE61948A33800412486 /* ImagesNewHome */,
@@ -1838,6 +1855,7 @@
 				42081FD71947B04700412486 /* FirstStepScraperPDF.png in Resources */,
 				422A691F19100B4E001CAB8D /* LogoPad.png in Resources */,
 				420BEFA019193F00003DCEB0 /* MaskWhiteSquare6.png in Resources */,
+				427B46FD1A69902E00028DD2 /* AssetsPaintButton.png in Resources */,
 				428576F2197C7D7F004972AD /* pickerHideIcon.png in Resources */,
 				428576F7197C7E81004972AD /* pickerHideIcon1.png in Resources */,
 				42D181101986C1B6003A2F61 /* Aquamarine50_130.jpg in Resources */,
@@ -2024,6 +2042,7 @@
 				4297E05C1923D08100E43779 /* MaskWhiteSquare14.png in Resources */,
 				426206661909634500FE7066 /* MaskWhiteSquare1.png in Resources */,
 				42849B8B18EA018D00E5B3FB /* cintaslogohighres.png in Resources */,
+				427B46FF1A69AA9500028DD2 /* AssetsEnterButton.png in Resources */,
 				4297E08C19250F8100E43779 /* Charcoal_101.jpg in Resources */,
 				42FF0EEE18FC32C10060B036 /* MatClientFocusJade.png in Resources */,
 				426A6A3418EDADBA00255331 /* CleanButton.png in Resources */,
@@ -2080,6 +2099,7 @@
 				4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */,
 				42857721197D69F2004972AD /* goArrow.png in Resources */,
 				420BEFA219193F0B003DCEB0 /* MaskGreySquare6.png in Resources */,
+				427B47021A69B60500028DD2 /* RemoveDraft.png in Resources */,
 				428576FA197CA0AA004972AD /* eyeOpenIcon.png in Resources */,
 				428576ED197C771F004972AD /* loginGraphicIcon.png in Resources */,
 				422A691D19100951001CAB8D /* AssetsPadTrans.png in Resources */,

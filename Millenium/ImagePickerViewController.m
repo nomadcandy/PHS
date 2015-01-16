@@ -1104,6 +1104,7 @@
     UIGraphicsEndImageContext();
 
     chosenImageView.image = newImage;
+    floodImageView.image = newImage;
     //chosenImage = newImage;
 
     //NSLog(@"chosenImage %@",selectedImage);
