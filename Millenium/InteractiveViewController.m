@@ -5250,7 +5250,10 @@ enum {
 {
     
     CGPoint centerImageView = interactiveMatView.center;
+    //CGPoint centerImageView = matBGLogoView.center;
     logoPicButton.center = centerImageView;
+    
+    
     
     
 }
@@ -5522,7 +5525,8 @@ enum {
     matBGLogoView.frame = myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-}
+    
+    }
 //3by5
 - (IBAction)threeByFive:(id)sender
 {
@@ -5544,6 +5548,8 @@ enum {
     matBGLogoView.frame = myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+    
+    
 }
 
 - (IBAction)fourBySix:(id)sender
@@ -5566,6 +5572,9 @@ enum {
     matBGLogoView.frame = myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+    
+    
+
 }
 
 - (IBAction)threeByTen:(id)sender
@@ -5591,6 +5600,9 @@ enum {
     matBGLogoView.frame = myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
+    
+    
+
 }
 - (IBAction)goFontPicker:(id)sender
 {
