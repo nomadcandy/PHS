@@ -271,6 +271,26 @@
 
     UIImage* newImg = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
+    
+    //add compression
+    CGFloat compression = 0.9f;
+    CGFloat maxCompression = 0.1f;
+    //int maxFileSize = 250*1024;
+    int maxFileSize = 250*200;
+    
+    NSData *imageData = UIImageJPEGRepresentation(newImg, compression);
+    
+    while ([imageData length] > maxFileSize && compression > maxCompression)
+    {
+        compression -= 0.1;
+        imageData = UIImageJPEGRepresentation(newImg, compression);
+    }
+    
+    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
+    newImg = [UIImage imageWithData:imageData];
+    //end compression
+
 
     //return [UIImage imageWithCGImage:myColorMaskedImage];
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
@@ -702,6 +722,26 @@
     UITextField* alertNameField = [alertLogo textFieldAtIndex:0];
     //NSLog(@"alertNameField - %@",alertNameField.text);
     logoImage = chosenImageView.image;
+    
+    
+    //add compression
+    CGFloat compression = 0.9f;
+    CGFloat maxCompression = 0.1f;
+    //int maxFileSize = 250*1024;
+    int maxFileSize = 250*200;
+    
+    NSData *imageData = UIImageJPEGRepresentation(logoImage, compression);
+    
+    while ([imageData length] > maxFileSize && compression > maxCompression)
+    {
+        compression -= 0.1;
+        imageData = UIImageJPEGRepresentation(logoImage, compression);
+    }
+    
+    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
+    logoImage = [UIImage imageWithData:imageData];
+    //end compression
+
 
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
 
@@ -1100,8 +1140,30 @@
     [googleWebView.layer renderInContext:ctx];
 
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    
 
     UIGraphicsEndImageContext();
+    
+    
+    //add compression
+    CGFloat compression = 0.9f;
+    CGFloat maxCompression = 0.1f;
+    //int maxFileSize = 250*1024;
+    int maxFileSize = 250*200;
+    
+    NSData *imageData = UIImageJPEGRepresentation(newImage, compression);
+    
+    while ([imageData length] > maxFileSize && compression > maxCompression)
+    {
+        compression -= 0.1;
+        imageData = UIImageJPEGRepresentation(newImage, compression);
+    }
+    
+    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
+    newImage = [UIImage imageWithData:imageData];
+    //end compression
+
 
     chosenImageView.image = newImage;
     floodImageView.image = newImage;
@@ -1243,6 +1305,25 @@
     UIImage* image1 = UIGraphicsGetImageFromCurrentImageContext();
 
     NSString* imagePath3 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImageClear.png"]];
+    
+    
+    //add compression
+    CGFloat compression = 0.9f;
+    CGFloat maxCompression = 0.1f;
+    //int maxFileSize = 250*1024;
+    int maxFileSize = 250*200;
+    
+    NSData *imageData = UIImageJPEGRepresentation(image1, compression);
+    
+    while ([imageData length] > maxFileSize && compression > maxCompression)
+    {
+        compression -= 0.1;
+        imageData = UIImageJPEGRepresentation(image1, compression);
+    }
+    
+    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
+    image1 = [UIImage imageWithData:imageData];
+    //end compression
 
     [UIImagePNGRepresentation(image1) writeToFile:imagePath3 atomically:YES];
 }

@@ -201,7 +201,7 @@
         }
         else
         {
-            baseLabelText = NSLocalizedString(@"Cellular data network is active.\nInternet traffic will be routed through it.", @"Reachability text if a connection is not required");
+            baseLabelText = NSLocalizedString(@"Cellular data network is inactive.\nInternet traffic will be routed through it.", @"Reachability text if a connection is not required");
         }
         self.connectionSummaryLabel.text = baseLabelText;
     }

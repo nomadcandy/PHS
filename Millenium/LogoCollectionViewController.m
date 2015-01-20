@@ -1076,11 +1076,12 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         imageData = UIImageJPEGRepresentation(matImage, compression);
     }
     
-    UIImage*matWriteImage = [UIImage imageWithData:imageData];
+    //UIImage*matWriteImage = [UIImage imageWithData:imageData];
+    matImage = [UIImage imageWithData:imageData];
     
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", matNameAddFavString]];
     
-    [UIImagePNGRepresentation(matWriteImage) writeToFile:imagePath atomically:YES];
+    [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
     
     //[self.view addSubview:snapshotView];
     
@@ -1127,7 +1128,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 
-- (IBAction)addMatFavorite:(id)sender
+/*- (IBAction)addMatFavorite:(id)sender
 {
     //NSLog(@"matNameArray %@",matNameArray);
     //NSLog(@"matNameArrayCount %d",matNameArray.count);
@@ -1242,7 +1243,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
 
     // NSLog(@"favoritesMatArray %@",favoritesMatArray);
-}
+}*/
 
 - (IBAction)removeMatFavorite:(id)sender
 {
@@ -1372,11 +1373,12 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         imageData = UIImageJPEGRepresentation(logoImage, compression);
     }
     
-    UIImage*logoWriteImage = [UIImage imageWithData:imageData];
+    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
+    logoImage = [UIImage imageWithData:imageData];
     
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
     
-    [UIImagePNGRepresentation(logoWriteImage) writeToFile:imagePath atomically:YES];
+    [UIImagePNGRepresentation(logoImage) writeToFile:imagePath atomically:YES];
     
     //[self.view addSubview:snapshotView];
     
@@ -1421,7 +1423,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 }
 
 
-- (IBAction)addLogoFavorite:(id)sender
+/*- (IBAction)addLogoFavorite:(id)sender
 {
     //NSLog(@"indexPathSend %d",indexPathSend);
 
@@ -1509,7 +1511,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
 
     //NSLog(@"favoritesArray %@",_favoritesArray);
-}
+}*/
 
 - (IBAction)removeFavorite:(id)sender
 {
@@ -1851,6 +1853,24 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         UIImage* iconImage;
         iconImage = [UIImage imageWithData:data];
         //NSLog(@"%@iconImage",iconImage);
+        
+        
+        //Add Compression here
+        /*CGFloat compression = 0.9f;
+        CGFloat maxCompression = 0.1f;
+        int maxFileSize = 250*200;
+        
+        NSData *imageData = UIImageJPEGRepresentation(iconImage, compression);
+        
+        while ([imageData length] > maxFileSize && compression > maxCompression)
+        {
+            compression -= 0.1;
+            imageData = UIImageJPEGRepresentation(iconImage, compression);
+        }
+        
+        //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
+        iconImage = [UIImage imageWithData:imageData];*/
+        //end Add Compression
 
         NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
         [UIImagePNGRepresentation(iconImage) writeToFile:imagePath atomically:YES];
