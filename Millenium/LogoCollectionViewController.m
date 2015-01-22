@@ -1063,7 +1063,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     //add compression
-    CGFloat compression = 0.9f;
+    /*CGFloat compression = 0.9f;
     CGFloat maxCompression = 0.1f;
     //int maxFileSize = 250*1024;
     int maxFileSize = 250*200;
@@ -1077,7 +1077,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     //UIImage*matWriteImage = [UIImage imageWithData:imageData];
-    matImage = [UIImage imageWithData:imageData];
+    matImage = [UIImage imageWithData:imageData];*/
     
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", matNameAddFavString]];
     
@@ -1360,7 +1360,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     
     
     //add compression
-    CGFloat compression = 0.9f;
+    /*CGFloat compression = 0.9f;
     CGFloat maxCompression = 0.1f;
     //int maxFileSize = 250*1024;
     int maxFileSize = 250*200;
@@ -1374,7 +1374,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     }
     
     //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
-    logoImage = [UIImage imageWithData:imageData];
+    logoImage = [UIImage imageWithData:imageData];*/
     
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
     

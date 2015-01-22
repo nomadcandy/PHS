@@ -274,7 +274,7 @@
     
     
     //add compression
-    CGFloat compression = 0.9f;
+    /*CGFloat compression = 0.9f;
     CGFloat maxCompression = 0.1f;
     //int maxFileSize = 250*1024;
     int maxFileSize = 250*200;
@@ -289,7 +289,7 @@
     
     //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
     newImg = [UIImage imageWithData:imageData];
-    //end compression
+    //end compression*/
 
 
     //return [UIImage imageWithCGImage:myColorMaskedImage];
@@ -725,7 +725,7 @@
     
     
     //add compression
-    CGFloat compression = 0.9f;
+    /*CGFloat compression = 0.9f;
     CGFloat maxCompression = 0.1f;
     //int maxFileSize = 250*1024;
     int maxFileSize = 250*200;
@@ -740,7 +740,7 @@
     
     //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
     logoImage = [UIImage imageWithData:imageData];
-    //end compression
+    //end compression*/
 
 
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
@@ -1147,7 +1147,7 @@
     
     
     //add compression
-    CGFloat compression = 0.9f;
+    /*CGFloat compression = 0.9f;
     CGFloat maxCompression = 0.1f;
     //int maxFileSize = 250*1024;
     int maxFileSize = 250*200;
@@ -1162,7 +1162,7 @@
     
     //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
     newImage = [UIImage imageWithData:imageData];
-    //end compression
+    //end compression*/
 
 
     chosenImageView.image = newImage;
@@ -1308,7 +1308,7 @@
     
     
     //add compression
-    CGFloat compression = 0.9f;
+    /*CGFloat compression = 0.9f;
     CGFloat maxCompression = 0.1f;
     //int maxFileSize = 250*1024;
     int maxFileSize = 250*200;
@@ -1323,7 +1323,7 @@
     
     //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
     image1 = [UIImage imageWithData:imageData];
-    //end compression
+    //end compression*/
 
     [UIImagePNGRepresentation(image1) writeToFile:imagePath3 atomically:YES];
 }
