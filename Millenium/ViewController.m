@@ -122,7 +122,7 @@
 
     //Change the host name here to change the server you want to monitor.
     NSString* remoteHostName = @"www.apple.com";
-    NSString* remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
+    //NSString* remoteHostLabelFormatString = NSLocalizedString(@"Remote Host: %@", @"Remote host label format string");
     //self.remoteHostLabel.text = [NSString stringWithFormat:remoteHostLabelFormatString, remoteHostName];
 
     self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
@@ -166,7 +166,7 @@
 {
     if (reachability == self.hostReachability) {
         //[self configureTextField:self.remoteHostStatusField imageView:self.remoteHostImageView reachability:reachability];
-        NetworkStatus netStatus = [reachability currentReachabilityStatus];
+        //NetworkStatus netStatus = [reachability currentReachabilityStatus];
         BOOL connectionRequired = [reachability connectionRequired];
 
         //self.connectionSummaryLabel.hidden = (netStatus != ReachableViaWWAN);
@@ -359,33 +359,6 @@
     goButton.hidden = YES;
 }
 
-/*- (IBAction)addLogoSearchEntry:(id)sender
-{
-    // Add Entry to PhoneBook Data base and reset all fields
-    
-    //  1
-    LogoSearch *logoSearch = [NSEntityDescription insertNewObjectForEntityForName:@"LogoSearch"
-                                                      inManagedObjectContext:self.managedObjectContext];
-    //  2
-   /* logoSearch.artworkName = self.artworkName.text;
-    logoSearch.artworkSize = self.artworkSize.text;
-    logoSearch.artworkFormat = self.artworkFormat.text;
-    logoSearch.artworkFullImageURL = self.artworkFullImageURL.text;*/
-//  3
-/* NSError *error;
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);*/
-//}
-//  4
-/* self.firstNameTextfield.text = @"";
-    self.lastNameTextfield.text = @"";
-    self.cityTextfield.text = @"";
-    self.phoneNumber1.text = @"";
-    self.phoneNumber2.text = @"";*/
-//  5
-//[self.view endEditing:YES];
-//}
-
 - (NSUInteger)countWords:(NSString*)searchString
 {
     NSScanner* scanner = [NSScanner scannerWithString:searchString];
@@ -456,8 +429,8 @@
         NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostRecent&interactiveOnly=0&locationID=-1&userID=0", newString];
 
         NSURL* urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
-        NSURLRequest* requestMat = [NSURLRequest requestWithURL:
-                                                     urlSearchMat];
+        /*NSURLRequest* requestMat = [NSURLRequest requestWithURL:
+                                                     urlSearchMat];*/
 
         // NSLog(@"URLSearchMat: %@",urlSearchMat);
         NSError* errorMat = nil;
@@ -569,7 +542,7 @@
         NSURL* urlSearchMat = [[NSURL alloc] initWithString:urlSearchMatString];
 
         //NSLog(@"URLLOGIN: %@",urlSearchMat);
-        NSError* errorMat = nil;
+        //NSError* errorMat = nil;
         NSData* dataMat = [NSData dataWithContentsOfURL:urlSearchMat];
 
         //parse Array from web

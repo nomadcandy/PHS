@@ -82,7 +82,7 @@
 @property (nonatomic, strong) IBOutlet iCarousel* carousel;
 @property (nonatomic, strong) IBOutlet UILabel* label;
 
-@property (nonatomic, strong) IBOutlet UIImageView* loginView;
+//@property (nonatomic, strong) IBOutlet UIImageView* loginView;
 @property (nonatomic, strong) IBOutlet UITextField* loginField;
 @property (nonatomic, strong) IBOutlet UITextField* passwordField;
 @property (nonatomic, strong) IBOutlet UIButton* goButton;
@@ -146,8 +146,6 @@
 
 - (NSData*)getLogoData:(NSString*)fileName;
 
-- (NSURL*)applicationDocumentsDirectory;
-
 - (IBAction)goSearch:(id)sender;
 - (IBAction)goNearMe:(id)sender;
 
@@ -159,9 +157,6 @@
 - (IBAction)playPro:(id)sender;
 - (IBAction)playFriendly:(id)sender;
 
-//-(IBAction)pressedButton:(id)sender;
-- (IBAction)toggledSwitch:(id)sender;
-- (IBAction)changedSlider:(id)sender;
 - (IBAction)presentInteractiveViewController:(UIButton*)sender;
 //-(IBAction)presentSearchViewController:(UIButton *)sender;
 - (IBAction)presentLogoCollectionViewController:(UIButton*)sender;
