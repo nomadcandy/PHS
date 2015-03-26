@@ -90,7 +90,7 @@
 {
     if (reachability == self.hostReachability) {
         //[self configureTextField:self.remoteHostStatusField imageView:self.remoteHostImageView reachability:reachability];
-        NetworkStatus netStatus = [reachability currentReachabilityStatus];
+        //NetworkStatus netStatus = [reachability currentReachabilityStatus];
         BOOL connectionRequired = [reachability connectionRequired];
 
         //self.connectionSummaryLabel.hidden = (netStatus != ReachableViaWWAN);
