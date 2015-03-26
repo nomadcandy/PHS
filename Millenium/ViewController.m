@@ -71,7 +71,7 @@
 @synthesize matCount;
 
 @synthesize fetchedResultsController;
-@synthesize managedObjectContext;
+//@synthesize managedObjectContext;
 
 @synthesize userIDString;
 
@@ -850,7 +850,7 @@ else{
 
     if (index == 3) {
         [button setTitle:[NSString stringWithFormat:@"Sketch Search"] forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(presentSearchViewController:) forControlEvents:UIControlEventTouchUpInside];
+        //[button addTarget:self action:@selector(presentSearchViewController:) forControlEvents:UIControlEventTouchUpInside];
     }
 
     if (index == 4) {

@@ -30,7 +30,7 @@
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, ArrayDelegate, NSFetchedResultsControllerDelegate, UIAlertViewDelegate>
 
                             {
-    LogoSearch* newLogoSearch;
+    //LogoSearch* newLogoSearch;
 
     IBOutlet UIButton* cleanButton;
     IBOutlet UIButton* goButton;
@@ -128,7 +128,7 @@
 @property (nonatomic, copy) NSMutableArray* matLocationIDArray;
 
 @property (nonatomic, strong) NSFetchedResultsController* fetchedResultsController;
-@property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
+//@property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
 
 @property (nonatomic, copy) NSString* artworkNameAddString;
 @property (nonatomic, copy) NSString* artworkFullImageString;
