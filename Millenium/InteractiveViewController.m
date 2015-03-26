@@ -3926,7 +3926,6 @@ else
         
         // Frame location in view to show original image
         [croppedImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
-        //[croppedImageView setFrame:CGRectMake(0, 0, 1024, 768)];
         
         
         CGRect rect = CGRectMake(425, 142, 600, 416);

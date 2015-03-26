@@ -14,10 +14,6 @@
 
 @implementation ImagePickerViewController
 //@synthesize chosenImage;
-
-@synthesize txtTolerance;
-@synthesize floodImageView;
-
 @synthesize alertShowString;
 @synthesize imageDownloaded;
 
@@ -102,11 +98,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    floodImageView.newcolor = [UIColor lightGrayColor];
-    //floodImageView.newcolor = [UIColor whiteColor];
-    //floodImageView.newcolor = [UIColor blueColor];
-    //floodImageView.newcolor= [UIColor colorWithRed:.0f green:.0f blue:225.0f alpha:0];
 
     interactiveHeaderString = @"Logo Picked";
 
@@ -248,55 +239,35 @@
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse* response,
                                                NSData* data,
-                                               NSError* connectionError){
-                               // handle response
-                           }];
+                                               NSError* connectionError) {
+                                                 // handle response
+                                             }];
 
     NSURLSession* session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:url
             completionHandler:^(NSData* data,
                                 NSURLResponse* response,
-                                NSError* error){
-                // handle response
-            }] resume];
+                                NSError* error) {
+                                  // handle response
+                              }] resume];
 
     imageDownloaded = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:url]];
     //UIImage *image = [[UIImage alloc] init];
     //NSLog(@"%f,%f",imageDownloaded.size.width,imageDownloaded.size.height);
 
     chosenImageView.image = imageDownloaded;
-    floodImageView.image = imageDownloaded;
     UIGraphicsBeginImageContext(imageDownloaded.size);
     [imageDownloaded drawAtPoint:CGPointZero];
 
     UIImage* newImg = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 
-    //add compression
-    /*CGFloat compression = 0.9f;
-    CGFloat maxCompression = 0.1f;
-    //int maxFileSize = 250*1024;
-    int maxFileSize = 250*200;
-    
-    NSData *imageData = UIImageJPEGRepresentation(newImg, compression);
-    
-    while ([imageData length] > maxFileSize && compression > maxCompression)
-    {
-        compression -= 0.1;
-        imageData = UIImageJPEGRepresentation(newImg, compression);
-    }
-    
-    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
-    newImg = [UIImage imageWithData:imageData];
-    //end compression*/
-
     //return [UIImage imageWithCGImage:myColorMaskedImage];
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     [UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
 
     if ([alertShowString isEqualToString:@"YES"]) {
-    }
-    else {
+    } else {
         alertLogo = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your Logo" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         alertLogo.alertViewStyle = UIAlertViewStylePlainTextInput;
 
@@ -441,18 +412,6 @@
         goingController.logoColorString = @" ";
     }
 
-    if ([segue.identifier isEqualToString:@"FloodPickedSegue"]) {
-        InteractiveViewController* goingController = segue.destinationViewController;
-        goingController.selectedImage = floodImageView.image;
-        //NSLog(@"chosenImage %@",chosenImageView.image);
-        //goingController.interactiveHeaderString=interactiveHeaderString;
-        goingController.interactiveHeaderString = @"Create Mat";
-        goingController.nameString = nameField.text;
-        //NSLog(@"nameField %@",nameField.text);
-
-        goingController.logoColorString = @" ";
-    }
-
     if ([segue.identifier isEqualToString:@"SearchSegue"]) {
         LogoCollectionViewController* goingController = segue.destinationViewController;
 
@@ -546,65 +505,6 @@
     UIGraphicsEndImageContext();*/
 }
 
-- (UIImage*)changeBlackColorTransparent:(UIImage*)image
-{
-    UIImage* imageTrans;
-    imageTrans = floodImageView.image;
-
-    imageTrans = [UIImage imageWithData:UIImageJPEGRepresentation(imageTrans, 1.0)];
-    CGImageRef rawImageRef = imageTrans.CGImage;
-    //RGB color range to mask (make transparent)  R-Low, R-High, G-Low, G-High, B-Low, B-High
-    //255 is for white only
-    //const float colorMasking[6] = {222, 255, 222, 255, 222, 255};
-    //masks black
-    //const float colorMasking[6] = { 0, 0, 0, 0, 0, 0 };
-    //masks blue-works
-    //const float colorMasking[6] = { 0, 0, 0, 0, 0, 255 };
-    //const float colorMasking[6] = { 56, 91, 127, 153, 0, 255 };
-    //{ 0, 124, 0, 68, 0, 0 };
-    //lightGray only
-    //const float colorMasking[6] = {106, 204, 106, 204, 106, 204};
-    const CGFloat colorMasking[6] = {106, 204, 106, 204, 106, 204};
-
-    UIGraphicsBeginImageContext(imageTrans.size);
-    CGImageRef maskedImageRef = CGImageCreateWithMaskingColors(rawImageRef, colorMasking);
-
-    //iPhone translation
-    CGContextTranslateCTM(UIGraphicsGetCurrentContext(), 0.0, imageTrans.size.height);
-    CGContextScaleCTM(UIGraphicsGetCurrentContext(), 1.0, -1.0);
-
-    CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, imageTrans.size.width, imageTrans.size.height), maskedImageRef);
-    UIImage* result = UIGraphicsGetImageFromCurrentImageContext();
-    CGImageRelease(maskedImageRef);
-    UIGraphicsEndImageContext();
-
-    //return [UIImage imageWithCGImage:myColorMaskedImage];
-    NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(result) writeToFile:imagePath atomically:NO];
-
-    return result;
-
-    //does not hit anything after this...
-
-    /*[[UIColor clearColor] set];
-     
-     
-     
-     [chosenImageView setOpaque:NO];
-     [chosenImageView setOpaque:NO];
-     [chosenImageView setBackgroundColor:[UIColor clearColor]];*/
-
-    //chosenImageView.image= result;
-
-    // UIImage*transLogoImage = result;
-
-    //rewrite image to crop it correctly
-    /* UIGraphicsBeginImageContext(transLogoImage.size);
-     [transLogoImage drawAtPoint:CGPointZero];
-     UIImage *clearImg = UIGraphicsGetImageFromCurrentImageContext();
-     UIGraphicsEndImageContext();*/
-}
-
 - (IBAction)goWhite:(id)sender
 {
     //calls UImage function change White...
@@ -672,8 +572,7 @@
         }
 
         //save name for Interactive View
-    }
-    else {
+    } else {
         nameField = [alertView textFieldAtIndex:0];
         artworkNameAddFavString = nameField.text;
 
@@ -721,24 +620,6 @@
     UITextField* alertNameField = [alertLogo textFieldAtIndex:0];
     //NSLog(@"alertNameField - %@",alertNameField.text);
     logoImage = chosenImageView.image;
-
-    //add compression
-    /*CGFloat compression = 0.9f;
-    CGFloat maxCompression = 0.1f;
-    //int maxFileSize = 250*1024;
-    int maxFileSize = 250*200;
-    
-    NSData *imageData = UIImageJPEGRepresentation(logoImage, compression);
-    
-    while ([imageData length] > maxFileSize && compression > maxCompression)
-    {
-        compression -= 0.1;
-        imageData = UIImageJPEGRepresentation(logoImage, compression);
-    }
-    
-    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
-    logoImage = [UIImage imageWithData:imageData];
-    //end compression*/
 
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
 
@@ -823,17 +704,17 @@
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse* response,
                                                    NSData* data,
-                                                   NSError* connectionError){
-                                   // handle response
-                               }];
+                                                   NSError* connectionError) {
+                                                     // handle response
+                                                 }];
 
         NSURLSession* session = [NSURLSession sharedSession];
         [[session dataTaskWithURL:urlSearch
                 completionHandler:^(NSData* data,
                                     NSURLResponse* response,
-                                    NSError* error){
-                    // handle response
-                }] resume];
+                                    NSError* error) {
+                                      // handle response
+                                  }] resume];
 
         NSError* error = nil;
         NSData* data = [NSData dataWithContentsOfURL:urlSearch];
@@ -862,17 +743,17 @@
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse* response,
                                                    NSData* dataMat,
-                                                   NSError* connectionError){
-                                   // handle response
-                               }];
+                                                   NSError* connectionError) {
+                                                     // handle response
+                                                 }];
 
         NSURLSession* sessionMat = [NSURLSession sharedSession];
         [[sessionMat dataTaskWithURL:urlSearchMat
                    completionHandler:^(NSData* dataMat,
                                        NSURLResponse* response,
-                                       NSError* errorMat){
-                       // handle response
-                   }] resume];
+                                       NSError* errorMat) {
+                                         // handle response
+                                     }] resume];
 
         //NSError *errorMat = nil;
         //NSData *dataMat = [NSData dataWithContentsOfURL:urlSearch];
@@ -1140,26 +1021,7 @@
 
     UIGraphicsEndImageContext();
 
-    //add compression
-    /*CGFloat compression = 0.9f;
-    CGFloat maxCompression = 0.1f;
-    //int maxFileSize = 250*1024;
-    int maxFileSize = 250*200;
-    
-    NSData *imageData = UIImageJPEGRepresentation(newImage, compression);
-    
-    while ([imageData length] > maxFileSize && compression > maxCompression)
-    {
-        compression -= 0.1;
-        imageData = UIImageJPEGRepresentation(newImage, compression);
-    }
-    
-    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
-    newImage = [UIImage imageWithData:imageData];
-    //end compression*/
-
     chosenImageView.image = newImage;
-    floodImageView.image = newImage;
     //chosenImage = newImage;
 
     //NSLog(@"chosenImage %@",selectedImage);
@@ -1299,24 +1161,6 @@
 
     NSString* imagePath3 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImageClear.png"]];
 
-    //add compression
-    /*CGFloat compression = 0.9f;
-    CGFloat maxCompression = 0.1f;
-    //int maxFileSize = 250*1024;
-    int maxFileSize = 250*200;
-    
-    NSData *imageData = UIImageJPEGRepresentation(image1, compression);
-    
-    while ([imageData length] > maxFileSize && compression > maxCompression)
-    {
-        compression -= 0.1;
-        imageData = UIImageJPEGRepresentation(image1, compression);
-    }
-    
-    //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
-    image1 = [UIImage imageWithData:imageData];
-    //end compression*/
-
     [UIImagePNGRepresentation(image1) writeToFile:imagePath3 atomically:YES];
 }
 
@@ -1365,17 +1209,6 @@
     [self presentViewController:svc animated:YES completion:nil];
 }
 
-- (IBAction)goInteractiveFlood:(UIButton*)sender
-{
-    interactiveHeaderString = @"Create Mat";
-
-    [self performSegueWithIdentifier:@"FloodPickedSegue" sender:sender];
-
-    UIStoryboard* storyboard = self.storyboard;
-    InteractiveViewController* svc = [storyboard instantiateViewControllerWithIdentifier:@"InteractiveViewBoard"];
-    [self presentViewController:svc animated:YES completion:nil];
-}
-
 - (IBAction)goHome:(UIButton*)sender
 {
     UIStoryboard* storyboard = self.storyboard;
@@ -1396,8 +1229,8 @@
         NSURL* url = [NSURL URLWithString:strURL];
         NSURLRequest* urlRequest = [NSURLRequest requestWithURL:url];
         [self->googleWebView loadRequest:urlRequest];
-    }
-    else {
+
+    } else {
         overlay1WebView.hidden = YES;
         editLogoButton.hidden = YES;
         editImageView.hidden = YES;
@@ -1407,71 +1240,7 @@
         NSURLRequest* urlRequest = [NSURLRequest requestWithURL:url];
         [self->googleWebView loadRequest:urlRequest];
     }
-}
 
-//FloodFill
-- (IBAction)btnSetTap:(UIButton*)sender
-{
-    [txtTolerance resignFirstResponder];
-    floodImageView.tolorance = [txtTolerance.text intValue];
-    //[imageView setImage:[UIImage imageNamed:@"star.png"]];
-    //[floodImageView setImage:[UIImage imageNamed:@"Android.jpg"]];
-}
-
-- (IBAction)btnColorTap:(UIButton*)sender
-{
-    ///switch (sender.tag)
-    //{
-    //case 1:
-    floodImageView.newcolor = [UIColor lightGrayColor];
-    //floodImageView.newcolor = [UIColor whiteColor];
-    //floodImageView.newcolor = [UIColor blueColor];
-
-    //floodImageView.newcolor= [UIColor colorWithRed:.0f green:.0f blue:225.0f alpha:0];
-    //chosenImageView.image = [self changeBlackColorTransparent:floodImageView.image];
-    //floodImageView.image = [self changeBlackColorTransparent:floodImageView.image];
-
-    //floodImageView.image = [self changeWhiteColorTransparent:floodImageView.image];
-
-    //floodImageView.newcolor = [self changeWhiteColorTransparent:floodImageView.image];
-    //break;
-    /*case 2:
-            imageView.newcolor = [UIColor greenColor];
-            break;
-        case 3:
-            imageView.newcolor = [UIColor blueColor];
-            break;
-        case 4:
-            imageView.newcolor = [UIColor blackColor];
-            break;
-        case 5:
-            imageView.newcolor = [UIColor darkGrayColor];
-            break;*/
-    //}
-}
-
-- (IBAction)useFloodImageView:(UIButton*)sender
-{
-    //chosenImageView=floodImageView;
-}
-
-- (IBAction)saveFloodPic:(UIButton*)sender
-{
-    chosenImageView.image = [self changeBlackColorTransparent:floodImageView.image];
-    floodImageView.image = [self changeBlackColorTransparent:floodImageView.image];
-    UIImage* newImg1 = floodImageView.image;
-
-    //UIImage* newImg = UIGraphicsGetImageFromCurrentImageContext();
-    //UIGraphicsEndImageContext();
-
-    //return [UIImage imageWithCGImage:myColorMaskedImage];
-    // NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    //[UIImagePNGRepresentation(newImg) writeToFile:imagePath atomically:NO];
-    //UIGraphicsEndImageContext();
-
-    //return [UIImage imageWithCGImage:myColorMaskedImage];
-    NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
-    [UIImagePNGRepresentation(newImg1) writeToFile:imagePath atomically:NO];
 }
 
 - (BOOL)countOfAlert
@@ -1496,7 +1265,6 @@
 
 - (void)dealloc
 {
-    floodImageView.image = nil;
 }
 
 @end

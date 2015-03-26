@@ -702,6 +702,8 @@
 		4288F1B2195130D500975FB6 /* WaterGuardPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardPDF.png; sourceTree = "<group>"; };
 		4288F1B41951329E00975FB6 /* TripleFlexFlow1PDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TripleFlexFlow1PDF.png; sourceTree = "<group>"; };
 		4288F1B61951330300975FB6 /* Waterguard1PDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Waterguard1PDF.png; sourceTree = "<group>"; };
+		4290DE571AC353F6001333F4 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		4290DE581AC353F7001333F4 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		4295213C1976F081002B51C7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4295213D1976F081002B51C7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare7.png; sourceTree = "<group>"; };
@@ -1608,6 +1610,8 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
+				4290DE571AC353F6001333F4 /* ImagePickerViewController.h */,
+				4290DE581AC353F7001333F4 /* ImagePickerViewController.m */,
 				427B47001A69B5E900028DD2 /* ImagesDrafts */,
 				420A8F0A19532B00005FB1D8 /* ImagesDirect */,
 				4288F1A91950A00000975FB6 /* ImagesLogin */,
@@ -1783,11 +1787,16 @@
 		42FF7A0918CDE92A00C72695 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Jami Sue Becker";
 				TargetAttributes = {
 					42FF7A1018CDE92A00C72695 = {
 						DevelopmentTeam = QZ5N4RRHV5;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					42FF7A3118CDE92A00C72695 = {
 						TestTargetID = 42FF7A1018CDE92A00C72695;
@@ -2357,8 +2366,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: jami becker (QZ5N4RRHV5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: jami becker (QZ5N4RRHV5)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2374,8 +2383,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "c43cdca7-66be-46b4-9c88-ac8c6f086115";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -2397,8 +2407,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: jami becker (QZ5N4RRHV5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: jami becker (QZ5N4RRHV5)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2408,7 +2418,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE = "c43cdca7-66be-46b4-9c88-ac8c6f086115";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -2420,13 +2431,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: jami becker (QZ5N4RRHV5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Millenium/CintasMats-Prefix.pch";
 				INFOPLIST_FILE = "Millenium/CintasMats-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = CintasMats;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c43cdca7-66be-46b4-9c88-ac8c6f086115";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2437,13 +2449,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Millenium/CintasMats-Prefix.pch";
 				INFOPLIST_FILE = "Millenium/CintasMats-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = CintasMats;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c43cdca7-66be-46b4-9c88-ac8c6f086115";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2452,7 +2465,7 @@
 		42FF7A4718CDE92A00C72695 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Millenium.app/Millenium";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -2466,7 +2479,7 @@
 				);
 				INFOPLIST_FILE = "MilleniumTests/CintasMatsTests-Info.plist";
 				PRODUCT_NAME = CintasMatsTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CintasMats.app/CintasMats";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -2474,7 +2487,7 @@
 		42FF7A4818CDE92A00C72695 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Millenium.app/Millenium";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -2484,7 +2497,7 @@
 				GCC_PREFIX_HEADER = "Millenium/Millenium-Prefix.pch";
 				INFOPLIST_FILE = "MilleniumTests/CintasMatsTests-Info.plist";
 				PRODUCT_NAME = CintasMatsTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CintasMats.app/CintasMats";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
