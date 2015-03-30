@@ -23,7 +23,7 @@
 //@synthesize center;
 //@synthesize control;
 
-
+@synthesize logoPicCenter;
 
 @synthesize firstColorNameString;
 @synthesize secondColorNameString;
@@ -148,7 +148,6 @@
 
 @synthesize draftUrlAddFavString;
 @synthesize draftNameAddFavString;
-
 
 @synthesize matUrlAddFavString;
 @synthesize matNameAddFavString;
@@ -280,6 +279,8 @@
 {
     [super viewDidLoad];
 
+    logoPicButton.tag = 1000;
+
     //UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
     //[refresh addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
     //[fontPicker addTarget:self action:@selector(refreshView:) ];
@@ -307,8 +308,8 @@
     if ([BGString isEqualToString:@"108-Black"]) {
         matUseBGColorString = @"Black_108.jpg";
         matBGTextColorString = @"108";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -317,8 +318,8 @@
         matUseBGColorString = @"Steel Blue_121.jpg";
         matBGTextColorString = @"121";
         matBGColorAddFavString = @"121-Steel Blue";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -327,8 +328,8 @@
         matUseBGColorString = @"Suede_123.jpg";
         matBGTextColorString = @"123";
         matBGColorAddFavString = @"123-Suede";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -337,8 +338,8 @@
         matUseBGColorString = @"White_140.jpg";
         matBGTextColorString = @"140";
         matBGColorAddFavString = @"140-White";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -347,8 +348,8 @@
         matUseBGColorString = @"Rose_119.jpg";
         matBGTextColorString = @"119";
         matBGColorAddFavString = @"119-Rose";
-
-    } else {
+    }
+    else {
         /*matUseBGColorString=@"Rose_119.jpg";
         matBGTextColorString=@"119";
         matBGColorAddFavString=@"119-Rose";*/
@@ -360,8 +361,8 @@
         matUseBGColorString = @"Royal Blue_107.jpg";
         matBGTextColorString = @"107";
         matBGColorAddFavString = @"107-Royal Blue";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -370,8 +371,8 @@
         matUseBGColorString = @"Sandalwood_120.jpg";
         matBGTextColorString = @"120";
         matBGColorAddFavString = @"120-Sandalwood";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -380,8 +381,8 @@
         matUseBGColorString = @"Silver_116.jpg";
         matBGTextColorString = @"116";
         matBGColorAddFavString = @"116-Silver";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
         /* matUseBGColorString=@"Silver_116.jpg";
         matBGTextColorString=@"116";
@@ -393,8 +394,8 @@
         matUseBGColorString = @"Orange_127.jpg";
         matBGTextColorString = @"127";
         matBGColorAddFavString = @"127-Orange";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -404,8 +405,8 @@
         matUseBGColorString = @"Purple_105.jpg";
         matBGTextColorString = @"105";
         matBGColorAddFavString = @"105-Purple";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
         /*matUseBGColorString=@"Purple_105.jpg";
         matBGTextColorString=@"105";
@@ -418,8 +419,8 @@
         matUseBGColorString = @"Red_112.jpg";
         matBGTextColorString = @"112";
         matBGColorAddFavString = @"112-Red";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -428,8 +429,8 @@
         matUseBGColorString = @"Gold_109.jpg";
         matBGTextColorString = @"109";
         matBGColorAddFavString = @"109-Gold";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -438,8 +439,8 @@
         matUseBGColorString = @"Grey_115.jpg";
         matBGTextColorString = @"115";
         matBGColorAddFavString = @"115-Grey";
-
-    } else {
+    }
+    else {
         // NSLog(@"string does not contain bla");
     }
 
@@ -448,8 +449,8 @@
         matUseBGColorString = @"Light Blue_106.jpg";
         matUseBGColorString = @"106";
         matBGColorAddFavString = @"106-Light Blue";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -458,8 +459,8 @@
         matUseBGColorString = @"Navy_118.jpg";
         matBGTextColorString = @"118";
         matBGColorAddFavString = @"118-Navy";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -468,8 +469,8 @@
         matUseBGColorString = @"Emerald Green_110.jpg";
         matBGTextColorString = @"110";
         matBGColorAddFavString = @"110-Emerald Green";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -478,8 +479,8 @@
         matUseBGColorString = @"Forest Green_117.jpg";
         matBGTextColorString = @"117";
         matBGColorAddFavString = @"117-Forest Green";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -488,8 +489,8 @@
         matUseBGColorString = @"Cranberry_114.jpg";
         matBGTextColorString = @"114";
         matBGColorAddFavString = @"114-Cranberry";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -500,8 +501,8 @@
         matUseBGColorString = @"Dark Gold_103.jpg";
         matBGTextColorString = @"103";
         matBGColorAddFavString = @"103-Dark Gold";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
 
         /*matUseBGColorString=@"Dark Gold_103.jpg";
@@ -516,8 +517,8 @@
         matUseBGColorString = @"Charcoal_101.jpg";
         matBGTextColorString = @"101";
         matBGColorAddFavString = @"101-Charcoal";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -526,8 +527,8 @@
         matUseBGColorString = @"Chocolate_111.jpg";
         matBGTextColorString = @"111";
         matBGColorAddFavString = @"111-Chocolate";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -536,8 +537,8 @@
         matUseBGColorString = @"Clay_126.jpg";
         matBGTextColorString = @"126";
         matBGColorAddFavString = @"126-Clay";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
     }
 
@@ -547,8 +548,8 @@
         matBGTextColorString = @"102";
         matBGColorAddFavString = @"102-Brown";
         //NSLog(@"string does not contain bla");
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
         /* matUseBGColorString=@"Brown_102.jpg";
         matBGTextColorString=@"102";
@@ -562,8 +563,8 @@
         matUseBGColorString = @"Burgundy_100.jpg";
         matBGTextColorString = @"100";
         matBGColorAddFavString = @"100-Burgundy";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
 
         /* matUseBGColorString=@"Burgundy_100.jpg";
@@ -576,8 +577,8 @@
         matUseBGColorString = @"Aquamarine_130.jpg";
         matBGTextColorString = @"130";
         matBGColorAddFavString = @"130-Aquamarine";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
         /*matUseBGColorString=@"Aquamarine_130.jpg";
         matBGTextColorString=@"130";
@@ -589,8 +590,8 @@
         matUseBGColorString = @"Turquoise_104.jpg";
         matBGTextColorString = @"104";
         matBGColorAddFavString = @"104-Turquoise";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
 
         /*matUseBGColorString=@"Turquoise_104.jpg";
@@ -604,8 +605,8 @@
         matUseBGColorString = @"Yellow_128.jpg";
         matBGTextColorString = @"128";
         matBGColorAddFavString = @"128-Yellow";
-
-    } else {
+    }
+    else {
         //NSLog(@"string does not contain bla");
         /*matUseBGColorString=@"Yellow_128.jpg";
         matBGTextColorString=@"128";
@@ -654,8 +655,8 @@
         NSString* string = logoColorString;
         if ([string rangeOfString:@"108-Black"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             //NSLog(@"black Found!");
 
             [logoColorArray addObject:@"Black_108.jpg"];
@@ -666,8 +667,8 @@
 
         if ([string rangeOfString:@"121-Steel Blue"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Steel Blue_121.jpg"];
             [logoColorButtonArray addObject:steelBlueButton];
             [logoColorNameArray addObject:@"121-Steel Blue"];
@@ -676,8 +677,8 @@
 
         if ([string rangeOfString:@"123-Suede"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Suede_123.jpg"];
             [logoColorButtonArray addObject:_suedeButton];
             [logoColorNameArray addObject:@"123-Suede"];
@@ -686,8 +687,8 @@
 
         if ([string rangeOfString:@"140-White"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"White_140.jpg"];
             [logoColorButtonArray addObject:_whiteButton];
             [logoColorNameArray addObject:@"140-White"];
@@ -696,8 +697,8 @@
 
         if ([string rangeOfString:@"119-Rose"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Rose_119.jpg"];
             [logoColorButtonArray addObject:_roseButton];
             [logoColorNameArray addObject:@"119-Rose"];
@@ -707,8 +708,8 @@
 
         if ([string rangeOfString:@"107-Royal Blue"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Royal Blue_107.jpg"];
             [logoColorButtonArray addObject:_royalBlueButton];
             [logoColorNameArray addObject:@"107-Royal Blue"];
@@ -718,8 +719,8 @@
 
         if ([string rangeOfString:@"120-Sandalwood"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Sandalwood_120.jpg"];
             [logoColorButtonArray addObject:_sandalWoodButton];
             [logoColorNameArray addObject:@"120-Sandalwood"];
@@ -729,8 +730,8 @@
 
         if ([string rangeOfString:@"116-Silver"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Silver_116.jpg"];
             [logoColorButtonArray addObject:_silverButton];
             [logoColorNameArray addObject:@"116-Silver"];
@@ -740,8 +741,8 @@
 
         if ([string rangeOfString:@"127-Orange"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Orange_127.jpg"];
             [logoColorButtonArray addObject:_orangeButton];
             [logoColorNameArray addObject:@"127-Orange"];
@@ -750,8 +751,8 @@
 
         if ([string rangeOfString:@"105-Purple"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Purple_105.jpg"];
             [logoColorButtonArray addObject:_purpleButton];
             [logoColorNameArray addObject:@"105-Purple"];
@@ -760,8 +761,8 @@
 
         if ([string rangeOfString:@"112-Red"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Red_112.jpg"];
             [logoColorButtonArray addObject:_redButton];
             [logoColorNameArray addObject:@"112-Red"];
@@ -770,8 +771,8 @@
 
         if ([string rangeOfString:@"109-Gold"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Gold_109.jpg"];
             [logoColorButtonArray addObject:_goldButton];
             [logoColorNameArray addObject:@"109-Gold"];
@@ -780,8 +781,8 @@
 
         if ([string rangeOfString:@"115-Grey"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Grey_115.jpg"];
             [logoColorButtonArray addObject:_greyButton];
             [logoColorNameArray addObject:@"115-Grey"];
@@ -790,8 +791,8 @@
 
         if ([string rangeOfString:@"106-Light Blue"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Light Blue_106.jpg"];
             [logoColorButtonArray addObject:_lightBlueButton];
             [logoColorNameArray addObject:@"106-Light Blue"];
@@ -800,8 +801,8 @@
 
         if ([string rangeOfString:@"118-Navy"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Navy_118.jpg"];
             [logoColorButtonArray addObject:_navyButton];
             [logoColorNameArray addObject:@"118-Navy"];
@@ -810,8 +811,8 @@
 
         if ([string rangeOfString:@"110-Emerald Green"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Emerald Green_110.jpg"];
             [logoColorButtonArray addObject:_emeraldGreenButton];
             [logoColorNameArray addObject:@"110-Emerald Green"];
@@ -820,8 +821,8 @@
 
         if ([string rangeOfString:@"117-Forest Green"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Forest Green_117.jpg"];
             [logoColorButtonArray addObject:_forestGreenButton];
             [logoColorNameArray addObject:@"117-Forest Green"];
@@ -830,8 +831,8 @@
 
         if ([string rangeOfString:@"114-Cranberry"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Cranberry_114.jpg"];
             [logoColorButtonArray addObject:_cranberryButton];
             [logoColorNameArray addObject:@"114-Cranberry"];
@@ -840,8 +841,8 @@
 
         if ([string rangeOfString:@"103-Dark Gold"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Dark Gold_103.jpg"];
             [logoColorButtonArray addObject:_darkGoldButton];
             [logoColorNameArray addObject:@"103-Dark Gold"];
@@ -850,8 +851,8 @@
 
         if ([string rangeOfString:@"101-Charcoal"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Charcoal_101.jpg"];
             [logoColorButtonArray addObject:_charcoalButton];
             [logoColorNameArray addObject:@"101-Charcoal"];
@@ -860,8 +861,8 @@
 
         if ([string rangeOfString:@"111-Chocolate"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Chocolate_111.jpg"];
             [logoColorButtonArray addObject:_chocolateButton];
             [logoColorNameArray addObject:@"111-Chocolate"];
@@ -870,8 +871,8 @@
 
         if ([string rangeOfString:@"126-Clay"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Clay_126.jpg"];
             [logoColorButtonArray addObject:_clayButton];
             [logoColorNameArray addObject:@"126-Clay"];
@@ -880,8 +881,8 @@
 
         if ([string rangeOfString:@"102-Brown"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Brown_102.jpg"];
             [logoColorButtonArray addObject:_brownButton];
             [logoColorNameArray addObject:@"102-Brown"];
@@ -890,8 +891,8 @@
 
         if ([string rangeOfString:@"100-Burgundy"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Burgundy_100.jpg"];
             [logoColorButtonArray addObject:_burgundyButton];
             [logoColorNameArray addObject:@"100-Burgundy"];
@@ -900,8 +901,8 @@
 
         if ([string rangeOfString:@"130-Aquamarine"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Aquamarine_130.jpg"];
             [logoColorButtonArray addObject:_aquamarineButton];
             [logoColorNameArray addObject:@"130-Aquamarine"];
@@ -910,8 +911,8 @@
 
         if ([string rangeOfString:@"104-Turquoise"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Turquoise_104.jpg"];
             [logoColorButtonArray addObject:_turquoiseButton];
             [logoColorNameArray addObject:@"104-Turquoise"];
@@ -920,8 +921,8 @@
 
         if ([string rangeOfString:@"128-Yellow"].location == NSNotFound) {
             //NSLog(@"string does not contain bla");
-
-        } else {
+        }
+        else {
             [logoColorArray addObject:@"Yellow_128.jpg"];
             [logoColorButtonArray addObject:_yellowButton];
             [logoColorNameArray addObject:@"128-Yellow"];
@@ -1368,8 +1369,8 @@
         //portraitImageView.hidden=NO;
         //landscapeImageView.hidden=YES;
         textOrientField.text = @"Portrait";
-
-    } else {
+    }
+    else {
         textOrientField.text = @"";
         //portraitImageView.hidden=YES;
         //landscapeImageView.hidden=YES;
@@ -1400,7 +1401,8 @@
         size3by5View.hidden = YES;
         size4by6View.hidden = YES;
         size3by10View.hidden = NO;
-    } else {
+    }
+    else {
         size2by3View.hidden = YES;
         size3by5View.hidden = YES;
         size4by6View.hidden = YES;
@@ -1436,8 +1438,8 @@
     if (nameString != NULL) {
         //NSLog(@"nameString %@",nameString);
         nameField.text = nameString;
-
-    } else {
+    }
+    else {
         nameField.text = @"";
     }
     //check if NSNULL CLASS
@@ -1445,30 +1447,30 @@
     if (sellerString != nil) {
         NSLog(@"sellerString %@", sellerString);
         sellerField.text = sellerString;
-
-    } else {
+    }
+    else {
         sellerField.text = @" ";
     }
 
     if (companyString != NULL) {
         //NSLog(@"sellerString %@",sellerString);
         companyField.text = companyString;
-
-    } else {
+    }
+    else {
         companyField.text = @"";
     }
 
     if (numberString != NULL) {
         numberField.text = numberString;
-
-    } else {
+    }
+    else {
         numberField.text = @"";
     }
 
     if (interactiveHeaderString != NULL) {
         headerLabel.text = interactiveHeaderString;
-
-    } else {
+    }
+    else {
         headerLabel.text = @"Create Mat";
     }
 
@@ -1721,7 +1723,8 @@
         if (imagePath == Nil) {
             UIImage* image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
             [logoPicButton setImage:image forState:UIControlStateNormal];
-        } else {
+        }
+        else {
             //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
             //[self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
 
@@ -1799,8 +1802,8 @@
 
         if ([orientString isEqualToString:@"Portrait"]) {
             textOrientField.text = @"Portrait";
-
-        } else {
+        }
+        else {
             textOrientField.text = @"";
         }
 
@@ -1814,8 +1817,8 @@
 
         if (sizeString != NULL) {
             sizeGetMatString = sizeString;
-
-        } else {
+        }
+        else {
             sizeGetMatString = @"4'x 6' ";
         }
 
@@ -2399,7 +2402,8 @@
             //portraitImageView.hidden=NO;
             //landscapeImageView.hidden=YES;
             textOrientField.text = @"LANDSCAPE";
-        } else {
+        }
+        else {
             //portraitImageView.hidden=YES;
             //landscapeImageView.hidden=YES;
             textOrientField.text = @"LANDSCAPE";
@@ -2466,16 +2470,10 @@
         //NSLog(@"logoUseStringSendInteractive %@",_logoUseStringHere);
 
         if (imagePath == Nil) {
-            UIImage* image = [UIImage imageNamed:@"JadeTeaHouseLogo.png"];
-            //[logoPicButton setImage:image forState:UIControlStateNormal];
-
             [[self.logoPicButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
             [self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
-
-        } else {
-            //[[self.logoPicButton imageView] setContentMode: UIViewContentModeScaleAspectFit];
-            //[self.logoPicButton setBackgroundImage:logoImage forState:UIControlStateNormal];
-
+        }
+        else {
             [[self.logoPicButton imageView] setContentMode:UIViewContentModeScaleAspectFit];
             [self.logoPicButton setImage:logoImage forState:UIControlStateNormal];
         }
@@ -3171,7 +3169,7 @@ else
     //NSLog(@"addButton.tag:%ld",(long)sender.tag);
 
     int myInt = (int)sender.tag;
-    NSLog(@"sender %@",sender);
+    NSLog(@"sender %@", sender);
 
     if ((long)sender.tag == 121) {
         matBGColorAddFavString = @"121-Steel Blue";
@@ -3186,14 +3184,13 @@ else
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         //[bgColorButton.titleLabelColor setColor:whiteColor  forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
-        
+
         //TODO track this as we do for mats coming in
-       /* matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
+        /* matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
         
         NSLog(@"matColorString pass%@",matColorString);*/
-
-
-    } else if ((long)sender.tag == 123) {
+    }
+    else if ((long)sender.tag == 123) {
         matBGColorAddFavString = @"123-Suede";
         myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
         [matBGLogoView setImage:myBGColor];
@@ -3203,8 +3200,8 @@ else
         [bgColorButton setTitle:@"123" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
-
-    } else if ((long)sender.tag == 140) {
+    }
+    else if ((long)sender.tag == 140) {
         matBGColorAddFavString = @"140-White";
 
         myBGColor = [UIImage imageNamed:@"White_140.jpg"];
@@ -3214,8 +3211,8 @@ else
         [bgColorButton setTitle:@"140" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
-
-    } else if ((long)sender.tag == 119) {
+    }
+    else if ((long)sender.tag == 119) {
         matBGColorAddFavString = @"119-Rose";
         myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
         [matBGLogoView setImage:myBGColor];
@@ -3224,8 +3221,8 @@ else
         [bgColorButton setTitle:@"119" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
-
-    } else if ((long)sender.tag == 107) {
+    }
+    else if ((long)sender.tag == 107) {
         matBGColorAddFavString = @"107-Royal Blue";
         myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
         [matBGLogoView setImage:myBGColor];
@@ -3234,8 +3231,8 @@ else
         [bgColorButton setTitle:@"107" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
-
-    } else if ((long)sender.tag == 120) {
+    }
+    else if ((long)sender.tag == 120) {
         matBGColorAddFavString = @"120-Sandalwood";
         myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
         [matBGLogoView setImage:myBGColor];
@@ -3244,8 +3241,8 @@ else
         [bgColorButton setTitle:@"120" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
-
-    } else if ((long)sender.tag == 116) {
+    }
+    else if ((long)sender.tag == 116) {
         matBGColorAddFavString = @"116-Silver";
         myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
         [matBGLogoView setImage:myBGColor];
@@ -3677,7 +3674,7 @@ else
     decTextLayerView.hidden = NO;
     NSString* nameStringHere = nameField.text;
     //NSLog(@"nameString %@",nameStringHere);
-    
+
     /* NSString*matUrlAppendAddFavString= nameField.text;
      NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
      NSString*pngString= @".png";
@@ -3686,17 +3683,17 @@ else
      
      
      matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
-    
+
     if ([nameStringHere isEqualToString:@""] /*|| [matUrlAddFavString isEqualToString:@""] */) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-        
+
         alert.tag = 1;
         [alert show];
-        
-    } else {
+    }
+    else {
         //temporarily add button to subview to snap picture of mat
-        
+
         float x, y;
         float a, b;
         float c, d;
@@ -3704,64 +3701,64 @@ else
         y = logoPicButton.frame.size.height;
         a = logoPicButton.frame.origin.x;
         b = logoPicButton.frame.origin.y;
-        
+
         c = a + 50;
         d = b + 50;
-        
+
         noteLayerView.hidden = YES;
         CGRect screenRect2 = CGRectMake(0, 0, 1024, 768);
         UIGraphicsBeginImageContext(screenRect2.size);
-        
+
         CGContextRef ctx1 = UIGraphicsGetCurrentContext();
         [[UIColor whiteColor] set];
         CGContextFillRect(ctx1, screenRect2);
-        
+
         [self.view.layer renderInContext:ctx1];
         UIImage* matImage = UIGraphicsGetImageFromCurrentImageContext();
-        
+
         UIGraphicsEndImageContext();
-        
+
         croppedImageView = [[UIImageView alloc] initWithImage:matImage];
-        
+
         // Get size of current image
         CGSize size = [matImage size];
-        
+
         // Frame location in view to show original image
         [croppedImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
-        
+
         CGRect rect = CGRectMake(425, 142, 600, 416);
-        
+
         // Create bitmap image from original image data,
         // using rectangle to specify desired crop area
         CGImageRef imageRef = CGImageCreateWithImageInRect([matImage CGImage], rect);
         UIImage* img = [UIImage imageWithCGImage:imageRef];
         CGImageRelease(imageRef);
-        
+
         // Create and show the new image from bitmap data
         croppedImageView = [[UIImageView alloc] initWithImage:img];
         [croppedImageView setFrame:CGRectMake(0, 0, 600, 416)];
-        
+
         //save new imageView to FAV
-        
+
         CGRect screenRect3 = CGRectMake(425, 142, 600, 416);
-        
+
         UIGraphicsBeginImageContext(screenRect3.size);
-        
+
         CGContextRef ctx2 = UIGraphicsGetCurrentContext();
         [[UIColor whiteColor] set];
         CGContextFillRect(ctx2, screenRect3);
-        
+
         [self.croppedImageView.layer renderInContext:ctx2];
         UIImage* matCroppedImage = UIGraphicsGetImageFromCurrentImageContext();
-        
+
         UIGraphicsEndImageContext();
-        
+
         NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", nameStringHere]];
-        
+
         [UIImagePNGRepresentation(matCroppedImage) writeToFile:imagePath atomically:YES];
-        
+
         //NOTE- Do not remove local NSString values will break
-        
+
         /* NSString*matUrlAppendAddFavString= nameField.text;
          NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
          NSString*pngString= @".png";
@@ -3770,7 +3767,7 @@ else
          
          
          NSString*matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
-        
+
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         NSString* matNameAddFavString = nameField.text;
         NSString* matSellerAddFavString = sellerField.text;
@@ -3779,9 +3776,9 @@ else
         NSString* matLocationIDAddFavString = locationIDString;
         matColorAddFavString = matColorString;
         matUseBGColorString = BGString;
-        
+
         NSString* matSizeAddFavString = matSizeString;
-        
+
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         if (matUrlAddFavString == NULL) {
             NSString* matUrlAppendAddFavString = nameField.text;
@@ -3789,56 +3786,56 @@ else
             NSString* pngString = @".png";
             //NSLog(@"nameFieldText %@",nameField.text);
             //NSLog(@"nameFieldText %@",nameHideField.text);
-            
+
             matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];
-            
+
             //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         }
-        
+
         if (matNameAddFavString == NULL) {
             matNameAddFavString = @"The Artwork has no name";
         }
-        
+
         if (matCompanyAddFavString == NULL) {
             matCompanyAddFavString = @"No Company Name Is Available";
         }
-        
+
         if (matSellerAddFavString == NULL) {
             matSellerAddFavString = @"Sales Person Unknown";
         }
-        
+
         if (matIDAddFavString == NULL) {
             matIDAddFavString = @"No ID Provided";
         }
-        
+
         if (matLocationIDAddFavString == NULL) {
             matLocationIDAddFavString = @"No Location Provided";
         }
-        
+
         if (matColorAddFavString == NULL) {
             matColorAddFavString = @"No Colors are provided";
         }
-        
+
         if (matUseBGColorString == NULL) {
             matUseBGColorString = @"No Background Color is provided";
         }
-        
+
         /* if (matBGColorAddFavString==NULL)
          {
          
          matBGColorAddFavString= @"No Background Color is provided";
          
          }*/
-        
+
         if (matSizeAddFavString == NULL) {
             matSizeAddFavString = @"4' x 6'";
         }
-        
+
         NSManagedObjectContext* context = [self managedObjectContext];
-        
+
         // Create a new managed object
         NSManagedObject* newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
-        
+
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         //[newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
         [newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
@@ -3850,7 +3847,7 @@ else
         [newMatFavorite setValue:matColorString forKey:@"color"];
         [newMatFavorite setValue:matBGColorAddFavString forKey:@"bgColor"];
         [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];
-        
+
         NSError* error = nil;
         // Save the object to persistent store
         if (![context save:&error]) {
@@ -3863,10 +3860,10 @@ else
 - (IBAction)addDraftWithNotes:(id)sender
 {
     decTextLayerView.hidden = NO;
-    noteLayerView.hidden=NO;
+    noteLayerView.hidden = NO;
     NSString* nameStringHere = nameField.text;
     //NSLog(@"nameString %@",nameStringHere);
-    
+
     /* NSString*matUrlAppendAddFavString= nameField.text;
      NSLog(@"matUrlAppendAddFavString %@",matUrlAppendAddFavString);
      NSString*pngString= @".png";
@@ -3875,21 +3872,21 @@ else
      
      
      matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
-    
+
     if ([nameStringHere isEqualToString:@""] /*|| [matUrlAddFavString isEqualToString:@""] */) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request Draft With Notes and resave it" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         //alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-        
+
         alert.alertViewStyle = UIAlertViewStyleDefault;
-        
+
         alert.tag = 1;
         [alert show];
-        
-        noteLayerView.hidden=NO;
-        
-    } else {
+
+        noteLayerView.hidden = NO;
+    }
+    else {
         //temporarily add button to subview to snap picture of mat
-        
+
         float x, y;
         float a, b;
         float c, d;
@@ -3897,56 +3894,54 @@ else
         y = logoPicButton.frame.size.height;
         a = logoPicButton.frame.origin.x;
         b = logoPicButton.frame.origin.y;
-        
+
         c = a + 50;
         d = b + 50;
-        
+
         noteLayerView.hidden = NO;
-        
+
         [self.fontPicker removeFromSuperview];
-        
-        
+
         decTextLayerView.hidden = NO;
         UIGraphicsBeginImageContext(CGSizeMake(1024, 768));
-        
+
         //this gets the graphic context
         CGContextRef context1 = UIGraphicsGetCurrentContext();
-        
+
         [[UIColor whiteColor] set];
-        
+
         [self.view.layer renderInContext:context1];
-        
+
         UIImage* draftImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-        
+
         croppedImageView = [[UIImageView alloc] initWithImage:draftImage];
-        
+
         // Get size of current image
         CGSize size = [draftImage size];
-        
+
         // Frame location in view to show original image
         [croppedImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
-        
-        
+
         CGRect rect = CGRectMake(425, 142, 600, 416);
-        
+
         // Create bitmap image from original image data,
         // using rectangle to specify desired crop area
         CGImageRef imageRef = CGImageCreateWithImageInRect([draftImage CGImage], rect);
         UIImage* img = [UIImage imageWithCGImage:imageRef];
         CGImageRelease(imageRef);
-        
+
         //used to crop the image smaller we don't need this but good for reference
         // Create and show the new image from bitmap data
         croppedImageView = [[UIImageView alloc] initWithImage:img];
         [croppedImageView setFrame:CGRectMake(0, 0, 600, 416)];
-        
+
         //save new imageView to FAV
         //CGRect screenRect3 = CGRectMake(425, 142, 600, 416);
         //CGRect screenRect3 = CGRectMake(0, 0, 1024, 768);
-        
+
         //UIGraphicsBeginImageContext(screenRect3.size);
-        
+
         /*CGContextRef ctx2 = UIGraphicsGetCurrentContext();
          [[UIColor whiteColor] set];
          CGContextFillRect(ctx2, screenRect3);
@@ -3955,21 +3950,19 @@ else
          UIImage* draftCroppedImage = UIGraphicsGetImageFromCurrentImageContext();
          
          UIGraphicsEndImageContext();*/
-        
+
         NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", nameStringHere]];
-        
-        
+
         //not cropping image-commented out
         //[UIImagePNGRepresentation(draftCroppedImage) writeToFile:imagePath atomically:YES];
-        
+
         [UIImagePNGRepresentation(draftImage) writeToFile:imagePath atomically:YES];
-        
+
         //NOTE- Do not remove local NSString values will break
-        NSLog(@"nameFieldText %@",nameField.text);
-        
-        
+        NSLog(@"nameFieldText %@", nameField.text);
+
         //NSString*matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];
-        
+
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         NSString* draftNameAddFavString = nameField.text;
         NSString* draftSellerAddFavString = sellerField.text;
@@ -3978,9 +3971,9 @@ else
         NSString* draftLocationIDAddFavString = locationIDString;
         matColorAddFavString = matColorString;
         matUseBGColorString = BGString;
-        
+
         NSString* matSizeAddFavString = matSizeString;
-        
+
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         if (draftUrlAddFavString == NULL) {
             NSString* draftUrlAppendAddFavString = nameField.text;
@@ -3988,56 +3981,56 @@ else
             NSString* pngString = @".png";
             //NSLog(@"nameFieldText %@",nameField.text);
             //NSLog(@"nameFieldText %@",nameHideField.text);
-            
+
             draftUrlAddFavString = [draftUrlAppendAddFavString stringByAppendingString:pngString];
-            
+
             //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         }
-        
+
         if (draftNameAddFavString == NULL) {
             draftNameAddFavString = @"The Artwork has no name";
         }
-        
+
         if (draftCompanyAddFavString == NULL) {
             matCompanyAddFavString = @"No Company Name Is Available";
         }
-        
+
         if (matSellerAddFavString == NULL) {
             matSellerAddFavString = @"Sales Person Unknown";
         }
-        
+
         if (matIDAddFavString == NULL) {
             matIDAddFavString = @"No ID Provided";
         }
-        
+
         if (matLocationIDAddFavString == NULL) {
             matLocationIDAddFavString = @"No Location Provided";
         }
-        
+
         if (matColorAddFavString == NULL) {
             matColorAddFavString = @"No Colors are provided";
         }
-        
+
         if (matUseBGColorString == NULL) {
             matUseBGColorString = @"No Background Color is provided";
         }
-        
+
         /* if (matBGColorAddFavString==NULL)
          {
          
          matBGColorAddFavString= @"No Background Color is provided";
          
          }*/
-        
+
         if (matSizeAddFavString == NULL) {
             matSizeAddFavString = @"4' x 6'";
         }
-        
+
         NSManagedObjectContext* context = [self managedObjectContext];
-        
+
         // Create a new managed object
         NSManagedObject* newDraftFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"Draft" inManagedObjectContext:context];
-        
+
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         //[newMatFavorite setValue:matUrlAddFavString forKey:@"fullImageURL"];
         [newDraftFavorite setValue:draftUrlAddFavString forKey:@"fullImageURL"];
@@ -4049,7 +4042,7 @@ else
          [newMatFavorite setValue:matColorString forKey:@"color"];
          [newMatFavorite setValue:matBGColorAddFavString forKey:@"bgColor"];
          [newMatFavorite setValue:self.matSizeString forKey:@"artworkSize"];*/
-        
+
         NSError* error = nil;
         // Save the object to persistent store
         if (![context save:&error]) {
@@ -4074,18 +4067,16 @@ else
     
     matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];*/
 
-    if ([nameStringHere isEqualToString:@""] ) {
+    if ([nameStringHere isEqualToString:@""]) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Add a name for your New Sketch Request Draft  and resave it" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
         //alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-        
-        alert.alertViewStyle = UIAlertViewStyleDefault;
 
+        alert.alertViewStyle = UIAlertViewStyleDefault;
 
         alert.tag = 1;
         [alert show];
-        
-
-    } else {
+    }
+    else {
         //temporarily add button to subview to snap picture of mat
 
         float x, y;
@@ -4100,49 +4091,36 @@ else
         d = b + 50;
 
         noteLayerView.hidden = YES;
-        
-        
-        
+
         [self.fontPicker removeFromSuperview];
-        
-        
+
         decTextLayerView.hidden = NO;
-        
-        
+
         //UIGraphicsBeginImageContext(CGSizeMake(1024, 768));
         UIGraphicsBeginImageContext(CGSizeMake(1040, 780));
-        
-        
-        
+
         //this gets the graphic context
         CGContextRef context1 = UIGraphicsGetCurrentContext();
-        
-        
+
         [[UIColor whiteColor] set];
-        
-        
+
         [self.view.layer renderInContext:context1];
-        
-        
+
         UIImage* draftImage = UIGraphicsGetImageFromCurrentImageContext();
 
         UIGraphicsEndImageContext();
 
-        UIImageView*croppedDraftImageView = [[UIImageView alloc] initWithImage:draftImage];
+        UIImageView* croppedDraftImageView = [[UIImageView alloc] initWithImage:draftImage];
 
         // Get size of current image
         CGSize size = [draftImage size];
-        
-
-        
 
         // Frame location in view to show original image
         [croppedDraftImageView setFrame:CGRectMake(0, 0, size.width, size.height)];
         //[croppedImageView setFrame:CGRectMake(0, 0, 1024, 768)];
-        
 
         //CGRect rect = CGRectMake(425, 142, 600, 416);
-        
+
         CGRect rect = CGRectMake(425, 142, 600, 440);
 
         // Create bitmap image from original image data,
@@ -4155,9 +4133,9 @@ else
         // Create and show the new image from bitmap data
         croppedDraftImageView = [[UIImageView alloc] initWithImage:draftImg];
         //[croppedDraftImageView setFrame:CGRectMake(0, 0, 600, 416)];
-        
+
         [croppedDraftImageView setFrame:CGRectMake(0, 0, 600, 440)];
-        
+
         //save new imageView to FAV
         //CGRect screenRect3 = CGRectMake(425, 142, 600, 416);
         //CGRect screenRect3 = CGRectMake(0, 0, 1024, 768);
@@ -4172,22 +4150,20 @@ else
         UIImage* draftCroppedImage = UIGraphicsGetImageFromCurrentImageContext();
 
         UIGraphicsEndImageContext();*/
-        
+
         //TODO add Draft text here
         NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", nameStringHere]];
-        
+
         //NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@draft.png", nameStringHere]];
 
-        
         //not cropping image-commented out
         //[UIImagePNGRepresentation(draftCroppedImage) writeToFile:imagePath atomically:YES];
-        
-         [UIImagePNGRepresentation(draftImage) writeToFile:imagePath atomically:YES];
+
+        [UIImagePNGRepresentation(draftImage) writeToFile:imagePath atomically:YES];
 
         //NOTE- Do not remove local NSString values will break
-        NSLog(@"nameFieldText %@",nameField.text);
-        
-    
+        NSLog(@"nameFieldText %@", nameField.text);
+
         //NSString*matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];
 
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
@@ -4279,124 +4255,103 @@ else
     }
 }
 //return logo colors singly to spots
-- (IBAction)logoColor1touched:(id)sender{
-    
+- (IBAction)logoColor1touched:(id)sender
+{
     firstColorNameString.hidden = NO;
     logoColorButton1.hidden = YES;
     logoColor1String = @"";
-    
-    
+
     matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
-    
-    NSLog(@"matColorString pass%@",matColorString);
-    
+
+    NSLog(@"matColorString pass%@", matColorString);
+
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden = YES;
-    
 }
 
-- (IBAction)logoColor2touched:(id)sender{
-    
-    
+- (IBAction)logoColor2touched:(id)sender
+{
     secondColorNameString.hidden = NO;
     logoColorButton2.hidden = YES;
     logoColor2String = @"";
-    
-    
+
     matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
-    
-    NSLog(@"matColorString pass%@",matColorString);
-    
+
+    NSLog(@"matColorString pass%@", matColorString);
+
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden = YES;
-    
 }
 
-- (IBAction)logoColor3touched:(id)sender{
-    
-    
+- (IBAction)logoColor3touched:(id)sender
+{
     thirdColorNameString.hidden = NO;
     logoColorButton3.hidden = YES;
     logoColor3String = @"";
-    
-    
+
     matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
-    
-    NSLog(@"matColorString pass%@",matColorString);
-    
+
+    NSLog(@"matColorString pass%@", matColorString);
+
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden = YES;
-    
 }
 
-- (IBAction)logoColor4touched:(id)sender{
-    
-    
+- (IBAction)logoColor4touched:(id)sender
+{
     fourthColorNameString.hidden = NO;
     logoColorButton4.hidden = YES;
     logoColor4String = @"";
-    
-    
+
     matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
-    
-    NSLog(@"matColorString pass%@",matColorString);
-    
+
+    NSLog(@"matColorString pass%@", matColorString);
+
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden = YES;
-    
 }
 
-- (IBAction)logoColor5touched:(id)sender{
-    
-    
+- (IBAction)logoColor5touched:(id)sender
+{
     fifthColorNameString.hidden = NO;
     logoColorButton5.hidden = YES;
     logoColor5String = @"";
-    
-    
+
     matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
-    
-    NSLog(@"matColorString pass%@",matColorString);
-    
+
+    NSLog(@"matColorString pass%@", matColorString);
+
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden = YES;
-    
 }
 
-- (IBAction)logoColor6touched:(id)sender{
-    
-    
+- (IBAction)logoColor6touched:(id)sender
+{
     sixthColorNameString.hidden = NO;
     logoColorButton6.hidden = YES;
     logoColor6String = @"";
-    
-    
+
     matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
-    
-    NSLog(@"matColorString pass%@",matColorString);
-    
+
+    NSLog(@"matColorString pass%@", matColorString);
+
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden = YES;
-    
 }
 
-- (IBAction)logoColor7touched:(id)sender{
-    
-    
+- (IBAction)logoColor7touched:(id)sender
+{
     seventhColorNameString.hidden = NO;
     logoColorButton7.hidden = YES;
     logoColor7String = @"";
-    
-    
+
     matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
-    
-    NSLog(@"matColorString pass%@",matColorString);
-    
+
+    NSLog(@"matColorString pass%@", matColorString);
+
     [self.view addSubview:decTextLayerView];
     decTextLayerView.hidden = YES;
-    
 }
-
 
 - (IBAction)refreshLogoColors:(id)sender
 {
@@ -4481,7 +4436,7 @@ else
 
 - (IBAction)addText:(id)sender
 {
-    // for (NSInteger i=1; i<10; i++) {
+    logoPicCenter = logoPicButton.center;
 
     decTextLayerView.hidden = NO;
     noteLayerView.hidden = YES;
@@ -4502,6 +4457,8 @@ else
     [textDecField addTarget:self action:@selector(touchDownRepeatDec:) forControlEvents:UIControlEventTouchDownRepeat];
 
     [self.decorativeTestFields addObject:textDecField];
+
+    //logoPicButton.center = logoPicCenter;
 }
 
 enum {
@@ -4511,6 +4468,8 @@ enum {
 
 - (IBAction)addPMS:(id)sender
 {
+    //CGPoint movePicCenter = logoPicButton.center;
+
     decTextLayerView.hidden = NO;
 
     textDecField = [[UITextField alloc] initWithFrame:CGRectMake(145, 400, 38, 38)];
@@ -4627,15 +4586,15 @@ enum {
         NSString* imagePath3 = [directoryPath objectAtIndex:0];
         imagePath1 = [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
 
-       //NSData* dataNote = [NSData dataWithContentsOfFile:imagePath3];
+        //NSData* dataNote = [NSData dataWithContentsOfFile:imagePath3];
 
         // Add attachment
         [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matImage.jpg"];
         [mailComposer setToRecipients:recipients];
 
         [self presentViewController:mc animated:YES completion:NULL];
-
-    } else {
+    }
+    else {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please set up an email account on this device to enable this feature." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
 
         [alert show];
@@ -4721,97 +4680,96 @@ enum {
         [mailComposer setToRecipients:recipients];
 
         [self presentViewController:mc animated:YES completion:NULL];
-
-    } else {
+    }
+    else {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please set up an email account on this device to enable this feature." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
 
         [alert show];
     }
 }
 
-
 - (IBAction)goSaveSignature:(UIButton*)sender event:(id)event
 {
     if ([MFMailComposeViewController canSendMail]) {
         [self.fontPicker removeFromSuperview];
-        
+
         decTextLayerView.hidden = NO;
         noteLayerView.hidden = NO;
-        
+
         CGRect screenRect2 = CGRectMake(0.0, 0, 1028, 720);
-        
+
         UIGraphicsBeginImageContext(screenRect2.size);
         //UIGraphicsBeginImageContext(interactiveMatView.size);
-        
+
         CGContextRef ctx1 = UIGraphicsGetCurrentContext();
         [[UIColor whiteColor] set];
         CGContextFillRect(ctx1, screenRect2);
-        
+
         [self.view.layer renderInContext:ctx1];
-        
+
         UIImage* matNoteImage = UIGraphicsGetImageFromCurrentImageContext();
-        
+
         UIGraphicsEndImageContext();
-        
+
         NSString* imagePath2 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matSignatureImage.jpg"]];
         [UIImageJPEGRepresentation(matNoteImage, 1.0) writeToFile:imagePath2 atomically:YES];
-        
+
         MFMailComposeViewController* mailComposer;
-        
+
         mailComposer = [[MFMailComposeViewController alloc] init];
         mailComposer.mailComposeDelegate = self;
-        
+
         NSString* emailTitle = @"Mat Approved";
-        
+
         //NSString*firstNameString= firstNameField.text;
         //NSString*lastNameString= lastNameField.text;
-        
+
         //NSLog(@"%@",lastNameString);
-        
+
         //NSString*messageString = [NSString stringWithFormat:@"%@  %@, %@, %@, %@, %@, %@, %@",firstNameString,lastNameString,emailString,phoneString,addressString,cityString,countryString,notesString];
-        
+
         NSString* messageString = @"This mat requires your approval";
-        
+
         //TODO add string and images to email
         NSString* messageBody = messageString;
-        
+
         //add here
         //[mailComposer setMessageBody:self.messageBody isHTML:YES];
-        
+
         //NSArray *toRecipents = [NSArray arrayWithObject:emailString];
         //NSArray *toRecipents = @"yummy@nomadcandy.com";
-        
+
         //Display Email Composer
         MFMailComposeViewController* mc = [[MFMailComposeViewController alloc] init];
         mc.mailComposeDelegate = self;
         [mc setSubject:emailTitle];
         [mc setMessageBody:messageBody isHTML:NO];
-        
+
         //[mc setToRecipients:toRecipents];
-        
+
         NSMutableArray* recipients = [[NSMutableArray alloc] init];
-        
+
         NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         /* NSString *imagePath1 =  [directoryPath objectAtIndex:0];
          imagePath1= [imagePath1 stringByAppendingPathComponent:@"matImageHere.jpg"];*/
-        
+
         NSData* data = [NSData dataWithContentsOfFile:imagePath2];
         //UIImage *image = [UIImage imageWithData:data];
-        
+
         NSString* imagePath3 = [directoryPath objectAtIndex:0];
         imagePath2 = [imagePath3 stringByAppendingPathComponent:@"matNoteImage.jpg"];
-        
+
         //NSData *dataNote = [NSData dataWithContentsOfFile:imagePath3];
-        
+
         [mc addAttachmentData:data mimeType:@"image/jpeg" fileName:@"matNoteImage.jpg"];
-        
+
         [mailComposer setToRecipients:recipients];
-        
+
         [self presentViewController:mc animated:YES completion:NULL];
-        
-    } else {
+    }
+    else {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please set up an email account on this device to enable this feature." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
-        
+
         [alert show];
     }
 }
@@ -4847,17 +4805,17 @@ enum {
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse* response,
                                                    NSData* data,
-                                                   NSError* connectionError) {
-                                                     // handle response
-                                                 }];
+                                                   NSError* connectionError){
+                                   // handle response
+                               }];
 
         NSURLSession* session = [NSURLSession sharedSession];
         [[session dataTaskWithURL:urlSearch
                 completionHandler:^(NSData* data,
                                     NSURLResponse* response,
-                                    NSError* error) {
-                                      // handle response
-                                  }] resume];
+                                    NSError* error){
+                    // handle response
+                }] resume];
 
         NSError* error = nil;
         NSData* data = [NSData dataWithContentsOfURL:urlSearch];
@@ -4885,17 +4843,17 @@ enum {
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse* response,
                                                    NSData* dataMat,
-                                                   NSError* connectionError) {
-                                                     // handle response
-                                                 }];
+                                                   NSError* connectionError){
+                                   // handle response
+                               }];
 
         NSURLSession* sessionMat = [NSURLSession sharedSession];
         [[sessionMat dataTaskWithURL:urlSearchMat
                    completionHandler:^(NSData* dataMat,
                                        NSURLResponse* response,
-                                       NSError* errorMat) {
-                                         // handle response
-                                     }] resume];
+                                       NSError* errorMat){
+                       // handle response
+                   }] resume];
 
         //NSError *errorMat = nil;
         //NSData *dataMat = [NSData dataWithContentsOfURL:urlSearch];
@@ -4941,8 +4899,8 @@ enum {
         
         [activityIndicator stopAnimating];
         }];
-
-    } else {
+    }
+    else {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please enter text in the search field" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
 
         [alert show];
@@ -4951,6 +4909,7 @@ enum {
 
 //moves logo around
 //moves bg colors around
+//TODO fix logo moving here
 - (IBAction)imageMoved:(id)sender withEvent:(UIEvent*)event
 {
     if ([sender isKindOfClass:[UITextField class]]) {
@@ -4972,10 +4931,14 @@ enum {
         self.lastMovedButton = sender;
         NSInteger i = [sender tag];
 
+        //1000 is logoPicButton
+        /*if (i == 1000) {
+            logoPicButton.center = logoPicCenter;
+        }*/
+
         if (i == 121) {
             logoColorSelectedString = @"121-Steel Blue";
             //add if text set selected then return to spot
-            
         }
 
         if (i == 123) {
@@ -5067,40 +5030,40 @@ enum {
     if (CGRectIntersectsRect(control.frame, logoColorButton1.frame)) {
         control.frame = logoColorButton1.frame;
         logoColor1String = logoColorSelectedString;
-        
-        //TODO track what string is here
 
-    } else if (CGRectIntersectsRect(control.frame, logoColorButton2.frame)) {
+        //TODO track what string is here
+    }
+    else if (CGRectIntersectsRect(control.frame, logoColorButton2.frame)) {
         control.frame = logoColorButton2.frame;
         logoColorButton2.enabled = YES;
         logoColor2String = logoColorSelectedString;
-
-    } else if (CGRectIntersectsRect(control.frame, logoColorButton3.frame)) {
+    }
+    else if (CGRectIntersectsRect(control.frame, logoColorButton3.frame)) {
         control.frame = logoColorButton3.frame;
         logoColorButton3.enabled = YES;
         logoColor3String = logoColorSelectedString;
-
-    } else if (CGRectIntersectsRect(control.frame, logoColorButton4.frame)) {
+    }
+    else if (CGRectIntersectsRect(control.frame, logoColorButton4.frame)) {
         control.frame = logoColorButton4.frame;
         logoColorButton4.enabled = YES;
         logoColor4String = logoColorSelectedString;
-
-    } else if (CGRectIntersectsRect(control.frame, logoColorButton5.frame)) {
+    }
+    else if (CGRectIntersectsRect(control.frame, logoColorButton5.frame)) {
         control.frame = logoColorButton5.frame;
         logoColorButton5.enabled = YES;
         logoColor5String = logoColorSelectedString;
-
-    } else if (CGRectIntersectsRect(control.frame, logoColorButton6.frame)) {
+    }
+    else if (CGRectIntersectsRect(control.frame, logoColorButton6.frame)) {
         control.frame = logoColorButton6.frame;
         logoColorButton6.enabled = YES;
         logoColor6String = logoColorSelectedString;
-
-    } else if (CGRectIntersectsRect(control.frame, logoColorButton7.frame)) {
+    }
+    else if (CGRectIntersectsRect(control.frame, logoColorButton7.frame)) {
         control.frame = logoColorButton7.frame;
         logoColorButton7.enabled = YES;
         logoColor7String = logoColorSelectedString;
-
-    } else if (CGRectIntersectsRect(control.frame, bgColorButton.frame)) {
+    }
+    else if (CGRectIntersectsRect(control.frame, bgColorButton.frame)) {
         control.frame = bgColorButton.frame;
         bgColorButton.enabled = YES;
     }
@@ -5108,6 +5071,8 @@ enum {
     matColorString = [NSString stringWithFormat:@"%@,%@,%@,%@,%@,%@,%@", logoColor1String, logoColor2String, logoColor3String, logoColor4String, logoColor5String, logoColor6String, logoColor7String];
 
     //NSLog(@"matColorString pass%@",matColorString);
+
+    //logoPicCenter = logoPicButton.center;
 }
 
 //moves logo around
@@ -5232,7 +5197,6 @@ enum {
     [self presentViewController:DraftCVC animated:YES completion:nil];
 }
 
-
 - (IBAction)goHome:(id)sender
 {
     UIStoryboard* storyboard = self.storyboard;
@@ -5247,16 +5211,10 @@ enum {
 
 - (IBAction)centerLogo:(id)sender
 {
-    
     CGPoint centerImageView = interactiveMatView.center;
     //CGPoint centerImageView = matBGLogoView.center;
     logoPicButton.center = centerImageView;
-    
-    
-    
-    
 }
-
 
 //# UpdateMatSize
 
@@ -5286,8 +5244,8 @@ enum {
         _doubleMat = x;
         /*_PercentMat =  hMatNumber/wMatNumber;
            NSLog(@"_PercentMat %d",_PercentMat);*/
-
-    } else {
+    }
+    else {
         float x = (float)wMat / hMat;
         NSLog(@"%.2lf", x);
 
@@ -5307,7 +5265,6 @@ enum {
 
         matBGLogoView.frame = myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-
     }
     //((x >= 5) && (y < 10))
     else if ((_doubleMat >= .0) && (_doubleMat <= .10)) {
@@ -5320,14 +5277,14 @@ enum {
 
         matBGLogoView.frame = myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-
-    } else if ((_doubleMat >= .10) && (_doubleMat <= .20)) {
+    }
+    else if ((_doubleMat >= .10) && (_doubleMat <= .20)) {
         CGRect myLogoMatRect = CGRectMake(52.0f, 155.0f, 500.0f, 100.0f);
 
         matBGLogoView.frame = myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-
-    } else if ((_doubleMat >= .20) && (_doubleMat <= .33)) {
+    }
+    else if ((_doubleMat >= .20) && (_doubleMat <= .33)) {
         //else if (_doubleMat ==.33){
 
         size2by3View.hidden = YES;
@@ -5339,8 +5296,8 @@ enum {
 
         matBGLogoView.frame = myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-
-    } else if ((_doubleMat >= .33) && (_doubleMat <= .40)) {
+    }
+    else if ((_doubleMat >= .33) && (_doubleMat <= .40)) {
         size2by3View.hidden = YES;
         size3by5View.hidden = YES;
         size4by6View.hidden = YES;
@@ -5350,8 +5307,8 @@ enum {
 
         matBGLogoView.frame = myLogoMatRect;
         matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-
-    } else if ((_doubleMat >= .40) && (_doubleMat <= .50)) {
+    }
+    else if ((_doubleMat >= .40) && (_doubleMat <= .50)) {
         CGRect myLogoMatRect = CGRectMake(52.0f, 85.0f, 500.0f, 250.0f);
 
         matBGLogoView.frame = myLogoMatRect;
@@ -5400,8 +5357,8 @@ enum {
         divide = difference / 2;
 
         matBGLogoView.frame = CGRectMake(x + divide / 2, y - divide / 2, b, a);
-
-    } else {
+    }
+    else {
         difference = b - a / 2;
         divide = difference / 2;
 
@@ -5424,8 +5381,8 @@ enum {
     if ([orientString isEqualToString:@"Landscape"]) {
         textOrientField.text = @"Landscape";
         orientString = @"Portrait";
-
-    } else {
+    }
+    else {
         textOrientField.text = @"Portrait";
         orientString = @"Landscape";
     }
@@ -5479,8 +5436,8 @@ enum {
 
         //NSLog(@"image after aspect fit: width=%f height=%f",x,y);
         logoPicButton.frame = CGRectMake(a, b, x, y);
-
-    } else {
+    }
+    else {
         divideWidthFrame = 601 - b;
         dividedWidth = divideWidthFrame / 2;
 
@@ -5524,8 +5481,7 @@ enum {
     matBGLogoView.frame = myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-    
-    }
+}
 //3by5
 - (IBAction)threeByFive:(id)sender
 {
@@ -5547,8 +5503,6 @@ enum {
     matBGLogoView.frame = myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-    
-    
 }
 
 - (IBAction)fourBySix:(id)sender
@@ -5571,9 +5525,6 @@ enum {
     matBGLogoView.frame = myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-    
-    
-
 }
 
 - (IBAction)threeByTen:(id)sender
@@ -5599,9 +5550,6 @@ enum {
     matBGLogoView.frame = myLogoMatRect;
     //matBGLogoView.ContentMode=  UIViewContentModeScaleAspectFit;
     matBGLogoView.contentMode = UIViewContentModeScaleToFill;
-    
-    
-
 }
 - (IBAction)goFontPicker:(id)sender
 {
@@ -5624,11 +5572,11 @@ enum {
 {
     if (component == 0) {
         return familyNamesArray.count;
-
-    } else if (component == 1) {
+    }
+    else if (component == 1) {
         return colorNamesImagesArray.count;
-
-    } else {
+    }
+    else {
         return fontSizeArray.count;
     }
 }
@@ -5646,8 +5594,8 @@ enum {
         firstLabel.backgroundColor = [UIColor clearColor];
 
         return firstLabel;
-
-    } else if (component == 1) {
+    }
+    else if (component == 1) {
         //add number labels here
         UILabel* secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(200, 0, 50, 50)];
         secondLabel.text = [colorNumbersArray objectAtIndex:row];
@@ -5660,8 +5608,8 @@ enum {
 
         return icon;*/
         return secondLabel;
-
-    } else {
+    }
+    else {
         UILabel* thirdLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 500, 50)];
         thirdLabel.text = [fontSizeArray objectAtIndex:row];
         thirdLabel.textAlignment = NSTextAlignmentCenter;
@@ -5693,8 +5641,8 @@ enum {
         chosenFontString = [familyNamesArray objectAtIndex:chosenFont];
         self.lastMovedTextField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
         [self.lastMovedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
-
-    } else if (component == 1) {
+    }
+    else if (component == 1) {
         //[self.fontPicker reloadAllComponents];
 
         int chosenColor = [pickerView selectedRowInComponent:1];
@@ -5712,27 +5660,26 @@ enum {
         //convertStringTo an Integer
 
         /*textDecField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];*/
-        
+
         self.lastMovedTextField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
         [self.lastMovedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
 
-       /* UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
+        /* UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
         [refresh addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
 
         [self refreshView:refresh];*/
-
-    } else {
+    }
+    else {
         int chosenFontSize1 = [pickerView selectedRowInComponent:2];
         chosenFontSize = chosenFontSize1 * 10;
 
         //chosenFontSize=[fontSizeArray objectAtIndex:chosenFontSize];
-       /* [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
+        /* [textDecField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
         textDecField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
         [_selectedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
         _selectedTextField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];*/
         self.lastMovedTextField.textColor = [UIColor colorWithRed:redValue / 225.0f green:greenValue / 225.0f blue:blueValue / 225.0f alpha:1];
         [self.lastMovedTextField setFont:[UIFont fontWithName:chosenFontString size:chosenFontSize]];
-        
     }
 }
 
@@ -5745,11 +5692,11 @@ enum {
 {
     if (component == 0) {
         return 600.0;
-
-    } else if (component == 1) {
+    }
+    else if (component == 1) {
         return 300.0;
-
-    } else {
+    }
+    else {
         return 300.0;
     }
 }
@@ -5903,8 +5850,6 @@ enum {
     }
     return YES;
 }*/
-
-
 
 - (void)didReceiveMemoryWarning
 {

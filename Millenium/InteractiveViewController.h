@@ -408,6 +408,8 @@
 @property (nonatomic, strong) UIAttachmentBehavior *attachmentBehavior;
 @property (nonatomic, strong) UIDynamicAnimator *animator;
 
+@property (nonatomic, assign)  CGPoint logoPicCenter;
+
 -(IBAction)goSearch:(id)sender;
 
 -(IBAction) addHexField:(id)sender;
