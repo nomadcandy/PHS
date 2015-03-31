@@ -6,9 +6,6 @@
 //  Copyright (c) 2014 Jami Sue Becker. All rights reserved.
 //
 
-
-
-
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 //#import "FavCell.h"
@@ -28,35 +25,34 @@
 
 @end*/
 
-
-@interface DraftCollectionViewController : UICollectionViewController <DIYMenuDelegate, /*ButtonDraftPickerDelegate,*/ UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate > {
+@interface DraftCollectionViewController : UICollectionViewController <DIYMenuDelegate, /*ButtonDraftPickerDelegate,*/ UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate> {
     /*NSString*sellerString;
      NSString*nameString;
      NSString*companyString;
      NSString*numberString;*/
-    
+
     MatFavorite* matFavorite;
-    Draft*draftDelete;
-    
+    Draft* draftDelete;
+
     NSString* artworkNameAddFavString;
     NSString* urlFavString;
-    
+
     NSString* searchHereString;
-    
+
     NSString* artworkNameUnFavString;
     NSString* urlUnFavString;
-    
+
     IBOutlet UITextField* searchOutField;
     LogoSearch* logoSearch;
-    
+
     int selectedIndex;
     int indexPathSend;
     int rowSelectedHere;
     int rowSelectedSend;
-    
+
     int artworkCount;
     int matCount;
-    
+
     int higherCount;
 }
 
@@ -197,16 +193,12 @@
 
 //@property (nonatomic, weak) id<ButtonDraftPickerDelegate> delegate;
 
-- (IBAction)goFav:(id)sender;
-- (IBAction)goInteractive:(id)sender;
-- (IBAction)goHome:(UIButton*)sender;
-- (IBAction)addLogoFavorite:(id)sender;
-- (IBAction)removeFavorite:(id)sender;
-- (IBAction)removeAllFavorites:(id)sender;
+//- (IBAction)goInteractive:(id)sender;
+//- (IBAction)goHome:(UIButton*)sender;
+//- (IBAction)addLogoFavorite:(id)sender;
+//- (IBAction)removeFavorite:(id)sender;
+//- (IBAction)removeAllFavorites:(id)sender;
 
-- (IBAction)addMatFavorite:(id)sender;
-- (IBAction)removeMatFavorite:(id)sender;
-
-- (BOOL)textFieldShouldReturn:(UITextField*)searchField;
+//- (BOOL)textFieldShouldReturn:(UITextField*)searchField;
 
 @end

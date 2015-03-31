@@ -23,9 +23,7 @@
 
 @end
 
-
-
-@interface FavCollectionViewController : UICollectionViewController <DIYMenuDelegate, ButtonFavPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate > {
+@interface FavCollectionViewController : UICollectionViewController <DIYMenuDelegate, ButtonFavPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate> {
     /*NSString*sellerString;
     NSString*nameString;
     NSString*companyString;
@@ -43,7 +41,7 @@
 
     IBOutlet UITextField* searchOutField;
     LogoSearch* logoSearch;
-   
+
     int selectedIndex;
     int indexPathSend;
     int rowSelectedHere;
@@ -200,6 +198,6 @@
 - (IBAction)addMatFavorite:(id)sender;
 - (IBAction)removeMatFavorite:(id)sender;
 
-- (BOOL)textFieldShouldReturn:(UITextField*)searchField;
+//- (BOOL)textFieldShouldReturn:(UITextField*)searchField;
 
 @end

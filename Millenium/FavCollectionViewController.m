@@ -217,7 +217,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
       artworkCompanyArray = [favoritesLogoArray valueForKey:@"company"];
 
       artworkCount = favoritesLogoArray.count;
-        // NSLog(@"logoCount: %i", favoritesLogoArray.count);
+      // NSLog(@"logoCount: %i", favoritesLogoArray.count);
     }];
 
     [favoritesMatArray
@@ -237,7 +237,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
           matBGColorArray = [favoritesMatArray valueForKey:@"bgColor"];
 
           matCount = favoritesMatArray.count;
-            // NSLog(@"matCount: %i", favoritesMatArray.count);
+          // NSLog(@"matCount: %i", favoritesMatArray.count);
         }];
 
     [self.collectionView reloadData];
@@ -290,9 +290,6 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     favHereButton.frame = CGRectMake(90.0, 33.0, 50.0, 50.0);
     favHereButton.showsTouchWhenHighlighted = YES;
     [self.view addSubview:favHereButton];
-    
-    
-    
 
     UIButton* repHereButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [repHereButton addTarget:self
@@ -508,14 +505,16 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         sendAsynchronousRequest:request
                           queue:[NSOperationQueue mainQueue]
               completionHandler:^(NSURLResponse* response, NSData* data,
-                                  NSError* connectionError) {// handle response
-                                }];
+                                  NSError* connectionError){
+                  // handle response
+              }];
 
     NSURLSession* session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:urlSearch
             completionHandler:^(NSData* data, NSURLResponse* response,
-                                NSError* error) {// handle response
-                              }] resume];
+                                NSError* error){
+                // handle response
+            }] resume];
 
     NSError* error = nil;
     NSData* data = [NSData dataWithContentsOfURL:urlSearch];
@@ -548,12 +547,14 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         sendAsynchronousRequest:requestMat
                           queue:[NSOperationQueue mainQueue]
               completionHandler:^(NSURLResponse* response, NSData* dataMat,
-                                  NSError* connectionError) {// handle response
-                                }];
+                                  NSError* connectionError){
+                  // handle response
+              }];
 
     NSURLSession* sessionMat = [NSURLSession sharedSession];
     [[sessionMat dataTaskWithURL:urlSearchMat
-               completionHandler:^(NSData* dataMat, NSURLResponse* response, NSError* errorMat) {}] resume];
+               completionHandler:^(NSData* dataMat, NSURLResponse* response, NSError* errorMat){
+               }] resume];
 
     // parse Array from web
     NSArray* searchMatArray =
@@ -662,14 +663,16 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         sendAsynchronousRequest:request
                           queue:[NSOperationQueue mainQueue]
               completionHandler:^(NSURLResponse* response, NSData* data,
-                                  NSError* connectionError) {// handle response
-                                }];
+                                  NSError* connectionError){
+                  // handle response
+              }];
 
     NSURLSession* session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:urlSearch
             completionHandler:^(NSData* data, NSURLResponse* response,
-                                NSError* error) {// handle response
-                              }] resume];
+                                NSError* error){
+                // handle response
+            }] resume];
 
     NSError* error = nil;
     NSData* data = [NSData dataWithContentsOfURL:urlSearch];
@@ -701,12 +704,14 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         sendAsynchronousRequest:requestMat
                           queue:[NSOperationQueue mainQueue]
               completionHandler:^(NSURLResponse* response, NSData* dataMat,
-                                  NSError* connectionError) {// handle response
-                                }];
+                                  NSError* connectionError){
+                  // handle response
+              }];
 
     NSURLSession* sessionMat = [NSURLSession sharedSession];
     [[sessionMat dataTaskWithURL:urlSearchMat
-               completionHandler:^(NSData* dataMat, NSURLResponse* response, NSError* errorMat) {}] resume];
+               completionHandler:^(NSData* dataMat, NSURLResponse* response, NSError* errorMat){
+               }] resume];
 
     // parse Array from web
     NSArray* searchMatArray =
@@ -767,9 +772,9 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     MKLocalSearch* localSearch = [[MKLocalSearch alloc] initWithRequest:request];
     [localSearch
         startWithCompletionHandler:^(MKLocalSearchResponse* response,
-                                     NSError* error) {
-                                       // do something with the results / error
-                                   }];
+                                     NSError* error){
+            // do something with the results / error
+        }];
 }
 
 - (IBAction)goLocation:(id)sender
@@ -848,14 +853,16 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             sendAsynchronousRequest:request
                               queue:[NSOperationQueue mainQueue]
                   completionHandler:^(NSURLResponse* response, NSData* data,
-                                      NSError* connectionError) {// handle response
-                                    }];
+                                      NSError* connectionError){
+                      // handle response
+                  }];
 
         NSURLSession* session = [NSURLSession sharedSession];
         [[session dataTaskWithURL:urlSearch
                 completionHandler:^(NSData* data, NSURLResponse* response,
-                                    NSError* error) {// handle response
-                                  }] resume];
+                                    NSError* error){
+                    // handle response
+                }] resume];
 
         NSError* error = nil;
         NSData* data = [NSData dataWithContentsOfURL:urlSearch];
@@ -885,12 +892,14 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             sendAsynchronousRequest:requestMat
                               queue:[NSOperationQueue mainQueue]
                   completionHandler:^(NSURLResponse* response, NSData* dataMat,
-                                      NSError* connectionError) {// handle response
-                                    }];
+                                      NSError* connectionError){
+                      // handle response
+                  }];
 
         NSURLSession* sessionMat = [NSURLSession sharedSession];
         [[sessionMat dataTaskWithURL:urlSearchMat
-                   completionHandler:^(NSData* dataMat, NSURLResponse* response, NSError* errorMat) {}] resume];
+                   completionHandler:^(NSData* dataMat, NSURLResponse* response, NSError* errorMat){
+                   }] resume];
 
         // parse Array from web
         NSArray* searchMatArray =
@@ -931,7 +940,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             matBGColorArray = [searchMatArray valueForKey:@"BGColor"];
             matLocationIDArray = [searchMatArray valueForKey:@"BGColor"];
 
-                //[self.collectionView reloadData];
+              //[self.collectionView reloadData];
             }];
 
         matCount = searchMatArray.count;
@@ -991,7 +1000,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     [removeAllMats setIncludesPropertyValues:NO]; // only fetch the
                                                   // managedObjectID
 
-    NSError* errorMats = nil;
+    //NSError* errorMats = nil;
     NSArray* Mats = [matContext executeFetchRequest:removeAllMats error:&error];
 
     for (NSManagedObject* mat in Mats) {
@@ -1005,65 +1014,65 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 {
     if ([NSNull null] != [matFullImageArray objectAtIndex:indexPathSend]) {
         matUrlAddFavString = [matFullImageArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matUrlAddFavString = @"No Image has been provided";
     }
 
     if ([NSNull null] != [matNameArray objectAtIndex:indexPathSend]) {
         matNameAddFavString = [matNameArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matNameAddFavString = @"No Name has been provided";
     }
 
     if ([NSNull null] != [matSellerArray objectAtIndex:indexPathSend]) {
         matSellerAddFavString = [matSellerArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matSellerAddFavString = @"Seller";
     }
 
     if ([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend]) {
         matCompanyAddFavString = [matCompanyArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matCompanyAddFavString = @"Company";
     }
 
     if ([NSNull null] != [matIDArray objectAtIndex:indexPathSend]) {
         matIDAddFavString = [matIDArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matIDAddFavString = @"No product ID has been provided";
     }
 
     if ([NSNull null] != [matLocationIDArray objectAtIndex:indexPathSend]) {
         matLocationIDAddFavString =
             [matLocationIDArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matLocationIDAddFavString = @"No location is available";
     }
 
     if ([NSNull null] != [matColorArray objectAtIndex:indexPathSend]) {
         matColorAddFavString = [matColorArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matColorAddFavString = @"No Colors are provided";
     }
 
     if ([NSNull null] != [matBGColorArray objectAtIndex:indexPathSend]) {
         matBGColorAddFavString = [matBGColorArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matBGColorAddFavString = @"";
     }
 
     if ([NSNull null] != [matSizeArray objectAtIndex:indexPathSend]) {
         matSizeAddFavString = [matSizeArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matSizeAddFavString = @"4'x 6'";
     }
 
@@ -1160,7 +1169,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     if (![managedObjectContext save:&error]) {
         NSLog(@"Unresolved context save error yikes! %@, %@", error, [error userInfo]);
         abort();
-    } else {
+    }
+    else {
         //[managedObjectContext mergeChangesFromContext];
         [self.collectionView reloadData];
     }
@@ -1188,8 +1198,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
     if (urlFavString != nil) {
         urlFavString = [artworkFullImageArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         urlFavString = @"Name";
     }
 
@@ -1197,8 +1207,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
     if (artworkNameAddFavString != nil) {
         artworkNameAddFavString = [artworkNameArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         artworkNameAddFavString = @"Name";
     }
 
@@ -1206,8 +1216,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
     if (artworkColorAddFavString != nil) {
         artworkColorAddFavString = [artworkColorArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         artworkColorAddFavString = @"Color";
     }
 
@@ -1215,8 +1225,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
     if (artworkSizeAddFavString != nil) {
         artworkSizeAddFavString = [artworkSizeArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         artworkSizeAddFavString = @"Size";
     }
 
@@ -1229,8 +1239,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     if (artworkCompanyAddFavString != nil) {
         artworkCompanyAddFavString =
             [artworkCompanyArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         artworkCompanyAddFavString = @"Company";
     }
 
@@ -1239,7 +1249,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     if (artworkSellerAddFavString != nil) {
         artworkSellerAddFavString =
             [artworkSellerArray objectAtIndex:indexPathSend];
-    } else {
+    }
+    else {
         artworkSellerAddFavString = @"Seller";
     }
 
@@ -1321,12 +1332,14 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     // cell for header
     if (section == 0) {
         return 0;
-    } else {
+    }
+    else {
         // NSLog(@"artworkCount %i",artworkCount);
         // NSLog(@"matCount %i",matCount);
         if (artworkCount < matCount) {
             higherCount = matCount;
-        } else {
+        }
+        else {
             // return artworkNameArray.count;
             // NSLog(@"logoCount %i",artworkNameArray.count);
             higherCount = artworkCount;
@@ -1367,7 +1380,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:
-                 (UICollectionView*)collectionView
+        (UICollectionView*)collectionView
 {
     return 2;
 }
@@ -1384,8 +1397,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         retval.height += 1;
         retval.width += 1;
         return retval;
-
-    } else {
+    }
+    else {
         CGSize retval = CGSizeMake(1004, 420);
         retval.height += 10;
         retval.width += 10;
@@ -1403,8 +1416,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         // inset of sections to account for the nav bar
         // top,left,right bottom
         return UIEdgeInsetsMake(200, 10, 10, 10);
-
-    } else {
+    }
+    else {
         return UIEdgeInsetsMake(10, 10, 10, 10);
     }
 }
@@ -1449,8 +1462,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             [artworkNameArray objectAtIndex:indexPath.item];
 
         favCell.logoLabel.text = logoLabelString;
-
-    } else {
+    }
+    else {
         favCell.logoLabel.hidden = YES;
     }
 
@@ -1463,8 +1476,9 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         favCell.goBackLogoLabel.hidden = YES;
         favCell.goBack.hidden = YES;
         favCell.goBackLogo.hidden = YES;
-    } else if (indexPath.item <=
-               artworkFullImageArray.count - 1 /*&& indexPath.item == 0*/) {
+    }
+    else if (indexPath.item <=
+             artworkFullImageArray.count - 1 /*&& indexPath.item == 0*/) {
         favCell.logoChooseButton.hidden = NO;
         favCell.removeFavLogoButton.hidden = NO;
         favCell.removeFavLogoLabel.hidden = NO;
@@ -1485,32 +1499,32 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             if (artworkFullImageArray.count == 0 || artworkNameArray.count == 0) {
                 urlString = @"";
                 NSLog(@"urlString:%@", urlString);
-
-            } else if (artworkFullImageArray.count > 0) {
+            }
+            else if (artworkFullImageArray.count > 0) {
                 urlString = [artworkFullImageArray objectAtIndex:indexPath.item];
                 NSLog(@"urlString:%@", urlString);
             }
-
-        } else {
+        }
+        else {
             urlString = @" ";
         }
 
         //find uRL to get retrieve it
         //if ([urlString rangeOfString:@"cintas"].location == NSNotFound) {
-            // not working
-            NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(
-                NSDocumentDirectory, NSUserDomainMask, YES);
-            NSString* imagePath = [directoryPath objectAtIndex:0];
-            // imagePath= [imagePath
-            // stringByAppendingPathComponent:@"logoImage.png"];
-            imagePath = [imagePath stringByAppendingPathComponent:urlString];
-            // NSLog(@"urlMatStringInMethod:%@",urlMatString);
+        // not working
+        NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(
+            NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString* imagePath = [directoryPath objectAtIndex:0];
+        // imagePath= [imagePath
+        // stringByAppendingPathComponent:@"logoImage.png"];
+        imagePath = [imagePath stringByAppendingPathComponent:urlString];
+        // NSLog(@"urlMatStringInMethod:%@",urlMatString);
 
-            NSData* data = [NSData dataWithContentsOfFile:imagePath];
-            // no data here
-            UIImage* logoImage = [UIImage imageWithData:data];
-            [favCell.logoChooseButton setImage:logoImage
-                                      forState:UIControlStateNormal];
+        NSData* data = [NSData dataWithContentsOfFile:imagePath];
+        // no data here
+        UIImage* logoImage = [UIImage imageWithData:data];
+        [favCell.logoChooseButton setImage:logoImage
+                                  forState:UIControlStateNormal];
 
         /*} else {
             NSString* httpString = @"http://";
@@ -1551,7 +1565,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         [[matNameArray[indexPath.item] class] isSubclassOfClass:[NSString class]]) {
         matLabelString = matNameArray[indexPath.item];
         favCell.matTitleLabel.text = matLabelString;
-    } else {
+    }
+    else {
         favCell.matTitleLabel.hidden = YES;
         // matLabelString=@"";
     }
@@ -1594,8 +1609,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             UIImage* logoImage = [UIImage imageWithData:data];
             [favCell.matChooseButton setImage:logoImage
                                      forState:UIControlStateNormal];
-
-        } else {
+        }
+        else {
             // TODO Crashes here..
             // NSAssert(urlMatString != nil, @"We aren't finding the mat string
             // properly");
@@ -1617,7 +1632,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
         }
 
         // TODO goBackMat.hidden= YES;
-    } else //dont' have a string
+    }
+    else //dont' have a string
         {
         // else if ( indexPath.item <= matFullImageArray.count-1 ){
 
@@ -1667,8 +1683,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
             otherButtonTitles:Nil, nil];
 
         [alert show];
-
-    } else {
+    }
+    else {
         // added to enable passing data to other viewController forces ViewDidLoad
         // with new Data
         [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
@@ -1686,7 +1702,7 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
     indexPathSend = (int)sender.tag;
 
     nameString = [artworkNameArray objectAtIndex:indexPathSend];
-    NSLog(@" nameStringLogoSelected %@",nameString);
+    NSLog(@" nameStringLogoSelected %@", nameString);
     matBGColorString = @" ";
     matColorString = @" ";
 
@@ -1758,24 +1774,24 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
     }*/
     //if ([urlString rangeOfString:@"cintas"].location == NSNotFound) {
-        NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(
-            NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString* imagePath = [directoryPath objectAtIndex:0];
-        // imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
-        imagePath = [imagePath stringByAppendingPathComponent:urlString];
-        // imagePath= [imagePath stringByAppendingPathComponent:nameString];
-        // NSLog(@"urlMatStringInMethod:%@",urlMatString);
+    NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(
+        NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* imagePath = [directoryPath objectAtIndex:0];
+    // imagePath= [imagePath stringByAppendingPathComponent:@"logoImage.png"];
+    imagePath = [imagePath stringByAppendingPathComponent:urlString];
+    // imagePath= [imagePath stringByAppendingPathComponent:nameString];
+    // NSLog(@"urlMatStringInMethod:%@",urlMatString);
 
-        NSData* data = [NSData dataWithContentsOfFile:imagePath];
-        // no data here
-        UIImage* logoImage = [UIImage imageWithData:data];
+    NSData* data = [NSData dataWithContentsOfFile:imagePath];
+    // no data here
+    UIImage* logoImage = [UIImage imageWithData:data];
 
-        // NSLog(@"%@iconImage",iconImage);
-        imagePath = [NSHomeDirectory()
-            stringByAppendingPathComponent:
-                [NSString stringWithFormat:@"Documents/logoImage.png"]];
-        [UIImagePNGRepresentation(logoImage) writeToFile:imagePath
-                                              atomically:YES];
+    // NSLog(@"%@iconImage",iconImage);
+    imagePath = [NSHomeDirectory()
+        stringByAppendingPathComponent:
+            [NSString stringWithFormat:@"Documents/logoImage.png"]];
+    [UIImagePNGRepresentation(logoImage) writeToFile:imagePath
+                                          atomically:YES];
 
     /*} else {
         NSString* httpString = @"http://";
@@ -1921,8 +1937,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
                 [NSString stringWithFormat:@"Documents/matImage.png"]];
         [UIImagePNGRepresentation(logoImage) writeToFile:imagePath1
                                               atomically:YES];
-
-    } else {
+    }
+    else {
         NSString* httpString = @"http://";
         NSString* urlStringAppend =
             [httpString stringByAppendingString:urlMatString];
@@ -1951,15 +1967,15 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
         if (logoUseString != NULL) {
             goingController.logoUseStringHere = logoUseString;
-
-        } else {
+        }
+        else {
             goingController.logoUseStringHere = @" ";
         }
 
         if (nameString != NULL) {
             goingController.nameString = nameString;
-
-        } else {
+        }
+        else {
             goingController.nameString = @" ";
         }
 
@@ -1971,43 +1987,43 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
 
         if (companyString != NULL) {
             goingController.companyString = companyString;
-
-        } else {
+        }
+        else {
             goingController.companyString = @" ";
         }
 
         if (sellerString != NULL) {
             goingController.sellerString = sellerString;
-
-        } else {
+        }
+        else {
             goingController.sellerString = @" ";
         }
 
         if (numberString != NULL) {
             goingController.numberString = numberString;
-
-        } else {
+        }
+        else {
             goingController.numberString = @" ";
         }
 
         if (sizeString != NULL) {
             goingController.sizeString = sizeString;
-
-        } else {
+        }
+        else {
             goingController.sizeString = @" ";
         }
 
         if (logoColorString != NULL) {
             goingController.logoColorString = logoColorString;
-
-        } else {
+        }
+        else {
             goingController.logoColorString = @" ";
         }
 
         if (matColorString != NULL) {
             goingController.matColorString = matColorString;
-
-        } else {
+        }
+        else {
             goingController.matColorString = @" ";
         }
         goingController.matBGColorString = matBGColorString;
@@ -2023,8 +2039,8 @@ NSString* kFavHeaderCellID = @"logoHeaderCellID";
       }*/
         if (interactiveHeaderString != NULL) {
             goingController.interactiveHeaderString = interactiveHeaderString;
-
-        } else {
+        }
+        else {
             goingController.interactiveHeaderString = @"Create Mat";
         }
 

@@ -11,7 +11,7 @@
 #import <Social/Social.h>
 #import <MessageUI/MessageUI.h>
 
-@interface RequestFlierViewController : UIViewController{
+@interface RequestFlierViewController : UIViewController {
     
     IBOutlet UITextField*firstNameField;
     IBOutlet UITextField*lastNameField;

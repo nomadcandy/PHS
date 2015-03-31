@@ -118,7 +118,7 @@
 
     //UILabel *titleLabel = [ [UILabel alloc ] initWithFrame:CGRectMake(400, 300.0, 150.0, 43.0) ];
     UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 100.0, 150.0, 43.0)];
-    titleLabel.textAlignment = UITextAlignmentCenter;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor darkGrayColor];
     titleLabel.backgroundColor = [UIColor whiteColor];
     titleLabel.font = [UIFont fontWithName:@"Avenir" size:(36.0)];
