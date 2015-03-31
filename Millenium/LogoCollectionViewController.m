@@ -20,7 +20,6 @@
 @synthesize headerLabel;
 @synthesize pageTitleString;
 
-
 @synthesize goToPageString;
 @synthesize searchingString;
 //@synthesize searchingString;
@@ -145,11 +144,10 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     [super viewDidLoad];
 
     [DIYMenu dismiss];
-    
-    if ([goToPageString isEqualToString: @"loadFavs"]){
-        
+
+    if ([goToPageString isEqualToString:@"loadFavs"]) {
         //[favHereButton  sendActionsForControlEvents: UIControlEventTouchUpInside];
-        
+
         artworkNameArray = nil;
         artworkSizeArray = nil;
         artworkFormatArray = nil;
@@ -160,9 +158,9 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         artworkSellerArray = nil;
         artworkColorArray = nil;
         artworkCompanyArray = nil;
-        
+
         matNameArray = nil;
-        
+
         matSizeArray = nil;
         matFormatArray = nil;
         matFullImageArray = nil;
@@ -173,9 +171,9 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         matCompanyArray = nil;
         matColorArray = nil;
         matBGColorArray = nil;
-        
+
         headerLabel.text = @"FAVORITES";
-        
+
         /*UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
          activityIndicator.alpha = 1.0;
          activityIndicator.center = CGPointMake(160, 360);
@@ -183,13 +181,10 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
          [self.view addSubview:activityIndicator];
          [activityIndicator startAnimating];*/
         searchingString = @"searchingFavString";
-        
-        
+
         UIStoryboard* storyboard = self.storyboard;
         FavCollectionViewController* svc = [storyboard instantiateViewControllerWithIdentifier:@"FavViewBoard"];
         [self presentViewController:svc animated:YES completion:nil];
-        
-        
     }
 
     /* if(matCount==0 && artworkCount==0){
@@ -483,7 +478,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         stringForKey:@"userID"];
 
     //NSLog(@"userIDString: %@", userIDString);
-    
+
     //TODO add if internet connection available and if userIDString available
 
     //Search Logos
@@ -499,17 +494,17 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse* response,
                                                NSData* data,
-                                               NSError* connectionError) {
-                                                 // handle response
-                                             }];
+                                               NSError* connectionError){
+                               // handle response
+                           }];
 
     NSURLSession* session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:urlSearch
             completionHandler:^(NSData* data,
                                 NSURLResponse* response,
-                                NSError* error) {
-                                  // handle response
-                              }] resume];
+                                NSError* error){
+                // handle response
+            }] resume];
 
     NSError* error = nil;
     NSData* data = [NSData dataWithContentsOfURL:urlSearch];
@@ -538,15 +533,16 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse* response,
                                                NSData* dataMat,
-                                               NSError* connectionError) {
-                                                 // handle response
-                                             }];
+                                               NSError* connectionError){
+                               // handle response
+                           }];
 
     NSURLSession* sessionMat = [NSURLSession sharedSession];
     [[sessionMat dataTaskWithURL:urlSearchMat
                completionHandler:^(NSData* dataMat,
                                    NSURLResponse* response,
-                                   NSError* errorMat) {}] resume];
+                                   NSError* errorMat){
+               }] resume];
 
     //parse Array from web
     NSArray* searchMatArray = [NSJSONSerialization
@@ -655,17 +651,17 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse* response,
                                                NSData* data,
-                                               NSError* connectionError) {
-                                                 // handle response
-                                             }];
+                                               NSError* connectionError){
+                               // handle response
+                           }];
 
     NSURLSession* session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:urlSearch
             completionHandler:^(NSData* data,
                                 NSURLResponse* response,
-                                NSError* error) {
-                                  // handle response
-                              }] resume];
+                                NSError* error){
+                // handle response
+            }] resume];
 
     NSError* error = nil;
     NSData* data = [NSData dataWithContentsOfURL:urlSearch];
@@ -691,15 +687,16 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse* response,
                                                NSData* dataMat,
-                                               NSError* connectionError) {
-                                                 // handle response
-                                             }];
+                                               NSError* connectionError){
+                               // handle response
+                           }];
 
     NSURLSession* sessionMat = [NSURLSession sharedSession];
     [[sessionMat dataTaskWithURL:urlSearchMat
                completionHandler:^(NSData* dataMat,
                                    NSURLResponse* response,
-                                   NSError* errorMat) {}] resume];
+                                   NSError* errorMat){
+               }] resume];
 
     //parse Array from web
     NSArray* searchMatArray = [NSJSONSerialization
@@ -741,12 +738,12 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
             matCompanyArray = [searchMatArray valueForKey:@"CompanyName"];
             matSellerArray = [searchMatArray valueForKey:@"Seller"];
 
-            //[activityIndicator stopAnimating];
+          //[activityIndicator stopAnimating];
         }];
 
         [self.collectionView reloadData];
-
-    } else {
+    }
+    else {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Your location is not available please login once more to the application" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
 
         [alert show];
@@ -816,17 +813,17 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse* response,
                                                    NSData* data,
-                                                   NSError* connectionError) {
-                                                     // handle response
-                                                 }];
+                                                   NSError* connectionError){
+                                   // handle response
+                               }];
 
         NSURLSession* session = [NSURLSession sharedSession];
         [[session dataTaskWithURL:urlSearch
                 completionHandler:^(NSData* data,
                                     NSURLResponse* response,
-                                    NSError* error) {
-                                      // handle response
-                                  }] resume];
+                                    NSError* error){
+                    // handle response
+                }] resume];
 
         NSError* error = nil;
         NSData* data = [NSData dataWithContentsOfURL:urlSearch];
@@ -851,15 +848,16 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse* response,
                                                    NSData* dataMat,
-                                                   NSError* connectionError) {
-                                                     // handle response
-                                                 }];
+                                                   NSError* connectionError){
+                                   // handle response
+                               }];
 
         NSURLSession* sessionMat = [NSURLSession sharedSession];
         [[sessionMat dataTaskWithURL:urlSearchMat
                    completionHandler:^(NSData* dataMat,
                                        NSURLResponse* response,
-                                       NSError* errorMat) {}] resume];
+                                       NSError* errorMat){
+                   }] resume];
 
         //parse Array from web
         NSArray* searchMatArray = [NSJSONSerialization
@@ -905,8 +903,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
             
             [activityIndicator stopAnimating];
         }];
-
-    } else {
+    }
+    else {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please enter text in the search field" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
 
         [alert show];
@@ -953,7 +951,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     [removeAllMats setEntity:[NSEntityDescription entityForName:@"MatFavorite" inManagedObjectContext:matContext]];
     [removeAllMats setIncludesPropertyValues:NO]; //only fetch the managedObjectID
 
-    NSError* errorMats = nil;
+    //NSError* errorMats = nil;
     NSArray* Mats = [matContext executeFetchRequest:removeAllMats error:&error];
 
     for (NSManagedObject* mat in Mats) {
@@ -963,105 +961,103 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     [context save:&saveErrorMat];
 }
 
-
 - (IBAction)addMatLocalFavorite:(id)sender
 {
     //NSLog(@"matNameArray %@",matNameArray);
     //NSLog(@"matNameArrayCount %d",matNameArray.count);
     //NSLog(@"indexPathSend %d",indexPathSend);
-    
+
     if ([NSNull null] != [matFullImageArray objectAtIndex:indexPathSend]) {
         matUrlAddFavString = [matFullImageArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matUrlAddFavString = @"No Image has been provided";
     }
-    
+
     //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
     //NSLog(@"matFullImageArrayCount %d",matFullImageArray.count);
-    
+
     if ([NSNull null] != [matNameArray objectAtIndex:indexPathSend]) {
         matNameAddFavString = [matNameArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matNameAddFavString = @"No Name has been provided";
     }
-    
+
     //NSLog(@"matNameAddFavString %@",matNameAddFavString);
     //NSLog(@"matNameArrayCount %d",matNameArray.count);
-    
+
     if ([NSNull null] != [matSellerArray objectAtIndex:indexPathSend]) {
         matSellerAddFavString = [matSellerArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matSellerAddFavString = @"Seller";
     }
-    
+
     //NSLog(@" matSellerAddFavString %@",matSellerAddFavString);
     //NSLog(@" matSellerArrayCount %d",matSellerArray.count);
-    
+
     if ([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend]) {
         matCompanyAddFavString = [matCompanyArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matCompanyAddFavString = @"Company";
     }
     //NSLog(@"matCompanyAddFavString %@",matCompanyAddFavString);
     //NSLog(@"matCompanyArrayCount %d",matCompanyArray.count);
-    
+
     if ([NSNull null] != [matIDArray objectAtIndex:indexPathSend]) {
         matIDAddFavString = [matIDArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matIDAddFavString = @"No product ID has been provided";
     }
-    
+
     //NSLog(@" matIDAddFavString %@",matIDAddFavString);
     //NSLog(@" matIDArrayCount %d",matIDArray.count);
-    
+
     if ([NSNull null] != [matLocationIDArray objectAtIndex:indexPathSend]) {
         matLocationIDAddFavString = [matLocationIDArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matLocationIDAddFavString = @"No location is available";
     }
-    
+
     // NSLog(@" matLocationIDAddFavString %@",matLocationIDAddFavString);
-    
+
     if ([NSNull null] != [matColorArray objectAtIndex:indexPathSend]) {
         matColorAddFavString = [matColorArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matColorAddFavString = @"No Colors are provided";
     }
     //NSLog(@" matColorAddFavString %@",matColorAddFavString);
-    
+
     if ([NSNull null] != [matBGColorArray objectAtIndex:indexPathSend]) {
         matBGColorAddFavString = [matBGColorArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matBGColorAddFavString = @"";
     }
-    
+
     //NSLog(@" matBGColorAddFavString %@",matBGColorAddFavString);
-    
+
     if ([NSNull null] != [matSizeArray objectAtIndex:indexPathSend]) {
         matSizeAddFavString = [matSizeArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         matSizeAddFavString = @"4'x 6'";
     }
-    
+
     //paste here from logo
-    
+
     NSString* urlString = [matFullImageArray objectAtIndex:indexPathSend];
     NSString* httpString = @"http://";
     NSString* urlStringAppend = [httpString stringByAppendingString:urlString];
     NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     UIImage* matImage;
     matImage = [UIImage imageWithData:data];
-    
-    
+
     //add compression
     /*CGFloat compression = 0.9f;
     CGFloat maxCompression = 0.1f;
@@ -1078,31 +1074,30 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     
     //UIImage*matWriteImage = [UIImage imageWithData:imageData];
     matImage = [UIImage imageWithData:imageData];*/
-    
+
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", matNameAddFavString]];
-    
+
     [UIImagePNGRepresentation(matImage) writeToFile:imagePath atomically:YES];
-    
+
     //[self.view addSubview:snapshotView];
-    
+
     //NOTE- Do not remove local NSString values will break
-    
+
     NSString* logoUrlAppendAddFavString = matNameAddFavString;
     NSString* pngString = @".png";
     //NSLog(@"nameFieldText %@",nameField.text);
     //NSLog(@"nameFieldText %@",nameHideField.text);
-    
+
     NSString* urlLogoStringAppend = [logoUrlAppendAddFavString stringByAppendingString:pngString];
-    
+
     matUrlAddFavString = urlLogoStringAppend;
     //end paste
-    
-    
+
     NSManagedObjectContext* context = [self managedObjectContext];
-    
+
     // Create a new managed object
     NSManagedObject* newMatFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"MatFavorite" inManagedObjectContext:context];
-    
+
     [newMatFavorite setValue:self.matUrlAddFavString forKey:@"fullImageURL"];
     [newMatFavorite setValue:self.matNameAddFavString forKey:@"artworkName"];
     [newMatFavorite setValue:self.matCompanyAddFavString forKey:@"company"];
@@ -1112,7 +1107,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     [newMatFavorite setValue:self.matColorAddFavString forKey:@"color"];
     [newMatFavorite setValue:self.matBGColorAddFavString forKey:@"bgColor"];
     [newMatFavorite setValue:self.matSizeAddFavString forKey:@"artworkSize"];
-    
+
     NSError* error = nil;
     // Save the object to persistent store
     if (![context save:&error]) {
@@ -1123,10 +1118,9 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"MatFavorite"];
     self.favoritesMatArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
+
     // NSLog(@"favoritesMatArray %@",favoritesMatArray);
 }
-
 
 /*- (IBAction)addMatFavorite:(id)sender
 {
@@ -1281,84 +1275,78 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     //NSLog(@"favoritesArray %@",_favoritesArray);
 }
 
-
 - (IBAction)addLogoLocalFavorite:(id)sender
 {
     //NSLog(@"indexPathSend %d",indexPathSend);
-    
+
     if ([NSNull null] != [artworkFullImageArray objectAtIndex:indexPathSend]) {
         //matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
         urlFavString = [artworkFullImageArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         urlFavString = @"No Image is provided";
     }
-    
+
     if ([NSNull null] != [artworkNameArray objectAtIndex:indexPathSend]) {
         //matColorAddFavString =[matColorArray objectAtIndex:indexPathSend];
         artworkNameAddFavString = [artworkNameArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         artworkNameAddFavString = @"No Name is provided";
     }
-    
+
     if ([NSNull null] != [artworkColorArray objectAtIndex:indexPathSend]) {
         artworkColorAddFavString = [artworkColorArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         artworkColorAddFavString = @"No Color is provided";
     }
-    
+
     if ([NSNull null] != [artworkSizeArray objectAtIndex:indexPathSend]) {
         artworkSizeAddFavString = [artworkSizeArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         artworkSizeAddFavString = @"4'x 6'";
     }
-    
+
     if ([NSNull null] != [artworkCompanyArray objectAtIndex:indexPathSend]) {
         artworkCompanyAddFavString = [artworkCompanyArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         artworkCompanyAddFavString = @"Company";
     }
-    
+
     if ([NSNull null] != [artworkSellerArray objectAtIndex:indexPathSend]) {
         artworkSellerAddFavString = [artworkSellerArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         artworkSellerAddFavString = @"Seller";
     }
-    
+
     if ([NSNull null] != [artworkIDArray objectAtIndex:indexPathSend]) {
         artworkIDAddFavString = [artworkIDArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         artworkIDAddFavString = @"no ID has been provided";
     }
-    
+
     if ([NSNull null] != [artworkLocationIDArray objectAtIndex:indexPathSend]) {
         artworkLocationIDAddFavString = [artworkLocationIDArray objectAtIndex:indexPathSend];
-        
-    } else {
+    }
+    else {
         artworkLocationIDAddFavString = @"-1";
     }
-    
-    
+
     //UITextField* alertNameField = [alertLogo textFieldAtIndex:0];
     //NSLog(@"alertNameField - %@",alertNameField.text);
-    
-    
-    
-    
+
     NSString* urlString = [artworkFullImageArray objectAtIndex:indexPathSend];
     NSString* httpString = @"http://";
     NSString* urlStringAppend = [httpString stringByAppendingString:urlString];
     NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
     UIImage* logoImage;
     logoImage = [UIImage imageWithData:data];
-    
-    
+
     //add compression
     /*CGFloat compression = 0.9f;
     CGFloat maxCompression = 0.1f;
@@ -1375,30 +1363,29 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     
     //UIImage*logoWriteImage = [UIImage imageWithData:imageData];
     logoImage = [UIImage imageWithData:imageData];*/
-    
+
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@.png", artworkNameAddFavString]];
-    
+
     [UIImagePNGRepresentation(logoImage) writeToFile:imagePath atomically:YES];
-    
+
     //[self.view addSubview:snapshotView];
-    
+
     //NOTE- Do not remove local NSString values will break
-    
+
     NSString* logoUrlAppendAddFavString = artworkNameAddFavString;
     NSString* pngString = @".png";
     //NSLog(@"nameFieldText %@",nameField.text);
     //NSLog(@"nameFieldText %@",nameHideField.text);
-    
+
     NSString* urlLogoStringAppend = [logoUrlAppendAddFavString stringByAppendingString:pngString];
-    
+
     urlFavString = urlLogoStringAppend;
 
-    
     NSManagedObjectContext* context = [self managedObjectContext];
-    
+
     // Create a new managed object
     NSManagedObject* newLogoFavorite = [NSEntityDescription insertNewObjectForEntityForName:@"LogoFavorite" inManagedObjectContext:context];
-    
+
     [newLogoFavorite setValue:self.urlFavString forKey:@"fullImageURL"];
     [newLogoFavorite setValue:self.artworkNameAddFavString forKey:@"artworkName"];
     [newLogoFavorite setValue:self.artworkCompanyAddFavString forKey:@"company"];
@@ -1407,7 +1394,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"locationID"];
     [newLogoFavorite setValue:self.artworkColorAddFavString forKey:@"color"];
     [newLogoFavorite setValue:self.artworkSizeAddFavString forKey:@"artworkSize"];
-    
+
     NSError* error = nil;
     // Save the object to persistent store
     if (![context save:&error]) {
@@ -1418,10 +1405,9 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"LogoFavorite"];
     self.favoritesArray = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     //self->artworkName = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
-    
+
     //NSLog(@"favoritesArray %@",_favoritesArray);
 }
-
 
 /*- (IBAction)addLogoFavorite:(id)sender
 {
@@ -1545,12 +1531,14 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     //cell for header
     if (section == 0) {
         return 0;
-    } else {
+    }
+    else {
         //NSLog(@"artworkCount %i",artworkCount);
         //NSLog(@"matCount %i",matCount);
         if (artworkCount < matCount) {
             higherCount = matCount;
-        } else {
+        }
+        else {
             //return artworkNameArray.count;
             //NSLog(@"logoCount %i",artworkNameArray.count);
             higherCount = artworkCount;
@@ -1602,8 +1590,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         retval.height += 1;
         retval.width += 1;
         return retval;
-
-    } else {
+    }
+    else {
         CGSize retval = CGSizeMake(1004, 420);
         retval.height += 10;
         retval.width += 10;
@@ -1622,8 +1610,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         //inset of sections to account for the nav bar
         //top,left,right bottom
         return UIEdgeInsetsMake(200, 10, 10, 10);
-
-    } else {
+    }
+    else {
         return UIEdgeInsetsMake(10, 10, 10, 10);
     }
 }
@@ -1635,8 +1623,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         LogoHeaderCell* logoHeaderCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoHeaderCellID forIndexPath:indexPath];
 
         return logoHeaderCell;
-
-    } else {
+    }
+    else {
         LogoCell* logoCell = [collectionView dequeueReusableCellWithReuseIdentifier:kLogoCollectionViewCellID forIndexPath:indexPath];
 
         //unhide all buttons to account for larger collectionView then last parse
@@ -1665,8 +1653,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
             //added to test hiding buttons
             //logoCell.goBack.hidden=YES;
-
-        } else {
+        }
+        else {
             //logoCell.logoLabel.text =@"";
             logoCell.logoLabel.hidden = YES;
         }
@@ -1680,8 +1668,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
             iconImage = [UIImage imageWithData:data];
 
             [logoCell.logoChooseButton setImage:iconImage forState:UIControlStateNormal];
-
-        } else {
+        }
+        else {
             //SET BLANK IMAGE HERE
             logoCell.logoChooseButton.hidden = YES;
             logoCell.addFavLogoButton.hidden = YES;
@@ -1709,7 +1697,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
             NSString* matLabelString = [matNameArray objectAtIndex:indexPath.item];
             //NSLog(@"matNameArray:%@",matNameArray);
             logoCell.matLabel.text = matLabelString;
-        } else {
+        }
+        else {
             logoCell.matLabel.text = @"";
         }
 
@@ -1723,8 +1712,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
             UIImage* iconImage;
             iconImage = [UIImage imageWithData:dataMat];
             [logoCell.matChooseButton setImage:iconImage forState:UIControlStateNormal];
-
-        } else {
+        }
+        else {
             logoCell.matChooseButton.hidden = YES;
             logoCell.addFavMatButton.hidden = YES;
             logoCell.addFavMatLabel.hidden = YES;
@@ -1759,8 +1748,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please select your sketch or Mat before proceeding" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
 
         [alert show];
-
-    } else {
+    }
+    else {
         //added to enable passing data to other viewController forces ViewDidLoad with new Data
         [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
 
@@ -1778,8 +1767,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please select your sketch or Mat before proceeding" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:Nil, nil];
 
         [alert show];
-
-    } else {
+    }
+    else {
         //added to enable passing data to other viewController forces ViewDidLoad with new Data
         [self performSegueWithIdentifier:@"logoPickedSegue" sender:sender];
 
@@ -1812,36 +1801,36 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
     if ([NSNull null] != [artworkSellerArray objectAtIndex:indexPathSend]) {
         sellerString = [artworkSellerArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         sellerString = @" ";
     }
 
     if ([NSNull null] != [artworkCompanyArray objectAtIndex:indexPathSend]) {
         companyString = [artworkCompanyArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         companyString = @" ";
     }
 
     if ([NSNull null] != [artworkIDArray objectAtIndex:indexPathSend]) {
         numberString = [artworkIDArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         numberString = @" ";
     }
 
     if ([NSNull null] != [artworkSizeArray objectAtIndex:indexPathSend]) {
         sizeString = [artworkSizeArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         sizeString = @" ";
     }
 
     if ([NSNull null] != [artworkColorArray objectAtIndex:indexPathSend]) {
         logoColorString = [artworkColorArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         logoColorString = @" ";
     }
 
@@ -1853,8 +1842,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         UIImage* iconImage;
         iconImage = [UIImage imageWithData:data];
         //NSLog(@"%@iconImage",iconImage);
-        
-        
+
         //Add Compression here
         /*CGFloat compression = 0.9f;
         CGFloat maxCompression = 0.1f;
@@ -1910,50 +1898,50 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
     if ([NSNull null] != [matSellerArray objectAtIndex:indexPathSend]) {
         sellerString = [matSellerArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         sellerString = @" ";
     }
 
     if ([NSNull null] != [matCompanyArray objectAtIndex:indexPathSend]) {
         companyString = [matCompanyArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         companyString = @" ";
     }
 
     if ([NSNull null] != [matIDArray objectAtIndex:indexPathSend]) {
         numberString = [matIDArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         numberString = @" ";
     }
 
     if ([NSNull null] != [matSizeArray objectAtIndex:indexPathSend]) {
         sizeString = [matSizeArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         sizeString = @" ";
     }
 
     if ([NSNull null] != [matFormatArray objectAtIndex:indexPathSend]) {
         orientString = [matFormatArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         orientString = @" ";
     }
 
     if ([NSNull null] != [matBGColorArray objectAtIndex:indexPathSend]) {
         matBGColorString = [matBGColorArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matBGColorString = @" ";
     }
 
     if ([NSNull null] != [matColorArray objectAtIndex:indexPathSend]) {
         matColorString = [matColorArray objectAtIndex:indexPathSend];
-
-    } else {
+    }
+    else {
         matColorString = @" ";
     }
 
@@ -1974,8 +1962,8 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
         //NSLog(@"%@iconImage",iconImage);
         NSString* imagePath1 = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/matImage.png"]];
         [UIImagePNGRepresentation(logoImage) writeToFile:imagePath1 atomically:YES];
-
-    } else {
+    }
+    else {
         NSString* httpString = @"http://";
         NSString* urlStringAppend = [httpString stringByAppendingString:urlString];
         NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStringAppend]];
@@ -1996,15 +1984,15 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
         if (logoUseString != NULL) {
             goingController.logoUseStringHere = logoUseString;
-
-        } else {
+        }
+        else {
             goingController.logoUseStringHere = @" ";
         }
 
         if (nameString != NULL) {
             goingController.nameString = nameString;
-
-        } else {
+        }
+        else {
             goingController.nameString = @" ";
         }
 
@@ -2016,63 +2004,63 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
         if (companyString != NULL) {
             goingController.companyString = companyString;
-
-        } else {
+        }
+        else {
             goingController.companyString = @" ";
         }
 
         if (sellerString != NULL) {
             goingController.sellerString = sellerString;
-
-        } else {
+        }
+        else {
             goingController.sellerString = @" ";
         }
 
         if (numberString != NULL) {
             goingController.numberString = numberString;
-
-        } else {
+        }
+        else {
             goingController.numberString = @" ";
         }
 
         if (sizeString != NULL) {
             goingController.sizeString = sizeString;
-
-        } else {
+        }
+        else {
             goingController.sizeString = @" ";
         }
 
         if (orientString != NULL) {
             goingController.orientString = orientString;
             NSLog(@"orientString %@", orientString);
-
-        } else {
+        }
+        else {
             goingController.orientString = @" ";
         }
 
         if (logoColorString != NULL) {
             goingController.logoColorString = logoColorString;
-
-        } else {
+        }
+        else {
             goingController.logoColorString = @" ";
         }
 
         if (matColorString != NULL) {
             goingController.logoColorString = logoColorString;
-
-        } else {
+        }
+        else {
             goingController.logoColorString = @" ";
         }
         if (matBGColorString != NULL) {
             goingController.matBGColorString = matBGColorString;
-
-        } else {
+        }
+        else {
             goingController.matBGColorString = @" ";
         }
         if (interactiveHeaderString != NULL) {
             goingController.interactiveHeaderString = interactiveHeaderString;
-
-        } else {
+        }
+        else {
             goingController.interactiveHeaderString = @"Create Mat";
         }
     }

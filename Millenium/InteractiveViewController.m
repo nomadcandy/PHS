@@ -38,7 +38,7 @@
 @synthesize logoColorString;
 @synthesize lastMovedButton;
 
-@synthesize emailTitle;
+//@synthesize emailTitle;
 @synthesize sizeGetMatString;
 @synthesize colorButtonHideView;
 
@@ -59,7 +59,7 @@
 @synthesize textPMSField;
 
 @synthesize hexField;
-@synthesize myBGColor;
+//@synthesize myBGColor;
 @synthesize bgColorButton;
 //@synthesize delegate=_delegate;
 @synthesize decTextLayerView;
@@ -80,8 +80,8 @@
 
 @synthesize pickerImage;
 
-@synthesize matImage;
-@synthesize selectedImage;
+//@synthesize matImage;
+//@synthesize selectedImage;
 @synthesize matButton;
 @synthesize logoButton;
 @synthesize logoPicButton;
@@ -147,18 +147,18 @@
 @synthesize matBGTextColorString;
 
 @synthesize draftUrlAddFavString;
-@synthesize draftNameAddFavString;
+//@synthesize draftNameAddFavString;
 
 @synthesize matUrlAddFavString;
-@synthesize matNameAddFavString;
-@synthesize matSellerAddFavString;
-@synthesize matCompanyAddFavString;
-@synthesize matIDAddFavString;
-@synthesize matLocationIDAddFavString;
+//@synthesize matNameAddFavString;
+//@synthesize matSellerAddFavString;
+//@synthesize matCompanyAddFavString;
+//@synthesize matIDAddFavString;
+//@synthesize matLocationIDAddFavString;
 
-@synthesize matColorAddFavString;
+//@synthesize matColorAddFavString;
 @synthesize matBGColorAddFavString;
-@synthesize matSizeAddFavString;
+//@synthesize matSizeAddFavString;
 
 @synthesize croppedImageView;
 
@@ -166,7 +166,7 @@
 @synthesize matUseBGColorString;
 @synthesize matBGColorString;
 @synthesize logoBGColorString;
-@synthesize nameString;
+//@synthesize nameString;
 @synthesize sellerString;
 @synthesize companyString;
 @synthesize numberString;
@@ -252,9 +252,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-        tap.cancelsTouchesInView = false;
-        [self.view addGestureRecognizer:tap];
+        // UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+        //tap.cancelsTouchesInView = false;
+        //[self.view addGestureRecognizer:tap];
     }
     return self;
 }
@@ -934,7 +934,12 @@
 
     //NSLog(@"logoColorNumberArray %@",logoColorNumberArray);
     //NSLog(@"logoColorArray %@",logoColorArray);
-    int logoColorCount = logoColorArray.count;
+
+    NSUInteger intVal = logoColorArray.count;
+    int logoColorCount = (int)intVal;
+    NSLog(@"value : %lu %d", (unsigned long)intVal, logoColorCount);
+
+    //int logoColorCount = logoColorArray.count;
     //NSLog(@"logoColorCount %i",logoColorCount);
 
     if (0 == logoColorCount) {
@@ -1437,9 +1442,9 @@
     matBGLogoView.frame = myLogoMatRect;
     matBGLogoView.ContentMode = UIViewContentModeScaleAspectFit;
 
-    if (nameString != NULL) {
+    if (_nameString != NULL) {
         //NSLog(@"nameString %@",nameString);
-        nameField.text = nameString;
+        nameField.text = _nameString;
     }
     else {
         nameField.text = @"";
@@ -1480,9 +1485,9 @@
     [pinchRecognizer setDelegate:self];
     [self.logoPicButton addGestureRecognizer:pinchRecognizer];
 
-    UIPinchGestureRecognizer* pinchRecognizerDec = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scaleDec:)];
-    [pinchRecognizerDec setDelegate:self];
-    [self.textDecField addGestureRecognizer:pinchRecognizerDec];
+    //UIPinchGestureRecognizer* pinchRecognizerDec = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scaleDec:)];
+    //[pinchRecognizerDec setDelegate:self];
+    //[self.textDecField addGestureRecognizer:pinchRecognizerDec];
 
     [steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [steelBlueButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
@@ -2495,7 +2500,7 @@
 
 - (void)didSetCompanyString:(NSString*)companyString
 {
-    nameField.text = nameString;
+    nameField.text = _nameString;
 }
 
 /*- (void)setString:(NSString *)string
@@ -3076,7 +3081,12 @@ else
 - (void)buttonTapped:(UIButton*)sender
 {
     NSInteger index = [carouselSize indexOfItemViewOrSubview:sender];
-    int i = index;
+
+    NSUInteger intVal = index;
+    int i = (int)intVal;
+    NSLog(@"value : %lu %d", (unsigned long)intVal, i);
+
+    //int i = index;
     //int width;
     //int height;
 
@@ -3170,18 +3180,17 @@ else
 
     //NSLog(@"addButton.tag:%ld",(long)sender.tag);
 
-    int myInt = (int)sender.tag;
     NSLog(@"sender %@", sender);
 
     if ((long)sender.tag == 121) {
         matBGColorAddFavString = @"121-Steel Blue";
         matBGColorString = @"Steel Blue_121.jpg";
         //create an image
-        myBGColor = [UIImage imageNamed:@"Steel Blue_121.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Steel Blue_121.jpg"];
+        [matBGLogoView setImage:_myBGColor];
 
         [bgColorButton setTitle:@"121" forState:UIControlStateNormal];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         //[bgColorButton.titleLabelColor setColor:whiteColor  forState:UIControlStateNormal];
@@ -3194,10 +3203,10 @@ else
     }
     else if ((long)sender.tag == 123) {
         matBGColorAddFavString = @"123-Suede";
-        myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Suede_123.jpg"];
+        [matBGLogoView setImage:_myBGColor];
 
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
         [bgColorButton setTitle:@"123" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -3206,50 +3215,50 @@ else
     else if ((long)sender.tag == 140) {
         matBGColorAddFavString = @"140-White";
 
-        myBGColor = [UIImage imageNamed:@"White_140.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"White_140.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"140" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
     }
     else if ((long)sender.tag == 119) {
         matBGColorAddFavString = @"119-Rose";
-        myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Rose_119.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"119" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
     }
     else if ((long)sender.tag == 107) {
         matBGColorAddFavString = @"107-Royal Blue";
-        myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Royal Blue_107.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"107" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
     }
     else if ((long)sender.tag == 120) {
         matBGColorAddFavString = @"120-Sandalwood";
-        myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Sandalwood_120.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"120" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
     }
     else if ((long)sender.tag == 116) {
         matBGColorAddFavString = @"116-Silver";
-        myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Silver_116.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"116" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3258,10 +3267,10 @@ else
     if ((long)sender.tag == 127) {
         matBGColorAddFavString = @"127-Orange";
 
-        myBGColor = [UIImage imageNamed:@"Orange_127.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Orange_127.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"127" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3270,10 +3279,10 @@ else
     if ((long)sender.tag == 105) {
         matBGColorAddFavString = @"105-Purple";
 
-        myBGColor = [UIImage imageNamed:@"Purple_105.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Purple_105.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"105" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3281,10 +3290,10 @@ else
     if ((long)sender.tag == 112) {
         matBGColorAddFavString = @"Red-112";
 
-        myBGColor = [UIImage imageNamed:@"Red_112.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Red_112.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"112" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3293,10 +3302,10 @@ else
     if ((long)sender.tag == 109) {
         matBGColorAddFavString = @"109-Gold";
 
-        myBGColor = [UIImage imageNamed:@"Gold_109.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Gold_109.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"109" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3305,10 +3314,10 @@ else
     if ((long)sender.tag == 115) {
         matBGColorAddFavString = @"115-Grey";
 
-        myBGColor = [UIImage imageNamed:@"Grey_115.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Grey_115.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"115" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3317,10 +3326,10 @@ else
     if ((long)sender.tag == 106) {
         matBGColorAddFavString = @"106-Light Blue";
 
-        myBGColor = [UIImage imageNamed:@"Light Blue_106.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Light Blue_106.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"106" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3329,9 +3338,9 @@ else
     if ((long)sender.tag == 118) {
         matBGColorAddFavString = @"118-Navy";
 
-        myBGColor = [UIImage imageNamed:@"Navy_118.jpg"];
-        [matBGLogoView setImage:myBGColor];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        _myBGColor = [UIImage imageNamed:@"Navy_118.jpg"];
+        [matBGLogoView setImage:_myBGColor];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"118" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3340,9 +3349,9 @@ else
     if ((long)sender.tag == 110) {
         matBGColorAddFavString = @"110-Emerald Green";
         //create an image
-        myBGColor = [UIImage imageNamed:@"Emerald Green_110.jpg"];
-        [matBGLogoView setImage:myBGColor];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        _myBGColor = [UIImage imageNamed:@"Emerald Green_110.jpg"];
+        [matBGLogoView setImage:_myBGColor];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"110" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3351,10 +3360,10 @@ else
     if ((long)sender.tag == 117) {
         matBGColorAddFavString = @"117-Forest Green";
 
-        myBGColor = [UIImage imageNamed:@"Forest Green_117.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Forest Green_117.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"117" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3363,10 +3372,10 @@ else
     if ((long)sender.tag == 114) {
         matBGColorAddFavString = @"114-Cranberry";
 
-        myBGColor = [UIImage imageNamed:@"Cranberry_114.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Cranberry_114.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"114" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3375,10 +3384,10 @@ else
     if ((long)sender.tag == 103) {
         matBGColorAddFavString = @"103-Dark Gold";
 
-        myBGColor = [UIImage imageNamed:@"Dark Gold_103.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Dark Gold_103.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"103" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3386,10 +3395,10 @@ else
 
     if ((long)sender.tag == 101) {
         matBGColorAddFavString = @"101-Charcoal";
-        myBGColor = [UIImage imageNamed:@"Charcoal_101.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Charcoal_101.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"101" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3398,10 +3407,10 @@ else
     if ((long)sender.tag == 111) {
         matBGColorAddFavString = @"111-Chocolate";
 
-        myBGColor = [UIImage imageNamed:@"Chocolate_111.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Chocolate_111.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"111" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3421,10 +3430,10 @@ else
     if ((long)sender.tag == 108) {
         matBGColorAddFavString = @"108-Black";
 
-        myBGColor = [UIImage imageNamed:@"Black_108.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Black_108.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"108" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3432,10 +3441,10 @@ else
 
     if ((long)sender.tag == 102) {
         matBGColorAddFavString = @"102-Brown";
-        myBGColor = [UIImage imageNamed:@"Brown_102.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Brown_102.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"102" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3444,10 +3453,10 @@ else
     if ((long)sender.tag == 100) {
         matBGColorAddFavString = @"100-Burgundy";
 
-        myBGColor = [UIImage imageNamed:@"Burgundy_100.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Burgundy_100.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"100" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3458,10 +3467,10 @@ else
         //matBGColorAddFavString=@"Aquamarine_130.jpg";
         matBGColorString = @"Aquamarine_130.jpg";
 
-        myBGColor = [UIImage imageNamed:@"Aquamarine_130.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Aquamarine_130.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"130" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3469,10 +3478,10 @@ else
 
     if ((long)sender.tag == 104) {
         matBGColorAddFavString = @"104-Turquoise";
-        myBGColor = [UIImage imageNamed:@"Turquoise_104.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Turquoise_104.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"104" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3480,10 +3489,10 @@ else
     //TODO FIX ALL THESE
     if ((long)sender.tag == 128) {
         matBGColorAddFavString = @"128-Yellow";
-        myBGColor = [UIImage imageNamed:@"Yellow_128.jpg"];
-        [matBGLogoView setImage:myBGColor];
+        _myBGColor = [UIImage imageNamed:@"Yellow_128.jpg"];
+        [matBGLogoView setImage:_myBGColor];
         [bgColorButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:14.0]];
-        [bgColorButton setBackgroundImage:myBGColor forState:UIControlStateNormal];
+        [bgColorButton setBackgroundImage:_myBGColor forState:UIControlStateNormal];
         [bgColorButton setTitle:@"128" forState:UIControlStateNormal];
         [bgColorButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.bgColorButton reloadInputViews];
@@ -3776,7 +3785,7 @@ else
         NSString* matCompanyAddFavString = companyField.text;
         NSString* matIDAddFavString = numberField.text;
         NSString* matLocationIDAddFavString = locationIDString;
-        matColorAddFavString = matColorString;
+        _matColorAddFavString = matColorString;
         matUseBGColorString = BGString;
 
         NSString* matSizeAddFavString = matSizeString;
@@ -3814,8 +3823,8 @@ else
             matLocationIDAddFavString = @"No Location Provided";
         }
 
-        if (matColorAddFavString == NULL) {
-            matColorAddFavString = @"No Colors are provided";
+        if (_matColorAddFavString == NULL) {
+            _matColorAddFavString = @"No Colors are provided";
         }
 
         if (matUseBGColorString == NULL) {
@@ -3966,12 +3975,12 @@ else
         //NSString*matUrlAddFavString = [matUrlAppendAddFavString stringByAppendingString:pngString];
 
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
-        NSString* draftNameAddFavString = nameField.text;
-        NSString* draftSellerAddFavString = sellerField.text;
+        //NSString* draftNameAddFavString = nameField.text;
+        //NSString* draftSellerAddFavString = sellerField.text;
         NSString* draftCompanyAddFavString = companyField.text;
-        NSString* draftIDAddFavString = numberField.text;
-        NSString* draftLocationIDAddFavString = locationIDString;
-        matColorAddFavString = matColorString;
+        //NSString* draftIDAddFavString = numberField.text;
+        //NSString* draftLocationIDAddFavString = locationIDString;
+        _matColorAddFavString = matColorString;
         matUseBGColorString = BGString;
 
         NSString* matSizeAddFavString = matSizeString;
@@ -3989,28 +3998,28 @@ else
             //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         }
 
-        if (draftNameAddFavString == NULL) {
-            draftNameAddFavString = @"The Artwork has no name";
+        if (_draftNameAddFavString == NULL) {
+            _draftNameAddFavString = @"The Artwork has no name";
         }
 
         if (draftCompanyAddFavString == NULL) {
-            matCompanyAddFavString = @"No Company Name Is Available";
+            _matCompanyAddFavString = @"No Company Name Is Available";
         }
 
-        if (matSellerAddFavString == NULL) {
-            matSellerAddFavString = @"Sales Person Unknown";
+        if (_matSellerAddFavString == NULL) {
+            _matSellerAddFavString = @"Sales Person Unknown";
         }
 
-        if (matIDAddFavString == NULL) {
-            matIDAddFavString = @"No ID Provided";
+        if (_matIDAddFavString == NULL) {
+            _matIDAddFavString = @"No ID Provided";
         }
 
-        if (matLocationIDAddFavString == NULL) {
-            matLocationIDAddFavString = @"No Location Provided";
+        if (_matLocationIDAddFavString == NULL) {
+            _matLocationIDAddFavString = @"No Location Provided";
         }
 
-        if (matColorAddFavString == NULL) {
-            matColorAddFavString = @"No Colors are provided";
+        if (_matColorAddFavString == NULL) {
+            _matColorAddFavString = @"No Colors are provided";
         }
 
         if (matUseBGColorString == NULL) {
@@ -4170,11 +4179,11 @@ else
 
         //NSLog(@"matUrlAddFavString %@",matUrlAddFavString);
         NSString* draftNameAddFavString = nameField.text;
-        NSString* draftSellerAddFavString = sellerField.text;
+        //NSString* draftSellerAddFavString = sellerField.text;
         NSString* draftCompanyAddFavString = companyField.text;
-        NSString* draftIDAddFavString = numberField.text;
-        NSString* draftLocationIDAddFavString = locationIDString;
-        matColorAddFavString = matColorString;
+        //NSString* draftIDAddFavString = numberField.text;
+        //NSString* draftLocationIDAddFavString = locationIDString;
+        _matColorAddFavString = matColorString;
         matUseBGColorString = BGString;
 
         NSString* matSizeAddFavString = matSizeString;
@@ -4198,23 +4207,23 @@ else
         }
 
         if (draftCompanyAddFavString == NULL) {
-            matCompanyAddFavString = @"No Company Name Is Available";
+            _matCompanyAddFavString = @"No Company Name Is Available";
         }
 
-        if (matSellerAddFavString == NULL) {
-            matSellerAddFavString = @"Sales Person Unknown";
+        if (_matSellerAddFavString == NULL) {
+            _matSellerAddFavString = @"Sales Person Unknown";
         }
 
-        if (matIDAddFavString == NULL) {
-            matIDAddFavString = @"No ID Provided";
+        if (_matIDAddFavString == NULL) {
+            _matIDAddFavString = @"No ID Provided";
         }
 
-        if (matLocationIDAddFavString == NULL) {
-            matLocationIDAddFavString = @"No Location Provided";
+        if (_matLocationIDAddFavString == NULL) {
+            _matLocationIDAddFavString = @"No Location Provided";
         }
 
-        if (matColorAddFavString == NULL) {
-            matColorAddFavString = @"No Colors are provided";
+        if (_matColorAddFavString == NULL) {
+            _matColorAddFavString = @"No Colors are provided";
         }
 
         if (matUseBGColorString == NULL) {
@@ -4566,7 +4575,7 @@ enum {
         mailComposer = [[MFMailComposeViewController alloc] init];
         mailComposer.mailComposeDelegate = self;
 
-        emailTitle = _emailString;
+        _emailTitle = _emailString;
 
         NSString* messageString = @"This mat has been approved";
 
@@ -4576,7 +4585,7 @@ enum {
         //Display Email Composer
         MFMailComposeViewController* mc = [[MFMailComposeViewController alloc] init];
         mc.mailComposeDelegate = self;
-        [mc setSubject:emailTitle];
+        [mc setSubject:_emailTitle];
         [mc setMessageBody:messageBody isHTML:NO];
 
         //[mc setToRecipients:toRecipents];
@@ -4788,7 +4797,11 @@ enum {
     if (searchField.text != Nil || [searchField.text length] == 0) {
         NSString* searchOneString = searchField.text;
 
-        int stringLength = [searchOneString length];
+        NSUInteger intVal = [searchOneString length];
+        int stringLength = (int)intVal;
+        NSLog(@"value : %lu %d", (unsigned long)intVal, stringLength);
+
+        //int stringLength = [searchOneString length];
         NSRange range = NSMakeRange(0, stringLength);
         NSString* newString = [searchOneString stringByReplacingOccurrencesOfString:@" " withString:@"%20" options:NSCaseInsensitiveSearch range:range];
 
@@ -4832,7 +4845,11 @@ enum {
                        options:NSJSONReadingAllowFragments
                          error:&error];
 
-        artworkCount = searchLogoArray.count;
+        NSUInteger intVal1 = searchLogoArray.count;
+        artworkCount = (int)intVal1;
+        NSLog(@"value : %lu %d", (unsigned long)intVal1, artworkCount);
+
+        //artworkCount = searchLogoArray.count;
 
         NSString* urlSearchMatString = [NSString stringWithFormat:@"http://ipad.cintasmats.com/LogoSearchResults/?searchString=%@&Orderby=mostRecent&interactiveOnly=0&locationID=-1&userID=0", newString];
 
@@ -4871,7 +4888,11 @@ enum {
                        options:NSJSONReadingAllowFragments
                          error:&errorMat];
 
-        matCount = searchMatArray.count;
+        NSUInteger intVal2 = searchMatArray.count;
+        matCount = (int)intVal2;
+        NSLog(@"value : %lu %d", (unsigned long)intVal2, matCount);
+
+        //matCount = searchMatArray.count;
         //NSLog(@"%@SearchMatArray",searchMatArray);
 
         [searchLogoArray enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL* stop) {
@@ -4893,7 +4914,12 @@ enum {
         
         
             matNameArray = [searchMatArray valueForKey:@"ArtworkName"];
-            matCount= matNameArray.count;
+            
+            NSUInteger intVal = matNameArray.count;
+            matCount= (int)intVal;
+            NSLog(@"value : %lu %d", (unsigned long)intVal, matCount);
+            
+            //matCount= matNameArray.count;
             matSizeArray = [searchMatArray valueForKey:@"ArtworkSize"];
             matFormatArray = [searchMatArray valueForKey:@"Format"];
             matFullImageArray = [searchMatArray valueForKey:@"FullImageURL"];
@@ -5236,8 +5262,8 @@ enum {
     int wMat = [_widthField.text intValue];
     int hMat = [_heightField.text intValue];
 
-    NSNumber* wMatNumber = [NSNumber numberWithInt:wMat];
-    NSNumber* hMatNumber = [NSNumber numberWithInt:hMat];
+    //NSNumber* wMatNumber = [NSNumber numberWithInt:wMat];
+    //NSNumber* hMatNumber = [NSNumber numberWithInt:hMat];
 
     /*int i = 60;
     float x = (float)i/100.0f;
@@ -5356,8 +5382,7 @@ enum {
     float difference;
     float divide;
     float xUse;
-
-    float yUse;
+    //float yUse;
 
     if (a > b) {
         difference = a - b / 2;
@@ -5635,7 +5660,11 @@ enum {
     initialView=(ViewController*)self.delegate;*/
 
     if (component == 0) {
-        int chosenFont = [pickerView selectedRowInComponent:0];
+        NSUInteger intVal3 = [pickerView selectedRowInComponent:0];
+        int chosenFont = (int)intVal3;
+        NSLog(@"value : %lu %d", (unsigned long)intVal3, chosenFont);
+
+        //int chosenFont = [pickerView selectedRowInComponent:0];
         /*
         //[textDecField setFont:[UIFont fontWithName:[familyNamesArray objectAtIndex:row] size:14.0]];
         chosenFontString=[familyNamesArray objectAtIndex:chosenFont];
@@ -5652,8 +5681,17 @@ enum {
     else if (component == 1) {
         //[self.fontPicker reloadAllComponents];
 
-        int chosenColor = [pickerView selectedRowInComponent:1];
-        chosenColorInt = [pickerView selectedRowInComponent:1];
+        NSUInteger intVal = [pickerView selectedRowInComponent:1];
+        int chosenColor = (int)intVal;
+        NSLog(@"value : %lu %d", (unsigned long)intVal, chosenColor);
+
+        //int chosenColor = [pickerView selectedRowInComponent:1];
+
+        NSUInteger intVal1 = [pickerView selectedRowInComponent:1];
+        chosenColorInt = (int)intVal1;
+        NSLog(@"value : %lu %d", (unsigned long)intVal1, chosenColorInt);
+
+        //chosenColorInt = [pickerView selectedRowInComponent:1];
         // NSLog(@"%i",chosenColorInt);
 
         redInt = [redArray objectAtIndex:chosenColorInt];
@@ -5677,7 +5715,11 @@ enum {
         [self refreshView:refresh];*/
     }
     else {
-        int chosenFontSize1 = [pickerView selectedRowInComponent:2];
+        NSUInteger intVal = [pickerView selectedRowInComponent:2];
+        int chosenFontSize1 = (int)intVal;
+        NSLog(@"value : %lu %d", (unsigned long)intVal, chosenFontSize1);
+
+        //int chosenFontSize1 = [pickerView selectedRowInComponent:2];
         chosenFontSize = chosenFontSize1 * 10;
 
         //chosenFontSize=[fontSizeArray objectAtIndex:chosenFontSize];
