@@ -39,8 +39,8 @@
 
     NSString* searchHereString;
 
-    NSString* artworkNameUnFavString;
-    NSString* urlUnFavString;
+    //NSString* artworkNameUnFavString;
+    //NSString* urlUnFavString;
 
     IBOutlet UITextField* searchOutField;
     LogoSearch* logoSearch;

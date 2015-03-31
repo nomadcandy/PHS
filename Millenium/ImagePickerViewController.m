@@ -85,7 +85,7 @@
 @synthesize snapshotView;
 @synthesize logoImage;
 
-@synthesize alert;
+//@synthesize alert;
 @synthesize alertInteractive;
 @synthesize alertLogo;
 
@@ -614,7 +614,7 @@
 - (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     //This code not used
-    if (alertView == alert) {
+    if (alertView == _alert) {
         nameField = [alertView textFieldAtIndex:0];
         //NSLog(@"alertNameField - %@",alertNameField.text);
         logoImage = chosenImageView.image;
@@ -666,7 +666,7 @@
         //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
     }*/
 
-        if (alert == alertLogo) {
+        if (_alert == alertLogo) {
             nameField = [alertLogo textFieldAtIndex:0];
             artworkNameAddFavString = nameField.text;
         }

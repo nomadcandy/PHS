@@ -1841,14 +1841,14 @@
         _widthCircleField.text = _widthField.text;
         _heightCircleField.text = _heightField.text;
 
-        int wMat = [_widthField.text intValue];
-        int hMat = [_heightField.text intValue];
+        //int wMat = [_widthField.text intValue];
+        //int hMat = [_heightField.text intValue];
 
-        int wMatHundred = wMat * 100;
-        int hMatHundred = hMat * 100;
+        //int wMatHundred = wMat * 100;
+        //int hMatHundred = hMat * 100;
 
-        int wMatHundredDivide = wMatHundred / 2;
-        int hMatHundredDivide = hMatHundred / 2;
+        //int wMatHundredDivide = wMatHundred / 2;
+        //int hMatHundredDivide = hMatHundred / 2;
 
         NSArray* directoryPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString* imagePath1 = [directoryPath objectAtIndex:0];

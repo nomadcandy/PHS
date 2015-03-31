@@ -187,7 +187,7 @@
 - (IBAction)editLogo:(UIButton*)sender;
 //- (IBAction)drawEllipse:(CGContextRef)context;
 //- (IBAction)drawCircle:(UIButton*)sender;
-- (IBAction)drawRect:(UIButton*)sender;
+//- (IBAction)drawRect:(UIButton*)sender;
 - (IBAction)getPoints:(UIButton*)sender;
 - (IBAction)cropScreenShot:(UIButton*)sender;
 //- (IBAction)maskImage:(id)sender;
@@ -199,7 +199,7 @@
 - (IBAction)goWhite:(id)sender;
 
 //- (void)setNeedsDisplay;
-- (void)saveLocally:(NSData*)imgData;
+//- (void)saveLocally:(NSData*)imgData;
 //- (UIImage*) maskImage:(UIImage *)image withMask:(UIImage *)maskImage;
 - (IBAction)maskButtonClicked:(id)sender;
 - (IBAction)imageMoved:(id)sender withEvent:(UIEvent*)event;

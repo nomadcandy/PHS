@@ -258,7 +258,7 @@
 - (void)buttonTapped:(UIButton*)sender
 {
     //NSInteger index = [carousel indexOfItemViewOrSubview:sender];
-    NSLog(@"%i", index);
+    //NSLog(@"%i", index);
 
     if (index == 1) {
         UIStoryboard* storyboard = self.storyboard;

@@ -23,7 +23,7 @@
 
 @end
 
-@interface FavCollectionViewController : UICollectionViewController </*DIYMenuDelegate, */ButtonFavPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate> {
+@interface FavCollectionViewController : UICollectionViewController </*DIYMenuDelegate, */ ButtonFavPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate> {
     /*NSString*sellerString;
     NSString*nameString;
     NSString*companyString;
@@ -36,8 +36,8 @@
 
     NSString* searchHereString;
 
-    NSString* artworkNameUnFavString;
-    NSString* urlUnFavString;
+    //NSString* artworkNameUnFavString;
+    //NSString* urlUnFavString;
 
     IBOutlet UITextField* searchOutField;
     LogoSearch* logoSearch;
