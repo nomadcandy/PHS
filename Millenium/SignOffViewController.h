@@ -11,16 +11,17 @@
 #import "SignView.h"
 #import "InteractiveViewController.h"
 
-@interface SignOffViewController : UIViewController
+@interface SignOffViewController : UIViewController {
+}
 
-@property (nonatomic, strong) IBOutlet UIImageView *matImageView;
-@property (nonatomic, strong) IBOutlet UIImageView *logoImageView;
-@property (nonatomic, strong) IBOutlet UIView *signOffView;
-@property (nonatomic, strong) UIImage*matImage;
-@property (nonatomic, strong) UIImage*logoImage;
+@property (nonatomic, strong) IBOutlet UIImageView* matImageView;
+@property (nonatomic, strong) IBOutlet UIImageView* logoImageView;
+@property (nonatomic, strong) IBOutlet UIView* signOffView;
+@property (nonatomic, strong) UIImage* matImage;
+@property (nonatomic, strong) UIImage* logoImage;
 
-- (IBAction)goHome:(UIButton *)sender;
--(IBAction)goMail:(UIButton*)sender event:(id)event;
+- (IBAction)goHome:(UIButton*)sender;
+- (IBAction)goMail:(UIButton*)sender event:(id)event;
 - (IBAction)signOff:(UIButton*)sender;
 
 @end

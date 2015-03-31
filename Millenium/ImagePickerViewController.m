@@ -23,7 +23,7 @@
 
 @synthesize interactiveHeaderString;
 
-@synthesize selectedImage;
+//@synthesize selectedImage;
 @synthesize chosenImageView;
 @synthesize logoPicButton;
 @synthesize maskSquareButton;
@@ -125,7 +125,7 @@
     [panRecognizer setMinimumNumberOfTouches:1];
     [panRecognizer setMaximumNumberOfTouches:1];
     [panRecognizer setDelegate:self];
-    [canvas addGestureRecognizer:panRecognizer];
+    [_canvas addGestureRecognizer:panRecognizer];
 
     UIPanGestureRecognizer* panRecognizerLogo = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(move:)];
     [panRecognizerLogo setMinimumNumberOfTouches:1];
@@ -145,7 +145,7 @@
     doubleTap.numberOfTouchesRequired = 2;
     [self->overlayWebView addGestureRecognizer:doubleTap];*/
 
-    MaskView* view = [[MaskView alloc] initWithFrame:self.view.frame];
+    //MaskView* view = [[MaskView alloc] initWithFrame:self.view.frame];
     overlayWebView.hidden = YES;
     overlay1WebView.hidden = YES;
     maskSquareImageView.hidden = YES;
@@ -167,7 +167,7 @@
     //UIImage *chosenImage = [UIImage imageNamed:@"SampleLogo2.png"];
     //[_logoPicButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
 
-    chosenImageView.image = selectedImage;
+    chosenImageView.image = _selectedImage;
 
     NSString* strURL = @"http://www.images.google.com";
     NSURL* url = [NSURL URLWithString:strURL];
@@ -206,7 +206,7 @@
         _lastScale = 1.0;
     }
 
-    CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
+    // CGFloat scale = 1.0 - (_lastScale - [(UIPinchGestureRecognizer*)sender scale]);
 
     /*CGAffineTransform currentTransform = chosenImageView.transform;
     CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
@@ -350,8 +350,8 @@
     pt.x += scrollPositionX;
     pt.y += scrollPositionY;
 
-    NSString* js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", pt.x, pt.y];
-    NSString* tagName = [self->googleWebView stringByEvaluatingJavaScriptFromString:js];
+    //NSString* js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", pt.x, pt.y];
+    //NSString* tagName = [self->googleWebView stringByEvaluatingJavaScriptFromString:js];
 
     NSString* imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", startPoint->x, startPoint->y];
     NSString* urlToSave = [self->googleWebView stringByEvaluatingJavaScriptFromString:imgURL];
@@ -364,7 +364,7 @@
 
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
 }
-
+//Do we use this method?
 - (void)doubleTap:(UITapGestureRecognizer*)sender
 {
     int scrollPositionY = [[self->googleWebView stringByEvaluatingJavaScriptFromString:@"window.pageYOffset"] intValue];
@@ -379,8 +379,8 @@
     pt.x += scrollPositionX;
     pt.y += scrollPositionY;
 
-    NSString* js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", pt.x, pt.y];
-    NSString* tagName = [self->googleWebView stringByEvaluatingJavaScriptFromString:js];
+    //NSString* js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).tagName", pt.x, pt.y];
+    //NSString* tagName = [self->googleWebView stringByEvaluatingJavaScriptFromString:js];
 
     NSString* imgURL = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", startPoint->x, startPoint->y];
     NSString* urlToSave = [self->googleWebView stringByEvaluatingJavaScriptFromString:imgURL];
@@ -413,7 +413,7 @@
     AppDelegate* appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     appdelegate.model = NO;
 
-    selectedImage = chosenImage;
+    _selectedImage = chosenImage;
 
     NSString* imagePath = [NSHomeDirectory() stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/logoImage.png"]];
     //[UIImageJPEGRepresentation(chosenImage, 1.0) writeToFile:imagePath atomically:YES];
@@ -660,7 +660,7 @@
         [newLogoFavorite setValue:self.artworkLocationIDAddFavString forKey:@"locationID"];
         [newLogoFavorite setValue:self.artworkFormatAddFavString forKey:@"format"];
 
-        NSError* error = nil;
+        //NSError* error = nil;
         // Save the object to persistent store
         /* if (![context save:&error]) {
         //NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
@@ -676,10 +676,7 @@
     else {
         nameField = [alertView textFieldAtIndex:0];
         artworkNameAddFavString = nameField.text;
-
         //NSLog(@"alertNameField - %@",alertNameField.text);
-
-        //nameField.text = nameField.text;
     }
 }
 
@@ -718,7 +715,7 @@
 
     //UITextField * alertNameField = [alertLogo textFieldAtIndex:0];
 
-    UITextField* alertNameField = [alertLogo textFieldAtIndex:0];
+    //UITextField* alertNameField = [alertLogo textFieldAtIndex:0];
     //NSLog(@"alertNameField - %@",alertNameField.text);
     logoImage = chosenImageView.image;
 
@@ -1209,7 +1206,7 @@
     overlay1WebView.hidden = NO;
     overlayWebView.hidden = NO;
 
-    [editImageView setImage:selectedImage];
+    [editImageView setImage:_selectedImage];
 
     MaskView* maskView = [[MaskView alloc] initWithFrame:self.view.frame];
     maskView.hidden = NO;
@@ -1223,7 +1220,7 @@
 
     myClippingImage = UIGraphicsGetImageFromCurrentImageContext();
 
-    CGImageRef image = CGBitmapContextCreateImage(context);
+    //CGImageRef image = CGBitmapContextCreateImage(context);
 
     //UIImage*myMaskOriginalImage;
 
@@ -1260,15 +1257,13 @@
     overlay1WebView.hidden = NO;
     overlayWebView.hidden = NO;
 
-    [editImageView setImage:selectedImage];
+    [editImageView setImage:_selectedImage];
 
     MaskView* maskView = [[MaskView alloc] initWithFrame:self.view.frame];
     maskView.hidden = NO;
     [maskView setOpaque:NO];
 
     [overlay1WebView addSubview:maskView];
-
-    CGContextRef context = UIGraphicsGetCurrentContext();
 
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     [[UIColor whiteColor] set];
@@ -1326,7 +1321,7 @@
     editLogoButton.hidden = NO;
     editImageView.hidden = NO;
 
-    [editLogoButton setBackgroundImage:selectedImage forState:UIControlStateNormal];
+    [editLogoButton setBackgroundImage:_selectedImage forState:UIControlStateNormal];
     [editLogoButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [editLogoButton addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
 }

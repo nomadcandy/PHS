@@ -23,7 +23,7 @@
 
 @end
 
-@interface FavCollectionViewController : UICollectionViewController <DIYMenuDelegate, ButtonFavPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate> {
+@interface FavCollectionViewController : UICollectionViewController </*DIYMenuDelegate, */ButtonFavPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate> {
     /*NSString*sellerString;
     NSString*nameString;
     NSString*companyString;
