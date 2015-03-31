@@ -279,6 +279,8 @@
 {
     [super viewDidLoad];
 
+    [self.logoPicButton setTranslatesAutoresizingMaskIntoConstraints:YES];
+
     logoPicButton.tag = 1000;
 
     //UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
@@ -4479,7 +4481,10 @@ enum {
     textDecField.textAlignment = NSTextAlignmentCenter;
     textDecField.tag = 3;
 
-    [self.view addSubview:textDecField];
+    //[self.view addSubview:textDecField];
+
+    [self.view insertSubview:decTextLayerView belowSubview:logoPicButton];
+    [self.view insertSubview:textDecField belowSubview:logoPicButton];
 
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragInside];
     [textDecField addTarget:self action:@selector(imageMoved:withEvent:) forControlEvents:UIControlEventTouchDragOutside];
@@ -4504,6 +4509,8 @@ enum {
 - (IBAction)showText:(id)sender
 {
     decTextLayerView.hidden = NO;
+
+    [self.view insertSubview:decTextLayerView belowSubview:logoPicButton];
 }
 
 - (IBAction)goMail:(UIButton*)sender event:(id)event
