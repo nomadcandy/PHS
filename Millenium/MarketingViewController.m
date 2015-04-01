@@ -106,8 +106,8 @@
 
     if (carousel.tag == 5) {
         return 4;
-
-    } else {
+    }
+    else {
         return 5;
     }
 }
@@ -149,7 +149,7 @@
 
         button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
-        [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+        //[button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [button setBackgroundImage:image forState:UIControlStateNormal];
         //[button addTarget:self action:@selector(buttonTapped0:) forControlEvents:UIControlEventTouchUpInside];

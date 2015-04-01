@@ -2076,11 +2076,11 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     return context;
 }
 
-- (void)textFieldDidChange:(UITextField*)searchHereField
+/*- (void)textFieldDidChange:(UITextField*)searchHereField
 {
     searchHereString = searchHereField.text;
     //NSLog(@"searchHereField %@",searchHereString);
-}
+}*/
 
 - (void)didReceiveMemoryWarning
 {

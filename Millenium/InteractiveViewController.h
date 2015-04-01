@@ -39,7 +39,7 @@
     IBOutlet UITextField* hexField;
     IBOutlet UIButton* searchButton;
 
-    IBOutlet UIButton* aquamarineButton;
+    //IBOutlet UIButton* aquamarineButton;
 
     AppDelegate* appdelegate;
 
