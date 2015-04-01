@@ -27,26 +27,16 @@
 
 //@end
 
-@interface LogoCollectionViewController : UICollectionViewController <DIYMenuDelegate, ButtonPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate /*, StringSetDelegate*/>
+@interface LogoCollectionViewController : UICollectionViewController <ButtonPickerDelegate, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
                                           {
-    /*NSString*sellerString;
-    NSString*nameString;
-    NSString*companyString;
-    NSString*numberString;*/
-
     NSString* artworkNameAddFavString;
     NSString* urlFavString;
-
     NSString* searchHereString;
 
-    //NSString* artworkNameUnFavString;
-    //NSString* urlUnFavString;
-
     IBOutlet UITextField* searchOutField;
-    //UITextField *searchHereField;
+
     LogoSearch* logoSearch;
-    //UIButton* button;
 
     int selectedIndex;
     int indexPathSend;
@@ -73,8 +63,6 @@
 @property (nonatomic, assign) int higherCount;
 @property (nonatomic, assign) int artworkCount;
 @property (nonatomic, assign) int matCount;
-
-//@property (nonatomic, assign) int jsonLogoCount;
 
 @property (nonatomic, retain) IBOutlet UITextField* searchOutField;
 @property (nonatomic, retain) UITextField* searchHereField;
@@ -185,26 +173,11 @@
 @property (nonatomic, copy) NSString* interactiveHeaderString;
 @property (nonatomic, copy) NSString* orientString;
 
-//@property (nonatomic, assign) id <StringSetDelegate> delegateString;
 @property (nonatomic, weak) id<ButtonPickerDelegate> delegate;
-//@property (nonatomic, weak) id <StringPickerProtocol> delegate;
-
-//@property (weak,nonatomic) id delegate;
 
 @property (nonatomic, retain) UIImage* backgroundImageSearch;
 
-//@property(nonatomic, retain) UIButton* favHereButton;
-
-/*- (IBAction)goFav:(id)sender;
-- (IBAction)goInteractive:(id)sender;
-- (IBAction)goHome:(UIButton*)sender;
-- (IBAction)addLogoFavorite:(id)sender;
-- (IBAction)removeFavorite:(id)sender;*/
 - (IBAction)removeAllFavorites:(id)sender;
-
-/*- (IBAction)addMatFavorite:(id)sender;
-- (IBAction)removeMatFavorite:(id)sender;*/
-
-- (BOOL)textFieldShouldReturn:(UITextField*)searchField;
+//- (BOOL)textFieldShouldReturn:(UITextField*)searchField;
 
 @end

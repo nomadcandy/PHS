@@ -127,6 +127,8 @@
 
     mailComposer = [[MFMailComposeViewController alloc] init];
     mailComposer.mailComposeDelegate = self;
+    
+    
 
     NSString* emailTitle = @"Mat Approved";
 

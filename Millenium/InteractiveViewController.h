@@ -5,6 +5,7 @@
 //  Created by Jami Sue Becker on 3/10/14.
 //  Copyright (c) 2014 Jami Sue Becker. All rights reserved.
 //
+#import <MessageUI/MessageUI.h>
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
@@ -20,23 +21,7 @@
 
 @class InteractiveViewController;
 
-/*@protocol logoStringDelegate <NSObject>
-
-- (void)didSetString:(NSString *)logoUseString;*/
-
-/*@protocol StringPickerProtocol <NSObject>
-
-- (void)setString:(NSString *)string;*/
-
-//- (void)didSetCompanyString:(NSString *)companyString;
-
-//@end
-
-/*@protocol StringSetDelegate <NSObject>
- 
- - (void)didSetNameString:(NSString *)nameString;*/
-
-@interface InteractiveViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, iCarouselDataSource, iCarouselDataSource, /*DIYMenuDelegate,*/ UIGestureRecognizerDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
+@interface InteractiveViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIGestureRecognizerDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate, MFMailComposeViewControllerDelegate> {
     //NSURLRequest* request;
 
     IBOutlet UIView* interactiveView;
@@ -55,10 +40,8 @@
     IBOutlet UIButton* searchButton;
 
     IBOutlet UIButton* aquamarineButton;
-    //IBOutlet UIButton *steelBlueButton;
 
     AppDelegate* appdelegate;
-    //UIImage *selectedImage;
 
     CGFloat _keepScale;
     CGFloat _lastScale;
@@ -68,28 +51,13 @@
 
     CGFloat matScale;
 
-    //CGPoint center;
-
     UIView* canvas;
 
     int artworkCount;
     int matCount;
 
     CGImageRef masked;
-
-    //NSString*sellerString;
-    //NSString*nameString;
-    /*NSString*companyString;
-    NSString*numberString;*/
-
-    //NSString *logoUseStringHere;
-
-    //__unsafe_unretained id <StringPickerProtocol> _delegate;
-    //__unsafe_unretained id <StringSetDelegate> delegate;
 }
-
-//@property (nonatomic, weak) id <StringPickerProtocol> delegate;
-//@property (nonatomic, weak) id <StringSetDelegate> delegate;
 
 @property (nonatomic, readonly) NSArray* textFields;
 
@@ -381,8 +349,6 @@
 @property (nonatomic, assign) CGPoint logoPicCenter;
 
 - (IBAction)goSearch:(id)sender;
-
-//- (IBAction)addHexField:(id)sender;
 
 - (IBAction)goAcquireSketches:(id)sender;
 - (IBAction)goSketches:(id)sender;
