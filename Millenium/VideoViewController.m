@@ -178,7 +178,7 @@
 
             button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
-            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            //[button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
             [button setBackgroundImage:image forState:UIControlStateNormal];
             [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
         }
@@ -253,7 +253,7 @@
 
             button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
-            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            //[button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
             [button setBackgroundImage:image forState:UIControlStateNormal];
             //[button addTarget:self action:@selector(buttonTappedGoldenSeries:) forControlEvents:UIControlEventTouchUpInside];
         }
@@ -306,7 +306,7 @@
 
             button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
-            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            //[button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
             [button setBackgroundImage:image forState:UIControlStateNormal];
             //[button addTarget:self action:@selector(buttonTappedWaterGuard:) forControlEvents:UIControlEventTouchUpInside];
         }
@@ -350,7 +350,7 @@
 
             button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
-            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            //[button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
             [button setBackgroundImage:image forState:UIControlStateNormal];
             [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
         }
@@ -416,7 +416,7 @@
 
             button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
-            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            //[button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
             [button setBackgroundImage:image forState:UIControlStateNormal];
             [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
         }
@@ -482,7 +482,7 @@
 
             button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
-            [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
+            //[button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
             [button setBackgroundImage:image forState:UIControlStateNormal];
             [button addTarget:self action:@selector(buttonTappedWalkOffLogoMat:) forControlEvents:UIControlEventTouchUpInside];
         }
