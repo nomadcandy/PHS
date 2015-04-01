@@ -32,7 +32,7 @@
      NSString*numberString;*/
 
     MatFavorite* matFavorite;
-    Draft* draftDelete;
+    //Draft* draftDelete;
 
     NSString* artworkNameAddFavString;
     NSString* urlFavString;

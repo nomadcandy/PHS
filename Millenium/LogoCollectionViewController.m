@@ -7,7 +7,7 @@
 //
 
 #import "LogoCollectionViewController.h"
-
+//TEST
 @interface LogoCollectionViewController ()
 
 @end

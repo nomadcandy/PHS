@@ -702,8 +702,6 @@
 		4288F1B2195130D500975FB6 /* WaterGuardPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterGuardPDF.png; sourceTree = "<group>"; };
 		4288F1B41951329E00975FB6 /* TripleFlexFlow1PDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TripleFlexFlow1PDF.png; sourceTree = "<group>"; };
 		4288F1B61951330300975FB6 /* Waterguard1PDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Waterguard1PDF.png; sourceTree = "<group>"; };
-		4290DE571AC353F6001333F4 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
-		4290DE581AC353F7001333F4 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		4295213C1976F081002B51C7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4295213D1976F081002B51C7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4297E04D1923C5E800E43779 /* MaskWhiteSquare7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MaskWhiteSquare7.png; sourceTree = "<group>"; };
@@ -1610,8 +1608,6 @@
 		42FF7A0818CDE92A00C72695 = {
 			isa = PBXGroup;
 			children = (
-				4290DE571AC353F6001333F4 /* ImagePickerViewController.h */,
-				4290DE581AC353F7001333F4 /* ImagePickerViewController.m */,
 				427B47001A69B5E900028DD2 /* ImagesDrafts */,
 				420A8F0A19532B00005FB1D8 /* ImagesDirect */,
 				4288F1A91950A00000975FB6 /* ImagesLogin */,
