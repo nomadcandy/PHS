@@ -255,7 +255,7 @@
 #pragma mark -
 #pragma mark Button tap event
 
-- (void)buttonTapped:(UIButton*)sender
+/*- (void)buttonTapped:(UIButton*)sender
 {
     //NSInteger index = [carousel indexOfItemViewOrSubview:sender];
     //NSLog(@"%i", index);
@@ -267,6 +267,6 @@
         // Configure the new view controller here.
         [self presentViewController:rfvc animated:YES completion:nil];
     }
-}
+}*/
 
 @end
