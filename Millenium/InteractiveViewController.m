@@ -4830,7 +4830,7 @@ enum {
 
 #pragma mark - Drop Down Animated Menus
 
-- (IBAction)showMenu:(id)sender
+/*- (IBAction)showMenu:(id)sender
 {
     [DIYMenu show];
     [DIYMenu setDelegate:self];
@@ -4844,7 +4844,7 @@ enum {
     [DIYMenu addMenuItem:@"search" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
     [DIYMenu addMenuItem:@"near me" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.7] withFont:font];
     [DIYMenu addMenuItem:@"save" withIcon:[UIImage imageNamed:@"settingsIcon@2x.png"] withColor:[UIColor colorWithWhite:0.70 alpha:.5] withFont:font];
-}
+}*/
 
 - (IBAction)goAcquireSketches:(id)sender
 {

@@ -1130,7 +1130,7 @@ NSString* kDraftHeaderCellID = @"draftHeaderCellID";
 }
 - (void)textFieldDidChange:(UITextField*)searchHereField
 {
-    searchHereString = searchHereField.text;
+    //searchHereString = searchHereField.text;
     // NSLog(@"searchHereField %@",searchHereString);
 }
 

@@ -60,38 +60,6 @@
     //CGContextFillRect(context, self.bounds);
 }
 
-- (IBAction)cropScreenShot:(UIButton*)sender
-{
-    /* overlay1WebView.hidden = NO;
-    overlayWebView.hidden = NO;
-    
-    [editImageView setImage:selectedImage];*/
-
-    SignView* signView = [[MaskView alloc] initWithFrame:self.view.frame];
-    signView.hidden = NO;
-    [signView setOpaque:NO];
-
-    //[overlay1WebView addSubview:maskView];
-
-    //CGContextRef context = UIGraphicsGetCurrentContext();
-
-    //CGContextRef ctx = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-
-    //CGContextFillRect(ctx, maskUse);
-    //CGContextFillRect (__bridge CAShapeLayer *)(addPath[]);
-
-    //[googleWebView.layer renderInContext:ctx];
-
-    //UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
-
-    UIGraphicsEndImageContext();
-
-    //chosenImageView.image = newImage;
-    //chosenImage = newImage;
-    //NSLog(@"chosenImage %@",selectedImage);
-}
-
 - (IBAction)goHome:(UIButton*)sender
 {
     UIStoryboard* storyboard = self.storyboard;
@@ -127,8 +95,6 @@
 
     mailComposer = [[MFMailComposeViewController alloc] init];
     mailComposer.mailComposeDelegate = self;
-    
-    
 
     NSString* emailTitle = @"Mat Approved";
 
