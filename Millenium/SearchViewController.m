@@ -14,7 +14,6 @@
 
 @implementation SearchViewController
 
-
 @synthesize sketchReferenceField;
 @synthesize containingField;
 @synthesize locationField;
@@ -26,7 +25,6 @@
 @synthesize dateButton;
 @synthesize popularityButton;
 
-
 @synthesize artworkNameArray;
 @synthesize artworkSizeArray;
 @synthesize artworkFormatArray;
@@ -35,7 +33,7 @@
 @synthesize artworkIDArray;
 @synthesize artworkInfoArray;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -47,23 +45,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
 }
 
-
--(IBAction)goSearch:(id)sender{
-    
-    
-    
-    NSString*sketchReferenceString= sketchReferenceField.text;
+- (IBAction)goSearch:(id)sender
+{
+    /*NSString*sketchReferenceString= sketchReferenceField.text;
     NSString*containingString= containingField.text;
     NSString*locationString= locationField.text;
     NSString*typeString= typeField.text;
     NSString*firstDateString= firstDateField.text;
     NSString*secondDateString= secondDateField.text;
-    NSString*sizeString= sizeField.text;
-    
-    
+    NSString*sizeString= sizeField.text;*/
+
     /*BOOL error = NO;
      
      if(loginField.text == nil || [loginField.text length] == 0)
@@ -77,46 +71,34 @@
      error = YES;
      //[passwordErrorBG setBackgroundColor:[UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.1f]];
      }*/
-    
-    
-    
+
     /*if(error)
      {
      [self showError];
      return;
      }*/
-    
-    
-    
-    
-    
+
     //NSMutableURLRequest *theRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"]];
-    
-    
+
     //http://ipad.cintasmats.com/LogoSearchResults/?searchString=Shell&Orderby=match
-    
+
     //NSString*loginString= loginField.text;
     //NSString*passwordString= passwordField.text;
-    
+
     //NSString*loginString= @"oclipse";
     //NSString*passwordString= @"password";
-    
+
     //NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=%@&password=%@", loginString,passwordString];
-    
+
     //NSString*urlSearchString=[NSString stringWithFormat:@"http://ipad.cintasmats.com/Login/?username=oclipse&password=password"];
-    
-    
-    
+
     //NSURL *urlSearch = [[NSURL alloc] initWithString:urlSearchString];
     //NSLog(@"URLLOGIN: %@",urlSearch);
-    
+
     //NSError *error = nil;
-    
-    
+
     //NSData *data = [NSData dataWithContentsOfURL:urlSearch];
-    
-    
-    
+
     //parse Dictionary from web
     /*NSDictionary *loginDictionary = [NSJSONSerialization
                                      JSONObjectWithData:data
@@ -124,24 +106,14 @@
                                      error: &error];
     
     NSLog(@"%@LoginDICTIONARY",loginDictionary);*/
-    
-   
-    
-    
 }
 
-
--(IBAction)goHome:(id)sender{
-    
-    
-    
-    UIStoryboard *storyboard = self.storyboard;
-    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
+- (IBAction)goHome:(id)sender
+{
+    UIStoryboard* storyboard = self.storyboard;
+    ViewController* vc = [storyboard instantiateViewControllerWithIdentifier:@"HomeStoryboard"];
     [self presentViewController:vc animated:YES completion:nil];
-    
-    
 }
-
 
 - (void)didReceiveMemoryWarning
 {
