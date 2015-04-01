@@ -136,7 +136,7 @@
         button.titleLabel.shadowOffset = CGSizeMake(1.0, 1.0);
         [button setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
         [button.titleLabel setFont:[UIFont fontWithName:@"Avenir-Light" size:18.0]];
-        [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        //[button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     }
 
     //set button label
