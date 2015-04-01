@@ -1247,7 +1247,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     //NSLog(@"indexPathSend %d",indexPathSend);
 
     //urlUnFavString =[artworkFullImageArray objectAtIndex:indexPathSend];
-    artworkNameUnFavString = [artworkNameArray objectAtIndex:indexPathSend];
+    _artworkNameUnFavString = [artworkNameArray objectAtIndex:indexPathSend];
     NSManagedObjectContext* context = [self managedObjectContext];
     //NSNumber *soughtPid=[NSNumber numberWithInt:53];
     //NSEntityDescription *artworkNameEntity=[NSEntityDescription entityForName:@"LogoFavorite" inManagedObjectContext:context];
@@ -1255,7 +1255,7 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
     NSEntityDescription* logoFavoriteEntity = [NSEntityDescription entityForName:@"MatFavorite" inManagedObjectContext:context];
     NSFetchRequest* fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:logoFavoriteEntity];
-    NSPredicate* p = [NSPredicate predicateWithFormat:@"pid == %@", artworkNameUnFavString];
+    NSPredicate* p = [NSPredicate predicateWithFormat:@"pid == %@", _artworkNameUnFavString];
     [fetch setPredicate:p];
     //... add sorts if you want them
     NSError* fetchError;
@@ -1501,14 +1501,14 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
 
 - (IBAction)removeFavorite:(id)sender
 {
-    urlUnFavString = [artworkFullImageArray objectAtIndex:indexPathSend];
-    artworkNameUnFavString = [artworkNameArray objectAtIndex:indexPathSend];
+    _urlUnFavString = [artworkFullImageArray objectAtIndex:indexPathSend];
+    _artworkNameUnFavString = [artworkNameArray objectAtIndex:indexPathSend];
     NSManagedObjectContext* context = [self managedObjectContext];
 
     NSEntityDescription* logoFavoriteEntity = [NSEntityDescription entityForName:@"LogoFavorite" inManagedObjectContext:context];
     NSFetchRequest* fetch = [[NSFetchRequest alloc] init];
     [fetch setEntity:logoFavoriteEntity];
-    NSPredicate* p = [NSPredicate predicateWithFormat:@"pid == %@", urlUnFavString];
+    NSPredicate* p = [NSPredicate predicateWithFormat:@"pid == %@", _urlUnFavString];
     [fetch setPredicate:p];
     //... add sorts if you want them
     NSError* fetchError;
