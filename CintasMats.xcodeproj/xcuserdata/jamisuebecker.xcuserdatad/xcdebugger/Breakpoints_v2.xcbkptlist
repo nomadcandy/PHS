@@ -529,52 +529,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Millenium/LogoCollectionViewController.h"
-            timestampString = "427389373.710941"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "userIDString"
-            landmarkType = "19">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LogoCollectionViewController locationIDString]"
-                  moduleName = "Millenium"
-                  urlString = "file://localhost/Users/jamisuebecker/Projects/MilleniumUseYes/Millenium/Millenium/LogoCollectionViewController.h"
-                  timestampString = "423416276.964391"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[LogoCollectionViewController setLocationIDString:]"
-                  moduleName = "Millenium"
-                  urlString = "file://localhost/Users/jamisuebecker/Projects/MilleniumUseYes/Millenium/Millenium/LogoCollectionViewController.h"
-                  timestampString = "423416276.964599"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "31">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Millenium/FavCollectionViewController.m"
             timestampString = "449547443.80665"
             startingColumnNumber = "9223372036854775807"

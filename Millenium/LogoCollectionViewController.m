@@ -14,7 +14,7 @@
 
 @implementation LogoCollectionViewController
 
-@synthesize favHereButton;
+//@synthesize favHereButton;
 
 @synthesize higherCount;
 @synthesize headerLabel;
