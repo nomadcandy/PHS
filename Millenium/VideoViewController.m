@@ -192,7 +192,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(WaterGuardLogoInlay:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(WaterGuardLogoInlay:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 2) {
@@ -203,7 +203,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(MotifMat:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(MotifMat:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 3) {
@@ -214,7 +214,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(UltraGuardLogoInlay:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(UltraGuardLogoInlay:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 4) {
@@ -225,7 +225,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(FirstStepLogoScraper:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(FirstStepLogoScraper:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 5) {
@@ -236,7 +236,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(LogoColorGuidelines:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(LogoColorGuidelines:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
 
@@ -255,7 +255,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(buttonTappedGoldenSeries:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(buttonTappedGoldenSeries:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 1) {
@@ -267,7 +267,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(buttonTappedSilverSeries:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(buttonTappedSilverSeries:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 2) {
@@ -278,7 +278,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(buttonTappedWalkOffPheonixMat:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(buttonTappedWalkOffPheonixMat:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 3) {
@@ -289,7 +289,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(buttonTappedWalkOffTreadLock:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(buttonTappedWalkOffTreadLock:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
 
@@ -308,7 +308,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button.titleLabel setTextAlignment:NSBaselineOffsetAttributeName];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(buttonTappedWaterGuard:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(buttonTappedWaterGuard:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 1) {
@@ -320,7 +320,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(buttonTappedUltraGuard:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(buttonTappedUltraGuard:) forControlEvents:UIControlEventTouchUpInside];
         }
 
         if (index == 2) {
@@ -332,7 +332,7 @@
             button.frame = CGRectMake(0.0f, 0.0f, image.size.width / 1.15, image.size.height / 1.15);
             [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [button setBackgroundImage:image forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(buttonTappedEcoGuard:) forControlEvents:UIControlEventTouchUpInside];
+            //[button addTarget:self action:@selector(buttonTappedEcoGuard:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
 
