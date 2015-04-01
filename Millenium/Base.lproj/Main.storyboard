@@ -4165,7 +4165,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="goInteractive1:event:" destination="xYA-bA-MQ0" eventType="touchUpInside" id="fhA-tV-VTz"/>
-                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="logoPickedSegue" id="Q7o-Tf-pTp"/>
+                                                <segue destination="EOd-lr-Xtf" kind="modal" identifier="notlogoPickedSegue" id="Q7o-Tf-pTp"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="220" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNa-GR-k0J">
@@ -5178,8 +5178,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wpq-PH-bdK"/>
-        <segue reference="aYA-g1-hsh"/>
+        <segue reference="Q7o-Tf-pTp"/>
         <segue reference="QQh-is-hk2"/>
+        <segue reference="aYA-g1-hsh"/>
     </inferredMetricsTieBreakers>
 </document>
