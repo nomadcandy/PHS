@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42FF7A1018CDE92A00C72695"
                BuildableName = "CintasMats.app"
-               BlueprintName = "CintasMats"
+               BlueprintName = "PHS"
                ReferencedContainer = "container:CintasMats.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42FF7A3118CDE92A00C72695"
                BuildableName = "CintasMatsTests.xctest"
-               BlueprintName = "CintasMatsTests"
+               BlueprintName = "PHSTests"
                ReferencedContainer = "container:CintasMats.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42FF7A1018CDE92A00C72695"
             BuildableName = "CintasMats.app"
-            BlueprintName = "CintasMats"
+            BlueprintName = "PHS"
             ReferencedContainer = "container:CintasMats.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,7 +64,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42FF7A1018CDE92A00C72695"
             BuildableName = "CintasMats.app"
-            BlueprintName = "CintasMats"
+            BlueprintName = "PHS"
             ReferencedContainer = "container:CintasMats.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -83,7 +83,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42FF7A1018CDE92A00C72695"
             BuildableName = "CintasMats.app"
-            BlueprintName = "CintasMats"
+            BlueprintName = "PHS"
             ReferencedContainer = "container:CintasMats.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

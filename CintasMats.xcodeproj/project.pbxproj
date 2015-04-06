@@ -1742,9 +1742,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		42FF7A1018CDE92A00C72695 /* CintasMats */ = {
+		42FF7A1018CDE92A00C72695 /* PHS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42FF7A4318CDE92A00C72695 /* Build configuration list for PBXNativeTarget "CintasMats" */;
+			buildConfigurationList = 42FF7A4318CDE92A00C72695 /* Build configuration list for PBXNativeTarget "PHS" */;
 			buildPhases = (
 				42FF7A0D18CDE92A00C72695 /* Sources */,
 				42FF7A0E18CDE92A00C72695 /* Frameworks */,
@@ -1754,14 +1754,14 @@
 			);
 			dependencies = (
 			);
-			name = CintasMats;
+			name = PHS;
 			productName = Millenium;
 			productReference = 42FF7A1118CDE92A00C72695 /* CintasMats.app */;
 			productType = "com.apple.product-type.application";
 		};
-		42FF7A3118CDE92A00C72695 /* CintasMatsTests */ = {
+		42FF7A3118CDE92A00C72695 /* PHSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "CintasMatsTests" */;
+			buildConfigurationList = 42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "PHSTests" */;
 			buildPhases = (
 				42FF7A2E18CDE92A00C72695 /* Sources */,
 				42FF7A2F18CDE92A00C72695 /* Frameworks */,
@@ -1772,7 +1772,7 @@
 			dependencies = (
 				42FF7A3818CDE92A00C72695 /* PBXTargetDependency */,
 			);
-			name = CintasMatsTests;
+			name = PHSTests;
 			productName = MilleniumTests;
 			productReference = 42FF7A3218CDE92A00C72695 /* CintasMatsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1812,8 +1812,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42FF7A1018CDE92A00C72695 /* CintasMats */,
-				42FF7A3118CDE92A00C72695 /* CintasMatsTests */,
+				42FF7A1018CDE92A00C72695 /* PHS */,
+				42FF7A3118CDE92A00C72695 /* PHSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -2313,7 +2313,7 @@
 /* Begin PBXTargetDependency section */
 		42FF7A3818CDE92A00C72695 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 42FF7A1018CDE92A00C72695 /* CintasMats */;
+			target = 42FF7A1018CDE92A00C72695 /* PHS */;
 			targetProxy = 42FF7A3718CDE92A00C72695 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2510,7 +2510,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42FF7A4318CDE92A00C72695 /* Build configuration list for PBXNativeTarget "CintasMats" */ = {
+		42FF7A4318CDE92A00C72695 /* Build configuration list for PBXNativeTarget "PHS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42FF7A4418CDE92A00C72695 /* Debug */,
@@ -2519,7 +2519,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "CintasMatsTests" */ = {
+		42FF7A4618CDE92A00C72695 /* Build configuration list for PBXNativeTarget "PHSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42FF7A4718CDE92A00C72695 /* Debug */,
