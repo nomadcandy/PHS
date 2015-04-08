@@ -110,6 +110,11 @@
 		425208371AD372D600BC72AA /* AssetsRepButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 425208361AD372D600BC72AA /* AssetsRepButton.png */; };
 		425208391AD3731300BC72AA /* AssetsCompassButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 425208381AD3731300BC72AA /* AssetsCompassButton.png */; };
 		4252083B1AD3732B00BC72AA /* AssetsFavButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4252083A1AD3732B00BC72AA /* AssetsFavButton.png */; };
+		4252083D1AD376A900BC72AA /* PHSLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4252083C1AD376A900BC72AA /* PHSLogo.png */; };
+		4252083F1AD3770300BC72AA /* Virtuoso lofo Final.png in Resources */ = {isa = PBXBuildFile; fileRef = 4252083E1AD3770300BC72AA /* Virtuoso lofo Final.png */; };
+		425208411AD37C8E00BC72AA /* CarpetSquares.png in Resources */ = {isa = PBXBuildFile; fileRef = 425208401AD37C8E00BC72AA /* CarpetSquares.png */; };
+		425208431AD37CED00BC72AA /* CarpetSquaresBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 425208421AD37CED00BC72AA /* CarpetSquaresBlack.png */; };
+		425208451AD435AD00BC72AA /* PHSLogoUse.png in Resources */ = {isa = PBXBuildFile; fileRef = 425208441AD435AD00BC72AA /* PHSLogoUse.png */; };
 		4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */; };
 		4259BC4518F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
 		4259BC4618F6F90100861033 /* MatChatterBgCool.png in Resources */ = {isa = PBXBuildFile; fileRef = 4259BC4418F6F90100861033 /* MatChatterBgCool.png */; };
@@ -592,6 +597,11 @@
 		425208361AD372D600BC72AA /* AssetsRepButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsRepButton.png; sourceTree = "<group>"; };
 		425208381AD3731300BC72AA /* AssetsCompassButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsCompassButton.png; sourceTree = "<group>"; };
 		4252083A1AD3732B00BC72AA /* AssetsFavButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AssetsFavButton.png; sourceTree = "<group>"; };
+		4252083C1AD376A900BC72AA /* PHSLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PHSLogo.png; sourceTree = "<group>"; };
+		4252083E1AD3770300BC72AA /* Virtuoso lofo Final.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Virtuoso lofo Final.png"; sourceTree = "<group>"; };
+		425208401AD37C8E00BC72AA /* CarpetSquares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarpetSquares.png; sourceTree = "<group>"; };
+		425208421AD37CED00BC72AA /* CarpetSquaresBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CarpetSquaresBlack.png; sourceTree = "<group>"; };
+		425208441AD435AD00BC72AA /* PHSLogoUse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PHSLogoUse.png; sourceTree = "<group>"; };
 		4259BC4218F6F8DD00861033 /* MatChatterBgSay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgSay.png; sourceTree = "<group>"; };
 		4259BC4418F6F90100861033 /* MatChatterBgCool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MatChatterBgCool.png; sourceTree = "<group>"; };
 		425B8B2A193D038A00DF40C6 /* FavCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavCollectionViewController.h; sourceTree = "<group>"; };
@@ -976,6 +986,10 @@
 		422A691B19100939001CAB8D /* ImagesAssets */ = {
 			isa = PBXGroup;
 			children = (
+				425208441AD435AD00BC72AA /* PHSLogoUse.png */,
+				425208401AD37C8E00BC72AA /* CarpetSquares.png */,
+				4252083E1AD3770300BC72AA /* Virtuoso lofo Final.png */,
+				4252083C1AD376A900BC72AA /* PHSLogo.png */,
 				4252083A1AD3732B00BC72AA /* AssetsFavButton.png */,
 				425208381AD3731300BC72AA /* AssetsCompassButton.png */,
 				425208361AD372D600BC72AA /* AssetsRepButton.png */,
@@ -1690,6 +1704,7 @@
 				42FF7A2318CDE92A00C72695 /* AppDelegate.h */,
 				42FF7A2418CDE92A00C72695 /* AppDelegate.m */,
 				42FF7A2618CDE92A00C72695 /* Main.storyboard */,
+				425208421AD37CED00BC72AA /* CarpetSquaresBlack.png */,
 				42081FE01947B29600412486 /* WaterGuard.pdf */,
 				427CE62B18F0670700865291 /* FliersWhite.png */,
 				42FF7A2918CDE92A00C72695 /* ViewController.h */,
@@ -1885,6 +1900,7 @@
 				42D180FE1986C1B6003A2F61 /* Emerald Green50_110.jpg in Resources */,
 				42B0150418DF47110068019C /* WebViewBG2.png in Resources */,
 				42849B8818EA016200E5B3FB /* allmatbuttons2.png in Resources */,
+				425208411AD37C8E00BC72AA /* CarpetSquares.png in Resources */,
 				42D35013193FBBBD003A62CA /* WalkOffLogoMatMobile.m4v in Resources */,
 				426A6A1B18ED0CC300255331 /* SampleLogo6.png in Resources */,
 				42D181061986C1B6003A2F61 /* Chocolate50_111.jpg in Resources */,
@@ -1975,6 +1991,7 @@
 				42E9AC0F18FF58E4000E226D /* ProButton1.png in Resources */,
 				42D181081986C1B6003A2F61 /* Charcoal50_101.jpg in Resources */,
 				4297E07D19250F8100E43779 /* Rose_119.jpg in Resources */,
+				425208431AD37CED00BC72AA /* CarpetSquaresBlack.png in Resources */,
 				42D1810C1986C1B6003A2F61 /* Brown50_102.jpg in Resources */,
 				42D1810A1986C1B6003A2F61 /* Burgundy50_100.jpg in Resources */,
 				42F399C71946675B00C84189 /* SpringStepM.png in Resources */,
@@ -2014,6 +2031,7 @@
 				42D35011193FBAC4003A62CA /* WalkOffLogoMatMediumMob.m4v in Resources */,
 				42E9AC0C18FF58D3000E226D /* Fresh1Button.png in Resources */,
 				42D180EA1986C1B6003A2F61 /* Royal Blue50_107.jpg in Resources */,
+				4252083D1AD376A900BC72AA /* PHSLogo.png in Resources */,
 				42F399CA1946675B00C84189 /* UltraGuardM.png in Resources */,
 				42B0158318E3428B0068019C /* MotifMatPDF.png in Resources */,
 				42B014FE18DF450F0068019C /* WebViewBG.png in Resources */,
@@ -2042,6 +2060,7 @@
 				42849B9118EA02BE00E5B3FB /* whitepad.png in Resources */,
 				420BEF9E1919395F003DCEB0 /* MaskWhiteSquare5.png in Resources */,
 				42E9AC0D18FF58D3000E226D /* Clean1Button.png in Resources */,
+				425208451AD435AD00BC72AA /* PHSLogoUse.png in Resources */,
 				420A8F0519530825005FB1D8 /* sketches1.png in Resources */,
 				4297E05C1923D08100E43779 /* MaskWhiteSquare14.png in Resources */,
 				426206661909634500FE7066 /* MaskWhiteSquare1.png in Resources */,
@@ -2099,6 +2118,7 @@
 				4262066419094E3500FE7066 /* MaskWhiteSquare.png in Resources */,
 				428085CA18FC4B4200389C9C /* MatCintasCenter.png in Resources */,
 				42849B8E18EA027800E5B3FB /* gradietebg.png in Resources */,
+				4252083F1AD3770300BC72AA /* Virtuoso lofo Final.png in Resources */,
 				42081FE11947B29600412486 /* WaterGuard.pdf in Resources */,
 				42081FD11947B04700412486 /* SafeStepPDF.png in Resources */,
 				4259BC4318F6F8DD00861033 /* MatChatterBgSay.png in Resources */,

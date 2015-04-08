@@ -297,7 +297,13 @@ NSString* kLogoHeaderCellID = @"logoHeaderCellID";
                          action:@selector(goHome:)
                forControlEvents:UIControlEventTouchDown];
 
-    UIImage* cintasImage = [UIImage imageNamed:@"CintasLogoBlackClear.png"];
+    /*UIImage* cintasImage = [UIImage imageNamed:@"CintasLogoBlackClear.png"];
+    [cintasHomeButton setBackgroundImage:cintasImage forState:UIControlStateNormal];
+    //[searchHereButton setImage:AssetsDefaultButton.png" forState:UIControlStateNormal];
+    cintasHomeButton.frame = CGRectMake(888.0, 20.0, 137.0, 60.0);
+    [self.view addSubview:cintasHomeButton];*/
+
+    UIImage* cintasImage = [UIImage imageNamed:@"PHSLogoUse.png"];
     [cintasHomeButton setBackgroundImage:cintasImage forState:UIControlStateNormal];
     //[searchHereButton setImage:AssetsDefaultButton.png" forState:UIControlStateNormal];
     cintasHomeButton.frame = CGRectMake(888.0, 20.0, 137.0, 60.0);
